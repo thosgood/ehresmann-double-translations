@@ -1,6 +1,6 @@
 \documentclass{article}
 
-\usepackage[margin=1.6in]{geometry}
+\usepackage[margin=1.5in]{geometry}
 
 \title{Double categories and structured categories}
 \author{Charles Ehresmann}
@@ -20,8 +20,8 @@
 \hypersetup{colorlinks,linkcolor={blue!50!black},citecolor={blue!50!black},urlcolor={blue!80!black}}
 \usepackage{enumerate}
 
-\usepackage{mathrsfs}
 \usepackage{fouriernc}
+\usepackage{Baskervaldx}
 
 
 
@@ -47,8 +47,8 @@
 \newcommand{\oldpage}[1]{\marginpar{\footnotesize$\Big\vert$ \textit{p.~#1}}}
 \newcommand{\todo}{{\color{purple}\textbf{TO-DO }}}
 
-\newcommand{\compdot}{{\mathbin{\cdot}}}
-\newcommand{\compbot}{{\mathbin{\bot}}}
+\newcommand{\cd}{{\mathbin{\bullet}}}
+\newcommand{\cb}{{\mathbin{\bot}}}
 
 
 %% Document %%
@@ -69,11 +69,58 @@
 \oldpage{1}
 
 \begin{rmenv}{Definition}
-  We define a \emph{double category} to be a class $\mathcal{C}$ endowed with two composition laws, denoted $\compdot$ and $\compbot$, satisfying the following conditions:
+  We define a \emph{double category} to be a class $\mathcal{C}$ endowed with two composition laws, denoted $\cd$ and $\cb$, satisfying the following conditions:
+  
   \begin{enumerate}
-    \item $(\mathcal{C},\compdot)$ is a category, denoted by $\mathcal{C}^\compdot$;
-      the right and left \todo
+    \item $(\mathcal{C},\cd)$ is a category, denoted $\mathcal{C}^\cd$;
+      the right and left \todo of $f\in\mathcal{C}$ will be denoted by $\alpha^\cd(f)$ and $\beta^\cd(f)$ respectively, and the class of \todo by $\mathcal{C}_0^\cd$;
+    \item $(\mathcal{C},\cb)$ is a category, denoted $\mathcal{C}^\cb$;
+      the \todo of $f\in\mathcal{C}^\cb$ will be denoted by $\alpha^\cb(f)$ and $\beta^\cb(f)$ respectively, and the class of \todo by $\mathcal{C}_0^\cb$;
+    \item The maps $\alpha^\cd$ and $\beta^\cd$ (resp. $\alpha^\cb$ and $\beta^\cb$) are functors from $\mathcal{C}^\cb$ to $\mathcal{C}^\cb$ (resp. from $\mathcal{C}^\cd$ to $\mathcal{C}^\cd$);
+    \item \emph{Axiom of permutability.}
+      If the composites $k\cd h$, $g\cd f$, $k\cb g$, and $h\cb f$ are defined, then
+      \[
+        (k\cd h)\cb(g\cd f)
+        = (k\cb g)\cd(h\cb f).
+      \]
   \end{enumerate}
+
+  Let $\mathcal{C}$ be a class endowed with two composition laws $\cd$ and $\cb$ satisfying axioms 1 and 2; consider the following axioms:
+
+  \begin{enumerate}
+    \item[3\textquotesingle.]
+      $\mathcal{C}_0^\cd$ (resp. $\mathcal{C}_0^\cb$) is stable with respect to $\cb$ (resp. to $\cd$);
+    \item[4\textquotesingle.]
+      If the composites $k\cd h$, $g\cd f$, $k\cb g$, and $h\cb f$ are defined, then both $(k\cd h)\cb(g\cd f)$ and $(k\cb g)\cd(h\cb f)$ are defined and are equal to one another.
+    \item[5.]
+      For all $f\in\mathcal{C}$, we have
+      \[
+        \begin{aligned}
+          \alpha^\cd(\alpha^\cb(f))
+          = \alpha^\cb(\alpha^\cd(f)),
+          &\qquad
+          \beta^\cd(\beta^\cb(f))
+          = \beta^\cb(\beta^\cd(f));
+        \\\alpha^\cd(\beta^\cb(f))
+          = \beta^\cb(\alpha^\cd(f)),
+          &\qquad
+          \alpha^\cb(\beta^\cd(f))
+          = \beta^\cd(\alpha^\cb(f)).
+        \end{aligned}
+      \]
+  \end{enumerate}
+\end{rmenv}
+
+\begin{itenv}{Proposition}
+  For $(\mathcal{C},\cd,\cb)$ to be a double category, it is necessary and sufficient that conditions 1, 2, 3\textquotesingle, 4\textquotesingle, and 5 be satisfied.
+  In this case, $\mathcal{C}_0^\cd$ (resp. $\mathcal{C}_0^\cb$) is a subcategory of $\mathcal{C}^\cd$ (resp. $\mathcal{C}^\cb$).
+\end{itenv}
+
+A \emph{double subcategory} of a double category $\mathcal{C}$ is a subclass $\mathcal{C}'$ of $\mathcal{C}$ that is a subcategory of $\mathcal{C}^\cd$ and of $\mathcal{C}^\cb$;
+then $\mathcal{C}'$ is a double category for the composition laws induced by $\cd$ and $\cb$.
+
+\begin{rmenv}{Definition}
+  Let
 \end{rmenv}
 
 \end{document}
