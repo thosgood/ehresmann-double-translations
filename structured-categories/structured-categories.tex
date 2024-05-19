@@ -59,6 +59,8 @@
 \newcommand{\HH}{\mathcal{H}}
 \renewcommand{\SS}{\mathcal{S}}
 \newcommand{\MM}{\mathfrak{M}}
+\newcommand{\dotc}{{\mathbin{\bullet}}}
+\newcommand{\botc}{{\mathbin{\bot}}}
 
 
 %% Bibliography %%
@@ -94,6 +96,8 @@ produced with permission from \todo
 
 %% Content %%
 
+\unsure{fix $\dotc$ (and $\dotc$?)}
+
 \section*{Introduction}
 \addcontentsline{toc}{section}{\protect\numberline{}Introduction}
 
@@ -111,15 +115,28 @@ it leads to endowing $\HH$ with the structure of an ordered category, which is t
 Let $(\MM,p,\HH,\Gamma)$ be a category of homomorphisms with finite products, over a category $\MM$ of maps;
 we define, at the start of Section II, $\HH$-structured categories (or, more precisely, $\HH(\HH',\HH'')$-structured categories).
 We then give a certain number of examples: topological categories and differential categories \cite{3b}; double categories that arise, in particular, in the theory of natural transformations between functors \cite{3d}; order-structured categories, in particular inductive categories and inductive groupoids \cite{3c}, etc.
+\oldpage{350}
+These examples, which I was led to consider in the study of fibred spaces, foliated spaces, extensions of differential varieties, and local structures in general, are the origin of this work.
+The end of Section II contains a series of general theorems:
 
-\todo
+\begin{itemize}
+  \item \todo
+\end{itemize}
+
+All of these theorems use the additional hypothesis that $(\MM,p,\HH,\Gamma)$ is a category of homomorphisms \unsure{right resolved?} (that is, $\HH$ contains ``enough'' substructures).
+
+The second part of this article (to appear soon) will contain the theory of \unsure{species of structured structures};
+we will show how the \unsure{complete enlargement} procedure of an inductive groupoid can be generalised to \unsure{species of structured structures}.
+We will then give some applications of all these concepts to more specific problems.
+
 
 
 \section{Categories of homomorphisms and substructures}
 
 \subsection{Conventions}
 
-A
+A category will be in general represented by the symbol denoted the support class of the category along with the symbol for the composition law that makes this class a category as a superscript.
+For example: $\CC^\botc$, $\CC_1^\botc$, $\bar{\CC}^\botc$ (resp. $\CC^\dotc$, $\CC_1^\dotc$, $\bar{\CC}^\dotc$), \ldots denote the categories obtained by endowing the class $\CC$, $\CC_1$, $\bar{\CC}$, \ldots with the composition law $\botc$ (resp. $\dotc$).
 
 
 
