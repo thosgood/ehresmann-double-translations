@@ -1,0 +1,99 @@
+\documentclass{article}
+
+\usepackage[margin=1.45in]{geometry}
+
+\title{Structured categories}
+\author{Charles Ehresmann}
+\date{1963}
+
+\newcommand{\origcit}{%
+  \textsc{Ehresmann, Charles.}
+  ``Catégories structurées''.
+  \emph{Ann. scient. Éc. Norm. Sup.} \textbf{80} (1963), 349--426.
+  \url{http://www.numdam.org/item/?id=ASENS_1963_3_80_4_349_0}
+}
+
+
+%% Standards %%
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\hypersetup{colorlinks,linkcolor={blue!50!black},citecolor={blue!50!black},urlcolor={blue!80!black}}
+\usepackage{enumerate}
+\usepackage{graphicx}
+\usepackage{footmisc}
+
+
+%% Typography %%
+
+\usepackage{fouriernc}
+\usepackage{Baskervaldx}
+
+
+%% Theorem environments %%
+
+\usepackage{amsthm}
+
+\newenvironment{itenv}[1]
+  {\phantomsection\par\medskip\noindent\textbf{#1.}\itshape}
+  {\par\medskip}
+
+\newenvironment{rmenv}[1]
+  {\phantomsection\par\medskip\noindent\textbf{#1.}\rmfamily}
+  {\par\medskip}
+
+
+%% Shortcuts %%
+
+\renewcommand{\geq}{\geqslant}
+\renewcommand{\leq}{\leqslant}
+
+\newcommand{\oldpage}[1]{\marginpar{\footnotesize$\Big\vert$ \textit{p.~#1}}}
+\newcommand{\todo}{{\color{purple}\textbf{TO-DO }}}
+\newcommand{\unsure}[1]{{\color{purple}\textbf{#1}}}
+
+
+%% Bibliography %%
+
+\usepackage{biblatex}
+\addbibresource{structured-categories.bib}
+\renewbibmacro{in:}{%
+  \ifboolexpr{%
+     test {\ifentrytype{article}}%
+  }{}{\printtext{\bibstring{in}\intitlepunct}}%
+}
+
+
+%% Document %%
+
+\begin{document}
+
+\maketitle
+
+\hrule
+\begin{itenv}{Note from the translator}
+This document is a translation from French of the article
+
+\medskip
+{\normalfont\origcit}
+
+\medskip
+produced with permission from \todo
+\end{itenv}
+\hrule
+
+\tableofcontents
+
+%% Content %%
+
+\section*{Introduction}
+\addcontentsline{toc}{section}{\protect\numberline{}Introduction}
+
+
+%% Bibliography %%
+
+\nocite{*}
+\printbibliography[heading=bibintoc]
+
+\end{document}

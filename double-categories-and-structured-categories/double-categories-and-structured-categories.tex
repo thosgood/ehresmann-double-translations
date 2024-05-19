@@ -4,12 +4,13 @@
 
 \title{Double categories and structured categories}
 \author{Charles Ehresmann}
-\date{}
+\date{4\textsuperscript{th} of February, 1963}
 
 \newcommand{\origcit}{%
-  \textsc{Ehresmann, C.}
+  \textsc{Ehresmann, Charles.}
   ``Catégories doubles et catégories structurées''.
   \emph{C. R. Acad. Sc.} \textbf{256} (1963), 1198--1201.
+  Presented by Jean Leray.
 }
 
 
@@ -62,6 +63,10 @@
 \newcommand{\hmult}{{\,\boxminus\,}}
 \DeclareMathOperator{\FF}{\mathcal{F}}
 \DeclareMathOperator{\NN}{\mathfrak{N}}
+\newcommand{\MM}{\mathfrak{M}}
+\newcommand{\KK}{\mathcal{K}}
+\renewcommand{\SS}{\mathcal{S}}
+\newcommand{\TT}{\mathcal{T}}
 
 
 %% Document %%
@@ -69,7 +74,18 @@
 \begin{document}
 
 \maketitle
-\origcit
+
+\hrule
+\begin{itenv}{Note from the translator}
+This document is a translation from French of the article
+
+\medskip
+{\normalfont\origcit}
+
+\medskip
+produced with permission from \todo
+\end{itenv}
+\hrule
 
 \begin{abstract}
   Definition of structured categories; the particular case of double categories, which admit a category of squares as a quotient category.
@@ -84,7 +100,7 @@
 
 \begin{rmenv}{Definition}
   We define a \emph{double category} to be a class $\CC$ endowed with two composition laws, denoted $\dotc$ and $\botc$, satisfying the following conditions:
-  
+
   \begin{enumerate}
     \item $(\CC,\dotc)$ is a category, denoted $\CC^\dotc$;
       the right and left \todo of $f\in\CC$ will be denoted by $\alpha^\dotc(f)$ and $\beta^\dotc(f)$ respectively, and the class of \todo by $\CC_0^\dotc$;
@@ -144,7 +160,7 @@ then $\CC'$ is a double category for the composition laws induced by $\dotc$ and
 \begin{itenv}{Proposition}
   Let $\CC$ be a double category;
   a left ideal $I^\botc$ of $\CC^\botc$ is a \todo\footnote{\label{fn1}\emph{Espèces de structures locales; élargissements de catégories}, Séminaire Top. et Géo Diff. (Ehresmann), \textbf{III}, Paris, 1961; Jahres. Deutsch. Math. Ver., \textbf{60}, 1957, p.~49.} over $\CC^\dotc$ for the composition law $(f,g)\mapsto f\dotc g$ if and only if $f\dotc g$ is defined, where $f\in\CC$ and $g\in I^\botc$.
-  The corresponding category $\mathcal{E}(I^\botc)$ \unsure{is this right?} of hypermorphisms~\footref{fn1} is a double category for the composition laws \unsure{is this right?}
+  The corresponding category $\mathcal{E}(I^\botc)$ \unsure{is this right?} of hypermorphisms\footref{fn1} is a double category for the composition laws \unsure{is this right?}
   \[
     (f',g')\dotc(f,g)
     = (f'\dotc f,g)
@@ -183,13 +199,13 @@ We define two composition laws on $\sq(\CC_2,\CC_1)$:
       (g'_2,g'_1,f'_1,f'_2)\vmult(g_2,g_1,f_1,f_2)
       = (g'_2,g'_1g_1,f'_1f_1,f_2)
     \]
-    if and only if $f'_2=g_2$ \unsure{?};
+    if and only if $f'_2=g_2$ \unsure{???};
   \item \emph{Lateral} multiplication
     \[
       (g'_2,g'_1,f'_1,f'_2)\hmult(g_2,g_1,f_1,f_2)
       = (g'_2g_2,g'_1,f_1,f'_2f_2)
     \]
-    if and only if $f'_1=g_1$ \unsure{?}.
+    if and only if $f'_1=g_1$ \unsure{???}.
 \end{itemize}
 
 \begin{itenv}{Proposition}
@@ -197,7 +213,7 @@ We define two composition laws on $\sq(\CC_2,\CC_1)$:
 \end{itenv}
 
 Suppose that $\CC=\CC_1=\CC_2$;
-recall\footnotemark that a \emph{square} in $\CC$ is an element $(g_2,g_1,f_1,f_2)\in\sq(\CC,\CC)$ such that $g_1f_2=g_2f_1$.
+recall\footref{fn1} that a \emph{square} in $\CC$ is an element $(g_2,g_1,f_1,f_2)\in\sq(\CC,\CC)$ such that $g_1f_2=g_2f_1$.
 
 \begin{itenv}{Corollary}
   The class $\sq\CC$ of squares in $\CC$ is a double subcategory of $\sq(\CC,\CC)$.
@@ -205,7 +221,7 @@ recall\footnotemark that a \emph{square} in $\CC$ is an element $(g_2,g_1,f_1,f_
 
 \begin{itenv}{Corollary}
   Let $\CC$ be a double category;
-  then $\CC^\dotc$ admits the longitudinal category $\vsq(\CC_0^\dotc,\CC_0^\botc)$ as a quotient category~\footref{fn1}, where $\CC_0^\dotc$ (resp. $\CC_0^\botc$) is endowed with its structure as a subcategory of $\CC^\botc$ (resp. of $\CC^\dotc$).
+  then $\CC^\dotc$ admits the longitudinal category $\vsq(\CC_0^\dotc,\CC_0^\botc)$ as a quotient category\footref{fn1}, where $\CC_0^\dotc$ (resp. $\CC_0^\botc$) is endowed with its structure as a subcategory of $\CC^\botc$ (resp. of $\CC^\dotc$).
 \end{itenv}
 
 
@@ -232,8 +248,9 @@ let $\FF(\CC^\dotc,\Gamma)$ be the class of functors from $\Gamma$ to $\CC^\dotc
 \end{itenv}
 
 \begin{itenv}{Proposition}
+  \setcounter{footnote}{1}
   Let $\CC$ and $\CC'$ be two categories;
-  the longitudinal category $\NN(\CC',\CC)$ of natural transformations\setcounter{footnote}{1}\footnote{\emph{Catégorie des foncteurs types}, Rev. Un. Mat. Argentina, \textbf{20}, 1960, p.~194.} between functors from $\CC$ to $\CC'$ can be identified with the category $\FF(\hsq\CC',\CC)$, by identifying the natural transformation $(\varphi',\tau,\phi)$ with the functor $\Phi$ such that
+  the longitudinal category $\NN(\CC',\CC)$ of natural transformations~\footnote{\emph{Catégorie des foncteurs types}, Rev. Un. Mat. Argentina, \textbf{20}, 1960, p.~194.} between functors from $\CC$ to $\CC'$ can be identified with the category $\FF(\hsq\CC',\CC)$, by identifying the natural transformation $(\varphi',\tau,\phi)$ with the functor $\Phi$ such that
   \[
     \Phi(f)
     = \big(\varphi'(f),\,\tau(\beta(f)),\,\tau(\alpha(f)),\,\varphi(f)\big)
@@ -247,6 +264,48 @@ We will see another generalisation of natural transformations (the double catego
 
 \section{Structured categories}
 
-Let
+Let $\MM_0$ be a class of classes such that if it contains $X$ then it also contains all the subsets of $X$, and if it contains $X$ and $X'$ then it also contains the product $X\times X'$;
+let $\MM$ be the category of all functions from $X$ to $Y$, where $X,Y\in\MM_0$.
+Let $(\MM,p,\KK,\SS)$ be a category of homomorphisms\footref{fn1}, with $\SS$ containing the groupoid of invertible elements of $\KK$;
+let $\KK_0$ be the class of \todo of $\KK$;
+we identify $h\in\KK$ with $(\beta^\KK(h),p(h),\alpha^\KK(h))$.
+
+\begin{rmenv}{Definition}
+  We define a \emph{structured category in $\KK$} to be a pair $(\CC^\dotc,s)$, where $\CC^\dotc$ is the structure of a category on $\CC\in\MM_0$, and $s\in\KK_0$ with $p(s)=\CC$, satisfying the following conditions:
+  \begin{enumerate}
+    \item There exists $s_0\in\KK_0$ such that \unsure{check the following}
+      \[
+        \begin{gathered}
+          p(s_0)
+          = \CC_0^\dotc
+        \\(s,i_{\CC_0^\dotc},s_0),\,\,
+          (s_0,\alpha,s),\,\,
+          (s_0,\beta,s)
+          \in\KK
+        \end{gathered}
+      \]
+      where $i_{\CC_0^\dotc}$ is the canonical injection from $\CC_0^\dotc$ into $\CC$, and $\alpha$ and $\beta$ are the source and target maps (respectively) in $\CC^\dotc$.
+    \item There exists a product $s\times s$ in $\KK$ such that $p(s\times s)=\CC\times\CC$;
+      if $K$ is the subclass of $\CC\times\CC$ consisting of composible pairs, then there exists $s'\in\KK_0$ such that
+      \[
+        \begin{gathered}
+          p(s')=K
+        \\(s\times ,i_K,s')\in\KK.
+        \end{gathered}
+      \]
+    \item writing $x$ to denote the map $(g,f)\mapsto g\dotc f$ from $K$ to $\CC$, the relation $(s\times s,i_K,s')\in\KK$ implies $(s,x,s')\in\KK$.
+  \end{enumerate}
+\end{rmenv}
+
+\begin{rmenv}{Example}
+  A structured category in $\tilde{\TT}$, where $\tilde{\TT}$ is the category of topologies, is a topological category.\footnote{\emph{Catégories topologiques et catégories différentiables}, Coll. Géo. Diff. Glo., Brussels, C.B.R.M., 1959, p.~137.}
+\end{rmenv}
+
+\oldpage{4}
+
+\begin{itenv}{Theorem}
+  For $(\CC^\dotc,\CC^\botc)$ to be a double category, it is necessary and sufficient that $(\CC^\dotc,\CC^\botc)$ be a structured category in the category $\FF$ of functors from one category to another;
+  in this case, $(\CC^\botc,\CC^\dotc)$ is also a structured category in $\FF$ (the structure on $\CC^\dotc$ is $\CC^\botc$).
+\end{itenv}
 
 \end{document}
