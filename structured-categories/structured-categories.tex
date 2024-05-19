@@ -30,6 +30,8 @@
 \usepackage{fouriernc}
 \usepackage{Baskervaldx}
 
+\renewcommand{\thesection}{\Roman{section}}
+
 
 %% Theorem environments %%
 
@@ -52,6 +54,11 @@
 \newcommand{\oldpage}[1]{\marginpar{\footnotesize$\Big\vert$ \textit{p.~#1}}}
 \newcommand{\todo}{{\color{purple}\textbf{TO-DO }}}
 \newcommand{\unsure}[1]{{\color{purple}\textbf{#1}}}
+
+\newcommand{\CC}{\mathcal{C}}
+\newcommand{\HH}{\mathcal{H}}
+\renewcommand{\SS}{\mathcal{S}}
+\newcommand{\MM}{\mathfrak{M}}
 
 
 %% Bibliography %%
@@ -90,11 +97,29 @@ produced with permission from \todo
 \section*{Introduction}
 \addcontentsline{toc}{section}{\protect\numberline{}Introduction}
 
+\oldpage{349}
+
 This article is the first part of a work on the idea of structured categories of of \unsure{species of structured structures}.
 The main results are summarised in a series in \emph{Notes à l'Académie des Sciences} \cite{3e}\todo.
 
-The first section begins with a short reminder on the
+The first section begins with a short reminder on the \todo and categories of homomorphisms.
+Let $(\CC,p,\HH,\SS)$ be a category of homomorphisms over $\CC$ such that $\SS$ contains the groupoid of invertible elements of the category $\HH$, and such that $\CC$ is further endowed with the structure of an inductive category.
+We define the substructures of a structure of $\HH$.
+This notion makes precise that of a sub-object of an arbitrary category, using the fact that $\HH$ is a category of homomorphisms and $\CC$ an inductive category;
+it leads to endowing $\HH$ with the structure of an ordered category, which is the subject of the main results of this section.
 
+Let $(\MM,p,\HH,\Gamma)$ be a category of homomorphisms with finite products, over a category $\MM$ of maps;
+we define, at the start of Section II, $\HH$-structured categories (or, more precisely, $\HH(\HH',\HH'')$-structured categories).
+We then give a certain number of examples: topological categories and differential categories \cite{3b}; double categories that arise, in particular, in the theory of natural transformations between functors \cite{3d}; order-structured categories, in particular inductive categories and inductive groupoids \cite{3c}, etc.
+
+\todo
+
+
+\section{Categories of homomorphisms and substructures}
+
+\subsection{Conventions}
+
+A
 
 
 
