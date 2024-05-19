@@ -1,6 +1,6 @@
 \documentclass{article}
 
-\usepackage[margin=1.5in]{geometry}
+\usepackage[margin=1.45in]{geometry}
 
 \title{Double categories and structured categories}
 \author{Charles Ehresmann}
@@ -13,17 +13,21 @@
 }
 
 
-\usepackage{amssymb,amsmath}
-
+%% Standards %%
+\usepackage{amssymb}
+\usepackage{amsmath}
 \usepackage{hyperref}
 \usepackage{xcolor}
 \hypersetup{colorlinks,linkcolor={blue!50!black},citecolor={blue!50!black},urlcolor={blue!80!black}}
 \usepackage{enumerate}
+\usepackage{graphicx}
+\usepackage{footmisc}
+
+
+%% Typography %%
 
 \usepackage{fouriernc}
 \usepackage{Baskervaldx}
-
-
 
 
 %% Theorem environments %%
@@ -46,9 +50,18 @@
 
 \newcommand{\oldpage}[1]{\marginpar{\footnotesize$\Big\vert$ \textit{p.~#1}}}
 \newcommand{\todo}{{\color{purple}\textbf{TO-DO }}}
+\newcommand{\unsure}[1]{{\color{purple}\textbf{#1}}}
 
-\newcommand{\cd}{{\mathbin{\bullet}}}
-\newcommand{\cb}{{\mathbin{\bot}}}
+\newcommand{\CC}{\mathcal{C}}
+\newcommand{\dotc}{{\mathbin{\bullet}}}
+\newcommand{\botc}{{\mathbin{\bot}}}
+\DeclareMathOperator{\sq}{\square}
+\DeclareMathOperator{\vsq}{{\rotatebox{90}{$\boxminus$}}}
+\DeclareMathOperator{\hsq}{\boxminus}
+\newcommand{\vmult}{{\,\rotatebox{90}{$\boxminus$}\,}}
+\newcommand{\hmult}{{\,\boxminus\,}}
+\DeclareMathOperator{\FF}{\mathcal{F}}
+\DeclareMathOperator{\NN}{\mathfrak{N}}
 
 
 %% Document %%
@@ -59,68 +72,181 @@
 \origcit
 
 \begin{abstract}
-  Definition of structured categories; the particular case of double categories, which admit a \todo as a quotient category.
-% \origcit
+  Definition of structured categories; the particular case of double categories, which admit a category of squares as a quotient category.
 \end{abstract}
 
 %% Content %%
+
+\todo \unsure{fix $\vmult$ and $\hmult$; fix $\dotc$}
 
 \section{Double categories}
 \oldpage{1}
 
 \begin{rmenv}{Definition}
-  We define a \emph{double category} to be a class $\mathcal{C}$ endowed with two composition laws, denoted $\cd$ and $\cb$, satisfying the following conditions:
+  We define a \emph{double category} to be a class $\CC$ endowed with two composition laws, denoted $\dotc$ and $\botc$, satisfying the following conditions:
   
   \begin{enumerate}
-    \item $(\mathcal{C},\cd)$ is a category, denoted $\mathcal{C}^\cd$;
-      the right and left \todo of $f\in\mathcal{C}$ will be denoted by $\alpha^\cd(f)$ and $\beta^\cd(f)$ respectively, and the class of \todo by $\mathcal{C}_0^\cd$;
-    \item $(\mathcal{C},\cb)$ is a category, denoted $\mathcal{C}^\cb$;
-      the \todo of $f\in\mathcal{C}^\cb$ will be denoted by $\alpha^\cb(f)$ and $\beta^\cb(f)$ respectively, and the class of \todo by $\mathcal{C}_0^\cb$;
-    \item The maps $\alpha^\cd$ and $\beta^\cd$ (resp. $\alpha^\cb$ and $\beta^\cb$) are functors from $\mathcal{C}^\cb$ to $\mathcal{C}^\cb$ (resp. from $\mathcal{C}^\cd$ to $\mathcal{C}^\cd$);
+    \item $(\CC,\dotc)$ is a category, denoted $\CC^\dotc$;
+      the right and left \todo of $f\in\CC$ will be denoted by $\alpha^\dotc(f)$ and $\beta^\dotc(f)$ respectively, and the class of \todo by $\CC_0^\dotc$;
+    \item $(\CC,\botc)$ is a category, denoted $\CC^\botc$;
+      the \todo of $f\in\CC^\botc$ will be denoted by $\alpha^\botc(f)$ and $\beta^\botc(f)$ respectively, and the class of \todo by $\CC_0^\botc$;
+    \item The maps $\alpha^\dotc$ and $\beta^\dotc$ (resp. $\alpha^\botc$ and $\beta^\botc$) are functors from $\CC^\botc$ to $\CC^\botc$ (resp. from $\CC^\dotc$ to $\CC^\dotc$);
     \item \emph{Axiom of permutability.}
-      If the composites $k\cd h$, $g\cd f$, $k\cb g$, and $h\cb f$ are defined, then
+      If the composites $k\dotc h$, $g\dotc f$, $k\botc g$, and $h\botc f$ are defined, then
       \[
-        (k\cd h)\cb(g\cd f)
-        = (k\cb g)\cd(h\cb f).
+        (k\dotc h)\botc(g\dotc f)
+        = (k\botc g)\dotc(h\botc f).
       \]
   \end{enumerate}
 
-  Let $\mathcal{C}$ be a class endowed with two composition laws $\cd$ and $\cb$ satisfying axioms 1 and 2; consider the following axioms:
+  Let $\CC$ be a class endowed with two composition laws $\dotc$ and $\botc$ satisfying axioms 1 and 2; consider the following axioms:
 
   \begin{enumerate}
     \item[3\textquotesingle.]
-      $\mathcal{C}_0^\cd$ (resp. $\mathcal{C}_0^\cb$) is stable with respect to $\cb$ (resp. to $\cd$);
+      $\CC_0^\dotc$ (resp. $\CC_0^\botc$) is stable with respect to $\botc$ (resp. to $\dotc$);
     \item[4\textquotesingle.]
-      If the composites $k\cd h$, $g\cd f$, $k\cb g$, and $h\cb f$ are defined, then both $(k\cd h)\cb(g\cd f)$ and $(k\cb g)\cd(h\cb f)$ are defined and are equal to one another.
+      If the composites $k\dotc h$, $g\dotc f$, $k\botc g$, and $h\botc f$ are defined, then both $(k\dotc h)\botc(g\dotc f)$ and $(k\botc g)\dotc(h\botc f)$ are defined and are equal to one another.
     \item[5.]
-      For all $f\in\mathcal{C}$, we have
+      For all $f\in\CC$, we have
       \[
         \begin{aligned}
-          \alpha^\cd(\alpha^\cb(f))
-          = \alpha^\cb(\alpha^\cd(f)),
+          \alpha^\dotc(\alpha^\botc(f))
+          = \alpha^\botc(\alpha^\dotc(f)),
           &\qquad
-          \beta^\cd(\beta^\cb(f))
-          = \beta^\cb(\beta^\cd(f));
-        \\\alpha^\cd(\beta^\cb(f))
-          = \beta^\cb(\alpha^\cd(f)),
+          \beta^\dotc(\beta^\botc(f))
+          = \beta^\botc(\beta^\dotc(f));
+        \\\alpha^\dotc(\beta^\botc(f))
+          = \beta^\botc(\alpha^\dotc(f)),
           &\qquad
-          \alpha^\cb(\beta^\cd(f))
-          = \beta^\cd(\alpha^\cb(f)).
+          \alpha^\botc(\beta^\dotc(f))
+          = \beta^\dotc(\alpha^\botc(f)).
         \end{aligned}
       \]
   \end{enumerate}
 \end{rmenv}
 
 \begin{itenv}{Proposition}
-  For $(\mathcal{C},\cd,\cb)$ to be a double category, it is necessary and sufficient that conditions 1, 2, 3\textquotesingle, 4\textquotesingle, and 5 be satisfied.
-  In this case, $\mathcal{C}_0^\cd$ (resp. $\mathcal{C}_0^\cb$) is a subcategory of $\mathcal{C}^\cd$ (resp. $\mathcal{C}^\cb$).
+  For $(\CC,\dotc,\botc)$ to be a double category, it is necessary and sufficient that conditions 1, 2, 3\textquotesingle, 4\textquotesingle, and 5 be satisfied.
+  In this case, $\CC_0^\dotc$ (resp. $\CC_0^\botc$) is a subcategory of $\CC^\dotc$ (resp. $\CC^\botc$).
 \end{itenv}
 
-A \emph{double subcategory} of a double category $\mathcal{C}$ is a subclass $\mathcal{C}'$ of $\mathcal{C}$ that is a subcategory of $\mathcal{C}^\cd$ and of $\mathcal{C}^\cb$;
-then $\mathcal{C}'$ is a double category for the composition laws induced by $\cd$ and $\cb$.
+A \emph{double subcategory} of a double category $\CC$ is a subclass $\CC'$ of $\CC$ that is a subcategory of $\CC^\dotc$ and of $\CC^\botc$;
+then $\CC'$ is a double category for the composition laws induced by $\dotc$ and $\botc$.
 
 \begin{rmenv}{Definition}
-  Let
+  Let $\CC$ be a double category;
+  we define a \emph{left ideal} (resp. \emph{right ideal}) of $\CC^\botc$ to be a subcategory $I^\botc$ of $\CC^\botc$ such that $\CC\dotc I^\botc$ (resp. $I^\botc\dotc\CC=I^\botc$), where $\CC\dotc I^\botc$ (resp. $I^\botc\dotc\CC$) is the class of composites $f\dotc g$ (resp. $g\dotc f$) for $g\in I^\botc$ and $f\in\CC$.
+  We similarly define an \emph{ideal} of $\CC^\dotc$.
 \end{rmenv}
+
+\oldpage{2}
+
+\begin{itenv}{Proposition}
+  Let $\CC$ be a double category;
+  a left ideal $I^\botc$ of $\CC^\botc$ is a \todo\footnote{\label{fn1}\emph{Espèces de structures locales; élargissements de catégories}, Séminaire Top. et Géo Diff. (Ehresmann), \textbf{III}, Paris, 1961; Jahres. Deutsch. Math. Ver., \textbf{60}, 1957, p.~49.} over $\CC^\dotc$ for the composition law $(f,g)\mapsto f\dotc g$ if and only if $f\dotc g$ is defined, where $f\in\CC$ and $g\in I^\botc$.
+  The corresponding category $\mathcal{E}(I^\botc)$ \unsure{is this right?} of hypermorphisms~\footref{fn1} is a double category for the composition laws \unsure{is this right?}
+  \[
+    (f',g')\dotc(f,g)
+    = (f'\dotc f,g)
+  \]
+  if and only if $g'=f\dotc g$; further \unsure{is this right? or is it two joined iffs}
+  \[
+    (f',g')\botc(f,g)
+    = (f'\botc f,g'\botc g)
+  \]
+  if and only if $f'\botc f$ and $g'\botc g$ are defined.
+\end{itenv}
+
+
+\section{Double categories of squares}
+
+Let $\CC_1$ and $\CC_2$ be two categories with the same class of \todo.
+Let $\sq(\CC_2,\CC_1)$ be the set of quadruples $(g_2,g_1,f_1,f_2)$, with $f_i,g_i\in\CC_i$ for $i=1,2$, such that
+\[
+  \begin{aligned}
+    \alpha(f_1)
+    = \alpha(f_2),
+    &\qquad
+    \alpha(g_1)
+    = \beta(f_2);
+  \\\beta(f_1)
+    = \alpha(g_2),
+    &\qquad
+    \beta(g_1)
+    = \beta(g_2).
+  \end{aligned}
+\]
+We define two composition laws on $\sq(\CC_2,\CC_1)$:
+\begin{itemize}
+  \item \emph{Longitudinal} multiplication
+    \[
+      (g'_2,g'_1,f'_1,f'_2)\vmult(g_2,g_1,f_1,f_2)
+      = (g'_2,g'_1g_1,f'_1f_1,f_2)
+    \]
+    if and only if $f'_2=g_2$ \unsure{?};
+  \item \emph{Lateral} multiplication
+    \[
+      (g'_2,g'_1,f'_1,f'_2)\hmult(g_2,g_1,f_1,f_2)
+      = (g'_2g_2,g'_1,f_1,f'_2f_2)
+    \]
+    if and only if $f'_1=g_1$ \unsure{?}.
+\end{itemize}
+
+\begin{itenv}{Proposition}
+  $\sq(\CC_2,\CC_1)$ is a double category for longitudinal and lateral multiplication.
+\end{itenv}
+
+Suppose that $\CC=\CC_1=\CC_2$;
+recall\footnotemark that a \emph{square} in $\CC$ is an element $(g_2,g_1,f_1,f_2)\in\sq(\CC,\CC)$ such that $g_1f_2=g_2f_1$.
+
+\begin{itenv}{Corollary}
+  The class $\sq\CC$ of squares in $\CC$ is a double subcategory of $\sq(\CC,\CC)$.
+\end{itenv}
+
+\begin{itenv}{Corollary}
+  Let $\CC$ be a double category;
+  then $\CC^\dotc$ admits the longitudinal category $\vsq(\CC_0^\dotc,\CC_0^\botc)$ as a quotient category~\footref{fn1}, where $\CC_0^\dotc$ (resp. $\CC_0^\botc$) is endowed with its structure as a subcategory of $\CC^\botc$ (resp. of $\CC^\dotc$).
+\end{itenv}
+
+
+\section{Functors into a double category}
+
+Let $\Gamma$ be a category and $\CC$ a double category;
+let $\FF(\CC^\dotc,\Gamma)$ be the class of functors from $\Gamma$ to $\CC^\dotc$.
+
+\begin{itenv}{Proposition}
+  $\FF(\CC^\dotc,\Gamma)$ is a category for the composition law $(\Phi',\Phi)\mapsto\Phi'\botc\Phi$, where $(\Phi'\botc\Phi)(f)=\Phi'(f)\botc\Phi(f)$, if and only if $\Phi'(f)\botc\Phi(f)$ is defined for all $f\in\CC$.
+\end{itenv}
+
+\oldpage{3}
+
+\begin{rmenv}{Definition}
+  Let $\CC$ and $\CC_1$ be two double categories;
+  we define a \emph{double functor} from $\CC$ to $\CC_1$ to be a map $\Phi$ from $\CC$ to $\CC_1$ such that $\Phi$ is a functor from $\CC^\dotc$ to $\CC_1^\dotc$ and a functor from $\CC^\botc$ to $\CC_1^\botc$.
+  The class of double functors from $\CC$ to $\CC_1$ is denoted $\FF(\CC_1,\CC)$.
+\end{rmenv}
+
+\begin{itenv}{Proposition}
+  $\FF(\CC_1,\CC)$ is a subcategory of $\FF(\CC_1^\dotc,\CC^\dotc)$ and of $\FF(\CC_1^\botc,\CC^\botc)$;
+  endowed with the two induced composition laws, $\FF(\CC_1,\CC)$ is a double category.
+\end{itenv}
+
+\begin{itenv}{Proposition}
+  Let $\CC$ and $\CC'$ be two categories;
+  the longitudinal category $\NN(\CC',\CC)$ of natural transformations\setcounter{footnote}{1}\footnote{\emph{Catégorie des foncteurs types}, Rev. Un. Mat. Argentina, \textbf{20}, 1960, p.~194.} between functors from $\CC$ to $\CC'$ can be identified with the category $\FF(\hsq\CC',\CC)$, by identifying the natural transformation $(\varphi',\tau,\phi)$ with the functor $\Phi$ such that
+  \[
+    \Phi(f)
+    = \big(\varphi'(f),\,\tau(\beta(f)),\,\tau(\alpha(f)),\,\varphi(f)\big)
+  \]
+  for all $f\in\CC$.
+\end{itenv}
+
+Consequently, if $(\CC^\dotc,\CC^\botc)$ is a double category, then a functor $\Phi$ from a category $\Gamma$ into $\CC^\dotc$ can be considered as a generalised natural transformation from $\alpha^\botc\Phi$ to $\beta^\botc\Phi$.
+We will see another generalisation of natural transformations (the double category of quintets) in a following publication.
+
+
+\section{Structured categories}
+
+Let
 
 \end{document}
