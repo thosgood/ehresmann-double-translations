@@ -61,6 +61,8 @@
 \newcommand{\MM}{\mathfrak{M}}
 \newcommand{\dotc}{{\mathbin{\bullet}}}
 \newcommand{\botc}{{\mathbin{\bot}}}
+\usepackage{upgreek}
+\newcommand{\comp}{\upchi}
 
 
 %% Bibliography %%
@@ -135,10 +137,38 @@ We will then give some applications of all these concepts to more specific probl
 
 \subsection{Conventions}
 
-A category will be in general represented by the symbol denoted the support class of the category along with the symbol for the composition law that makes this class a category as a superscript.
+A category will be in general represented by the symbol denoted the \unsure{support class} of the category along with the symbol for the composition law that makes this class a category as a superscript.
 For example: $\CC^\botc$, $\CC_1^\botc$, $\bar{\CC}^\botc$ (resp. $\CC^\dotc$, $\CC_1^\dotc$, $\bar{\CC}^\dotc$), \ldots denote the categories obtained by endowing the class $\CC$, $\CC_1$, $\bar{\CC}$, \ldots with the composition law $\botc$ (resp. $\dotc$).
+The class of \unsure{identities} of a category will be denoted by the symbol representing the category along with a $0$ as a subscript.
+For example: $\CC_0^\botc$, $(\CC_1^\botc)_0$, $\bar{\CC}_0^\botc$, \ldots.
+If a class of objects is naturally associated to the category (for example, the classes in a category of maps from one class to another), then we will tacitly identify the \unsure{identities} with the corresponding objects.
+
+Let $\CC^\botc$ be a category.
+The source and target maps that send an element $f\in\CC^\botc$ to its right and left \unsure{identities} will be denoted $\alpha^\botc$ and $\beta^\botc$ (respectively).
+The class of pairs $(g,f)$ such that the composite $g\botc f$ is defined (that is, such that $\alpha^\botc(g)=\beta^\botc(f)$) will be denoted by the symbol $\CC^\botc\star\CC^\botc$;
+the map
+\[
+  (g,f) \mapsto g\botc f
+  \qquad\text{where }(g,f\in\CC^\botc\star\CC^\botc)
+\]
+will be denoted by the symbol $\comp^\botc$.
+
+\oldpage{351}
+To simplify notation, if no confusion is possible, we will represent a category by the same symbol as its \unsure{support class};
+in this case, it is to be understood that the composition law is denoted by $\dotc$;
+we thus write $\CC$ instead of $\CC^\dotc$.
+Similarly, we will also write $\CC_0$, $\alpha$, and $\beta$ instead of $\CC_0^\dotc$, $\alpha^\dotc$, and $\beta^\dotc$ (respectively).
+
+Let $\bar{C}^\botc$ and $\CC^\botc$ be two categories;
+the word ``functor'' will always mean a contravariant functor.
+A functor from $\CC^\botc$ to $\bar{\CC}^\botc$ will be denoted either by a triple $(\bar{\CC}^\botc,F,\CC^\botc)$, where $F$ is the corresponding map, or by just the letter $F$.
+The restriction of $F$ to the class $\CC_0^\botc$, considered as a map from $\CC_0^\botc$ to $\bar{\CC}_0^\botc$, will be denoted $F_0$.
 
 
+
+\subsection{Reminder on \unsure{species of structures}}
+
+Since the notion of \unsure{species of structures} \cite{3a} is essential in this article, we will recall the definition and main properties.
 
 
 
