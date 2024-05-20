@@ -1,6 +1,6 @@
 \documentclass{article}
 
-\usepackage[margin=1.45in]{geometry}
+\usepackage[margin=1.6in]{geometry}
 
 \title{Structured categories}
 \author{Charles Ehresmann}
@@ -98,15 +98,15 @@ produced with permission from \todo
 
 %% Content %%
 
-\unsure{fix $\dotc$ (and $\dotc$?)}
+\unsure{fix $\dotc$ (and $\botc$?)}
 
 \section*{Introduction}
 \addcontentsline{toc}{section}{\protect\numberline{}Introduction}
 
 \oldpage{349}
 
-This article is the first part of a work on the idea of structured categories of of \unsure{species of structured structures}.
-The main results are summarised in a series in \emph{Notes à l'Académie des Sciences} \cite{3e}\todo.
+This article is the first part of a work on the notion of structured categories and of \unsure{species of structured structures}.
+The main results are summarised in a series in \emph{Notes à l'Académie des Sciences} \cite{3e}.
 
 The first section begins with a short reminder on the \todo and categories of homomorphisms.
 Let $(\CC,p,\HH,\SS)$ be a category of homomorphisms over $\CC$ such that $\SS$ contains the groupoid of invertible elements of the category $\HH$, and such that $\CC$ is further endowed with the structure of an inductive category.
@@ -122,7 +122,11 @@ These examples, which I was led to consider in the study of fibred spaces, folia
 The end of Section II contains a series of general theorems:
 
 \begin{itemize}
-  \item \todo
+  \item $\HH$-structured functors form a category of homomorphisms over a category of functors, and over $\MM$;
+    it has finite products and \unsure{resolutions to the right}.
+  \item Let $(\CC^\dotc,s)$ be an $\HH$-structured category;
+    if $\bar{\CC}^\dotc$ is a subcategory of $\CC^\dotc$, and $\bar{s}$ a substructure of $s$ such that $p(\bar{s})=\bar{C}$, then $(\bar{C}^\dotc,\bar{s})$ is an $\HH$-structured category.
+  \item If $(\CC^\dotc,s)$ is an $\HH$-structured category, then the categories of \todo of $\CC^\dotc$ are $\HH$-structured categories.
 \end{itemize}
 
 All of these theorems use the additional hypothesis that $(\MM,p,\HH,\Gamma)$ is a category of homomorphisms \unsure{right resolved?} (that is, $\HH$ contains ``enough'' substructures).
@@ -169,6 +173,30 @@ The restriction of $F$ to the class $\CC_0^\botc$, considered as a map from $\CC
 \subsection{Reminder on \unsure{species of structures}}
 
 Since the notion of \unsure{species of structures} \cite{3a} is essential in this article, we will recall the definition and main properties.
+
+\begin{rmenv}{Definition 1}
+  We say that a category $\CC$ is a \emph{category of operators on a class $\Sigma_0$} if we have defined a composition law $(f,z)\mapsto fz$ for certain pairs $(f,z)\in\CC\times\Sigma_0$ such that $fz\in\Sigma_0$ and such that the following axioms are satisfied:
+  \begin{enumerate}
+    \item \emph{Associativity.}
+      If one of $g(fz)$ or $(g\dotc f)z$ is defined, then both of them are defined, and
+      \[
+        g(fz)
+        = (g\dotc f)z;
+      \]
+    \item If $g\dotc f$ and $fz$ are defined, then $g(fz)$ is defined;
+    \item Let $e\in\CC_0$;
+      if $ez$ is defined, then $ez=z$;
+    \item
+      \begin{enumerate}
+        \item For all $z\in\Sigma_0$, there exists at least one $f\in\CC$ such that $fz$ is defined;
+        \item For all $f\in\CC$, there exists at least one $z\in\Sigma_0$ such that $fz$ is defined.
+      \end{enumerate}
+  \end{enumerate}
+\end{rmenv}
+
+These axioms imply that, for all $z\in\Sigma_0$, there exists exactly one $e\in\CC_0$ such that $ez$ is defined;
+we thus obtain a map $p_0\colon z\mapsto e$ from $\Sigma_0$ to $\CC_0$;
+we say that $z$ is a \emph{structure} on $p_0(z)$.
 
 
 
