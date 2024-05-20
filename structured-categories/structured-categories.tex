@@ -61,6 +61,7 @@
 \newcommand{\MM}{\mathfrak{M}}
 \usepackage{upgreek}
 \newcommand{\comp}{\upchi}
+\newcommand{\KK}{\mathcal{K}}
 
 
 %% Bibliography %%
@@ -111,11 +112,11 @@ This notion makes precise that of a sub-object of an arbitrary category, using t
 it leads to endowing $\HH$ with the structure of an ordered category, which is the subject of the main results of this section.
 
 Let $(\MM,p,\HH,\Gamma)$ be a category of homomorphisms with finite products, over a category $\MM$ of maps;
-we define, at the start of Section II, $\HH$-structured categories (or, more precisely, $\HH(\HH',\HH'')$-structured categories).
+we define, at the start of Section~II, $\HH$-structured categories (or, more precisely, $\HH(\HH',\HH'')$-structured categories).
 We then give a certain number of examples: topological categories and differential categories \cite{3b}; double categories that arise, in particular, in the theory of natural transformations between functors \cite{3d}; order-structured categories, in particular inductive categories and inductive groupoids \cite{3c}, etc.
 \oldpage{350}
 These examples, which I was led to consider in the study of fibred spaces, foliated spaces, extensions of differential varieties, and local structures in general, are the origin of this work.
-The end of Section II contains a series of general theorems:
+The end of Section~II contains a series of general theorems:
 
 \begin{itemize}
   \item $\HH$-structured functors form a category of homomorphisms over a category of functors, and over $\MM$;
@@ -149,7 +150,7 @@ The class of pairs $(g,f)$ such that the composite $g\perp f$ is defined (that i
 the map
 \[
   (g,f) \mapsto g\perp f
-  \qquad\text{where }(g,f\in\CC^\perp\star\CC^\perp)
+  \qquad\text{where $(g,f\in\CC^\perp\star\CC^\perp)$}
 \]
 will be denoted by the symbol $\comp^\perp$.
 
@@ -173,19 +174,24 @@ Since the notion of \unsure{species of structures} \cite{3a} is essential in thi
 \begin{rmenv}{Definition 1}
   We say that a category $\CC$ is a \emph{category of operators on a class $\Sigma_0$} if we have defined a composition law $(f,z)\mapsto fz$ for certain pairs $(f,z)\in\CC\times\Sigma_0$ such that $fz\in\Sigma_0$ and such that the following axioms are satisfied:
   \begin{enumerate}
-    \item \emph{Associativity.}
+    \item[1.]
+      \emph{Associativity.}
       If one of $g(fz)$ or $(g\bullet f)z$ is defined, then both of them are defined, and
       \[
         g(fz)
         = (g\bullet f)z;
       \]
-    \item If $g\bullet f$ and $fz$ are defined, then $g(fz)$ is defined;
-    \item Let $e\in\CC_0$;
+    \item[2.]
+      If $g\bullet f$ and $fz$ are defined, then $g(fz)$ is defined;
+    \item[3.]
+      Let $e\in\CC_0$;
       if $ez$ is defined, then $ez=z$;
-    \item
+    \item[4.]
       \begin{enumerate}
-        \item For all $z\in\Sigma_0$, there exists at least one $f\in\CC$ such that $fz$ is defined;
-        \item For all $f\in\CC$, there exists at least one $z\in\Sigma_0$ such that $fz$ is defined.
+        \item[(a)]
+          For all $z\in\Sigma_0$, there exists at least one $f\in\CC$ such that $fz$ is defined;
+        \item[(b)]
+          For all $f\in\CC$, there exists at least one $z\in\Sigma_0$ such that $fz$ is defined.
       \end{enumerate}
   \end{enumerate}
 \end{rmenv}
@@ -208,7 +214,7 @@ Endowed with the composition law
 \[
   (f',z')\bullet(f,z)
   = (f'\bullet f,z)
-  \qquad\text{if and only if }z'=fz,
+  \qquad\text{if and only if $z'=fz$,}
 \]
 \oldpage{352}
 $\Sigma$ is a category, called the \emph{associated category of hypermorphisms} of the \unsure{species of structures} $(\CC,p_0,\Sigma_0)$.
@@ -224,18 +230,18 @@ The map $p_0$ extends to a functor $(\CC,p,\Sigma)$ satisfying the following pro
     there exists exactly one $h'\in\Sigma$ such that
     \[
       p(h')=p(h)
-      \qquad\text{and}\qquad
+      \quad\text{and}\quad
       \alpha(h')=z.
     \]
 \end{enumerate}
 The \unsure{species of structures} $(\CC,p_0,\Sigma_0)$ is also denoted by $(\CC,p,\Sigma)$.
 
 Conversely, let $\CC$ and $\Sigma$ be two categories.
-Let $(\CC,p,\Sigma)$ be a functor satisfying condition (E);
+Let $(\CC,p,\Sigma)$ be a functor satisfying condition~(E);
 we say that $\Sigma$ is a \emph{category over $\CC$ with respect to $p$}.
 We can show \cite{3a} that $p(\Sigma)$ is a subcategory of $\CC$, and that the map
 \[
-  h\mapsto (p(h),\alpha(h))
+  h\mapsto \big(p(h),\alpha(h)\big)
 \]
 lets us identify $\Sigma$ with the associated category of hypermorphisms of the \unsure{species of structures} $(\CC,p_0,\Sigma_0)$ in which the composition law is defined by
 \[
@@ -244,7 +250,7 @@ lets us identify $\Sigma$ with the associated category of hypermorphisms of the 
 if and only if there exists $h\in\Sigma$ such that
 \[
   f=p(h)
-  \qquad\text{and}\qquad
+  \quad\text{and}\quad
   z=\alpha(h).
 \]
 
@@ -252,8 +258,143 @@ if and only if there exists $h\in\Sigma$ such that
 
 \subsection{\unsure{Species of structures} \unsure{dominated} by a category}
 
-We
+We denote by $\MM_0$ a class of classes such that if it contains $X$ then it also contains all the subsets of $X$.
+Then $\MM_0$ can be identified with a class of \todo of the category $\MM$ whose elements are triples $(M',f,M)$ such that $M,M'\in\MM_0$ and $f$ is a surjection from $M$ onto a subclass of $M'$, and with the composition law defined by
+\[
+  (M'',f',M'_1)\bullet(M',f,M)
+  = (M'',f'f,M)
+  \qquad\text{if and only if $M'_1=M'$}
+\]
+where $f'f$ denotes the surjection
+\[
+  x\mapsto f'(f(x)).
+\]
+If $\bar{f}=(M',f,M)$, then we also write $\bar{f}(x)$ to mean $f(x)$.
 
+Let $(\CC,p,\Sigma)$ be a \unsure{species of structures} such that $p^{-1}(e)$ belongs to $\MM_0$ for all $e\in p_0(\Sigma_0)$.
+Let $f\in p(\Sigma)$ and set
+\[
+  \begin{aligned}
+    e&=\alpha(f)
+  \\e'&=\beta(f).
+  \end{aligned}
+\]
+Set
+\[
+  F(f)
+  = \big(p^{-1}(e'),\tilde{f},p^{-1}(e)\big)
+  \in\MM
+\]
+\oldpage{353}
+where
+\[
+  \tilde{f}(z)
+  =fz
+  \qquad\text{for all $z$ such that $p(z)=e$;}
+\]
+then $F(e)$ can be identified with $p^{-1}(e)$.
+If $f$ is an invertible element of $p(\Sigma)$, then the map $\tilde{f}$ is a bijection from $F(e)$ to $F(e')$.
+The map $F\colon f\mapsto F(f)$ for $f\in p(\Sigma)$ is a functor from $\alpha(F)=p(\Sigma)$ to $\MM$ satisfying the axiom
+\begin{enumerate}
+  \item[(A)] \itshape
+    Let $e,e'\in\alpha(F)_0$; then
+    \[
+      F(e)\neq\varnothing;
+    \]
+    further, if $e\neq e'$ then
+    \[
+      F(e)\cap F(e')=\varnothing.
+    \]
+\end{enumerate}
+Furthermore, the pair $(\CC,F)$ entirely determines $(\CC,p,\Sigma)$.
+
+Conversely, let $(\CC,F)$ be a pair such that $F$ is a functor from a subcategory $\alpha(F)$ of $\CC$ to $\MM$ satisfying condition~(A).
+We can show \cite{3a} that the class $\Sigma_0$, given by the union of the classes $F(e)$ over all $e\in\alpha(F)_0$, is a \unsure{species of structures} over $\CC$, in which the composition law is defined by
+\[
+  (f,z)\mapsto F(f)(z)
+  \qquad\text{if and only if $z\in F(\alpha(f))$.}
+\]
+We say that $(\CC,F)$ is a \emph{a pair defining a \unsure{species of structures}}, namely the \unsure{species of structures} $\Sigma_0$ constructed above.
+
+\begin{rmenv}{Remarks}
+  \begin{enumerate}
+    \item[1.]
+      Let $\CC$ be a category, $\alpha(F)$ a subcategory, and $(\MM,F,\alpha(F))$ a functor.
+      Let $\bar{F}$ be the functor that sends $f\in\alpha(F)$ to the map
+      \[
+        (\alpha(f),z)
+        \mapsto\big(\beta(f),F(f)(z)\big)
+        \qquad\text{where $z\in F(\alpha(f))$.}
+      \]
+      The pair $(\CC,\bar{F})$ defines the \unsure{species of structures} $(\CC,p_0,\Sigma_0)$, where $\Sigma_0$ is the class of pairs $(e,z)$ such that $e\in\alpha(F)_0$, $z\in F(e)$, and
+      \[
+        p_0(e,z)=e.
+      \]
+    \item[2.]
+      Let $(\CC,F)$ be a pair defining a \unsure{structure of species} $(\CC,p,\Sigma)$ such that $\alpha(F)$ contains $f\in\CC$ whenever $\alpha(f)\in\alpha(F)$;
+      this is equivalent to saying that we are given a composition law between the category $\CC$ and the class $\Sigma_0$ that satisfies axioms~(1), (2), (3), and (4a) of Definition 1.
+      We can extend $F$ to a functor $(\MM,\bar{F},\CC)$ given by
+      \[
+        \begin{aligned}
+          \bar{F}(f)&=F(f)
+          \qquad&&\text{for all $f\in\alpha(F)$,}
+        \\\bar{F}(e)&=\varnothing
+          \qquad&&\text{for all $e\in\CC_0$ and $e\not\in\alpha(F)_0$,}
+        \\\bar{F}(f')&=\big(\bar{F}(\beta(f')),\varnothing,\varnothing)
+          \qquad&&\text{for all $f'\not\in\alpha(F)$.}
+        \end{aligned}
+      \]
+    \item[3.]
+      Let $\CC^\bullet$ be a category;
+      the triple $(\CC^\bullet,\beta,\CC)$ is a \unsure{species of structures} for the composition law $\bullet$;
+      if $e\in\CC_0^\bullet$ then the triple $(\CC^\bullet,\beta,\alpha^{-1}(e))$ is a \unsure{sub-species of structures} \cite{3a} of $(\CC^\bullet,\beta,\CC)$.
+  \end{enumerate}
+\end{rmenv}
+
+\oldpage{354}
+Let $(\CC^\bullet,F_e)$ be the pair defining the \unsure{species of structures} $(\CC^\bullet,\beta,\alpha^{-1}(e))$, and $\bar{F}_e$ the functor associated to $F_e$ by Remark~2 above.
+A functor $(\MM,G,\CC^\bullet)$ is said to be representable \cite{2} if there exists some $e\in\CC_0^\bullet$ such that $G$ and $\bar{F}_e$ are induced from one another by a natural equivalence.
+To every pair $(\CC,F)$ that defines a \unsure{species of structures} $(\CC,p,\Sigma)$, we can associated a representable functor $\bar{F}$ in the following way:
+
+Let $a$ be an arbitrary element that does not belong to $\CC$.
+Let $\CC'_1$ be the class of pairs $(z,a)$, where $z\in\Sigma_0$.
+Let $\CC'$ be the class given by the union of $\CC$, $\{a\}$, and $\CC'_1$.
+This class is a category for the composition law
+\[
+  (\gamma',\gamma)
+  \mapsto\gamma'\bullet\gamma
+\]
+if and only if one of the following conditions is satisfied:
+\begin{enumerate}
+  \item[1.]
+    $\gamma,\gamma'\in\CC$ and $\alpha(\gamma')=\beta(\gamma)$;
+    then $\gamma'\bullet\gamma$ is the composition of $\gamma'$ and $\gamma$ in $\CC$;
+  \item[2.]
+    $\gamma'\in\CC$, $\gamma=(z,a)$, and $z\in F(\alpha(\gamma'))$;
+    then
+    \[
+      \gamma'\bullet\gamma
+      =(\gamma'z,a)
+    \]
+  \item[3.]
+    $\gamma'=(z,a)$ and $\gamma=a$;
+    then
+    \[
+      \gamma'\bullet\gamma
+      =(z,a).
+    \]
+\end{enumerate}
+Remark~2 then allows us to extend $F$ to a functor $(\MM,\bar{F},\CC')$;
+this functor $\bar{F}$, which is identical to $(\MM,\bar{F}_a,\CC')$, is representable.
+
+\begin{rmenv}{Definition 3}
+  Let $\CC$ be a category, and $(\MM,\gamma,\KK)$ a functor.
+  We define a \emph{\unsure{species of structures} \unsure{dominated} by $(\gamma,\KK)$} to be a pair $(\CC,F)$ such that $(\KK,F,\alpha(F))$ is a functor and $(\CC,\gamma F)$ defines a \unsure{species of structures};
+  the \unsure{species of structures} defined by $(\CC,\gamma F)$ is called the \emph{\unsure{species of structures} \unsure{under/for} $(\CC,F)$}.
+\end{rmenv}
+
+We will later return to the notion of a \unsure{species of structures} \unsure{dominated} by a category (Sections~III and IV).
+For now, we will only consider particular cases.
 
 
 
