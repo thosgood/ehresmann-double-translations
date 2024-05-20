@@ -198,6 +198,66 @@ These axioms imply that, for all $z\in\Sigma_0$, there exists exactly one $e\in\
 we thus obtain a map $p_0\colon z\mapsto e$ from $\Sigma_0$ to $\CC_0$;
 we say that $z$ is a \emph{structure} on $p_0(z)$.
 
+\begin{rmenv}{Definition 2}
+  Let $\Sigma_0$ be a class, and $\CC$ a category;
+  we say that $\Sigma_0$ is a \emph{\unsure{species of structures} over $\CC$} if we have a subcategory $\CC_1$ of $\CC$ that is a category of operators on $\Sigma_0$;
+  let $p_0$ be the corresponding map from $\Sigma_0$ to $\CC_0$;
+  we also say that $(\CC,p_0,\Sigma_0)$ is a \emph{\unsure{species of structures}}.
+  If, further, $\CC_1=\CC$, then we say that $[\CC,p_0,\Sigma_0]$ is a \emph{\unsure{species of structures} on $\CC$}.
+\end{rmenv}
+
+Let $(\CC,p_0,\Sigma_0)$ be a \unsure{species of structures}.
+Let $\Sigma$ be the class of pairs $(f,z)\in\CC\times\Sigma_0$ such that $fz$ is defined, i.e. such that $\alpha(f)=p_0(z)$.
+Endowed with the composition law
+\[
+  (f',z')\dotc(f,z)
+  = (f'\dotc f,z)
+  \qquad\text{if and only if }z'=fz,
+\]
+\oldpage{352}
+$\Sigma$ is a category, called the \emph{associated category of hypermorphisms} of the \unsure{species of structures} $(\CC,p_0,\Sigma_0)$.
+The class of \unsure{identities} of $\Sigma$ can be identified with $\Sigma_0$ by associating $(e,z)$ with $z$.
+The map $p_0$ extends to a functor $(\CC,p,\Sigma)$ satisfying the following property:
+\begin{enumerate}
+  \item[(E)] \itshape
+    For all $h\in\Sigma$ and all $z\in\Sigma_0$ such that
+    \[
+      p_0(z)
+      = p_0(\alpha(h))
+    \]
+    there exists exactly one $h'\in\Sigma$ such that
+    \[
+      p(h')=p(h)
+      \qquad\text{and}\qquad
+      \alpha(h')=z.
+    \]
+\end{enumerate}
+The \unsure{species of structures} $(\CC,p_0,\Sigma_0)$ is also denoted by $(\CC,p,\Sigma)$.
+
+Conversely, let $\CC$ and $\Sigma$ be two categories.
+Let $(\CC,p,\Sigma)$ be a functor satisfying condition (E);
+we say that $\Sigma$ is a \emph{category over $\CC$ with respect to $p$}.
+We can show \cite{3a} that $p(\Sigma)$ is a subcategory of $\CC$, and that the map
+\[
+  h\mapsto (p(h),\alpha(h))
+\]
+lets us identify $\Sigma$ with the associated category of hypermorphisms of the \unsure{species of structures} $(\CC,p_0,\Sigma_0)$ in which the composition law is defined by
+\[
+  (f,z) \mapsto \beta(h)
+\]
+if and only if there exists $h\in\Sigma$ such that
+\[
+  f=p(h)
+  \qquad\text{and}\qquad
+  z=\alpha(h).
+\]
+
+
+
+\subsection{\unsure{Species of structures} \unsure{dominated} by a category}
+
+We
+
 
 
 
