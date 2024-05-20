@@ -62,6 +62,7 @@
 \usepackage{upgreek}
 \newcommand{\comp}{\upchi}
 \newcommand{\KK}{\mathcal{K}}
+\newcommand{\FF}{\mathcal{F}}
 
 
 %% Bibliography %%
@@ -96,6 +97,8 @@ produced with permission from \todo
 \tableofcontents
 
 %% Content %%
+
+\todo\unsure{get better $\SS$ and $\KK$ (and $\CC$)}
 
 \section*{Introduction}
 \addcontentsline{toc}{section}{\protect\numberline{}Introduction}
@@ -395,6 +398,87 @@ this functor $\bar{F}$, which is identical to $(\MM,\bar{F}_a,\CC')$, is represe
 
 We will later return to the notion of a \unsure{species of structures} \unsure{dominated} by a category (Sections~III and IV).
 For now, we will only consider particular cases.
+
+Let $\FF$ be the category of all functors $(\bar{\SS}^\bullet,G,\SS^\bullet)$ such that $(\bar{\SS},G,\SS)\in\MM$;
+let $(\MM,p_\FF,\FF)$ be the functor defined by
+\[
+  p_\FF\colon(\bar{\SS}^\bullet,G,\SS^\bullet)
+  \mapsto (\bar{\SS},G,\SS).
+\]
+
+\begin{rmenv}{Definition 4}
+  A \unsure{species of structures} \unsure{dominated} by $(p_\FF,\FF)$ is called a \emph{\unsure{species} of morphisms}.
+\end{rmenv}
+
+Let $(\CC,p,\Sigma)$ be a \unsure{species of structures}.
+Consider the following conditions:
+\begin{enumerate}
+  \item[(a)]
+    $(\CC,p,\Sigma)$ is the \unsure{species of structures} \unsure{under} a \unsure{species of morphisms} $(\CC,F)$.
+  \oldpage{355}
+  \item[(b)]
+    \begin{enumerate}
+      \item[(b\textsubscript{1})]
+        For all $e\in p(\Sigma_0)$, the class $p^{-1}(e)$ is endowed with the structure of a category $(p^{-1}(e))^\perp$, which we denote by $F(e)$;
+      \item[(b\textsubscript{2})]
+        Let $f\in p(\Sigma)$, $e=\alpha(f)$, and $e'=\beta(f')$;
+        then $(F(e'),\tilde{f},F(e))$ is a functor $F(f)$.
+    \end{enumerate}
+  \item[(c)]
+    \begin{enumerate}
+      \item[(c\textsubscript{1})]
+        $(\Sigma_0)^\perp$ is a category;
+      \item[(c\textsubscript{2})]
+        The conditions $(z',z)\in(\Sigma_0)^\perp\star(\Sigma_0)^\perp$ and $(f,z'\perp z)\in\Sigma$ imply that
+        \[
+          (f,z),(f,z')\in\Sigma
+          \quad\text{and}\quad
+          f(z'\perp z)=fz'\perp fz;
+        \]
+      \item[(c\textsubscript{3})]
+        If $z_0\in(\Sigma_0)_0^\perp$ and $(f,z_0)\in\Sigma$, then
+        \[
+          fz_0\in(\Sigma_0)_0^\perp.
+        \]
+    \end{enumerate}
+\end{enumerate}
+
+\begin{itenv}{Proposition 1}
+  Conditions~(a), (b), and (c) above are equivalent.
+\end{itenv}
+
+\begin{proof}
+  Conditions~(a) and (b) are equivalent by definition.
+  If they are satisfied, then the category $(\Sigma_0)^\perp$ given by the sum of the categories $F(e)$ for $e\in p(\Sigma_0)$ satisfies condition~(c).
+  Conversely, suppose that condition~(c) is satisfied.
+  Let $z,z'\in\Sigma_0$.
+  If $z'\perp z$ is defined, then $p(z'\perp z)$ \unsure{typo?} is defined and, by (c\textsubscript{2}), we have
+  \[
+    p(z'\perp z)
+    = p(z')
+    = p(z);
+  \]
+  in particular,
+  \[
+    p(\alpha^\perp(z))
+    = p(\beta^\perp(z))
+    = p(z);
+  \]
+  thus $p^{-1}(e)$ is a subcategory of $(\Sigma_0)^\perp$ for all $e\in p(\Sigma_0)$.
+  Let $f\in p(\Sigma)$ be such that $\alpha(f)=e$;
+  conditions~(c\textsubscript{2}) and (c\textsubscript{3}) imply that the map $\tilde{f}$ is a functor from $p^{-1}(e)$ to $p^{-1}(\beta(f))$.
+  Thus (b) is satisfied.
+\end{proof}
+
+\begin{itenv}{Corollary}
+  If we suppose conditions~(c\textsubscript{1}) and (c\textsubscript{2}) to be satisfied, and if $p(\Sigma)$ (resp. $\Sigma_0^\perp$) is a groupoid, then condition~(c\textsubscript{3}) is also satisfied.
+\end{itenv}
+
+\begin{proof}
+  The
+
+  \todo
+\end{proof}
 
 
 
