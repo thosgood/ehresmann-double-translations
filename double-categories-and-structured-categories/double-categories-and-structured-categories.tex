@@ -54,13 +54,11 @@
 \newcommand{\unsure}[1]{{\color{purple}\textbf{#1}}}
 
 \newcommand{\CC}{\mathcal{C}}
-\newcommand{\dotc}{{\mathbin{\bullet}}}
-\newcommand{\botc}{{\mathbin{\bot}}}
 \DeclareMathOperator{\sq}{\square}
-\DeclareMathOperator{\vsq}{{\rotatebox{90}{$\boxminus$}}}
-\DeclareMathOperator{\hsq}{\boxminus}
-\newcommand{\vmult}{{\,\rotatebox{90}{$\boxminus$}\,}}
-\newcommand{\hmult}{{\,\boxminus\,}}
+\DeclareMathOperator{\vsq}{\raisebox{-.1em}{\rotatebox{90}{$\boxminus$}\,}}
+\DeclareMathOperator{\hsq}{\raisebox{-.05em}{$\boxminus$}}
+\newcommand{\vmult}{\mathbin{\raisebox{-.1em}{\rotatebox{90}{$\boxminus$}}}}
+\newcommand{\hmult}{\mathbin{\raisebox{-.05em}{$\boxminus$}}}
 \DeclareMathOperator{\FF}{\mathcal{F}}
 \DeclareMathOperator{\NN}{\mathfrak{N}}
 \newcommand{\MM}{\mathfrak{M}}
@@ -93,84 +91,84 @@ produced with permission from \todo
 
 %% Content %%
 
-\todo \unsure{fix $\vmult$ and $\hmult$; fix $\dotc$}
+\todo \unsure{fix $f\vmult g$ and $f\hmult g$}
 
 \section{Double categories}
 \oldpage{1}
 
 \begin{rmenv}{Definition}
-  We define a \emph{double category} to be a class $\CC$ endowed with two composition laws, denoted $\dotc$ and $\botc$, satisfying the following conditions:
+  We define a \emph{double category} to be a class $\CC$ endowed with two composition laws, denoted $\bullet$ and $\perp$, satisfying the following conditions:
 
   \begin{enumerate}
-    \item $(\CC,\dotc)$ is a category, denoted $\CC^\dotc$;
-      the right and left \todo of $f\in\CC$ will be denoted by $\alpha^\dotc(f)$ and $\beta^\dotc(f)$ respectively, and the class of \todo by $\CC_0^\dotc$;
-    \item $(\CC,\botc)$ is a category, denoted $\CC^\botc$;
-      the \todo of $f\in\CC^\botc$ will be denoted by $\alpha^\botc(f)$ and $\beta^\botc(f)$ respectively, and the class of \todo by $\CC_0^\botc$;
-    \item The maps $\alpha^\dotc$ and $\beta^\dotc$ (resp. $\alpha^\botc$ and $\beta^\botc$) are functors from $\CC^\botc$ to $\CC^\botc$ (resp. from $\CC^\dotc$ to $\CC^\dotc$);
+    \item $(\CC,\bullet)$ is a category, denoted $\CC^\bullet$;
+      the right and left \todo of $f\in\CC$ will be denoted by $\alpha^\bullet(f)$ and $\beta^\bullet(f)$ respectively, and the class of \todo by $\CC_0^\bullet$;
+    \item $(\CC,\perp)$ is a category, denoted $\CC^\perp$;
+      the \todo of $f\in\CC^\perp$ will be denoted by $\alpha^\perp(f)$ and $\beta^\perp(f)$ respectively, and the class of \todo by $\CC_0^\perp$;
+    \item The maps $\alpha^\bullet$ and $\beta^\bullet$ (resp. $\alpha^\perp$ and $\beta^\perp$) are functors from $\CC^\perp$ to $\CC^\perp$ (resp. from $\CC^\bullet$ to $\CC^\bullet$);
     \item \emph{Axiom of permutability.}
-      If the composites $k\dotc h$, $g\dotc f$, $k\botc g$, and $h\botc f$ are defined, then
+      If the composites $k\bullet h$, $g\bullet f$, $k\perp g$, and $h\perp f$ are defined, then
       \[
-        (k\dotc h)\botc(g\dotc f)
-        = (k\botc g)\dotc(h\botc f).
+        (k\bullet h)\perp(g\bullet f)
+        = (k\perp g)\bullet(h\perp f).
       \]
   \end{enumerate}
 
-  Let $\CC$ be a class endowed with two composition laws $\dotc$ and $\botc$ satisfying axioms 1 and 2; consider the following axioms:
+  Let $\CC$ be a class endowed with two composition laws $\bullet$ and $\perp$ satisfying axioms 1 and 2; consider the following axioms:
 
   \begin{enumerate}
     \item[3\textquotesingle.]
-      $\CC_0^\dotc$ (resp. $\CC_0^\botc$) is stable with respect to $\botc$ (resp. to $\dotc$);
+      $\CC_0^\bullet$ (resp. $\CC_0^\perp$) is stable with respect to $\perp$ (resp. to $\bullet$);
     \item[4\textquotesingle.]
-      If the composites $k\dotc h$, $g\dotc f$, $k\botc g$, and $h\botc f$ are defined, then both $(k\dotc h)\botc(g\dotc f)$ and $(k\botc g)\dotc(h\botc f)$ are defined and are equal to one another.
+      If the composites $k\bullet h$, $g\bullet f$, $k\perp g$, and $h\perp f$ are defined, then both $(k\bullet h)\perp(g\bullet f)$ and $(k\perp g)\bullet(h\perp f)$ are defined and are equal to one another.
     \item[5.]
       For all $f\in\CC$, we have
       \[
         \begin{aligned}
-          \alpha^\dotc(\alpha^\botc(f))
-          = \alpha^\botc(\alpha^\dotc(f)),
+          \alpha^\bullet(\alpha^\perp(f))
+          = \alpha^\perp(\alpha^\bullet(f)),
           &\qquad
-          \beta^\dotc(\beta^\botc(f))
-          = \beta^\botc(\beta^\dotc(f));
-        \\\alpha^\dotc(\beta^\botc(f))
-          = \beta^\botc(\alpha^\dotc(f)),
+          \beta^\bullet(\beta^\perp(f))
+          = \beta^\perp(\beta^\bullet(f));
+        \\\alpha^\bullet(\beta^\perp(f))
+          = \beta^\perp(\alpha^\bullet(f)),
           &\qquad
-          \alpha^\botc(\beta^\dotc(f))
-          = \beta^\dotc(\alpha^\botc(f)).
+          \alpha^\perp(\beta^\bullet(f))
+          = \beta^\bullet(\alpha^\perp(f)).
         \end{aligned}
       \]
   \end{enumerate}
 \end{rmenv}
 
 \begin{itenv}{Proposition}
-  For $(\CC,\dotc,\botc)$ to be a double category, it is necessary and sufficient that conditions 1, 2, 3\textquotesingle, 4\textquotesingle, and 5 be satisfied.
-  In this case, $\CC_0^\dotc$ (resp. $\CC_0^\botc$) is a subcategory of $\CC^\dotc$ (resp. $\CC^\botc$).
+  For $(\CC,\bullet,\perp)$ to be a double category, it is necessary and sufficient that conditions 1, 2, 3\textquotesingle, 4\textquotesingle, and 5 be satisfied.
+  In this case, $\CC_0^\bullet$ (resp. $\CC_0^\perp$) is a subcategory of $\CC^\bullet$ (resp. $\CC^\perp$).
 \end{itenv}
 
-A \emph{double subcategory} of a double category $\CC$ is a subclass $\CC'$ of $\CC$ that is a subcategory of $\CC^\dotc$ and of $\CC^\botc$;
-then $\CC'$ is a double category for the composition laws induced by $\dotc$ and $\botc$.
+A \emph{double subcategory} of a double category $\CC$ is a subclass $\CC'$ of $\CC$ that is a subcategory of $\CC^\bullet$ and of $\CC^\perp$;
+then $\CC'$ is a double category for the composition laws induced by $\bullet$ and $\perp$.
 
 \begin{rmenv}{Definition}
   Let $\CC$ be a double category;
-  we define a \emph{left ideal} (resp. \emph{right ideal}) of $\CC^\botc$ to be a subcategory $I^\botc$ of $\CC^\botc$ such that $\CC\dotc I^\botc$ (resp. $I^\botc\dotc\CC=I^\botc$), where $\CC\dotc I^\botc$ (resp. $I^\botc\dotc\CC$) is the class of composites $f\dotc g$ (resp. $g\dotc f$) for $g\in I^\botc$ and $f\in\CC$.
-  We similarly define an \emph{ideal} of $\CC^\dotc$.
+  we define a \emph{left ideal} (resp. \emph{right ideal}) of $\CC^\perp$ to be a subcategory $I^\perp$ of $\CC^\perp$ such that $\CC\bullet I^\perp$ (resp. $I^\perp\bullet\CC=I^\perp$), where $\CC\bullet I^\perp$ (resp. $I^\perp\bullet\CC$) is the class of composites $f\bullet g$ (resp. $g\bullet f$) for $g\in I^\perp$ and $f\in\CC$.
+  We similarly define an \emph{ideal} of $\CC^\bullet$.
 \end{rmenv}
 
 \oldpage{2}
 
 \begin{itenv}{Proposition}
   Let $\CC$ be a double category;
-  a left ideal $I^\botc$ of $\CC^\botc$ is a \todo\footnote{\label{fn1}\emph{Espèces de structures locales; élargissements de catégories}, Séminaire Top. et Géo Diff. (Ehresmann), \textbf{III}, Paris, 1961; Jahres. Deutsch. Math. Ver., \textbf{60}, 1957, p.~49.} over $\CC^\dotc$ for the composition law $(f,g)\mapsto f\dotc g$ if and only if $f\dotc g$ is defined, where $f\in\CC$ and $g\in I^\botc$.
-  The corresponding category $\mathcal{E}(I^\botc)$ \unsure{is this right?} of hypermorphisms\footref{fn1} is a double category for the composition laws \unsure{is this right?}
+  a left ideal $I^\perp$ of $\CC^\perp$ is a \todo\footnote{\label{fn1}\emph{Espèces de structures locales; élargissements de catégories}, Séminaire Top. et Géo Diff. (Ehresmann), \textbf{III}, Paris, 1961; Jahres. Deutsch. Math. Ver., \textbf{60}, 1957, p.~49.} over $\CC^\bullet$ for the composition law $(f,g)\mapsto f\bullet g$ if and only if $f\bullet g$ is defined, where $f\in\CC$ and $g\in I^\perp$.
+  The corresponding category $\mathcal{E}(I^\perp)$ \unsure{is this right?} of hypermorphisms\footref{fn1} is a double category for the composition laws \unsure{is this right?}
   \[
-    (f',g')\dotc(f,g)
-    = (f'\dotc f,g)
+    (f',g')\bullet(f,g)
+    = (f'\bullet f,g)
   \]
-  if and only if $g'=f\dotc g$; further \unsure{is this right? or is it two joined iffs}
+  if and only if $g'=f\bullet g$; further \unsure{is this right? or is it two joined iffs}
   \[
-    (f',g')\botc(f,g)
-    = (f'\botc f,g'\botc g)
+    (f',g')\perp(f,g)
+    = (f'\perp f,g'\perp g)
   \]
-  if and only if $f'\botc f$ and $g'\botc g$ are defined.
+  if and only if $f'\perp f$ and $g'\perp g$ are defined.
 \end{itenv}
 
 
@@ -221,29 +219,29 @@ recall\footref{fn1} that a \emph{square} in $\CC$ is an element $(g_2,g_1,f_1,f_
 
 \begin{itenv}{Corollary}
   Let $\CC$ be a double category;
-  then $\CC^\dotc$ admits the longitudinal category $\vsq(\CC_0^\dotc,\CC_0^\botc)$ as a quotient category\footref{fn1}, where $\CC_0^\dotc$ (resp. $\CC_0^\botc$) is endowed with its structure as a subcategory of $\CC^\botc$ (resp. of $\CC^\dotc$).
+  then $\CC^\bullet$ admits the longitudinal category $\vsq(\CC_0^\bullet,\CC_0^\perp)$ as a quotient category\footref{fn1}, where $\CC_0^\bullet$ (resp. $\CC_0^\perp$) is endowed with its structure as a subcategory of $\CC^\perp$ (resp. of $\CC^\bullet$).
 \end{itenv}
 
 
 \section{Functors into a double category}
 
 Let $\Gamma$ be a category and $\CC$ a double category;
-let $\FF(\CC^\dotc,\Gamma)$ be the class of functors from $\Gamma$ to $\CC^\dotc$.
+let $\FF(\CC^\bullet,\Gamma)$ be the class of functors from $\Gamma$ to $\CC^\bullet$.
 
 \begin{itenv}{Proposition}
-  $\FF(\CC^\dotc,\Gamma)$ is a category for the composition law $(\Phi',\Phi)\mapsto\Phi'\botc\Phi$, where $(\Phi'\botc\Phi)(f)=\Phi'(f)\botc\Phi(f)$, if and only if $\Phi'(f)\botc\Phi(f)$ is defined for all $f\in\CC$.
+  $\FF(\CC^\bullet,\Gamma)$ is a category for the composition law $(\Phi',\Phi)\mapsto\Phi'\perp\Phi$, where $(\Phi'\perp\Phi)(f)=\Phi'(f)\perp\Phi(f)$, if and only if $\Phi'(f)\perp\Phi(f)$ is defined for all $f\in\CC$.
 \end{itenv}
 
 \oldpage{3}
 
 \begin{rmenv}{Definition}
   Let $\CC$ and $\CC_1$ be two double categories;
-  we define a \emph{double functor} from $\CC$ to $\CC_1$ to be a map $\Phi$ from $\CC$ to $\CC_1$ such that $\Phi$ is a functor from $\CC^\dotc$ to $\CC_1^\dotc$ and a functor from $\CC^\botc$ to $\CC_1^\botc$.
+  we define a \emph{double functor} from $\CC$ to $\CC_1$ to be a map $\Phi$ from $\CC$ to $\CC_1$ such that $\Phi$ is a functor from $\CC^\bullet$ to $\CC_1^\bullet$ and a functor from $\CC^\perp$ to $\CC_1^\perp$.
   The class of double functors from $\CC$ to $\CC_1$ is denoted $\FF(\CC_1,\CC)$.
 \end{rmenv}
 
 \begin{itenv}{Proposition}
-  $\FF(\CC_1,\CC)$ is a subcategory of $\FF(\CC_1^\dotc,\CC^\dotc)$ and of $\FF(\CC_1^\botc,\CC^\botc)$;
+  $\FF(\CC_1,\CC)$ is a subcategory of $\FF(\CC_1^\bullet,\CC^\bullet)$ and of $\FF(\CC_1^\perp,\CC^\perp)$;
   endowed with the two induced composition laws, $\FF(\CC_1,\CC)$ is a double category.
 \end{itenv}
 
@@ -258,7 +256,7 @@ let $\FF(\CC^\dotc,\Gamma)$ be the class of functors from $\Gamma$ to $\CC^\dotc
   for all $f\in\CC$.
 \end{itenv}
 
-Consequently, if $(\CC^\dotc,\CC^\botc)$ is a double category, then a functor $\Phi$ from a category $\Gamma$ into $\CC^\dotc$ can be considered as a generalised natural transformation from $\alpha^\botc\Phi$ to $\beta^\botc\Phi$.
+Consequently, if $(\CC^\bullet,\CC^\perp)$ is a double category, then a functor $\Phi$ from a category $\Gamma$ into $\CC^\bullet$ can be considered as a generalised natural transformation from $\alpha^\perp\Phi$ to $\beta^\perp\Phi$.
 We will see another generalisation of natural transformations (the double category of quintets) in a following publication.
 
 
@@ -271,20 +269,20 @@ let $\KK_0$ be the class of \todo of $\KK$;
 we identify $h\in\KK$ with $(\beta^\KK(h),p(h),\alpha^\KK(h))$.
 
 \begin{rmenv}{Definition}
-  We define a \emph{structured category in $\KK$} to be a pair $(\CC^\dotc,s)$, where $\CC^\dotc$ is the structure of a category on $\CC\in\MM_0$, and $s\in\KK_0$ with $p(s)=\CC$, satisfying the following conditions:
+  We define a \emph{structured category in $\KK$} to be a pair $(\CC^\bullet,s)$, where $\CC^\bullet$ is the structure of a category on $\CC\in\MM_0$, and $s\in\KK_0$ with $p(s)=\CC$, satisfying the following conditions:
   \begin{enumerate}
     \item There exists $s_0\in\KK_0$ such that \unsure{check the following}
       \[
         \begin{gathered}
           p(s_0)
-          = \CC_0^\dotc
-        \\(s,i_{\CC_0^\dotc},s_0),\,\,
+          = \CC_0^\bullet
+        \\(s,i_{\CC_0^\bullet},s_0),\,\,
           (s_0,\alpha,s),\,\,
           (s_0,\beta,s)
           \in\KK
         \end{gathered}
       \]
-      where $i_{\CC_0^\dotc}$ is the canonical injection from $\CC_0^\dotc$ into $\CC$, and $\alpha$ and $\beta$ are the source and target maps (respectively) in $\CC^\dotc$.
+      where $i_{\CC_0^\bullet}$ is the canonical injection from $\CC_0^\bullet$ into $\CC$, and $\alpha$ and $\beta$ are the source and target maps (respectively) in $\CC^\bullet$.
     \item There exists a product $s\times s$ in $\KK$ such that $p(s\times s)=\CC\times\CC$;
       if $K$ is the subclass of $\CC\times\CC$ consisting of composible pairs, then there exists $s'\in\KK_0$ such that
       \[
@@ -293,7 +291,7 @@ we identify $h\in\KK$ with $(\beta^\KK(h),p(h),\alpha^\KK(h))$.
         \\(s\times ,i_K,s')\in\KK.
         \end{gathered}
       \]
-    \item writing $x$ to denote the map $(g,f)\mapsto g\dotc f$ from $K$ to $\CC$, the relation $(s\times s,i_K,s')\in\KK$ implies $(s,x,s')\in\KK$.
+    \item writing $x$ to denote the map $(g,f)\mapsto g\bullet f$ from $K$ to $\CC$, the relation $(s\times s,i_K,s')\in\KK$ implies $(s,x,s')\in\KK$.
   \end{enumerate}
 \end{rmenv}
 
@@ -304,8 +302,8 @@ we identify $h\in\KK$ with $(\beta^\KK(h),p(h),\alpha^\KK(h))$.
 \oldpage{4}
 
 \begin{itenv}{Theorem}
-  For $(\CC^\dotc,\CC^\botc)$ to be a double category, it is necessary and sufficient that $(\CC^\dotc,\CC^\botc)$ be a structured category in the category $\FF$ of functors from one category to another;
-  in this case, $(\CC^\botc,\CC^\dotc)$ is also a structured category in $\FF$ (the structure on $\CC^\dotc$ is $\CC^\botc$).
+  For $(\CC^\bullet,\CC^\perp)$ to be a double category, it is necessary and sufficient that $(\CC^\bullet,\CC^\perp)$ be a structured category in the category $\FF$ of functors from one category to another;
+  in this case, $(\CC^\perp,\CC^\bullet)$ is also a structured category in $\FF$ (the structure on $\CC^\bullet$ is $\CC^\perp$).
 \end{itenv}
 
 \end{document}
