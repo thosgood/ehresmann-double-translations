@@ -475,10 +475,33 @@ Consider the following conditions:
 \end{itenv}
 
 \begin{proof}
-  The
-
-  \todo
+  The conditions $(f,z_0)\in\Sigma$ and $z_0\in(\Sigma_0)_0^\perp$ imply that
+  \[
+    fz_0
+    = f(z_0\perp z_0)
+    =fz_0\perp fz_0.
+  \]
+  If $(\Sigma_0)^\perp$ is a groupoid, then it follows that $fz_0\in(\Sigma_0)_0^\perp$.
+  Suppose that $p(\Sigma)$ is a groupoid;
+  from the sequence of equalities
+  \[
+    \begin{aligned}
+      f^{-1}(fz_0)
+      &= f^{-1}(fz_0\perp\alpha^\perp(fz_0))
+    \\&= (f^{-1}\bullet f)z_0\perp f^{-1}(\alpha^\perp(fz_0))
+    \\&= f^{-1}(\alpha^\perp(fz_0))
+    \end{aligned}
+  \]
+  we deduce that
+  \[
+    fz_0
+    = \alpha^\perp(fz_0)
+    \in(\Sigma_0)_0^\perp
+  \]
+  and so (c\textsubscript{3}) is satisfied.
 \end{proof}
+
+Let
 
 
 
