@@ -152,7 +152,7 @@ The source and target maps that send an element $f\in\CC^\perp$ to its right and
 The class of pairs $(g,f)$ such that the composite $g\perp f$ is defined (that is, such that $\alpha^\perp(g)=\beta^\perp(f)$) will be denoted by the symbol $\CC^\perp\star\CC^\perp$;
 the map
 \[
-  (g,f) \mapsto g\perp f
+  (g,f) \longmapsto g\perp f
   \qquad\text{where $(g,f\in\CC^\perp\star\CC^\perp)$}
 \]
 will be denoted by the symbol $\comp^\perp$.
@@ -244,11 +244,11 @@ Let $(\CC,p,\Sigma)$ be a functor satisfying condition~(E);
 we say that $\Sigma$ is a \emph{category over $\CC$ with respect to $p$}.
 We can show \cite{3a} that $p(\Sigma)$ is a subcategory of $\CC$, and that the map
 \[
-  h\mapsto \big(p(h),\alpha(h)\big)
+  h\longmapsto \big(p(h),\alpha(h)\big)
 \]
 lets us identify $\Sigma$ with the associated category of hypermorphisms of the \unsure{species of structures} $(\CC,p_0,\Sigma_0)$ in which the composition law is defined by
 \[
-  (f,z) \mapsto \beta(h)
+  (f,z) \longmapsto \beta(h)
 \]
 if and only if there exists $h\in\Sigma$ such that
 \[
@@ -270,7 +270,7 @@ Then $\MM_0$ can be identified with a class of \todo of the category $\MM$ whose
 \]
 where $f'f$ denotes the surjection
 \[
-  x\mapsto f'(f(x)).
+  x\longmapsto f'(f(x)).
 \]
 If $\bar{f}=(M',f,M)$, then we also write $\bar{f}(x)$ to mean $f(x)$.
 
@@ -314,7 +314,7 @@ Furthermore, the pair $(\CC,F)$ entirely determines $(\CC,p,\Sigma)$.
 Conversely, let $(\CC,F)$ be a pair such that $F$ is a functor from a subcategory $\alpha(F)$ of $\CC$ to $\MM$ satisfying condition~(A).
 We can show \cite{3a} that the class $\Sigma_0$, given by the union of the classes $F(e)$ over all $e\in\alpha(F)_0$, is a \unsure{species of structures} over $\CC$, in which the composition law is defined by
 \[
-  (f,z)\mapsto F(f)(z)
+  (f,z)\longmapsto F(f)(z)
   \qquad\text{if and only if $z\in F(\alpha(f))$.}
 \]
 We say that $(\CC,F)$ is a \emph{a pair defining a \unsure{species of structures}}, namely the \unsure{species of structures} $\Sigma_0$ constructed above.
@@ -326,7 +326,7 @@ We say that $(\CC,F)$ is a \emph{a pair defining a \unsure{species of structures
       Let $\bar{F}$ be the functor that sends $f\in\alpha(F)$ to the map
       \[
         (\alpha(f),z)
-        \mapsto\big(\beta(f),F(f)(z)\big)
+        \longmapsto\big(\beta(f),F(f)(z)\big)
         \qquad\text{where $z\in F(\alpha(f))$.}
       \]
       The pair $(\CC,\bar{F})$ defines the \unsure{species of structures} $(\CC,p_0,\Sigma_0)$, where $\Sigma_0$ is the class of pairs $(e,z)$ such that $e\in\alpha(F)_0$, $z\in F(e)$, and
@@ -365,7 +365,7 @@ Let $\CC'$ be the class given by the union of $\CC$, $\{a\}$, and $\CC'_1$.
 This class is a category for the composition law
 \[
   (\gamma',\gamma)
-  \mapsto\gamma'\bullet\gamma
+  \longmapsto\gamma'\bullet\gamma
 \]
 if and only if one of the following conditions is satisfied:
 \begin{enumerate}
@@ -403,7 +403,7 @@ Let $\FF$ be the category of all functors $(\bar{\SS}^\bullet,G,\SS^\bullet)$ su
 let $(\MM,p_\FF,\FF)$ be the functor defined by
 \[
   p_\FF\colon(\bar{\SS}^\bullet,G,\SS^\bullet)
-  \mapsto (\bar{\SS},G,\SS).
+  \longmapsto (\bar{\SS},G,\SS).
 \]
 
 \begin{rmenv}{Definition 4}
@@ -501,7 +501,38 @@ Consider the following conditions:
   and so (c\textsubscript{3}) is satisfied.
 \end{proof}
 
-Let
+Let $A$ be a class endowed with an order relation $<$;
+the class of pairs $(z',z)$ with $z<z'$ is a category under the composition law given by
+\[
+  (z'',z'_1)\perp(z',z)
+  =(z'',z)
+  \qquad\text{if and only if $z'_1=z'$.}
+\]
+\oldpage{356}
+Conversely, if $\CC$ is a category such that any two elements $f,f'\in\CC$ that have the same set of \unsure{identities} in $\CC$ are identical, then the data of $\CC$ defines on $\CC_0$ the order relation given by
+\[
+  \begin{gathered}
+    z<z'
+    \qquad\text{if and only if there exists $f\in\CC$ such that}
+  \\z=\alpha(f)
+    \quad\text{and}
+    z'=\beta(f).
+  \end{gathered}
+\]
+We then say that the category $\CC$ \emph{defines} an \emph{order} on $\CC$.
+
+Let $\Omega_0$ be the class of ordered classes $(A,<)$, where $A\in\MM_0$;
+let $\tilde{\Omega}$ be the category of triples $((A',<),h,(A,<))$, where $(A,<),(A',<)\in\Omega_0$ and where $h$ is a map from $A$ to $A'$ that is compatible with the orders on $A$ and $A'$.
+Let $\omega$ be the map
+\[
+  \big((A',<),h,(A,<)\big)
+  \longrightarrow (A',h,A);
+\]
+then $(\MM,\omega,\tilde{\Omega})$ is a functor.
+
+\begin{rmenv}{Definition 5}
+  We call
+\end{rmenv}
 
 
 
