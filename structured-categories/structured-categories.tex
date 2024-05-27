@@ -15,6 +15,7 @@
 
 
 %% Standards %%
+
 \usepackage{amssymb}
 \usepackage{amsmath}
 \usepackage{hyperref}
@@ -29,6 +30,7 @@
 
 \usepackage{fouriernc}
 \usepackage{Baskervaldx}
+\usepackage[cal=esstix]{mathalfa}
 
 \renewcommand{\thesection}{\Roman{section}}
 
@@ -98,8 +100,6 @@ produced with permission from \todo
 \tableofcontents
 
 %% Content %%
-
-\todo\unsure{get better $\SS$ and $\KK$ (and $\CC$ and $\AA$)}
 
 \section*{Introduction}
 \addcontentsline{toc}{section}{\protect\numberline{}Introduction}
@@ -516,7 +516,7 @@ Conversely, if $\CC$ is a category such that any two elements $f,f'\in\CC$ that 
     z<z'
     \qquad\text{if and only if there exists $f\in\CC$ such that}
   \\z=\alpha(f)
-    \quad\text{and}
+    \quad\text{and}\quad
     z'=\beta(f).
   \end{gathered}
 \]
@@ -567,7 +567,7 @@ where $(\CC,F)$ is an ordered species of structures, is a bijection from the cla
 \subsection{Reminder on categories of homomorphisms}
 
 \begin{rmenv}{Definition 6}
-  Let $\CC$ and $\HH$ be two categories,;
+  Let $\CC$ and $\HH$ be two categories;
   we say \cite{3a} that $(\CC,p\HH,\SS)$ is a \emph{category of homomorphisms} if the following conditions are satisfied:
   \begin{enumerate}
     \item[1.]
@@ -593,7 +593,44 @@ where $(\CC,F)$ is an ordered species of structures, is a bijection from the cla
   \end{enumerate}
 \end{rmenv}
 
-Let
+Let $(\CC,p,\HH,\SS)$ be a category of homomorphisms.
+An element $h\in\HH$ can be identified, by condition~(4), with a triple $(S',f,S)$, where
+\[
+  \begin{aligned}
+    S
+    &= \alpha(h) \in\HH_0
+  \\S'
+    &= \beta(h) \in\HH_0
+  \\f
+    &= p(h)\in\CC.
+  \end{aligned}
+\]
+We usually represent an element of $\HH$ by such a triplet.
+Note that we thus identify $\HH$ with a subcategory of the induced category $p_0^*(\CC)$ whose elements are the triples $(S',f,S)$ such that
+\[
+  \begin{gathered}
+    S,S'\in\HH_0
+  \\f\in\CC
+  \\\alpha(f)=p(S)
+    \quad\text{and}\quad
+    \beta(f)=p(S').
+  \end{gathered}
+\]
+Since an element of $\SS$ is entirely determined by the data of $\alpha(h)$ and $p(h)$, we write such elements either in the form $(\beta(h),p(h),\alpha(h))$ or in the form $(p(h),\alpha(h))$.
+If $\SS$ is the groupoid of invertible elements of $\HH$, then $\HH$ is a species of structures \unsure{over} $\SS\times\SS$ with the composition law
+\[
+  \begin{gathered}
+    \big((\bar{f}',\bar{f}),h\big)
+    \longmapsto\bar{f}'\bullet h\bullet\bar{f}^{-1}
+    \qquad\text{if and only if}
+  \\\alpha(\bar{f})=\alpha(h)
+    \quad\text{and}\quad
+    \alpha(\bar{f}')=\beta(h)
+  \end{gathered}
+\]
+where $h\in\HH$ and $\bar{f},\bar{f}'\in\SS$.
+
+Let $(\CC,p,\HH,\SS)$ be a category of homomorphisms;
 
 
 
