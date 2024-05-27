@@ -63,6 +63,7 @@
 \newcommand{\comp}{\upchi}
 \newcommand{\KK}{\mathcal{K}}
 \newcommand{\FF}{\mathcal{F}}
+\renewcommand{\AA}{\mathcal{A}}
 
 
 %% Bibliography %%
@@ -98,7 +99,7 @@ produced with permission from \todo
 
 %% Content %%
 
-\todo\unsure{get better $\SS$ and $\KK$ (and $\CC$)}
+\todo\unsure{get better $\SS$ and $\KK$ (and $\CC$ and $\AA$)}
 
 \section*{Introduction}
 \addcontentsline{toc}{section}{\protect\numberline{}Introduction}
@@ -522,17 +523,77 @@ Conversely, if $\CC$ is a category such that any two elements $f,f'\in\CC$ that 
 We then say that the category $\CC$ \emph{defines} an \emph{order} on $\CC$.
 
 Let $\Omega_0$ be the class of ordered classes $(A,<)$, where $A\in\MM_0$;
-let $\tilde{\Omega}$ be the category of triples $((A',<),h,(A,<))$, where $(A,<),(A',<)\in\Omega_0$ and where $h$ is a map from $A$ to $A'$ that is compatible with the orders on $A$ and $A'$.
+let $\widetilde{\Omega}$ be the category of triples $((A',<),h,(A,<))$, where $(A,<),(A',<)\in\Omega_0$ and where $h$ is a map from $A$ to $A'$ that is compatible with the orders on $A$ and $A'$.
 Let $\omega$ be the map
 \[
   \big((A',<),h,(A,<)\big)
   \longrightarrow (A',h,A);
 \]
-then $(\MM,\omega,\tilde{\Omega})$ is a functor.
+then $(\MM,\omega,\widetilde{\Omega})$ is a functor.
 
 \begin{rmenv}{Definition 5}
-  We call
+  If a \unsure{species of structures} $(\CC,F)$ is \unsure{dominated} by $(\omega,\widetilde{\Omega})$, then we call it an \emph{ordered \unsure{species of structures}};
+  if $\CC$ further defines an order on $\CC_0$, then we say that $(\CC,F)$ is a \emph{bi-ordered \unsure{species of structures}}.
 \end{rmenv}
+
+Let $((\bar{A},<),h,(A,<))\in\widetilde{\Omega}$;
+let $\AA$ (resp. $\bar{\AA}$) be the category of pairs defining the order of $A$ (resp. of $\bar{A}$);
+let $\bar{h}$ be the map
+\[
+  (z',z)
+  \longmapsto(h(z'),h(z))
+  \qquad\text{where $(z',z)\in\AA$;}
+\]
+then $(\bar{\AA},\bar{h},\AA)$ is a functor, and the map
+\[
+  \eta\colon\big((\bar{A},<),h,(A,<)\big)
+  \longmapsto(\bar{\AA},\bar{h},\AA)
+\]
+is an equivalence from $\widetilde{\Omega}$ to a full subcategory $\widehat{\Omega}$ of $\FF$ whose \unsure{identities} are the categories $\SS$ that define an order on $\SS_0$.
+The map \unsure{is this right?}
+\[
+  (\CC,F)
+  \longmapsto (\CC,(\FF,\eta,\widetilde{\Omega})F),
+\]
+where $(\CC,F)$ is an ordered \unsure{structure of species}, is a bijection from the class of ordered \unsure{structures of species} to the class of \unsure{species of morphisms} $(\CC,\widehat{F})$ such that
+\[
+  \widehat{F}(\alpha(\widehat{F}))
+  \subset \widehat{\Omega}
+  \subset \FF.
+\]
+
+
+
+\subsection{Reminder on categories of homomorphisms}
+
+\begin{rmenv}{Definition 6}
+  Let $\CC$ and $\HH$ be two categories,;
+  we say \cite{3a} that $(\CC,p\HH,\SS)$ is a \emph{category of homomorphisms} if the following conditions are satisfied:
+  \begin{enumerate}
+    \item[1.]
+      $(\CC,p,\HH)$ is a functor;
+    \item[2.]
+      \oldpage{357}
+      $\SS$ is a subcategory of $\HH$ that contains $\HH_0$;
+    \item[3.]
+      $(\CC,p',\SS)$ is a \unsure{species of structures}, where $p'$ denotes the restriction of $p$ to $\SS$;
+    \item[4.]
+      If $h,h'\in\HH$, then the relations
+      \[
+        \begin{aligned}
+          \alpha(h)
+          &= \alpha(h')
+        \\\beta(h)
+          &= \beta(h')
+        \\p(h)
+          &= p(h')
+        \end{aligned}
+      \]
+      imply that $h=h'$.
+  \end{enumerate}
+\end{rmenv}
+
+Let
 
 
 
