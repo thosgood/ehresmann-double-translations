@@ -106,10 +106,10 @@ produced with permission from \todo
 
 \oldpage{349}
 
-This article is the first part of a work on the notion of structured categories and of \unsure{species of structured structures}.
+This article is the first part of a work on the notion of structured categories and of species of structured structures.
 The main results are summarised in a series in \emph{Notes à l'Académie des Sciences} \cite{3e}.
 
-The first section begins with a short reminder on the \todo and categories of homomorphisms.
+The first section begins with a short reminder on the notions of species of structures and categories of homomorphisms.
 Let $(\CC,p,\HH,\SS)$ be a category of homomorphisms over $\CC$ such that $\SS$ contains the groupoid of invertible elements of the category $\HH$, and such that $\CC$ is further endowed with the structure of an inductive category.
 We define the substructures of a structure of $\HH$.
 This notion makes precise that of a sub-object of an arbitrary category, using the fact that $\HH$ is a category of homomorphisms and $\CC$ an inductive category;
@@ -132,8 +132,8 @@ The end of Section~II contains a series of general theorems:
 
 All of these theorems use the additional hypothesis that $(\MM,p,\HH,\Gamma)$ is a category of homomorphisms \unsure{right resolved?} (that is, $\HH$ contains ``enough'' substructures).
 
-The second part of this article (to appear soon) will contain the theory of \unsure{species of structured structures};
-we will show how the \unsure{complete enlargement} procedure of an inductive groupoid can be generalised to \unsure{species of structured structures}.
+The second part of this article (to appear soon) will contain the theory of species of structured structures;
+we will show how the \unsure{complete enlargement} procedure of an inductive groupoid can be generalised to species of structured structures.
 We will then give some applications of all these concepts to more specific problems.
 
 
@@ -142,14 +142,14 @@ We will then give some applications of all these concepts to more specific probl
 
 \subsection{Conventions}
 
-A category will be in general represented by the symbol denoted the \unsure{support class} of the category along with the symbol for the composition law that makes this class a category as a superscript.
+A category will be in general represented by the symbol denoted the underlying class (or \emph{support}) of the category along with the symbol for the composition law that makes this class a category as a superscript.
 For example: $\CC^\perp$, $\CC_1^\perp$, $\bar{\CC}^\perp$ (resp. $\CC^\bullet$, $\CC_1^\bullet$, $\bar{\CC}^\bullet$), \ldots denote the categories obtained by endowing the class $\CC$, $\CC_1$, $\bar{\CC}$, \ldots with the composition law $\perp$ (resp. $\bullet$).
-The class of \unsure{identities} of a category will be denoted by the symbol representing the category along with a $0$ as a subscript.
+The class of \unsure{units} of a category will be denoted by the symbol representing the category along with a $0$ as a subscript.
 For example: $\CC_0^\perp$, $(\CC_1^\perp)_0$, $\bar{\CC}_0^\perp$, \ldots.
-If a class of objects is naturally associated to the category (for example, the classes in a category of maps from one class to another), then we will tacitly identify the \unsure{identities} with the corresponding objects.
+If a class of objects is naturally associated to the category (for example, the classes in a category of maps from one class to another), then we will tacitly identify the \unsure{units} with the corresponding objects.
 
 Let $\CC^\perp$ be a category.
-The source and target maps that send an element $f\in\CC^\perp$ to its right and left \unsure{identities} will be denoted $\alpha^\perp$ and $\beta^\perp$ (respectively).
+The source and target maps that send an element $f\in\CC^\perp$ to its right and left \unsure{???} will be denoted $\alpha^\perp$ and $\beta^\perp$ (respectively).
 The class of pairs $(g,f)$ such that the composite $g\perp f$ is defined (that is, such that $\alpha^\perp(g)=\beta^\perp(f)$) will be denoted by the symbol $\CC^\perp\star\CC^\perp$;
 the map
 \[
@@ -159,7 +159,7 @@ the map
 will be denoted by the symbol $\comp^\perp$.
 
 \oldpage{351}
-To simplify notation, if no confusion is possible, we will represent a category by the same symbol as its \unsure{support class};
+To simplify notation, if no confusion is possible, we will represent a category by the same symbol as its underlying class;
 in this case, it is to be understood that the composition law is denoted by $\bullet$;
 we thus write $\CC$ instead of $\CC^\bullet$.
 Similarly, we will also write $\CC_0$, $\alpha$, and $\beta$ instead of $\CC_0^\bullet$, $\alpha^\bullet$, and $\beta^\bullet$ (respectively).
@@ -171,9 +171,9 @@ The restriction of $F$ to the class $\CC_0^\perp$, considered as a map from $\CC
 
 
 
-\subsection{Reminder on \unsure{species of structures}}
+\subsection{Reminder on species of structures}
 
-Since the notion of \unsure{species of structures} \cite{3a} is essential in this article, we will recall the definition and main properties.
+Since the notion of species of structures \cite{3a} is essential in this article, we will recall the definition and main properties.
 
 \begin{rmenv}{Definition 1}
   We say that a category $\CC$ is a \emph{category of operators on a class $\Sigma_0$} if we have defined a composition law $(f,z)\mapsto fz$ for certain pairs $(f,z)\in\CC\times\Sigma_0$ such that $fz\in\Sigma_0$ and such that the following axioms are satisfied:
@@ -206,13 +206,13 @@ we say that $z$ is a \emph{structure} on $p_0(z)$.
 
 \begin{rmenv}{Definition 2}
   Let $\Sigma_0$ be a class, and $\CC$ a category;
-  we say that $\Sigma_0$ is a \emph{\unsure{species of structures} over $\CC$} if we have a subcategory $\CC_1$ of $\CC$ that is a category of operators on $\Sigma_0$;
+  we say that $\Sigma_0$ is a \emph{species of structures over $\CC$} if we have a subcategory $\CC_1$ of $\CC$ that is a category of operators on $\Sigma_0$;
   let $p_0$ be the corresponding map from $\Sigma_0$ to $\CC_0$;
-  we also say that $(\CC,p_0,\Sigma_0)$ is a \emph{\unsure{species of structures}}.
-  If, further, $\CC_1=\CC$, then we say that $[\CC,p_0,\Sigma_0]$ is a \emph{\unsure{species of structures} on $\CC$}.
+  we also say that $(\CC,p_0,\Sigma_0)$ is a \emph{species of structures}.
+  If, further, $\CC_1=\CC$, then we say that $[\CC,p_0,\Sigma_0]$ is a \emph{species of structures on $\CC$}.
 \end{rmenv}
 
-Let $(\CC,p_0,\Sigma_0)$ be a \unsure{species of structures}.
+Let $(\CC,p_0,\Sigma_0)$ be a species of structures.
 Let $\Sigma$ be the class of pairs $(f,z)\in\CC\times\Sigma_0$ such that $fz$ is defined, i.e. such that $\alpha(f)=p_0(z)$.
 Endowed with the composition law
 \[
@@ -221,7 +221,7 @@ Endowed with the composition law
   \qquad\text{if and only if $z'=fz$,}
 \]
 \oldpage{352}
-$\Sigma$ is a category, called the \emph{associated category of hypermorphisms} of the \unsure{species of structures} $(\CC,p_0,\Sigma_0)$.
+$\Sigma$ is a category, called the \emph{associated category of hypermorphisms} of the species of structures $(\CC,p_0,\Sigma_0)$.
 The class of \unsure{identities} of $\Sigma$ can be identified with $\Sigma_0$ by associating $(e,z)$ with $z$.
 The map $p_0$ extends to a functor $(\CC,p,\Sigma)$ satisfying the following property:
 \begin{enumerate}
@@ -238,7 +238,7 @@ The map $p_0$ extends to a functor $(\CC,p,\Sigma)$ satisfying the following pro
       \alpha(h')=z.
     \]
 \end{enumerate}
-The \unsure{species of structures} $(\CC,p_0,\Sigma_0)$ is also denoted by $(\CC,p,\Sigma)$.
+The species of structures $(\CC,p_0,\Sigma_0)$ is also denoted by $(\CC,p,\Sigma)$.
 
 Conversely, let $\CC$ and $\Sigma$ be two categories.
 Let $(\CC,p,\Sigma)$ be a functor satisfying condition~(E);
@@ -247,7 +247,7 @@ We can show \cite{3a} that $p(\Sigma)$ is a subcategory of $\CC$, and that the m
 \[
   h\longmapsto \big(p(h),\alpha(h)\big)
 \]
-lets us identify $\Sigma$ with the associated category of hypermorphisms of the \unsure{species of structures} $(\CC,p_0,\Sigma_0)$ in which the composition law is defined by
+lets us identify $\Sigma$ with the associated category of hypermorphisms of the species of structures $(\CC,p_0,\Sigma_0)$ in which the composition law is defined by
 \[
   (f,z) \longmapsto \beta(h)
 \]
@@ -260,7 +260,7 @@ if and only if there exists $h\in\Sigma$ such that
 
 
 
-\subsection{\unsure{Species of structures} \unsure{dominated} by a category}
+\subsection{\unsure{Species of structures} enriched in a category}
 
 We denote by $\MM_0$ a class of classes such that if it contains $X$ then it also contains all the subsets of $X$.
 Then $\MM_0$ can be identified with a class of \todo of the category $\MM$ whose elements are triples $(M',f,M)$ such that $M,M'\in\MM_0$ and $f$ is a surjection from $M$ onto a subclass of $M'$, and with the composition law defined by
@@ -275,7 +275,7 @@ where $f'f$ denotes the surjection
 \]
 If $\bar{f}=(M',f,M)$, then we also write $\bar{f}(x)$ to mean $f(x)$.
 
-Let $(\CC,p,\Sigma)$ be a \unsure{species of structures} such that $p^{-1}(e)$ belongs to $\MM_0$ for all $e\in p_0(\Sigma_0)$.
+Let $(\CC,p,\Sigma)$ be a species of structures such that $p^{-1}(e)$ belongs to $\MM_0$ for all $e\in p_0(\Sigma_0)$.
 Let $f\in p(\Sigma)$ and set
 \[
   \begin{aligned}
@@ -313,12 +313,12 @@ The map $F\colon f\mapsto F(f)$ for $f\in p(\Sigma)$ is a functor from $\alpha(F
 Furthermore, the pair $(\CC,F)$ entirely determines $(\CC,p,\Sigma)$.
 
 Conversely, let $(\CC,F)$ be a pair such that $F$ is a functor from a subcategory $\alpha(F)$ of $\CC$ to $\MM$ satisfying condition~(A).
-We can show \cite{3a} that the class $\Sigma_0$, given by the union of the classes $F(e)$ over all $e\in\alpha(F)_0$, is a \unsure{species of structures} over $\CC$, in which the composition law is defined by
+We can show \cite{3a} that the class $\Sigma_0$, given by the union of the classes $F(e)$ over all $e\in\alpha(F)_0$, is a species of structures over $\CC$, in which the composition law is defined by
 \[
   (f,z)\longmapsto F(f)(z)
   \qquad\text{if and only if $z\in F(\alpha(f))$.}
 \]
-We say that $(\CC,F)$ is a \emph{a pair defining a \unsure{species of structures}}, namely the \unsure{species of structures} $\Sigma_0$ constructed above.
+We say that $(\CC,F)$ is a \emph{a pair defining a species of structures}, namely the species of structures $\Sigma_0$ constructed above.
 
 \begin{rmenv}{Remarks}
   \begin{enumerate}
@@ -330,12 +330,12 @@ We say that $(\CC,F)$ is a \emph{a pair defining a \unsure{species of structures
         \longmapsto\big(\beta(f),F(f)(z)\big)
         \qquad\text{where $z\in F(\alpha(f))$.}
       \]
-      The pair $(\CC,\bar{F})$ defines the \unsure{species of structures} $(\CC,p_0,\Sigma_0)$, where $\Sigma_0$ is the class of pairs $(e,z)$ such that $e\in\alpha(F)_0$, $z\in F(e)$, and
+      The pair $(\CC,\bar{F})$ defines the species of structures $(\CC,p_0,\Sigma_0)$, where $\Sigma_0$ is the class of pairs $(e,z)$ such that $e\in\alpha(F)_0$, $z\in F(e)$, and
       \[
         p_0(e,z)=e.
       \]
     \item[2.]
-      Let $(\CC,F)$ be a pair defining a \unsure{structure of species} $(\CC,p,\Sigma)$ such that $\alpha(F)$ contains $f\in\CC$ whenever $\alpha(f)\in\alpha(F)$;
+      Let $(\CC,F)$ be a pair defining a species of structures $(\CC,p,\Sigma)$ such that $\alpha(F)$ contains $f\in\CC$ whenever $\alpha(f)\in\alpha(F)$;
       this is equivalent to saying that we are given a composition law between the category $\CC$ and the class $\Sigma_0$ that satisfies axioms~(1), (2), (3), and (4a) of Definition 1.
       We can extend $F$ to a functor $(\MM,\bar{F},\CC)$ given by
       \[
@@ -350,15 +350,15 @@ We say that $(\CC,F)$ is a \emph{a pair defining a \unsure{species of structures
       \]
     \item[3.]
       Let $\CC^\bullet$ be a category;
-      the triple $(\CC^\bullet,\beta,\CC)$ is a \unsure{species of structures} for the composition law $\bullet$;
-      if $e\in\CC_0^\bullet$ then the triple $(\CC^\bullet,\beta,\alpha^{-1}(e))$ is a \unsure{sub-species of structures} \cite{3a} of $(\CC^\bullet,\beta,\CC)$.
+      the triple $(\CC^\bullet,\beta,\CC)$ is a species of structures for the composition law $\bullet$;
+      if $e\in\CC_0^\bullet$ then the triple $(\CC^\bullet,\beta,\alpha^{-1}(e))$ is a sub-species of structures \cite{3a} of $(\CC^\bullet,\beta,\CC)$.
   \end{enumerate}
 \end{rmenv}
 
 \oldpage{354}
-Let $(\CC^\bullet,F_e)$ be the pair defining the \unsure{species of structures} $(\CC^\bullet,\beta,\alpha^{-1}(e))$, and $\bar{F}_e$ the functor associated to $F_e$ by Remark~2 above.
+Let $(\CC^\bullet,F_e)$ be the pair defining the species of structures $(\CC^\bullet,\beta,\alpha^{-1}(e))$, and $\bar{F}_e$ the functor associated to $F_e$ by Remark~2 above.
 A functor $(\MM,G,\CC^\bullet)$ is said to be representable \cite{2} if there exists some $e\in\CC_0^\bullet$ such that $G$ and $\bar{F}_e$ are induced from one another by a natural equivalence.
-To every pair $(\CC,F)$ that defines a \unsure{species of structures} $(\CC,p,\Sigma)$, we can associated a representable functor $\bar{F}$ in the following way:
+To every pair $(\CC,F)$ that defines a species of structures $(\CC,p,\Sigma)$, we can associated a representable functor $\bar{F}$ in the following way:
 
 Let $a$ be an arbitrary element that does not belong to $\CC$.
 Let $\CC'_1$ be the class of pairs $(z,a)$, where $z\in\Sigma_0$.
@@ -393,11 +393,11 @@ this functor $\bar{F}$, which is identical to $(\MM,\bar{F}_a,\CC')$, is represe
 
 \begin{rmenv}{Definition 3}
   Let $\CC$ be a category, and $(\MM,\gamma,\KK)$ a functor.
-  We define a \emph{\unsure{species of structures} \unsure{dominated} by $(\gamma,\KK)$} to be a pair $(\CC,F)$ such that $(\KK,F,\alpha(F))$ is a functor and $(\CC,\gamma F)$ defines a \unsure{species of structures};
-  the \unsure{species of structures} defined by $(\CC,\gamma F)$ is called the \emph{\unsure{species of structures} \unsure{under/for} $(\CC,F)$}.
+  We define a \emph{species of structures enriched in $(\gamma,\KK)$} to be a pair $(\CC,F)$ such that $(\KK,F,\alpha(F))$ is a functor and $(\CC,\gamma F)$ defines a species of structures;
+  the species of structures defined by $(\CC,\gamma F)$ is called the \emph{species of structures \unsure{under/for} $(\CC,F)$}.
 \end{rmenv}
 
-We will later return to the notion of a \unsure{species of structures} \unsure{dominated} by a category (Sections~III and IV).
+We will later return to the notion of a species of structures enriched in a category (Sections~III and IV).
 For now, we will only consider particular cases.
 
 Let $\FF$ be the category of all functors $(\bar{\SS}^\bullet,G,\SS^\bullet)$ such that $(\bar{\SS},G,\SS)\in\MM$;
@@ -408,14 +408,14 @@ let $(\MM,p_\FF,\FF)$ be the functor defined by
 \]
 
 \begin{rmenv}{Definition 4}
-  A \unsure{species of structures} \unsure{dominated} by $(p_\FF,\FF)$ is called a \emph{\unsure{species} of morphisms}.
+  A species of structures enriched in $(p_\FF,\FF)$ is called a \emph{species of morphisms}.
 \end{rmenv}
 
-Let $(\CC,p,\Sigma)$ be a \unsure{species of structures}.
+Let $(\CC,p,\Sigma)$ be a species of structures.
 Consider the following conditions:
 \begin{enumerate}
   \item[(a)]
-    $(\CC,p,\Sigma)$ is the \unsure{species of structures} \unsure{under} a \unsure{species of morphisms} $(\CC,F)$.
+    $(\CC,p,\Sigma)$ is the species of structures \unsure{under} a species of morphisms $(\CC,F)$.
   \oldpage{355}
   \item[(b)]
     \begin{enumerate}
@@ -532,8 +532,8 @@ Let $\omega$ be the map
 then $(\MM,\omega,\widetilde{\Omega})$ is a functor.
 
 \begin{rmenv}{Definition 5}
-  If a \unsure{species of structures} $(\CC,F)$ is \unsure{dominated} by $(\omega,\widetilde{\Omega})$, then we call it an \emph{ordered \unsure{species of structures}};
-  if $\CC$ further defines an order on $\CC_0$, then we say that $(\CC,F)$ is a \emph{bi-ordered \unsure{species of structures}}.
+  If a species of structures $(\CC,F)$ is enriched in $(\omega,\widetilde{\Omega})$, then we call it an \emph{ordered species of structures} \unsure{or species of ordered structures?};
+  if $\CC$ further defines an order on $\CC_0$, then we say that $(\CC,F)$ is a \emph{bi-ordered species of structures} \unsure{again, which noun does bi-ordered modify?}.
 \end{rmenv}
 
 Let $((\bar{A},<),h,(A,<))\in\widetilde{\Omega}$;
@@ -555,7 +555,7 @@ The map \unsure{is this right?}
   (\CC,F)
   \longmapsto (\CC,(\FF,\eta,\widetilde{\Omega})F),
 \]
-where $(\CC,F)$ is an ordered \unsure{structure of species}, is a bijection from the class of ordered \unsure{structures of species} to the class of \unsure{species of morphisms} $(\CC,\widehat{F})$ such that
+where $(\CC,F)$ is an ordered species of structures, is a bijection from the class of ordered species of structures to the class of species of morphisms $(\CC,\widehat{F})$ such that
 \[
   \widehat{F}(\alpha(\widehat{F}))
   \subset \widehat{\Omega}
@@ -576,7 +576,7 @@ where $(\CC,F)$ is an ordered \unsure{structure of species}, is a bijection from
       \oldpage{357}
       $\SS$ is a subcategory of $\HH$ that contains $\HH_0$;
     \item[3.]
-      $(\CC,p',\SS)$ is a \unsure{species of structures}, where $p'$ denotes the restriction of $p$ to $\SS$;
+      $(\CC,p',\SS)$ is a species of structures, where $p'$ denotes the restriction of $p$ to $\SS$;
     \item[4.]
       If $h,h'\in\HH$, then the relations
       \[
