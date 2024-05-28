@@ -66,6 +66,7 @@
 \newcommand{\KK}{\mathcal{K}}
 \newcommand{\FF}{\mathcal{F}}
 \renewcommand{\AA}{\mathcal{A}}
+\newcommand{\TT}{\mathcal{T}}
 
 
 %% Bibliography %%
@@ -260,7 +261,7 @@ if and only if there exists $h\in\Sigma$ such that
 
 
 
-\subsection{\unsure{Species of structures} enriched in a category}
+\subsection{Species of structures enriched in a category}
 
 We denote by $\MM_0$ a class of classes such that if it contains $X$ then it also contains all the subsets of $X$.
 Then $\MM_0$ can be identified with a class of \todo of the category $\MM$ whose elements are triples $(M',f,M)$ such that $M,M'\in\MM_0$ and $f$ is a surjection from $M$ onto a subclass of $M'$, and with the composition law defined by
@@ -321,6 +322,7 @@ We can show \cite{3a} that the class $\Sigma_0$, given by the union of the class
 We say that $(\CC,F)$ is a \emph{a pair defining a species of structures}, namely the species of structures $\Sigma_0$ constructed above.
 
 \begin{rmenv}{Remarks}
+  ---
   \begin{enumerate}
     \item[1.]
       Let $\CC$ be a category, $\alpha(F)$ a subcategory, and $(\MM,F,\alpha(F))$ a functor.
@@ -631,7 +633,48 @@ If $\SS$ is the groupoid of invertible elements of $\HH$, then $\HH$ is a specie
 where $h\in\HH$ and $\bar{f},\bar{f}'\in\SS$.
 
 Let $(\CC,p,\HH,\SS)$ be a category of homomorphisms;
+let $\SS_\gamma$ and $\CC_\gamma$ be the groupoids of invertible elements of $\SS$ and $\CC$ (respectively).
+If $p(\SS_\gamma)$ is a saturated \cite{3a} subgroupoid of $\CC$, i.e. if
+\[
+  \big[f\in\CC_\gamma
+  \quad\text{and}\quad
+  \alpha(f)\in p(\SS_\gamma)\big]
+  \implies
+  f\in p(\SS_\gamma),
+\]
+then we say that $\HH$ is \emph{saturated over $\CC$}.
 
+In particular, let $(\MM,p,\HH,\SS)$ be a category of homomorphisms such that $\MM$ is the category defined in Section~I.2.
+Let $h\in\HH$;
+the element $p(h)$ is, by definition, a map $(p(\beta(h)),g,p(\alpha(h)))$, where $g$ is a surjection.
+Since the data of $\alpha(h)$, $\beta(h)$, and $g$ all together entirely determine $p(h)$, we simply represent $h$ by the triple $(\beta(h),g,\alpha(h))$ instead of by $(\beta(h),p(h),\alpha(h))$.
+If $h$ is such that
+\[
+  p(\alpha(h))
+  \subset p(\beta(h))
+\]
+and if $p(h)$ is the canonical injection from $p(\alpha(h))$ to $p(\beta(h))$, then we write $h$ as $(\beta(h),\iota,\alpha(h))$, i.e. $\iota$ denotes the identity map on $p(\alpha(h))$
+
+\begin{rmenv}{Examples}
+  ---
+  \begin{enumerate}
+    \item[1.]
+      \oldpage{358}
+      Let $(\MM,p_\FF,\FF)$ be the functor defined in Section~I.2;
+      let $\FF_\gamma$ be the groupoid of invertible elements of $\FF$ (equivalences of functors);
+      then $(\MM,p_\FF,\FF,\FF_\gamma)$ is a category of homomorphisms.
+    \item[2.]
+      Let $\TT_0$ be the class of topologies (or ``metatopologies'', in the terminology of \cite{3b}) on the classes $M\in\MM_0$;
+      let $\widetilde{\TT}$ be the category of continuous maps $(S',f,S)$ from $S$ to $S'$, where $S$ is a topology on the class $M$, and $S'$ a topology on $M'$.
+      Let $\theta$ be the functor
+      \[
+        (S',f,S)
+        \longmapsto(M',f,M).
+      \]
+      Let $\TT$ be the groupoid of invertible elements of $\widetilde{\TT}$ (homeomorphisms);
+      then $(\MM,\theta,\widetilde{\TT},\TT)$ is a category of homomorphisms.
+  \end{enumerate}
+\end{rmenv}
 
 
 %% Bibliography %%
