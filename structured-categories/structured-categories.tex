@@ -753,7 +753,27 @@ This relation evidently implies that $p(s)=p(s')$.
   \]
   we deduce that $(s',p(s),s)=s$;
   thus $s'=s$ and $\relrho$ is an order relation;
-  the category of pairs that defines $\relrho$ can be identified with the subcategory $\HH_\relrho$ consisting of elements $(s',p(s),s)$ by identifying $(s',s)$ with $(s',p(s),s)$.
+  the category of pairs that defines $\relrho$ can be identified with the subcategory $\HH_{\relrho}$ consisting of elements $(s',p(s),s)$ by identifying $(s',s)$ with $(s',p(s),s)$.
+  If $(s',p(s),s)\in\HH_{\relrho}$ and $f\in p(\Gamma)$, then the equality
+  \[
+    \alpha(f)=p(s)
+  \]
+  guarantees the existence of $(\bar{s},f,s),(\bar{s}',f,s')\in\Gamma$;
+  then
+  \[
+    (\bar{s}',f,s')\bullet(s',p(s),s)\bullet(s,f^{-1},\bar{s})
+    = (\bar{s}',f\bullet p(s)\bullet f^{-1},\bar{s})
+    = (\bar{s}',p(\bar{s}),\bar{s})
+    \in\HH.
+  \]
+  Consequently, $p(\Gamma)$ acts on $\HH_{\relrho}$, with the composition law
+  \[
+    (f,(s',p(s),s))
+    \longmapsto (\bar{s}',p(\bar{s}),\bar{s})
+    \quad\text{if and only if}\quad
+    \alpha(f)=p(s).
+  \]
+  Then $(p(\Gamma),p,\HH_{\relrho})$ is the species of structures \unsure{under} a species of morphisms, and the proposition follows from the end of \cref{section:i.2}.
 \end{proof}
 
 
