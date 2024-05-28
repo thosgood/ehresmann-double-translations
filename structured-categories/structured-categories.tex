@@ -24,15 +24,17 @@
 \usepackage{enumerate}
 \usepackage{graphicx}
 \usepackage{footmisc}
+\usepackage[capitalize]{cleveref}
 
 
-%% Typography %%
+%% Typography and such %%
 
 \usepackage{fouriernc}
 \usepackage{Baskervaldx}
 \usepackage[cal=esstix]{mathalfa}
 
 \renewcommand{\thesection}{\Roman{section}}
+\crefname{section}{}{}
 
 
 %% Theorem environments %%
@@ -67,6 +69,7 @@
 \newcommand{\FF}{\mathcal{F}}
 \renewcommand{\AA}{\mathcal{A}}
 \newcommand{\TT}{\mathcal{T}}
+\newcommand{\relrho}{\mathrel{\rho}}
 
 
 %% Bibliography %%
@@ -140,8 +143,10 @@ We will then give some applications of all these concepts to more specific probl
 
 
 \section{Categories of homomorphisms and substructures}
+\label{section:i}
 
 \subsection{Conventions}
+\label{section:i.1}
 
 A category will be in general represented by the symbol denoted the underlying class (or \emph{support}) of the category along with the symbol for the composition law that makes this class a category as a superscript.
 For example: $\CC^\perp$, $\CC_1^\perp$, $\bar{\CC}^\perp$ (resp. $\CC^\bullet$, $\CC_1^\bullet$, $\bar{\CC}^\bullet$), \ldots denote the categories obtained by endowing the class $\CC$, $\CC_1$, $\bar{\CC}$, \ldots with the composition law $\perp$ (resp. $\bullet$).
@@ -173,6 +178,7 @@ The restriction of $F$ to the class $\CC_0^\perp$, considered as a map from $\CC
 
 
 \subsection{Reminder on species of structures}
+\label{section:i.2}
 
 Since the notion of species of structures \cite{3a} is essential in this article, we will recall the definition and main properties.
 
@@ -219,7 +225,8 @@ Endowed with the composition law
 \[
   (f',z')\bullet(f,z)
   = (f'\bullet f,z)
-  \qquad\text{if and only if $z'=fz$,}
+  \quad\text{if and only if}\quad
+  z'=fz,
 \]
 \oldpage{352}
 $\Sigma$ is a category, called the \emph{associated category of hypermorphisms} of the species of structures $(\CC,p_0,\Sigma_0)$.
@@ -262,13 +269,15 @@ if and only if there exists $h\in\Sigma$ such that
 
 
 \subsection{Species of structures enriched in a category}
+\label{section:i.3}
 
 We denote by $\MM_0$ a class of classes such that if it contains $X$ then it also contains all the subsets of $X$.
 Then $\MM_0$ can be identified with a class of \todo of the category $\MM$ whose elements are triples $(M',f,M)$ such that $M,M'\in\MM_0$ and $f$ is a surjection from $M$ onto a subclass of $M'$, and with the composition law defined by
 \[
   (M'',f',M'_1)\bullet(M',f,M)
   = (M'',f'f,M)
-  \qquad\text{if and only if $M'_1=M'$}
+  \quad\text{if and only if}\quad
+  M'_1=M'
 \]
 where $f'f$ denotes the surjection
 \[
@@ -317,7 +326,8 @@ Conversely, let $(\CC,F)$ be a pair such that $F$ is a functor from a subcategor
 We can show \cite{3a} that the class $\Sigma_0$, given by the union of the classes $F(e)$ over all $e\in\alpha(F)_0$, is a species of structures over $\CC$, in which the composition law is defined by
 \[
   (f,z)\longmapsto F(f)(z)
-  \qquad\text{if and only if $z\in F(\alpha(f))$.}
+  \quad\text{if and only if}\quad
+  z\in F(\alpha(f)).
 \]
 We say that $(\CC,F)$ is a \emph{a pair defining a species of structures}, namely the species of structures $\Sigma_0$ constructed above.
 
@@ -509,7 +519,8 @@ the class of pairs $(z',z)$ with $z<z'$ is a category under the composition law 
 \[
   (z'',z'_1)\perp(z',z)
   =(z'',z)
-  \qquad\text{if and only if $z'_1=z'$.}
+  \quad\text{if and only if}\quad
+  z'_1=z'.
 \]
 \oldpage{356}
 Conversely, if $\CC$ is a category such that any two elements $f,f'\in\CC$ that have the same set of \unsure{identities} in $\CC$ are identical, then the data of $\CC$ defines on $\CC_0$ the order relation given by
@@ -567,10 +578,11 @@ where $(\CC,F)$ is an ordered species of structures, is a bijection from the cla
 
 
 \subsection{Reminder on categories of homomorphisms}
+\label{section:i.4}
 
 \begin{rmenv}{Definition 6}
   Let $\CC$ and $\HH$ be two categories;
-  we say \cite{3a} that $(\CC,p\HH,\SS)$ is a \emph{category of homomorphisms} if the following conditions are satisfied:
+  we say \cite{3a} that $(\CC,p,\HH,\SS)$ is a \emph{category of homomorphisms} if the following conditions are satisfied:
   \begin{enumerate}
     \item[1.]
       $(\CC,p,\HH)$ is a functor;
@@ -644,7 +656,7 @@ If $p(\SS_\gamma)$ is a saturated \cite{3a} subgroupoid of $\CC$, i.e. if
 \]
 then we say that $\HH$ is \emph{saturated over $\CC$}.
 
-In particular, let $(\MM,p,\HH,\SS)$ be a category of homomorphisms such that $\MM$ is the category defined in Section~I.2.
+In particular, let $(\MM,p,\HH,\SS)$ be a category of homomorphisms such that $\MM$ is the category defined in \cref{section:i.2}.
 Let $h\in\HH$;
 the element $p(h)$ is, by definition, a map $(p(\beta(h)),g,p(\alpha(h)))$, where $g$ is a surjection.
 Since the data of $\alpha(h)$, $\beta(h)$, and $g$ all together entirely determine $p(h)$, we simply represent $h$ by the triple $(\beta(h),g,\alpha(h))$ instead of by $(\beta(h),p(h),\alpha(h))$.
@@ -660,7 +672,7 @@ and if $p(h)$ is the canonical injection from $p(\alpha(h))$ to $p(\beta(h))$, t
   \begin{enumerate}
     \item[1.]
       \oldpage{358}
-      Let $(\MM,p_\FF,\FF)$ be the functor defined in Section~I.2;
+      Let $(\MM,p_\FF,\FF)$ be the functor defined in \cref{section:i.2};
       let $\FF_\gamma$ be the groupoid of invertible elements of $\FF$ (equivalences of functors);
       then $(\MM,p_\FF,\FF,\FF_\gamma)$ is a category of homomorphisms.
     \item[2.]
@@ -673,8 +685,76 @@ and if $p(h)$ is the canonical injection from $p(\alpha(h))$ to $p(\beta(h))$, t
       \]
       Let $\TT$ be the groupoid of invertible elements of $\widetilde{\TT}$ (homeomorphisms);
       then $(\MM,\theta,\widetilde{\TT},\TT)$ is a category of homomorphisms.
+    \item[3.]
+      Let $(\MM,\omega,\widetilde{\Omega})$ be the functor defined in \cref{section:i.2};
+      let $\Omega$ be the groupoid of invertible elements of $\widetilde{\Omega}$ (isomorphisms between ordered classes);
+      then $(\MM,\omega,\widetilde{\Omega},\Omega)$ is a category of homomorphisms.
+    \item[4.]
+      Let $\CC$ be any category;
+      then $(\CC,\mathrm{Id}_\CC,\CC,\CC)$ is a category of homomorphisms, where $\mathrm{Id}_\CC$ denotes the identity functor on $\CC$.
   \end{enumerate}
 \end{rmenv}
+
+
+
+\subsection{Substructures}
+\label{section:i.5}
+
+Let $(\CC,p,\HH,\SS)$ be a category of homomorphisms such that $\SS$ contains the groupoid $\Gamma$ of invertible elements of $\HH$.
+
+On $\HH_0$, consider the relation $\relrho$
+\[
+  s\relrho s'
+  \quad\text{if and only if}\quad
+  (s',p(s),s)\in\HH.
+\]
+This relation evidently implies that $p(s)=p(s')$.
+
+\begin{itenv}{Proposition 2}
+  The relation $\relrho$ is an order relation on $\HH_0$, and $(\CC,p,\Gamma)$ is the species of structure \unsure{over} $(\CC,F)$ such that
+  \[
+    F(e)
+    = (p^{-1}(e),\relrho_e)
+    \qquad\text{for all $e\in\alpha(F)_0$}
+  \]
+  where $\relrho_e$ is the order relation induced by $\relrho$ on $p^{-1}(e)$.
+\end{itenv}
+
+\begin{proof}
+  The conditions $s\relrho s'$ and $s'\relrho s''$ imply that
+  \[
+    (s'',p(s'),s')\bullet(s',p(s),s)
+    = (s'',p(s),s)
+    \in\HH
+  \]
+  whence $s\relrho s''$.
+  Suppose that $s\relrho s'$ and $s'\relrho s$;
+  then
+  \[
+    (s,p(s'),s')\bullet(s',p(s),s)
+    = (s,p(s),s)
+    = s
+  \]
+  and
+  \[
+    (s',p(s),s)\bullet(s,p(s'),s')
+    = s'
+  \]
+  thus
+  \[
+    (s',p(s),s)\in\Gamma.
+  \]
+  \oldpage{359}
+  Since $(\CC,p,\Gamma)$ is a species of structures, from the equalities
+  \[
+    \alpha(s',p(s),s)=s
+    \quad\text{and}\quad
+    p(s',p(s),s)=p(s)
+  \]
+  we deduce that $(s',p(s),s)=s$;
+  thus $s'=s$ and $\relrho$ is an order relation;
+  the category of pairs that defines $\relrho$ can be identified with the subcategory $\HH_\relrho$ consisting of elements $(s',p(s),s)$ by identifying $(s',s)$ with $(s',p(s),s)$.
+\end{proof}
 
 
 %% Bibliography %%
