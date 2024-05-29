@@ -1,4 +1,4 @@
-\documentclass{article}
+\documentclass[fleqn]{article}
 
 \usepackage[margin=1.6in]{geometry}
 
@@ -24,7 +24,7 @@
 \usepackage{enumerate}
 \usepackage{graphicx}
 \usepackage{footmisc}
-\usepackage[capitalize]{cleveref}
+\usepackage[capitalize,noabbrev]{cleveref}
 
 
 %% Typography and such %%
@@ -70,6 +70,7 @@
 \renewcommand{\AA}{\mathcal{A}}
 \newcommand{\TT}{\mathcal{T}}
 \newcommand{\relrho}{\mathrel{\rho}}
+\newcommand{\relrhobar}{\mathrel{\bar{\rho}}}
 
 
 %% Bibliography %%
@@ -289,25 +290,25 @@ Let $(\CC,p,\Sigma)$ be a species of structures such that $p^{-1}(e)$ belongs to
 Let $f\in p(\Sigma)$ and set
 \[
   \begin{aligned}
-    e&=\alpha(f)
+    e&=\alpha(f),
   \\e'&=\beta(f).
   \end{aligned}
 \]
 Set
 \[
   F(f)
-  = \big(p^{-1}(e'),\tilde{f},p^{-1}(e)\big)
+  = \big(p^{-1}(e'),\widetilde{f},p^{-1}(e)\big)
   \in\MM
 \]
 \oldpage{353}
 where
 \[
-  \tilde{f}(z)
+  \widetilde{f}(z)
   =fz
   \qquad\text{for all $z$ such that $p(z)=e$;}
 \]
 then $F(e)$ can be identified with $p^{-1}(e)$.
-If $f$ is an invertible element of $p(\Sigma)$, then the map $\tilde{f}$ is a bijection from $F(e)$ to $F(e')$.
+If $f$ is an invertible element of $p(\Sigma)$, then the map $\widetilde{f}$ is a bijection from $F(e)$ to $F(e')$.
 The map $F\colon f\mapsto F(f)$ for $f\in p(\Sigma)$ is a functor from $\alpha(F)=p(\Sigma)$ to $\MM$ satisfying the axiom
 \begin{enumerate}
   \item[(A)] \itshape
@@ -353,9 +354,9 @@ We say that $(\CC,F)$ is a \emph{a pair defining a species of structures}, namel
       \[
         \begin{aligned}
           \bar{F}(f)&=F(f)
-          \qquad&&\text{for all $f\in\alpha(F)$,}
+          \qquad&&\text{for all $f\in\alpha(F)$;}
         \\\bar{F}(e)&=\varnothing
-          \qquad&&\text{for all $e\in\CC_0$ and $e\not\in\alpha(F)_0$,}
+          \qquad&&\text{for all $e\in\CC_0$ and $e\not\in\alpha(F)_0$;}
         \\\bar{F}(f')&=\big(\bar{F}(\beta(f')),\varnothing,\varnothing)
           \qquad&&\text{for all $f'\not\in\alpha(F)$.}
         \end{aligned}
@@ -435,7 +436,7 @@ Consider the following conditions:
         For all $e\in p(\Sigma_0)$, the class $p^{-1}(e)$ is endowed with the structure of a category $(p^{-1}(e))^\perp$, which we denote by $F(e)$;
       \item[(b\textsubscript{2})]
         Let $f\in p(\Sigma)$, $e=\alpha(f)$, and $e'=\beta(f')$;
-        then $(F(e'),\tilde{f},F(e))$ is a functor $F(f)$.
+        then $(F(e'),\widetilde{f},F(e))$ is a functor $F(f)$.
     \end{enumerate}
   \item[(c)]
     \begin{enumerate}
@@ -457,6 +458,7 @@ Consider the following conditions:
 \end{enumerate}
 
 \begin{itenv}{Proposition 1}
+\label{proposition:1}
   Conditions~(a), (b), and (c) above are equivalent.
 \end{itenv}
 
@@ -479,7 +481,7 @@ Consider the following conditions:
   \]
   thus $p^{-1}(e)$ is a subcategory of $(\Sigma_0)^\perp$ for all $e\in p(\Sigma_0)$.
   Let $f\in p(\Sigma)$ be such that $\alpha(f)=e$;
-  conditions~(c\textsubscript{2}) and (c\textsubscript{3}) imply that the map $\tilde{f}$ is a functor from $p^{-1}(e)$ to $p^{-1}(\beta(f))$.
+  conditions~(c\textsubscript{2}) and (c\textsubscript{3}) imply that the map $\widetilde{f}$ is a functor from $p^{-1}(e)$ to $p^{-1}(\beta(f))$.
   Thus (b) is satisfied.
 \end{proof}
 
@@ -596,11 +598,11 @@ where $(\CC,F)$ is an ordered species of structures, is a bijection from the cla
       \[
         \begin{aligned}
           \alpha(h)
-          &= \alpha(h')
+          &= \alpha(h'),
         \\\beta(h)
-          &= \beta(h')
+          &= \beta(h'),
         \\p(h)
-          &= p(h')
+          &= p(h'),
         \end{aligned}
       \]
       imply that $h=h'$.
@@ -612,23 +614,19 @@ An element $h\in\HH$ can be identified, by condition~(4), with a triple $(S',f,S
 \[
   \begin{aligned}
     S
-    &= \alpha(h) \in\HH_0
+    &= \alpha(h) \in\HH_0,
   \\S'
-    &= \beta(h) \in\HH_0
+    &= \beta(h) \in\HH_0,
   \\f
     &= p(h)\in\CC.
   \end{aligned}
 \]
 We usually represent an element of $\HH$ by such a triplet.
-Note that we thus identify $\HH$ with a subcategory of the induced category $p_0^*(\CC)$ whose elements are the triples $(S',f,S)$ such that
+Note that we thus identify $\HH$ with a subcategory of the induced category $p_0^*(\CC)$ whose elements are the triples $(S',f,S)$ such that $S,S'\in\HH_0$, $f\in\CC$, and
 \[
-  \begin{gathered}
-    S,S'\in\HH_0
-  \\f\in\CC
-  \\\alpha(f)=p(S)
-    \quad\text{and}\quad
-    \beta(f)=p(S').
-  \end{gathered}
+  \alpha(f)=p(S)
+  \quad\text{and}\quad
+  \beta(f)=p(S').
 \]
 Since an element of $\SS$ is entirely determined by the data of $\alpha(h)$ and $p(h)$, we write such elements either in the form $(\beta(h),p(h),\alpha(h))$ or in the form $(p(h),\alpha(h))$.
 If $\SS$ is the groupoid of invertible elements of $\HH$, then $\HH$ is a species of structures \unsure{over} $\SS\times\SS$ with the composition law
@@ -775,6 +773,89 @@ This relation evidently implies that $p(s)=p(s')$.
   \]
   Then $(p(\Gamma),p,\HH_{\relrho})$ is the species of structures \unsure{under} a species of morphisms, and the proposition follows from the end of \cref{section:i.2}.
 \end{proof}
+
+From now on, suppose that $\CC$ is an inductive category (in the sense of \cref{section:ii.6}, which is slightly more general than that of \cite{3c}).
+If $g,f\in\CC$, then their pseudo-product in $\CC$, which is always defined (cf. \cref{section:ii}, Proposition~22), is denoted by $gf$.
+
+Consider on $\HH_0$ the relation
+\[
+  \begin{gathered}
+    s\relrhobar S
+    \quad\text{if and only if}\quad
+  \\\big[p(s)<p(S)
+    \quad\text{and}\quad
+    (S,p(S)p(s),s)\in\HH\big];
+  \end{gathered}
+\]
+the relations induced by $\relrhobar$ and $\relrho$ on $p^{-1}(e)$ are identical, for all $e\in p(\HH_0)$.
+The relation $p(s)<p(S)$ implies that
+\[
+  \alpha(p(S)p(s))
+  = p(s);
+\]
+if, further, $(S,p(S)p(s),s)\in\HH$, then we also have that
+\[
+  \beta(p(S)p(s))
+  = p(S).
+\]
+
+\begin{itenv}{Proposition 3}
+  The relation $\relrhobar$ is an order relation on $\HH_0$;
+  if $s\relrhobar S$, then $s$ is a sub-object \cite{5} of $S$ in $\HH$.
+\end{itenv}
+
+\begin{proof}
+  Suppose that $s\relrhobar S$.
+  If, further, $S\relrhobar s$, then
+  \[
+    p(S)=p(s)
+  \]
+  whence $s\relrho S$ and $S\relrho s$, i.e. $s=S$, by Proposition~2.
+  Suppose that $s'\relrhobar s$;
+  from the relations
+  \[
+    \begin{aligned}
+      k
+      &= (p(S)p(s))\bullet(p(s)p(s'))
+      < p(S)p(s'),
+    \\\alpha(k)&=p(s'),
+    \\\beta(k)&=p(S),
+    \end{aligned}
+  \]
+  it follows that
+  \[
+    k=p(S)p(s')
+    \quad\text{and}\quad
+    (S,p(S)p(s'),s')\in\HH
+  \]
+  thus $s'\relrhobar S$.
+  \oldpage{360}
+  Let $\bar{g}=(s,g,S')$ and $\bar{g}'=(s,g',S')$ be such that
+  \[
+    (S,p(S)p(s),s)\bullet\bar{g}
+    = (S,p(S),p(s),s)\bullet\bar{g}'.
+  \]
+  From the relations
+  \[
+    \begin{gathered}
+      (p(S)p(s))\bullet g = (p(S)p(s))\bullet g',
+    \\g < (p(S)p(s))\bullet g
+      \quad\text{and}\quad
+      g' < (p(S)p(s))\bullet g',
+    \\\alpha(g)=\alpha(g')
+      \quad\text{and}\quad
+      \beta(g)=\beta(g'),
+    \end{gathered}
+  \]
+  we deduce that $g=g'$.
+  Thus $\bar{g}=\bar{g}'$, which implies that $s$ is a sub-object of $S$ in $\HH$.
+\end{proof}
+
+The notion of \emph{substructure} that we will now define makes precise the notion of sub-object of a category.
+
+\begin{rmenv}{Definition 7}
+  Let
+\end{rmenv}
 
 
 %% Bibliography %%
