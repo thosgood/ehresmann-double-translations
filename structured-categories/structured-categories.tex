@@ -71,6 +71,8 @@
 \newcommand{\TT}{\mathcal{T}}
 \newcommand{\relrho}{\mathrel{\rho}}
 \newcommand{\relrhobar}{\mathrel{\bar{\rho}}}
+\newcommand{\subs}{\mathrel{\propto}}
+\newcommand{\sups}{\mathrel{\reflectbox{$\propto$}}}
 
 
 %% Bibliography %%
@@ -116,7 +118,7 @@ The main results are summarised in a series in \emph{Notes à l'Académie des Sc
 
 The first section begins with a short reminder on the notions of species of structures and categories of homomorphisms.
 Let $(\CC,p,\HH,\SS)$ be a category of homomorphisms over $\CC$ such that $\SS$ contains the groupoid of invertible elements of the category $\HH$, and such that $\CC$ is further endowed with the structure of an inductive category.
-We define the substructures of a structure of $\HH$.
+We define the sub-structures of a structure of $\HH$.
 This notion makes precise that of a sub-object of an arbitrary category, using the fact that $\HH$ is a category of homomorphisms and $\CC$ an inductive category;
 it leads to endowing $\HH$ with the structure of an ordered category, which is the subject of the main results of this section.
 
@@ -131,11 +133,11 @@ The end of Section~II contains a series of general theorems:
   \item $\HH$-structured functors form a category of homomorphisms over a category of functors, and over $\MM$;
     it has finite products and \unsure{resolutions to the right}.
   \item Let $(\CC^\bullet,s)$ be an $\HH$-structured category;
-    if $\bar{\CC}^\bullet$ is a subcategory of $\CC^\bullet$, and $\bar{s}$ a substructure of $s$ such that $p(\bar{s})=\bar{C}$, then $(\bar{C}^\bullet,\bar{s})$ is an $\HH$-structured category.
+    if $\bar{\CC}^\bullet$ is a subcategory of $\CC^\bullet$, and $\bar{s}$ a sub-structure of $s$ such that $p(\bar{s})=\bar{C}$, then $(\bar{C}^\bullet,\bar{s})$ is an $\HH$-structured category.
   \item If $(\CC^\bullet,s)$ is an $\HH$-structured category, then the categories of \todo of $\CC^\bullet$ are $\HH$-structured categories.
 \end{itemize}
 
-All of these theorems use the additional hypothesis that $(\MM,p,\HH,\Gamma)$ is a category of homomorphisms \unsure{right resolved?} (that is, $\HH$ contains ``enough'' substructures).
+All of these theorems use the additional hypothesis that $(\MM,p,\HH,\Gamma)$ is a category of homomorphisms \unsure{right resolved?} (that is, $\HH$ contains ``enough'' sub-structures).
 
 The second part of this article (to appear soon) will contain the theory of species of structured structures;
 we will show how the \unsure{complete enlargement} procedure of an inductive groupoid can be generalised to species of structured structures.
@@ -143,7 +145,7 @@ We will then give some applications of all these concepts to more specific probl
 
 
 
-\section{Categories of homomorphisms and substructures}
+\section{Categories of homomorphisms and sub-structures}
 \label{section:i}
 
 \subsection{Conventions}
@@ -695,7 +697,7 @@ and if $p(h)$ is the canonical injection from $p(\alpha(h))$ to $p(\beta(h))$, t
 
 
 
-\subsection{Substructures}
+\subsection{Sub-structures}
 \label{section:i.5}
 
 Let $(\CC,p,\HH,\SS)$ be a category of homomorphisms such that $\SS$ contains the groupoid $\Gamma$ of invertible elements of $\HH$.
@@ -851,11 +853,51 @@ if, further, $(S,p(S)p(s),s)\in\HH$, then we also have that
   Thus $\bar{g}=\bar{g}'$, which implies that $s$ is a sub-object of $S$ in $\HH$.
 \end{proof}
 
-The notion of \emph{substructure} that we will now define makes precise the notion of sub-object of a category.
+The notion of \emph{sub-structure} that we will now define makes precise the notion of sub-object of a category.
 
 \begin{rmenv}{Definition 7}
-  Let
+  Let $S\in\HH_0$;
+  we say that $s\in\HH_0$ is a \emph{sub-structure of $S$ in $(\CC,p,\HH,\SS)$}, and we write $s\subs_p S$, if the following conditions are satisfied:
+  \begin{enumerate}
+    \item[1.]
+      $p(s)<p(S)$ and $(S,p(S)p(s),s)\in\HH$;
+    \item[2.]
+      If $(S,g,S')\in\HH$ is such that
+      \[
+        \alpha(p(s)g)=\alpha(g)
+        \quad\text{and}\quad
+        \beta(p(s)g)=p(s)
+      \]
+      then
+      \[
+        (s,p(s)g,S')\in\HH.
+      \]
+  \end{enumerate}
+  If $s\subs_pS$, then we also write
+  \[
+    (S,p(S)p(s),s)
+    = S\sups_p s
+  \]
+  and we say that $S\sups_p s$ is a \emph{$p$-injection}.
+  We write $H_{\subs_p}$ to mean the class of $p$-injections.
 \end{rmenv}
+
+If there is no risk of confusion, then we simply say that $s$ is a sub-structure of $S$ in $\HH$, and we write $s\subs S$ and $S\sups s$ instead of $s\subs_p S$ and $S\sups_p s$ (respectively).
+
+\begin{itenv}{Proposition 4}
+  Let $s,S\in\HH_0$;
+  then $s\subs_p S$ if and only if the following conditions are satisfied:
+  \begin{enumerate}
+    \item[1\textquotesingle.]
+      $s\relrhobar S$ in $(\CC,p,\HH,\SS)$;
+    \item[2\textquotesingle.]
+      If $(S,(p(S)p(s))\bullet g',S')\in\HH$ then $(s,g',S')\in\HH$.
+  \end{enumerate}
+\end{itenv}
+
+\begin{proof}
+  Suppose that $s\subs_p S$;
+\end{proof}
 
 
 %% Bibliography %%
