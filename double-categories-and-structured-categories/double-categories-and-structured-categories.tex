@@ -23,7 +23,6 @@
 \hypersetup{colorlinks,linkcolor={blue!50!black},citecolor={blue!50!black},urlcolor={blue!80!black}}
 \usepackage{enumerate}
 \usepackage{graphicx}
-\usepackage{footmisc}
 
 
 %% Typography %%
@@ -67,6 +66,17 @@
 \newcommand{\KK}{\mathcal{K}}
 \renewcommand{\SS}{\mathcal{S}}
 \newcommand{\TT}{\mathcal{T}}
+
+
+%% Bibliography %%
+
+\usepackage{biblatex}
+\addbibresource{double-categories-and-structured-categories.bib}
+\renewbibmacro{in:}{%
+  \ifboolexpr{%
+     test {\ifentrytype{article}}%
+  }{}{\printtext{\bibstring{in}\intitlepunct}}%
+}
 
 
 %% Document %%
@@ -159,8 +169,8 @@ then $\CC'$ is a double category for the composition laws induced by $\bullet$ a
 
 \begin{itenv}{Proposition}
   Let $\CC$ be a double category;
-  a left ideal $I^\perp$ of $\CC^\perp$ is a \todo\footnote{\label{fn1}\emph{Espèces de structures locales; élargissements de catégories}, Séminaire Top. et Géo Diff. (Ehresmann), \textbf{III}, Paris, 1961; Jahres. Deutsch. Math. Ver., \textbf{60}, 1957, p.~49.} over $\CC^\bullet$ for the composition law $(f,g)\mapsto f\bullet g$ if and only if $f\bullet g$ is defined, where $f\in\CC$ and $g\in I^\perp$.
-  The corresponding category $\mathcal{E}(I^\perp)$ \unsure{is this right?} of hypermorphisms\footref{fn1} is a double category for the composition laws \unsure{is this right?}
+  a left ideal $I^\perp$ of $\CC^\perp$ is a \todo \cite{1} over $\CC^\bullet$ for the composition law $(f,g)\mapsto f\bullet g$ if and only if $f\bullet g$ is defined, where $f\in\CC$ and $g\in I^\perp$.
+  The corresponding category $\mathcal{E}(I^\perp)$ \unsure{is this right?} of hypermorphisms \cite{1} is a double category for the composition laws \unsure{is this right?}
   \[
     (f',g')\bullet(f,g)
     = (f'\bullet f,g)
@@ -213,7 +223,7 @@ We define two composition laws on $\sq(\CC_2,\CC_1)$:
 \end{itenv}
 
 Suppose that $\CC=\CC_1=\CC_2$;
-recall\footref{fn1} that a \emph{square} in $\CC$ is an element $(g_2,g_1,f_1,f_2)\in\sq(\CC,\CC)$ such that $g_1f_2=g_2f_1$.
+recall \cite{1} that a \emph{square} in $\CC$ is an element $(g_2,g_1,f_1,f_2)\in\sq(\CC,\CC)$ such that $g_1f_2=g_2f_1$.
 
 \begin{itenv}{Corollary}
   The class $\sq\CC$ of squares in $\CC$ is a double subcategory of $\sq(\CC,\CC)$.
@@ -221,7 +231,7 @@ recall\footref{fn1} that a \emph{square} in $\CC$ is an element $(g_2,g_1,f_1,f_
 
 \begin{itenv}{Corollary}
   Let $\CC$ be a double category;
-  then $\CC^\bullet$ admits the longitudinal category $\vsq(\CC_0^\bullet,\CC_0^\perp)$ as a quotient category\footref{fn1}, where $\CC_0^\bullet$ (resp. $\CC_0^\perp$) is endowed with its structure as a subcategory of $\CC^\perp$ (resp. of $\CC^\bullet$).
+  then $\CC^\bullet$ admits the longitudinal category $\vsq(\CC_0^\bullet,\CC_0^\perp)$ as a quotient category \cite{1}, where $\CC_0^\bullet$ (resp. $\CC_0^\perp$) is endowed with its structure as a subcategory of $\CC^\perp$ (resp. of $\CC^\bullet$).
 \end{itenv}
 
 
@@ -248,9 +258,8 @@ let $\FF(\CC^\bullet,\Gamma)$ be the class of functors from $\Gamma$ to $\CC^\bu
 \end{itenv}
 
 \begin{itenv}{Proposition}
-  \setcounter{footnote}{1}
   Let $\CC$ and $\CC'$ be two categories;
-  the longitudinal category $\NN(\CC',\CC)$ of natural transformations~\footnote{\emph{Catégorie des foncteurs types}, Rev. Un. Mat. Argentina, \textbf{20}, 1960, p.~194.} between functors from $\CC$ to $\CC'$ can be identified with the category $\FF(\hsq\CC',\CC)$, by identifying the natural transformation $(\varphi',\tau,\phi)$ with the functor $\Phi$ such that
+  the longitudinal category $\NN(\CC',\CC)$ of natural transformations \cite{2} between functors from $\CC$ to $\CC'$ can be identified with the category $\FF(\hsq\CC',\CC)$, by identifying the natural transformation $(\varphi',\tau,\phi)$ with the functor $\Phi$ such that
   \[
     \Phi(f)
     = \big(\varphi'(f),\,\tau(\beta(f)),\,\tau(\alpha(f)),\,\varphi(f)\big)
@@ -266,7 +275,7 @@ We will see another generalisation of natural transformations (the double catego
 
 Let $\MM_0$ be a class of classes such that if it contains $X$ then it also contains all the subsets of $X$, and if it contains $X$ and $X'$ then it also contains the product $X\times X'$;
 let $\MM$ be the category of all functions from $X$ to $Y$, where $X,Y\in\MM_0$.
-Let $(\MM,p,\KK,\SS)$ be a category of homomorphisms\footref{fn1}, with $\SS$ containing the groupoid of invertible elements of $\KK$;
+Let $(\MM,p,\KK,\SS)$ be a category of homomorphisms \cite{1}, with $\SS$ containing the groupoid of invertible elements of $\KK$;
 let $\KK_0$ be the class of \todo of $\KK$;
 we identify $h\in\KK$ with $(\beta^\KK(h),p(h),\alpha^\KK(h))$.
 
@@ -298,7 +307,7 @@ we identify $h\in\KK$ with $(\beta^\KK(h),p(h),\alpha^\KK(h))$.
 \end{rmenv}
 
 \begin{rmenv}{Example}
-  A structured category in $\tilde{\TT}$, where $\tilde{\TT}$ is the category of topologies, is a topological category.\footnote{\emph{Catégories topologiques et catégories différentiables}, Coll. Géo. Diff. Glo., Brussels, C.B.R.M., 1959, p.~137.}
+  A structured category in $\widetilde{\TT}$, where $\widetilde{\TT}$ is the category of topologies, is a topological category \cite{3}.
 \end{rmenv}
 
 \oldpage{4}
@@ -307,5 +316,10 @@ we identify $h\in\KK$ with $(\beta^\KK(h),p(h),\alpha^\KK(h))$.
   For $(\CC^\bullet,\CC^\perp)$ to be a double category, it is necessary and sufficient that $(\CC^\bullet,\CC^\perp)$ be a structured category in the category $\FF$ of functors from one category to another;
   in this case, $(\CC^\perp,\CC^\bullet)$ is also a structured category in $\FF$ (the structure on $\CC^\bullet$ is $\CC^\perp$).
 \end{itenv}
+
+%% Bibliography %%
+
+\nocite{*}
+\printbibliography[heading=bibintoc,title=Bibliography]
 
 \end{document}
