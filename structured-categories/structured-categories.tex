@@ -897,7 +897,85 @@ If there is no risk of confusion, then we simply say that $s$ is a sub-structure
 
 \begin{proof}
   Suppose that $s\subs_p S$;
+  condition~(1) of Definition~7 implies that $s\relrhobar S$ in $(\CC,p,\HH,\SS)$.
+  Let
+  \[
+    (S,p(S)p(s)\bullet g',S')\in\HH.
+  \]
+  We will show that the elements $g'$ and $g'_1=p(s)(p(S)p(s)\bullet g')$ are equal.
+  We have that $p(s)<p(S)p(s)$, so
+  \[
+    g'
+    = p(s)\bullet g'
+    < (p(S)p(s))g'
+  \]
+  whence
+  \[
+    g'
+    = p(s)\bullet g'
+    < p(s)(p(S)p(s)g');
+  \]
+  \oldpage{361}
+  but also
+  \[
+    \alpha(g'_1)<\alpha(g')
+    \quad\text{and}\quad
+    \beta(g'_1)<p(s)=\beta(g')
+  \]
+  whence
+  \[
+    \begin{aligned}
+      \alpha(g'_1)
+      &= \alpha(g')
+      = p(S'),
+    \\\beta(g'_1)
+      &= \beta(g')
+      = p(s).
+    \end{aligned}
+  \]
+  Since $(\CC,<)$ is an inductive category, the relations
+  \[
+    \begin{aligned}
+      g'
+      &< g'_1,
+    \\\alpha(g')
+      &= \alpha(g'_1),
+    \\\beta(g')
+      &= \beta(g'_1),
+    \end{aligned}
+  \]
+  imply that $g'=g'_1$.
+  It then follows from condition~(2) of Definition~7 that $(s,g',S')\in\HH$, and so condition~(2\textquotesingle) is satisfied.
+  Conversely, suppose that conditions~(1\textquotesingle) and (2\textquotesingle) are satisfied;
+  let $(S,g,S')\in\HH$ be such that
+  \[
+    \alpha(p(s)g)=\alpha(g)
+    \quad\text{and}\quad
+    \beta(p(s)g)=p(s).
+  \]
+  By using the relations
+  \[
+    \begin{gathered}
+      (p(S)p(s))\bullet(p(s)g)<g,
+    \\\alpha\big((p(S)p(s))\bullet(p(s)g)\big)=\alpha(g),
+    \\\beta(g)=\beta\big((p(S)p(s))\bullet(p(s)g)\big)=p(S)
+    \end{gathered}
+  \]
+  we see that $g=(p(S)p(s))\bullet(p(s)g)$.
+  From condition~(2\textquotesingle) we thus deduce that
+  \[
+    (s,p(s)g,S')\in\HH
+  \]
+  i.e. $s\subs_p S$.
 \end{proof}
+
+\begin{rmenv}{Examples}
+  ---
+  \begin{enumerate}
+    \item[1.]
+      The
+  \end{enumerate}
+\end{rmenv}
 
 
 %% Bibliography %%
