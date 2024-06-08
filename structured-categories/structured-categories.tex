@@ -73,6 +73,7 @@
 \newcommand{\relrhobar}{\mathrel{\bar{\rho}}}
 \newcommand{\subs}{\mathrel{\propto}}
 \newcommand{\sups}{\mathrel{\reflectbox{$\propto$}}}
+\newcommand{\Id}{\mathrm{Id}}
 
 
 %% Bibliography %%
@@ -691,7 +692,7 @@ and if $p(h)$ is the canonical injection from $p(\alpha(h))$ to $p(\beta(h))$, t
       then $(\MM,\omega,\widetilde{\Omega},\Omega)$ is a category of homomorphisms.
     \item[4.]
       Let $\CC$ be any category;
-      then $(\CC,\mathrm{Id}_\CC,\CC,\CC)$ is a category of homomorphisms, where $\mathrm{Id}_\CC$ denotes the identity functor on $\CC$.
+      then $(\CC,\Id_\CC,\CC,\CC)$ is a category of homomorphisms, where $\Id_\CC$ denotes the identity functor on $\CC$.
   \end{enumerate}
 \end{rmenv}
 
@@ -973,9 +974,37 @@ If there is no risk of confusion, then we simply say that $s$ is a substructure 
   ---
   \begin{enumerate}
     \item[1.]
-      The
+      The sub-structures of $S$ in $(\MM,\theta,\widetilde{\TT},\TT)$ are the topologies induced by $S$ on the subclasses of $\theta(S)$.
+      Let $\widetilde{\TT_u}$ be the subcategory of $\widetilde{\TT}$ consisting of open continuous maps from one topological space to another;
+      let $\theta_u$ be the restriction of $\theta$ to $\widetilde{\TT}_u$;
+      then $(\MM,\theta_u,\widetilde{\TT}_u,\TT)$ is a category of homomorphisms.
+      The sub-structures of $S$ in $(\MM,\theta_u,\widetilde{\TT}_u,\TT)$ are the topologies induced by $S$ on an open of $S$, i.e. the elements that are smaller than $S$ in the order relation considered in \cite{3c} on $\widetilde{\TT}$.
+    \item[2.]
+      The sub-structures of $\CC^\perp$ in $(\MM,p_\FF,\FF,\FF_\gamma)$ are the subcategories of $\CC^\perp$ (see Proposition~9 in \cref{section:ii}).
+    \item[3.]
+      The sub-structures of $(A,<)$ in $(\MM,\omega,\widetilde{\Omega},\Omega)$ are the subclasses of $A$ endowed with the order induced by $<$.
+    \item[4.]
+      In $(\CC,\Id_\CC,\CC,\CC)$, we have
+      \[
+        s\subs S
+        \quad\text{if and only if}\quad
+        [
+          \text{$s<S$ in $\CC$}
+          \quad\text{and}\quad
+          \beta(Ss)=S.
+        ]
+      \]
+      If the relations $s<S$ and $s\subs S$ are equivalent, then $\CC$ is a \emph{completely \unsure{right regular} category}.
+      In this case, the condition $s<\alpha(f)$ implies that $\beta(fs)=\beta(f)$.
+    \item[5.]
+      If $s\subs_p S$, then $p(s)\subs p(S)$ in $(\CC,\Id_\CC,\CC,\CC)$.
   \end{enumerate}
 \end{rmenv}
+
+\begin{itenv}{Theorem 1}
+  \oldpage{362}
+  The relation $s\subs_p S$ is a relation order in $\HH_0$.
+\end{itenv}
 
 
 %% Bibliography %%
