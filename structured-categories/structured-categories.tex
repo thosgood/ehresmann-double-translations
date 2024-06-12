@@ -994,7 +994,7 @@ If there is no risk of confusion, then we simply say that $s$ is a substructure 
           \beta(Ss)=S.
         ]
       \]
-      If the relations $s<S$ and $s\subs S$ are equivalent, then $\CC$ is a \emph{completely \unsure{right regular} category}.
+      If the relations $s<S$ and $s\subs S$ are equivalent, then $\CC$ is a \emph{\unsure{completely right regular} category}.
       In this case, the condition $s<\alpha(f)$ implies that $\beta(fs)=\beta(f)$.
     \item[5.]
       If $s\subs_p S$, then $p(s)\subs p(S)$ in $(\CC,\Id_\CC,\CC,\CC)$.
@@ -1004,7 +1004,156 @@ If there is no risk of confusion, then we simply say that $s$ is a substructure 
 \begin{itenv}{Theorem 1}
   \oldpage{362}
   The relation $s\subs_p S$ is a relation order in $\HH_0$.
+  Let $s,s',S\in\HH_0$;
+  the conditions
+  \[
+    \begin{aligned}
+      s&\subs_p S;
+    \\s'&\subs_p S
+      \quad\text{(resp. $s'\relrhobar S$)}\,;
+    \\p(s')&\subs p(s)\text{ in }(\CC,\Id_\CC,\CC,\CC)
+    \end{aligned}
+  \]
+  together imply that
+  \[
+    s'\subs_p s
+    \quad\text{(resp. $s'\relrhobar s$)}.
+  \]
 \end{itenv}
+
+\begin{proof}
+  Since $\relrhobar$ is an order relation, if $s\subs S$ and $S\subs s$, then $s=S$.
+  Suppose that $s_1\subs s$ and $s\subs S$;
+  then $s_1\relrhobar S$.
+  We will show that the pair $(S,s_1)$ satisfies condition (2\textquotesingle) of Proposition~4.
+  Let
+  \[
+    \bar{g}
+    = (S,p(S)p(s_1)\bullet g',S')
+    \in\HH.
+  \]
+  The elements $p(S)p(s_1)$ and $(p(S)p(s))\bullet(p(s)p(s_1))$ are equal, since they are bounded above by $p(S)$ and have the same source and target ($p(s_1)$ and $p(S)$, respectively);
+  thus
+  \[
+    \bar{g}
+    = \big(S,(p(S)p(s))\bullet(p(s)p(s_1)\bullet g'),S'\big)
+    \in\HH
+  \]
+  and, since $s\subs S$,
+  \[
+    \bar{g}'
+    = (s,(p(s)p(s_1))\bullet g', S')
+    \in\HH;
+  \]
+  since $s_1\subs s$, it thus follows that
+  \[
+    (s_1,g',S)
+    \in\HH
+  \]
+  i.e. $s_1\subs S$.
+  Suppose that $s\subs S$, $s'\relrhobar S$, and $p(s')\subs p(s)$ in $(\CC,\Id_\CC,\CC,\CC)$.
+  Then
+  \[
+    j
+    = (S,p(S)p(s'),s')
+    \in\HH;
+  \]
+  from the relations
+  \[
+    p(s') < p(s)
+    \quad\text{and}\quad
+    \beta(p(s)p(s')) = p(s)
+  \]
+  we deduce that the elements $p(S)p(s')$ and $(p(S)p(s))\bullet(p(s)p(s'))$ are equal, since they are both bounded above by $p(S)$ and have the same source and target ($p(s')$ and $p(S)$, respectively).
+  Consequently,
+  \[
+    j
+    = \big(S,(p(S)p(s))\bullet(p(s)p(s')),s'\big)
+  \]
+  and, by Proposition~4,
+  \[
+    (s,p(s)p(s'),s')
+    \in\HH
+  \]
+  whence $s'\relrhobar s$.
+  Suppose further that $s'\subs S$;
+  let
+  \[
+    \bar{g}'
+    = (s,p(s)p(s')\bullet g',S')
+    \in\HH.
+  \]
+  We see that
+  \[
+    \begin{aligned}
+      \bar{g}
+      &= (S,p(S)p(s),s)\bullet\bar{g}'
+    \\&= \big(S,(p(S)p(s))\bullet(p(s)p(s'))\bullet g',S'\big)
+    \\&= (S,(p(S)p(s'))\bullet g',S')
+    \in\HH.
+    \end{aligned}
+  \]
+  \oldpage{363}
+  Proposition~4 then implies that
+  \[
+    (s',g',S')\in\HH
+    \quad\text{and}\quad
+    s'\subs S.
+    \qedhere
+  \]
+\end{proof}
+
+\begin{itenv}{Corollary 1}
+  The conditions $s\subs_p S$, $s'\subs_p S$, and $p(s)=p(s')$ imply that $s=s'$.
+\end{itenv}
+
+\begin{proof}
+  Indeed, by Theorem~1, these conditions imply that
+  \[
+    s\subs s'
+    \quad\text{and}\quad
+    s'\subs s
+  \]
+  whence $s=s'$.
+\end{proof}
+
+\begin{itenv}{Corollary 2}
+  Let $s\subs_p S$;
+  then $s$ is the largest element (with respect to the relation $\relrho$) of the class of structures $s'$ such that
+  \[
+    s'\relrhobar S
+    \quad\text{and}\quad
+    p(s') = p(s).
+  \]
+\end{itenv}
+
+\begin{rmenv}{Definition 8}
+  Let $\bar{h},\bar{h}'\in\HH$;
+  we say that $\bar{h}'$ is a \emph{sub-homomorphism of $\bar{h}$ in $(\CC,p,\HH,\SS)$}, and we write $\bar{h}'\subs_p\bar{h}$ or $\bar{h}'\subs\bar{h}$, if the following conditions are satisfied:
+  \[
+    \begin{aligned}
+      \alpha(\bar{h}')
+      &\subs \alpha(\bar{h}),
+    \\\beta(\bar{h}')
+      &\subs \beta(\bar{h}),
+    \\p(\bar{h}')
+      &< p(\bar{h})
+    \end{aligned}.
+  \]
+\end{rmenv}
+
+\begin{itenv}{Proposition 5}
+  In $\HH$, the relation $\bar{h}'\subs\bar{h}$ is an order relation that satisfies the following conditions:
+  \begin{enumerate}
+    \item[1.]
+      If $\bar{h}'\subs\bar{h}$, and $\alpha(\bar{h}')=\alpha(\bar{h})$ and $\beta(\bar{h}')=\beta(\bar{h})$, then $\bar{h}=\bar{h}'$;
+    \item[2.]
+      If
+  \end{enumerate}
+\end{itenv}
+
+
+
 
 
 %% Bibliography %%
