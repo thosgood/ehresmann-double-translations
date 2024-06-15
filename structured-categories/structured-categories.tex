@@ -446,7 +446,7 @@ Consider the following conditions:
       \item[(c\textsubscript{1})]
         $(\Sigma_0)^\perp$ is a category;
       \item[(c\textsubscript{2})]
-        The conditions $(z',z)\in(\Sigma_0)^\perp\star(\Sigma_0)^\perp$ and $(f,z'\perp z)\in\Sigma$ imply that
+        If $(z',z)\in(\Sigma_0)^\perp\star(\Sigma_0)^\perp$ and $(f,z'\perp z)\in\Sigma$ then
         \[
           (f,z),(f,z')\in\Sigma
           \quad\text{and}\quad
@@ -493,7 +493,7 @@ Consider the following conditions:
 \end{itenv}
 
 \begin{proof}
-  The conditions $(f,z_0)\in\Sigma$ and $z_0\in(\Sigma_0)_0^\perp$ imply that
+  If $(f,z_0)\in\Sigma$ and $z_0\in(\Sigma_0)_0^\perp$ then
   \[
     fz_0
     = f(z_0\perp z_0)
@@ -722,7 +722,7 @@ This relation evidently implies that $p(s)=p(s')$.
 \end{itenv}
 
 \begin{proof}
-  The conditions $s\relrho s'$ and $s'\relrho s''$ imply that
+  If $s\relrho s'$ and $s'\relrho s''$ then
   \[
     (s'',p(s'),s')\bullet(s',p(s),s)
     = (s'',p(s),s)
@@ -1104,7 +1104,7 @@ If there is no risk of confusion, then we simply say that $s$ is a substructure 
 \end{proof}
 
 \begin{itenv}{Corollary 1}
-  The conditions $s\subs_p S$, $s'\subs_p S$, and $p(s)=p(s')$ imply that $s=s'$.
+  If $s\subs_p S$, $s'\subs_p S$, and $p(s)=p(s')$, then $s=s'$.
 \end{itenv}
 
 \begin{proof}
@@ -1148,8 +1148,95 @@ If there is no risk of confusion, then we simply say that $s$ is a substructure 
     \item[1.]
       If $\bar{h}'\subs\bar{h}$, and $\alpha(\bar{h}')=\alpha(\bar{h})$ and $\beta(\bar{h}')=\beta(\bar{h})$, then $\bar{h}=\bar{h}'$;
     \item[2.]
-      If
+      If $\bar{h}'\subs\bar{h}$ then $p(\bar{h}')\subs p(\bar{h})$ in $(\CC,\Id_\CC,\CC,\CC)$;
+      if, further, $p(\bar{h})=p(\bar{h}')$, then $\bar{h}=\bar{h}'$;
+    \item[3.]
+      If $(\bar{h}_1,\bar{h}),(\bar{h}'_1,\bar{h}')\in\HH\star\HH$ and $\bar{h}'\subs\bar{h}$ and $\bar{h}'_1\subs\bar{h}_1$, then $\bar{h}'_1\bullet\bar{h}'\subs\bar{h}_1\bullet\bar{h}$;
+    \item[4.]
+      If $\bar{h}'\subs_p\bar{h}$, $\bar{h}''\subs_p\bar{h}$, and $p(\bar{h}'')\subs p(\bar{h}')$ in $(\CC,\Id_\CC,\CC,\CC)$, then $\bar{h}''\subs_p\bar{h}'$.
   \end{enumerate}
+\end{itenv}
+
+\begin{proof}
+  Conditions~(1) and (3) imply that $(\HH,\subs)$ is an ordered category (see \cref{section:ii}, Definition~18).
+  Condition~(2) implies that $p$ belongs to $\widetilde{\Omega}'$ (see \cref{section:ii.6}), i.e. (\cref{section:iv}) that $(\HH,\subs)$ is an ordered category over $(\CC,<)$.
+\end{proof}
+
+\begin{itenv}{Corollary}
+  If $\CC$ is \unsure{completely right regular}, and if, for all $s\in\HH_0$, the class of elements $p(s')$, where $s'\subs_p s$, is an inductive subclass of $\CC_0$, then $(\HH,\subs)$ is an inductive category over $(\CC,<)$.
+\end{itenv}
+
+\begin{itenv}{Proposition}
+  Suppose that $\bar{h},\bar{h}'\in\Gamma$, $\alpha(\bar{h}')\subs_p\alpha(\bar{h})$, and $(p(\bar{h}')<p(\bar{h})$;
+  then also $\beta(\bar{h}')\subs_p\beta(\bar{h})$, and, consequently, $\bar{h}'\subs_p\bar{h}$.
+\end{itenv}
+
+\begin{proof}
+  \oldpage{364}
+  Let
+  \[
+    \begin{aligned}
+      \bar{h}
+      &= (S_1,h,S)\in\Gamma
+    \\\bar{h}'
+      &= (s_1,h',s)\in\Gamma
+    \end{aligned}
+  \]
+  be such that $h'<h$ and $j=(S,p(S)p(s),s)\in\HH$;
+  then
+  \[
+    \begin{gathered}
+      p\big(\bar{h}\bullet j\bullet \bar{h}'^{-1}\big)
+      = h\bullet(p(S)p(s))\bullet h'^{-1}
+      < p(S_1)p(s_1),
+    \\\alpha\big(p\big(\bar{h}\bullet j\bullet\bar{h}'^{-1}\big)\big)
+      = p(s_1)
+      \quad\text{and}\quad
+      \beta\big(p\big(\bar{h}\bullet j\bullet\bar{h}'^{-1}\big)\big)
+      = p(S_1)
+    \end{gathered}
+  \]
+  whence
+  \[
+    p\big(\bar{h}\bullet j\bullet\bar{h}'^{-1}\big)
+    = p(S_1)p(s_1)
+    \quad\text{and}\quad
+    (S_1,p(S_1)p(s_1),s_1)
+    \in\HH.
+  \]
+  Suppose, further, that $s\subs S$;
+  let
+  \[
+    \bar{g}
+    = (S_1,(p(S_1)p(s_1))\bullet g',S')
+    \in\HH.
+  \]
+  The elements $h^{-1}\bullet(p(S_1)p(s_1))$ and $(p(S)p(s))\bullet h'^{-1}$ are equal, since they are both bounded above by $h^{-1}$ and have the same source and target ($p(s_1)$ and $p(S)$, respectively).
+  Thus
+  \[
+    \bar{h}^{-1}\bullet\bar{g}
+    = \big(S,(p(S)p(s))\bullet\big( h'^{-1}\bullet g'\big),S'\big)
+    \in\HH
+  \]
+  and it follows from Proposition~4 that
+  \[
+    \bar{g}'
+    = (s,h'^{-1}\bullet g',S')
+    \in\HH;
+  \]
+  consequently,
+  \[
+    \bar{h}'\bullet\bar{g}'
+    = (s_1,g',S')
+    \in\HH
+    \quad\text{and}\quad
+    s_1\subs S_1.
+    \qedhere
+  \]
+\end{proof}
+
+\begin{itenv}{Proposition 7}
+  Let
 \end{itenv}
 
 
