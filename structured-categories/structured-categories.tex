@@ -1032,7 +1032,7 @@ If there is no risk of confusion, then we simply say that $s$ is a substructure 
     = (S,p(S)p(s_1)\bullet g',S')
     \in\HH.
   \]
-  The elements $p(S)p(s_1)$ and $(p(S)p(s))\bullet(p(s)p(s_1))$ are equal, since they are bounded above by $p(S)$ and have the same source and target ($p(s_1)$ and $p(S)$, respectively);
+  The elements $p(S)p(s_1)$ and $(p(S)p(s))\bullet(p(s)p(s_1))$ are equal, since they are both bounded above by $p(S)$ and have the same source and target ($p(s_1)$ and $p(S)$, respectively);
   thus
   \[
     \bar{g}
@@ -1237,7 +1237,57 @@ If there is no risk of confusion, then we simply say that $s$ is a substructure 
 
 \begin{itenv}{Proposition 7}
   Let
+  \[
+    \bar{h}
+    = (s_1,h,s)
+    \in\HH
+  \]
+  such that $s'\subs_p s$ and $s'_1\subs_p s_1$.
+  If there exists $h'\in\CC$ such that
+  \[
+    \begin{gathered}
+      h'<h,
+    \\\alpha(h')=p(s')
+      \quad\text{and}\quad
+      \beta(h')=p(s'_1)
+    \end{gathered}
+  \]
+  then
+  \[
+    \bar{h}'
+    =(s'_1,h',s')
+    \in\HH
+    \quad\text{and}\quad
+    \bar{h}'\subs_p\bar{h}.
+  \]
+  If, further, $\bar{h}$ and $h'$ are invertible, then $\bar{h}'\in\Gamma$.
 \end{itenv}
+
+\begin{proof}
+  We have that
+  \[
+    \bar{h}\bullet(s\subs_p s')
+    = (s_1,h\bullet(p(s)p(s')),s')
+    \in\HH;
+  \]
+  the elements $h\bullet(p(s)p(s'))$ and $p(s_1)p(s'_1)\bullet h'$ are equal, since they are bounded above by $h$ and have the same source and target ($p(s')$ and $p(s_1)$, respectively);
+  thus
+  \[
+    \bar{h}\bullet(s\subs_p s')
+    = (s_1,(p(s_1)p(s'_1))\bullet h',s')
+    \in\HH
+  \]
+  and, by Proposition~4, we see that
+  \[
+    \bar{h}'
+    = (s'_1,h',s')
+    \in\HH.
+  \]
+  \oldpage{365}
+  If, further, $\bar{h}\in\Gamma$ and $h'$ is invertible, then also $(s',h'^{-1},s'_1)\in\HH$, whence $\bar{h}'\in\Gamma$.
+\end{proof}
+
+Let
 
 
 
