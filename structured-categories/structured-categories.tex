@@ -75,6 +75,12 @@
 \newcommand{\sups}{\mathrel{\reflectbox{$\propto$}}}
 \newcommand{\Id}{\mathrm{Id}}
 
+\DeclareMathOperator{\sq}{\square}
+\DeclareMathOperator{\vsq}{\raisebox{-.1em}{\rotatebox{90}{$\boxminus$}\,}}
+\DeclareMathOperator{\hsq}{\raisebox{-.05em}{$\boxminus$}}
+\newcommand{\vmult}{\mathbin{\raisebox{-.1em}{\rotatebox{90}{$\boxminus$}}}}
+\newcommand{\hmult}{\mathbin{\raisebox{-.05em}{$\boxminus$}}}
+
 
 %% Bibliography %%
 
@@ -1287,7 +1293,42 @@ If there is no risk of confusion, then we simply say that $s$ is a substructure 
   If, further, $\bar{h}\in\Gamma$ and $h'$ is invertible, then also $(s',h'^{-1},s'_1)\in\HH$, whence $\bar{h}'\in\Gamma$.
 \end{proof}
 
-Let
+Let $\vsq\CC$ be the longitudinal category of \unsure{squares} of $\CC$ (see \cref{section:ii.5}), i.e. the class of quadruples $(g_1,f_1,f,g)\in\CC^4$ such that $g_1\bullet f=f_1\bullet g$, endowed with the multiplication
+\[
+  (g'_1,f'_1,f',g')\vmult(g_1,f_1,f,g)
+  = (g'_1,f'_1\bullet f_1,f'\bullet f,g)
+  \quad\text{if and only if}\quad
+  g'=g_1.
+\]
+
+\begin{itenv}{Proposition 8}
+  Let $h,h'\in\CC$, and let
+  \[
+    \begin{aligned}
+      \alpha(h)
+      &= s,
+    \\\alpha(h')
+      &= s',
+    \\\beta(h)
+      &= s_1,
+    \\\beta(h')
+      &= s'_1.
+    \end{aligned}
+  \]
+  Then the following conditions are equivalent:
+  \begin{enumerate}
+    \item[1.]
+      $h'\subs h$ in $(\CC,\Id_\CC,\CC,\CC)$;
+    \item[2.]
+      $h'<h$ in $\CC$, and $\beta(ss')=s$ and $\beta(s_1s'_1)=s_1$;
+    \item[3.]
+      $s'<s$, $s'_1<s_1$, and $(h,s_1s'_1,ss',h')\in\sq\CC$.
+  \end{enumerate}
+\end{itenv}
+
+\begin{proof}
+  Indeed
+\end{proof}
 
 
 
