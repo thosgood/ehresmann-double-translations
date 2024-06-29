@@ -18,6 +18,7 @@
 
 \usepackage{amssymb}
 \usepackage{amsmath}
+\usepackage{mathtools}
 \usepackage{hyperref}
 \usepackage{xcolor}
 \hypersetup{colorlinks,linkcolor={blue!50!black},citecolor={blue!50!black},urlcolor={blue!80!black}}
@@ -69,6 +70,7 @@
 \newcommand{\FF}{\mathcal{F}}
 \renewcommand{\AA}{\mathcal{A}}
 \newcommand{\TT}{\mathcal{T}}
+\newcommand{\UU}{\mathcal{U}}
 \newcommand{\relrho}{\mathrel{\rho}}
 \newcommand{\relrhobar}{\mathrel{\bar{\rho}}}
 \newcommand{\subs}{\mathrel{\propto}}
@@ -80,6 +82,8 @@
 \DeclareMathOperator{\hsq}{\raisebox{-.05em}{$\boxminus$}}
 \newcommand{\vmult}{\mathbin{\raisebox{-.1em}{\rotatebox{90}{$\boxminus$}}}}
 \newcommand{\hmult}{\mathbin{\raisebox{-.05em}{$\boxminus$}}}
+\usepackage{scalerel}
+\newcommand{\sqsubs}{\mathrel{\mathrlap{\square}\raisebox{.15em}{\scaleobj{0.7}{\,\propto}}}}
 
 
 %% Bibliography %%
@@ -1327,8 +1331,42 @@ Let $\vsq\CC$ be the longitudinal category of \unsure{squares} of $\CC$ (see \cr
 \end{itenv}
 
 \begin{proof}
-  Indeed
+  Indeed, conditions~(1) and (2) are equivalent by the above.
+  If (2) is satisfied, then the elements $h\bullet ss'$ and $s_1s'_1\bullet h'$ are equal, since they are both bounded above by $h$, and have the same source and target ($s'$ and $s_1$, respectively);
+  thus (3) is satisfied.
+  If condition~(3) is satisfied, then
+  \[
+    s'\subs s
+    \quad\text{and}\quad
+    s'_1\subs s_1
+  \]
+  since $\beta(ss')=s$ and $\beta(s_1s'_1)=s_1$.
+  Further,
+  \[
+    s'_1<s_1s'_1
+    \quad\text{and}\quad
+    ss'<s
+  \]
+  whence
+  \[
+    h'
+    < s_1s'_1\bullet h'
+    = h\bullet ss'
+    < h.
+    \qedhere
+  \]
 \end{proof}
+
+If $h'\subs h$ in $(\CC,\Id_\CC,\CC,\CC)$, then we denote by $h\sqsubs h'$ the \unsure{square} $(h,\beta(h)\beta(h'),\alpha(h)\alpha(h'),h')$.
+The class $\UU$ of \unsure{squares} $h\sqsubs h'$ is a subcategory of $\vsq\CC$.
+Let $\UU'$ be the subcategory of $\UU$ given by the \unsure{squares} $h\sqsubs h'$ such that $h'$ and $h$ are invertible.
+
+Let $\vsq\HH$ be the longitudinal category of \unsure{squares} of $\HH$, and $\sq p$ the functor
+\[
+  (g_1,f_1,f,g)
+  \longmapsto (p(g_1),p(f_1),p(f),p(g))
+\]
+from $\vsq\HH$ to $\vsq\CC$.
 
 
 
