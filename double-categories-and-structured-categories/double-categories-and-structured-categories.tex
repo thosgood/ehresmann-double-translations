@@ -153,7 +153,7 @@ produced with permission from \todo
 
 \begin{itenv}{Proposition}
   For $(\CC,\bullet,\perp)$ to be a double category, it is necessary and sufficient that conditions 1, 2, 3\textquotesingle, 4\textquotesingle, and 5 be satisfied.
-  In this case, $\CC_0^\bullet$ (resp. $\CC_0^\perp$) is a subcategory of $\CC^\bullet$ (resp. $\CC^\perp$).
+  In this case, $\CC_0^\perp$ (resp. $\CC_0^\bullet$) is a subcategory of $\CC^\bullet$ (resp. $\CC^\perp$).
 \end{itenv}
 
 A \emph{double subcategory} of a double category $\CC$ is a subclass $\CC'$ of $\CC$ that is a subcategory of $\CC^\bullet$ and of $\CC^\perp$;
@@ -161,7 +161,7 @@ then $\CC'$ is a double category for the composition laws induced by $\bullet$ a
 
 \begin{rmenv}{Definition}
   Let $\CC$ be a double category;
-  we define a \emph{left ideal} (resp. \emph{right ideal}) of $\CC^\perp$ to be a subcategory $I^\perp$ of $\CC^\perp$ such that $\CC\bullet I^\perp$ (resp. $I^\perp\bullet\CC=I^\perp$), where $\CC\bullet I^\perp$ (resp. $I^\perp\bullet\CC$) is the class of composites $f\bullet g$ (resp. $g\bullet f$) for $g\in I^\perp$ and $f\in\CC$.
+  we define a \emph{left ideal} (resp. \emph{right ideal}) of $\CC^\perp$ to be a subcategory $I^\perp$ of $\CC^\perp$ such that $\CC\bullet I^\perp=I^\perp$ (resp. $I^\perp\bullet\CC=I^\perp$), where $\CC\bullet I^\perp$ (resp. $I^\perp\bullet\CC$) is the class of composites $f\bullet g$ (resp. $g\bullet f$) for $g\in I^\perp$ and $f\in\CC$.
   We similarly define an \emph{ideal} of $\CC^\bullet$.
 \end{rmenv}
 
@@ -299,7 +299,7 @@ we identify $h\in\KK$ with $(\beta^\KK(h),p(h),\alpha^\KK(h))$.
       \[
         \begin{gathered}
           p(s')=K
-        \\(s\times ,i_K,s')\in\KK.
+        \\(s\times s,i_K,s')\in\KK.
         \end{gathered}
       \]
     \item writing $x$ to denote the map $(g,f)\mapsto g\bullet f$ from $K$ to $\CC$, the relation $(s\times s,i_K,s')\in\KK$ implies $(s,x,s')\in\KK$.
