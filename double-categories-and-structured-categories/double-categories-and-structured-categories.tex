@@ -9,7 +9,7 @@
 \newcommand{\origcit}{%
   \textsc{Ehresmann, Charles.}
   ``Catégories doubles et catégories structurées''.
-  \emph{C. R. Acad. Sc.} \textbf{256} (1963), 1198--1201.
+  \emph{Comptes rendus de l'Académie des Sciences} \textbf{256} (1963), 1198--1201.
   Presented by Jean Leray.
 }
 
@@ -93,11 +93,12 @@ This document is a translation from French of the article
 {\normalfont\origcit}
 
 \medskip
-produced with permission from \todo
+{\noindent}produced with kind permission from Andrée Ehresmann and \emph{Comptes rendus de l'Académie des Sciences}.
 
-\todo incorporated comments/corrections from \todo and they're preceded by ``[Comm.]'' plus their comment number; note that this means the footnotes in this version do not agree with those in the original (which we have instead placed in a bibliography)\todo
+\medskip
 
-\todo this note is developed in \todo{63}\todo
+\todo incorporated comments/corrections from \todo and they're preceded by ``[Comm.]'' plus their comment number (unless they're just fixing typos, in which case they have been inserted silently); note that this means the footnotes in this version do not agree with those in the original (which we have instead placed in a bibliography); the ``CW'' entries in the bibliography refer to their number/name in the collected works\todo
+
 \end{itenv}
 \hrule
 
@@ -108,6 +109,8 @@ produced with permission from \todo
 %% Content %%
 
 \todo \unsure{fix $f\vmult g$ and $f\hmult g$}
+
+\emph{[Comm.] This note is developed in \cite{CW63}.}
 
 \section{Double categories}
 \oldpage{1}
@@ -173,7 +176,7 @@ then $\CC'$ is a double category for the composition laws induced by $\bullet$ a
 
 \begin{itenv}{Proposition}
   Let $\CC$ be a double category;
-  a left ideal $I^\perp$ of $\CC^\perp$ is a species of structures\footnote{\emph{[Comm.~2.1] For the definition of species of structures and hypermorphism categories (introduced in \todo{47}\todo), cf. \todo{63, I, 2--3}, and \todo Comment 25.2.}} \cite{1} over $\CC^\bullet$ for the composition law $(f,g)\mapsto f\bullet g$ if and only if $f\bullet g$ is defined, where $f\in\CC$ and $g\in I^\perp$.
+  a left ideal $I^\perp$ of $\CC^\perp$ is a species of structures\footnote{\emph{[Comm.~2.1] For the definition of species of structures and hypermorphism categories (introduced in \todo{47}\todo), cf. \cite[\S~I, 2--3]{CW63}, and \todo Comment 25.2.}} \cite{1} over $\CC^\bullet$ for the composition law $(f,g)\mapsto f\bullet g$ if and only if $f\bullet g$ is defined, where $f\in\CC$ and $g\in I^\perp$.
   The corresponding category $\mathscr{E}(I^\perp)$ \unsure{is this right?} of hypermorphisms \cite{1} is a double category for the composition laws
   \[
     (f',g')\bullet(f,g)
@@ -235,7 +238,7 @@ recall \cite{1} that a \emph{square} in $\CC$ is an element $(g_2,g_1,f_1,f_2)\i
 
 \begin{itenv}{Theorem}
   Let $\CC$ be a double category;
-  then $\CC^\bullet$ admits a subcategory\footnote{\emph{[Comm.~2.2] cf. \todo{63, Theorem 6-II}.}} of the longitudinal category $\vsq(\CC_0^\bullet,\CC_0^\perp)$ as a quotient category \cite{1}, where $\CC_0^\bullet$ (resp. $\CC_0^\perp$) is endowed with its structure as a subcategory of $\CC^\perp$ (resp. of $\CC^\bullet$).
+  then $\CC^\bullet$ admits a subcategory\footnote{\emph{[Comm.~2.2] cf. \cite[Theorem~6]{CW63}.}} of the longitudinal category $\vsq(\CC_0^\bullet,\CC_0^\perp)$ as a quotient category \cite{1}, where $\CC_0^\bullet$ (resp. $\CC_0^\perp$) is endowed with its structure as a subcategory of $\CC^\perp$ (resp. of $\CC^\bullet$).
 \end{itenv}
 
 
@@ -286,7 +289,7 @@ let $\KK_0$ be the class of units of $\KK$;
 we identify $h\in\KK$ with $(\beta^\KK(h),p(h),\alpha^\KK(h))$.
 
 \begin{rmenv}{Definition}
-  We define a \emph{structured category in $\KK$} to be a pair $(\CC^\bullet,s)$, where $\CC^\bullet$ is the structure of a category on $\CC\in\MM_0$, and $s\in\KK_0$ with $p(s)=\CC$, satisfying the following conditions:\footnote{\emph{[Comm.~3.5+] Conditions 2 and 3 are not strict enough; they are modified in \todo{63}\todo (and in subsequent papers), where $s'$ is required to be a substructure of the product $s\times s$ on $\KK$ (and this led to the formal definition of substructures in \todo{63}\todo, refined in \todo{69,66}\todo). Both notions coincide if there exists a substructure on $\KK$, i.e. if there exists a pullback of $(\alpha,\beta)$ in $\KK$. Cf. \todo{Comment 55.2}, where motivations are also given.}}
+  We define a \emph{structured category in $\KK$} to be a pair $(\CC^\bullet,s)$, where $\CC^\bullet$ is the structure of a category on $\CC\in\MM_0$, and $s\in\KK_0$ with $p(s)=\CC$, satisfying the following conditions:\footnote{\emph{[Comm.~3.5+] Conditions 2 and 3 are not strict enough; they are modified in \cite{CW63} (and in subsequent papers), where $s'$ is required to be a substructure of the product $s\times s$ on $\KK$ (and this led to the formal definition of substructures in \cite{CW63}, refined in \todo{69,66}\todo). Both notions coincide if there exists a substructure on $\KK$, i.e. if there exists a pullback of $(\alpha,\beta)$ in $\KK$. Cf. \todo{Comment 55.2}, where motivations are also given.}}
   \begin{enumerate}
     \item There exists $s_0\in\KK_0$ such that
       \[
