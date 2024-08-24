@@ -29,7 +29,7 @@
 
 \usepackage{fouriernc}
 \usepackage{Baskervaldx}
-\usepackage[cal=esstix]{mathalfa}
+\usepackage[cal=esstix,scr=rsfs]{mathalpha}
 
 
 %% Theorem environments %%
@@ -94,11 +94,15 @@ This document is a translation from French of the article
 
 \medskip
 produced with permission from \todo
+
+\todo incorporated comments/corrections from \todo and they're preceded by ``[Comm.]'' plus their comment number; note that this means the footnotes in this version do not agree with those in the original (which we have instead placed in a bibliography)\todo
+
+\todo this note is developed in \todo{63}\todo
 \end{itenv}
 \hrule
 
 \begin{abstract}
-  Definition of structured categories; the particular case of double categories, which admit a category of squares as a quotient category.
+  Definition of structured categories; the particular case of double categories, which admit a category of quadruplets as a quotient category.
 \end{abstract}
 
 %% Content %%
@@ -113,9 +117,9 @@ produced with permission from \todo
 
   \begin{enumerate}
     \item $(\CC,\bullet)$ is a category, denoted $\CC^\bullet$;
-      the right and left \todo of $f\in\CC$ will be denoted by $\alpha^\bullet(f)$ and $\beta^\bullet(f)$ respectively, and the class of \todo by $\CC_0^\bullet$;
+      the right and left units of $f\in\CC$ will be denoted by $\alpha^\bullet(f)$ and $\beta^\bullet(f)$ respectively, and the class of units by $\CC_0^\bullet$;
     \item $(\CC,\perp)$ is a category, denoted $\CC^\perp$;
-      the \todo of $f\in\CC^\perp$ will be denoted by $\alpha^\perp(f)$ and $\beta^\perp(f)$ respectively, and the class of \todo by $\CC_0^\perp$;
+      the units of $f\in\CC^\perp$ will be denoted by $\alpha^\perp(f)$ and $\beta^\perp(f)$ respectively, and the class of units by $\CC_0^\perp$;
     \item The maps $\alpha^\bullet$ and $\beta^\bullet$ (resp. $\alpha^\perp$ and $\beta^\perp$) are functors from $\CC^\perp$ to $\CC^\perp$ (resp. from $\CC^\bullet$ to $\CC^\bullet$);
     \item \emph{Axiom of permutability.}
       If the composites $k\bullet h$, $g\bullet f$, $k\perp g$, and $h\perp f$ are defined, then
@@ -161,7 +165,7 @@ then $\CC'$ is a double category for the composition laws induced by $\bullet$ a
 
 \begin{rmenv}{Definition}
   Let $\CC$ be a double category;
-  we define a \emph{left ideal} (resp. \emph{right ideal}) of $\CC^\perp$ to be a subcategory $I^\perp$ of $\CC^\perp$ such that $\CC\bullet I^\perp=I^\perp$ (resp. $I^\perp\bullet\CC=I^\perp$), where $\CC\bullet I^\perp$ (resp. $I^\perp\bullet\CC$) is the class of composites $f\bullet g$ (resp. $g\bullet f$) for $g\in I^\perp$ and $f\in\CC$.
+  we define a \emph{left ideal}\footnote{\emph{[Comm.~1.6] This definition does not agree with the usual one \todo(cite 73 and 122)\todo in which a left ideal (or \emph{sieve}) $J$ of $\CC$ is a subclass of $\CC$ such that $J\bullet C\subset J$.}} (resp. \emph{right ideal}) of $\CC^\perp$ to be a subcategory $I^\perp$ of $\CC^\perp$ such that $\CC\bullet I^\perp=I^\perp$ (resp. $I^\perp\bullet\CC=I^\perp$), where $\CC\bullet I^\perp$ (resp. $I^\perp\bullet\CC$) is the class of composites $f\bullet g$ (resp. $g\bullet f$) for $g\in I^\perp$ and $f\in\CC$.
   We similarly define an \emph{ideal} of $\CC^\bullet$.
 \end{rmenv}
 
@@ -169,13 +173,13 @@ then $\CC'$ is a double category for the composition laws induced by $\bullet$ a
 
 \begin{itenv}{Proposition}
   Let $\CC$ be a double category;
-  a left ideal $I^\perp$ of $\CC^\perp$ is a \todo \cite{1} over $\CC^\bullet$ for the composition law $(f,g)\mapsto f\bullet g$ if and only if $f\bullet g$ is defined, where $f\in\CC$ and $g\in I^\perp$.
-  The corresponding category $\mathcal{E}(I^\perp)$ \unsure{is this right?} of hypermorphisms \cite{1} is a double category for the composition laws \unsure{is this right?}
+  a left ideal $I^\perp$ of $\CC^\perp$ is a species of structures\footnote{\emph{[Comm.~2.1] For the definition of species of structures and hypermorphism categories (introduced in \todo{47}\todo), cf. \todo{63, I, 2--3}, and \todo Comment 25.2.}} \cite{1} over $\CC^\bullet$ for the composition law $(f,g)\mapsto f\bullet g$ if and only if $f\bullet g$ is defined, where $f\in\CC$ and $g\in I^\perp$.
+  The corresponding category $\mathscr{E}(I^\perp)$ \unsure{is this right?} of hypermorphisms \cite{1} is a double category for the composition laws
   \[
     (f',g')\bullet(f,g)
     = (f'\bullet f,g)
   \]
-  if and only if $g'=f\bullet g$; further \unsure{is this right? or is it two joined iffs}
+  if and only if $g'=f\bullet g$; further
   \[
     (f',g')\perp(f,g)
     = (f'\perp f,g'\perp g)
@@ -186,7 +190,7 @@ then $\CC'$ is a double category for the composition laws induced by $\bullet$ a
 
 \section{Double categories of squares}
 
-Let $\CC_1$ and $\CC_2$ be two categories with the same class of \todo.
+Let $\CC_1$ and $\CC_2$ be two categories with the same class of units.
 Let $\sq(\CC_2,\CC_1)$ be the set of quadruples $(g_2,g_1,f_1,f_2)$, with $f_i,g_i\in\CC_i$ for $i=1,2$, such that
 \[
   \begin{aligned}
@@ -209,13 +213,13 @@ We define two composition laws on $\sq(\CC_2,\CC_1)$:
       (g'_2,g'_1,f'_1,f'_2)\vmult(g_2,g_1,f_1,f_2)
       = (g'_2,g'_1g_1,f'_1f_1,f_2)
     \]
-    if and only if $f'_2=g_2$ \unsure{???};
+    if and only if $f'_2=g_2$;
   \item \emph{Lateral} multiplication
     \[
       (g'_2,g'_1,f'_1,f'_2)\hmult(g_2,g_1,f_1,f_2)
       = (g'_2g_2,g'_1,f_1,f'_2f_2)
     \]
-    if and only if $f'_1=g_1$ \unsure{???}.
+    if and only if $f'_1=g_1$.
 \end{itemize}
 
 \begin{itenv}{Proposition}
@@ -229,9 +233,9 @@ recall \cite{1} that a \emph{square} in $\CC$ is an element $(g_2,g_1,f_1,f_2)\i
   The class $\sq\CC$ of squares in $\CC$ is a double subcategory of $\sq(\CC,\CC)$.
 \end{itenv}
 
-\begin{itenv}{Corollary}
+\begin{itenv}{Theorem}
   Let $\CC$ be a double category;
-  then $\CC^\bullet$ admits the longitudinal category $\vsq(\CC_0^\bullet,\CC_0^\perp)$ as a quotient category \cite{1}, where $\CC_0^\bullet$ (resp. $\CC_0^\perp$) is endowed with its structure as a subcategory of $\CC^\perp$ (resp. of $\CC^\bullet$).
+  then $\CC^\bullet$ admits a subcategory\footnote{\emph{[Comm.~2.2] cf. \todo{63, Theorem 6-II}.}} of the longitudinal category $\vsq(\CC_0^\bullet,\CC_0^\perp)$ as a quotient category \cite{1}, where $\CC_0^\bullet$ (resp. $\CC_0^\perp$) is endowed with its structure as a subcategory of $\CC^\perp$ (resp. of $\CC^\bullet$).
 \end{itenv}
 
 
@@ -251,6 +255,8 @@ let $\FF(\CC^\bullet,\Gamma)$ be the class of functors from $\Gamma$ to $\CC^\bu
   we define a \emph{double functor} from $\CC$ to $\CC_1$ to be a map $\Phi$ from $\CC$ to $\CC_1$ such that $\Phi$ is a functor from $\CC^\bullet$ to $\CC_1^\bullet$ and a functor from $\CC^\perp$ to $\CC_1^\perp$.
   The class of double functors from $\CC$ to $\CC_1$ is denoted $\FF(\CC_1,\CC)$.
 \end{rmenv}
+
+\emph{[Comm.~3.1\P] The following proposition is not correct: the class of double functors is not closed under source and target maps.}
 
 \begin{itenv}{Proposition}
   $\FF(\CC_1,\CC)$ is a subcategory of $\FF(\CC_1^\bullet,\CC^\bullet)$ and of $\FF(\CC_1^\perp,\CC^\perp)$;
@@ -276,13 +282,13 @@ We will see another generalisation of natural transformations (the double catego
 Let $\MM_0$ be a class of classes such that if it contains $X$ then it also contains all the subsets of $X$, and if it contains $X$ and $X'$ then it also contains the product $X\times X'$;
 let $\MM$ be the category of all functions from $X$ to $Y$, where $X,Y\in\MM_0$.
 Let $(\MM,p,\KK,\SS)$ be a category of homomorphisms \cite{1}, with $\SS$ containing the groupoid of invertible elements of $\KK$;
-let $\KK_0$ be the class of \todo of $\KK$;
+let $\KK_0$ be the class of units of $\KK$;
 we identify $h\in\KK$ with $(\beta^\KK(h),p(h),\alpha^\KK(h))$.
 
 \begin{rmenv}{Definition}
-  We define a \emph{structured category in $\KK$} to be a pair $(\CC^\bullet,s)$, where $\CC^\bullet$ is the structure of a category on $\CC\in\MM_0$, and $s\in\KK_0$ with $p(s)=\CC$, satisfying the following conditions:
+  We define a \emph{structured category in $\KK$} to be a pair $(\CC^\bullet,s)$, where $\CC^\bullet$ is the structure of a category on $\CC\in\MM_0$, and $s\in\KK_0$ with $p(s)=\CC$, satisfying the following conditions:\footnote{\emph{[Comm.~3.5+] Conditions 2 and 3 are not strict enough; they are modified in \todo{63}\todo (and in subsequent papers), where $s'$ is required to be a substructure of the product $s\times s$ on $\KK$ (and this led to the formal definition of substructures in \todo{63}\todo, refined in \todo{69,66}\todo). Both notions coincide if there exists a substructure on $\KK$, i.e. if there exists a pullback of $(\alpha,\beta)$ in $\KK$. Cf. \todo{Comment 55.2}, where motivations are also given.}}
   \begin{enumerate}
-    \item There exists $s_0\in\KK_0$ such that \unsure{check the following}
+    \item There exists $s_0\in\KK_0$ such that
       \[
         \begin{gathered}
           p(s_0)
