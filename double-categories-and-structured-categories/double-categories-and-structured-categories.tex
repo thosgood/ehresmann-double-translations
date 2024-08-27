@@ -4,13 +4,14 @@
 
 \title{Double categories and structured categories}
 \author{Charles Ehresmann}
-\date{4\textsuperscript{th} of February, 1963}
+\date{}
 
 \newcommand{\origcit}{%
   \textsc{Ehresmann, Charles.}
   ``Catégories doubles et catégories structurées''.
   \emph{Comptes rendus de l'Académie des Sciences} \textbf{256} (1963), 1198--1201.
   Presented by Jean Leray.
+  4\textsuperscript{th} of February, 1963.
 }
 
 
@@ -28,13 +29,23 @@
 %% Typography %%
 
 \usepackage{fouriernc}
-\usepackage{Baskervaldx}
 \usepackage[cal=esstix,scr=rsfs]{mathalpha}
 
 
-%% Theorem environments %%
+%% Environments %%
 
 \usepackage{amsthm}
+
+\renewenvironment{abstract}{%
+  \quotation
+  \normalsize
+  \begin{center}\textbf{{\abstractname}}\end{center}
+  \par\smallskip\noindent
+}{\endquotation}
+
+\newenvironment{translator}[1]
+  {\phantomsection\par\medskip\noindent\small\textbf{#1.}\itshape}
+  {\par\medskip}
 
 \newenvironment{itenv}[1]
   {\phantomsection\par\medskip\noindent\textbf{#1.}\itshape}
@@ -47,10 +58,8 @@
 
 %% Shortcuts %%
 
-\renewcommand{\geq}{\geqslant}
-\renewcommand{\leq}{\leqslant}
-
 \newcommand{\oldpage}[1]{\marginpar{\footnotesize$\Big\vert$ \textit{p.~#1}}}
+
 \newcommand{\todo}{{\color{purple}\textbf{TO-DO }}}
 \newcommand{\unsure}[1]{{\color{purple}\textbf{#1}}}
 
@@ -85,35 +94,30 @@
 
 \maketitle
 
-\hrule
-\begin{itenv}{Note from the translator}
-This document is a translation from French of the article
+\begin{translator}{Note from the translator}
+  This document is a translation from French of the article
 
-\medskip
-{\normalfont\origcit}
+  \medskip
+  {\normalfont\origcit}
 
-\medskip
-{\noindent}produced with kind permission from Andrée Ehresmann and \emph{Comptes rendus de l'Académie des Sciences}.
+  \medskip
+  {\noindent}produced with kind permission from Andrée Ehresmann and \emph{Comptes rendus de l'Académie des Sciences}.
 
-\medskip
+  \medskip
 
-\todo incorporated comments/corrections from \todo and they're preceded by ``[Comm.]'' plus their comment number (unless they're just fixing typos, in which case they have been inserted silently); note that this means the footnotes in this version do not agree with those in the original (which we have instead placed in a bibliography); the ``CW'' entries in the bibliography refer to their number/name in the collected works\todo
+  \todo incorporated comments/corrections from \todo and they're preceded by ``[Comm.]'' plus their comment number (unless they're just fixing typos, in which case they have been inserted silently); note that this means the footnotes in this version do not agree with those in the original (which we have instead placed in a bibliography); the ``CW'' entries in the bibliography refer to their number/name in the collected works\todo
+\end{translator}
 
-\end{itenv}
-\hrule
 
-\begin{abstract}
-  Definition of structured categories; the particular case of double categories, which admit a category of quadruplets as a quotient category.
-\end{abstract}
 
 %% Content %%
 
-\todo \unsure{fix $f\vmult g$ and $f\hmult g$}
-
-\emph{[Comm.] This note is developed in \cite{CW63}.}
+\begin{abstract}Definition of structured categories; the particular case of double categories, which admit a category of quadruplets as a quotient category.\end{abstract}
 
 \section{Double categories}
 \oldpage{1198}
+
+\emph{[Comm.] This note is developed in \cite{CW63}.}
 
 \begin{rmenv}{Definition}
   We define a \emph{double category} to be a class $\CC$ endowed with two composition laws, denoted $\bullet$ and $\perp$, satisfying the following conditions:
@@ -168,7 +172,7 @@ then $\CC'$ is a double category for the composition laws induced by $\bullet$ a
 
 \begin{rmenv}{Definition}
   Let $\CC$ be a double category;
-  we define a \emph{left ideal}\footnote{\emph{[Comm.~1.6] This definition does not agree with the usual one \todo(cite 73 and 122)\todo in which a left ideal (or \emph{sieve}) $J$ of $\CC$ is a subclass of $\CC$ such that $J\bullet C\subset J$.}} (resp. \emph{right ideal}) of $\CC^\perp$ to be a subcategory $I^\perp$ of $\CC^\perp$ such that $\CC\bullet I^\perp=I^\perp$ (resp. $I^\perp\bullet\CC=I^\perp$), where $\CC\bullet I^\perp$ (resp. $I^\perp\bullet\CC$) is the class of composites $f\bullet g$ (resp. $g\bullet f$) for $g\in I^\perp$ and $f\in\CC$.
+  we define a \emph{left ideal}\footnote{\emph{[Comm.~1.6] This definition does not agree with the usual one (\cite{CW73,CW122}) in which a left ideal (or \emph{sieve}) $J$ of $\CC$ is a subclass of $\CC$ such that $J\bullet C\subset J$.}} (resp. \emph{right ideal}) of $\CC^\perp$ to be a subcategory $I^\perp$ of $\CC^\perp$ such that $\CC\bullet I^\perp=I^\perp$ (resp. $I^\perp\bullet\CC=I^\perp$), where $\CC\bullet I^\perp$ (resp. $I^\perp\bullet\CC$) is the class of composites $f\bullet g$ (resp. $g\bullet f$) for $g\in I^\perp$ and $f\in\CC$.
   We similarly define an \emph{ideal} of $\CC^\bullet$.
 \end{rmenv}
 
@@ -176,8 +180,8 @@ then $\CC'$ is a double category for the composition laws induced by $\bullet$ a
 
 \begin{itenv}{Proposition}
   Let $\CC$ be a double category;
-  a left ideal $I^\perp$ of $\CC^\perp$ is a species of structures\footnote{\emph{[Comm.~2.1] For the definition of species of structures and hypermorphism categories (introduced in \todo{47}\todo), cf. \cite[\S~I, 2--3]{CW63}, and \todo Comment 25.2.}} \cite{1} over $\CC^\bullet$ for the composition law $(f,g)\mapsto f\bullet g$ if and only if $f\bullet g$ is defined, where $f\in\CC$ and $g\in I^\perp$.
-  The corresponding category $\mathscr{E}(I^\perp)$ \unsure{is this right?} of hypermorphisms \cite{1} is a double category for the composition laws
+  a left ideal $I^\perp$ of $\CC^\perp$ is a species of structures\footnote{\emph{[Comm.~2.1] For the definition of species of structures and hypermorphism categories (introduced in \cite{CW47}), cf. \cite[\S~I, 2--3]{CW63}, and \todo Comment 25.2.}} \cite{1a,1b} over $\CC^\bullet$ for the composition law $(f,g)\mapsto f\bullet g$ if and only if $f\bullet g$ is defined, where $f\in\CC$ and $g\in I^\perp$.
+  The corresponding category $\mathscr{E}(I^\perp)$ \unsure{is this right?} of hypermorphisms \cite{1a,1b} is a double category for the composition laws
   \[
     (f',g')\bullet(f,g)
     = (f'\bullet f,g)
@@ -230,7 +234,7 @@ We define two composition laws on $\sq(\CC_2,\CC_1)$:
 \end{itenv}
 
 Suppose that $\CC=\CC_1=\CC_2$;
-recall \cite{1} that a \emph{square} in $\CC$ is an element $(g_2,g_1,f_1,f_2)\in\sq(\CC,\CC)$ such that $g_1f_2=g_2f_1$.
+recall \cite{1a,1b} that a \emph{square} in $\CC$ is an element $(g_2,g_1,f_1,f_2)\in\sq(\CC,\CC)$ such that $g_1f_2=g_2f_1$.
 
 \begin{itenv}{Corollary}
   The class $\sq\CC$ of squares in $\CC$ is a double subcategory of $\sq(\CC,\CC)$.
@@ -238,7 +242,7 @@ recall \cite{1} that a \emph{square} in $\CC$ is an element $(g_2,g_1,f_1,f_2)\i
 
 \begin{itenv}{Theorem}
   Let $\CC$ be a double category;
-  then $\CC^\bullet$ admits a subcategory\footnote{\emph{[Comm.~2.2] cf. \cite[Theorem~6]{CW63}.}} of the longitudinal category $\vsq(\CC_0^\bullet,\CC_0^\perp)$ as a quotient category \cite{1}, where $\CC_0^\bullet$ (resp. $\CC_0^\perp$) is endowed with its structure as a subcategory of $\CC^\perp$ (resp. of $\CC^\bullet$).
+  then $\CC^\bullet$ admits a subcategory\footnote{\emph{[Comm.~2.2] cf. \cite[Theorem~6]{CW63}.}} of the longitudinal category $\vsq(\CC_0^\bullet,\CC_0^\perp)$ as a quotient category \cite{1a,1b}, where $\CC_0^\bullet$ (resp. $\CC_0^\perp$) is endowed with its structure as a subcategory of $\CC^\perp$ (resp. of $\CC^\bullet$).
 \end{itenv}
 
 
@@ -284,7 +288,7 @@ We will see another generalisation of natural transformations (the double catego
 
 Let $\MM_0$ be a class of classes such that if it contains $X$ then it also contains all the subsets of $X$, and if it contains $X$ and $X'$ then it also contains the product $X\times X'$;
 let $\MM$ be the category of all functions from $X$ to $Y$, where $X,Y\in\MM_0$.
-Let $(\MM,p,\KK,\SS)$ be a category of homomorphisms \cite{1}, with $\SS$ containing the groupoid of invertible elements of $\KK$;
+Let $(\MM,p,\KK,\SS)$ be a category of homomorphisms \cite{1a,1b}, with $\SS$ containing the groupoid of invertible elements of $\KK$;
 let $\KK_0$ be the class of units of $\KK$;
 we identify $h\in\KK$ with $(\beta^\KK(h),p(h),\alpha^\KK(h))$.
 
