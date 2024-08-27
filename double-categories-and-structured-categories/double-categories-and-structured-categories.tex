@@ -105,7 +105,7 @@
 
   \medskip
 
-  \todo incorporated comments/corrections from \todo and they're preceded by ``[Comm.]'' plus their comment number (unless they're just fixing typos, in which case they have been inserted silently); note that this means the footnotes in this version do not agree with those in the original (which we have instead placed in a bibliography); the ``CW'' entries in the bibliography refer to their number/name in the collected works\todo
+  \todo incorporated comments/corrections from \unsure{citation for collected works} \todo and they're preceded by ``[Comm.]'' plus their comment number (unless they're just fixing typos, in which case they have been inserted silently); note that this means the footnotes in this version do not agree with those in the original (which we have instead placed in a bibliography); all numbers in the bibliography refer to their number in the collected works\todo
 \end{translator}
 
 
@@ -117,7 +117,7 @@
 \section{Double categories}
 \oldpage{1198}
 
-\emph{[Comm.] This note is developed in \cite{CW63}.}
+\emph{[Comm.] This note is developed in \cite{63}.}
 
 \begin{rmenv}{Definition}
   We define a \emph{double category} to be a class $\CC$ endowed with two composition laws, denoted $\bullet$ and $\perp$, satisfying the following conditions:
@@ -172,7 +172,7 @@ then $\CC'$ is a double category for the composition laws induced by $\bullet$ a
 
 \begin{rmenv}{Definition}
   Let $\CC$ be a double category;
-  we define a \emph{left ideal}\footnote{\emph{[Comm.~1.6] This definition does not agree with the usual one (\cite{CW73,CW122}) in which a left ideal (or \emph{sieve}) $J$ of $\CC$ is a subclass of $\CC$ such that $J\bullet C\subset J$.}} (resp. \emph{right ideal}) of $\CC^\perp$ to be a subcategory $I^\perp$ of $\CC^\perp$ such that $\CC\bullet I^\perp=I^\perp$ (resp. $I^\perp\bullet\CC=I^\perp$), where $\CC\bullet I^\perp$ (resp. $I^\perp\bullet\CC$) is the class of composites $f\bullet g$ (resp. $g\bullet f$) for $g\in I^\perp$ and $f\in\CC$.
+  we define a \emph{left ideal}\footnote{\emph{[Comm.~1.6] This definition does not agree with the usual one (\cite{73,122}) in which a left ideal (or \emph{sieve}) $J$ of $\CC$ is a subclass of $\CC$ such that $J\bullet C\subset J$.}} (resp. \emph{right ideal}) of $\CC^\perp$ to be a subcategory $I^\perp$ of $\CC^\perp$ such that $\CC\bullet I^\perp=I^\perp$ (resp. $I^\perp\bullet\CC=I^\perp$), where $\CC\bullet I^\perp$ (resp. $I^\perp\bullet\CC$) is the class of composites $f\bullet g$ (resp. $g\bullet f$) for $g\in I^\perp$ and $f\in\CC$.
   We similarly define an \emph{ideal} of $\CC^\bullet$.
 \end{rmenv}
 
@@ -180,8 +180,8 @@ then $\CC'$ is a double category for the composition laws induced by $\bullet$ a
 
 \begin{itenv}{Proposition}
   Let $\CC$ be a double category;
-  a left ideal $I^\perp$ of $\CC^\perp$ is a species of structures\footnote{\emph{[Comm.~2.1] For the definition of species of structures and hypermorphism categories (introduced in \cite{CW47}), cf. \cite[\S~I, 2--3]{CW63}, and \todo Comment 25.2.}} \cite{1a,1b} over $\CC^\bullet$ for the composition law $(f,g)\mapsto f\bullet g$ if and only if $f\bullet g$ is defined, where $f\in\CC$ and $g\in I^\perp$.
-  The corresponding category $\mathscr{E}(I^\perp)$ \unsure{is this right?} of hypermorphisms \cite{1a,1b} is a double category for the composition laws
+  a left ideal $I^\perp$ of $\CC^\perp$ is a species of structures\footnote{\emph{[Comm.~2.1] For the definition of species of structures and hypermorphism categories (introduced in \cite{47a}), cf. \cite[\S~I, 2--3]{63}; also ([Comm.~25.2]) the set-valued functor associated to $(\CC^\bullet,\beta,\alpha^{-1}(e))$ is the partial Hom functor $\operatorname{Hom}(e,-)\colon\CC\to\mathsf{Set}$}.} \cite{47b,55} over $\CC^\bullet$ for the composition law $(f,g)\mapsto f\bullet g$ if and only if $f\bullet g$ is defined, where $f\in\CC$ and $g\in I^\perp$.
+  The corresponding category $\mathscr{E}(I^\perp)$ \unsure{is this right?} of hypermorphisms \cite{47b,55} is a double category for the composition laws
   \[
     (f',g')\bullet(f,g)
     = (f'\bullet f,g)
@@ -234,7 +234,7 @@ We define two composition laws on $\sq(\CC_2,\CC_1)$:
 \end{itenv}
 
 Suppose that $\CC=\CC_1=\CC_2$;
-recall \cite{1a,1b} that a \emph{square} in $\CC$ is an element $(g_2,g_1,f_1,f_2)\in\sq(\CC,\CC)$ such that $g_1f_2=g_2f_1$.
+recall \cite{47b,55} that a \emph{square} in $\CC$ is an element $(g_2,g_1,f_1,f_2)\in\sq(\CC,\CC)$ such that $g_1f_2=g_2f_1$.
 
 \begin{itenv}{Corollary}
   The class $\sq\CC$ of squares in $\CC$ is a double subcategory of $\sq(\CC,\CC)$.
@@ -242,7 +242,7 @@ recall \cite{1a,1b} that a \emph{square} in $\CC$ is an element $(g_2,g_1,f_1,f_
 
 \begin{itenv}{Theorem}
   Let $\CC$ be a double category;
-  then $\CC^\bullet$ admits a subcategory\footnote{\emph{[Comm.~2.2] cf. \cite[Theorem~6]{CW63}.}} of the longitudinal category $\vsq(\CC_0^\bullet,\CC_0^\perp)$ as a quotient category \cite{1a,1b}, where $\CC_0^\bullet$ (resp. $\CC_0^\perp$) is endowed with its structure as a subcategory of $\CC^\perp$ (resp. of $\CC^\bullet$).
+  then $\CC^\bullet$ admits a subcategory\footnote{\emph{[Comm.~2.2] cf. \cite[Theorem~6]{63}.}} of the longitudinal category $\vsq(\CC_0^\bullet,\CC_0^\perp)$ as a quotient category \cite{47b,55}, where $\CC_0^\bullet$ (resp. $\CC_0^\perp$) is endowed with its structure as a subcategory of $\CC^\perp$ (resp. of $\CC^\bullet$).
 \end{itenv}
 
 
@@ -272,7 +272,7 @@ let $\FF(\CC^\bullet,\Gamma)$ be the class of functors from $\Gamma$ to $\CC^\bu
 
 \begin{itenv}{Proposition}
   Let $\CC$ and $\CC'$ be two categories;
-  the longitudinal category $\NN(\CC',\CC)$ of natural transformations \cite{2} between functors from $\CC$ to $\CC'$ can be identified with the category $\FF(\hsq\CC',\CC)$, by identifying the natural transformation $(\varphi',\tau,\phi)$ with the functor $\Phi$ such that
+  the longitudinal category $\NN(\CC',\CC)$ of natural transformations \cite{52} between functors from $\CC$ to $\CC'$ can be identified with the category $\FF(\hsq\CC',\CC)$, by identifying the natural transformation $(\varphi',\tau,\phi)$ with the functor $\Phi$ such that
   \[
     \Phi(f)
     = \big(\varphi'(f),\,\tau(\beta(f)),\,\tau(\alpha(f)),\,\varphi(f)\big)
@@ -288,12 +288,12 @@ We will see another generalisation of natural transformations (the double catego
 
 Let $\MM_0$ be a class of classes such that if it contains $X$ then it also contains all the subsets of $X$, and if it contains $X$ and $X'$ then it also contains the product $X\times X'$;
 let $\MM$ be the category of all functions from $X$ to $Y$, where $X,Y\in\MM_0$.
-Let $(\MM,p,\KK,\SS)$ be a category of homomorphisms \cite{1a,1b}, with $\SS$ containing the groupoid of invertible elements of $\KK$;
+Let $(\MM,p,\KK,\SS)$ be a category of homomorphisms \cite{47b,55}, with $\SS$ containing the groupoid of invertible elements of $\KK$;
 let $\KK_0$ be the class of units of $\KK$;
 we identify $h\in\KK$ with $(\beta^\KK(h),p(h),\alpha^\KK(h))$.
 
 \begin{rmenv}{Definition}
-  We define a \emph{structured category in $\KK$} to be a pair $(\CC^\bullet,s)$, where $\CC^\bullet$ is the structure of a category on $\CC\in\MM_0$, and $s\in\KK_0$ with $p(s)=\CC$, satisfying the following conditions:\footnote{\emph{[Comm.~3.5+] Conditions 2 and 3 are not strict enough; they are modified in \cite{CW63} (and in subsequent papers), where $s'$ is required to be a substructure of the product $s\times s$ on $\KK$ (and this led to the formal definition of substructures in \cite{CW63}, refined in \todo{69,66}\todo). Both notions coincide if there exists a substructure on $\KK$, i.e. if there exists a pullback of $(\alpha,\beta)$ in $\KK$. Cf. \todo{Comment 55.2}, where motivations are also given.}}
+  We define a \emph{structured category in $\KK$} to be a pair $(\CC^\bullet,s)$, where $\CC^\bullet$ is the structure of a category on $\CC\in\MM_0$, and $s\in\KK_0$ with $p(s)=\CC$, satisfying the following conditions:\footnote{\emph{[Comm.~3.5+] Conditions 2 and 3 are not strict enough; they are modified in \cite{63} (and in subsequent papers), where $s'$ is required to be a substructure of the product $s\times s$ on $\KK$ (and this led to the formal definition of substructures in \cite{63}, refined in \cite{69,66}). Both notions coincide if there exists a substructure on $\KK$, i.e. if there exists a pullback of $(\alpha,\beta)$ in $\KK$. Cf. [Comm~55.2], where motivations are also given.}}
   \begin{enumerate}
     \item There exists $s_0\in\KK_0$ such that
       \[
@@ -320,7 +320,7 @@ we identify $h\in\KK$ with $(\beta^\KK(h),p(h),\alpha^\KK(h))$.
 \end{rmenv}
 
 \begin{rmenv}{Example}
-  A structured category in $\widetilde{\TT}$, where $\widetilde{\TT}$ is the category of topologies, is a topological category \cite{3}.
+  A structured category in $\widetilde{\TT}$, where $\widetilde{\TT}$ is the category of topologies, is a topological category \cite{50}.
 \end{rmenv}
 
 \oldpage{1201}
