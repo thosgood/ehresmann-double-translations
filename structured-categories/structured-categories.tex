@@ -1146,8 +1146,8 @@ If there is no risk of confusion, then we simply say that $s$ is a substructure 
     \\\beta(\bar{h}')
       &\subs \beta(\bar{h}),
     \\p(\bar{h}')
-      &< p(\bar{h})
-    \end{aligned}.
+      &< p(\bar{h}).
+    \end{aligned}
   \]
 \end{rmenv}
 
@@ -1307,16 +1307,16 @@ Let $\vsq\CC$ be the longitudinal category of \unsure{squares} of $\CC$ (see \cr
 \begin{itenv}{Proposition 8}
   Let $h,h'\in\CC$, and let
   \[
-    \begin{aligned}
+    \begin{array}{ll}
       \alpha(h)
-      &= s,
-    \\\alpha(h')
-      &= s',
+      = s,
+      &\alpha(h')
+      = s',
     \\\beta(h)
-      &= s_1,
-    \\\beta(h')
-      &= s'_1.
-    \end{aligned}
+      = s_1,
+      &\beta(h')
+      = s'_1.
+    \end{array}
   \]
   Then the following conditions are equivalent:
   \begin{enumerate}
@@ -1368,7 +1368,19 @@ Let $\vsq\HH$ be the longitudinal category of \unsure{squares} of $\HH$, and $\s
 from $\vsq\HH$ to $\vsq\CC$.
 Then $(\vsq\CC,\sq p,\vsq\HH,\bar{\Gamma}')$ is a category of homomorphisms, where $\bar{\Gamma}'$ is the groupoid of invertible elements of $\vsq\HH$.
 For a quadruple $\bar{G}=(\bar{g}_1,\bar{f}_1,\bar{f},\bar{g})$ to belong to $\vsq\HH$, it is necessary and sufficient that
+\[
+  \begin{array}{ll}
+    \alpha(\bar{f})=\alpha(\bar{g}),
+    & \beta(\bar{f})=\alpha(\bar{g}_1),
+  \\\alpha(\bar{f}_1)=\alpha(\bar{g}),
+    & \beta(\bar{f}_1)=\alpha(\bar{g}_1)
+  \end{array}
+\]
+and that $\sq p(\bar{G})$ is a \unsure{square};
+indeed, the elements $\bar{g}_1\cdot\bar{f}$ and $\bar{f}_1\cdot\bar{g}$ are then equal, since they have the same image under $p$, and have the same source and target.
 
+\oldpage{366}
+Let
 
 
 
