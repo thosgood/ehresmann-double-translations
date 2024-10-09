@@ -61,6 +61,7 @@
 
 \newcommand{\CC}{\mathcal{C}}
 \newcommand{\HH}{\mathcal{H}}
+\newcommand{\rHH}{\mathrm{H}}
 \renewcommand{\SS}{\mathcal{S}}
 \newcommand{\MM}{\mathfrak{M}}
 \usepackage{upgreek}
@@ -117,6 +118,12 @@ produced with permission from \todo
 \tableofcontents
 
 %% Content %%
+
+\todo fix spacing in e.g. $(\vsq\CC,\sq p,\vsq\HH,\bar{\Gamma}')$
+
+\todo decide between $\bar{\rHH}$ vs $\overline{\rHH}$
+
+\todo renumber bibliography following the collected works?
 
 \section*{Introduction}
 \addcontentsline{toc}{section}{\protect\numberline{}Introduction}
@@ -1380,7 +1387,31 @@ and that $\sq p(\bar{G})$ is a \unsure{square};
 indeed, the elements $\bar{g}_1\cdot\bar{f}$ and $\bar{f}_1\cdot\bar{g}$ are then equal, since they have the same image under $p$, and have the same source and target.
 
 \oldpage{366}
-Let
+Let $\bar{\UU}$ be the subcategory of $\vsq\HH$ consisting of the \unsure{squares}
+\[
+  \bar{\rHH}
+  = (\bar{h}, s_1\subs_p s'_1, s\subs_p s', \bar{h}')
+\]
+such that $s'\subs_p s$ and $s'_1\subs_p s_1$.
+Let $\bar{\UU}'$ be the subcategory of $\UU$ consisting of the \unsure{squares} in $\UU$ such that $\bar{h},\bar{h}'\in\Gamma$.
+
+\begin{itenv}{Proposition 9}
+  We have $\bar{h}'\subs\bar{h}$ in $(\CC,p,\HH,\SS)$ if and only if there exists
+  \[
+    \bar{\rHH}
+    = \left(
+      \bar{h},
+      \beta(\bar{h})\subs_p\beta(\bar{h}'),
+      \alpha(\bar{h})\subs_p\alpha(\bar{h}'),
+      \bar{h}'
+    \right) \in \UU;
+  \]
+  in this case, $\sq p(\bar{\rHH})\in\UU$.
+\end{itenv}
+
+\begin{proof}
+  If
+\end{proof}
 
 
 
