@@ -25,7 +25,6 @@
 \usepackage{enumerate}
 \usepackage{graphicx}
 \usepackage{footmisc}
-\usepackage[capitalize,noabbrev]{cleveref}
 
 
 %% Typography and such %%
@@ -34,7 +33,6 @@
 \usepackage[cal=esstix]{mathalfa}
 
 \renewcommand{\thesection}{\Roman{section}}
-\crefname{section}{}{}
 
 
 %% Theorem environments %%
@@ -203,6 +201,7 @@ The restriction of $F$ to the class $\CC_0^\perp$, considered as a map from $\CC
 Since the notion of species of structures \cite{3a} is essential in this article, we will recall the definition and main properties.
 
 \begin{rmenv}{Definition 1}
+\label{definition:1}
   We say that a category $\CC$ is a \emph{category of operators on a class $\Sigma_0$} if we have defined a composition law $(f,z)\mapsto fz$ for certain pairs $(f,z)\in\CC\times\Sigma_0$ such that $fz\in\Sigma_0$ and such that the following axioms are satisfied:
   \begin{enumerate}
     \item[1.]
@@ -232,6 +231,7 @@ we thus obtain a map $p_0\colon z\mapsto e$ from $\Sigma_0$ to $\CC_0$;
 we say that $z$ is a \emph{structure} on $p_0(z)$.
 
 \begin{rmenv}{Definition 2}
+\label{definition:2}
   Let $\Sigma_0$ be a class, and $\CC$ a category;
   we say that $\Sigma_0$ is a \emph{species of structures over $\CC$} if we have a subcategory $\CC_1$ of $\CC$ that is a category of operators on $\Sigma_0$;
   let $p_0$ be the corresponding map from $\Sigma_0$ to $\CC_0$;
@@ -355,6 +355,7 @@ We say that $(\CC,F)$ is a \emph{a pair defining a species of structures}, namel
   ---
   \begin{enumerate}
     \item[1.]
+    \label{remark:1}
       Let $\CC$ be a category, $\alpha(F)$ a subcategory, and $(\MM,F,\alpha(F))$ a functor.
       Let $\bar{F}$ be the functor that sends $f\in\alpha(F)$ to the map
       \[
@@ -367,6 +368,7 @@ We say that $(\CC,F)$ is a \emph{a pair defining a species of structures}, namel
         p_0(e,z)=e.
       \]
     \item[2.]
+    \label{remark:2}
       Let $(\CC,F)$ be a pair defining a species of structures $(\CC,p,\Sigma)$ such that $\alpha(F)$ contains $f\in\CC$ whenever $\alpha(f)\in\alpha(F)$;
       this is equivalent to saying that we are given a composition law between the category $\CC$ and the class $\Sigma_0$ that satisfies axioms~(1), (2), (3), and (4a) of Definition 1.
       We can extend $F$ to a functor $(\MM,\bar{F},\CC)$ given by
@@ -381,6 +383,7 @@ We say that $(\CC,F)$ is a \emph{a pair defining a species of structures}, namel
         \end{aligned}
       \]
     \item[3.]
+    \label{remark:3}
       Let $\CC^\bullet$ be a category;
       the triple $(\CC^\bullet,\beta,\CC)$ is a species of structures for the composition law $\bullet$;
       if $e\in\CC_0^\bullet$ then the triple $(\CC^\bullet,\beta,\alpha^{-1}(e))$ is a sub-species of structures \cite{3a} of $(\CC^\bullet,\beta,\CC)$.
@@ -388,7 +391,7 @@ We say that $(\CC,F)$ is a \emph{a pair defining a species of structures}, namel
 \end{rmenv}
 
 \oldpage{354}
-Let $(\CC^\bullet,F_e)$ be the pair defining the species of structures $(\CC^\bullet,\beta,\alpha^{-1}(e))$, and $\bar{F}_e$ the functor associated to $F_e$ by Remark~2 above.
+Let $(\CC^\bullet,F_e)$ be the pair defining the species of structures $(\CC^\bullet,\beta,\alpha^{-1}(e))$, and $\bar{F}_e$ the functor associated to $F_e$ by \hyperref[remark:2]{Remark~2} above.
 A functor $(\MM,G,\CC^\bullet)$ is said to be representable \cite{2} if there exists some $e\in\CC_0^\bullet$ such that $G$ and $\bar{F}_e$ are induced from one another by a natural equivalence.
 To every pair $(\CC,F)$ that defines a species of structures $(\CC,p,\Sigma)$, we can associated a representable functor $\bar{F}$ in the following way:
 
@@ -420,10 +423,11 @@ if and only if one of the following conditions is satisfied:
       =(z,a).
     \]
 \end{enumerate}
-Remark~2 then allows us to extend $F$ to a functor $(\MM,\bar{F},\CC')$;
+\hyperref[remark:2]{Remark~2} then allows us to extend $F$ to a functor $(\MM,\bar{F},\CC')$;
 this functor $\bar{F}$, which is identical to $(\MM,\bar{F}_a,\CC')$, is representable.
 
 \begin{rmenv}{Definition 3}
+\label{definition:2}
   Let $\CC$ be a category, and $(\MM,\gamma,\KK)$ a functor.
   We define a \emph{species of structures enriched in $(\gamma,\KK)$} to be a pair $(\CC,F)$ such that $(\KK,F,\alpha(F))$ is a functor and $(\CC,\gamma F)$ defines a species of structures;
   the species of structures defined by $(\CC,\gamma F)$ is called the \emph{species of structures \unsure{under/for} $(\CC,F)$}.
@@ -566,6 +570,7 @@ Let $\omega$ be the map
 then $(\MM,\omega,\widetilde{\Omega})$ is a functor.
 
 \begin{rmenv}{Definition 5}
+\label{definition:5}
   If a species of structures $(\CC,F)$ is enriched in $(\omega,\widetilde{\Omega})$, then we call it an \emph{ordered species of structures} \unsure{or species of ordered structures?};
   if $\CC$ further defines an order on $\CC_0$, then we say that $(\CC,F)$ is a \emph{bi-ordered species of structures} \unsure{again, which noun does bi-ordered modify?}.
 \end{rmenv}
@@ -602,6 +607,7 @@ where $(\CC,F)$ is an ordered species of structures, is a bijection from the cla
 \label{section:i.4}
 
 \begin{rmenv}{Definition 6}
+\label{definition:6}
   Let $\CC$ and $\HH$ be two categories;
   we say \cite{3a} that $(\CC,p,\HH,\SS)$ is a \emph{category of homomorphisms} if the following conditions are satisfied:
   \begin{enumerate}
@@ -629,7 +635,7 @@ where $(\CC,F)$ is an ordered species of structures, is a bijection from the cla
 \end{rmenv}
 
 Let $(\CC,p,\HH,\SS)$ be a category of homomorphisms.
-An element $h\in\HH$ can be identified, by condition~(4), with a triple $(S',f,S)$, where
+An element $h\in\HH$ can be identified, by condition~(4) of \hyperref[definition:6]{Definition~6}, with a triple $(S',f,S)$, where
 \[
   \begin{aligned}
     S
@@ -673,7 +679,7 @@ If $p(\SS_\gamma)$ is a saturated \cite{3a} subgroupoid of $\CC$, i.e. if
 \]
 then we say that $\HH$ is \emph{saturated over $\CC$}.
 
-In particular, let $(\MM,p,\HH,\SS)$ be a category of homomorphisms such that $\MM$ is the category defined in \cref{section:i.2}.
+In particular, let $(\MM,p,\HH,\SS)$ be a category of homomorphisms such that $\MM$ is the category defined in \hyperref[section:i.2]{§I.2}.
 Let $h\in\HH$;
 the element $p(h)$ is, by definition, a map $(p(\beta(h)),g,p(\alpha(h)))$, where $g$ is a surjection.
 Since the data of $\alpha(h)$, $\beta(h)$, and $g$ all together entirely determine $p(h)$, we simply represent $h$ by the triple $(\beta(h),g,\alpha(h))$ instead of by $(\beta(h),p(h),\alpha(h))$.
@@ -689,7 +695,7 @@ and if $p(h)$ is the canonical injection from $p(\alpha(h))$ to $p(\beta(h))$, t
   \begin{enumerate}
     \item[1.]
       \oldpage{358}
-      Let $(\MM,p_\FF,\FF)$ be the functor defined in \cref{section:i.2};
+      Let $(\MM,p_\FF,\FF)$ be the functor defined in \hyperref[section:i.2]{§I.2};
       let $\FF_\gamma$ be the groupoid of invertible elements of $\FF$ (equivalences of functors);
       then $(\MM,p_\FF,\FF,\FF_\gamma)$ is a category of homomorphisms.
     \item[2.]
@@ -703,7 +709,7 @@ and if $p(h)$ is the canonical injection from $p(\alpha(h))$ to $p(\beta(h))$, t
       Let $\TT$ be the groupoid of invertible elements of $\widetilde{\TT}$ (homeomorphisms);
       then $(\MM,\theta,\widetilde{\TT},\TT)$ is a category of homomorphisms.
     \item[3.]
-      Let $(\MM,\omega,\widetilde{\Omega})$ be the functor defined in \cref{section:i.2};
+      Let $(\MM,\omega,\widetilde{\Omega})$ be the functor defined in \hyperref[section:i.2]{§I.2};
       let $\Omega$ be the groupoid of invertible elements of $\widetilde{\Omega}$ (isomorphisms between ordered classes);
       then $(\MM,\omega,\widetilde{\Omega},\Omega)$ is a category of homomorphisms.
     \item[4.]
@@ -728,6 +734,7 @@ On $\HH_0$, consider the relation $\relrho$
 This relation evidently implies that $p(s)=p(s')$.
 
 \begin{itenv}{Proposition 2}
+\label{proposition:2}
   The relation $\relrho$ is an order relation on $\HH_0$, and $(\CC,p,\Gamma)$ is the species of structure \unsure{over} $(\CC,F)$ such that
   \[
     F(e)
@@ -790,11 +797,11 @@ This relation evidently implies that $p(s)=p(s')$.
     \quad\text{if and only if}\quad
     \alpha(f)=p(s).
   \]
-  Then $(p(\Gamma),p,\HH_{\relrho})$ is the species of structures \unsure{under} a species of morphisms, and the proposition follows from the end of \cref{section:i.2}.
+  Then $(p(\Gamma),p,\HH_{\relrho})$ is the species of structures \unsure{under} a species of morphisms, and the proposition follows from the end of \hyperref[section:i.2]{§I.2}.
 \end{proof}
 
-From now on, suppose that $\CC$ is an inductive category (in the sense of \cref{section:ii.6}, which is slightly more general than that of \cite{3c}).
-If $g,f\in\CC$, then their pseudo-product in $\CC$, which is always defined (cf. \cref{section:ii}, Proposition~22), is denoted by $gf$.
+From now on, suppose that $\CC$ is an inductive category (in the sense of \hyperref[section:ii.6]{§II.6}, which is slightly more general than that of \cite{3c}).
+If $g,f\in\CC$, then their pseudo-product in $\CC$, which is always defined (cf. \hyperref[section:ii]{§II}, \hyperref[proposition:22][Proposition~22]), is denoted by $gf$.
 
 Consider on $\HH_0$ the relation
 \[
@@ -819,6 +826,7 @@ if, further, $(S,p(S)p(s),s)\in\HH$, then we also have that
 \]
 
 \begin{itenv}{Proposition 3}
+\label{proposition:3}
   The relation $\relrhobar$ is an order relation on $\HH_0$;
   if $s\relrhobar S$, then $s$ is a sub-object \cite{5} of $S$ in $\HH$.
 \end{itenv}
@@ -829,7 +837,7 @@ if, further, $(S,p(S)p(s),s)\in\HH$, then we also have that
   \[
     p(S)=p(s)
   \]
-  whence $s\relrho S$ and $S\relrho s$, i.e. $s=S$, by Proposition~2.
+  whence $s\relrho S$ and $S\relrho s$, i.e. $s=S$, by \hyperref[Proposition~2]{Proposition~2}.
   Suppose that $s'\relrhobar s$;
   from the relations
   \[
@@ -873,6 +881,7 @@ if, further, $(S,p(S)p(s),s)\in\HH$, then we also have that
 The notion of \emph{substructure} that we will now define makes precise the notion of sub-object of a category.
 
 \begin{rmenv}{Definition 7}
+\label{definition:7}
   Let $S\in\HH_0$;
   we say that $s\in\HH_0$ is a \emph{substructure of $S$ in $(\CC,p,\HH,\SS)$}, and we write $s\subs_p S$, if the following conditions are satisfied:
   \begin{enumerate}
@@ -902,6 +911,7 @@ The notion of \emph{substructure} that we will now define makes precise the noti
 If there is no risk of confusion, then we simply say that $s$ is a substructure of $S$ in $\HH$, and we write $s\subs S$ and $S\sups s$ instead of $s\subs_p S$ and $S\sups_p s$ (respectively).
 
 \begin{itenv}{Proposition 4}
+\label{proposition:4}
   Let $s,S\in\HH_0$;
   then $s\subs_p S$ if and only if the following conditions are satisfied:
   \begin{enumerate}
@@ -914,7 +924,7 @@ If there is no risk of confusion, then we simply say that $s$ is a substructure 
 
 \begin{proof}
   Suppose that $s\subs_p S$;
-  condition~(1) of Definition~7 implies that $s\relrhobar S$ in $(\CC,p,\HH,\SS)$.
+  condition~(1) of \hyperref[definition:7]{Definition~7} implies that $s\relrhobar S$ in $(\CC,p,\HH,\SS)$.
   Let
   \[
     (S,p(S)p(s)\bullet g',S')\in\HH.
@@ -962,7 +972,7 @@ If there is no risk of confusion, then we simply say that $s$ is a substructure 
     \end{aligned}
   \]
   imply that $g'=g'_1$.
-  It then follows from condition~(2) of Definition~7 that $(s,g',S')\in\HH$, and so condition~(2\textquotesingle) is satisfied.
+  It then follows from condition~(2) of \hyperref[definition:7]{Definition~7 }that $(s,g',S')\in\HH$, and so condition~(2\textquotesingle) is satisfied.
   Conversely, suppose that conditions~(1\textquotesingle) and (2\textquotesingle) are satisfied;
   let $(S,g,S')\in\HH$ be such that
   \[
@@ -996,7 +1006,7 @@ If there is no risk of confusion, then we simply say that $s$ is a substructure 
       then $(\MM,\theta_u,\widetilde{\TT}_u,\TT)$ is a category of homomorphisms.
       The sub-structures of $S$ in $(\MM,\theta_u,\widetilde{\TT}_u,\TT)$ are the topologies induced by $S$ on an open of $S$, i.e. the elements that are smaller than $S$ in the order relation considered in \cite{3c} on $\widetilde{\TT}$.
     \item[2.]
-      The sub-structures of $\CC^\perp$ in $(\MM,p_\FF,\FF,\FF_\gamma)$ are the subcategories of $\CC^\perp$ (see Proposition~9 in \cref{section:ii}).
+      The sub-structures of $\CC^\perp$ in $(\MM,p_\FF,\FF,\FF_\gamma)$ are the subcategories of $\CC^\perp$ (see \hyperref[proposition:9]{Proposition~9} in \hyperref[section:ii]{§II}).
     \item[3.]
       The sub-structures of $(A,<)$ in $(\MM,\omega,\widetilde{\Omega},\Omega)$ are the subclasses of $A$ endowed with the order induced by $<$.
     \item[4.]
@@ -1018,6 +1028,7 @@ If there is no risk of confusion, then we simply say that $s$ is a substructure 
 \end{rmenv}
 
 \begin{itenv}{Theorem 1}
+\label{theorem:1}
   \oldpage{362}
   The relation $s\subs_p S$ is a relation order in $\HH_0$.
   Let $s,s',S\in\HH_0$;
@@ -1041,7 +1052,7 @@ If there is no risk of confusion, then we simply say that $s$ is a substructure 
   Since $\relrhobar$ is an order relation, if $s\subs S$ and $S\subs s$, then $s=S$.
   Suppose that $s_1\subs s$ and $s\subs S$;
   then $s_1\relrhobar S$.
-  We will show that the pair $(S,s_1)$ satisfies condition (2\textquotesingle) of Proposition~4.
+  We will show that the pair $(S,s_1)$ satisfies condition (2\textquotesingle) of \hyperref[proposition:4]{Proposition~4}.
   Let
   \[
     \bar{g}
@@ -1110,7 +1121,7 @@ If there is no risk of confusion, then we simply say that $s$ is a substructure 
     \end{aligned}
   \]
   \oldpage{363}
-  Proposition~4 then implies that
+  \hyperref[proposition:4]{Proposition~4} then implies that
   \[
     (s',g',S')\in\HH
     \quad\text{and}\quad
@@ -1120,11 +1131,12 @@ If there is no risk of confusion, then we simply say that $s$ is a substructure 
 \end{proof}
 
 \begin{itenv}{Corollary 1}
+\label{corollary:1}
   If $s\subs_p S$, $s'\subs_p S$, and $p(s)=p(s')$, then $s=s'$.
 \end{itenv}
 
 \begin{proof}
-  Indeed, by Theorem~1, these conditions imply that
+  Indeed, by \hyperref[theorem:1]{Theorem~1}, these conditions imply that
   \[
     s\subs s'
     \quad\text{and}\quad
@@ -1134,6 +1146,7 @@ If there is no risk of confusion, then we simply say that $s$ is a substructure 
 \end{proof}
 
 \begin{itenv}{Corollary 2}
+\label{corollary:2}
   Let $s\subs_p S$;
   then $s$ is the largest element (with respect to the relation $\relrho$) of the class of structures $s'$ such that
   \[
@@ -1144,6 +1157,7 @@ If there is no risk of confusion, then we simply say that $s$ is a substructure 
 \end{itenv}
 
 \begin{rmenv}{Definition 8}
+\label{definition:8}
   Let $\bar{h},\bar{h}'\in\HH$;
   we say that $\bar{h}'$ is a \emph{sub-homomorphism of $\bar{h}$ in $(\CC,p,\HH,\SS)$}, and we write $\bar{h}'\subs_p\bar{h}$ or $\bar{h}'\subs\bar{h}$, if the following conditions are satisfied:
   \[
@@ -1159,6 +1173,7 @@ If there is no risk of confusion, then we simply say that $s$ is a substructure 
 \end{rmenv}
 
 \begin{itenv}{Proposition 5}
+\label{proposition:5}
   In $\HH$, the relation $\bar{h}'\subs\bar{h}$ is an order relation that satisfies the following conditions:
   \begin{enumerate}
     \item[1.]
@@ -1174,8 +1189,8 @@ If there is no risk of confusion, then we simply say that $s$ is a substructure 
 \end{itenv}
 
 \begin{proof}
-  Conditions~(1) and (3) imply that $(\HH,\subs)$ is an ordered category (see \cref{section:ii}, Definition~18).
-  Condition~(2) implies that $p$ belongs to $\widetilde{\Omega}'$ (see \cref{section:ii.6}), i.e. (\cref{section:iv}) that $(\HH,\subs)$ is an ordered category over $(\CC,<)$.
+  Conditions~(1) and (3) imply that $(\HH,\subs)$ is an ordered category (see \hyperref[section:ii]{§II}, \hyperref[definition:18]{Definition~18}).
+  Condition~(2) implies that $p$ belongs to $\widetilde{\Omega}'$ (see \hyperref[section:ii.6]{§II.6}), i.e. (\hyperref[section:iv]{§IV}) that $(\HH,\subs)$ is an ordered category over $(\CC,<)$.
 \end{proof}
 
 \begin{itenv}{Corollary}
@@ -1252,6 +1267,7 @@ If there is no risk of confusion, then we simply say that $s$ is a substructure 
 \end{proof}
 
 \begin{itenv}{Proposition 7}
+\label{proposition:7}
   Let
   \[
     \bar{h}
@@ -1293,7 +1309,7 @@ If there is no risk of confusion, then we simply say that $s$ is a substructure 
     = (s_1,(p(s_1)p(s'_1))\bullet h',s')
     \in\HH
   \]
-  and, by Proposition~4, we see that
+  and, by \hyperref[proposition:4]{Proposition~4}, we see that
   \[
     \bar{h}'
     = (s'_1,h',s')
@@ -1303,7 +1319,7 @@ If there is no risk of confusion, then we simply say that $s$ is a substructure 
   If, further, $\bar{h}\in\Gamma$ and $h'$ is invertible, then also $(s',h'^{-1},s'_1)\in\HH$, whence $\bar{h}'\in\Gamma$.
 \end{proof}
 
-Let $\vsq\CC$ be the longitudinal category of \unsure{squares} of $\CC$ (see \cref{section:ii.5}), i.e. the class of quadruples $(g_1,f_1,f,g)\in\CC^4$ such that $g_1\bullet f=f_1\bullet g$, endowed with the multiplication
+Let $\vsq\CC$ be the longitudinal category of \unsure{squares} of $\CC$ (see \hyperref[section:ii.5]{§II.5}), i.e. the class of quadruples $(g_1,f_1,f,g)\in\CC^4$ such that $g_1\bullet f=f_1\bullet g$, endowed with the multiplication
 \[
   (g'_1,f'_1,f',g')\vmult(g_1,f_1,f,g)
   = (g'_1,f'_1\bullet f_1,f'\bullet f,g)
@@ -1312,6 +1328,7 @@ Let $\vsq\CC$ be the longitudinal category of \unsure{squares} of $\CC$ (see \cr
 \]
 
 \begin{itenv}{Proposition 8}
+\label{proposition:8}
   Let $h,h'\in\CC$, and let
   \[
     \begin{array}{ll}
@@ -1396,6 +1413,7 @@ such that $s'\subs_p s$ and $s'_1\subs_p s_1$.
 Let $\bar{\UU}'$ be the subcategory of $\UU$ consisting of the \unsure{squares} in $\UU$ such that $\bar{h},\bar{h}'\in\Gamma$.
 
 \begin{itenv}{Proposition 9}
+\label{proposition:9}
   We have $\bar{h}'\subs\bar{h}$ in $(\CC,p,\HH,\SS)$ if and only if there exists
   \[
     \bar{\rHH}
@@ -1410,7 +1428,17 @@ Let $\bar{\UU}'$ be the subcategory of $\UU$ consisting of the \unsure{squares} 
 \end{itenv}
 
 \begin{proof}
-  If
+  If $\bar{h}'\subs_p\bar{h}$, then
+  \[
+    \begin{gathered}
+      p(\bar{h}')<p(\bar{h}),
+    \\\alpha(\bar{h}')\subs_p\alpha(\bar{h})
+      \quad\text{and}\quad
+      \beta(\bar{h}')\subs_p\beta(\bar{h})
+    \end{gathered}
+  \]
+  and thus $\sq p(\bar{\rHH}$ is a \unsure{square} and $\bar{\rHH}\in\bar{\UU}$.
+  Conversely, if $\bar{\rHH}\in\bar{\UU}$, then we find that $\sq p(\bar{\rHH})\in\UU$ by condition~(3) of \hyperref[proposition:8]{Proposition~8}
 \end{proof}
 
 
