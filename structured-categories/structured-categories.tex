@@ -1319,7 +1319,7 @@ If there is no risk of confusion, then we simply say that $s$ is a substructure 
   If, further, $\bar{h}\in\Gamma$ and $h'$ is invertible, then also $(s',h'^{-1},s'_1)\in\HH$, whence $\bar{h}'\in\Gamma$.
 \end{proof}
 
-Let $\vsq\CC$ be the longitudinal category of \unsure{squares} of $\CC$ (see \hyperref[section:ii.5]{§II.5}), i.e. the class of quadruples $(g_1,f_1,f,g)\in\CC^4$ such that $g_1\bullet f=f_1\bullet g$, endowed with the multiplication
+Let $\vsq\CC$ be the longitudinal category of quartets of $\CC$ (see \hyperref[section:ii.5]{§II.5}), i.e. the class of quadruples $(g_1,f_1,f,g)\in\CC^4$ such that $g_1\bullet f=f_1\bullet g$, endowed with the multiplication
 \[
   (g'_1,f'_1,f',g')\vmult(g_1,f_1,f,g)
   = (g'_1,f'_1\bullet f_1,f'\bullet f,g)
@@ -1380,11 +1380,11 @@ Let $\vsq\CC$ be the longitudinal category of \unsure{squares} of $\CC$ (see \hy
   \]
 \end{proof}
 
-If $h'\subs h$ in $(\CC,\Id_\CC,\CC,\CC)$, then we denote by $h\sqsubs h'$ the \unsure{square} $(h,\beta(h)\beta(h'),\alpha(h)\alpha(h'),h')$.
-The class $\UU$ of \unsure{squares} $h\sqsubs h'$ is a subcategory of $\vsq\CC$.
-Let $\UU'$ be the subcategory of $\UU$ given by the \unsure{squares} $h\sqsubs h'$ such that $h'$ and $h$ are invertible.
+If $h'\subs h$ in $(\CC,\Id_\CC,\CC,\CC)$, then we denote by $h\sqsubs h'$ the quartet $(h,\beta(h)\beta(h'),\alpha(h)\alpha(h'),h')$.
+The class $\UU$ of quartets $h\sqsubs h'$ is a subcategory of $\vsq\CC$.
+Let $\UU'$ be the subcategory of $\UU$ given by the quartets $h\sqsubs h'$ such that $h'$ and $h$ are invertible.
 
-Let $\vsq\HH$ be the longitudinal category of \unsure{squares} of $\HH$, and $\sq p$ the functor
+Let $\vsq\HH$ be the longitudinal category of quartets of $\HH$, and $\sq p$ the functor
 \[
   (g_1,f_1,f,g)
   \longmapsto (p(g_1),p(f_1),p(f),p(g))
@@ -1400,17 +1400,17 @@ For a quadruple $\bar{G}=(\bar{g}_1,\bar{f}_1,\bar{f},\bar{g})$ to belong to $\v
     & \beta(\bar{f}_1)=\alpha(\bar{g}_1)
   \end{array}
 \]
-and that $\sq p(\bar{G})$ is a \unsure{square};
+and that $\sq p(\bar{G})$ is a quartet;
 indeed, the elements $\bar{g}_1\cdot\bar{f}$ and $\bar{f}_1\cdot\bar{g}$ are then equal, since they have the same image under $p$, and have the same source and target.
 
 \oldpage{366}
-Let $\bar{\UU}$ be the subcategory of $\vsq\HH$ consisting of the \unsure{squares}
+Let $\bar{\UU}$ be the subcategory of $\vsq\HH$ consisting of the quartets
 \[
   \bar{\rHH}
   = (\bar{h}, s_1\subs_p s'_1, s\subs_p s', \bar{h}')
 \]
 such that $s'\subs_p s$ and $s'_1\subs_p s_1$.
-Let $\bar{\UU}'$ be the subcategory of $\UU$ consisting of the \unsure{squares} in $\UU$ such that $\bar{h},\bar{h}'\in\Gamma$.
+Let $\bar{\UU}'$ be the subcategory of $\UU$ consisting of the quartets in $\UU$ such that $\bar{h},\bar{h}'\in\Gamma$.
 
 \begin{itenv}{Proposition 9}
 \label{proposition:9}
@@ -1437,9 +1437,12 @@ Let $\bar{\UU}'$ be the subcategory of $\UU$ consisting of the \unsure{squares} 
       \beta(\bar{h}')\subs_p\beta(\bar{h})
     \end{gathered}
   \]
-  and thus $\sq p(\bar{\rHH}$ is a \unsure{square} and $\bar{\rHH}\in\bar{\UU}$.
-  Conversely, if $\bar{\rHH}\in\bar{\UU}$, then we find that $\sq p(\bar{\rHH})\in\UU$ by condition~(3) of \hyperref[proposition:8]{Proposition~8}
+  and thus $\sq p(\bar{\rHH}$ is a quartet and $\bar{\rHH}\in\bar{\UU}$.
+  Conversely, if $\bar{\rHH}\in\bar{\UU}$, then we find that $\sq p(\bar{\rHH})\in\UU$ by condition~(3) of \hyperref[proposition:8]{Proposition~8};
+  it thus follows that $p(\bar{h}')<p(\bar{h})$, and so $\bar{h}'\subs\bar{h}$ in $(\CC,p,\HH,\SS)$.
 \end{proof}
+
+If
 
 
 
