@@ -1834,7 +1834,42 @@ We similarly define the notion of a \emph{left-solving} category of homomorphism
     < p(h)\cap p(h').
   \]
   It thus follows that $f=Ee\bullet f$ and $E=e$.
+  The elements $f$ and
+  \[
+    p(h)p(s)
+    = p(h)p\big(
+      \alpha(h)\sups_p s
+    \big)
+  \]
+  are equal, since they are bounded above by $p(h)$ and have the same source and target ($p(s)$ and $E$, respectively).
+  Thus $f=p(h)p(s)$.
+  Similarly, $f=p(h')p(s)$.
+  Since
+  \[
+    h\vdash_p(\beta(h),s)
+    = \big(
+      \beta(h), p(h)p(s), s
+    \big)
+    = (\beta(h),f,s)
+  \]
+  and
+  \[
+    h'\vdash_p(\beta(h),s)
+    = (\beta(h),f,s)
+  \]
+  we have that
+  \[
+    h\vdash_p(\beta(h),s)
+    = h'\vdash_p(\beta(h),s).
+  \]
 \end{proof}
+
+In what follows, we further suppose that $\HH$ is endowed with an order relation $<$ such that $(\HH,<)$ is an inductive category, and such that $p$ is a strict inductive map from $(\HH,<)$ to $(\CC,<)$, i.e. such that $(\HH,<)$ is an inductive category over $(\CC,<)$ with respect to $p$ (see \hyperref[§IV]{section:iv}).
+
+\begin{itenv}{Theorem 3}
+\label{theorem:3}
+  The
+\end{itenv}
 
 
 
