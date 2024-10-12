@@ -1135,7 +1135,6 @@ If there is no risk of confusion, then we simply say that $s$ is a substructure 
 \end{proof}
 
 \begin{itenv}{Corollary 1}
-\label{corollary:1}
   If $s\subs_p S$, $s'\subs_p S$, and $p(s)=p(s')$, then $s=s'$.
 \end{itenv}
 
@@ -1150,7 +1149,6 @@ If there is no risk of confusion, then we simply say that $s$ is a substructure 
 \end{proof}
 
 \begin{itenv}{Corollary 2}
-\label{corollary:2}
   Let $s\subs_p S$;
   then $s$ is the largest element (with respect to the relation $\relrho$) of the class of structures $s'$ such that
   \[
@@ -1657,8 +1655,68 @@ for all $h\in\CC$.
   Thus $[\bar{h}']\subs_{\sq p}[\bar{h}]$.
   Furthermore, $s'_1\subs_p s_1$ similarly implies that $[s'_1]\subs_{\sq p}[s_1]$, and so condition~(1) is satisfied.
 
-  Conversely
+  Conversely, suppose that $[\bar{h}']\subs[\bar{h}]$ in $(\vsq\CC,\sq p,\vsq\HH,\bar{\Gamma}')$.
+  Then
+  \[
+    h'<h
+    \quad\text{and}\quad
+    [h][h'] = \big(
+      h, \beta(h)\beta(h'), \alpha(h)\alpha(h'), h'
+    \big)
+  \]
+  \oldpage{369}
+  and we thus deduce that
+  \[
+    \big( s, p(s)p(s'), s' \big)\in\HH
+    \quad\text{and}\quad
+    \big( s_1, p(s_1)p(s'_1), s'_1 \big)\in\HH.
+  \]
+  Let
+  \[
+    \bar{g}
+    = (s,g,S')\in\HH
+  \]
+  where $g=(p(s)p(s'))\bullet g'$.
+  Then
+  \[
+    \bar{\mathrm{G}}
+    = (\bar{h},\bar{h}\bullet\bar{g},\bar{g},S')
+    \in\vsq\HH
+  \]
+  and
+  \[
+    \begin{aligned}
+      \sq p(\bar{\mathrm{G}})
+      &= (h,h\bullet g,g,p(S'))
+    \\&= [h][h']\bullet(h',h'\bullet g',g',p(S'));
+    \end{aligned}
+  \]
+  it thus follows that
+  \[
+    (\bar{h}',\bar{h}'\bullet\bar{g}',\bar{g}',S')\in\bar{\UU}
+  \]
+  i.e. that $(s',g',S')\in\HH$.
+  This proves that $s'$ is a substructure of $s$ in $(\CC,p,\HH,\SS)$.
+  If, further, $[s'_1]\subs_{\sq p}[s_1]$, then we similarly have that $s'_1\subs_p s_1$, and so $\bar{h}'\subs\bar{h}$ in $(\CC,p,\HH,\SS)$.
 \end{proof}
+
+\begin{itenv}{Corollary 1}
+  Let $\bar{h},\bar{h}'\in\Gamma$.
+  Then $\bar{h}'\subs_p\bar{h}$ if and only if $[\bar{h}']\subs_{\sq p}[\bar{h}]$.
+\end{itenv}
+
+\begin{proof}
+  Indeed, if $[\bar{h}']\subs_{\sq p}[\bar{h}]$ then the proof of \hyperref[theorem:2]{Theorem~2} shows that we have $\alpha(\bar{h}')\subs_p\alpha(\bar{h})$, and it follows from \hyperref[proposition:6]{Proposition~6} that $\bar{h}'\subs_p\bar{h}$.
+\end{proof}
+
+\begin{itenv}{Corollary 2}
+  $\bar{\UU}$ is a subcategory of the category of $\sq p$-injections.
+\end{itenv}
+
+\begin{rmenv}{Definition 9}
+\label{definition:9}
+  We
+\end{rmenv}
 
 
 
