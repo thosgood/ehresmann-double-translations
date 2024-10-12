@@ -1,6 +1,4 @@
-\documentclass[fleqn]{article}
-
-\usepackage[margin=1.5in]{geometry}
+\documentclass[a4paper,nobib,nofonts,notitlepage,notoc,fleqn,justified,oneside]{tufte-book}
 
 \title{Structured categories}
 \author{Charles Ehresmann}
@@ -33,6 +31,7 @@
 \usepackage[cal=esstix]{mathalfa}
 
 \renewcommand{\thesection}{\Roman{section}}
+\setcounter{secnumdepth}{2}
 
 
 %% Theorem environments %%
@@ -51,16 +50,20 @@
   {\phantomsection\par\medskip\noindent\textbf{#1.}\rmfamily}
   {\par\medskip}
 
+\newenvironment{longcomm}[1]
+  {\begin{fullwidth}\bigskip\hrule\phantomsection\par\bigskip\noindent[#1]\rmfamily}
+  {\par\bigskip\hrule\bigskip\end{fullwidth}}
+
 
 %% Shortcuts %%
 
 \renewcommand{\geq}{\geqslant}
 \renewcommand{\leq}{\leqslant}
 
-\newcommand{\oldpage}[1]{\marginpar{\footnotesize$\Big\vert$ \textit{p.~#1}}}
+\newcommand{\oldpage}[1]{{\reversemarginpar\marginnote{\raggedleft\footnotesize\textit{p.~#1}}}}
 \newcommand{\todo}{{\color{purple}\textbf{TO-DO }}}
 \newcommand{\unsure}[1]{{\color{purple}\textbf{#1}}}
-\newcommand{\comm}[1]{\marginpar{[Comm.] #1}}
+\newcommand{\comm}[2][]{{\normalmarginpar\marginnote{[#1] #2}}}
 
 \newcommand{\CC}{\mathcal{C}}
 \newcommand{\HH}{\mathcal{H}}
@@ -69,8 +72,8 @@
 \newcommand{\MM}{\mathfrak{M}}
 \usepackage{upgreek}
 \newcommand{\comp}{\upchi}
-\newcommand{\KK}{\mathcal{K}}
-\newcommand{\FF}{\mathcal{F}}
+\newcommand{\KK}{\mathfrak{K}}
+\newcommand{\FF}{\mathfrak{F}}
 \renewcommand{\AA}{\mathcal{A}}
 \newcommand{\TT}{\mathcal{T}}
 \newcommand{\UU}{\mathcal{U}}
@@ -108,30 +111,34 @@
 
 \maketitle
 
-\begin{translator}{Note from the translator}
-  This document is a translation from French of the article
+\begin{fullwidth}
+  \begin{translator}{Note from the translator}
+    This document is a translation from French of the article
 
-  \medskip
-  {\normalfont\origcit}
+    \medskip
+    {\normalfont\origcit}
 
-  \medskip
-  produced with permission from \todo
+    \medskip
+    produced with permission from \todo
 
-  This version has also incorporated comments and errata from \cite[Comments on Part III-1, p.~342--363]{coll}.
-  Some of these correct minor typos; some are supplementary comments by Andrée Ehresmann and have been included verbatim, preceded by \emph{[Comm.]} and their comment number (when relevant).
-  The page numbers of the original article are included at the relevant locations in the margins of this version.
-\end{translator}
+    This version has also incorporated comments and errata from \cite[Comments on Part III-1, p.~342--363]{coll}.
+    Some of these correct minor typos; some are supplementary comments by Andrée Ehresmann and have been included verbatim --- either in the margin or as full-width text --- along with their comment number (when relevant).
+    The page numbers of the original article are included at the relevant locations in the margins of this version.
+  \end{translator}
 
-\begin{rmenv}{Notation}
-  We repeat here a few comments on notation and style from \cite[Comments on Part III-1, p.~337--338]{coll}, since there are a few conventions that the modern reader might find confusing.
+  \begin{rmenv}{Notation}
+    We repeat here a few comments on notation from \cite[Comments on Part III-1, p.~337--338]{coll}, since there are a few conventions that the modern reader might find confusing.
 
-  Categories are thought of as \emph{classes} equipped with a composition, so they are named by their morphisms instead of their objects, e.g. $\MM$ for ``maps'' instead of $\mathsf{Set}$, and $\FF$ for ``functors'' instead of $\mathsf{Cat}$.
-  With this in mind, a category is often denoted by $\CC^\bullet$, where $\CC$ is its class of morphism and $\bullet$ is its composition operator; the class of its objects is written $\CC_0^\bullet$ and objects are often identified with their identity morphisms, and called \emph{units}.
-  The domain and codomain of a morphism are denoted by $\alpha$ and $\beta$ (respectively).
-  Functors $F$ from a category $\CC$ to a category $\CC'$ are written as $(\CC',F,\CC)$ (i.e. in the ``diagrammatic'' direction).
-\end{rmenv}
+    Categories are thought of as \emph{classes} equipped with a composition, so they are named by their morphisms instead of their objects, e.g. $\MM$ for ``maps'' instead of $\mathsf{Set}$, and $\FF$ for ``functors'' instead of $\mathsf{Cat}$.
+    With this in mind, a category is often denoted by $\CC^\bullet$, where $\CC$ is its class of morphism and $\bullet$ is its composition operator; the class of its objects is written $\CC_0^\bullet$ and objects are often identified with their identity morphisms, and called \emph{units}.
+    The domain and codomain of a morphism are denoted by $\alpha$ and $\beta$ (respectively).
+    Functors $F$ from a category $\CC$ to a category $\CC'$ are written as $(\CC',F,\CC)$ (i.e. in the ``diagrammatic'' direction).
+  \end{rmenv}
 
-\tableofcontents
+  \bigskip
+  \hrule
+  \bigskip
+\end{fullwidth}
 
 %% Content %%
 
@@ -143,7 +150,11 @@
 
 \todo add comments from the collected works
 
-\todo make comments from the collected works look good (tufte style?)
+\todo sort out page numbers appearing on right vs left
+
+\todo table of contents
+
+
 
 \section*{Introduction}
 \addcontentsline{toc}{section}{\protect\numberline{}Introduction}
@@ -157,10 +168,12 @@ The first section begins with a short reminder on the notions of species of stru
 Let $(\CC,p,\HH,\SS)$ be a category of homomorphisms over $\CC$ such that $\SS$ contains the groupoid of invertible elements of the category $\HH$, and such that $\CC$ is further endowed with the structure of an inductive category.
 We define the substructures of a structure of $\HH$.
 This notion makes precise that of a sub-object of an arbitrary category, using the fact that $\HH$ is a category of homomorphisms and $\CC$ an inductive category;
+\comm[21.1]{This notion of substructure is simplified in subsequent papers (\cite{61,66,69}), where it is freed from any order on $\CC$.}
 it leads to endowing $\HH$ with the structure of an ordered category, which is the subject of the main results of this section.
 
 Let $(\MM,p,\HH,\Gamma)$ be a category of homomorphisms with finite products, over a category $\MM$ of maps;
 we define, at the start of Section~II, $\HH$-structured categories (or, more precisely, $\HH(\HH',\HH'')$-structured categories).
+\comm[21.2]{Structured categories are, in a more modern language, categories internal to a concrete category $\KK$ such that the ``internal'' source, target, and composition can be \todo}
 We then give a certain number of examples: topological categories and differential categories \cite{3b}; double categories that arise, in particular, in the theory of natural transformations between functors \cite{3d}; order-structured categories, in particular inductive categories and inductive groupoids \cite{3c}, etc.
 \oldpage{350}
 These examples, which I was led to consider in the study of fibred spaces, foliated spaces, extensions of differential varieties, and local structures in general, are the origin of this work.
@@ -1559,7 +1572,7 @@ Suppose that $(\CC,p',\HH',\HH'\cap\Gamma)$ is a category of homomorphisms.
   Let $(S,p,S')\in\HH'$ be such that
   \[
     \alpha(p(s)g) = \alpha(g)
-    \quad\text{\and}\quad
+    \quad\text{and}\quad
     \beta(p(s)g) = p(s);
   \]
   then the composite $(S,g,S')\vdash_p(s,S')=(s,p(s)g,S')$, being defined, belongs to $\HH'$.
