@@ -39,6 +39,10 @@
 
 \usepackage{amsthm}
 
+\newenvironment{translator}[1]
+  {\phantomsection\par\medskip\noindent\small\textbf{#1.}\itshape}
+  {\par\medskip}
+
 \newenvironment{itenv}[1]
   {\phantomsection\par\medskip\noindent\textbf{#1.}\itshape}
   {\par\medskip}
@@ -56,6 +60,7 @@
 \newcommand{\oldpage}[1]{\marginpar{\footnotesize$\Big\vert$ \textit{p.~#1}}}
 \newcommand{\todo}{{\color{purple}\textbf{TO-DO }}}
 \newcommand{\unsure}[1]{{\color{purple}\textbf{#1}}}
+\newcommand{\comm}[1]{\marginpar{[Comm.] #1}}
 
 \newcommand{\CC}{\mathcal{C}}
 \newcommand{\HH}{\mathcal{H}}
@@ -103,17 +108,28 @@
 
 \maketitle
 
-\hrule
-\begin{itenv}{Note from the translator}
-This document is a translation from French of the article
+\begin{translator}{Note from the translator}
+  This document is a translation from French of the article
 
-\medskip
-{\normalfont\origcit}
+  \medskip
+  {\normalfont\origcit}
 
-\medskip
-produced with permission from \todo
-\end{itenv}
-\hrule
+  \medskip
+  produced with permission from \todo
+
+  This version has also incorporated comments and errata from \cite[Comments on Part III-1, p.~342--363]{coll}.
+  Some of these correct minor typos; some are supplementary comments by Andrée Ehresmann and have been included verbatim, preceded by \emph{[Comm.]} and their comment number (when relevant).
+  The page numbers of the original article are included at the relevant locations in the margins of this version.
+\end{translator}
+
+\begin{rmenv}{Notation}
+  We repeat here a few comments on notation and style from \cite[Comments on Part III-1, p.~337--338]{coll}, since there are a few conventions that the modern reader might find confusing.
+
+  Categories are thought of as \emph{classes} equipped with a composition, so they are named by their morphisms instead of their objects, e.g. $\MM$ for ``maps'' instead of $\mathsf{Set}$, and $\FF$ for ``functors'' instead of $\mathsf{Cat}$.
+  With this in mind, a category is often denoted by $\CC^\bullet$, where $\CC$ is its class of morphism and $\bullet$ is its composition operator; the class of its objects is written $\CC_0^\bullet$ and objects are often identified with their identity morphisms, and called \emph{units}.
+  The domain and codomain of a morphism are denoted by $\alpha$ and $\beta$ (respectively).
+  Functors $F$ from a category $\CC$ to a category $\CC'$ are written as $(\CC',F,\CC)$ (i.e. in the ``diagrammatic'' direction).
+\end{rmenv}
 
 \tableofcontents
 
@@ -123,9 +139,11 @@ produced with permission from \todo
 
 \todo decide between $\bar{\rHH}$ vs $\overline{\rHH}$
 
-\todo renumber bibliography following the collected works?
+\todo add citations from collected works notes
 
 \todo add comments from the collected works
+
+\todo make comments from the collected works look good (tufte style?)
 
 \section*{Introduction}
 \addcontentsline{toc}{section}{\protect\numberline{}Introduction}
@@ -150,13 +168,13 @@ The end of Section~II contains a series of general theorems:
 
 \begin{itemize}
   \item $\HH$-structured functors form a category of homomorphisms over a category of functors, and over $\MM$;
-    it has finite products and \unsure{resolutions to the right}.
+    it has finite products and is right solving.
   \item Let $(\CC^\bullet,s)$ be an $\HH$-structured category;
     if $\bar{\CC}^\bullet$ is a subcategory of $\CC^\bullet$, and $\bar{s}$ a substructure of $s$ such that $p(\bar{s})=\bar{C}$, then $(\bar{C}^\bullet,\bar{s})$ is an $\HH$-structured category.
   \item If $(\CC^\bullet,s)$ is an $\HH$-structured category, then the categories of \todo of $\CC^\bullet$ are $\HH$-structured categories.
 \end{itemize}
 
-All of these theorems use the additional hypothesis that $(\MM,p,\HH,\Gamma)$ is a category of homomorphisms \unsure{right resolved?} (that is, $\HH$ contains ``enough'' substructures).
+All of these theorems use the additional hypothesis that $(\MM,p,\HH,\Gamma)$ is a right-resolving category of homomorphisms (that is, $\HH$ contains ``enough'' substructures).
 
 The second part of this article (to appear soon) will contain the theory of species of structured structures;
 we will show how the \unsure{complete enlargement} procedure of an inductive groupoid can be generalised to species of structured structures.
@@ -257,7 +275,7 @@ $\Sigma$ is a category, called the \emph{associated category of hypermorphisms} 
 The class of units of $\Sigma$ can be identified with $\Sigma_0$ by associating $(e,z)$ with $z$.
 The map $p_0$ extends to a functor $(\CC,p,\Sigma)$ satisfying the following property:
 \begin{enumerate}
-  \item[(E)] \itshape
+  \item[\normalfont(E)] \itshape
     For all $h\in\Sigma$ and all $z\in\Sigma_0$ such that
     \[
       p_0(z)
@@ -1715,7 +1733,36 @@ for all $h\in\CC$.
 
 \begin{rmenv}{Definition 9}
 \label{definition:9}
-  We
+  We say that $(\CC,p,\HH,\SS)$ is a \emph{right-solving category of homomorphisms} if the following axiom is satisfied:
+  \begin{enumerate}
+    \item[\normalfont(R)] Let $h,h'\in\HH$ be such that
+      \[
+        \alpha(h)=\alpha(h')
+        \quad\text{and}\quad
+        \beta(h)=\beta(h').
+      \]
+      Then there exists $s\subs_p\alpha(h)$ such that
+      \[
+        p(s)
+        = \alpha\big(
+          p(h)\cap p(h')
+        \big).
+      \]
+      The substructure $s$ of $\alpha(h)$ is called the \emph{$p$-kernel} of $(h,h')$.
+  \end{enumerate}
+\end{rmenv}
+
+We similarly define the notion of a \emph{left-solving} category of homomorphisms $(\CC,p,\HH,\SS)$ by replacing $\alpha$ with $\beta$ in the definition above.
+
+\begin{rmenv}{Examples}
+  ---
+  \begin{enumerate}
+    \item [\normalfont(1)]
+      $(\MM,p_\FF,\FF,\FF_\gamma)$ is right solving.
+
+    \item [\normalfont(2)]
+      If, for all $e,E\in\CC_0$ such that $e<E$, we have that $\beta(Ee)=E$, then $(\CC,\Id_\CC,\CC,\CC)$ is left and right solving.
+  \end{enumerate}
 \end{rmenv}
 
 
