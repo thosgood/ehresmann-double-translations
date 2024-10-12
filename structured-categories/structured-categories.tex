@@ -1,6 +1,6 @@
-\documentclass[a4paper,nobib,nofonts,notitlepage,notoc,fleqn,justified,oneside]{tufte-book}
+\documentclass[a4paper,oneside,nobib,nofonts,notitlepage,notoc,nols,fleqn,justified]{tufte-book}
 
-\title{Structured categories}
+\title{\sc{Structured categories}}
 \author{Charles Ehresmann}
 \date{1963}
 
@@ -122,7 +122,7 @@
     produced with permission from \todo
 
     This version has also incorporated comments and errata from \cite[Comments on Part III-1, p.~342--363]{coll}.
-    Some of these correct minor typos; some are supplementary comments by Andrée Ehresmann and have been included verbatim --- either in the margin or as full-width text --- along with their comment number (when relevant).
+    Some of these correct minor typos and have been inserted silently; some are supplementary comments by Andrée Ehresmann and have been included verbatim --- either in the margin or as full-width text --- along with their comment number (when relevant).
     The page numbers of the original article are included at the relevant locations in the margins of this version.
   \end{translator}
 
@@ -153,6 +153,8 @@
 \todo sort out page numbers appearing on right vs left
 
 \todo table of contents
+
+\todo figure out mathfrak vs mathcal for e.g. $\TT$
 
 
 
@@ -1413,7 +1415,10 @@ Let $\vsq\CC$ be the longitudinal category of quartets of $\CC$ (see \hyperref[s
   \]
 \end{proof}
 
-If $h'\subs h$ in $(\CC,\Id_\CC,\CC,\CC)$, then we denote by $h\sqsubs h'$ the quartet $(h,\beta(h)\beta(h'),\alpha(h)\alpha(h'),h')$.
+If $h'\subs h$ in $(\CC,\Id_\CC,\CC,\CC)$, then we denote by $h\sqsubs h'$ the quartet
+\[
+  (h,\beta(h)\beta(h'),\alpha(h)\alpha(h'),h').
+\]
 The class $\UU$ of quartets $h\sqsubs h'$ is a subcategory of $\vsq\CC$.
 Let $\UU'$ be the subcategory of $\UU$ given by the quartets $h\sqsubs h'$ such that $h'$ and $h$ are invertible.
 
@@ -1775,8 +1780,61 @@ We similarly define the notion of a \emph{left-solving} category of homomorphism
 
     \item [\normalfont(2)]
       If, for all $e,E\in\CC_0$ such that $e<E$, we have that $\beta(Ee)=E$, then $(\CC,\Id_\CC,\CC,\CC)$ is left and right solving.
+
+    \item[\normalfont(3)]
+      If, for all $S\in\HH_0$ and all $e<p(S)$, there exists $s\subs_p S$ such that $p(s)=e$, then $(\CC,p,\HH,\SS)$ is right and left solving.
+      This is also the case in particular for $(\MM,\omega,\widetilde{\Omega},\Omega)$ and $(\MM,\theta,\widetilde{\TT},\TT)$.
+
+    \item[\normalfont(4)]
+      \oldpage{370}
+      $(\MM,\theta,\widetilde{\TT}_u,\TT)$ is not right solving.
   \end{enumerate}
 \end{rmenv}
+
+\begin{itenv}{Proposition 11}
+\label{proposition:11}
+  If $(\CC,p,\HH,\SS)$ is a right-solving category of homomorphisms, and if $\beta(Ee)=E$ for all $e<E$ in $\CC_0$, then the conditions
+  \[
+    \begin{gathered}
+      h,h'\in\HH,
+    \\\alpha(h)=\alpha(h')
+      \quad\text{and}\quad
+      \beta(h)=\beta(h')
+    \end{gathered}
+  \]
+  imply that
+  \[
+    h\vdash_p(\beta(h),s)
+    = h'\vdash_p(\beta(h),s),
+  \]
+  where $s$ is the $p$-kernel of $(h,h')$.
+\end{itenv}
+
+\begin{proof}
+  Set
+  \[
+    \begin{gathered}
+      p(h)\cap p(h')=f,
+    \\e=\beta(f)
+      \quad\text{and}\quad
+      E=\beta(p(h)).
+    \end{gathered}
+  \]
+  Then
+  \[
+    Ee\bullet f<p(h)
+    \quad\text{and}\quad
+    Ee\bullet f<p(h')
+  \]
+  whence
+  \[
+    p(h)\cap p(h')
+    = f
+    < Ee\bullet f
+    < p(h)\cap p(h').
+  \]
+  It thus follows that $f=Ee\bullet f$ and $E=e$.
+\end{proof}
 
 
 
@@ -1784,6 +1842,8 @@ We similarly define the notion of a \emph{left-solving} category of homomorphism
 %% Bibliography %%
 
 \nocite{*}
-\printbibliography[heading=bibintoc,title=Bibliography]
+\begin{fullwidth}
+  \printbibliography[heading=bibintoc,title=Bibliography]
+\end{fullwidth}
 
 \end{document}
