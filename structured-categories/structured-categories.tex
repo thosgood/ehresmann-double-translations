@@ -208,19 +208,19 @@ Since the notion of species of structures \cite{3a} is essential in this article
 \label{definition:1}
   We say that a category $\CC$ is a \emph{category of operators on a class $\Sigma_0$} if we have defined a composition law $(f,z)\mapsto fz$ for certain pairs $(f,z)\in\CC\times\Sigma_0$ such that $fz\in\Sigma_0$ and such that the following axioms are satisfied:
   \begin{enumerate}
-    \item[1.]
+    \item[\normalfont(1)]
       \emph{Associativity.}
       If one of $g(fz)$ or $(g\bullet f)z$ is defined, then both of them are defined, and
       \[
         g(fz)
         = (g\bullet f)z;
       \]
-    \item[2.]
+    \item[\normalfont(2)]
       If $g\bullet f$ and $fz$ are defined, then $g(fz)$ is defined;
-    \item[3.]
+    \item[\normalfont(3)]
       Let $e\in\CC_0$;
       if $ez$ is defined, then $ez=z$;
-    \item[4.]
+    \item[\normalfont(4)]
       \begin{enumerate}
         \item[(a)]
           For all $z\in\Sigma_0$, there exists at least one $f\in\CC$ such that $fz$ is defined;
@@ -358,7 +358,7 @@ We say that $(\CC,F)$ is a \emph{a pair defining a species of structures}, namel
 \begin{rmenv}{Remarks}
   ---
   \begin{enumerate}
-    \item[1.]
+    \item[\normalfont(1)]
     \label{remark:1}
       Let $\CC$ be a category, $\alpha(F)$ a subcategory, and $(\MM,F,\alpha(F))$ a functor.
       Let $\bar{F}$ be the functor that sends $f\in\alpha(F)$ to the map
@@ -371,7 +371,7 @@ We say that $(\CC,F)$ is a \emph{a pair defining a species of structures}, namel
       \[
         p_0(e,z)=e.
       \]
-    \item[2.]
+    \item[\normalfont(2)]
     \label{remark:2}
       Let $(\CC,F)$ be a pair defining a species of structures $(\CC,p,\Sigma)$ such that $\alpha(F)$ contains $f\in\CC$ whenever $\alpha(f)\in\alpha(F)$;
       this is equivalent to saying that we are given a composition law between the category $\CC$ and the class $\Sigma_0$ that satisfies axioms~(1), (2), (3), and (4a) of Definition 1.
@@ -386,7 +386,7 @@ We say that $(\CC,F)$ is a \emph{a pair defining a species of structures}, namel
           \qquad&&\text{for all $f'\not\in\alpha(F)$.}
         \end{aligned}
       \]
-    \item[3.]
+    \item[\normalfont(3)]
     \label{remark:3}
       Let $\CC^\bullet$ be a category;
       the triple $(\CC^\bullet,\beta,\CC)$ is a species of structures for the composition law $\bullet$;
@@ -409,17 +409,17 @@ This class is a category for the composition law
 \]
 if and only if one of the following conditions is satisfied:
 \begin{enumerate}
-  \item[1.]
+  \item[\normalfont(1)]
     $\gamma,\gamma'\in\CC$ and $\alpha(\gamma')=\beta(\gamma)$;
     then $\gamma'\bullet\gamma$ is the composition of $\gamma'$ and $\gamma$ in $\CC$;
-  \item[2.]
+  \item[\normalfont(2)]
     $\gamma'\in\CC$, $\gamma=(z,a)$, and $z\in F(\alpha(\gamma'))$;
     then
     \[
       \gamma'\bullet\gamma
       =(\gamma'z,a)
     \]
-  \item[3.]
+  \item[\normalfont(3)]
     $\gamma'=(z,a)$ and $\gamma=a$;
     then
     \[
@@ -615,14 +615,14 @@ where $(\CC,F)$ is an ordered species of structures, is a bijection from the cla
   Let $\CC$ and $\HH$ be two categories;
   we say \cite{3a} that $(\CC,p,\HH,\SS)$ is a \emph{category of homomorphisms} if the following conditions are satisfied:
   \begin{enumerate}
-    \item[1.]
+    \item[\normalfont(1)]
       $(\CC,p,\HH)$ is a functor;
-    \item[2.]
+    \item[\normalfont(2)]
       \oldpage{357}
       $\SS$ is a subcategory of $\HH$ that contains $\HH_0$;
-    \item[3.]
+    \item[\normalfont(3)]
       $(\CC,p',\SS)$ is a species of structures, where $p'$ denotes the restriction of $p$ to $\SS$;
-    \item[4.]
+    \item[\normalfont(4)]
       If $h,h'\in\HH$, then the relations
       \[
         \begin{aligned}
@@ -697,12 +697,12 @@ and if $p(h)$ is the canonical injection from $p(\alpha(h))$ to $p(\beta(h))$, t
 \begin{rmenv}{Examples}
   ---
   \begin{enumerate}
-    \item[1.]
+    \item[\normalfont(1)]
       \oldpage{358}
       Let $(\MM,p_\FF,\FF)$ be the functor defined in \hyperref[section:i.2]{§I.2};
       let $\FF_\gamma$ be the groupoid of invertible elements of $\FF$ (equivalences of functors);
       then $(\MM,p_\FF,\FF,\FF_\gamma)$ is a category of homomorphisms.
-    \item[2.]
+    \item[\normalfont(2)]
       Let $\TT_0$ be the class of topologies (or ``metatopologies'', in the terminology of \cite{3b}) on the classes $M\in\MM_0$;
       let $\widetilde{\TT}$ be the category of continuous maps $(S',f,S)$ from $S$ to $S'$, where $S$ is a topology on the class $M$, and $S'$ a topology on $M'$.
       Let $\theta$ be the functor
@@ -712,11 +712,11 @@ and if $p(h)$ is the canonical injection from $p(\alpha(h))$ to $p(\beta(h))$, t
       \]
       Let $\TT$ be the groupoid of invertible elements of $\widetilde{\TT}$ (homeomorphisms);
       then $(\MM,\theta,\widetilde{\TT},\TT)$ is a category of homomorphisms.
-    \item[3.]
+    \item[\normalfont(3)]
       Let $(\MM,\omega,\widetilde{\Omega})$ be the functor defined in \hyperref[section:i.2]{§I.2};
       let $\Omega$ be the groupoid of invertible elements of $\widetilde{\Omega}$ (isomorphisms between ordered classes);
       then $(\MM,\omega,\widetilde{\Omega},\Omega)$ is a category of homomorphisms.
-    \item[4.]
+    \item[\normalfont(4)]
       Let $\CC$ be any category;
       then $(\CC,\Id_\CC,\CC,\CC)$ is a category of homomorphisms, where $\Id_\CC$ denotes the identity functor on $\CC$.
   \end{enumerate}
@@ -889,9 +889,9 @@ The notion of \emph{substructure} that we will now define makes precise the noti
   Let $S\in\HH_0$;
   we say that $s\in\HH_0$ is a \emph{substructure of $S$ in $(\CC,p,\HH,\SS)$}, and we write $s\subs_p S$, if the following conditions are satisfied:
   \begin{enumerate}
-    \item[1.]
+    \item[\normalfont(1)]
       $p(s)<p(S)$ and $(S,p(S)p(s),s)\in\HH$;
-    \item[2.]
+    \item[\normalfont(2)]
       If $(S,g,S')\in\HH$ is such that
       \[
         \alpha(p(s)g)=\alpha(g)
@@ -919,9 +919,9 @@ If there is no risk of confusion, then we simply say that $s$ is a substructure 
   Let $s,S\in\HH_0$;
   then $s\subs_p S$ if and only if the following conditions are satisfied:
   \begin{enumerate}
-    \item[1\textquotesingle.]
+    \item[\normalfont(1\textquotesingle)]
       $s\relrhobar S$ in $(\CC,p,\HH,\SS)$;
-    \item[2\textquotesingle.]
+    \item[\normalfont(2\textquotesingle)]
       If $(S,(p(S)p(s))\bullet g',S')\in\HH$ then $(s,g',S')\in\HH$.
   \end{enumerate}
 \end{itenv}
@@ -1003,17 +1003,17 @@ If there is no risk of confusion, then we simply say that $s$ is a substructure 
 \begin{rmenv}{Examples}
   ---
   \begin{enumerate}
-    \item[1.]
+    \item[\normalfont(1)]
       The sub-structures of $S$ in $(\MM,\theta,\widetilde{\TT},\TT)$ are the topologies induced by $S$ on the subclasses of $\theta(S)$.
       Let $\widetilde{\TT_u}$ be the subcategory of $\widetilde{\TT}$ consisting of open continuous maps from one topological space to another;
       let $\theta_u$ be the restriction of $\theta$ to $\widetilde{\TT}_u$;
       then $(\MM,\theta_u,\widetilde{\TT}_u,\TT)$ is a category of homomorphisms.
       The sub-structures of $S$ in $(\MM,\theta_u,\widetilde{\TT}_u,\TT)$ are the topologies induced by $S$ on an open of $S$, i.e. the elements that are smaller than $S$ in the order relation considered in \cite{3c} on $\widetilde{\TT}$.
-    \item[2.]
+    \item[\normalfont(2)]
       The sub-structures of $\CC^\perp$ in $(\MM,p_\FF,\FF,\FF_\gamma)$ are the subcategories of $\CC^\perp$ (see \hyperref[proposition:9]{Proposition~9} in \hyperref[section:ii]{§II}).
-    \item[3.]
+    \item[\normalfont(3)]
       The sub-structures of $(A,<)$ in $(\MM,\omega,\widetilde{\Omega},\Omega)$ are the subclasses of $A$ endowed with the order induced by $<$.
-    \item[4.]
+    \item[\normalfont(4)]
       In $(\CC,\Id_\CC,\CC,\CC)$, we have
       \[
         s\subs S
@@ -1026,7 +1026,7 @@ If there is no risk of confusion, then we simply say that $s$ is a substructure 
       \]
       If the relations $s<S$ and $s\subs S$ are equivalent, then $\CC$ is a \emph{\unsure{completely right regular} category}.
       In this case, the condition $s<\alpha(f)$ implies that $\beta(fs)=\beta(f)$.
-    \item[5.]
+    \item[\normalfont(5)]
       If $s\subs_p S$, then $p(s)\subs p(S)$ in $(\CC,\Id_\CC,\CC,\CC)$.
   \end{enumerate}
 \end{rmenv}
@@ -1180,14 +1180,14 @@ If there is no risk of confusion, then we simply say that $s$ is a substructure 
 \label{proposition:5}
   In $\HH$, the relation $\bar{h}'\subs\bar{h}$ is an order relation that satisfies the following conditions:
   \begin{enumerate}
-    \item[1.]
+    \item[\normalfont(1)]
       If $\bar{h}'\subs\bar{h}$, and $\alpha(\bar{h}')=\alpha(\bar{h})$ and $\beta(\bar{h}')=\beta(\bar{h})$, then $\bar{h}=\bar{h}'$;
-    \item[2.]
+    \item[\normalfont(2)]
       If $\bar{h}'\subs\bar{h}$ then $p(\bar{h}')\subs p(\bar{h})$ in $(\CC,\Id_\CC,\CC,\CC)$;
       if, further, $p(\bar{h})=p(\bar{h}')$, then $\bar{h}=\bar{h}'$;
-    \item[3.]
+    \item[\normalfont(3)]
       If $(\bar{h}_1,\bar{h}),(\bar{h}'_1,\bar{h}')\in\HH\star\HH$ and $\bar{h}'\subs\bar{h}$ and $\bar{h}'_1\subs\bar{h}_1$, then $\bar{h}'_1\bullet\bar{h}'\subs\bar{h}_1\bullet\bar{h}$;
-    \item[4.]
+    \item[\normalfont(4)]
       If $\bar{h}'\subs_p\bar{h}$, $\bar{h}''\subs_p\bar{h}$, and $p(\bar{h}'')\subs p(\bar{h}')$ in $(\CC,\Id_\CC,\CC,\CC)$, then $\bar{h}''\subs_p\bar{h}'$.
   \end{enumerate}
 \end{itenv}
@@ -1348,11 +1348,11 @@ Let $\vsq\CC$ be the longitudinal category of quartets of $\CC$ (see \hyperref[s
   \]
   Then the following conditions are equivalent:
   \begin{enumerate}
-    \item[1.]
+    \item[\normalfont(1)]
       $h'\subs h$ in $(\CC,\Id_\CC,\CC,\CC)$;
-    \item[2.]
+    \item[\normalfont(2)]
       $h'<h$ in $\CC$, and $\beta(ss')=s$ and $\beta(s_1s'_1)=s_1$;
-    \item[3.]
+    \item[\normalfont(3)]
       $s'<s$, $s'_1<s_1$, and $(h,s_1s'_1,ss',h')\in\sq\CC$.
   \end{enumerate}
 \end{itenv}
@@ -1583,13 +1583,81 @@ for all $h\in\CC$.
 \label{theorem:2}
   The following conditions are equivalent:
   \begin{enumerate}
-    \item $[\bar{h}']\subs_{\sq p}[\bar{h}]$ and $[\beta(\bar{h}')]\subs_{\sq p}[\beta(\bar{h})]$ in $(\vsq\CC,\sq p,\vsq\HH,\bar{\Gamma}')$;
-    \item $\bar{h}'$ is a sub-homomorphism of $\bar{h}$ in $(\CC,p,\HH,\SS)$.
+    \item[\normalfont(1)] $[\bar{h}']\subs_{\sq p}[\bar{h}]$ and $[\beta(\bar{h}')]\subs_{\sq p}[\beta(\bar{h})]$ in $(\vsq\CC,\sq p,\vsq\HH,\bar{\Gamma}')$;
+    \item[\normalfont(2)] $\bar{h}'$ is a sub-homomorphism of $\bar{h}$ in $(\CC,p,\HH,\SS)$.
   \end{enumerate}
 \end{itenv}
 
 \begin{proof}
   Let
+  \[
+    \bar{h}=(s_1,h,s)\in\HH
+    \quad\text{and}\quad
+    \bar{h}'=(s'_1,h',s')\in\HH.
+  \]
+  Suppose that $\bar{h}'\subs_p\bar{h}$;
+  by \hyperref[proposition:5]{Proposition~5}, it follows that $h'\subs h$ in $(\CC,\Id_\CC,\CC,\CC)$, whence
+  \[
+    \big(h,\beta(h)\beta(h'),\alpha(h)\alpha(h'),h'\big)\in\UU;
+  \]
+  furthermore, this quartet is the pseudo-product $[h][h']$ in $\vsq\CC$.
+  Since the quadruple $(\bar{h},s_1\subs_p s'_1,s\subs_p s',\bar{h}')$ is a quartet of $\HH$ and admits $[h][h']$ as its image under $\sq p$, we thus deduce that $[\bar{h}']\relrhobar[\bar{h}]$ in $(\vsq\CC,\sq p,\vsq\HH,\bar{\Gamma}')$.
+  Let $\bar{\mathrm{G}}=(\bar{h},\bar{f}_1,\bar{f},\bar{k})\in\sq\HH$ be such that
+  \[
+    \begin{aligned}
+      \alpha\big(
+        [p(\bar{h}')]\sq p(\bar{\mathrm{G}})
+        \big)
+        &= [p(\bar{k})]
+    \\\beta\big(
+        [p(\bar{h}')]\sq p(\bar{\mathrm{G}})
+        \big)
+        &= [p(\bar{h}')]
+        = [h'];
+    \end{aligned}
+  \]
+  then
+  \[
+    \begin{aligned}
+      \sq p([\bar{h}'])
+      &= [p(\bar{h}')]
+    \\{}[p(\bar{h}')]\sq p(\bar{\mathrm{G}})
+      &= \big(
+        h', p(s'_1)p(\bar{f}_1), p(s')p(\bar{f}), p(\bar{k})
+      \big),
+    \end{aligned}
+  \]
+  whence
+  \[
+    \begin{aligned}
+      \alpha\big(p(s')p(\bar{f})\big)
+      &= \alpha(p(\bar{f}))
+    \\\beta\big(p(s')p(\bar{f})\big)
+      &= p(s').
+    \end{aligned}
+  \]
+  It thus follows that
+  \[
+    \bar{f}'
+    = \big(
+      s', p(s')p(\bar{f}), \alpha(\bar{f})
+    \big)
+    \in\HH
+  \]
+  and, similarly,
+  \[
+    \bar{f}'_1
+    = \big(
+      s'_1, p(s'_1)p(\bar{f}_1), \alpha(\bar{f}_1)
+    \big)
+    \in\HH.
+  \]
+  Let $\bar{\mathrm{G}}'=(\bar{h}',\bar{f}'_1,\bar{f}',k)$;
+  since the projection under $\sq p$ of $\bar{\mathrm{G}}'$ is the quartet $[p(\bar{h}')]\sq p(\bar{\mathrm{G}})$, we have that $\bar{\mathrm{G}}'\in\sq\HH$.
+  Thus $[\bar{h}']\subs_{\sq p}[\bar{h}]$.
+  Furthermore, $s'_1\subs_p s_1$ similarly implies that $[s'_1]\subs_{\sq p}[s_1]$, and so condition~(1) is satisfied.
+
+  Conversely
 \end{proof}
 
 
