@@ -1,6 +1,6 @@
 \documentclass[fleqn]{article}
 
-\usepackage[margin=1.6in]{geometry}
+\usepackage[margin=1.5in]{geometry}
 
 \title{Structured categories}
 \author{Charles Ehresmann}
@@ -75,13 +75,15 @@
 \newcommand{\sups}{\mathrel{\reflectbox{$\propto$}}}
 \newcommand{\Id}{\mathrm{Id}}
 
+% Unary operators
 \DeclareMathOperator{\sq}{\square}
 \DeclareMathOperator{\vsq}{\raisebox{-.1em}{\rotatebox{90}{$\boxminus$}\,}}
 \DeclareMathOperator{\hsq}{\raisebox{-.05em}{$\boxminus$}}
+% Binary operators
 \newcommand{\vmult}{\mathbin{\raisebox{-.1em}{\rotatebox{90}{$\boxminus$}}}}
 \newcommand{\hmult}{\mathbin{\raisebox{-.05em}{$\boxminus$}}}
 \usepackage{scalerel}
-\newcommand{\sqsubs}{\mathrel{\mathrlap{\square}\raisebox{.15em}{\scaleobj{0.7}{\,\propto}}}}
+\newcommand{\sqsubs}{\mathrel{\mathrlap{\square}\raisebox{.17em}{\scaleobj{0.65}{\,\,\propto}}}}
 
 
 %% Bibliography %%
@@ -122,6 +124,8 @@ produced with permission from \todo
 \todo decide between $\bar{\rHH}$ vs $\overline{\rHH}$
 
 \todo renumber bibliography following the collected works?
+
+\todo add comments from the collected works
 
 \section*{Introduction}
 \addcontentsline{toc}{section}{\protect\numberline{}Introduction}
@@ -1442,7 +1446,151 @@ Let $\bar{\UU}'$ be the subcategory of $\UU$ consisting of the quartets in $\UU$
   it thus follows that $p(\bar{h}')<p(\bar{h})$, and so $\bar{h}'\subs\bar{h}$ in $(\CC,p,\HH,\SS)$.
 \end{proof}
 
-If
+If $\bar{h}'\subs\bar{h}$ in $(\CC,p,\HH,\SS)$, then the corresponding quartet $\bar{\rHH}$ will be denoted $\bar{h}\sqsubs\bar{h}'$.
+In $\HH$ (resp. in $\CC$), we say that a triple $(g_1,f_1,f)$  is \emph{included in a quartet} if there exists a quartet $(g_1,f_1,f,g)$.
+\hyperref[proposition:7]{Proposition~7} is equivalent to:
+
+\begin{itenv}{Proposition 7~\emph{bis}}
+\label{proposition:7bis}
+  For a triplet
+  \[
+    \mathrm{T}
+    = (\bar{h},s_1\subs_p s'_1, s\subs_p s'),
+  \]
+  where $\bar{h}\in\HH$, to be included in a quartet $\bar{\rHH}$, it is necessary and sufficient that
+  \[
+    s=\alpha(\bar{h})
+    \quad\text{and}
+    s_1=\beta(\bar{h})
+  \]
+  and that
+  \[
+    p^3(T)
+    = \big(
+      p(\bar{h}), p(s_1)p(s'_1), p(s)p(s')
+    \big)
+  \]
+  be included in a quartet $\rHH$;
+  in this case, we have that $\bar{\rHH}\in\bar{\UU}$ and $\rHH\in\UU$.
+  If, further, $H\in\UU'$ and $\bar{h}\in\Gamma$, then $\bar{\rHH}\in\bar{\UU}'$.
+\end{itenv}
+
+If $\mathrm{T}=(\bar{h},s_1\subs_p s'_1,s\subs_p s')$ is included in a quartet, then the quartets $\bar{\rHH}$ and $\rHH$ in which $\mathrm{T}$ and $p^3(\mathrm{T})$ are included are unique;
+consequently, we have that
+\[
+  \rHH = p(\bar{h})\sqsubs h'
+  \quad\text{and}\quad
+  \bar{\rHH} = \bar{h}\sqsubs_p \bar{h}',
+\]
+\oldpage{367}
+where $h'$ and $\bar{h}'$ are determined by $\mathrm{T}$.
+The element $\bar{h}'$ can be thought of as the composite of $\bar{h}$ with $(s'_1,s')$;
+this composite will be denoted $\bar{h}\vdash_p(s'_1,s')$ and called the \emph{$p$-restriction} of $\bar{h}$ to $(s'_1,s')$.
+
+Note that the composite $\bar{h}'$ is also determined by the data of the triple $(\bar{h},(p(s'_1),p(s')))$.
+
+In particular,
+
+\begin{itemize}
+  \item if $s'_1=\beta(\bar{h})$ and $s'\subs\alpha(\bar{h})$, then there exists a $p$-restriction $\bar{h}\vdash_p(s'_1,s')$ and
+    \[
+      \bar{h}\vdash_p(s'_1,s')
+      = \bar{h}\bullet(s\subs_p s')
+    \]
+  \item if $s'_1=\beta(\bar{h})$ and $s'=\alpha(\bar{h})$, then there exists a $p$-restriction $\bar{h}\vdash_p(s'_1,s')$ if and only if
+    \[
+      \begin{aligned}
+        \alpha(p(s'_1)p(\bar{h}))
+        &= p(s')
+      \\\beta(p(s'_1)p(\bar{h}))
+        &= p(s'_1).
+      \end{aligned}
+    \]
+    In this case,
+    \[
+      \bar{h}\vdash_p(s'_1,s')
+      = \big(
+        s'_1, p(s'_1)p(\bar{h}), s'
+      \big).
+    \]
+\end{itemize}
+
+Let $\HH'$ be a subcategory of $\HH$ that contains $\HH_0$;
+let $p'$ be the restriction of $p$ to $\HH'$.
+Suppose that $(\CC,p',\HH',\HH'\cap\Gamma)$ is a category of homomorphisms.
+
+\begin{itenv}{Proposition 10}
+\label{proposition:10}
+  The following conditions are equivalent:
+
+  \begin{enumerate}
+    \item[\normalfont($\sigma$)] $s\subs_p S$ in $(\CC,p,\HH,\SS)$ implies that $s\subs_{p'}S$ in $(\CC,p',\HH',\HH'\cap\Gamma)$;
+
+    \item[\normalfont($\sigma_1$)] $\HH'\vdash_p(\HH_0\times\HH_0)\in\HH'$, i.e. if $\bar{h}'\in\HH'$, then every $p$-restriction of $\bar{h}'$ belongs to $\HH'$.
+  \end{enumerate}
+\end{itenv}
+
+\begin{proof}
+  If ($\sigma$) is satisfied, then the category of $p'$-injections contains $\HH_{\subs_p}$, and ($\sigma_1$) is satisfied.
+  Conversely, suppose that ($\sigma_1$) is satisfied, and let $s\subs S$ in $(\CC,p,\HH,\SS)$.
+  The relations $S\in\HH'$ and $s\subs_p S$ imply that
+  \[
+    S\vdash_p(S,s)
+    = \big(
+      S,p(S)p(s),s
+    \big) \in \HH'.
+  \]
+  Let $(S,p,S')\in\HH'$ be such that
+  \[
+    \alpha(p(s)g) = \alpha(g)
+    \quad\text{\and}\quad
+    \beta(p(s)g) = p(s);
+  \]
+  then the composite $(S,g,S')\vdash_p(s,S')=(s,p(s)g,S')$, being defined, belongs to $\HH'$.
+  Thus $s\subs_{p'}S$ in $(\CC,p',\HH',\HH'\cap\Gamma)$.
+\end{proof}
+
+We will later see (\hyperref[§II]{section:ii}, \hyperref[theorem:16]{Theorem~16}) that $\vsq\CC$ is an inductive category for the order relation
+\[
+  (g'_1,f'_1,f',g')
+  < (g_1,f_1,f,g)
+\]
+\oldpage{368}
+if and only if
+\[
+  \begin{array}{ll}
+    g'<g,
+    & g'_1<g_1,
+  \\f'_1<f_1,
+    & f'<f.
+  \end{array}
+\]
+In the following theorem, we set
+\[
+  [\bar{h}]
+  = (\bar{h},\beta(\bar{h}),\alpha(\bar{h}),\bar{h})
+  \in (\vsq\HH)_0
+\]
+for all $\bar{h}\in\HH$, and
+\[
+  [h]
+  = (h,\beta(h),\alpha(h),h)
+  \in (\vsq\CC)_0
+\]
+for all $h\in\CC$.
+
+\begin{itenv}{Theorem 2}
+\label{theorem:2}
+  The following conditions are equivalent:
+  \begin{enumerate}
+    \item $[\bar{h}']\subs_{\sq p}[\bar{h}]$ and $[\beta(\bar{h}')]\subs_{\sq p}[\beta(\bar{h})]$ in $(\vsq\CC,\sq p,\vsq\HH,\bar{\Gamma}')$;
+    \item $\bar{h}'$ is a sub-homomorphism of $\bar{h}$ in $(\CC,p,\HH,\SS)$.
+  \end{enumerate}
+\end{itenv}
+
+\begin{proof}
+  Let
+\end{proof}
 
 
 
