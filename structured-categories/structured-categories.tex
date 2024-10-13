@@ -1896,7 +1896,104 @@ In what follows, we further suppose that $\HH$ is endowed with an order relation
 \end{itenv}
 
 \begin{proof}
-  Suppose
+  Suppose that condition~(c) is satisfied;
+  then
+  \[
+    s'\subs s\text{ in }(\CC,p,\HH,\SS)
+    \quad\text{if and only if}\quad
+    s'<s;
+  \]
+  in this case, $(s,p(s)p(s'),s')$ is a sub-homomorphism of $s$, and so
+  \[
+    \big(
+      s, p(s)p(s'), s'
+    \big)
+    = s\sups_p s'
+    = ss'
+    \quad\text{and}\quad
+    \beta(ss')=s.
+  \]
+  We thus deduce that the following conditions are equivalent:
+  \begin{enumerate}
+    \item[\normalfont(a)]
+      $h'<h$ in $\HH$;
+    \item[\normalfont(b)]
+      $\alpha(h')<\alpha(h)$, $\beta(h')<\beta(h)$, and $p(h)<p(h')$;
+    \item[\normalfont(c)]
+      $h'\subs h$ in $(\HH,\Id_\HH,\HH,\HH)$.
+  \end{enumerate}
+  Let $h,h'\in\HH$ be such that
+  \[
+    \alpha(h) = \alpha(h')
+    \quad\text{and}\quad
+    \beta(h) = \beta(h');
+  \]
+  since the category of homomorphisms $(\HH,\Id_\HH,\HH,\HH)$ is right solved, and since $\alpha(h\cap h')$ is the $\Id_\HH$-kernel of $(h,h')$, we have that
+  \[
+    \beta(h\cap h')
+    = \beta(h)
+  \]
+  by \hyperref[proposition:11]{Proposition~11};
+  consequently, we also have that
+  \[
+    \beta(p(h)\cap p(h'))
+    = p(\beta(h)).
+  \]
+  Let $s$ be the $p$-kernel of $(h,h')$;
+  the elements $p(h)\cap p(h')$ and $p(h)p(s)$ are equal, since they are both bounded above by $p(h)$ and have the same source and target ($p(s)$ and $\beta(p(h))$, respectively);
+  similarly,
+  \[
+    p(h)\cap p(h')
+    = p(h')p(s).
+  \]
+  Then
+  \[
+    \begin{aligned}
+      h\vdash_p(\beta(h),s)
+      &= \big(
+        \beta(h), p(h)p(s), s
+      \big)
+    \\&= \big(
+        \beta(h), p(h)\cap p(h'), s
+      \big)
+    \\&= h'\vdash_p(\beta(h),s)
+    \end{aligned}
+  \]
+  and
+  \[
+    h\vdash_p(\beta(h),s)
+    < h\cap h'.
+  \]
+  The relations
+  \[
+    \begin{gathered}
+      p(\alpha(h\cap h'))
+      = \alpha(p(h)\cap p(h'))
+      = p(s),
+    \\\alpha(h\cap h') < \alpha(h)
+      \quad\text{and}\quad
+      s < \alpha(h)
+    \end{gathered}
+  \]
+  imply that
+  \[
+    \alpha(h\cap h')
+    < s.
+  \]
+  Thus
+  \[
+    s = \alpha(h\cap h')
+    \quad\text{and}\quad
+    h\cap h' = h\vdash_p(\beta(h),s)
+  \]
+  and so
+  \[
+    p(h\cap h')
+    = p(h)\cap p(h').
+  \]
+
+  \oldpage{372}
+  Conversely,
 \end{proof}
 
 
