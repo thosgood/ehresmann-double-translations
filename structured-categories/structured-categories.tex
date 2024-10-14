@@ -23,6 +23,7 @@
 \usepackage{enumerate}
 \usepackage{graphicx}
 \usepackage{footmisc}
+\usepackage{tikz-cd}
 
 
 %% Typography and such %%
@@ -63,7 +64,7 @@
 \newcommand{\oldpage}[1]{{\reversemarginpar\marginnote{\raggedleft\footnotesize\textit{p.~#1}}}}
 \newcommand{\todo}{{\color{purple}\textbf{TO-DO }}}
 \newcommand{\unsure}[1]{{\color{purple}\textbf{#1}}}
-\newcommand{\comm}[2][]{{\normalmarginpar\marginnote{[#1] #2}}}
+\newcommand{\comm}[3][0em]{{\normalmarginpar\marginnote[#1]{[#2] #3}}}
 
 \newcommand{\CC}{\mathcal{C}}
 \newcommand{\HH}{\mathcal{H}}
@@ -82,6 +83,7 @@
 \newcommand{\subs}{\mathrel{\propto}}
 \newcommand{\sups}{\mathrel{\reflectbox{$\propto$}}}
 \newcommand{\Id}{\mathrm{Id}}
+\newcommand{\Hom}{\mathrm{Hom}}
 
 % Unary operators
 \DeclareMathOperator{\sq}{\square}
@@ -122,7 +124,12 @@
     produced with permission from \todo
 
     This version has also incorporated comments and errata from \cite[Comments on Part III-1, p.~342--363]{coll}.
-    Some of these correct minor typos and have been inserted silently; some are supplementary comments by Andrée Ehresmann and have been included verbatim --- either in the margin or as full-width text --- along with their comment number (when relevant).
+    Some of these correct minor typos, and have been inserted silently.
+    Some of these are supplementary (and sometimes longer) comments by Andrée Ehresmann, and have been included essentially verbatim (modulo minor typos) --- either in the margin or as full-width text, depending on length --- along with their comment number;
+    sometimes they make reference to comments in \cite[Comments on Part III-1]{coll} concerning other papers;
+    since they are written by Andrée, they often refer to simply ``Charles'', or ``we''.
+
+
     The page numbers of the original article are included at the relevant locations in the margins of this version.
   
     \hfill--- Timothy Hosgood (translator)
@@ -134,7 +141,7 @@
     Categories are thought of as \emph{classes} equipped with a composition, so they are named by their morphisms instead of their objects, e.g. $\MM$ for ``maps'' instead of $\mathsf{Set}$, and $\FF$ for ``functors'' instead of $\mathsf{Cat}$.
     With this in mind, a category is often denoted by $\CC^\bullet$, where $\CC$ is its class of morphism and $\bullet$ is its composition operator; the class of its objects is written $\CC_0^\bullet$ and objects are often identified with their identity morphisms, and called \emph{units}.
     The domain and codomain of a morphism are denoted by $\alpha$ and $\beta$ (respectively).
-    Functors $F$ from a category $\CC$ to a category $\CC'$ are written as $(\CC',F,\CC)$ (i.e. in the ``diagrammatic'' direction).
+    Functors $F$ from a category $\CC$ to a category $\CC'$ are written as $(\CC',F,\CC)$ (i.e. in the ``diagrammatic'' direction), and similarly for morphisms.
   \end{rmenv}
 
   \bigskip
@@ -174,12 +181,12 @@ The first section begins with a short reminder on the notions of species of stru
 Let $(\CC,p,\HH,\SS)$ be a category of homomorphisms over $\CC$ such that $\SS$ contains the groupoid of invertible elements of the category $\HH$, and such that $\CC$ is further endowed with the structure of an inductive category.
 We define the substructures of a structure of $\HH$.
 This notion makes precise that of a sub-object of an arbitrary category, using the fact that $\HH$ is a category of homomorphisms and $\CC$ an inductive category;
-\comm[21.1]{This notion of substructure is simplified in subsequent papers (\cite{61,66,69}), where it is freed from any order on $\CC$.}
+\comm{21.1}{This notion of substructure is simplified in subsequent papers (\cite{61,66,69}), where it is freed from any order on $\CC$.}%
 it leads to endowing $\HH$ with the structure of an ordered category, which is the subject of the main results of this section.
 
 Let $(\MM,p,\HH,\Gamma)$ be a category of homomorphisms with finite products, over a category $\MM$ of maps;
 we define, at the start of Section~II, $\HH$-structured categories (or, more precisely, $\HH(\HH',\HH'')$-structured categories).
-\comm[21.2]{Structured categories are, in a more modern language, categories internal to a concrete category $\KK$ such that the ``internal'' source, target, and composition can be \todo}
+\comm{21.2}{Structured categories are, in a more modern language, categories internal to a concrete category $\KK$ such that the ``internal'' source, target, and composition can be \todo}%
 We then give a certain number of examples: topological categories and differential categories \cite{3b}; double categories that arise, in particular, in the theory of natural transformations between functors \cite{3d}; order-structured categories, in particular inductive categories and inductive groupoids \cite{3c}, etc.
 \oldpage{350}
 These examples, which I was led to consider in the study of fibred spaces, foliated spaces, extensions of differential varieties, and local structures in general, are the origin of this work.
@@ -193,9 +200,11 @@ The end of Section~II contains a series of general theorems:
   \item If $(\CC^\bullet,s)$ is an $\HH$-structured category, then the categories of \todo of $\CC^\bullet$ are $\HH$-structured categories.
 \end{itemize}
 
-All of these theorems use the additional hypothesis that $(\MM,p,\HH,\Gamma)$ is a right-resolving category of homomorphisms (that is, $\HH$ contains ``enough'' substructures).
+All of these theorems use the additional hypothesis that $(\MM,p,\HH,\Gamma)$ is a right-solving category of homomorphisms (that is, $\HH$ contains ``enough'' substructures).
+\comm[-2em]{22.1}{A faithful set-valued functor is right solving if and only if it creates canonical equalisers (cf. Comment~221.2).}%
 
 The second part of this article (to appear soon) will contain the theory of species of structured structures;
+\comm{22.2}{This second part has not been developed, but only sketched in four notes: \cite{89,90,95,96}.}%
 we will show how the \unsure{complete enlargement} procedure of an inductive groupoid can be generalised to species of structured structures.
 We will then give some applications of all these concepts to more specific problems.
 
@@ -212,6 +221,7 @@ For example: $\CC^\perp$, $\CC_1^\perp$, $\bar{\CC}^\perp$ (resp. $\CC^\bullet$,
 The class of units of a category will be denoted by the symbol representing the category along with a $0$ as a subscript.
 For example: $\CC_0^\perp$, $(\CC_1^\perp)_0$, $\bar{\CC}_0^\perp$, \ldots.
 If a class of objects is naturally associated to the category (for example, the classes in a category of maps from one class to another), then we will tacitly identify the units with the corresponding objects.
+\comm{22.4}{This identification must be considered as an abbreviation, not as a formal operation (cf. Comment~211.1 on \cite{100}).}%
 
 Let $\CC^\perp$ be a category.
 The source and target maps that send an element $f\in\CC^\perp$ to its right and left units will be denoted $\alpha^\perp$ and $\beta^\perp$ (respectively).
@@ -282,6 +292,33 @@ we say that $z$ is a \emph{structure} on $p_0(z)$.
 
 Let $(\CC,p_0,\Sigma_0)$ be a species of structures.
 Let $\Sigma$ be the class of pairs $(f,z)\in\CC\times\Sigma_0$ such that $fz$ is defined, i.e. such that $\alpha(f)=p_0(z)$.
+
+\begin{longcomm}{23.1}
+  This ``i.e.'' is not correct: if $fz$ exists, then $\alpha(f)=p_0(z)$;
+  but the converse is not true.
+  For instance, if $\CC_1$ is the groupoid of isomorphisms of $\CC$, then the assertion is valid only if the acting category is $\CC$ itself.
+  Hence the notion of a \emph{strong species of structures}: a species of structures in which the acting subcategory contains each $f$ whose source is in it;
+  equivalently, the composite $fz$ exists if and only if $\alpha(f)=p_0(z)$.
+
+  Strong species of structures are characterised by axioms~(1), (2), (3), and (4a) --- but not (4b) --- of \hyperref[definition:i-1]{Definition~1} for an acting category (cf. \hyperref[remark:i-2]{Remark~2} in \hyperref[section:i.3]{§I.3}).
+  The corresponding functor $p\colon\Sigma\to\CC$ from the hypermorphisms category satisfies the condition that the diagram
+  \[
+    \begin{tikzcd}
+      \Sigma_0
+        \ar[d,swap,"p_0"]
+      & \Sigma
+        \ar[l]
+        \ar[d]
+    \\\CC_0
+      & \CC
+        \ar[l,"\alpha"]
+    \end{tikzcd}
+  \]
+  is a pullback (which is somewhat stronger than condition~(E) below);
+  in more modern language, this means that $p$ is a discrete opfibration.
+  Conversely, each discrete opfibration determines a strong species of structures.
+\end{longcomm}
+
 Endowed with the composition law
 \[
   (f',z')\bullet(f,z)
@@ -329,10 +366,28 @@ if and only if there exists $h\in\Sigma$ such that
 
 
 
-\subsection{Species of structures enriched in a category}
+\subsection{Species of structures dominated by a category}
 \label{section:i.3}
 
 We denote by $\MM_0$ a class of classes such that if it contains $X$ then it also contains all the subsets of $X$.
+
+\begin{longcomm}{24.1}
+  The set-theoretical assumptions here are not explicit (cf. also Comment~155.1 on \cite{66} and Comment~211.2 on \cite{100}).
+  Charles was very conscious of the problem.
+  For instance, he suggested such foundational questions as a thesis subject to Houdebine \todo{cite 55}, pointing out Quine's theory of types \todo{cite 87}.
+  Later on, he was much interested by Lawvere's category-based theory \todo{cite 64}.
+
+  In fact, Charles' conception on this subject evolved from 1957 to 1967: in \cite{47} he wanted to speak about ``the category $\widetilde{\mathcal{E}}$ of all sets'', whence the (not too formal) distinction between classes and sets, as in Bernays--Gödel theory \todo{cite 10}.
+  In \cite{55}, as well as this 1963 paper, logical problems are avoided thanks to the use of a ``class $\MM_0$ of classes'';
+  Charles thought of $\MM_0$ as a ``large enough'' variable set (and the word ``class'' is used to indicate that no particular set theory is adopted), on which conditions are added when necessary (for instance, $\MM_0$ is closed under products and subsets in \hyperref[section:ii]{§II});
+  in \cite{66,100}, $\MM_0$ must be closed under quotients and countable coproducts.
+  From \cite{109} onwards, $\MM_0$ becomes a universe.
+
+  Note that the letter $\MM$ was really chosen to stress the variability of the class (in geometry, a variable point is often denoted by $M$...);
+  but we thought of two other interpretations of this letter: ``Mengen'' in German, and ``maps'' in English;
+  and the latter is well suited since later texts are written in English, and we liked to name a category by its morphisms instead of its objects.
+\end{longcomm}
+
 Then $\MM_0$ can be identified with a class of units of the category $\MM$ whose elements are triples $(M',f,M)$ such that $M,M'\in\MM_0$ and $f$ is a surjection from $M$ onto a subclass of $M'$, and with the composition law defined by
 \[
   (M'',f',M'_1)\bullet(M',f,M)
@@ -396,7 +451,7 @@ We say that $(\CC,F)$ is a \emph{a pair defining a species of structures}, namel
   ---
   \begin{enumerate}
     \item[\normalfont(1)]
-    \label{remark:1}
+    \label{remark:i-1}
       Let $\CC$ be a category, $\alpha(F)$ a subcategory, and $(\MM,F,\alpha(F))$ a functor.
       Let $\bar{F}$ be the functor that sends $f\in\alpha(F)$ to the map
       \[
@@ -409,7 +464,7 @@ We say that $(\CC,F)$ is a \emph{a pair defining a species of structures}, namel
         p_0(e,z)=e.
       \]
     \item[\normalfont(2)]
-    \label{remark:2}
+    \label{remark:i-2}
       Let $(\CC,F)$ be a pair defining a species of structures $(\CC,p,\Sigma)$ such that $\alpha(F)$ contains $f\in\CC$ whenever $\alpha(f)\in\alpha(F)$;
       this is equivalent to saying that we are given a composition law between the category $\CC$ and the class $\Sigma_0$ that satisfies axioms~(1), (2), (3), and (4a) of Definition 1.
       We can extend $F$ to a functor $(\MM,\bar{F},\CC)$ given by
@@ -424,15 +479,22 @@ We say that $(\CC,F)$ is a \emph{a pair defining a species of structures}, namel
         \end{aligned}
       \]
     \item[\normalfont(3)]
-    \label{remark:3}
+    \label{remark:i-3}
       Let $\CC^\bullet$ be a category;
       the triple $(\CC^\bullet,\beta,\CC)$ is a species of structures for the composition law $\bullet$;
       if $e\in\CC_0^\bullet$ then the triple $(\CC^\bullet,\beta,\alpha^{-1}(e))$ is a sub-species of structures \cite{3a} of $(\CC^\bullet,\beta,\CC)$.
+      \comm[-2em]{25.2}{The set-valued functor associated to $(\CC^\bullet,\beta,\alpha^{-1}(e))$ is the partial Hom functor $\Hom(e,-)\colon\CC\to\mathsf{Set}$.}%
   \end{enumerate}
 \end{rmenv}
 
+\begin{longcomm}{25.1}
+  \emph{Motivations for (internal) actions.}
+
+  Charles \todo
+\end{longcomm}
+
 \oldpage{354}
-Let $(\CC^\bullet,F_e)$ be the pair defining the species of structures $(\CC^\bullet,\beta,\alpha^{-1}(e))$, and $\bar{F}_e$ the functor associated to $F_e$ by \hyperref[remark:2]{Remark~2} above.
+Let $(\CC^\bullet,F_e)$ be the pair defining the species of structures $(\CC^\bullet,\beta,\alpha^{-1}(e))$, and $\bar{F}_e$ the functor associated to $F_e$ by \hyperref[remark:i-2]{Remark~2} above.
 A functor $(\MM,G,\CC^\bullet)$ is said to be representable \cite{2} if there exists some $e\in\CC_0^\bullet$ such that $G$ and $\bar{F}_e$ are induced from one another by a natural equivalence.
 To every pair $(\CC,F)$ that defines a species of structures $(\CC,p,\Sigma)$, we can associated a representable functor $\bar{F}$ in the following way:
 
@@ -464,17 +526,17 @@ if and only if one of the following conditions is satisfied:
       =(z,a).
     \]
 \end{enumerate}
-\hyperref[remark:2]{Remark~2} then allows us to extend $F$ to a functor $(\MM,\bar{F},\CC')$;
+\hyperref[remark:i-2]{Remark~2} then allows us to extend $F$ to a functor $(\MM,\bar{F},\CC')$;
 this functor $\bar{F}$, which is identical to $(\MM,\bar{F}_a,\CC')$, is representable.
 
 \begin{rmenv}{Definition 3}
 \label{definition:i-3}
   Let $\CC$ be a category, and $(\MM,\gamma,\KK)$ a functor.
-  We define a \emph{species of structures enriched in $(\gamma,\KK)$} to be a pair $(\CC,F)$ such that $(\KK,F,\alpha(F))$ is a functor and $(\CC,\gamma F)$ defines a species of structures;
-  the species of structures defined by $(\CC,\gamma F)$ is called the \emph{species of structures \unsure{under/for} $(\CC,F)$}.
+  We define a \emph{species of structures dominated by $(\gamma,\KK)$} to be a pair $(\CC,F)$ such that $(\KK,F,\alpha(F))$ is a functor and $(\CC,\gamma F)$ defines a species of structures;
+  the species of structures defined by $(\CC,\gamma F)$ is called the \emph{species of structures under $(\CC,F)$}.
 \end{rmenv}
 
-We will later return to the notion of a species of structures enriched in a category (Sections~III and IV).
+We will later return to the notion of a species of structures dominated by a category (Sections~III and IV).
 For now, we will only consider particular cases.
 
 Let $\FF$ be the category of all functors $(\bar{\SS}^\bullet,G,\SS^\bullet)$ such that $(\bar{\SS},G,\SS)\in\MM$;
@@ -486,14 +548,14 @@ let $(\MM,p_\FF,\FF)$ be the functor defined by
 
 \begin{rmenv}{Definition 4}
 \label{definition:i-4}
-  A species of structures enriched in $(p_\FF,\FF)$ is called a \emph{species of morphisms}.
+  A species of structures dominated by $(p_\FF,\FF)$ is called a \emph{species of morphisms}.
 \end{rmenv}
 
 Let $(\CC,p,\Sigma)$ be a species of structures.
 Consider the following conditions:
 \begin{enumerate}
   \item[(a)]
-    $(\CC,p,\Sigma)$ is the species of structures \unsure{under} a species of morphisms $(\CC,F)$.
+    $(\CC,p,\Sigma)$ is the species of structures under a species of morphisms $(\CC,F)$.
   \oldpage{355}
   \item[(b)]
     \begin{enumerate}
@@ -613,7 +675,7 @@ then $(\MM,\omega,\widetilde{\Omega})$ is a functor.
 
 \begin{rmenv}{Definition 5}
 \label{definition:i-5}
-  If a species of structures $(\CC,F)$ is enriched in $(\omega,\widetilde{\Omega})$, then we call it an \emph{ordered species of structures} \unsure{or species of ordered structures?};
+  If a species of structures $(\CC,F)$ is dominated by $(\omega,\widetilde{\Omega})$, then we call it an \emph{ordered species of structures} \unsure{or species of ordered structures?};
   if $\CC$ further defines an order on $\CC_0$, then we say that $(\CC,F)$ is a \emph{bi-ordered species of structures} \unsure{again, which noun does bi-ordered modify?}.
 \end{rmenv}
 
@@ -696,7 +758,7 @@ Note that we thus identify $\HH$ with a subcategory of the induced category $p_0
   \beta(f)=p(S').
 \]
 Since an element of $\SS$ is entirely determined by the data of $\alpha(h)$ and $p(h)$, we write such elements either in the form $(\beta(h),p(h),\alpha(h))$ or in the form $(p(h),\alpha(h))$.
-If $\SS$ is the groupoid of invertible elements of $\HH$, then $\HH$ is a species of structures \unsure{over} $\SS\times\SS$ with the composition law
+If $\SS$ is the groupoid of invertible elements of $\HH$, then $\HH$ is a species of structures over $\SS\times\SS$ with the composition law
 \[
   \begin{gathered}
     \big((\bar{f}',\bar{f}),h\big)
@@ -777,7 +839,7 @@ This relation evidently implies that $p(s)=p(s')$.
 
 \begin{itenv}{Proposition 2}
 \label{proposition:i-2}
-  The relation $\relrho$ is an order relation on $\HH_0$, and $(\CC,p,\Gamma)$ is the species of structure \unsure{over} $(\CC,F)$ such that
+  The relation $\relrho$ is an order relation on $\HH_0$, and $(\CC,p,\Gamma)$ is the species of structure under $(\CC,F)$ such that
   \[
     F(e)
     = (p^{-1}(e),\relrho_e)
@@ -839,7 +901,7 @@ This relation evidently implies that $p(s)=p(s')$.
     \quad\text{if and only if}\quad
     \alpha(f)=p(s).
   \]
-  Then $(p(\Gamma),p,\HH_{\relrho})$ is the species of structures \unsure{under} a species of morphisms, and the proposition follows from the end of \hyperref[section:i.2]{§I.2}.
+  Then $(p(\Gamma),p,\HH_{\relrho})$ is the species of structures under a species of morphisms, and the proposition follows from the end of \hyperref[section:i.2]{§I.2}.
 \end{proof}
 
 From now on, suppose that $\CC$ is an inductive category (in the sense of \hyperref[section:ii.6]{§II.6}, which is slightly more general than that of \cite{3c}).
