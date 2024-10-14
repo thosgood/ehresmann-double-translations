@@ -129,8 +129,8 @@
     sometimes they make reference to comments in \cite[Comments on Part III-1]{coll} concerning other papers;
     since they are written by Andrée, they often refer to simply ``Charles'', or ``we''.
 
-
     The page numbers of the original article are included at the relevant locations in the margins of this version.
+    The bibliography numbering from the original has been retained, and additional citations from the comments from \cite{coll} are listed in a separate bibliography and preceded by an ``Œ''.
   
     \hfill--- Timothy Hosgood (translator)
   \end{translator}
@@ -2152,8 +2152,14 @@ Note
 %% Bibliography %%
 
 \nocite{*}
+
+\begingroup
+\let\clearpage\relax
 \begin{fullwidth}
-  \printbibliography[heading=bibintoc,title=Bibliography]
+  \printbibliography[notkeyword={oc},heading=bibintoc,title=Bibliography]
+
+  \printbibliography[keyword={oc},heading=bibintoc,title={Bibliography from the collected works}]
 \end{fullwidth}
+\endgroup
 
 \end{document}
