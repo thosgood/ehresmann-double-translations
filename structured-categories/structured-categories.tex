@@ -148,6 +148,8 @@
 
 \todo add citations from collected works notes
 
+\todo add dois/stable urls to bibliography
+
 \todo add comments from the collected works
 
 \todo sort out page numbers appearing on right vs left
@@ -464,7 +466,7 @@ if and only if one of the following conditions is satisfied:
 this functor $\bar{F}$, which is identical to $(\MM,\bar{F}_a,\CC')$, is representable.
 
 \begin{rmenv}{Definition 3}
-\label{definition:2}
+\label{definition:3}
   Let $\CC$ be a category, and $(\MM,\gamma,\KK)$ a functor.
   We define a \emph{species of structures enriched in $(\gamma,\KK)$} to be a pair $(\CC,F)$ such that $(\KK,F,\alpha(F))$ is a functor and $(\CC,\gamma F)$ defines a species of structures;
   the species of structures defined by $(\CC,\gamma F)$ is called the \emph{species of structures \unsure{under/for} $(\CC,F)$}.
@@ -878,13 +880,13 @@ if, further, $(S,p(S)p(s),s)\in\HH$, then we also have that
   Suppose that $s'\relrhobar s$;
   from the relations
   \[
-    \begin{aligned}
-      k
-      &= (p(S)p(s))\bullet(p(s)p(s'))
+    \begin{gathered}
+      k = (p(S)p(s))\bullet(p(s)p(s'))
       < p(S)p(s'),
-    \\\alpha(k)&=p(s'),
-    \\\beta(k)&=p(S),
-    \end{aligned}
+    \\\alpha(k)=p(s')
+      \quad\text{and}\quad
+      \beta(k)=p(S),
+    \end{gathered}
   \]
   it follows that
   \[
@@ -1096,7 +1098,7 @@ If there is no risk of confusion, then we simply say that $s$ is a substructure 
     = (S,p(S)p(s_1)\bullet g',S')
     \in\HH.
   \]
-  The elements $p(S)p(s_1)$ and $(p(S)p(s))\bullet(p(s)p(s_1))$ are equal, since they are both bounded above by $p(S)$ and have the same source and target ($p(s_1)$ and $p(S)$, respectively);
+  The elements $p(S)p(s_1)$ and $(p(S)p(s))\bullet(p(s)p(s_1))$ are equal, since they are both bounded above by $p(S)$ and have the same source and same target ($p(s_1)$ and $p(S)$, respectively);
   thus
   \[
     \bar{g}
@@ -1128,7 +1130,7 @@ If there is no risk of confusion, then we simply say that $s$ is a substructure 
     \quad\text{and}\quad
     \beta(p(s)p(s')) = p(s)
   \]
-  we deduce that the elements $p(S)p(s')$ and $(p(S)p(s))\bullet(p(s)p(s'))$ are equal, since they are both bounded above by $p(S)$ and have the same source and target ($p(s')$ and $p(S)$, respectively).
+  we deduce that the elements $p(S)p(s')$ and $(p(S)p(s))\bullet(p(s)p(s'))$ are equal, since they are both bounded above by $p(S)$ and have the same source and same target ($p(s')$ and $p(S)$, respectively).
   Consequently,
   \[
     j
@@ -1277,7 +1279,7 @@ If there is no risk of confusion, then we simply say that $s$ is a substructure 
     = (S_1,(p(S_1)p(s_1))\bullet g',S')
     \in\HH.
   \]
-  The elements $h^{-1}\bullet(p(S_1)p(s_1))$ and $(p(S)p(s))\bullet h'^{-1}$ are equal, since they are both bounded above by $h^{-1}$ and have the same source and target ($p(s_1)$ and $p(S)$, respectively).
+  The elements $h^{-1}\bullet(p(S_1)p(s_1))$ and $(p(S)p(s))\bullet h'^{-1}$ are equal, since they are both bounded above by $h^{-1}$ and have the same source and same target ($p(s_1)$ and $p(S)$, respectively).
   Thus
   \[
     \bar{h}^{-1}\bullet\bar{g}
@@ -1337,7 +1339,7 @@ If there is no risk of confusion, then we simply say that $s$ is a substructure 
     = (s_1,h\bullet(p(s)p(s')),s')
     \in\HH;
   \]
-  the elements $h\bullet(p(s)p(s'))$ and $p(s_1)p(s'_1)\bullet h'$ are equal, since they are bounded above by $h$ and have the same source and target ($p(s')$ and $p(s_1)$, respectively);
+  the elements $h\bullet(p(s)p(s'))$ and $p(s_1)p(s'_1)\bullet h'$ are equal, since they are bounded above by $h$ and have the same source and same target ($p(s')$ and $p(s_1)$, respectively);
   thus
   \[
     \bar{h}\bullet(s\subs_p s')
@@ -1390,7 +1392,7 @@ Let $\vsq\CC$ be the longitudinal category of quartets of $\CC$ (see \hyperref[s
 
 \begin{proof}
   Indeed, conditions~(1) and (2) are equivalent by the above.
-  If (2) is satisfied, then the elements $h\bullet ss'$ and $s_1s'_1\bullet h'$ are equal, since they are both bounded above by $h$, and have the same source and target ($s'$ and $s_1$, respectively);
+  If (2) is satisfied, then the elements $h\bullet ss'$ and $s_1s'_1\bullet h'$ are equal, since they are both bounded above by $h$, and have the same source and same target ($s'$ and $s_1$, respectively);
   thus (3) is satisfied.
   If condition~(3) is satisfied, then
   \[
@@ -1439,7 +1441,7 @@ For a quadruple $\bar{G}=(\bar{g}_1,\bar{f}_1,\bar{f},\bar{g})$ to belong to $\v
   \end{array}
 \]
 and that $\sq p(\bar{G})$ is a quartet;
-indeed, the elements $\bar{g}_1\cdot\bar{f}$ and $\bar{f}_1\cdot\bar{g}$ are then equal, since they have the same image under $p$, and have the same source and target.
+indeed, the elements $\bar{g}_1\cdot\bar{f}$ and $\bar{f}_1\cdot\bar{g}$ are then equal, since they have the same image under $p$, and have the same source and same target.
 
 \oldpage{366}
 Let $\bar{\UU}$ be the subcategory of $\vsq\HH$ consisting of the quartets
@@ -1841,7 +1843,7 @@ We similarly define the notion of a \emph{left-solving} category of homomorphism
       \alpha(h)\sups_p s
     \big)
   \]
-  are equal, since they are bounded above by $p(h)$ and have the same source and target ($p(s)$ and $E$, respectively).
+  are equal, since they are bounded above by $p(h)$ and have the same source and same target ($p(s)$ and $E$, respectively).
   Thus $f=p(h)p(s)$.
   Similarly, $f=p(h')p(s)$.
   Since
@@ -1940,7 +1942,7 @@ In what follows, we further suppose that $\HH$ is endowed with an order relation
     = p(\beta(h)).
   \]
   Let $s$ be the $p$-kernel of $(h,h')$;
-  the elements $p(h)\cap p(h')$ and $p(h)p(s)$ are equal, since they are both bounded above by $p(h)$ and have the same source and target ($p(s)$ and $\beta(p(h))$, respectively);
+  the elements $p(h)\cap p(h')$ and $p(h)p(s)$ are equal, since they are both bounded above by $p(h)$ and have the same source and same target ($p(s)$ and $\beta(p(h))$, respectively);
   similarly,
   \[
     p(h)\cap p(h')
@@ -1993,8 +1995,91 @@ In what follows, we further suppose that $\HH$ is endowed with an order relation
   \]
 
   \oldpage{372}
-  Conversely,
+  Conversely, suppose that condition~(c') is satisfied;
+  if $h'<h$ then
+  \[
+    \begin{gathered}
+      p(h')<p(h),
+    \\\alpha(h')\subs\alpha(h)
+      \quad\text{and}\quad
+      \beta(h')\subs\beta(h)
+    \end{gathered}
+  \]
+  whence $h'\subs_p h$.
+  Let $h$ and $h'$ be such that
+  \[
+    \alpha(h) = \alpha(h')
+    \quad\text{and}\quad
+    \beta(h) = \beta(h');
+  \]
+  since
+  \[
+    \alpha(h\cap h')
+    < \alpha(h)
+  \]
+  and
+  \[
+    p(\alpha(h\cap h'))
+    = \alpha(p(h\cap h'))
+    = \alpha(p(h)\cap p(h')),
+  \]
+  the category of homomorphisms $(\CC,p,\HH,\SS)$ is right solved.
+  Suppose that $h'\subs_p h$;
+  set
+  \[
+    \begin{array}{ll}
+      \alpha(h)
+      = s,
+      &\alpha(h')
+      = s',
+    \\\beta(h)
+      = s_1,
+      &\beta(h')
+      = s'_1.
+    \end{array}
+  \]
+  Since $s'\subs s$ and $s'_1\subs s_1$, the elements
+  \[
+    hs'=h\bullet ss'
+    \quad\text{and}\quad
+    s_1h'=s_1s'_1\bullet h'
+  \]
+  have the same source and same target ($s'$ and $s_1$, respectively).
+  We will show that they are equal;
+  indeed,
+  \[
+    p(hs')=p(h)\bullet p(ss')
+    \quad\text{and}\quad
+    p(s_1h')=p(s_1s'_1)\bullet p(h')
+  \]
+  are bounded above by $p(h)$, and have the same source and same target ($p(s')$ and $p(s_1)$, respectively), and so $p(h's)=p(s_1h')$.
+  We thus deduce that $hs'=s_1h'$, whence
+  \[
+      h'
+      = s'_1\bullet h < (s_1s'_1)\bullet h'
+    = hs'
+    < h.
+  \]
+  Thus condition~(c) is satisfied.
 \end{proof}
+
+\begin{rmenv}{Remark}
+  \hyperref[theorem:3]{Theorem~3} still holds true (without any modifications to the proof) if we replace the hypothesis ``$(\HH,<)$ is an inductive category'' by the hypothesis ``$(\HH,<)$ is an ordered category in which any two elements have an intersection'' (\hyperref[section:ii.6]{§II.6}).
+\end{rmenv}
+
+\begin{rmenv}{Example}
+  Let $(\CC,p,\HH,\SS)$ be a right-solved category of homomorphisms such that $\HH_0$ is an inductive class \cite{3a} for the relation $\subs$;
+  if we endow $\HH$ with the relation $\subs$, then $\HH$ becomes an inductive category, and condition~(c) of \hyperref[theorem:3]{Theorem~3} is then satisfied.
+  It is also the case for the categories of homomorphisms $(\MM,p_\FF,\FF,\FF_\gamma)$ and $(\MM,\theta_u,\widetilde{\TT}_u,\TT)$ when $\FF$ and $\widetilde{\TT}_u$ are endowed with their usual order relations.
+  However, $(\MM,\theta,\widetilde{\TT},\TT)$ does not satisfy condition~(c).
+\end{rmenv}
+
+Let $(\HH,\bar{p},\bar{\HH},\bar{\SS})$ be a category of homomorphisms such that $\bar{\SS}$ contains the groupoid $\bar{\Gamma}$ of invertible elements of $\bar{\HH}$, and such that $(\HH,\bar{p},\bar{\SS})$ is a species of superstructures \cite{3a} over $(\CC,p,\SS)$.
+\oldpage{373}
+These conditions imply that $(\CC,p\bar{p},\bar{\HH},\bar{\SS})$ is a category of homomorphisms.
+An element $\bar{h}$ of $\bar{\HH}$ will be denoted either by the triple $(\beta(\bar{h}),\bar{p}(\bar{h}),\alpha(\bar{h}))$ or by the triple $(\beta(\bar{h}),p\bar{p}(\bar{h}),\alpha(\bar{h}))$.
+
+Note
 
 
 
