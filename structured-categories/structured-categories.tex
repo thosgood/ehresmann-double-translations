@@ -24,6 +24,8 @@
 \usepackage{graphicx}
 \usepackage{footmisc}
 \usepackage{tikz-cd}
+\usetikzlibrary{arrows,arrows.meta}
+\tikzcdset{arrow style=tikz, diagrams={>=latex}}
 
 
 %% Typography and such %%
@@ -123,14 +125,14 @@
     \medskip
     produced with permission from \todo
 
-    This version has also incorporated comments and errata from \cite[Comments on Part III-1, p.~342--363]{coll}.
+    This version has also incorporated comments and errata from \cite[Comments on Part III-1, p.~342--363]{coll} (henceforth ``the comments and errata'').
     Some of these correct minor typos, and have been inserted silently.
     Some of these are supplementary (and sometimes longer) comments by Andrée Ehresmann, and have been included essentially verbatim (modulo minor typos) --- either in the margin or as full-width text, depending on length --- along with their comment number;
-    sometimes they make reference to comments in \cite[Comments on Part III-1]{coll} concerning other papers;
+    sometimes they make reference to the comments and errata concerning other papers;
     since they are written by Andrée, they often refer to simply ``Charles'', or ``we''.
 
     The page numbers of the original article are included at the relevant locations in the margins of this version.
-    The bibliography numbering from the original has been retained, and additional citations from the comments from \cite{coll} are listed in a separate bibliography and preceded by an ``Œ''.
+    The bibliography numbering from the original has been retained, and additional citations from the comments and errata are listed in separate bibliographies, numbered as in \cite{coll}, but with a slight modification: those referring to the works within \cite{coll} are preceded by an ``Œ''; those referring to external works are preceded by a ``C''.
   
     \hfill--- Timothy Hosgood (translator)
   \end{translator}
@@ -374,10 +376,10 @@ We denote by $\MM_0$ a class of classes such that if it contains $X$ then it als
 \begin{longcomm}{24.1}
   The set-theoretical assumptions here are not explicit (cf. also Comment~155.1 on \cite{coll66} and Comment~211.2 on \cite{coll100}).
   Charles was very conscious of the problem.
-  For instance, he suggested such foundational questions as a thesis subject to Houdebine \todo{cite 55}, pointing out Quine's theory of types \todo{cite 87}.
-  Later on, he was much interested by Lawvere's category-based theory \todo{cite 64}.
+  For instance, he suggested such foundational questions as a thesis subject to Houdebine \cite{comm55}, pointing out Quine's theory of types \cite{comm87}.
+  Later on, he was much interested by Lawvere's category-based theory \cite{comm64}.
 
-  In fact, Charles' conception on this subject evolved from 1957 to 1967: in \cite{coll47} he wanted to speak about ``the category $\widetilde{\mathcal{E}}$ of all sets'', whence the (not too formal) distinction between classes and sets, as in Bernays--Gödel theory \todo{cite 10}.
+  In fact, Charles' conception on this subject evolved from 1957 to 1967: in \cite{coll47} he wanted to speak about ``the category $\widetilde{\mathcal{E}}$ of all sets'', whence the (not too formal) distinction between classes and sets, as in Bernays--Gödel theory \cite{comm10}.
   In \cite{coll55}, as well as this 1963 paper, logical problems are avoided thanks to the use of a ``class $\MM_0$ of classes'';
   Charles thought of $\MM_0$ as a ``large enough'' variable set (and the word ``class'' is used to indicate that no particular set theory is adopted), on which conditions are added when necessary (for instance, $\MM_0$ is closed under products and subsets in \hyperref[section:ii]{§II});
   in \cite{coll66,coll100}, $\MM_0$ must be closed under quotients and countable coproducts.
@@ -501,13 +503,41 @@ We say that $(\CC,F)$ is a \emph{a pair defining a species of structures}, namel
   indeed, at that time, Charles was most preoccupied by ``good'' definitions of structures.
 
   In \cite{coll47}, he proves equivalences between three notions: species of structures, hypermorphisms functors, and set-valued functors satisfying condition~(A) above.
-  He also gives the enlargement theorem for species of structures (cf. Comment~29.2) which is equivalent to the Kan extension theorem (\todo{cite 58}, published the year after) for set-valued functors, except that the problem is looked at ``upside-down'', with the set-valued functor being replaced by the associated hypermorphisms functor (and this led to the more general theorems on extension of functors in \cite{coll77,coll122}).
+  He also gives the enlargement theorem for species of structures (cf. Comment~29.2) which is equivalent to the Kan extension theorem (\cite{comm58}, published the year after) for set-valued functors, except that the problem is looked at ``upside-down'', with the set-valued functor being replaced by the associated hypermorphisms functor (and this led to the more general theorems on extension of functors in \cite{coll77,coll122}).
   He uses this enlargement theorem as the first step in his construction of the important ``complete enlargement'' of a local species of structures, the structures of which are defined by atlases;
   the second step consists of a generalisation of the associated sheaf theorem to presheaves over a local class, thanks to an original method (extended in \cite{coll110} to local functors).
   Locally homogeneous spaces, differentiable or analytic or foliated manifolds, fibre bundles, \ldots are obtained as particular cases.
 
-  In \cite{coll55}, Charles
-  \todo
+  In \cite{coll55}, Charles explicitly says that the category of species of structures with covariant maps is:
+
+  \begin{itemize}
+    \item equivalent to the category of functors satisfying condition~(E) above, with square of functors as morphisms;
+
+    \item isomorphic to the category of pairs defining a species of structures, with a morphism $(\Phi,\phi)\colon(\CC,F)\to(\CC,F')$ being defined by
+      \[
+        \begin{tikzcd}
+          &&\MM
+        \\& \ar[ur,"F'"] \ar[dl]
+          && \ar[ul,swap,"F",""{below,name=F}] \ar[dr,"\iota"] \ar[ll,from=F,Rightarrow,bend left=10,"\phi"]
+        \\\CC'
+          &&&& \CC \ar[llll,"\Phi"]
+        \end{tikzcd}
+      \]
+      where $\phi\colon F\to F'\Phi\iota$ is a natural transformation;
+
+    \item equivalent to the category of pairs $(\CC,F)$, where $F$ is a set-valued functor whose domain is a sub-category of $\CC$.
+  \end{itemize}
+
+  These equivalences restrict (\hyperref[remark:i-2]{Remarks~1 and 2}, and Comment~23.1) to equivalences between the categories of strong species of structures, of discrete opfibrations, and of set-valued functors.
+
+  Topological, differentiable, and local species of structures are instances of structured (or ``concrete internal'') species of structures, which are defined in \cite{coll59,coll60} by ``lifting'' the action along the forgetful functor of a concrete category;
+  enlargement theorems for them are given in \cite{coll89,coll90,coll95,coll96}.
+  In fact, sketches in the sense of \cite{coll106} are easily drawn, the set models of which are species of structures and discrete opfibrations \cite{coll117};
+  the models in a category $\KK$ are \emph{internal species of structures} and \emph{internal discrete opfibrations} (also called \emph{internal diagrams} or \emph{internal presheaves}, cf. Johnstone \cite{comm56}).
+  Thanks to the equivalences indicated above, this provides an ``internalisation'' of the ``external'' notion of set-valued functor, by looking at it ``upside-down'';
+  Charles already stressed this fact in his lectures in the early sixties.
+  This probably did inspire Bénabou, who was one of the first categorists to apply it (in his definition of internal distributors \cite{comm7}).
+  The development of topos theory led other categorists to adopt (or rediscover) this point of view some ten years later (cf. MacLane's analysis of Johnstone's book \cite{comm75}).
 \end{longcomm}
 
 \oldpage{354}
@@ -544,7 +574,7 @@ if and only if one of the following conditions is satisfied:
     \]
 \end{enumerate}
 \hyperref[remark:i-2]{Remark~2} then allows us to extend $F$ to a functor $(\MM,\bar{F},\CC')$;
-this functor $\bar{F}$, which is identical to $(\MM,\bar{F}_a,\CC')$, is representable.
+this functor $\bar{F}$, which is identical to $(\MM,\bar{F}_a,\CC')$, is representable.\comm[-2em]{26.1}{Regarding $\CC'$, Bénabou gives the following criterion: $F\colon\CC\to\SS$ is representable if and only if $\CC\hookrightarrow\CC'$ has a left adjoint \cite{comm5}.}
 
 \begin{rmenv}{Definition 3}
 \label{definition:i-3}
@@ -552,6 +582,13 @@ this functor $\bar{F}$, which is identical to $(\MM,\bar{F}_a,\CC')$, is represe
   We define a \emph{species of structures dominated by $(\gamma,\KK)$} to be a pair $(\CC,F)$ such that $(\KK,F,\alpha(F))$ is a functor and $(\CC,\gamma F)$ defines a species of structures;
   the species of structures defined by $(\CC,\gamma F)$ is called the \emph{species of structures under $(\CC,F)$}.
 \end{rmenv}
+
+\begin{longcomm}{26.2}
+  \emph{Enriched species of structures.}
+
+  Analysis
+  \todo
+\end{longcomm}
 
 We will later return to the notion of a species of structures dominated by a category (Sections~III and IV).
 For now, we will only consider particular cases.
@@ -2173,9 +2210,11 @@ Note
 \begingroup
 \let\clearpage\relax
 \begin{fullwidth}
-  \printbibliography[notkeyword={oc},heading=bibintoc,title=Bibliography]
+  \printbibliography[keyword={orig},heading=bibintoc,title=Bibliography]
 
-  \printbibliography[keyword={oc},heading=bibintoc,title={Bibliography from the collected works}]
+  \printbibliography[keyword={oc},heading=bibintoc,title={Citations to the collected works}]
+
+  \printbibliography[keyword={comm},heading=bibintoc,title={Citations from comments in the collected works}]
 \end{fullwidth}
 \endgroup
 
