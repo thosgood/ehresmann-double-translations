@@ -170,6 +170,8 @@
 
 \todo figure out mathfrak vs mathcal for e.g. $\TT$
 
+\todo replace hlines in longcomm with ulcorner+hline and lrcorner+hline (or something similar)
+
 
 
 \section*{Introduction}
@@ -1208,7 +1210,23 @@ The notion of \emph{substructure} that we will now define makes precise the noti
   We write $H_{\subs_p}$ to mean the class of $p$-injections.
 \end{rmenv}
 
-If there is no risk of confusion, then we simply say that $s$ is a substructure of $S$ in $\HH$, and we write $s\subs S$ and $S\sups s$ instead of $s\subs_p S$ and $S\sups_p s$ (respectively).\comm{32.1}{\todo}
+If there is no risk of confusion, then we simply say that $s$ is a substructure of $S$ in $\HH$, and we write $s\subs S$ and $S\sups s$ instead of $s\subs_p S$ and $S\sups_p s$ (respectively).
+
+\begin{longcomm}{32.1}
+  Substructures (in the definition of which $\SS$ is not used) were introduced for obtaining a good definition of structured categories.
+  Most of the following propositions were devised for use in \hyperref[section:ii]{Part~II}.
+
+  This definition seems to depend on the order of $\CC$.
+  In fact, \hyperref[proposition:i-4]{Proposition~4} suggested a more general notion of a $(\CC',p)$-injection (\cite{coll69,coll66}), free from any use of an order on $\CC$.
+  The $p$-injections defined here are exactly the $(\CC',p)$-injections in the case where
+  \[
+    \CC'
+    = \{Ee \mid e<E\text{ in }\CC_0\}.
+  \]
+  Almost all of the results of this part (\hyperref[section:i]{Part I}) generalise to this setting; cf. \cite{coll66} and \cite{coll69}, where both notions are compared.
+
+  \todo
+\end{longcomm}
 
 \begin{itenv}{Proposition 4}
 \label{proposition:i-4}
@@ -1374,7 +1392,7 @@ If there is no risk of confusion, then we simply say that $s$ is a substructure 
   \]
   since $s_1\subs s$, it thus follows that
   \[
-    (s_1,g',S)
+    (s_1,g',S')
     \in\HH
   \]
   i.e. $s_1\subs S$.
@@ -1488,8 +1506,13 @@ If there is no risk of confusion, then we simply say that $s$ is a substructure 
 
 \begin{proof}
   Conditions~(1) and (3) imply that $(\HH,\subs)$ is an ordered category (see \hyperref[section:ii]{§II}, \hyperref[definition:i-18]{Definition~18}).
-  Condition~(2) implies that $p$ belongs to $\widetilde{\Omega}'$ (see \hyperref[section:ii.6]{§II.6}), i.e. (\hyperref[section:iv]{§IV}) that $(\HH,\subs)$ is an ordered category over $(\CC,<)$.
+  Condition~(2) implies that $p$ belongs to $\widetilde{\Omega}'$ (see \hyperref[section:ii.6]{§II.6}), i.e. (§IV) that $(\HH,\subs)$ is an ordered category over $(\CC,<)$.\comm[-3em]{35.1}{Charles never published §IV, but the results that he intended to put in it are scattered across several papers, e.g. ordered categories over an ordered category are considered in \cite{coll75}.}
 \end{proof}
+
+\begin{longcomm}{35.2}
+  The following corollary is not correct: $(\HH,\subs)$ is a sub-inductive category, but not an inductive category.
+  Indeed, a family of objects bounded by $s$ and $s'$ may have two different joins in the set of elements lesser than both $s$ and $s'$.
+\end{longcomm}
 
 \begin{itenv}{Corollary}
   If $\CC$ is \unsure{completely right regular}, and if, for all $s\in\HH_0$, the class of elements $p(s')$, where $s'\subs_p s$, is an inductive subclass of $\CC_0$, then $(\HH,\subs)$ is an inductive category over $(\CC,<)$.
@@ -1525,6 +1548,36 @@ If there is no risk of confusion, then we simply say that $s$ is a substructure 
       = p(S_1)
     \end{gathered}
   \]
+  \begin{longcomm}{36.1}
+    The above inequality (as well as several following ones) relies on the assertion $[h'<h\implies {h'}^{-1}<h^{-1}]$, which has to be proved.
+
+    Suppose that $h'<h$, where $h\colon E\to\hat{E}$ and $h'\colon e\to\hat{e}$.
+    Then there exists a pseudo-product $h^{-1}\hat{e}=h^{-1}\bullet(\hat{E}\hat{e})\colon\hat{e}\to E$;
+    since
+    \[
+      (h^{-1}\hat{e})\bullet h'\colon e\to E
+      \quad\text{and}\quad
+      (h^{-1}\hat{e})\bullet h'
+      < (h^{-1}\hat{e})h
+      < h^{-1}h
+      = E,
+    \]
+    we have that $(h^{-1}\hat{e})\bullet h'=eE$.
+    It thus follows that
+    \[
+      {h'}^{-1}\bullet h'
+      = e
+      < eE
+      = (h^{-1}\hat{e})\bullet h'
+    \]
+    and, composing with ${h'}^{-1}$, we see that
+    \[
+      {h'}^{-1}
+      < h^{-1}\hat{e}
+      < h^{-1}
+    \]
+    as desired.
+  \end{longcomm}
   whence
   \[
     p\big(\bar{h}\bullet j\bullet\bar{h}'^{-1}\big)
