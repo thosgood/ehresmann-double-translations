@@ -905,11 +905,76 @@ then we say that $\HH$ is \emph{saturated over $\CC$}.
 \begin{longcomm}{29.2}
   \emph{Enlargement Theorem.}
 
-  $(\CC,p,\KK,\SS)$ is a category of homomorphisms if and only if $p\colon\KK\to\CC$ is a faithful (condition~(3)) functor (condition~(1)) whose restriction $\SS\to p(\SS)$ is (condition~(2)) a discrete opfibration.
-  \todo
+  $(\CC,p,\HH,\SS)$ is a category of homomorphisms if and only if $p\colon\HH\to\CC$ is a faithful (condition~(3)) functor (condition~(1)) whose restriction $\SS\to p(\SS)$ is (condition~(2)) a discrete opfibration.
+
+  We say that a functor is \emph{amnestic} if any isomorphism that is sent to an identity is itself an identity, i.e. if its restriction to isomorphisms is well-faithful in the sense of \cite{coll77,coll122}.
+  Then $\HH$ is saturated over $\CC$ if $p$ is a faithful amnestic functor that creates isomorphisms.
+
+  If $\HH$ is a category of homomorphisms with $\SS$ the groupoid of isomorphisms of $\HH$, then $\HH$ is equivalent to a saturated category of homomorphisms.
+  Indeed, more generally:
+
+  \begin{itenv}{Theorem}
+    Let $p\colon\HH\to\CC$ be any functor.
+    Then there exists a smallest isomorphism-creating functor $q\colon\widetilde{\HH}\to\CC$ extending $p$, and $\HH$ is equivalent to $\widetilde{\HH}$.
+  \end{itenv}
+
+  We call such $q$ the (maximal) \emph{enlargement of $p$}.
+  It is constructed as follows.
+  Let $\mathcal{L}$ be the category given by the quadruples $(k,f',f,h)$, with $h\in\HH$, $f$ and $f'$ isomorphisms in $\CC$, and $k\bullet f=f'\bullet p(h)$ in $\CC$; composition is given by
+  \[
+    \begin{gathered}
+      (k',f'',\hat{f},h')(k,f',f,h)
+      = (k'\bullet k, f'', f, h'\bullet h)
+    \\\text{if and only if}\quad
+      \big[f'=\hat{f}
+      \quad\text{and}\quad
+      \alpha(h')=\beta(h)\big].
+    \end{gathered}
+  \]
+  \[
+    \begin{tikzcd}[sep=huge]
+      {}
+      &{} \ar[l,swap,"f''"]
+    \\{} \ar[u,"k'"]
+      &{} \ar[l,swap,"f'"] \ar[u,swap,"p(h')"]
+    \\{} \ar[u,"k"]
+      &{} \ar[l,"f"] \ar[u,swap,"p(h)"]
+    \end{tikzcd}
+    \qquad
+    \begin{tikzcd}[sep=huge]
+      {}
+    \\{} \ar[u,swap,"h'"]
+    \\{} \ar[u,swap,"h"]
+    \end{tikzcd}
+  \]
+  (This subcategory of the comma category $\CC\downarrow p$ is used in \cite[Section~1]{coll100}).
+  Then $\widetilde{\HH}$ is the strict quotient of $\mathcal{L}$ by the equivalence
+  \[
+    \begin{gathered}
+      (k,f',f,h)
+      \sim \big(
+        k, f'\bullet p(g'), f\bullet p(g), {g'}^{-1}\bullet h\bullet g
+      \big)
+    \\\text{for any isomorphisms $g,g'\in\HH$ such that ${g'}^{-1}\bullet h\bullet g$ exists.}
+    \end{gathered}
+  \]
+  Then $q$ sends $(k,f',f,h)$ to $k$, and the embedding
+  \[
+    (h\colon s\to s')
+    \mapsto \big(
+      p(h), p(s'), p(s), h
+    \big)
+  \]
+  identifies $\HH$ with a subcategory of $\widetilde{\HH}$ that is equivalent to $\widetilde{\HH}$.
+
+  Furthermore, $q$ is faithful (resp. amnestic) whenever $p$ is, whence the enlargement theorems for species of structures over groupoids and for categories of homomorphisms already obtained in \cite{coll47}.
+  In fact, $p$ may be replaced by $q$ whenever categorical properties (i.e. those preserved by isomorphisms) are considered: the constructions are made in $\widetilde{\HH}$, and then transported by isomorphism in $\HH$.
+
+  The above construction is generalised in \cite{coll77,coll122} to obtain extension theorems for functors.
+  It is ``internalised'' in \cite{coll89,coll90,coll95,coll96}, giving an ``internal version'' of the Kan extension Theorem (see Comment 25.1).
 \end{longcomm}
 
-In particular, let $(\MM,p,\HH,\SS)$ be a category of homomorphisms such that $\MM$ is the category defined in \hyperref[section:i.2]{§I.2}.
+In particular, let $(\MM,p,\HH,\SS)$ be a category of homomorphisms such that $\MM$ is the category defined in \hyperref[section:i.2]{§I.2}.\comm{29.3}{If $(\MM,p,\HH,\SS)$ is a category of homomorphisms with $\SS$ the groupoid of all isomorphisms of $\HH$, then $\HH$ is also called a \emph{concrete category}, and $p\colon\HH\to\MM$ a \emph{concrete functor} (and we'll often use these terms). In fact, some authors define a concrete functor as any set-valued amnestic faithful functor (without any ``transport of structures'' property); most of the following results remain valid in this case.}
 Let $h\in\HH$;
 the element $p(h)$ is, by definition, a map $(p(\beta(h)),g,p(\alpha(h)))$, where $g$ is a surjection.
 Since the data of $\alpha(h)$, $\beta(h)$, and $g$ all together entirely determine $p(h)$, we simply represent $h$ by the triple $(\beta(h),g,\alpha(h))$ instead of by $(\beta(h),p(h),\alpha(h))$.
@@ -918,7 +983,7 @@ If $h$ is such that
   p(\alpha(h))
   \subset p(\beta(h))
 \]
-and if $p(h)$ is the canonical injection from $p(\alpha(h))$ to $p(\beta(h))$, then we write $h$ as $(\beta(h),\iota,\alpha(h))$, i.e. $\iota$ denotes the identity map on $p(\alpha(h))$
+and if $p(h)$ is the canonical injection from $p(\alpha(h))$ to $p(\beta(h))$, then we write $h$ as $(\beta(h),\iota,\alpha(h))$, i.e. $\iota$ denotes the identity map on $p(\alpha(h))$.
 
 \begin{rmenv}{Examples}
   ---
@@ -965,7 +1030,7 @@ This relation evidently implies that $p(s)=p(s')$.
 
 \begin{itenv}{Proposition 2}
 \label{proposition:i-2}
-  The relation $\relrho$ is an order relation on $\HH_0$, and $(\CC,p,\Gamma)$ is the species of structure under $(\CC,F)$ such that
+  The relation $\relrho$ is an order relation on $\HH_0$, and $(\CC,p,\Gamma)$ is the species of structure under $(\CC,F)$ such that\comm{30.1}{To be precise, one should read $p\iota$ instead of $p$ here. Indeed, in several instances, the restriction of a functor is denoted by the same letter as the functor itself; when the source and target are clearly indicated, this does not lead to any confusion, and so we shall not always mention it.}
   \[
     F(e)
     = (p^{-1}(e),\relrho_e)
@@ -1032,6 +1097,11 @@ This relation evidently implies that $p(s)=p(s')$.
 
 From now on, suppose that $\CC$ is an inductive category (in the sense of \hyperref[section:ii.6]{§II.6}, which is slightly more general than that of \cite{3c}).
 If $g,f\in\CC$, then their pseudo-product in $\CC$, which is always defined (cf. \hyperref[section:ii]{§II}, \hyperref[proposition:i-22][Proposition~22]), is denoted by $gf$.
+
+\begin{longcomm}{31.1}
+  Up to (but not including) \hyperref[definition:i-9]{Definition~9}, the text remains valid without any modification \emph{if the hypothesis that $\CC$ is inductive is replaced by the hypothesis that $\CC$ is a sub-inductive category} (cf. \cite{coll69}), since all the pseudo-products used here still exist.
+  This remark is important: some results will be applied to the category $\FF$ of categories, which is sub-inductive for the order ``is a subcategory of'', but not inductive (two subcategories of a category admit a meet, while two categories may not admit a larger common subcategory).
+\end{longcomm}
 
 Consider on $\HH_0$ the relation
 \[
@@ -1138,7 +1208,7 @@ The notion of \emph{substructure} that we will now define makes precise the noti
   We write $H_{\subs_p}$ to mean the class of $p$-injections.
 \end{rmenv}
 
-If there is no risk of confusion, then we simply say that $s$ is a substructure of $S$ in $\HH$, and we write $s\subs S$ and $S\sups s$ instead of $s\subs_p S$ and $S\sups_p s$ (respectively).
+If there is no risk of confusion, then we simply say that $s$ is a substructure of $S$ in $\HH$, and we write $s\subs S$ and $S\sups s$ instead of $s\subs_p S$ and $S\sups_p s$ (respectively).\comm{32.1}{\todo}
 
 \begin{itenv}{Proposition 4}
 \label{proposition:i-4}
