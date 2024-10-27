@@ -206,7 +206,7 @@ The end of Section~II contains a series of general theorems:
 \end{itemize}
 
 All of these theorems use the additional hypothesis that $(\MM,p,\HH,\Gamma)$ is a right-solving category of homomorphisms (that is, $\HH$ contains ``enough'' substructures).
-\comm[-2em]{22.1}{A faithful set-valued functor is right solving if and only if it creates canonical equalisers (cf. Comment~221.2).}%
+\comm[-2em]{22.1}{A faithful set-valued functor is right solving if and only if it creates canonical equalisers (cf. Comment~221.2 on \cite{coll100}).}%
 
 The second part of this article (to appear soon) will contain the theory of species of structured structures;
 \comm{22.2}{This second part has not been developed, but only sketched in four notes: \cite{coll89,coll90,coll95,coll96}.}%
@@ -1678,6 +1678,31 @@ Let $\vsq\CC$ be the longitudinal category of quartets of $\CC$ (see \hyperref[s
   g'=g_1.
 \]
 
+\begin{longcomm}{37.1}
+  A quartet of $\CC$ is (less poetically) called a (\emph{commutative}) \emph{square}, and the longitudinal and lateral compositions are more geometrically called the \emph{horizontal} and \emph{vertical} compositions (following Gray).
+  \[
+    \begin{tikzcd}
+      {}
+      &{} \ar[l]
+      &{} \ar[l]
+    \\{} \ar[u]
+      &{} \ar[l] \ar[u]
+      &{} \ar[l] \ar[u]
+    \end{tikzcd}
+    \qquad
+    \begin{tikzcd}
+      {}
+      & \ar[l]
+    \\{} \ar[u]
+      & \ar[l] \ar[u]
+    \\{} \ar[u]
+      & \ar[l] \ar[u]
+    \end{tikzcd}
+  \]
+
+  The category $\vsq\CC$ is also called the \emph{category of arrows of $\CC$} (i.e. by the name of its objects), and denoted by $\mathsf{Fl}\CC$ or $\mathsf{Ar}\CC$.
+\end{longcomm}
+
 \begin{itenv}{Proposition 8}
 \label{proposition:i-8}
   Let $h,h'\in\CC$, and let
@@ -1744,7 +1769,7 @@ Let $\vsq\HH$ be the longitudinal category of quartets of $\HH$, and $\sq p$ the
   \longmapsto (p(g_1),p(f_1),p(f),p(g))
 \]
 from $\vsq\HH$ to $\vsq\CC$.
-Then $(\vsq\CC,\sq p,\vsq\HH,\bar{\Gamma}')$ is a category of homomorphisms, where $\bar{\Gamma}'$ is the groupoid of invertible elements of $\vsq\HH$.
+Then $(\vsq\CC,\sq p,\vsq\HH,\bar{\Gamma}')$ is a category of homomorphisms, where $\bar{\Gamma}'$ is the groupoid of invertible elements of $\vsq\HH$.\comm{37.2}{This is easy to prove (cf. \cite[Chapter~II]{coll122}).}
 For a quadruple $\bar{G}=(\bar{g}_1,\bar{f}_1,\bar{f},\bar{g})$ to belong to $\vsq\HH$, it is necessary and sufficient that
 \[
   \begin{array}{ll}
@@ -2047,7 +2072,7 @@ for all $h\in\CC$.
   \[
     (\bar{h}',\bar{h}'\bullet\bar{g}',\bar{g}',S')\in\bar{\UU}
   \]
-  i.e. that $(s',g',S')\in\HH$.
+  i.e. that $\bar{g}'=(s',g',S')\in\HH$.
   This proves that $s'$ is a substructure of $s$ in $(\CC,p,\HH,\SS)$.
   If, further, $[s'_1]\subs_{\sq p}[s_1]$, then we similarly have that $s'_1\subs_p s_1$, and so $\bar{h}'\subs\bar{h}$ in $(\CC,p,\HH,\SS)$.
 \end{proof}
@@ -2087,6 +2112,16 @@ for all $h\in\CC$.
 \end{rmenv}
 
 We similarly define the notion of a \emph{left-solving} category of homomorphisms $(\CC,p,\HH,\SS)$ by replacing $\alpha$ with $\beta$ in the definition above.
+
+\begin{longcomm}{41.2}
+  This definition, given for inductive $\CC$, is also valid as soon as any two parallel morphisms (i.e. morphisms with the same source and same target) have a meet in $\CC$;
+  for instance, such is the case when $\CC$ is the category of categories (though this condition may not be satisfied in some sub-inductive categories).
+
+  In usual cases (in particular, if $\CC$ is the category of sets), $p(s)$ is an equaliser of $(p(h),p(h'))$;
+  then, since $p$ is faithful, $s$ is a $p$-kernel of $(h,h')$ if and only if it is an equaliser of $(h,h')$ in $\HH$ (cf. \cite[Proposition~3.1]{coll109});
+  so axiom~(R) means that $p$ creates equalisers defined by meets (cf. Comment~221.2 on \cite{coll100}).
+  This justifies the name ``$p$-kernel'' (an equaliser is also called a \emph{difference kernel}, or even just a \emph{kernel}).
+\end{longcomm}
 
 \begin{rmenv}{Examples}
   ---
@@ -2180,7 +2215,7 @@ We similarly define the notion of a \emph{left-solving} category of homomorphism
   \]
 \end{proof}
 
-In what follows, we further suppose that $\HH$ is endowed with an order relation $<$ such that $(\HH,<)$ is an inductive category, and such that $p$ is a strict inductive map from $(\HH,<)$ to $(\CC,<)$, i.e. such that $(\HH,<)$ is an inductive category over $(\CC,<)$ with respect to $p$ (see \hyperref[§IV]{section:iv}).
+In what follows, we further suppose that $\HH$ is endowed with an order relation $<$ such that $(\HH,<)$ is an inductive category, and such that $p$ is a strict inductive map from $(\HH,<)$ to $(\CC,<)$, i.e. such that $(\HH,<)$ is an inductive category over $(\CC,<)$ with respect to $p$ (see \hyperref[section:iv]{§IV}).\comm[-1em]{42.1}{This notion (of an inductive category over $(\CC,<)$ with respect to $p$) is considered in \cite{coll53}. The definition of a \emph{strict inductive map} is given in Part~II, Section~6.}
 
 \begin{itenv}{Theorem 3}
 \label{theorem:3}
@@ -2291,7 +2326,7 @@ In what follows, we further suppose that $\HH$ is endowed with an order relation
       s < \alpha(h)
     \end{gathered}
   \]
-  imply that
+  imply that\comm{43.1}{Since $p$ is strict, we have immediately that $s=\alpha(h\cap h')$.}
   \[
     \alpha(h\cap h')
     < s.
@@ -2378,7 +2413,7 @@ In what follows, we further suppose that $\HH$ is endowed with an order relation
 \end{proof}
 
 \begin{rmenv}{Remark}
-  \hyperref[theorem:3]{Theorem~3} still holds true (without any modifications to the proof) if we replace the hypothesis ``$(\HH,<)$ is an inductive category'' by the hypothesis ``$(\HH,<)$ is an ordered category in which any two elements have an intersection'' (\hyperref[section:ii.6]{§II.6}).
+  \hyperref[theorem:3]{Theorem~3} still holds true (without any modifications to the proof) if we replace the hypothesis ``$(\HH,<)$ is an inductive category'' by the hypothesis ``$(\HH,<)$ is an ordered category in which any two elements have an intersection'' (\hyperref[section:ii.6]{§II.6}).\comm[-2em]{44.1}{It suffices that \emph{any two parallel morphisms admit a meet} (this remark allows us to apply the result when $\CC$ is the category $\FF$).}
 \end{rmenv}
 
 \begin{rmenv}{Example}
