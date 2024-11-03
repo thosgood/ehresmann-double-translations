@@ -104,7 +104,7 @@
 
 %% Bibliography %%
 
-\usepackage{biblatex}
+\usepackage[backend=bibtex]{biblatex}
 \addbibresource{structured-categories.bib}
 \renewbibmacro{in:}{%
   \ifboolexpr{%
@@ -2527,7 +2527,57 @@ imply that $\bar{p}(s)\relrhobar\bar{p}(S)$ in $(\CC,p,\HH,\SS)$, but, in genera
       S, \bar{p}(S)\bar{p}(s), s
     \big).
   \]
+  Let
+  \[
+    \bar{g}
+    = \big(
+      S, \bar{p}(S)\bar{p}(s)\bullet g', S'
+    \big) \in\bar{\HH}
+  \]
+  where $g'\in\HH$.
+  We have that
+  \[
+    \begin{aligned}
+      \bar{p}(\bar{g})
+      &= \big(
+        \bar{p}(S),
+        p\big(\bar{p}(S)\bar{p}(s)\big)\bullet p(g'),
+        \bar{p}(S')
+      \big)
+    \\&= \big(
+        \bar{p}(S),
+        \big(p\bar{p}(S)p\bar{p}(s)\big)\bullet p(g'),
+        \bar{p}(S')
+      \big)
+    \end{aligned}
+  \]
+  whence
+  \[
+    \bar{g}
+    = \big(
+      S, p\bar{p}(S)p\bar{p}(s)\bullet p(g'), S'
+    \big).
+  \]
+  From the condition that $s\subs_{\bar{p}}S$, and by \hyperref[proposition:i-4]{Proposition~4}, it follows that
+  \[
+    \bar{g}'
+    = (s, p(g'), S')
+    \in\bar{\HH}.
+  \]
+  Since $g'=(\bar{p}(s),p(g'),\bar{p}(S'))$, we thus deduce that
+  \[
+    \bar{p}(\bar{g}') = g'
+    \quad\text{and}\quad
+    \bar{g}' = (s,g',S') \in \bar{\HH}.
+  \]
+  Thus $s\subs_{\bar{p}}S$, by \hyperref[proposition:i-4]{Proposition~4}.
 \end{proof}
+
+\oldpage{374}
+
+\begin{itenv}{Corollary 1}
+  The
+\end{itenv}
 
 
 
