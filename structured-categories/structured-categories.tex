@@ -2459,6 +2459,75 @@ These conditions imply that $(\CC,p\bar{p},\bar{\HH},\bar{\SS})$ is a category o
 An element $\bar{h}$ of $\bar{\HH}$ will be denoted either by the triple $(\beta(\bar{h}),\bar{p}(\bar{h}),\alpha(\bar{h}))$ or by the triple $(\beta(\bar{h}),p\bar{p}(\bar{h}),\alpha(\bar{h}))$.
 
 Note that the conditions
+\[
+  s,S,\in\bar{\HH}_0
+  \quad\text{and}\quad
+  s\subs_{p\bar{p}} S
+\]
+imply that $\bar{p}(s)\relrhobar\bar{p}(S)$ in $(\CC,p,\HH,\SS)$, but, in general, they do not imply that $\bar{p}(s)\subs_p\bar{p}(S)$.
+
+\begin{itenv}{Proposition 12}
+\label{proposition:i-12}
+  Let $s,S\in\bar{\HH}_0$.
+  The conditions
+  \[
+    \begin{gathered}
+      s\subs_{p\bar{p}}S,
+    \\\bar{p}(s)<\bar{p}(S)
+      \quad\text{and}\quad
+      \beta\big(\bar{p}(S)\bar{p}(s)\big) = \bar{p}(S)
+    \end{gathered}
+  \]
+  imply that $s\subs_{\bar{p}}S$.
+\end{itenv}
+
+\begin{proof}
+  Let
+  \[
+    \bar{j}
+    = \big(
+      S, p\bar{p}(S)p\bar{p}(s), s
+    \big) \in \bar{\HH};
+  \]
+  then
+  \[
+    p\bar{p}(\bar{j})
+    = p\big(
+      \bar{p}(S)\bar{p}(s)
+    \big)
+    = p\bar{p}(S)p\bar{p}(s),
+  \]
+  since
+  \[
+    \begin{gathered}
+      p\big(
+        \bar{p}(S)\bar{p}(s)
+      \big) < p\bar{p}(S)p\bar{p}(s),
+    \\\alpha\big(
+        \bar{p}(S)\bar{p}(s)
+      \big) = \bar{p}(s)
+      \quad\text{and}\quad
+      \beta\big(
+        \bar{p}(S)\bar{p}(s)
+      \big) = \bar{p}(S).
+    \end{gathered}
+  \]
+  Thus
+  \[
+    \bar{p}(\bar{j})
+    = \big(
+      \bar{p}(S), p\bar{p}(S)p\bar{p}(s), \bar{p}(s)
+    \big)
+    = \bar{p}(S)\bar{p}(s)
+  \]
+  and
+  \[
+    \bar{j}
+    =\big(
+      S, \bar{p}(S)\bar{p}(s), s
+    \big).
+  \]
+\end{proof}
 
 
 
