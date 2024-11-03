@@ -53,6 +53,9 @@
   {\phantomsection\par\medskip\noindent\textbf{#1.}\rmfamily}
   {\par\medskip}
 
+\usepackage{etoolbox}
+\AtEndEnvironment{rmenv}{\null\hfill$\lrcorner$}
+
 \newenvironment{longcomm}[1]
   {\begin{fullwidth}\bigskip\hrule\phantomsection\par\bigskip\noindent[#1]\rmfamily}
   {\par\bigskip\hrule\bigskip\end{fullwidth}}
@@ -2419,7 +2422,34 @@ In what follows, we further suppose that $\HH$ is endowed with an order relation
 \begin{rmenv}{Example}
   Let $(\CC,p,\HH,\SS)$ be a right-solved category of homomorphisms such that $\HH_0$ is an inductive class \cite{3a} for the relation $\subs$;
   if we endow $\HH$ with the relation $\subs$, then $\HH$ becomes an inductive category, and condition~(c) of \hyperref[theorem:3]{Theorem~3} is then satisfied.
+
+  \begin{longcomm}{44.2}
+    We have to suppose that either \emph{$\CC$ is completely right regular}, or that \emph{$p_0$ from $\HH_0$ to $\CC_0$ preserves joins}.
+
+    Indeed, let $h_i\colon s_i\to s'_i$ be morphisms in $\HH$ such that $h_i<h$;
+    then there exist joins $s=\bigcup s_i$ and $s'=\bigcup s'_i$ in $(\HH,\subs)$;
+    the above hypothesis implies that, if $k$ is the pseudo-product $p(s')(p(h)p(s))$, then there exists a commutative square in $\CC$ of the form
+    \[
+      \begin{tikzcd}
+        p(s')
+          \ar[d,swap,"p(S')p(s')"]
+        & p(s)
+          \ar[l,swap,"k"]
+          \ar[d,"p(S)p(s)"]
+      \\p(S')
+        & p(S)
+          \ar[l,"p(h)"]
+      \end{tikzcd}
+    \]
+    hence $h$ has a sub-morphism $h'\colon s\to s'$, and $h'=\bigcup h_i$.
+  \end{longcomm}
+
   It is also the case for the categories of homomorphisms $(\MM,p_\FF,\FF,\FF_\gamma)$ and $(\MM,\theta_u,\widetilde{\TT}_u,\TT)$ when $\FF$ and $\widetilde{\TT}_u$ are endowed with their usual order relations.
+
+  \begin{longcomm}{44.3}
+    This assertion is not correct: $\FF$ satisfies condition~(c), but $(\FF_0,\subs)$ is not an inductive class; $\widetilde{\TT}_u$ is not right solving.
+  \end{longcomm}
+
   However, $(\MM,\theta,\widetilde{\TT},\TT)$ does not satisfy condition~(c).
 \end{rmenv}
 
@@ -2428,7 +2458,7 @@ Let $(\HH,\bar{p},\bar{\HH},\bar{\SS})$ be a category of homomorphisms such that
 These conditions imply that $(\CC,p\bar{p},\bar{\HH},\bar{\SS})$ is a category of homomorphisms.
 An element $\bar{h}$ of $\bar{\HH}$ will be denoted either by the triple $(\beta(\bar{h}),\bar{p}(\bar{h}),\alpha(\bar{h}))$ or by the triple $(\beta(\bar{h}),p\bar{p}(\bar{h}),\alpha(\bar{h}))$.
 
-Note
+Note that the conditions
 
 
 
