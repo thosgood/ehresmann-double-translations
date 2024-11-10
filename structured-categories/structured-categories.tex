@@ -1,4 +1,4 @@
-\documentclass[a4paper,oneside,nobib,nofonts,notitlepage,notoc,nols,fleqn,justified]{tufte-book}
+\documentclass[a4paper,fleqn]{article}
 
 \title{\sc{Structured categories}}
 \author{Charles Ehresmann}
@@ -37,7 +37,7 @@
 \setcounter{secnumdepth}{2}
 
 
-%% Theorem environments %%
+%% Environments %%
 
 \usepackage{amsthm}
 
@@ -56,9 +56,12 @@
 \usepackage{etoolbox}
 \AtEndEnvironment{rmenv}{\null\hfill$\lrcorner$}
 
+
+\newcommand{\comm}[2]{\footnote{[#1] #2}}
+
 \newenvironment{longcomm}[1]
-  {\begin{fullwidth}\bigskip\hrule\phantomsection\par\bigskip\noindent[#1]\rmfamily}
-  {\par\bigskip\hrule\bigskip\end{fullwidth}}
+  {\bigskip\hrule\phantomsection\par\bigskip\noindent[#1]\rmfamily}
+  {\par\bigskip\hrule\bigskip}
 
 
 %% Shortcuts %%
@@ -66,10 +69,9 @@
 \renewcommand{\geq}{\geqslant}
 \renewcommand{\leq}{\leqslant}
 
-\newcommand{\oldpage}[1]{{\reversemarginpar\marginnote{\raggedleft\footnotesize\textit{p.~#1}}}}
+\newcommand{\oldpage}[1]{{\marginpar{\footnotesize\textit{p.~#1}}}}
 \newcommand{\todo}{{\color{purple}\textbf{TO-DO }}}
 \newcommand{\unsure}[1]{{\color{purple}\textbf{#1}}}
-\newcommand{\comm}[3][0em]{{\normalmarginpar\marginnote[#1]{[#2] #3}}}
 
 \newcommand{\CC}{\mathcal{C}}
 \newcommand{\HH}{\mathcal{H}}
@@ -119,7 +121,6 @@
 
 \maketitle
 
-\begin{fullwidth}
   \begin{translator}{Note from the translator}
     This document is a translation from French of the article
 
@@ -129,33 +130,35 @@
     \medskip
     produced with permission from \todo
 
+    \medskip
+
     This version has also incorporated comments and errata from \cite[Comments on Part III-1, p.~342--363]{coll} (henceforth ``the comments and errata'').
     Some of these correct minor typos, and have been inserted silently.
-    Some of these are supplementary (and sometimes longer) comments by Andrée Ehresmann, and have been included essentially verbatim (modulo minor typos) --- either in the margin or as full-width text, depending on length --- along with their comment number;
+    Some of these are supplementary (and sometimes longer) comments by Andrée Ehresmann, and have been included essentially verbatim (modulo minor typos) --- either as footnotes or directly within the text itself, depending on length --- along with their comment number;
     sometimes they make reference to the comments and errata concerning other papers;
     since they are written by Andrée, they often refer to simply ``Charles'', or ``we''.
 
     The page numbers of the original article are included at the relevant locations in the margins of this version.
     The bibliography numbering from the original has been retained, and additional citations from the comments and errata are listed in separate bibliographies, numbered as in \cite{coll}, but with a slight modification: those referring to the works within \cite{coll} are preceded by an ``Œ''; those referring to external works are preceded by a ``C''.
-  
-    \hfill--- Timothy Hosgood (translator)
-  \end{translator}
 
-  \begin{rmenv}{Notation}
-    We repeat here a few comments on notation from \cite[Comments on Part III-1, p.~337--338]{coll}, since there are a few conventions that the modern reader might find confusing.
+    \medskip
 
+    We also repeat here a few comments on notation from \cite[Comments on Part III-1, p.~337--338]{coll}, since there are a few conventions that the modern reader might find confusing.
     Categories are thought of as \emph{classes} equipped with a composition, so they are named by their morphisms instead of their objects, e.g. $\MM$ for ``maps'' instead of $\mathsf{Set}$, and $\FF$ for ``functors'' instead of $\mathsf{Cat}$.
     With this in mind, a category is often denoted by $\CC^\bullet$, where $\CC$ is its class of morphism and $\bullet$ is its composition operator; the class of its objects is written $\CC_0^\bullet$ and objects are often identified with their identity morphisms, and called \emph{units}.
     The domain and codomain of a morphism are denoted by $\alpha$ and $\beta$ (respectively).
     Functors $F$ from a category $\CC$ to a category $\CC'$ are written as $(\CC',F,\CC)$ (i.e. in the ``diagrammatic'' direction), and similarly for morphisms; the Hom functor is accordingly written $\CC(e',e)$.
-  \end{rmenv}
 
-  \bigskip
-  \hrule
-  \bigskip
-\end{fullwidth}
+    \medskip
+  
+    \hfill--- Timothy Hosgood (translator)
+  \end{translator}
 
 %% Content %%
+
+\todo custom footnote numbering
+
+\todo turn longcomm into boxed env (border-left?)
 
 \todo fix spacing in e.g. $(\vsq\CC,\sq p,\vsq\HH,\bar{\Gamma}')$
 
@@ -209,7 +212,7 @@ The end of Section~II contains a series of general theorems:
 \end{itemize}
 
 All of these theorems use the additional hypothesis that $(\MM,p,\HH,\Gamma)$ is a right-solving category of homomorphisms (that is, $\HH$ contains ``enough'' substructures).
-\comm[-2em]{22.1}{A faithful set-valued functor is right solving if and only if it creates canonical equalisers (cf. Comment~221.2 on \cite{coll100}).}%
+\comm{22.1}{A faithful set-valued functor is right solving if and only if it creates canonical equalisers (cf. Comment~221.2 on \cite{coll100}).}%
 
 The second part of this article (to appear soon) will contain the theory of species of structured structures;
 \comm{22.2}{This second part has not been developed, but only sketched in four notes: \cite{coll89,coll90,coll95,coll96}.}%
@@ -284,6 +287,8 @@ Since the notion of species of structures \cite{3a} is essential in this article
       \end{enumerate}
   \end{enumerate}
 \end{rmenv}
+
+\todo{fix the spacing before the corner symbol in the above rmenv}
 
 These axioms imply that, for all $z\in\Sigma_0$, there exists exactly one $e\in\CC_0$ such that $ez$ is defined;
 we thus obtain a map $p_0\colon z\mapsto e$ from $\Sigma_0$ to $\CC_0$;
@@ -491,7 +496,7 @@ We say that $(\CC,F)$ is a \emph{a pair defining a species of structures}, namel
       Let $\CC^\bullet$ be a category;
       the triple $(\CC^\bullet,\beta,\CC)$ is a species of structures for the composition law $\bullet$;
       if $e\in\CC_0^\bullet$ then the triple $(\CC^\bullet,\beta,\alpha^{-1}(e))$ is a sub-species of structures \cite{3a} of $(\CC^\bullet,\beta,\CC)$.
-      \comm[-2em]{25.2}{The set-valued functor associated to $(\CC^\bullet,\beta,\alpha^{-1}(e))$ is the partial Hom functor $\Hom(e,-)\colon\CC\to\mathsf{Set}$.}%
+      \comm{25.2}{The set-valued functor associated to $(\CC^\bullet,\beta,\alpha^{-1}(e))$ is the partial Hom functor $\Hom(e,-)\colon\CC\to\mathsf{Set}$.}%
   \end{enumerate}
 \end{rmenv}
 
@@ -580,7 +585,7 @@ if and only if one of the following conditions is satisfied:
     \]
 \end{enumerate}
 \hyperref[remark:i-2]{Remark~2} then allows us to extend $F$ to a functor $(\MM,\bar{F},\CC')$;
-this functor $\bar{F}$, which is identical to $(\MM,\bar{F}_a,\CC')$, is representable.\comm[-2em]{26.1}{Regarding $\CC'$, Bénabou gives the following criterion: $F\colon\CC\to\SS$ is representable if and only if $\CC\hookrightarrow\CC'$ has a left adjoint \cite{comm5}.}
+this functor $\bar{F}$, which is identical to $(\MM,\bar{F}_a,\CC')$, is representable.\comm{26.1}{Regarding $\CC'$, Bénabou gives the following criterion: $F\colon\CC\to\SS$ is representable if and only if $\CC\hookrightarrow\CC'$ has a left adjoint \cite{comm5}.}
 
 \begin{rmenv}{Definition 3}
 \label{definition:i-3}
@@ -1509,7 +1514,7 @@ If there is no risk of confusion, then we simply say that $s$ is a substructure 
 
 \begin{proof}
   Conditions~(1) and (3) imply that $(\HH,\subs)$ is an ordered category (see \hyperref[section:ii]{§II}, \hyperref[definition:i-18]{Definition~18}).
-  Condition~(2) implies that $p$ belongs to $\widetilde{\Omega}'$ (see \hyperref[section:ii.6]{§II.6}), i.e. (§IV) that $(\HH,\subs)$ is an ordered category over $(\CC,<)$.\comm[-3em]{35.1}{Charles never published §IV, but the results that he intended to put in it are scattered across several papers, e.g. ordered categories over an ordered category are considered in \cite{coll75}.}
+  Condition~(2) implies that $p$ belongs to $\widetilde{\Omega}'$ (see \hyperref[section:ii.6]{§II.6}), i.e. (§IV) that $(\HH,\subs)$ is an ordered category over $(\CC,<)$.\comm{35.1}{Charles never published §IV, but the results that he intended to put in it are scattered across several papers, e.g. ordered categories over an ordered category are considered in \cite{coll75}.}
 \end{proof}
 
 \begin{longcomm}{35.2}
@@ -2218,7 +2223,7 @@ We similarly define the notion of a \emph{left-solving} category of homomorphism
   \]
 \end{proof}
 
-In what follows, we further suppose that $\HH$ is endowed with an order relation $<$ such that $(\HH,<)$ is an inductive category, and such that $p$ is a strict inductive map from $(\HH,<)$ to $(\CC,<)$, i.e. such that $(\HH,<)$ is an inductive category over $(\CC,<)$ with respect to $p$ (see \hyperref[section:iv]{§IV}).\comm[-1em]{42.1}{This notion (of an inductive category over $(\CC,<)$ with respect to $p$) is considered in \cite{coll53}. The definition of a \emph{strict inductive map} is given in Part~II, Section~6.}
+In what follows, we further suppose that $\HH$ is endowed with an order relation $<$ such that $(\HH,<)$ is an inductive category, and such that $p$ is a strict inductive map from $(\HH,<)$ to $(\CC,<)$, i.e. such that $(\HH,<)$ is an inductive category over $(\CC,<)$ with respect to $p$ (see \hyperref[section:iv]{§IV}).\comm{42.1}{This notion (of an inductive category over $(\CC,<)$ with respect to $p$) is considered in \cite{coll53}. The definition of a \emph{strict inductive map} is given in Part~II, Section~6.}
 
 \begin{itenv}{Theorem 3}
 \label{theorem:3}
@@ -2416,7 +2421,7 @@ In what follows, we further suppose that $\HH$ is endowed with an order relation
 \end{proof}
 
 \begin{rmenv}{Remark}
-  \hyperref[theorem:3]{Theorem~3} still holds true (without any modifications to the proof) if we replace the hypothesis ``$(\HH,<)$ is an inductive category'' by the hypothesis ``$(\HH,<)$ is an ordered category in which any two elements have an intersection'' (\hyperref[section:ii.6]{§II.6}).\comm[-2em]{44.1}{It suffices that \emph{any two parallel morphisms admit a meet} (this remark allows us to apply the result when $\CC$ is the category $\FF$).}
+  \hyperref[theorem:3]{Theorem~3} still holds true (without any modifications to the proof) if we replace the hypothesis ``$(\HH,<)$ is an inductive category'' by the hypothesis ``$(\HH,<)$ is an ordered category in which any two elements have an intersection'' (\hyperref[section:ii.6]{§II.6}).\comm{44.1}{It suffices that \emph{any two parallel morphisms admit a meet} (this remark allows us to apply the result when $\CC$ is the category $\FF$).}
 \end{rmenv}
 
 \begin{rmenv}{Example}
@@ -2576,8 +2581,72 @@ imply that $\bar{p}(s)\relrhobar\bar{p}(S)$ in $(\CC,p,\HH,\SS)$, but, in genera
 \oldpage{374}
 
 \begin{itenv}{Corollary 1}
-  The
+  The conditions
+  \[
+    \begin{gathered}
+      h,h'\in\bar{\HH},
+    \\h'\subs_{p\bar{p}}h,
+      \quad \bar{p}(h') < \bar{p}(h),
+    \\\beta\big(
+        \bar{p}\big(\alpha(h)\alpha(h')\big)
+      \big) = \bar{p}(\alpha(h))
+      \quad\text{and}\quad
+      \beta\big(
+        \bar{p}\big(\beta(h)\beta(h')\big)
+      \big) = \bar{p}(\beta(h))
+    \end{gathered}
+  \]
+  imply that $h'\subs_{\bar{p}}h$.
 \end{itenv}
+
+\begin{itenv}{Corollary 2}
+  Suppose that $p$ further satisfies the condition
+  \[
+    p(hs)
+    = p(h)p(s)
+  \]
+  whenever $s<\alpha(h)$.
+  Then the conditions
+  \[
+    s\subs_{p\bar{p}}S
+    \quad\text{and}\quad
+    \bar{p}(s) < \bar{p}(S)
+  \]
+  imply that $s\subs_{\bar{p}}S$.
+\end{itenv}
+
+\begin{proof}
+  Indeed, from these conditions it follows that
+  \[
+    \begin{aligned}
+      p\big(
+        \bar(p)(S)\bar{p}(s)
+      \big)
+      &= p\bar{p}(S)p\bar{p}(s),
+    \\\alpha\big(
+        p\bar{p}(S)p\bar{p}(s)
+      \big)
+      &= p\bar{p}(s),
+    \\\beta\big(
+        p\bar{p}(S)p\bar{p}(s)
+      \big)
+      &= p\bar{p}(S),
+    \end{aligned}
+  \]
+  whence
+  \[
+    \bar{p}(S)
+    = \beta\big(
+      \bar{p}(S)\bar{p}(s)
+    \big)
+  \]
+  since
+  \[
+    \beta\big(
+      \bar{p}(S)\bar{p}(s)
+    \big) < \bar{p}(S)
+  \]
+\end{proof}
 
 
 
@@ -2588,13 +2657,11 @@ imply that $\bar{p}(s)\relrhobar\bar{p}(S)$ in $(\CC,p,\HH,\SS)$, but, in genera
 
 \begingroup
 \let\clearpage\relax
-\begin{fullwidth}
   \printbibliography[keyword={orig},heading=bibintoc,title=Bibliography]
 
   \printbibliography[keyword={oc},heading=bibintoc,title={Citations to the collected works}]
 
   \printbibliography[keyword={comm},heading=bibintoc,title={Citations from comments in the collected works}]
-\end{fullwidth}
 \endgroup
 
 \end{document}
