@@ -54,10 +54,12 @@
   {\par\medskip}
 
 \usepackage{etoolbox}
-\AtEndEnvironment{rmenv}{\null\hfill$\lrcorner$}
+\AtEndEnvironment{rmenv}{\ignorespacesafterend\hfill$\lrcorner$}
 
-
-\newcommand{\comm}[2]{\footnote{[#1] #2}}
+\makeatletter
+\def\blfootnote{\xdef\@thefnmark{}\@footnotetext}
+\makeatother
+\newcommand{\comm}[2]{{\normalfont\textsuperscript{[#1]}}\blfootnote{\label{footnote:#1}[#1] #2}}
 
 \newenvironment{longcomm}[1]
   {\bigskip\hrule\phantomsection\par\bigskip\noindent[#1]\rmfamily}
@@ -156,8 +158,6 @@
 
 %% Content %%
 
-\todo custom footnote numbering
-
 \todo turn longcomm into boxed env (border-left?)
 
 \todo fix spacing in e.g. $(\vsq\CC,\sq p,\vsq\HH,\bar{\Gamma}')$
@@ -177,6 +177,8 @@
 \todo figure out mathfrak vs mathcal for e.g. $\TT$
 
 \todo replace hlines in longcomm with ulcorner+hline and lrcorner+hline (or something similar)
+
+\todo sort out spacing before lrcorner when a rmenv ends with an enum
 
 
 
@@ -621,7 +623,8 @@ this functor $\bar{F}$, which is identical to $(\MM,\bar{F}_a,\CC')$, is represe
           \ar[u,"\sim"{anchor=south,rotate=90}]
           \ar[ur,swap,"i_e\otimes F(e)"]
       \end{tikzcd}
-      \qquad
+    \]
+    \[
       \begin{tikzcd}
         & F(e'')
         & \mathbf{C}(e'',e)\otimes F(e)
@@ -866,6 +869,8 @@ where $(\CC,F)$ is an ordered species of structures, is a bijection from the cla
       imply that $h=h'$.
   \end{enumerate}
 \end{rmenv}
+
+\todo{spacing at the end of the enum inside the rmenv above as well}
 
 Let $(\CC,p,\HH,\SS)$ be a category of homomorphisms.
 An element $h\in\HH$ can be identified, by condition~(4) of \hyperref[definition:i-6]{Definition~6}, with a triple $(S',f,S)$, where
@@ -2645,7 +2650,86 @@ imply that $\bar{p}(s)\relrhobar\bar{p}(S)$ in $(\CC,p,\HH,\SS)$, but, in genera
     \beta\big(
       \bar{p}(S)\bar{p}(s)
     \big) < \bar{p}(S)
+    \quad\text{and}\quad
+    p\big(
+      \beta\big(
+        \bar{p}(S)\bar{p}(s)
+      \big)
+    \big) = p\bar{p}(S).
   \]
+  We are thus reduced to the hypotheses of \hyperref[proposition:i-12]{Proposition~12}.
+\end{proof}
+
+From now on, we will further suppose that the conditions
+\[
+  \begin{gathered}
+    h\in\HH,
+    \quad s\in\HH_0
+  \\s < \beta(h)
+  \end{gathered}
+\]
+imply that $p(sh)=p(s)p(h)$.
+
+\begin{itenv}{Proposition 13}
+\label{proposition:i-13}
+  Let $s,S\in\bar{\HH}_0$.
+  Then the relation $s\subs_{\bar{p}}S$ in $(\HH,\bar{p},\bar{\HH},\bar{\SS})$ imply that $s\subs_{p\bar{p}}(S)$ in $(\CC,p\bar{p},\bar{\HH},\bar{\SS})$.
+\end{itenv}
+
+\begin{proof}
+  Set $\bar{j}=(S,\bar{p}(S)\bar{p}(s),s)\in\bar{\HH}$;
+  we have that
+  \[
+    \bar{j}
+    = \big(
+      S, p\bar{p}(S)p\bar{p}(s), s
+    \big)
+  \]
+  since we obtain the equality $p\bar{p}(\bar{j})=p\bar{p}(S)p\bar{p}(s)$ by using the relations
+  \[
+    \begin{gathered}
+      p\bar{p}(\bar{j})
+      = p\big(
+        \bar{p}(S)\bar{p}(s)
+      \big)
+      < p\bar{p}(S)p\bar{p}(s),
+    \\p\bar{p}(s)
+      = \alpha\big(
+        p\bar{p}(\bar{j})
+      \big)
+      < \alpha\big(
+        p\bar{p}(S)p\bar{p}(s)
+      \big)
+      < p\bar{p}(s),
+    \\p\bar{p}(S)
+      = \beta\big(
+        p\bar{p}(\bar{j})
+      \big)
+      < \beta\big(
+        p\bar{p}(S)p\bar{p}(s)
+      \big)
+      < p\bar{p}(S).
+    \end{gathered}
+  \]
+  Let $\bar{g}=(S,g,S')\in\bar{H}$, where $g\in\CC$, be such that
+  \[
+    \alpha\big(
+      p\bar{p}(s)g
+    \big) = \alpha(g)
+    \quad\text{and}\quad
+    \beta\big(
+      p\bar{p}(s)g
+    \big) = \beta(g).
+  \]
+  We will show that
+  \[
+    \big(
+      s, p\bar{p}(s)g, S'
+    \big)
+    \in\bar{H}.
+  \]
+  \oldpage{375}
+  Indeed, since
 \end{proof}
 
 
