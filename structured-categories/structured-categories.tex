@@ -2838,6 +2838,47 @@ imply that $p(sh)=p(s)p(h)$.
 \end{proof}
 
 \begin{itenv}{Corollary 4}
+  Suppose that $s\relrhobar S$ in $(\CC,p,\HH,\SS)$ implies both that $s<S$ in $\HH_0$ and that $\beta(Ss)=S$;
+  then the statement that $\bar{s}\subs_{p\bar{p}}\bar{S}$ in $(\CC,p\bar{p},\bar{\HH},\bar{\SS})$ is equivalent to $\bar{s}\subs_{\bar{p}}\bar{S}$ in $(\HH,\bar{p},\bar{\HH},\bar{\SS})$.
+\end{itenv}
+
+\oldpage{376}
+\begin{proof}
+  Indeed, $\bar{s}\subs_{\bar{p}}\bar{S}$ implies that $\bar{s}\subs_{p\bar{p}}\bar{S}$ by \hyperref[proposition:i-13]{Proposition~13}.
+  Suppose that $\bar{s}\subs_{p\bar{p}}\bar{S}$;
+  since
+  \[
+    \bar{j}
+    = \big(
+      \bar{S}, p\bar{p}(\bar{S})p\bar{p}(\bar{s}), \bar{s}
+    \big)
+    \in \bar{\HH}
+  \]
+  we have that
+  \[
+    \begin{aligned}
+      \bar{p}(\bar{j})
+      &= \big(
+        \bar{p}(\bar{S}), p\bar{p}(\bar{S})p\bar{p}(\bar{s}), \bar{p}(\bar{s})
+      \big)
+      \in\HH
+    \\p\bar{p}(\bar{s})
+      &< p\bar{p}(\bar{S}),
+    \end{aligned}
+  \]
+  whence $\bar{p}(\bar{s})\relrhobar\bar{p}(\bar{S})$.
+  Then $\bar{p}(\bar{s})<\bar{p}(\bar{S})$ in $\HH$, and
+  \[
+    \beta\big(
+      \bar{p}(\bar{S})\bar{p}(\bar{s})
+    \big)
+    = \bar{p}(\bar{S}).
+  \]
+  \hyperref[proposition:i-12]{Proposition~12} then implies that $\bar{s}\subs_{\bar{p}}\bar{S}$.
+\end{proof}
+
+\begin{itenv}{Proposition 14}
+\label{proposition:i-14}
   Suppose
 \end{itenv}
 
