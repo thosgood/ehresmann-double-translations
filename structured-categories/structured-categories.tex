@@ -2791,7 +2791,55 @@ imply that $p(sh)=p(s)p(h)$.
   This proves that we have $s\subs_{p\bar{p}}S$ in $(\CC,p\bar{p},\bar{\HH},\bar{\SS})$.
 \end{proof}
 
+\begin{itenv}{Corollary 1}
+  The conditions $h,h'\in\bar{\HH}$ and $h'\subs_{\bar{p}}h$ imply that $h'\subs_{p\bar{p}}h$.
+\end{itenv}
 
+\begin{itenv}{Corollary 2}
+  If, for all $s,S\in\HH_0$ such that $s<S$, we have $\beta(Ss)=S$, then $s<S$ implies that $s\subs S$ in $(\CC,p,\HH,\SS)$.
+\end{itenv}
+
+\begin{proof}
+  These conditions imply that we have $s\subs S$ in $(\HH,\Id_\HH,\HH,\HH)$, and the Corollary then follows from the Proposition.
+\end{proof}
+
+\begin{itenv}{Corollary 3}
+  If $(\HH,\bar{p},\bar{\HH},\bar{\SS})$ is right solving, and if the following condition is satisfied:
+  \begin{quote}
+    For $h,h'\in\HH$ such that
+    \[
+      \alpha(h)=\alpha(h')
+      \quad\text{and}\quad
+      \beta(h)=\beta(h')
+    \]
+    we have that
+    \[
+      p(h\cap h')
+      = p(h)\cap p(h')
+    \]
+  \end{quote}
+  then $(\CC,p\bar{p},\bar{\HH},\bar{\SS})$ is right solving.
+\end{itenv}
+
+\begin{proof}
+  Let $\bar{h},\bar{h}'\in\bar{\HH}$ be such that $\alpha(\bar{h})=\alpha(\bar{h}')$ and $\beta(\bar{h})=\beta(\bar{h}')$;
+  let $s$ be the $\bar{p}$-kernel of $(\bar{h},\bar{h}')$;
+  by the Proposition, we have that $s\subs S$ in $(\CC,p\bar{p},\bar{\HH},\bar{\SS})$.
+  The relations
+  \[
+    \begin{aligned}
+      \bar{p}(s)
+      &= \alpha\big(\bar{p}(\bar{h})\cap\bar{p}(\bar{h}')\big)
+    \\p\big(\bar{p}(\bar{h})\cap\bar{p}(\bar{h}')\big)
+      &= p\bar{p}(\bar{h})\cap p\bar{p}(\bar{h}')
+    \end{aligned}
+  \]
+  imply that $p\bar{p}(s)=\alpha(p\bar{p}(\bar{h})\cap p\bar{p}(\bar{h}'))$, and so $(\bar{h},\bar{h}')$ admits $s$ as a $p\bar{p}$-kernel, and $(\CC,p\bar{p},\bar{\HH},\bar{\SS})$ is right solving.
+\end{proof}
+
+\begin{itenv}{Corollary 4}
+  Suppose
+\end{itenv}
 
 
 %% Bibliography %%
