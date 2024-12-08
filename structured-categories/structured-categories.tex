@@ -78,7 +78,9 @@
 \newcommand{\CC}{\mathcal{C}}
 \newcommand{\HH}{\mathcal{H}}
 \newcommand{\rHH}{\mathrm{H}}
+\newcommand{\bHH}{\bar{\HH}}
 \renewcommand{\SS}{\mathcal{S}}
+\newcommand{\bSS}{\bar{\SS}}
 \newcommand{\MM}{\mathfrak{M}}
 \usepackage{upgreek}
 \newcommand{\comp}{\upchi}
@@ -94,6 +96,7 @@
 \newcommand{\Id}{\mathrm{Id}}
 \newcommand{\Hom}{\mathrm{Hom}}
 \newcommand{\VV}{\mathcal{V}}
+\newcommand{\JJ}{\mathcal{J}}
 
 % Unary operators
 \DeclareMathOperator{\sq}{\square}
@@ -152,7 +155,7 @@
     Functors $F$ from a category $\CC$ to a category $\CC'$ are written as $(\CC',F,\CC)$ (i.e. in the ``diagrammatic'' direction), and similarly for morphisms; the Hom functor is accordingly written $\CC(e',e)$.
 
     \medskip
-  
+
     \hfill--- Timothy Hosgood (translator)
   \end{translator}
 
@@ -640,7 +643,7 @@ this functor $\bar{F}$, which is identical to $(\MM,\bar{F}_a,\CC')$, is represe
     \]
     to commute, where $I$ is the unit of $\otimes$, and where $i_{(-)}$ and $k_{(-,-,-)}$ are the identity and associativity morphisms (respectively).
   \end{itemize}
-  
+
   Suppose that $\mathbf{V}$ is a cartesian category with commuting coproducts, and that $I$ is connected (in the sense of Penon \cite{comm83}).
   In \cite[Appendix]{coll120}, we proved that the category of $\mathbf{V}$-categories (with small enough classes of objects) is equivalent to the category of internal category whose object of objects is a coproduct of copies of $I$.
   Similarly:
@@ -663,11 +666,11 @@ this functor $\bar{F}$, which is identical to $(\MM,\bar{F}_a,\CC')$, is represe
 We will later return to the notion of a species of structures dominated by a category (Sections~III and IV).
 For now, we will only consider particular cases.
 
-Let $\FF$ be the category of all functors $(\bar{\SS}^\bullet,G,\SS^\bullet)$ such that $(\bar{\SS},G,\SS)\in\MM$;
+Let $\FF$ be the category of all functors $(\bSS^\bullet,G,\SS^\bullet)$ such that $(\bSS,G,\SS)\in\MM$;
 let $(\MM,p_\FF,\FF)$ be the functor defined by
 \[
-  p_\FF\colon(\bar{\SS}^\bullet,G,\SS^\bullet)
-  \longmapsto (\bar{\SS},G,\SS).
+  p_\FF\colon(\bSS^\bullet,G,\SS^\bullet)
+  \longmapsto (\bSS,G,\SS).
 \]
 
 \begin{rmenv}{Definition 4}
@@ -2463,14 +2466,14 @@ In what follows, we further suppose that $\HH$ is endowed with an order relation
   However, $(\MM,\theta,\widetilde{\TT},\TT)$ does not satisfy condition~(c).
 \end{rmenv}
 
-Let $(\HH,\bar{p},\bar{\HH},\bar{\SS})$ be a category of homomorphisms such that $\bar{\SS}$ contains the groupoid $\bar{\Gamma}$ of invertible elements of $\bar{\HH}$, and such that $(\HH,\bar{p},\bar{\SS})$ is a species of superstructures \cite{3a} over $(\CC,p,\SS)$.
+Let $(\HH,\bar{p},\bHH,\bSS)$ be a category of homomorphisms such that $\bSS$ contains the groupoid $\bar{\Gamma}$ of invertible elements of $\bHH$, and such that $(\HH,\bar{p},\bSS)$ is a species of superstructures \cite{3a} over $(\CC,p,\SS)$.
 \oldpage{373}
-These conditions imply that $(\CC,p\bar{p},\bar{\HH},\bar{\SS})$ is a category of homomorphisms.
-An element $\bar{h}$ of $\bar{\HH}$ will be denoted either by the triple $(\beta(\bar{h}),\bar{p}(\bar{h}),\alpha(\bar{h}))$ or by the triple $(\beta(\bar{h}),p\bar{p}(\bar{h}),\alpha(\bar{h}))$.
+These conditions imply that $(\CC,p\bar{p},\bHH,\bSS)$ is a category of homomorphisms.
+An element $\bar{h}$ of $\bHH$ will be denoted either by the triple $(\beta(\bar{h}),\bar{p}(\bar{h}),\alpha(\bar{h}))$ or by the triple $(\beta(\bar{h}),p\bar{p}(\bar{h}),\alpha(\bar{h}))$.
 
 Note that the conditions
 \[
-  s,S,\in\bar{\HH}_0
+  s,S,\in\bHH_0
   \quad\text{and}\quad
   s\subs_{p\bar{p}} S
 \]
@@ -2478,7 +2481,7 @@ imply that $\bar{p}(s)\relrhobar\bar{p}(S)$ in $(\CC,p,\HH,\SS)$, but, in genera
 
 \begin{itenv}{Proposition 12}
 \label{proposition:i-12}
-  Let $s,S\in\bar{\HH}_0$.
+  Let $s,S\in\bHH_0$.
   The conditions
   \[
     \begin{gathered}
@@ -2497,7 +2500,7 @@ imply that $\bar{p}(s)\relrhobar\bar{p}(S)$ in $(\CC,p,\HH,\SS)$, but, in genera
     \bar{j}
     = \big(
       S, p\bar{p}(S)p\bar{p}(s), s
-    \big) \in \bar{\HH};
+    \big) \in \bHH;
   \]
   then
   \[
@@ -2542,7 +2545,7 @@ imply that $\bar{p}(s)\relrhobar\bar{p}(S)$ in $(\CC,p,\HH,\SS)$, but, in genera
     \bar{g}
     = \big(
       S, \bar{p}(S)\bar{p}(s)\bullet g', S'
-    \big) \in\bar{\HH}
+    \big) \in\bHH
   \]
   where $g'\in\HH$.
   We have that
@@ -2572,13 +2575,13 @@ imply that $\bar{p}(s)\relrhobar\bar{p}(S)$ in $(\CC,p,\HH,\SS)$, but, in genera
   \[
     \bar{g}'
     = (s, p(g'), S')
-    \in\bar{\HH}.
+    \in\bHH.
   \]
   Since $g'=(\bar{p}(s),p(g'),\bar{p}(S'))$, we thus deduce that
   \[
     \bar{p}(\bar{g}') = g'
     \quad\text{and}\quad
-    \bar{g}' = (s,g',S') \in \bar{\HH}.
+    \bar{g}' = (s,g',S') \in \bHH.
   \]
   Thus $s\subs_{\bar{p}}S$, by \hyperref[proposition:i-4]{Proposition~4}.
 \end{proof}
@@ -2589,7 +2592,7 @@ imply that $\bar{p}(s)\relrhobar\bar{p}(S)$ in $(\CC,p,\HH,\SS)$, but, in genera
   The conditions
   \[
     \begin{gathered}
-      h,h'\in\bar{\HH},
+      h,h'\in\bHH,
     \\h'\subs_{p\bar{p}}h,
       \quad \bar{p}(h') < \bar{p}(h),
     \\\beta\big(
@@ -2672,12 +2675,12 @@ imply that $p(sh)=p(s)p(h)$.
 
 \begin{itenv}{Proposition 13}
 \label{proposition:i-13}
-  Let $s,S\in\bar{\HH}_0$.
-  Then the relation $s\subs_{\bar{p}}S$ in $(\HH,\bar{p},\bar{\HH},\bar{\SS})$ imply that $s\subs_{p\bar{p}}(S)$ in $(\CC,p\bar{p},\bar{\HH},\bar{\SS})$.
+  Let $s,S\in\bHH_0$.
+  Then the relation $s\subs_{\bar{p}}S$ in $(\HH,\bar{p},\bHH,\bSS)$ imply that $s\subs_{p\bar{p}}(S)$ in $(\CC,p\bar{p},\bHH,\bSS)$.
 \end{itenv}
 
 \begin{proof}
-  Set $\bar{j}=(S,\bar{p}(S)\bar{p}(s),s)\in\bar{\HH}$;
+  Set $\bar{j}=(S,\bar{p}(S)\bar{p}(s),s)\in\bHH$;
   we have that
   \[
     \bar{j}
@@ -2778,7 +2781,7 @@ imply that $p(sh)=p(s)p(h)$.
     \big)
     = \bar{p}(s).
   \]
-  Since $s\subs S$ in $(\HH,\bar{p},\bar{\HH},\bar{\SS})$, we thus deduce that
+  Since $s\subs S$ in $(\HH,\bar{p},\bHH,\bSS)$, we thus deduce that
   \[
     \big(
       s, \bar{p}(s)\bar{p}(\bar{g}), S'
@@ -2788,11 +2791,11 @@ imply that $p(sh)=p(s)p(h)$.
     \big)
     \in\HH.
   \]
-  This proves that we have $s\subs_{p\bar{p}}S$ in $(\CC,p\bar{p},\bar{\HH},\bar{\SS})$.
+  This proves that we have $s\subs_{p\bar{p}}S$ in $(\CC,p\bar{p},\bHH,\bSS)$.
 \end{proof}
 
 \begin{itenv}{Corollary 1}
-  The conditions $h,h'\in\bar{\HH}$ and $h'\subs_{\bar{p}}h$ imply that $h'\subs_{p\bar{p}}h$.
+  The conditions $h,h'\in\bHH$ and $h'\subs_{\bar{p}}h$ imply that $h'\subs_{p\bar{p}}h$.
 \end{itenv}
 
 \begin{itenv}{Corollary 2}
@@ -2804,7 +2807,7 @@ imply that $p(sh)=p(s)p(h)$.
 \end{proof}
 
 \begin{itenv}{Corollary 3}
-  If $(\HH,\bar{p},\bar{\HH},\bar{\SS})$ is right solving, and if the following condition is satisfied:
+  If $(\HH,\bar{p},\bHH,\bSS)$ is right solving, and if the following condition is satisfied:
   \begin{quote}
     For $h,h'\in\HH$ such that
     \[
@@ -2818,13 +2821,13 @@ imply that $p(sh)=p(s)p(h)$.
       = p(h)\cap p(h')
     \]
   \end{quote}
-  then $(\CC,p\bar{p},\bar{\HH},\bar{\SS})$ is right solving.
+  then $(\CC,p\bar{p},\bHH,\bSS)$ is right solving.
 \end{itenv}
 
 \begin{proof}
-  Let $\bar{h},\bar{h}'\in\bar{\HH}$ be such that $\alpha(\bar{h})=\alpha(\bar{h}')$ and $\beta(\bar{h})=\beta(\bar{h}')$;
+  Let $\bar{h},\bar{h}'\in\bHH$ be such that $\alpha(\bar{h})=\alpha(\bar{h}')$ and $\beta(\bar{h})=\beta(\bar{h}')$;
   let $s$ be the $\bar{p}$-kernel of $(\bar{h},\bar{h}')$;
-  by the Proposition, we have that $s\subs S$ in $(\CC,p\bar{p},\bar{\HH},\bar{\SS})$.
+  by the Proposition, we have that $s\subs S$ in $(\CC,p\bar{p},\bHH,\bSS)$.
   The relations
   \[
     \begin{aligned}
@@ -2834,12 +2837,12 @@ imply that $p(sh)=p(s)p(h)$.
       &= p\bar{p}(\bar{h})\cap p\bar{p}(\bar{h}')
     \end{aligned}
   \]
-  imply that $p\bar{p}(s)=\alpha(p\bar{p}(\bar{h})\cap p\bar{p}(\bar{h}'))$, and so $(\bar{h},\bar{h}')$ admits $s$ as a $p\bar{p}$-kernel, and $(\CC,p\bar{p},\bar{\HH},\bar{\SS})$ is right solving.
+  imply that $p\bar{p}(s)=\alpha(p\bar{p}(\bar{h})\cap p\bar{p}(\bar{h}'))$, and so $(\bar{h},\bar{h}')$ admits $s$ as a $p\bar{p}$-kernel, and $(\CC,p\bar{p},\bHH,\bSS)$ is right solving.
 \end{proof}
 
 \begin{itenv}{Corollary 4}
   Suppose that $s\relrhobar S$ in $(\CC,p,\HH,\SS)$ implies both that $s<S$ in $\HH_0$ and that $\beta(Ss)=S$;
-  then the statement that $\bar{s}\subs_{p\bar{p}}\bar{S}$ in $(\CC,p\bar{p},\bar{\HH},\bar{\SS})$ is equivalent to $\bar{s}\subs_{\bar{p}}\bar{S}$ in $(\HH,\bar{p},\bar{\HH},\bar{\SS})$.
+  then the statement that $\bar{s}\subs_{p\bar{p}}\bar{S}$ in $(\CC,p\bar{p},\bHH,\bSS)$ is equivalent to $\bar{s}\subs_{\bar{p}}\bar{S}$ in $(\HH,\bar{p},\bHH,\bSS)$.
 \end{itenv}
 
 \oldpage{376}
@@ -2852,7 +2855,7 @@ imply that $p(sh)=p(s)p(h)$.
     = \big(
       \bar{S}, p\bar{p}(\bar{S})p\bar{p}(\bar{s}), \bar{s}
     \big)
-    \in \bar{\HH}
+    \in \bHH
   \]
   we have that
   \[
@@ -2879,8 +2882,75 @@ imply that $p(sh)=p(s)p(h)$.
 
 \begin{itenv}{Proposition 14}
 \label{proposition:i-14}
-  Suppose
+  Suppose that $(\CC,p,\HH,\SS)$ satisfies Condition~(c) of \hyperref[theorem:i-3]{Theorem~3}, and that $s\relrhobar S$ in $(\CC,p,\HH,\SS)$ implies that $s<S$ in $\HH$;
+  then $(\HH,\bar{p},\bHH,\bSS)$ is right solving if and only if $(\CC,p\bar{p},\bHH,\bSS)$ is right solving.
 \end{itenv}
+
+\begin{proof}
+  If $(\HH,\bar{p},\bHH,\bSS)$ is right solving, then $(\CC,p\bar{p},\bHH,\bSS)$ is right solving, by Corollary~3 of \hyperref[proposition:i-13]{Proposition~13}.
+  Conversely, suppose that $(\CC,p\bar{p},\bHH,\bSS)$ is right solving;
+  let $\bar{h},\bar{h}'\in\bHH$ be such that
+  \[
+    \alpha(\bar{h})=\alpha(\bar{h}')
+    \quad\text{and}\quad
+    \beta(\bar{h})=\beta(\bar{h}');
+  \]
+  let $\bar{s}$ be the $p\bar{p}$-kernel of $(\bar{h},\bar{h}')$.
+  By Axiom~(c), $s<S$ in $\HH$ implies that $s\subs S$ in $(\CC,p,\HH,\SS)$, and so $\beta(Ss=S)$;
+  by Corollary~4 of \hyperref[proposition:i-13]{Proposition~13}, it follows that $\bar{s}\subs_{\bar{p}}\alpha(\bar{h})$.
+  Furthermore, the relations
+  \[
+    \begin{gathered}
+      \bar{p}(\bar{s})
+      < \alpha\big(
+        \bar{p}(\bar{h})\cap\bar{p}(\bar{h}')
+      \big)
+    \\p\big(
+        \bar{p}(\bar{h})\cap\bar{p}(\bar{h}')
+      \big)
+      = p\bar{p}(\bar{h})\cap p\bar{p}(\bar{h}')
+    \\p\bar{p}(\bar{s})
+      = \alpha\big(
+        p\bar{p}(\bar{h})\cap p\bar{p}(\bar{h}')
+      \big)
+      = p\big(
+        \alpha\big(
+          \bar{p}(\bar{h})\cap\bar{p}(\bar{h}')
+        \big)
+      \big)
+    \end{gathered}
+  \]
+  imply that $\bar{p}(\bar{s})=\alpha(\bar{p}(\bar{h})\cap\bar{p}(\bar{h}'))$.
+  Thus $\bar{s}$ is the $\bar{p}$-kernel of $(\bar{h},\bar{h}')$, and $(\HH,\bar{p},\bHH,\bSS)$ is right solving.
+\end{proof}
+
+\begin{itenv}{Theorem 4}
+\label{theorem:i-4}
+  Suppose that the following conditions are satisfied:
+  \begin{enumerate}
+    \item[\normalfont(1)]
+      $(\CC,<)$ is a completely right regular $(\JJ,\JJ',\JJ'')$-structured category (see \hyperref[section:ii.6]{§II.6}), and that the groupoid $\CC_\gamma$ of invertible elements of $\CC$ is an inductive groupoid (\hyperref[section:ii.6]{§II.6}).
+
+    \item[\normalfont(2)]
+      $(\HH,<)$ is completely right regular.
+
+    \item[\normalfont(3)]
+      $\HH$ is saturated over $\CC$, and, for $h,h'\in\Gamma$, the conditions
+      \[
+        \alpha(h')<\alpha(h)
+        \quad\text{and}\quad
+        p(h')<p(h)
+      \]
+      imply that $h'<h$.
+  \end{enumerate}
+
+  \oldpage{377}
+  Then there exists a subcategory $\HH_u$ of $\HH$ containing $\Gamma$ such that $s'<s$ in $\HH_0$ if and only if $s'\subs_{p_u}s$ in $(\CC,p_u,\HH_u,\Gamma)$, where $p_u$ is the restriction of $p$ to $\HH_u$.
+\end{itenv}
+
+\begin{proof}
+  Let
+\end{proof}
 
 
 %% Bibliography %%
