@@ -75,6 +75,8 @@
 \newcommand{\todo}{{\color{purple}\textbf{TO-DO }}}
 \newcommand{\unsure}[1]{{\color{purple}\textbf{#1}}}
 
+\newcommand{\textand}{\quad\text{and}\quad}
+
 \newcommand{\CC}{\mathcal{C}}
 \newcommand{\HH}{\mathcal{H}}
 \newcommand{\rHH}{\mathrm{H}}
@@ -358,7 +360,7 @@ The map $p_0$ extends to a functor $(\CC,p,\Sigma)$ satisfying the following pro
     there exists exactly one $h'\in\Sigma$ such that
     \[
       p(h')=p(h)
-      \quad\text{and}\quad
+      \textand
       \alpha(h')=z.
     \]
 \end{enumerate}
@@ -378,7 +380,7 @@ lets us identify $\Sigma$ with the associated category of hypermorphisms of the 
 if and only if there exists $h\in\Sigma$ such that
 \[
   f=p(h)
-  \quad\text{and}\quad
+  \textand
   z=\alpha(h).
 \]
 
@@ -708,7 +710,7 @@ Consider the following conditions:
         If $(z',z)\in(\Sigma_0)^\perp\star(\Sigma_0)^\perp$ and $(f,z'\perp z)\in\Sigma$ then
         \[
           (f,z),(f,z')\in\Sigma
-          \quad\text{and}\quad
+          \textand
           f(z'\perp z)=fz'\perp fz;
         \]
       \item[(c\textsubscript{3})]
@@ -793,7 +795,7 @@ Conversely, if $\CC$ is a category such that any two elements $f,f'\in\CC$ that 
     z<z'
     \qquad\text{if and only if there exists $f\in\CC$ such that}
   \\z=\alpha(f)
-    \quad\text{and}\quad
+    \textand
     z'=\beta(f).
   \end{gathered}
 \]
@@ -891,7 +893,7 @@ We usually represent an element of $\HH$ by such a triplet.
 Note that we thus identify $\HH$ with a subcategory of the induced category $p_0^*(\CC)$ whose elements are the triples $(S',f,S)$ such that $S,S'\in\HH_0$, $f\in\CC$, and
 \[
   \alpha(f)=p(S)
-  \quad\text{and}\quad
+  \textand
   \beta(f)=p(S').
 \]
 Since an element of $\SS$ is entirely determined by the data of $\alpha(h)$ and $p(h)$, we write such elements either in the form $(\beta(h),p(h),\alpha(h))$ or in the form $(p(h),\alpha(h))$.
@@ -902,7 +904,7 @@ If $\SS$ is the groupoid of invertible elements of $\HH$, then $\HH$ is a specie
     \longmapsto\bar{f}'\bullet h\bullet\bar{f}^{-1}
     \qquad\text{if and only if}
   \\\alpha(\bar{f})=\alpha(h)
-    \quad\text{and}\quad
+    \textand
     \alpha(\bar{f}')=\beta(h)
   \end{gathered}
 \]
@@ -913,7 +915,7 @@ let $\SS_\gamma$ and $\CC_\gamma$ be the groupoids of invertible elements of $\S
 If $p(\SS_\gamma)$ is a saturated \cite{3a} subgroupoid of $\CC$, i.e. if
 \[
   \big[f\in\CC_\gamma
-  \quad\text{and}\quad
+  \textand
   \alpha(f)\in p(\SS_\gamma)\big]
   \implies
   f\in p(\SS_\gamma),
@@ -945,7 +947,7 @@ then we say that $\HH$ is \emph{saturated over $\CC$}.
       = (k'\bullet k, f'', f, h'\bullet h)
     \\\text{if and only if}\quad
       \big[f'=\hat{f}
-      \quad\text{and}\quad
+      \textand
       \alpha(h')=\beta(h)\big].
     \end{gathered}
   \]
@@ -1085,7 +1087,7 @@ This relation evidently implies that $p(s)=p(s')$.
   Since $(\CC,p,\Gamma)$ is a species of structures, from the equalities
   \[
     \alpha(s',p(s),s)=s
-    \quad\text{and}\quad
+    \textand
     p(s',p(s),s)=p(s)
   \]
   we deduce that $(s',p(s),s)=s$;
@@ -1127,7 +1129,7 @@ Consider on $\HH_0$ the relation
     s\relrhobar S
     \quad\text{if and only if}\quad
   \\\big[p(s)<p(S)
-    \quad\text{and}\quad
+    \textand
     (S,p(S)p(s),s)\in\HH\big];
   \end{gathered}
 \]
@@ -1163,14 +1165,14 @@ if, further, $(S,p(S)p(s),s)\in\HH$, then we also have that
       k = (p(S)p(s))\bullet(p(s)p(s'))
       < p(S)p(s'),
     \\\alpha(k)=p(s')
-      \quad\text{and}\quad
+      \textand
       \beta(k)=p(S),
     \end{gathered}
   \]
   it follows that
   \[
     k=p(S)p(s')
-    \quad\text{and}\quad
+    \textand
     (S,p(S)p(s'),s')\in\HH
   \]
   thus $s'\relrhobar S$.
@@ -1185,10 +1187,10 @@ if, further, $(S,p(S)p(s),s)\in\HH$, then we also have that
     \begin{gathered}
       (p(S)p(s))\bullet g = (p(S)p(s))\bullet g',
     \\g < (p(S)p(s))\bullet g
-      \quad\text{and}\quad
+      \textand
       g' < (p(S)p(s))\bullet g',
     \\\alpha(g)=\alpha(g')
-      \quad\text{and}\quad
+      \textand
       \beta(g)=\beta(g'),
     \end{gathered}
   \]
@@ -1209,7 +1211,7 @@ The notion of \emph{substructure} that we will now define makes precise the noti
       If $(S,g,S')\in\HH$ is such that
       \[
         \alpha(p(s)g)=\alpha(g)
-        \quad\text{and}\quad
+        \textand
         \beta(p(s)g)=p(s)
       \]
       then
@@ -1280,7 +1282,7 @@ If there is no risk of confusion, then we simply say that $s$ is a substructure 
   but also
   \[
     \alpha(g'_1)<\alpha(g')
-    \quad\text{and}\quad
+    \textand
     \beta(g'_1)<p(s)=\beta(g')
   \]
   whence
@@ -1311,7 +1313,7 @@ If there is no risk of confusion, then we simply say that $s$ is a substructure 
   let $(S,g,S')\in\HH$ be such that
   \[
     \alpha(p(s)g)=\alpha(g)
-    \quad\text{and}\quad
+    \textand
     \beta(p(s)g)=p(s).
   \]
   By using the relations
@@ -1350,7 +1352,7 @@ If there is no risk of confusion, then we simply say that $s$ is a substructure 
         \quad\text{if and only if}\quad
         [
           \text{$s<S$ in $\CC$}
-          \quad\text{and}\quad
+          \textand
           \beta(Ss)=S.
         ]
       \]
@@ -1422,7 +1424,7 @@ If there is no risk of confusion, then we simply say that $s$ is a substructure 
   from the relations
   \[
     p(s') < p(s)
-    \quad\text{and}\quad
+    \textand
     \beta(p(s)p(s')) = p(s)
   \]
   we deduce that the elements $p(S)p(s')$ and $(p(S)p(s))\bullet(p(s)p(s'))$ are equal, since they are both bounded above by $p(S)$ and have the same source and same target ($p(s')$ and $p(S)$, respectively).
@@ -1458,7 +1460,7 @@ If there is no risk of confusion, then we simply say that $s$ is a substructure 
   \hyperref[proposition:i-4]{Proposition~4} then implies that
   \[
     (s',g',S')\in\HH
-    \quad\text{and}\quad
+    \textand
     s'\subs S.
     \qedhere
   \]
@@ -1472,7 +1474,7 @@ If there is no risk of confusion, then we simply say that $s$ is a substructure 
   Indeed, by \hyperref[theorem:1]{Theorem~1}, these conditions imply that
   \[
     s\subs s'
-    \quad\text{and}\quad
+    \textand
     s'\subs s
   \]
   whence $s=s'$.
@@ -1483,7 +1485,7 @@ If there is no risk of confusion, then we simply say that $s$ is a substructure 
   then $s$ is the largest element (with respect to the relation $\relrho$) of the class of structures $s'$ such that
   \[
     s'\relrhobar S
-    \quad\text{and}\quad
+    \textand
     p(s') = p(s).
   \]
 \end{itenv}
@@ -1559,7 +1561,7 @@ If there is no risk of confusion, then we simply say that $s$ is a substructure 
       < p(S_1)p(s_1),
     \\\alpha\big(p\big(\bar{h}\bullet j\bullet\bar{h}'^{-1}\big)\big)
       = p(s_1)
-      \quad\text{and}\quad
+      \textand
       \beta\big(p\big(\bar{h}\bullet j\bullet\bar{h}'^{-1}\big)\big)
       = p(S_1)
     \end{gathered}
@@ -1572,7 +1574,7 @@ If there is no risk of confusion, then we simply say that $s$ is a substructure 
     since
     \[
       (h^{-1}\hat{e})\bullet h'\colon e\to E
-      \quad\text{and}\quad
+      \textand
       (h^{-1}\hat{e})\bullet h'
       < (h^{-1}\hat{e})h
       < h^{-1}h
@@ -1598,7 +1600,7 @@ If there is no risk of confusion, then we simply say that $s$ is a substructure 
   \[
     p\big(\bar{h}\bullet j\bullet\bar{h}'^{-1}\big)
     = p(S_1)p(s_1)
-    \quad\text{and}\quad
+    \textand
     (S_1,p(S_1)p(s_1),s_1)
     \in\HH.
   \]
@@ -1627,7 +1629,7 @@ If there is no risk of confusion, then we simply say that $s$ is a substructure 
     \bar{h}'\bullet\bar{g}'
     = (s_1,g',S')
     \in\HH
-    \quad\text{and}\quad
+    \textand
     s_1\subs S_1.
     \qedhere
   \]
@@ -1647,7 +1649,7 @@ If there is no risk of confusion, then we simply say that $s$ is a substructure 
     \begin{gathered}
       h'<h,
     \\\alpha(h')=p(s')
-      \quad\text{and}\quad
+      \textand
       \beta(h')=p(s'_1)
     \end{gathered}
   \]
@@ -1656,7 +1658,7 @@ If there is no risk of confusion, then we simply say that $s$ is a substructure 
     \bar{h}'
     =(s'_1,h',s')
     \in\HH
-    \quad\text{and}\quad
+    \textand
     \bar{h}'\subs_p\bar{h}.
   \]
   If, further, $\bar{h}$ and $h'$ are invertible, then $\bar{h}'\in\Gamma$.
@@ -1752,14 +1754,14 @@ Let $\vsq\CC$ be the longitudinal category of quartets of $\CC$ (see \hyperref[s
   If condition~(3) is satisfied, then
   \[
     s'\subs s
-    \quad\text{and}\quad
+    \textand
     s'_1\subs s_1
   \]
   since $\beta(ss')=s$ and $\beta(s_1s'_1)=s_1$.
   Further,
   \[
     s'_1<s_1s'_1
-    \quad\text{and}\quad
+    \textand
     ss'<s
   \]
   whence
@@ -1828,7 +1830,7 @@ Let $\bar{\UU}'$ be the subcategory of $\UU$ consisting of the quartets in $\UU$
     \begin{gathered}
       p(\bar{h}')<p(\bar{h}),
     \\\alpha(\bar{h}')\subs_p\alpha(\bar{h})
-      \quad\text{and}\quad
+      \textand
       \beta(\bar{h}')\subs_p\beta(\bar{h})
     \end{gathered}
   \]
@@ -1870,7 +1872,7 @@ If $\mathrm{T}=(\bar{h},s_1\subs_p s'_1,s\subs_p s')$ is included in a quartet, 
 consequently, we have that
 \[
   \rHH = p(\bar{h})\sqsubs h'
-  \quad\text{and}\quad
+  \textand
   \bar{\rHH} = \bar{h}\sqsubs_p \bar{h}',
 \]
 \oldpage{367}
@@ -1934,7 +1936,7 @@ Suppose that $(\CC,p',\HH',\HH'\cap\Gamma)$ is a category of homomorphisms.
   Let $(S,p,S')\in\HH'$ be such that
   \[
     \alpha(p(s)g) = \alpha(g)
-    \quad\text{and}\quad
+    \textand
     \beta(p(s)g) = p(s);
   \]
   then the composite $(S,g,S')\vdash_p(s,S')=(s,p(s)g,S')$, being defined, belongs to $\HH'$.
@@ -1983,7 +1985,7 @@ for all $h\in\CC$.
   Let
   \[
     \bar{h}=(s_1,h,s)\in\HH
-    \quad\text{and}\quad
+    \textand
     \bar{h}'=(s'_1,h',s')\in\HH.
   \]
   Suppose that $\bar{h}'\subs_p\bar{h}$;
@@ -2052,7 +2054,7 @@ for all $h\in\CC$.
   Then
   \[
     h'<h
-    \quad\text{and}\quad
+    \textand
     [h][h'] = \big(
       h, \beta(h)\beta(h'), \alpha(h)\alpha(h'), h'
     \big)
@@ -2061,7 +2063,7 @@ for all $h\in\CC$.
   and we thus deduce that
   \[
     \big( s, p(s)p(s'), s' \big)\in\HH
-    \quad\text{and}\quad
+    \textand
     \big( s_1, p(s_1)p(s'_1), s'_1 \big)\in\HH.
   \]
   Let
@@ -2113,7 +2115,7 @@ for all $h\in\CC$.
     \item[\normalfont(R)] Let $h,h'\in\HH$ be such that
       \[
         \alpha(h)=\alpha(h')
-        \quad\text{and}\quad
+        \textand
         \beta(h)=\beta(h').
       \]
       Then there exists $s\subs_p\alpha(h)$ such that
@@ -2165,7 +2167,7 @@ We similarly define the notion of a \emph{left-solving} category of homomorphism
     \begin{gathered}
       h,h'\in\HH,
     \\\alpha(h)=\alpha(h')
-      \quad\text{and}\quad
+      \textand
       \beta(h)=\beta(h')
     \end{gathered}
   \]
@@ -2183,14 +2185,14 @@ We similarly define the notion of a \emph{left-solving} category of homomorphism
     \begin{gathered}
       p(h)\cap p(h')=f,
     \\e=\beta(f)
-      \quad\text{and}\quad
+      \textand
       E=\beta(p(h)).
     \end{gathered}
   \]
   Then
   \[
     Ee\bullet f<p(h)
-    \quad\text{and}\quad
+    \textand
     Ee\bullet f<p(h')
   \]
   whence
@@ -2249,7 +2251,7 @@ In what follows, we further suppose that $\HH$ is endowed with an order relation
         \begin{gathered}
           h,h'\in\HH
         \\\alpha(h)=\alpha(h')
-          \quad\text{and}\quad
+          \textand
           \beta(h)=\beta(h')
         \end{gathered}
       \]
@@ -2277,7 +2279,7 @@ In what follows, we further suppose that $\HH$ is endowed with an order relation
     \big)
     = s\sups_p s'
     = ss'
-    \quad\text{and}\quad
+    \textand
     \beta(ss')=s.
   \]
   We thus deduce that the following conditions are equivalent:
@@ -2292,7 +2294,7 @@ In what follows, we further suppose that $\HH$ is endowed with an order relation
   Let $h,h'\in\HH$ be such that
   \[
     \alpha(h) = \alpha(h')
-    \quad\text{and}\quad
+    \textand
     \beta(h) = \beta(h');
   \]
   since the category of homomorphisms $(\HH,\Id_\HH,\HH,\HH)$ is right solved, and since $\alpha(h\cap h')$ is the $\Id_\HH$-kernel of $(h,h')$, we have that
@@ -2338,7 +2340,7 @@ In what follows, we further suppose that $\HH$ is endowed with an order relation
       = \alpha(p(h)\cap p(h'))
       = p(s),
     \\\alpha(h\cap h') < \alpha(h)
-      \quad\text{and}\quad
+      \textand
       s < \alpha(h)
     \end{gathered}
   \]
@@ -2350,7 +2352,7 @@ In what follows, we further suppose that $\HH$ is endowed with an order relation
   Thus
   \[
     s = \alpha(h\cap h')
-    \quad\text{and}\quad
+    \textand
     h\cap h' = h\vdash_p(\beta(h),s)
   \]
   and so
@@ -2366,7 +2368,7 @@ In what follows, we further suppose that $\HH$ is endowed with an order relation
     \begin{gathered}
       p(h')<p(h),
     \\\alpha(h')\subs\alpha(h)
-      \quad\text{and}\quad
+      \textand
       \beta(h')\subs\beta(h)
     \end{gathered}
   \]
@@ -2374,7 +2376,7 @@ In what follows, we further suppose that $\HH$ is endowed with an order relation
   Let $h$ and $h'$ be such that
   \[
     \alpha(h) = \alpha(h')
-    \quad\text{and}\quad
+    \textand
     \beta(h) = \beta(h');
   \]
   since
@@ -2406,7 +2408,7 @@ In what follows, we further suppose that $\HH$ is endowed with an order relation
   Since $s'\subs s$ and $s'_1\subs s_1$, the elements
   \[
     hs'=h\bullet ss'
-    \quad\text{and}\quad
+    \textand
     s_1h'=s_1s'_1\bullet h'
   \]
   have the same source and same target ($s'$ and $s_1$, respectively).
@@ -2414,7 +2416,7 @@ In what follows, we further suppose that $\HH$ is endowed with an order relation
   indeed,
   \[
     p(hs')=p(h)\bullet p(ss')
-    \quad\text{and}\quad
+    \textand
     p(s_1h')=p(s_1s'_1)\bullet p(h')
   \]
   are bounded above by $p(h)$, and have the same source and same target ($p(s')$ and $p(s_1)$, respectively), and so $p(h's)=p(s_1h')$.
@@ -2474,7 +2476,7 @@ An element $\bar{h}$ of $\bHH$ will be denoted either by the triple $(\beta(\bar
 Note that the conditions
 \[
   s,S,\in\bHH_0
-  \quad\text{and}\quad
+  \textand
   s\subs_{p\bar{p}} S
 \]
 imply that $\bar{p}(s)\relrhobar\bar{p}(S)$ in $(\CC,p,\HH,\SS)$, but, in general, they do not imply that $\bar{p}(s)\subs_p\bar{p}(S)$.
@@ -2487,7 +2489,7 @@ imply that $\bar{p}(s)\relrhobar\bar{p}(S)$ in $(\CC,p,\HH,\SS)$, but, in genera
     \begin{gathered}
       s\subs_{p\bar{p}}S,
     \\\bar{p}(s)<\bar{p}(S)
-      \quad\text{and}\quad
+      \textand
       \beta\big(\bar{p}(S)\bar{p}(s)\big) = \bar{p}(S)
     \end{gathered}
   \]
@@ -2519,7 +2521,7 @@ imply that $\bar{p}(s)\relrhobar\bar{p}(S)$ in $(\CC,p,\HH,\SS)$, but, in genera
     \\\alpha\big(
         \bar{p}(S)\bar{p}(s)
       \big) = \bar{p}(s)
-      \quad\text{and}\quad
+      \textand
       \beta\big(
         \bar{p}(S)\bar{p}(s)
       \big) = \bar{p}(S).
@@ -2580,7 +2582,7 @@ imply that $\bar{p}(s)\relrhobar\bar{p}(S)$ in $(\CC,p,\HH,\SS)$, but, in genera
   Since $g'=(\bar{p}(s),p(g'),\bar{p}(S'))$, we thus deduce that
   \[
     \bar{p}(\bar{g}') = g'
-    \quad\text{and}\quad
+    \textand
     \bar{g}' = (s,g',S') \in \bHH.
   \]
   Thus $s\subs_{\bar{p}}S$, by \hyperref[proposition:i-4]{Proposition~4}.
@@ -2598,7 +2600,7 @@ imply that $\bar{p}(s)\relrhobar\bar{p}(S)$ in $(\CC,p,\HH,\SS)$, but, in genera
     \\\beta\big(
         \bar{p}\big(\alpha(h)\alpha(h')\big)
       \big) = \bar{p}(\alpha(h))
-      \quad\text{and}\quad
+      \textand
       \beta\big(
         \bar{p}\big(\beta(h)\beta(h')\big)
       \big) = \bar{p}(\beta(h))
@@ -2617,7 +2619,7 @@ imply that $\bar{p}(s)\relrhobar\bar{p}(S)$ in $(\CC,p,\HH,\SS)$, but, in genera
   Then the conditions
   \[
     s\subs_{p\bar{p}}S
-    \quad\text{and}\quad
+    \textand
     \bar{p}(s) < \bar{p}(S)
   \]
   imply that $s\subs_{\bar{p}}S$.
@@ -2653,7 +2655,7 @@ imply that $\bar{p}(s)\relrhobar\bar{p}(S)$ in $(\CC,p,\HH,\SS)$, but, in genera
     \beta\big(
       \bar{p}(S)\bar{p}(s)
     \big) < \bar{p}(S)
-    \quad\text{and}\quad
+    \textand
     p\big(
       \beta\big(
         \bar{p}(S)\bar{p}(s)
@@ -2719,7 +2721,7 @@ imply that $p(sh)=p(s)p(h)$.
     \alpha\big(
       p\bar{p}(s)g
     \big) = \alpha(g)
-    \quad\text{and}\quad
+    \textand
     \beta\big(
       p\bar{p}(s)g
     \big) = \beta(g).
@@ -2775,7 +2777,7 @@ imply that $p(sh)=p(s)p(h)$.
       \bar{p}(s)\bar{p}(\bar{g})
     \big)
     = \bar{p}(S')
-    \quad\text{and}\quad
+    \textand
     \beta\big(
       \bar{p}(s)\bar{p}(\bar{g})
     \big)
@@ -2812,7 +2814,7 @@ imply that $p(sh)=p(s)p(h)$.
     For $h,h'\in\HH$ such that
     \[
       \alpha(h)=\alpha(h')
-      \quad\text{and}\quad
+      \textand
       \beta(h)=\beta(h')
     \]
     we have that
@@ -2892,7 +2894,7 @@ imply that $p(sh)=p(s)p(h)$.
   let $\bar{h},\bar{h}'\in\bHH$ be such that
   \[
     \alpha(\bar{h})=\alpha(\bar{h}')
-    \quad\text{and}\quad
+    \textand
     \beta(\bar{h})=\beta(\bar{h}');
   \]
   let $\bar{s}$ be the $p\bar{p}$-kernel of $(\bar{h},\bar{h}')$.
@@ -2938,7 +2940,7 @@ imply that $p(sh)=p(s)p(h)$.
       $\HH$ is saturated over $\CC$, and, for $h,h'\in\Gamma$, the conditions
       \[
         \alpha(h')<\alpha(h)
-        \quad\text{and}\quad
+        \textand
         p(h')<p(h)
       \]
       imply that $h'<h$.
@@ -2972,8 +2974,96 @@ imply that $p(sh)=p(s)p(h)$.
       \end{aligned}
     \]
   \end{quote}
-  We will show that
+  We will show that $\HH_u$ contains $\Gamma$.
+  Indeed, suppose that $h\in\Gamma$ and $s<\alpha(h)$.
+  Let $g\in\CC_\gamma$ be the invertible element induced by $p(h)\in\CC_\gamma$ \unsure{over} $p(s)$, whose existence is ensured by the fact that $\CC_\gamma$ is an inductive groupoid.
+  We will show that $g=p(h)|p(s)$.
+  We have
+  \[
+    p(h)|p(s) < g.
+  \]
+  Let $g'\in p(h)^>\bullet p(s)$ be such that $g'<g$.
+  Since $g'\bullet g^{-1}<\beta(g)$, and since $\CC$ is completely right regular, we have
+  \[
+    \begin{aligned}
+      \big(
+        \beta(g)\beta(g')
+      \big)\bullet (g'\bullet g^{-1})
+      &= \beta(g)
+    \\(g'\bullet g^{-1})\big(
+        \beta(g)\beta(g')
+      \big)
+      &= \beta(g'),
+    \end{aligned}
+  \]
+  whence $g'\bullet g^{-1}\in\CC_\gamma$.
+  Since $\CC_\gamma$ is an inductive groupoid, it thus follows that $g'\bullet g^{-1}\in\CC_0$, i.e. that
+  \[
+    \beta(g)=\beta(g');
+  \]
+  taking into account the relations $g'<g$ and $\alpha(g)=\alpha(g')$, we find that $g=g'$.
+
+  \begin{longcomm}{49.2}
+    The proof is not complete;
+    it remains to show that $g$ is lesser than any $f$ in $p(h)^>\bullet p(s)$.
+    Indeed, the relations
+    \[
+      \begin{gathered}
+        f\cap g
+        < p(h)
+      \\\alpha(f\cap g)
+        = \alpha(f)\cap\alpha(g)
+        = s
+      \end{gathered}
+    \]
+    mean that $f\cap g$ is in $p(h)^>\bullet p(s)$.
+    Since $f\cap g<g$, the given proof implies that $f\cap g=g$, whence
+    \[
+      g<f
+      \textand
+      g < p(h)|p(s).
+    \]
+    Finally, $g=p(h)|p(s)$.
+  \end{longcomm}
+  Thus $p(h)|p(s)=g$ and, by condition~(3), there exists
+  \[
+    (s_1,g,s)\in\Gamma
+    \quad\text{such that}\quad
+    (s_1,g,s) < h.
+  \]
+  Thus
+  \[
+    h|s
+    = (s_1,g,s)
+    \in\HH
+    \textand
+    h\in\HH_u.
+  \]
+  Now we show that $\HH_u$ is a subcategory of $\HH$.
+  Let $h,h_1\in\HH_u$ be such that
+  \[
+    \alpha(h_1)
+    = \beta(h).
+  \]
+  Let $s<\alpha(h)$ and $s_1=\beta(h|s)$;
+  we will prove the equality
+  \[
+    (h_1\bullet h)|s
+    = (h_1|s_1)\bullet(h|s);
+  \]
+  indeed, if $k<p(h_1\bullet h)$ and $\alpha(k)=p(s)$, then we have that
+  \[
+    k = g'_1\bullet g'
+  \]
+  where $g'_1<p(h_1)$ and $g'<p(h)$, since $(\CC,<)$ is $(\JJ,\JJ',\JJ'')$-structured.
+  \oldpage{378}
+  Since $\alpha(g')=p(s)$, we have that $p(h)|p(s)<g'$, whence
+  \[
+    p(s_1)<\alpha(g'_1);
+  \]
+  consequently,
 \end{proof}
+
 
 
 %% Bibliography %%
