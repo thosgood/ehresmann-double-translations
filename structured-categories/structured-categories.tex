@@ -71,7 +71,7 @@
 \renewcommand{\geq}{\geqslant}
 \renewcommand{\leq}{\leqslant}
 
-\newcommand{\oldpage}[1]{{\marginpar{\footnotesize\textit{p.~#1}}}}
+\newcommand{\oldpage}[1]{{\marginpar{\footnotesize$\bigg\vert$\,\,\,\,\textit{p.~#1}}}}
 \newcommand{\todo}{{\color{purple}\textbf{TO-DO }}}
 \newcommand{\unsure}[1]{{\color{purple}\textbf{#1}}}
 
@@ -3062,6 +3062,61 @@ imply that $p(sh)=p(s)p(h)$.
     p(s_1)<\alpha(g'_1);
   \]
   consequently,
+  \[
+    p(h_1)|p(s_1)
+    < g'_1\bullet\big(\alpha(g'_1)p(s_1\big)
+  \]
+  and
+  \[\big(p(h_1)|p(s_1)\big)\bullet\big(p(h)|p(s)\big)
+    < k
+  \]
+  which proves that
+  \[
+    \big(p(h_1)|p(s_1)\big)\bullet\big(p(h)|p(s)\big)
+    = \bigcap \big(
+      p(h_1\bullet h)^>\bullet p(s)
+    \big).
+  \]
+  We thus deduce that
+  \[
+    (h_1\bullet h)|s
+    = (h_1|s_1)\bullet(h|s)
+  \]
+  and, finally, that
+  \[
+    h_1\bullet h\in\HH_u.
+  \]
+  Furthermore, $\HH_u$ is saturated under induction in $\HH$, since the relations
+  \[
+    \begin{gathered}
+      h\in\HH_u
+    \\h'<h
+      \textand
+      s'<\alpha(h')
+    \end{gathered}
+  \]
+  imply that
+  \[
+    s'<\alpha(h)
+    \textand
+    p(h|s') < p\big(h'\bullet(\alpha(h')s')\big),
+  \]
+  i.e.
+  \[
+    h|s'
+    < h'\bullet(\alpha(h')s')
+    < h'
+  \]
+  whence
+  \[
+    h|s'
+    = h'|s'
+    \textand
+    h'\in\HH_u.
+  \]
+  \begin{longcomm}{50.1}
+    The proof has to be completed as follows:
+  \end{longcomm}
 \end{proof}
 
 
