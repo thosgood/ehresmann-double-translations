@@ -135,7 +135,7 @@
     {\normalfont\origcit}
 
     \medskip
-    produced with permission from \todo
+    {\noindent}produced with kind permission from Andrée Ehresmann and \todo
 
     \medskip
 
@@ -163,7 +163,7 @@
 
 %% Content %%
 
-\todo turn longcomm into boxed env (border-left?)
+\todo turn longcomm into boxed env (border-left?), or ulcorner+hline and lrcorner+hline (or something similar)
 
 \todo fix spacing in e.g. $(\vsq\CC,\sq p,\vsq\HH,\bar{\Gamma}')$
 
@@ -171,19 +171,11 @@
 
 \todo add citations from collected works notes
 
-\todo add dois/stable urls to bibliography
-
-\todo add comments from the collected works
-
-\todo sort out page numbers appearing on right vs left
-
-\todo table of contents
-
 \todo figure out mathfrak vs mathcal for e.g. $\TT$
 
-\todo replace hlines in longcomm with ulcorner+hline and lrcorner+hline (or something similar)
-
 \todo sort out spacing before lrcorner when a rmenv ends with an enum
+
+\tableofcontents
 
 
 
@@ -3129,9 +3121,9 @@ imply that $p(sh)=p(s)p(h)$.
 \let\clearpage\relax
   \printbibliography[keyword={orig},heading=bibintoc,title=Bibliography]
 
-  \printbibliography[keyword={oc},heading=bibintoc,title={Citations to the collected works}]
+  \printbibliography[keyword={oc},title={Citations to the collected works}]
 
-  \printbibliography[keyword={comm},heading=bibintoc,title={Citations from comments in the collected works}]
+  \printbibliography[keyword={comm},title={Citations from comments in the collected works}]
 \endgroup
 
 \end{document}
