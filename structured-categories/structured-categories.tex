@@ -2958,9 +2958,9 @@ imply that $p(sh)=p(s)p(h)$.
     \[
       \begin{aligned}
         h|s
-        &< h
+        &< h,
       \\\alpha(h|s)
-        &= s
+        &= s,
       \\p(h|s)
         &= p(h)|p(s).
       \end{aligned}
@@ -2981,7 +2981,7 @@ imply that $p(sh)=p(s)p(h)$.
       \big(
         \beta(g)\beta(g')
       \big)\bullet (g'\bullet g^{-1})
-      &= \beta(g)
+      &= \beta(g),
     \\(g'\bullet g^{-1})\big(
         \beta(g)\beta(g')
       \big)
@@ -3002,7 +3002,7 @@ imply that $p(sh)=p(s)p(h)$.
     \[
       \begin{gathered}
         f\cap g
-        < p(h)
+        < p(h),
       \\\alpha(f\cap g)
         = \alpha(f)\cap\alpha(g)
         = s
@@ -3082,7 +3082,7 @@ imply that $p(sh)=p(s)p(h)$.
   \[
     \begin{gathered}
       h\in\HH_u
-    \\h'<h
+    \\h'<h,
       \textand
       s'<\alpha(h')
     \end{gathered}
@@ -3107,9 +3107,91 @@ imply that $p(sh)=p(s)p(h)$.
     h'\in\HH_u.
   \]
   \begin{longcomm}{50.1}
-    The proof has to be completed as follows:
+    \emph{The proof has to be completed as follows.}
+    Now, $p(h|s')\in p(h')^>\bullet p(s')$ implies that $p(h'|s')<p(h|s')$.
+    Conversely, $p(h')^>\bullet p(s')\subset p(h)^>\bullet p(s')$ implies that $p(h|s')<p(h'|s')$;
+    hence $p(h|s')=p(h'|s')$.
+    From the unicity of $h'|s'$ (cf. Comment~49.1), we deduce that $h|s'=h'|s'$, since both have the same image under $p$ and the same source $s'$.
   \end{longcomm}
+  It thus follows that, if $h\in\HH_u$ and $s'_1<\beta(h)$, then $s'_1h\in\HH_u$, and so
+  \[
+    p_u(s'_1h)
+    = p(s'_1h)
+    = p_u(s'_1)p_u(h).
+  \]
+  Then we can apply Corollary~2 of \hyperref[proposition:i-13]{Proposition~13}, and we have that $s'<s$ in $\HH_u$ implies that $s'\subs_{p_u}s$ in $(\CC,p_u,\HH_u,\Gamma)$.
+
+  Conversely, let us show that if $s'\subs_{p_u}s$ then $s'<s$ in $\HH_0$.
+  Set
+  \[
+    j
+    = (s, p(s)p(s'), s')
+    \in \HH_u;
+  \]
+  we have that $p(s')\in p(j)^>\bullet p(s')$;
+  let $g\in p(j)^>\bullet p(s')$ be such that
+  \[
+    g<p(s').
+  \]
+  By using the relations
+  \[
+    \begin{aligned}
+      \alpha(g)
+      &= p(s'),
+    \\\big( p(s')\beta(g) \big)\bullet g
+      &= p(s'),
+    \\g\bullet\big( p(s')\beta(g) \big)
+      &= \beta(g),
+    \end{aligned}
+  \]
+  we obtain that $g=(p(s')\beta(g))^{-1}$ and, since $\CC_\gamma$ is an inductive groupoid, $g=p(s')$.
+  \begin{longcomm}{50.2}
+    \emph{The proof has to be completed as follows.}
+    To conclude that $p(s')=p(j)|p(s')$, we have to prove that $p(s')<f$ for each $f\in p(j)^>\bullet p(s')$.
+    Indeed, the relations
+    \[
+      f\cap p(s')
+      \in p(j)^>\bullet p(s')
+      \textand
+      f\cap p(s')
+      < p(s')
+    \]
+    imply that $p(s')=f\cap p(s')$, whence $p(s')<f$.
+  \end{longcomm}
+  Consequently, $p(s')=p(j)|p(s')$ and there exists
+  \[
+    j|s'
+    = (s_1,p(s'),s')
+    \in\HH
+  \]
+  such that
+  \[
+    s_1<s
+    \textand
+    p(s_1)=p(s').
+  \]
+  By the above, we thus have that $s_1\subs_{p_u}s$, and so $s'=s_1<s$ by Corollary~1 of \hyperref[theorem:i-1]{Theorem~1}.
 \end{proof}
+
+\begin{longcomm}{50.3}
+  The results of this Part~I may be strengthened by replacing the hypotheses ``$\CC$ is inductive'' or ``$\HH$ is inductive'' as follows:
+  \begin{itemize}
+    \item In \hyperref[proposition:i-11]{Proposition~11}:
+      $\CC$ is sub-inductive and
+      \begin{quote}
+        (*)\textsubscript{$\CC$}
+        Any two parallel morphisms admit a meet in $\CC$;
+      \end{quote}
+
+    \item In \hyperref[theorem:i-3]{Theorem~3}, Corollary~3 (of \hyperref[proposition:i-13]{Proposition~13}), and Propositions~\hyperref[proposition:i-13]{13} and \hyperref[proposition:i-14]{14}:
+      Conditions (*)\textsubscript{$\CC$} and (*)\textsubscript{$\HH$};
+
+    \item In Propositions~\hyperref[proposition:i-13]{13} and \hyperref[proposition:i-12]{12} and their Corollaries:
+      $\CC$ and $\HH$ are sub-inductive.
+  \end{itemize}
+
+  Finally, in \hyperref[theorem:i-4]{Theorem~4}, ``$(\CC,<)$ is $(\JJ,\JJ',\JJ'')$-structured'' could be replaced by ``$(\CC,<)$ is $(\JJ^\mathcal{s},\JJ'{}^\mathcal{s},\JJ''{}^\mathcal{s})$-structured'', where $\JJ^\mathcal{s}$ is the category of sub-inductive maps, and $\JJ'{}^\mathcal{s}$ and $\JJ''{}^\mathcal{s}$ its intersections with $\widetilde{\Omega}'$ and $\widetilde{\Omega}''$ (respectively) (\cite{coll69}).
+\end{longcomm}
 
 
 
