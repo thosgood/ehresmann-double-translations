@@ -82,7 +82,7 @@
 \newtheorem*{remarks}{Remarks}
 \newtheorem*{example}{Example}
 \newtheorem*{examples}{Examples}
-\newtheorem*{particular}{Particular Case}
+\newtheorem*{particular}{Particular case}
 
 \usepackage{etoolbox}
 \AtEndEnvironment{definition}{\ignorespacesafterend\hfill$\lrcorner$}
@@ -2170,10 +2170,10 @@ We similarly define the notion of a \emph{left-solving} category of homomorphism
 \begin{examples}
   ---
   \begin{enumerate}
-    \item [\normalfont(1)]
+    \item[\normalfont(1)]
       $(\MM,p_\FF,\FF,\FF_\gamma)$ is right solving.
 
-    \item [\normalfont(2)]
+    \item[\normalfont(2)]
       If, for all $e,E\in\CC_0$ such that $e<E$, we have that $\beta(Ee)=E$, then $(\CC,\Id_\CC,\CC,\CC)$ is left and right solving.
 
     \item[\normalfont(3)]
@@ -3246,8 +3246,47 @@ imply that $p(sh)=p(s)p(h)$.
 \end{examples}
 
 \begin{particular}
-  In
+  In what follows, more often than not, we concern ourselves with the case of a category of homomorphisms $(\MM,p,\HH,\Gamma)$, where $\MM$ is the category of maps constructed in \hyperref[section:i.5]{§I.5} and where $\Gamma$ is the groupoid of invertible elements of $\HH$.
+  We suppose $\MM$ to be endowed with the order relation
+  \[
+    \begin{gathered}
+      (E',f,E) < (E'_1,f_1,E_1)
+      \qquad\text{if and only if}
+    \\\text{$E\subset E_1$, $E'\subset E'_1$, and $f$ is a restriction of $f_1$.}
+    \end{gathered}
+  \]
+
+  Then $\MM$ is an inductive category such that $\beta(Ee)=E$ for all $e,E\in\MM_0$ with $e<E$;
+  consequently, the relations
+  \[
+    \big[\text{$e<E$ in $\MM_0$}\big]
+    \textand
+    \big[\text{$e\subs E$ in $(\MM,\Id_\MM,\MM,\MM)$}\big]
+  \]
+  are equivalent.
+
+  In $(\MM,p,\HH,\Gamma)$, we have that $s\relrhobar S$ if and only if
+  \[
+    p(s)\subset p(S)
+    \textand
+    (S,\iota,s)\in\HH.
+  \]
+
+  For $s$ to be a substructure of $S$ in $(\MM,p,\HH,\Gamma)$, it is necessary and sufficient that the following conditions be satisfied:
+  \begin{enumerate}
+    \item[\normalfont(1)]
+      $p(s)\subset P(S)$ and $(S,\iota,s)\in\HH$;
+    \item[\normalfont(2)]
+      the conditions $(S,g,S')\in\HH$ and $g(p(S))\subset p(S)$ imply that
+      \[
+        (s,g,S')\in\HH.
+      \]
+  \end{enumerate}
 \end{particular}
+
+\begin{proposition}{15}
+  If
+\end{proposition}
 
 
 
