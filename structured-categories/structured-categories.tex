@@ -40,30 +40,64 @@
 %% Environments %%
 
 \usepackage{amsthm}
+\usepackage[capitalize,nameinlink]{cleveref}
 
 \newenvironment{translator}[1]
   {\phantomsection\par\medskip\noindent\small\textbf{#1.}\itshape}
   {\par\medskip}
 
-\newenvironment{itenv}[1]
-  {\phantomsection\par\medskip\noindent\textbf{#1.}\itshape}
-  {\par\medskip}
+\theoremstyle{plain}
 
-\newenvironment{rmenv}[1]
-  {\phantomsection\par\medskip\noindent\textbf{#1.}\rmfamily}
-  {\par\medskip}
+\newtheorem{innertheorem}{Theorem}
+% \newtheorem*{innertheorem*}{Theorem}
+\newenvironment{theorem}[1]
+  {\renewcommand\theinnertheorem{#1}\innertheorem}
+  {\endinnertheorem}
+  % {\expandafter\ifx\expandafter\relax
+  % \renewcommand\theinnertheorem{#1}\innertheorem\relax\else\innertheorem*\fi}
+  % {\expandafter\ifx\expandafter\relax
+  % \endinnertheorem\relax\else\endinnertheorem*\fi}
+\newtheorem*{theorem*}{Theorem}
+
+\newtheorem{innerproposition}{Proposition}
+\newenvironment{proposition}[1]
+  {\renewcommand\theinnerproposition{#1}\innerproposition}
+  {\endinnerproposition}
+\newtheorem*{proposition*}{Proposition}
+
+\newtheorem{innercorollary}{Corollary}
+\newenvironment{corollary}[1]
+  {\renewcommand\theinnercorollary{#1}\innercorollary}
+  {\endinnercorollary}
+\newtheorem*{corollary*}{Corollary}
+
+\theoremstyle{definition}
+
+\newtheorem{innerdefinition}{Definition}
+\newenvironment{definition}[1]
+  {\renewcommand\theinnerdefinition{#1}\innerdefinition}
+  {\endinnerdefinition}
+
+\newtheorem*{remark}{Remark}
+\newtheorem*{remarks}{Remarks}
+\newtheorem*{example}{Example}
+\newtheorem*{examples}{Examples}
+\newtheorem*{particular}{Particular Case}
 
 \usepackage{etoolbox}
-\AtEndEnvironment{rmenv}{\ignorespacesafterend\hfill$\lrcorner$}
+\AtEndEnvironment{definition}{\ignorespacesafterend\hfill$\lrcorner$}
 
 \makeatletter
 \def\blfootnote{\xdef\@thefnmark{}\@footnotetext}
 \makeatother
 \newcommand{\comm}[2]{{\normalfont\textsuperscript{[#1]}}\blfootnote{\label{footnote:#1}[#1] #2}}
 
+\usepackage{mdframed}
+
 \newenvironment{longcomm}[1]
-  {\bigskip\hrule\phantomsection\par\bigskip\noindent[#1]\rmfamily}
-  {\par\bigskip\hrule\bigskip}
+  {\noindent[#1]\rmfamily}
+  {}
+\surroundwithmdframed[innertopmargin=10pt,innerbottommargin=10pt]{longcomm}
 
 
 %% Shortcuts %%
@@ -163,8 +197,6 @@
 
 %% Content %%
 
-\todo turn longcomm into boxed env (border-left?), or ulcorner+hline and lrcorner+hline (or something similar)
-
 \todo fix spacing in e.g. $(\vsq\CC,\sq p,\vsq\HH,\bar{\Gamma}')$
 
 \todo decide between $\bar{\rHH}$ vs $\overline{\rHH}$
@@ -174,6 +206,8 @@
 \todo figure out mathfrak vs mathcal for e.g. $\TT$
 
 \todo sort out spacing before lrcorner when a rmenv ends with an enum
+
+\todo switch from hyperref to cref
 
 \tableofcontents
 
@@ -261,7 +295,7 @@ The restriction of $F$ to the class $\CC_0^\perp$, considered as a map from $\CC
 
 Since the notion of species of structures \cite{3a} is essential in this article, we will recall the definition and main properties.
 
-\begin{rmenv}{Definition 1}
+\begin{definition}{1}
 \label{definition:i-1}
   We say that a category $\CC$ is a \emph{category of operators on a class $\Sigma_0$} if we have defined a composition law $(f,z)\mapsto fz$ for certain pairs $(f,z)\in\CC\times\Sigma_0$ such that $fz\in\Sigma_0$ and such that the following axioms are satisfied:
   \begin{enumerate}
@@ -285,7 +319,7 @@ Since the notion of species of structures \cite{3a} is essential in this article
           For all $f\in\CC$, there exists at least one $z\in\Sigma_0$ such that $fz$ is defined.
       \end{enumerate}
   \end{enumerate}
-\end{rmenv}
+\end{definition}
 
 \todo{fix the spacing before the corner symbol in the above rmenv}
 
@@ -293,14 +327,14 @@ These axioms imply that, for all $z\in\Sigma_0$, there exists exactly one $e\in\
 we thus obtain a map $p_0\colon z\mapsto e$ from $\Sigma_0$ to $\CC_0$;
 we say that $z$ is a \emph{structure} on $p_0(z)$.
 
-\begin{rmenv}{Definition 2}
+\begin{definition}{2}
 \label{definition:i-2}
   Let $\Sigma_0$ be a class, and $\CC$ a category;
   we say that $\Sigma_0$ is a \emph{species of structures over $\CC$} if we have a subcategory $\CC_1$ of $\CC$ that is a category of operators on $\Sigma_0$;
   let $p_0$ be the corresponding map from $\Sigma_0$ to $\CC_0$;
   we also say that $(\CC,p_0,\Sigma_0)$ is a \emph{species of structures}.
   If, further, $\CC_1=\CC$, then we say that $[\CC,p_0,\Sigma_0]$ is a \emph{species of structures on $\CC$}.
-\end{rmenv}
+\end{definition}
 
 Let $(\CC,p_0,\Sigma_0)$ be a species of structures.
 Let $\Sigma$ be the class of pairs $(f,z)\in\CC\times\Sigma_0$ such that $fz$ is defined, i.e. such that $\alpha(f)=p_0(z)$.
@@ -312,7 +346,7 @@ Let $\Sigma$ be the class of pairs $(f,z)\in\CC\times\Sigma_0$ such that $fz$ is
   Hence the notion of a \emph{strong species of structures}: a species of structures in which the acting subcategory contains each $f$ whose source is in it;
   equivalently, the composite $fz$ exists if and only if $\alpha(f)=p_0(z)$.
 
-  Strong species of structures are characterised by axioms~(1), (2), (3), and (4a) --- but not (4b) --- of \hyperref[definition:i-1]{Definition~1} for an acting category (cf. \hyperref[remark:i-2]{Remark~2} in \hyperref[section:i.3]{§I.3}).
+  Strong species of structures are characterised by axioms~(1), (2), (3), and (4a) --- but not (4b) --- of \cref{definition:i-1} for an acting category (cf. \hyperref[remark:i-2]{Remark~2} in \hyperref[section:i.3]{§I.3}).
   The corresponding functor $p\colon\Sigma\to\CC$ from the hypermorphisms category satisfies the condition that the diagram
   \[
     \begin{tikzcd}
@@ -459,7 +493,7 @@ We can show \cite{3a} that the class $\Sigma_0$, given by the union of the class
 \]
 We say that $(\CC,F)$ is a \emph{a pair defining a species of structures}, namely the species of structures $\Sigma_0$ constructed above.
 
-\begin{rmenv}{Remarks}
+\begin{remarks}
   ---
   \begin{enumerate}
     \item[\normalfont(1)]
@@ -497,7 +531,7 @@ We say that $(\CC,F)$ is a \emph{a pair defining a species of structures}, namel
       if $e\in\CC_0^\bullet$ then the triple $(\CC^\bullet,\beta,\alpha^{-1}(e))$ is a sub-species of structures \cite{3a} of $(\CC^\bullet,\beta,\CC)$.
       \comm{25.2}{The set-valued functor associated to $(\CC^\bullet,\beta,\alpha^{-1}(e))$ is the partial Hom functor $\Hom(e,-)\colon\CC\to\mathsf{Set}$.}%
   \end{enumerate}
-\end{rmenv}
+\end{remarks}
 
 \begin{longcomm}{25.1}
   \emph{Motivations for (internal) actions.}
@@ -586,12 +620,12 @@ if and only if one of the following conditions is satisfied:
 \hyperref[remark:i-2]{Remark~2} then allows us to extend $F$ to a functor $(\MM,\bar{F},\CC')$;
 this functor $\bar{F}$, which is identical to $(\MM,\bar{F}_a,\CC')$, is representable.\comm{26.1}{Regarding $\CC'$, Bénabou gives the following criterion: $F\colon\CC\to\SS$ is representable if and only if $\CC\hookrightarrow\CC'$ has a left adjoint \cite{comm5}.}
 
-\begin{rmenv}{Definition 3}
+\begin{definition}{3}
 \label{definition:i-3}
   Let $\CC$ be a category, and $(\MM,\gamma,\KK)$ a functor.
   We define a \emph{species of structures dominated by $(\gamma,\KK)$} to be a pair $(\CC,F)$ such that $(\KK,F,\alpha(F))$ is a functor and $(\CC,\gamma F)$ defines a species of structures;
   the species of structures defined by $(\CC,\gamma F)$ is called the \emph{species of structures under $(\CC,F)$}.
-\end{rmenv}
+\end{definition}
 
 \begin{longcomm}{26.2}
   \emph{Enriched species of structures.}
@@ -642,17 +676,17 @@ this functor $\bar{F}$, which is identical to $(\MM,\bar{F}_a,\CC')$, is represe
   In \cite[Appendix]{coll120}, we proved that the category of $\mathbf{V}$-categories (with small enough classes of objects) is equivalent to the category of internal category whose object of objects is a coproduct of copies of $I$.
   Similarly:
 
-  \begin{itenv}{Proposition~A}
+  \begin{proposition}{A}
     The category of $\mathbf{V}$-species of structures is equivalent to the category of pseudo-discrete internal species of structures in $\mathbf{V}$ (where pseudo-district means that the object of structures is the coproduct of the fibres).
-  \end{itenv}
+  \end{proposition}
 
   Now let $(\CC,F)$ be a species of structures dominated by $(\mathbf{V},\gamma)$, where $\gamma=\Hom(I,-)$.
   If $\gamma$ admits a left adjoint that preserve products, then there exists a free $\mathbf{V}$-category $\mathbf{C}$ generated by $\CC$, and the $F(e)$ determine a ``free'' $\mathbf{V}$-species of structures over $\mathbf{C}$.
   Hence:
 
-  \begin{itenv}{Proposition~B}
+  \begin{proposition}{B}
     The category of species of structures that are dominated by $(\mathbf{V},\gamma)$ is equivalent to the category of free $\mathbf{V}$-species of structures over a free $\mathbf{V}$-category.
-  \end{itenv}
+  \end{proposition}
 
   So, in this case, the notion of internal species of structures encompasses the notions of enriched and dominated species of structures.
 \end{longcomm}
@@ -667,10 +701,10 @@ let $(\MM,p_\FF,\FF)$ be the functor defined by
   \longmapsto (\bSS,G,\SS).
 \]
 
-\begin{rmenv}{Definition 4}
+\begin{definition}{4}
 \label{definition:i-4}
   A species of structures dominated by $(p_\FF,\FF)$ is called a \emph{species of morphisms}.
-\end{rmenv}
+\end{definition}
 
 \begin{longcomm}{26.3}
   Species of morphisms are called ``category of categories'' in \cite{comm28}.
@@ -713,10 +747,10 @@ Consider the following conditions:
     \end{enumerate}
 \end{enumerate}
 
-\begin{itenv}{Proposition 1}
+\begin{proposition}{1}
 \label{proposition:i-1}
   Conditions~(a), (b), and (c) above are equivalent (where condition~(a) is interpreted independently from the choice of $\FF$).
-\end{itenv}
+\end{proposition}
 
 \begin{proof}
   Conditions~(a) and (b) are equivalent by definition.
@@ -741,9 +775,9 @@ Consider the following conditions:
   Thus (b) is satisfied.
 \end{proof}
 
-\begin{itenv}{Corollary}
+\begin{corollary}{}
   If we suppose conditions~(c\textsubscript{1}) and (c\textsubscript{2}) to be satisfied, and if $p(\Sigma)$ (resp. $\Sigma_0^\perp$) is a groupoid, then condition~(c\textsubscript{3}) is also satisfied.
-\end{itenv}
+\end{corollary}
 
 \begin{proof}
   If $(f,z_0)\in\Sigma$ and $z_0\in(\Sigma_0)_0^\perp$ then
@@ -802,11 +836,11 @@ Let $\omega$ be the map
 \]
 then $(\MM,\omega,\widetilde{\Omega})$ is a functor.
 
-\begin{rmenv}{Definition 5}
+\begin{definition}{5}
 \label{definition:i-5}
   If a species of structures $(\CC,F)$ is dominated by $(\omega,\widetilde{\Omega})$, then we call it an \emph{ordered species of structures} \unsure{or species of ordered structures?};
   if $\CC$ further defines an order on $\CC_0$, then we say that $(\CC,F)$ is a \emph{bi-ordered species of structures} \unsure{again, which noun does bi-ordered modify?}.
-\end{rmenv}
+\end{definition}
 
 Let $((\bar{A},<),h,(A,<))\in\widetilde{\Omega}$;
 let $\AA$ (resp. $\bar{\AA}$) be the category of pairs defining the order of $A$ (resp. of $\bar{A}$);
@@ -839,7 +873,7 @@ where $(\CC,F)$ is an ordered species of structures, is a bijection from the cla
 \subsection{Reminder on categories of homomorphisms}
 \label{section:i.4}
 
-\begin{rmenv}{Definition 6}
+\begin{definition}{6}
 \label{definition:i-6}
   Let $\CC$ and $\HH$ be two categories;
   we say \cite{3a} that $(\CC,p,\HH,\SS)$ is a \emph{category of homomorphisms} if the following conditions are satisfied:
@@ -865,12 +899,12 @@ where $(\CC,F)$ is an ordered species of structures, is a bijection from the cla
       \]
       imply that $h=h'$.
   \end{enumerate}
-\end{rmenv}
+\end{definition}
 
 \todo{spacing at the end of the enum inside the rmenv above as well}
 
 Let $(\CC,p,\HH,\SS)$ be a category of homomorphisms.
-An element $h\in\HH$ can be identified, by condition~(4) of \hyperref[definition:i-6]{Definition~6}, with a triple $(S',f,S)$, where
+An element $h\in\HH$ can be identified, by condition~(4) of \cref{definition:i-6}, with a triple $(S',f,S)$, where
 \[
   \begin{aligned}
     S
@@ -925,10 +959,10 @@ then we say that $\HH$ is \emph{saturated over $\CC$}.
   If $\HH$ is a category of homomorphisms with $\SS$ the groupoid of isomorphisms of $\HH$, then $\HH$ is equivalent to a saturated category of homomorphisms.
   Indeed, more generally:
 
-  \begin{itenv}{Theorem}
+  \begin{theorem*}
     Let $p\colon\HH\to\CC$ be any functor.
-    Then there exists a smallest isomorphism-creating functor $q\colon\widetilde{\HH}\to\CC$ extending $p$, and $\HH$ is equivalent to $\widetilde{\HH}$.
-  \end{itenv}
+    There exists a smallest isomorphism-creating functor $q\colon\widetilde{\HH}\to\CC$ extending $p$, and $\HH$ is equivalent to $\widetilde{\HH}$.
+  \end{theorem*}
 
   We call such $q$ the (maximal) \emph{enlargement of $p$}.
   It is constructed as follows.
@@ -997,7 +1031,7 @@ If $h$ is such that
 \]
 and if $p(h)$ is the canonical injection from $p(\alpha(h))$ to $p(\beta(h))$, then we write $h$ as $(\beta(h),\iota,\alpha(h))$, i.e. $\iota$ denotes the identity map on $p(\alpha(h))$.
 
-\begin{rmenv}{Examples}
+\begin{examples}
   ---
   \begin{enumerate}
     \item[\normalfont(1)]
@@ -1023,7 +1057,7 @@ and if $p(h)$ is the canonical injection from $p(\alpha(h))$ to $p(\beta(h))$, t
       Let $\CC$ be any category;
       then $(\CC,\Id_\CC,\CC,\CC)$ is a category of homomorphisms, where $\Id_\CC$ denotes the identity functor on $\CC$.
   \end{enumerate}
-\end{rmenv}
+\end{examples}
 
 
 
@@ -1040,7 +1074,7 @@ On $\HH_0$, consider the relation $\relrho$
 \]
 This relation evidently implies that $p(s)=p(s')$.
 
-\begin{itenv}{Proposition 2}
+\begin{proposition}{2}
 \label{proposition:i-2}
   The relation $\relrho$ is an order relation on $\HH_0$, and $(\CC,p,\Gamma)$ is the species of structure under $(\CC,F)$ such that\comm{30.1}{To be precise, one should read $p\iota$ instead of $p$ here. Indeed, in several instances, the restriction of a functor is denoted by the same letter as the functor itself; when the source and target are clearly indicated, this does not lead to any confusion, and so we shall not always mention it.}
   \[
@@ -1049,7 +1083,7 @@ This relation evidently implies that $p(s)=p(s')$.
     \qquad\text{for all $e\in\alpha(F)_0$}
   \]
   where $\relrho_e$ is the order relation induced by $\relrho$ on $p^{-1}(e)$.
-\end{itenv}
+\end{proposition}
 
 \begin{proof}
   If $s\relrho s'$ and $s'\relrho s''$ then
@@ -1111,7 +1145,7 @@ From now on, suppose that $\CC$ is an inductive category (in the sense of \hyper
 If $g,f\in\CC$, then their pseudo-product in $\CC$, which is always defined (cf. \hyperref[section:ii]{§II}, \hyperref[proposition:i-22][Proposition~22]), is denoted by $gf$.
 
 \begin{longcomm}{31.1}
-  Up to (but not including) \hyperref[definition:i-9]{Definition~9}, the text remains valid without any modification \emph{if the hypothesis that $\CC$ is inductive is replaced by the hypothesis that $\CC$ is a sub-inductive category} (cf. \cite{coll69}), since all the pseudo-products used here still exist.
+  Up to (but not including) \cref{definition:i-9}, the text remains valid without any modification \emph{if the hypothesis that $\CC$ is inductive is replaced by the hypothesis that $\CC$ is a sub-inductive category} (cf. \cite{coll69}), since all the pseudo-products used here still exist.
   This remark is important: some results will be applied to the category $\FF$ of categories, which is sub-inductive for the order ``is a subcategory of'', but not inductive (two subcategories of a category admit a meet, while two categories may not admit a larger common subcategory).
 \end{longcomm}
 
@@ -1137,11 +1171,11 @@ if, further, $(S,p(S)p(s),s)\in\HH$, then we also have that
   = p(S).
 \]
 
-\begin{itenv}{Proposition 3}
+\begin{proposition}{3}
 \label{proposition:i-3}
   The relation $\relrhobar$ is an order relation on $\HH_0$;
   if $s\relrhobar S$, then $s$ is a sub-object \cite{5} of $S$ in $\HH$.
-\end{itenv}
+\end{proposition}
 
 \begin{proof}
   Suppose that $s\relrhobar S$.
@@ -1192,7 +1226,7 @@ if, further, $(S,p(S)p(s),s)\in\HH$, then we also have that
 
 The notion of \emph{substructure} that we will now define makes precise the notion of sub-object of a category.
 
-\begin{rmenv}{Definition 7}
+\begin{definition}{7}
 \label{definition:i-7}
   Let $S\in\HH_0$;
   we say that $s\in\HH_0$ is a \emph{substructure of $S$ in $(\CC,p,\HH,\SS)$}, and we write $s\subs_p S$, if the following conditions are satisfied:
@@ -1218,7 +1252,7 @@ The notion of \emph{substructure} that we will now define makes precise the noti
   \]
   and we say that $S\sups_p s$ is a \emph{$p$-injection}.
   We write $H_{\subs_p}$ to mean the class of $p$-injections.
-\end{rmenv}
+\end{definition}
 
 If there is no risk of confusion, then we simply say that $s$ is a substructure of $S$ in $\HH$, and we write $s\subs S$ and $S\sups s$ instead of $s\subs_p S$ and $S\sups_p s$ (respectively).
 
@@ -1238,7 +1272,7 @@ If there is no risk of confusion, then we simply say that $s$ is a substructure 
   \todo
 \end{longcomm}
 
-\begin{itenv}{Proposition 4}
+\begin{proposition}{4}
 \label{proposition:i-4}
   Let $s,S\in\HH_0$;
   then $s\subs_p S$ if and only if the following conditions are satisfied:
@@ -1248,11 +1282,11 @@ If there is no risk of confusion, then we simply say that $s$ is a substructure 
     \item[\normalfont(2\textquotesingle)]
       If $(S,(p(S)p(s))\bullet g',S')\in\HH$ then $(s,g',S')\in\HH$.
   \end{enumerate}
-\end{itenv}
+\end{proposition}
 
 \begin{proof}
   Suppose that $s\subs_p S$;
-  condition~(1) of \hyperref[definition:i-7]{Definition~7} implies that $s\relrhobar S$ in $(\CC,p,\HH,\SS)$.
+  condition~(1) of \cref{definition:i-7} implies that $s\relrhobar S$ in $(\CC,p,\HH,\SS)$.
   Let
   \[
     (S,p(S)p(s)\bullet g',S')\in\HH.
@@ -1300,7 +1334,7 @@ If there is no risk of confusion, then we simply say that $s$ is a substructure 
     \end{aligned}
   \]
   imply that $g'=g'_1$.
-  It then follows from condition~(2) of \hyperref[definition:i-7]{Definition~7 }that $(s,g',S')\in\HH$, and so condition~(2\textquotesingle) is satisfied.
+  It then follows from condition~(2) of \cref{definition:i-7} that $(s,g',S')\in\HH$, and so condition~(2\textquotesingle) is satisfied.
   Conversely, suppose that conditions~(1\textquotesingle) and (2\textquotesingle) are satisfied;
   let $(S,g,S')\in\HH$ be such that
   \[
@@ -1324,7 +1358,7 @@ If there is no risk of confusion, then we simply say that $s$ is a substructure 
   i.e. $s\subs_p S$.
 \end{proof}
 
-\begin{rmenv}{Examples}
+\begin{examples}
   ---
   \begin{enumerate}
     \item[\normalfont(1)]
@@ -1353,10 +1387,10 @@ If there is no risk of confusion, then we simply say that $s$ is a substructure 
     \item[\normalfont(5)]
       If $s\subs_p S$, then $p(s)\subs p(S)$ in $(\CC,\Id_\CC,\CC,\CC)$.
   \end{enumerate}
-\end{rmenv}
+\end{examples}
 
-\begin{itenv}{Theorem 1}
-\label{theorem:1}
+\begin{theorem}{1}
+\label{theorem:i-1}
   \oldpage{362}
   The relation $s\subs_p S$ is a relation order in $\HH_0$.
   Let $s,s',S\in\HH_0$;
@@ -1374,7 +1408,7 @@ If there is no risk of confusion, then we simply say that $s$ is a substructure 
     s'\subs_p s
     \quad\text{(resp. $s'\relrhobar s$)}.
   \]
-\end{itenv}
+\end{theorem}
 
 \begin{proof}
   Since $\relrhobar$ is an order relation, if $s\subs S$ and $S\subs s$, then $s=S$.
@@ -1458,12 +1492,12 @@ If there is no risk of confusion, then we simply say that $s$ is a substructure 
   \]
 \end{proof}
 
-\begin{itenv}{Corollary 1}
+\begin{corollary}{1}
   If $s\subs_p S$, $s'\subs_p S$, and $p(s)=p(s')$, then $s=s'$.
-\end{itenv}
+\end{corollary}
 
 \begin{proof}
-  Indeed, by \hyperref[theorem:1]{Theorem~1}, these conditions imply that
+  Indeed, by \cref{theorem:i-1}, these conditions imply that
   \[
     s\subs s'
     \textand
@@ -1472,7 +1506,7 @@ If there is no risk of confusion, then we simply say that $s$ is a substructure 
   whence $s=s'$.
 \end{proof}
 
-\begin{itenv}{Corollary 2}
+\begin{corollary}{2}
   Let $s\subs_p S$;
   then $s$ is the largest element (with respect to the relation $\relrho$) of the class of structures $s'$ such that
   \[
@@ -1480,9 +1514,9 @@ If there is no risk of confusion, then we simply say that $s$ is a substructure 
     \textand
     p(s') = p(s).
   \]
-\end{itenv}
+\end{corollary}
 
-\begin{rmenv}{Definition 8}
+\begin{definition}{8}
 \label{definition:i-8}
   Let $\bar{h},\bar{h}'\in\HH$;
   we say that $\bar{h}'$ is a \emph{sub-homomorphism of $\bar{h}$ in $(\CC,p,\HH,\SS)$}, and we write $\bar{h}'\subs_p\bar{h}$ or $\bar{h}'\subs\bar{h}$, if the following conditions are satisfied:
@@ -1496,9 +1530,9 @@ If there is no risk of confusion, then we simply say that $s$ is a substructure 
       &< p(\bar{h}).
     \end{aligned}
   \]
-\end{rmenv}
+\end{definition}
 
-\begin{itenv}{Proposition 5}
+\begin{proposition}{5}
 \label{proposition:i-5}
   In $\HH$, the relation $\bar{h}'\subs\bar{h}$ is an order relation that satisfies the following conditions:
   \begin{enumerate}
@@ -1512,10 +1546,10 @@ If there is no risk of confusion, then we simply say that $s$ is a substructure 
     \item[\normalfont(4)]
       If $\bar{h}'\subs_p\bar{h}$, $\bar{h}''\subs_p\bar{h}$, and $p(\bar{h}'')\subs p(\bar{h}')$ in $(\CC,\Id_\CC,\CC,\CC)$, then $\bar{h}''\subs_p\bar{h}'$.
   \end{enumerate}
-\end{itenv}
+\end{proposition}
 
 \begin{proof}
-  Conditions~(1) and (3) imply that $(\HH,\subs)$ is an ordered category (see \hyperref[section:ii]{§II}, \hyperref[definition:i-18]{Definition~18}).
+  Conditions~(1) and (3) imply that $(\HH,\subs)$ is an ordered category (see \hyperref[section:ii]{§II}, \cref{definition:i-18}).
   Condition~(2) implies that $p$ belongs to $\widetilde{\Omega}'$ (see \hyperref[section:ii.6]{§II.6}), i.e. (§IV) that $(\HH,\subs)$ is an ordered category over $(\CC,<)$.\comm{35.1}{Charles never published §IV, but the results that he intended to put in it are scattered across several papers, e.g. ordered categories over an ordered category are considered in \cite{coll75}.}
 \end{proof}
 
@@ -1524,14 +1558,14 @@ If there is no risk of confusion, then we simply say that $s$ is a substructure 
   Indeed, a family of objects bounded by $s$ and $s'$ may have two different joins in the set of elements lesser than both $s$ and $s'$.
 \end{longcomm}
 
-\begin{itenv}{Corollary}
+\begin{corollary*}
   If $\CC$ is \unsure{completely right regular}, and if, for all $s\in\HH_0$, the class of elements $p(s')$, where $s'\subs_p s$, is an inductive subclass of $\CC_0$, then $(\HH,\subs)$ is an inductive category over $(\CC,<)$.
-\end{itenv}
+\end{corollary*}
 
-\begin{itenv}{Proposition}
+\begin{proposition*}
   Suppose that $\bar{h},\bar{h}'\in\Gamma$, $\alpha(\bar{h}')\subs_p\alpha(\bar{h})$, and $(p(\bar{h}')<p(\bar{h})$;
   then also $\beta(\bar{h}')\subs_p\beta(\bar{h})$, and, consequently, $\bar{h}'\subs_p\bar{h}$.
-\end{itenv}
+\end{proposition*}
 
 \begin{proof}
   \oldpage{364}
@@ -1627,7 +1661,7 @@ If there is no risk of confusion, then we simply say that $s$ is a substructure 
   \]
 \end{proof}
 
-\begin{itenv}{Proposition 7}
+\begin{proposition}{7}
 \label{proposition:i-7}
   Let
   \[
@@ -1654,7 +1688,7 @@ If there is no risk of confusion, then we simply say that $s$ is a substructure 
     \bar{h}'\subs_p\bar{h}.
   \]
   If, further, $\bar{h}$ and $h'$ are invertible, then $\bar{h}'\in\Gamma$.
-\end{itenv}
+\end{proposition}
 
 \begin{proof}
   We have that
@@ -1713,7 +1747,7 @@ Let $\vsq\CC$ be the longitudinal category of quartets of $\CC$ (see \hyperref[s
   The category $\vsq\CC$ is also called the \emph{category of arrows of $\CC$} (i.e. by the name of its objects), and denoted by $\mathsf{Fl}\CC$ or $\mathsf{Ar}\CC$.
 \end{longcomm}
 
-\begin{itenv}{Proposition 8}
+\begin{proposition}{8}
 \label{proposition:i-8}
   Let $h,h'\in\CC$, and let
   \[
@@ -1737,7 +1771,7 @@ Let $\vsq\CC$ be the longitudinal category of quartets of $\CC$ (see \hyperref[s
     \item[\normalfont(3)]
       $s'<s$, $s'_1<s_1$, and $(h,s_1s'_1,ss',h')\in\sq\CC$.
   \end{enumerate}
-\end{itenv}
+\end{proposition}
 
 \begin{proof}
   Indeed, conditions~(1) and (2) are equivalent by the above.
@@ -1801,7 +1835,7 @@ Let $\bar{\UU}$ be the subcategory of $\vsq\HH$ consisting of the quartets
 such that $s'\subs_p s$ and $s'_1\subs_p s_1$.
 Let $\bar{\UU}'$ be the subcategory of $\UU$ consisting of the quartets in $\UU$ such that $\bar{h},\bar{h}'\in\Gamma$.
 
-\begin{itenv}{Proposition 9}
+\begin{proposition}{9}
 \label{proposition:i-9}
   We have $\bar{h}'\subs\bar{h}$ in $(\CC,p,\HH,\SS)$ if and only if there exists
   \[
@@ -1814,7 +1848,7 @@ Let $\bar{\UU}'$ be the subcategory of $\UU$ consisting of the quartets in $\UU$
     \right) \in \UU;
   \]
   in this case, $\sq p(\bar{\rHH})\in\UU$.
-\end{itenv}
+\end{proposition}
 
 \begin{proof}
   If $\bar{h}'\subs_p\bar{h}$, then
@@ -1835,7 +1869,7 @@ If $\bar{h}'\subs\bar{h}$ in $(\CC,p,\HH,\SS)$, then the corresponding quartet $
 In $\HH$ (resp. in $\CC$), we say that a triple $(g_1,f_1,f)$  is \emph{included in a quartet} if there exists a quartet $(g_1,f_1,f,g)$.
 \hyperref[proposition:i-7]{Proposition~7} is equivalent to:
 
-\begin{itenv}{Proposition 7~\emph{bis}}
+\begin{proposition}{7~\emph{bis}}
 \label{proposition:i-7bis}
   For a triplet
   \[
@@ -1858,7 +1892,7 @@ In $\HH$ (resp. in $\CC$), we say that a triple $(g_1,f_1,f)$  is \emph{included
   be included in a quartet $\rHH$;
   in this case, we have that $\bar{\rHH}\in\bar{\UU}$ and $\rHH\in\UU$.
   If, further, $H\in\UU'$ and $\bar{h}\in\Gamma$, then $\bar{\rHH}\in\bar{\UU}'$.
-\end{itenv}
+\end{proposition}
 
 If $\mathrm{T}=(\bar{h},s_1\subs_p s'_1,s\subs_p s')$ is included in a quartet, then the quartets $\bar{\rHH}$ and $\rHH$ in which $\mathrm{T}$ and $p^3(\mathrm{T})$ are included are unique;
 consequently, we have that
@@ -1904,7 +1938,7 @@ Let $\HH'$ be a subcategory of $\HH$ that contains $\HH_0$;
 let $p'$ be the restriction of $p$ to $\HH'$.
 Suppose that $(\CC,p',\HH',\HH'\cap\Gamma)$ is a category of homomorphisms.
 
-\begin{itenv}{Proposition 10}
+\begin{proposition}{10}
 \label{proposition:i-10}
   The following conditions are equivalent:
 
@@ -1913,7 +1947,7 @@ Suppose that $(\CC,p',\HH',\HH'\cap\Gamma)$ is a category of homomorphisms.
 
     \item[\normalfont($\sigma_1$)] $\HH'\vdash_p(\HH_0\times\HH_0)\in\HH'$, i.e. if $\bar{h}'\in\HH'$, then every $p$-restriction of $\bar{h}'$ belongs to $\HH'$.
   \end{enumerate}
-\end{itenv}
+\end{proposition}
 
 \begin{proof}
   If ($\sigma$) is satisfied, then the category of $p'$-injections contains $\HH_{\subs_p}$, and ($\sigma_1$) is satisfied.
@@ -1935,7 +1969,7 @@ Suppose that $(\CC,p',\HH',\HH'\cap\Gamma)$ is a category of homomorphisms.
   Thus $s\subs_{p'}S$ in $(\CC,p',\HH',\HH'\cap\Gamma)$.
 \end{proof}
 
-We will later see (\hyperref[§II]{section:ii}, \hyperref[theorem:16]{Theorem~16}) that $\vsq\CC$ is an inductive category for the order relation
+We will later see (\hyperref[§II]{section:ii}, \cref{theorem:ii-16}) that $\vsq\CC$ is an inductive category for the order relation
 \[
   (g'_1,f'_1,f',g')
   < (g_1,f_1,f,g)
@@ -1964,14 +1998,14 @@ for all $\bar{h}\in\HH$, and
 \]
 for all $h\in\CC$.
 
-\begin{itenv}{Theorem 2}
-\label{theorem:2}
+\begin{theorem}{2}
+\label{theorem:i-2}
   The following conditions are equivalent:
   \begin{enumerate}
     \item[\normalfont(1)] $[\bar{h}']\subs_{\sq p}[\bar{h}]$ and $[\beta(\bar{h}')]\subs_{\sq p}[\beta(\bar{h})]$ in $(\vsq\CC,\sq p,\vsq\HH,\bar{\Gamma}')$;
     \item[\normalfont(2)] $\bar{h}'$ is a sub-homomorphism of $\bar{h}$ in $(\CC,p,\HH,\SS)$.
   \end{enumerate}
-\end{itenv}
+\end{theorem}
 
 \begin{proof}
   Let
@@ -2087,20 +2121,20 @@ for all $h\in\CC$.
   If, further, $[s'_1]\subs_{\sq p}[s_1]$, then we similarly have that $s'_1\subs_p s_1$, and so $\bar{h}'\subs\bar{h}$ in $(\CC,p,\HH,\SS)$.
 \end{proof}
 
-\begin{itenv}{Corollary 1}
+\begin{corollary}{1}
   Let $\bar{h},\bar{h}'\in\Gamma$.
   Then $\bar{h}'\subs_p\bar{h}$ if and only if $[\bar{h}']\subs_{\sq p}[\bar{h}]$.
-\end{itenv}
+\end{corollary}
 
 \begin{proof}
-  Indeed, if $[\bar{h}']\subs_{\sq p}[\bar{h}]$ then the proof of \hyperref[theorem:2]{Theorem~2} shows that we have $\alpha(\bar{h}')\subs_p\alpha(\bar{h})$, and it follows from \hyperref[proposition:i-6]{Proposition~6} that $\bar{h}'\subs_p\bar{h}$.
+  Indeed, if $[\bar{h}']\subs_{\sq p}[\bar{h}]$ then the proof of \hyperref{theorem:i-2} shows that we have $\alpha(\bar{h}')\subs_p\alpha(\bar{h})$, and it follows from \cref{proposition:i-6} that $\bar{h}'\subs_p\bar{h}$.
 \end{proof}
 
-\begin{itenv}{Corollary 2}
+\begin{corollary}{2}
   $\bar{\UU}$ is a subcategory of the category of $\sq p$-injections.
-\end{itenv}
+\end{corollary}
 
-\begin{rmenv}{Definition 9}
+\begin{definition}{9}
 \label{definition:i-9}
   We say that $(\CC,p,\HH,\SS)$ is a \emph{right-solving category of homomorphisms} if the following axiom is satisfied:
   \begin{enumerate}
@@ -2119,7 +2153,7 @@ for all $h\in\CC$.
       \]
       The substructure $s$ of $\alpha(h)$ is called the \emph{$p$-kernel} of $(h,h')$.
   \end{enumerate}
-\end{rmenv}
+\end{definition}
 
 We similarly define the notion of a \emph{left-solving} category of homomorphisms $(\CC,p,\HH,\SS)$ by replacing $\alpha$ with $\beta$ in the definition above.
 
@@ -2133,7 +2167,7 @@ We similarly define the notion of a \emph{left-solving} category of homomorphism
   This justifies the name ``$p$-kernel'' (an equaliser is also called a \emph{difference kernel}, or even just a \emph{kernel}).
 \end{longcomm}
 
-\begin{rmenv}{Examples}
+\begin{examples}
   ---
   \begin{enumerate}
     \item [\normalfont(1)]
@@ -2150,9 +2184,9 @@ We similarly define the notion of a \emph{left-solving} category of homomorphism
       \oldpage{370}
       $(\MM,\theta,\widetilde{\TT}_u,\TT)$ is not right solving.
   \end{enumerate}
-\end{rmenv}
+\end{examples}
 
-\begin{itenv}{Proposition 11}
+\begin{proposition}{11}
 \label{proposition:i-11}
   If $(\CC,p,\HH,\SS)$ is a right-solving category of homomorphisms, and if $\beta(Ee)=E$ for all $e<E$ in $\CC_0$, then the conditions
   \[
@@ -2169,7 +2203,7 @@ We similarly define the notion of a \emph{left-solving} category of homomorphism
     = h'\vdash_p(\beta(h),s),
   \]
   where $s$ is the $p$-kernel of $(h,h')$.
-\end{itenv}
+\end{proposition}
 
 \begin{proof}
   Set
@@ -2227,8 +2261,8 @@ We similarly define the notion of a \emph{left-solving} category of homomorphism
 
 In what follows, we further suppose that $\HH$ is endowed with an order relation $<$ such that $(\HH,<)$ is an inductive category, and such that $p$ is a strict inductive map from $(\HH,<)$ to $(\CC,<)$, i.e. such that $(\HH,<)$ is an inductive category over $(\CC,<)$ with respect to $p$ (see \hyperref[section:iv]{§IV}).\comm{42.1}{This notion (of an inductive category over $(\CC,<)$ with respect to $p$) is considered in \cite{coll53}. The definition of a \emph{strict inductive map} is given in Part~II, Section~6.}
 
-\begin{itenv}{Theorem 3}
-\label{theorem:3}
+\begin{theorem}{3}
+\label{theorem:i-3}
   The following conditions are equivalent:
   \begin{enumerate}
     \item[\normalfont(c)]
@@ -2254,7 +2288,7 @@ In what follows, we further suppose that $\HH$ is endowed with an order relation
         = p(h)\cap p(h').
       \]
   \end{enumerate}
-\end{itenv}
+\end{theorem}
 
 \begin{proof}
   Suppose that condition~(c) is satisfied;
@@ -2422,13 +2456,13 @@ In what follows, we further suppose that $\HH$ is endowed with an order relation
   Thus condition~(c) is satisfied.
 \end{proof}
 
-\begin{rmenv}{Remark}
-  \hyperref[theorem:3]{Theorem~3} still holds true (without any modifications to the proof) if we replace the hypothesis ``$(\HH,<)$ is an inductive category'' by the hypothesis ``$(\HH,<)$ is an ordered category in which any two elements have an intersection'' (\hyperref[section:ii.6]{§II.6}).\comm{44.1}{It suffices that \emph{any two parallel morphisms admit a meet} (this remark allows us to apply the result when $\CC$ is the category $\FF$).}
-\end{rmenv}
+\begin{remark}
+  \cref{theorem:i-3} still holds true (without any modifications to the proof) if we replace the hypothesis ``$(\HH,<)$ is an inductive category'' by the hypothesis ``$(\HH,<)$ is an ordered category in which any two elements have an intersection'' (\hyperref[section:ii.6]{§II.6}).\comm{44.1}{It suffices that \emph{any two parallel morphisms admit a meet} (this remark allows us to apply the result when $\CC$ is the category $\FF$).}
+\end{remark}
 
-\begin{rmenv}{Example}
+\begin{example}
   Let $(\CC,p,\HH,\SS)$ be a right-solved category of homomorphisms such that $\HH_0$ is an inductive class \cite{3a} for the relation $\subs$;
-  if we endow $\HH$ with the relation $\subs$, then $\HH$ becomes an inductive category, and condition~(c) of \hyperref[theorem:3]{Theorem~3} is then satisfied.
+  if we endow $\HH$ with the relation $\subs$, then $\HH$ becomes an inductive category, and condition~(c) of \cref{theorem:i-3} is then satisfied.
 
   \begin{longcomm}{44.2}
     We have to suppose that either \emph{$\CC$ is completely right regular}, or that \emph{$p_0$ from $\HH_0$ to $\CC_0$ preserves joins}.
@@ -2458,7 +2492,7 @@ In what follows, we further suppose that $\HH$ is endowed with an order relation
   \end{longcomm}
 
   However, $(\MM,\theta,\widetilde{\TT},\TT)$ does not satisfy condition~(c).
-\end{rmenv}
+\end{example}
 
 Let $(\HH,\bar{p},\bHH,\bSS)$ be a category of homomorphisms such that $\bSS$ contains the groupoid $\bar{\Gamma}$ of invertible elements of $\bHH$, and such that $(\HH,\bar{p},\bSS)$ is a species of superstructures \cite{3a} over $(\CC,p,\SS)$.
 \oldpage{373}
@@ -2473,7 +2507,7 @@ Note that the conditions
 \]
 imply that $\bar{p}(s)\relrhobar\bar{p}(S)$ in $(\CC,p,\HH,\SS)$, but, in general, they do not imply that $\bar{p}(s)\subs_p\bar{p}(S)$.
 
-\begin{itenv}{Proposition 12}
+\begin{proposition}{12}
 \label{proposition:i-12}
   Let $s,S\in\bHH_0$.
   The conditions
@@ -2486,7 +2520,7 @@ imply that $\bar{p}(s)\relrhobar\bar{p}(S)$ in $(\CC,p,\HH,\SS)$, but, in genera
     \end{gathered}
   \]
   imply that $s\subs_{\bar{p}}S$.
-\end{itenv}
+\end{proposition}
 
 \begin{proof}
   Let
@@ -2582,7 +2616,7 @@ imply that $\bar{p}(s)\relrhobar\bar{p}(S)$ in $(\CC,p,\HH,\SS)$, but, in genera
 
 \oldpage{374}
 
-\begin{itenv}{Corollary 1}
+\begin{corollary}{1}
   The conditions
   \[
     \begin{gathered}
@@ -2599,9 +2633,9 @@ imply that $\bar{p}(s)\relrhobar\bar{p}(S)$ in $(\CC,p,\HH,\SS)$, but, in genera
     \end{gathered}
   \]
   imply that $h'\subs_{\bar{p}}h$.
-\end{itenv}
+\end{corollary}
 
-\begin{itenv}{Corollary 2}
+\begin{corollary}{2}
   Suppose that $p$ further satisfies the condition
   \[
     p(hs)
@@ -2615,7 +2649,7 @@ imply that $\bar{p}(s)\relrhobar\bar{p}(S)$ in $(\CC,p,\HH,\SS)$, but, in genera
     \bar{p}(s) < \bar{p}(S)
   \]
   imply that $s\subs_{\bar{p}}S$.
-\end{itenv}
+\end{corollary}
 
 \begin{proof}
   Indeed, from these conditions it follows that
@@ -2667,11 +2701,11 @@ From now on, we will further suppose that the conditions
 \]
 imply that $p(sh)=p(s)p(h)$.
 
-\begin{itenv}{Proposition 13}
+\begin{proposition}{13}
 \label{proposition:i-13}
   Let $s,S\in\bHH_0$.
   Then the relation $s\subs_{\bar{p}}S$ in $(\HH,\bar{p},\bHH,\bSS)$ imply that $s\subs_{p\bar{p}}(S)$ in $(\CC,p\bar{p},\bHH,\bSS)$.
-\end{itenv}
+\end{proposition}
 
 \begin{proof}
   Set $\bar{j}=(S,\bar{p}(S)\bar{p}(s),s)\in\bHH$;
@@ -2788,19 +2822,19 @@ imply that $p(sh)=p(s)p(h)$.
   This proves that we have $s\subs_{p\bar{p}}S$ in $(\CC,p\bar{p},\bHH,\bSS)$.
 \end{proof}
 
-\begin{itenv}{Corollary 1}
+\begin{corollary}{1}
   The conditions $h,h'\in\bHH$ and $h'\subs_{\bar{p}}h$ imply that $h'\subs_{p\bar{p}}h$.
-\end{itenv}
+\end{corollary}
 
-\begin{itenv}{Corollary 2}
+\begin{corollary}{2}
   If, for all $s,S\in\HH_0$ such that $s<S$, we have $\beta(Ss)=S$, then $s<S$ implies that $s\subs S$ in $(\CC,p,\HH,\SS)$.
-\end{itenv}
+\end{corollary}
 
 \begin{proof}
   These conditions imply that we have $s\subs S$ in $(\HH,\Id_\HH,\HH,\HH)$, and the Corollary then follows from the Proposition.
 \end{proof}
 
-\begin{itenv}{Corollary 3}
+\begin{corollary}{3}
   If $(\HH,\bar{p},\bHH,\bSS)$ is right solving, and if the following condition is satisfied:
   \begin{quote}
     For $h,h'\in\HH$ such that
@@ -2816,7 +2850,7 @@ imply that $p(sh)=p(s)p(h)$.
     \]
   \end{quote}
   then $(\CC,p\bar{p},\bHH,\bSS)$ is right solving.
-\end{itenv}
+\end{corollary}
 
 \begin{proof}
   Let $\bar{h},\bar{h}'\in\bHH$ be such that $\alpha(\bar{h})=\alpha(\bar{h}')$ and $\beta(\bar{h})=\beta(\bar{h}')$;
@@ -2834,10 +2868,10 @@ imply that $p(sh)=p(s)p(h)$.
   imply that $p\bar{p}(s)=\alpha(p\bar{p}(\bar{h})\cap p\bar{p}(\bar{h}'))$, and so $(\bar{h},\bar{h}')$ admits $s$ as a $p\bar{p}$-kernel, and $(\CC,p\bar{p},\bHH,\bSS)$ is right solving.
 \end{proof}
 
-\begin{itenv}{Corollary 4}
+\begin{corollary}{4}
   Suppose that $s\relrhobar S$ in $(\CC,p,\HH,\SS)$ implies both that $s<S$ in $\HH_0$ and that $\beta(Ss)=S$;
   then the statement that $\bar{s}\subs_{p\bar{p}}\bar{S}$ in $(\CC,p\bar{p},\bHH,\bSS)$ is equivalent to $\bar{s}\subs_{\bar{p}}\bar{S}$ in $(\HH,\bar{p},\bHH,\bSS)$.
-\end{itenv}
+\end{corollary}
 
 \oldpage{376}
 \begin{proof}
@@ -2874,11 +2908,11 @@ imply that $p(sh)=p(s)p(h)$.
   \hyperref[proposition:i-12]{Proposition~12} then implies that $\bar{s}\subs_{\bar{p}}\bar{S}$.
 \end{proof}
 
-\begin{itenv}{Proposition 14}
+\begin{proposition}{14}
 \label{proposition:i-14}
-  Suppose that $(\CC,p,\HH,\SS)$ satisfies Condition~(c) of \hyperref[theorem:i-3]{Theorem~3}, and that $s\relrhobar S$ in $(\CC,p,\HH,\SS)$ implies that $s<S$ in $\HH$;
+  Suppose that $(\CC,p,\HH,\SS)$ satisfies Condition~(c) of \cref{theorem:i-3}, and that $s\relrhobar S$ in $(\CC,p,\HH,\SS)$ implies that $s<S$ in $\HH$;
   then $(\HH,\bar{p},\bHH,\bSS)$ is right solving if and only if $(\CC,p\bar{p},\bHH,\bSS)$ is right solving.
-\end{itenv}
+\end{proposition}
 
 \begin{proof}
   If $(\HH,\bar{p},\bHH,\bSS)$ is right solving, then $(\CC,p\bar{p},\bHH,\bSS)$ is right solving, by Corollary~3 of \hyperref[proposition:i-13]{Proposition~13}.
@@ -2918,7 +2952,7 @@ imply that $p(sh)=p(s)p(h)$.
   Thus $\bar{s}$ is the $\bar{p}$-kernel of $(\bar{h},\bar{h}')$, and $(\HH,\bar{p},\bHH,\bSS)$ is right solving.
 \end{proof}
 
-\begin{itenv}{Theorem 4}
+\begin{theorem}{4}
 \label{theorem:i-4}
   Suppose that the following conditions are satisfied:
   \begin{enumerate}
@@ -2940,7 +2974,7 @@ imply that $p(sh)=p(s)p(h)$.
 
   \oldpage{377}
   Then there exists a subcategory $\HH_u$ of $\HH$ containing $\Gamma$ such that $s'<s$ in $\HH_0$ if and only if $s'\subs_{p_u}s$ in $(\CC,p_u,\HH_u,\Gamma)$, where $p_u$ is the restriction of $p$ to $\HH_u$.
-\end{itenv}
+\end{theorem}
 
 \begin{proof}
   Let $\HH_u$ be the class of all elements $h\in\HH$ that satisfy the following condition:
@@ -3170,7 +3204,7 @@ imply that $p(sh)=p(s)p(h)$.
     \textand
     p(s_1)=p(s').
   \]
-  By the above, we thus have that $s_1\subs_{p_u}s$, and so $s'=s_1<s$ by Corollary~1 of \hyperref[theorem:i-1]{Theorem~1}.
+  By the above, we thus have that $s_1\subs_{p_u}s$, and so $s'=s_1<s$ by Corollary~1 of \cref{theorem:i-1}.
 \end{proof}
 
 \begin{longcomm}{50.3}
@@ -3183,15 +3217,37 @@ imply that $p(sh)=p(s)p(h)$.
         Any two parallel morphisms admit a meet in $\CC$;
       \end{quote}
 
-    \item In \hyperref[theorem:i-3]{Theorem~3}, Corollary~3 (of \hyperref[proposition:i-13]{Proposition~13}), and Propositions~\hyperref[proposition:i-13]{13} and \hyperref[proposition:i-14]{14}:
+    \item In \cref{theorem:i-3}, Corollary~3 (of \hyperref[proposition:i-13]{Proposition~13}), and Propositions~\hyperref[proposition:i-13]{13} and \hyperref[proposition:i-14]{14}:
       Conditions (*)\textsubscript{$\CC$} and (*)\textsubscript{$\HH$};
 
     \item In Propositions~\hyperref[proposition:i-13]{13} and \hyperref[proposition:i-12]{12} and their Corollaries:
       $\CC$ and $\HH$ are sub-inductive.
   \end{itemize}
 
-  Finally, in \hyperref[theorem:i-4]{Theorem~4}, ``$(\CC,<)$ is $(\JJ,\JJ',\JJ'')$-structured'' could be replaced by ``$(\CC,<)$ is $(\JJ^\mathcal{s},\JJ'{}^\mathcal{s},\JJ''{}^\mathcal{s})$-structured'', where $\JJ^\mathcal{s}$ is the category of sub-inductive maps, and $\JJ'{}^\mathcal{s}$ and $\JJ''{}^\mathcal{s}$ its intersections with $\widetilde{\Omega}'$ and $\widetilde{\Omega}''$ (respectively) (\cite{coll69}).
+  Finally, in \cref{theorem:i-4}, ``$(\CC,<)$ is $(\JJ,\JJ',\JJ'')$-structured'' could be replaced by ``$(\CC,<)$ is $(\JJ^\mathcal{s},\JJ'{}^\mathcal{s},\JJ''{}^\mathcal{s})$-structured'', where $\JJ^\mathcal{s}$ is the category of sub-inductive maps, and $\JJ'{}^\mathcal{s}$ and $\JJ''{}^\mathcal{s}$ its intersections with $\widetilde{\Omega}'$ and $\widetilde{\Omega}''$ (respectively) (\cite{coll69}).
 \end{longcomm}
+
+\begin{definition}{10}
+\label{definition:i-10}
+  With the notation of \cref{theorem:i-4}, an element of $\HH_u$ is called a \emph{$p$-open homomorphism}.
+\end{definition}
+
+\begin{examples}
+  \begin{enumerate}
+    \item
+      In the category of homomorphisms $(\MM,\theta,\widetilde{\TT},\TT)$, a $\theta$-open homomorphism is an open continuous map.
+
+    \item
+      In $(\MM,p_\FF,\FF,\FF_\gamma)$, a functor $F$ is $p_\FF$-open if and only if $F(\CC)$ is a subcategory of $\beta(F)$ for every subcategory $\CC$ of $\alpha(F)$.
+      In particular, every functor $F$ such that $F_0$ is an injection is $p_\FF$-open.
+      Using the canonical decomposition of a functor (see \cite{3a}), every functor is thus the composite of an open functor and a faithful functor.
+      Note that the subcategory $\FF_u$ of $\FF$ satisfies condition~($\sigma$) of \hyperref[proposition:i-10]{Proposition~10}.
+  \end{enumerate}
+\end{examples}
+
+\begin{particular}
+  In
+\end{particular}
 
 
 
