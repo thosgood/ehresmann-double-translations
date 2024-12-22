@@ -1562,10 +1562,11 @@ If there is no risk of confusion, then we simply say that $s$ is a substructure 
   If $\CC$ is \unsure{completely right regular}, and if, for all $s\in\HH_0$, the class of elements $p(s')$, where $s'\subs_p s$, is an inductive subclass of $\CC_0$, then $(\HH,\subs)$ is an inductive category over $(\CC,<)$.
 \end{corollary*}
 
-\begin{proposition*}
+\begin{proposition}{6}
+\label{proposition:i-6}
   Suppose that $\bar{h},\bar{h}'\in\Gamma$, $\alpha(\bar{h}')\subs_p\alpha(\bar{h})$, and $(p(\bar{h}')<p(\bar{h})$;
   then also $\beta(\bar{h}')\subs_p\beta(\bar{h})$, and, consequently, $\bar{h}'\subs_p\bar{h}$.
-\end{proposition*}
+\end{proposition}
 
 \begin{proof}
   \oldpage{364}
@@ -3241,6 +3242,18 @@ imply that $p(sh)=p(s)p(h)$.
       In $(\MM,p_\FF,\FF,\FF_\gamma)$, a functor $F$ is $p_\FF$-open if and only if $F(\CC)$ is a subcategory of $\beta(F)$ for every subcategory $\CC$ of $\alpha(F)$.
       In particular, every functor $F$ such that $F_0$ is an injection is $p_\FF$-open.
       Using the canonical decomposition of a functor (see \cite{3a}), every functor is thus the composite of an open functor and a faithful functor.
+      \begin{longcomm}{51.1}
+        This factorisation of $F\colon A\to B$ is $A\xrightarrow{q}F_0^*(B)\xrightarrow{\pi}B$, where
+        \[
+          \begin{tikzcd}
+            B \ar[d,swap,"{[\beta,\alpha]}"]
+            & F_0^*(B) \ar[l,swap,"\pi"] \ar[d]
+          \\B_0\times B_0
+            & A_0\times A_0 \ar[l,"F_0\times F_0"]
+          \end{tikzcd}
+        \]
+        is a pullback.
+      \end{longcomm}
       Note that the subcategory $\FF_u$ of $\FF$ satisfies condition~($\sigma$) of \hyperref[proposition:i-10]{Proposition~10}.
   \end{enumerate}
 \end{examples}
@@ -3277,7 +3290,7 @@ imply that $p(sh)=p(s)p(h)$.
     \item[\normalfont(1)]
       $p(s)\subset P(S)$ and $(S,\iota,s)\in\HH$;
     \item[\normalfont(2)]
-      the conditions $(S,g,S')\in\HH$ and $g(p(S))\subset p(S)$ imply that
+      the conditions $(S,g,S')\in\HH$ and $g(p(S'))\subset p(S)$ imply that
       \[
         (s,g,S')\in\HH.
       \]
@@ -3285,6 +3298,47 @@ imply that $p(sh)=p(s)p(h)$.
 \end{particular}
 
 \begin{proposition}{15}
+  If $\HH$ is saturated over $\MM$, then $(p(\Gamma),p\beta,\HH_\alpha)$ is a species of structures, where $\HH_\alpha$ denotes the class of $p$-injections.
+\end{proposition}
+
+\begin{proof}
+  Let $s\subs S$ and $g\in p(\Gamma)$ be such that
+  \[
+    \alpha(g)
+    = p(S);
+  \]
+  since $p(\Gamma)$ is saturated in $\HH$, we have that $g'\in p(\Gamma)$, where $g'$ is the bijection induced by $g$ on $p(s)$;
+  the relations $g'<g$ and $\alpha(g',s)=s\subs\alpha(g,S)$ imply that $(g',s)\subs(g,S)$ by \cref{proposition:i-6}, and so
+  \[
+    \beta(g',s)
+    \subs_p \beta(g,S).
+  \]
+  \oldpage{380}
+  From the definitions, it follows that $p(\Gamma)$ acts on $\HH_\alpha$ with the composition law
+  \[
+    \big(
+      g, S\sups_p s
+    \big)
+    \longmapsto
+    \big(
+      \beta(g,S) \sups_p \beta(g',s)
+    \big)
+    \qquad\text{if and only if}\quad
+    \alpha(g)=p(S).
+    \qedhere
+  \]
+\end{proof}
+
+Let
+\[
+  \bar{h} = (S_1,h,S)\in\HH
+  \textand
+  \bar{h}' = (S_1,h',S)\in\HH;
+\]
+for a substructure $s$ of $S$ to be the $p$-kernel of $(h,h')$, it is necessary and sufficient that $p(s)$ be the class consisting of the $x$ such that $h(x)=h'(x)$.
+
+\begin{proposition}{16}
+\label{proposition:i-16}
   If
 \end{proposition}
 
