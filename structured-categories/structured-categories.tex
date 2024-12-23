@@ -2164,7 +2164,7 @@ We similarly define the notion of a \emph{left-solving} category of homomorphism
 
   In usual cases (in particular, if $\CC$ is the category of sets), $p(s)$ is an equaliser of $(p(h),p(h'))$;
   then, since $p$ is faithful, $s$ is a $p$-kernel of $(h,h')$ if and only if it is an equaliser of $(h,h')$ in $\HH$ (cf. \cite[Proposition~3.1]{coll109});
-  so axiom~(R) means that $p$ creates equalisers defined by meets (cf. Comment~221.2 on \cite{coll100}).
+  so Axiom~(R) in \cref{definition:i-9} means that $p$ creates equalisers defined by meets (cf. Comment~221.2 on \cite{coll100}).
   This justifies the name ``$p$-kernel'' (an equaliser is also called a \emph{difference kernel}, or even just a \emph{kernel}).
 \end{longcomm}
 
@@ -3322,7 +3322,7 @@ imply that $p(sh)=p(s)p(h)$.
     \longmapsto
     \big(
       \beta(g,S) \sups_p \beta(g',s)
-    \big)
+    \big)w
     \qquad\text{if and only if}\quad
     \alpha(g)=p(S).
     \qedhere
@@ -3339,8 +3339,74 @@ for a substructure $s$ of $S$ to be the $p$-kernel of $(h,h')$, it is necessary 
 
 \begin{proposition}{16}
 \label{proposition:i-16}
-  If
+  If $(\MM,p,\HH,\Gamma)$ is right solving, then $\Gamma$ acts on the class $\HH_n$ of $p$-injections $S\sups_p s$ such that $s$ is the $p$-kernel of a pair $(h,h')$, where $\alpha(h)=S$.
 \end{proposition}
+
+\begin{proof}
+  Let $(S_1,g,S)=\bar{g}\in\Gamma$, and let $s$ be the $p$-kernel of $(h,h')$, where $\alpha(h)=S$.
+  By Axiom~(R) in \cref{definition:i-9}, the pair $(h\bullet g^{-1},h'\bullet g^{-1})$ admits a $p$-kernel $s_1\in S_1$;
+  since $p(s_1)=g(p(s))$, it follows from \cref{proposition:i-7} that we have
+  \[
+    \bar{g}' = (s_1,g\iota,s)
+    \in\Gamma.
+  \]
+  Thus $\Gamma$ acts on $\HH_n$ with the composition law
+  \[
+    (\bar{g},S\sups s)
+    \longmapsto S_1\sups s_1
+    \qquad\text{if and only if}\quad
+    S=\alpha(\bar{g}).
+    \qedhere
+  \]
+\end{proof}
+
+We endow $\FF$ with the order relation:
+\begin{quote}
+  $(G_1^\perp,F,G^\perp)<(\bar{G}_1^\perp,\bar{F},\bar{G}^\perp)$
+  \qquad if and only if\quad
+  $G^\perp$ (resp. $G_1^\perp$) is a subcategory of $\bar{G}^\perp$ (resp. of $\bar{G}_1^\perp$) and $F$ is a restriction of $\bar{F}$.
+\end{quote}
+
+Then $\FF$ is an inductive category \unsure{supraregular} over $\MM$ with respect to $p_\FF$, in the sense of \cite{3c}.
+\begin{longcomm}{52.2}
+  $\FF$ is only a \emph{sub}-inductive category, but the previous results may still be applied to it (cf. Comments~31.1 and 50.3).
+\end{longcomm}
+Furthermore, $(\MM,p_\FF,\FF,\FF)$ satisfies condition~(c) of \cref{theorem:i-3}.
+The three conditions
+\[
+  G^\perp\relrhobar\bar{G}^\perp,
+  \quad G^\perp\subs\bar{G}^\perp,
+  \textand G^\perp<\bar{G}^\perp
+\]
+are equivalent (see \hyperref[section:ii]{§I.2}, \cref{proposition:i-9}).
+Let $(\FF,\bar{p},\bHH,\bar{\Gamma})$ be a category of homomorphisms such that $\bar{\Gamma}$ is the groupoid of invertible elements of $\bHH$.
+From Corollary~2 of \cref{proposition:i-12} and from \cref{proposition:i-14}, it follows that:
+
+\begin{proposition}{17}
+  The conditions $s\subs S$ in $(\FF,\bar{p},\bHH,\bar{\Gamma})$ and $s\subs S$ in $(\MM,p_\FF\bar{p},\bHH,\bar{\Gamma})$ are equivalent;
+  $(\FF,\bar{p},\bHH,\bar{\Gamma})$ is right solving if and only if $(\MM,p_\FF\bar{p},\bHH,\bar{\Gamma})$ is right solving.
+\end{proposition}
+
+\begin{remark}
+  Let $(\MM,p,\HH,\Gamma)$ be a category of homomorphisms.
+  For $(S,\iota,s)$ to be a strict monomorphism \cite{2} of $\HH$, it suffices that $s$ be a substructure of $S$ and that there exist a family of elements $(S',h_i,S)$, with $i\in I$, such that $p(s)$ is the class of the $x$ for which $h_i(x)=h_j(x)$ for all $i,j\in I$.
+  Let $h,h'\in\HH$;
+  \oldpage{381}
+  if $(h,h')$ admits a $p$-kernel $s$, then $s$ is a kernel of $(h,h')$ in $\HH$ \cite{2}.
+  If $\HH$ is saturated over $\MM$, then, for every strict monomorphism $(S,g,S')$ in $\HH$ such that $g$ is injective, there exists a substructure $s$ of $S$ such that $(s,\gamma,S')\in\Gamma$;
+  but a kernel of a pair $(h,h')$ is not always isomorphism to a $p$-kernel of $(h,h')$.\comm{53.1}{A kernel (or equaliser) $k\colon e\to e'$ of $(h,h')$ is always a $p$-injection, since $p$ is faithful; it is a $p$-kernel if $p(k)$ is an equaliser in $\CC$ of $(p(h),p(h'))$ (cf. Comment~41.2).}
+\end{remark}
+
+
+
+\section{Structured categories}
+\label{section:ii}
+
+\subsection{Categories of homomorphisms with finite products}
+\label{section:ii.1}
+
+Let
+
 
 
 
