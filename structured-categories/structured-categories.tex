@@ -3405,7 +3405,85 @@ From Corollary~2 of \cref{proposition:i-12} and from \cref{proposition:i-14}, it
 \subsection{Categories of homomorphisms with finite products}
 \label{section:ii.1}
 
-Let
+Let $\MM_0$ a class of classes such that if it contains $X$ then it also contains all the subsets of $X$, and such that if it contains $X$ and $Y$ then it contains their product $X\times Y$.
+Let $\MM$ be the category of all maps from $M$ to $M'$ in $\MM_0$.
+
+\begin{definition}{1}
+\label{definition:ii-1}
+  We say that $(\MM,p,\HH,\Gamma)$ is a category of homomorphisms \emph{with finite products} if $(\MM,p,\HH,\Gamma)$ is a category of homomorphisms such that $\Gamma$ is the groupoid of invertible elements of $\HH$ and if, for every pair $(s_1,s_2)\in\HH_0\times\HH_0$, there exists a unit $s_1\times s_2$ of $\HH$ that satisfies the following conditions:
+  
+  \begin{enumerate}
+    \item[\normalfont(1)]
+      $p(s_1\times s_2)=p(s_1)\times p(s_2)$.
+
+    \item[\normalfont(2)]
+      Let $p_i$ be the canonical projection from $p(s_1\times s_2)$ to $p(s_i)$, for $i=1,2$, i.e.
+      \[
+        p_i(x_1,x_2) = x_i
+      \]
+      for all $(x_1,x_2)\in p(s_1)\times p(s_2)$.
+      Then
+      \[
+        \bar{p}_i
+        = (s_i,p_i,s_1\times s_2)
+        \in\HH.
+      \]
+
+    \item[\normalfont(3)]
+      The relations $(s_i,h_i,s)\in\HH$ for $i=1,2$ imply that
+      \[
+        (s_1\times s_2,[h_1,h_2],s)
+        \in\HH,
+      \]
+      where $[h_1,h_2](z)=(h_1(z),h_2(z))$ for all $z\in p(s)$.
+  \end{enumerate}
+\end{definition}
+
+These conditions imply that the pair $(s_1,s_2)$ admits $(s_1\times s_2,\bar{p}_1,\bar{p}_2)$ as a product \cite{4} in $\HH$.
+
+\begin{proposition}{1}
+\label{proposition:ii-1}
+  The product $s_1\times s_2$ is completely determined by the conditions of \cref{definition:ii-1}.
+\end{proposition}
+
+\begin{proof}
+  Indeed, if $S$ is another product of $(s_1,s_2)$ satisfying conditions~(1), (2), and (3), then
+  \[
+    (S,p(s_1)\times p(s_2),s_1\times s_2)
+    \in\Gamma
+  \]
+  whence $S=s_1\times s_2$, since $(\CC,p,\Gamma)$ is a species of structures.
+\end{proof}
+
+From now on, we take $(\MM,p,\HH,\Gamma)$ to be a category of homomorphisms with finite products.
+
+\begin{proposition}{2}
+\label{proposition:ii-2}
+  Let $\bar{f}_i=(s'_i,f_i,s_i)\in\HH$, with $i=1,2$.
+  Then
+  \[
+    (s'_1\times s'_2, f_1\times f_2, s_1\times s_2)
+    \in\HH
+  \]
+  \oldpage{382}
+  where
+  \[
+    (f_1\times f_2)(x_1\times x_2)
+    = (f_1(x_1),f_2(x_2))
+  \]
+  for all $(x_1,x_2)\in p(s_1)\times p(s_2)$.
+\end{proposition}
+
+With the notation of \cref{proposition:ii-2}, we set
+\[
+  \bar{f}_1\times\bar{f}_2
+  = (s'_1\times s'_2, f_1\times f_2, s_1\times s_2).
+\]
+
+\begin{proposition}{3}
+\label{proposition:ii-3}
+  The relations
+\end{proposition}
 
 
 
