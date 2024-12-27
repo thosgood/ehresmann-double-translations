@@ -3574,7 +3574,136 @@ Note that, even if $\Gamma$ is contained in $\HH'$, this definition does not imp
 \subsection{Definition of structured categories and groupoids}
 \label{section:ii.2}
 
-We
+We again denote by $(\MM,p_\FF,\FF,\FF_\gamma)$ the category of homomorphisms (\hyperref[section:i-3]{§I.3}) in which $\FF$ is the category of functors $(\bar{\CC}^\perp,F,\CC^\perp)$ such that $(\bar{C},F,\CC)\in\MM$, and $p_\FF$ is the functor
+\[
+  (\bar{\CC}^\perp,F,\CC^\perp)
+  \longmapsto (\bar{\CC},F,\CC).
+\]
+
+We denote by $\HH'$ and $\HH''$ two subcategories of $\HH$ that contain $\Gamma$.
+
+\begin{definition}{3}
+\label{definition:ii-3}
+  We define an \emph{$\HH(\HH',\HH'')$-structured category} (resp. \emph{$\HH((\HH',\HH'),\HH'')$-structured category}) to be a pair $(\CC^\bullet,s)$, where $\CC^\bullet\in\FF_0$, $s\in\HH_0$, and $p(s)=\CC$, that satisfies the following conditions:
+  \begin{enumerate}
+    \item[\normalfont(1)]
+      There exists $s_0\in\HH_0$ such that $p(s_0)=\CC_0^\bullet$, $(s,\iota,s_0)\in\HH$, and $(s_0\times s_0,[\beta,\alpha],s)\in\HH'$ (resp. and $(s_0\alpha,s),(s_0,\beta,s)\in\HH'$).
+
+    \item[\normalfont(2)]
+      Let $C^\bullet\star\CC^\bullet$ be the class of pairs $(f',f)\in\CC\times\CC$ such that $f'\bullet f$ is defined, and let $\chi^\bullet$ be the map $(f',f)\mapsto f'\bullet f$, where $(f',f)\in\CC^\bullet\star\CC^\bullet$.
+      Then there exists $s'\subs_p s\times s$ such that $p(s')=\CC^\bullet\star\CC^\bullet$ and
+      \[
+        (s,\chi^\bullet,s')
+        \in\HH''.
+      \]
+  \end{enumerate}
+
+  In particular, we refer to an $\HH(\HH,\HH)$-structured category as an \emph{$\HH$-structured category}.
+\end{definition}
+
+\begin{longcomm}{55.2}
+  \emph{Structured categories and internal categories.}
+
+  First remark that the notion given here is stricter than the one defined in \cite{coll57}, and it motivated the introduction of substructures.
+
+  Let $(\CC^\bullet,s)$ be an $\HH$-structured category (more precisely called a \emph{$p$-structured category} later on).
+  Then $s'$ is a substructure of $s\times s$ mapped by $p$ to the pullback of $(\alpha,\beta)$, so that (cf. \cite[Proposition~2.1]{coll109}) we have the pullback
+  \[
+    \begin{tikzcd}
+      s \ar[d,swap,"\beta"]
+      & s' \ar[l] \ar[d]
+    \\s_0
+      & s \ar[l,"\alpha"]
+    \end{tikzcd}
+  \]
+  in $\HH$.
+  It follows that $(\CC^\bullet,s)$ determines an internal category in $\HH$ (in the usual sense), with $s$ as its objects of morphisms and $s_0$ as its object of objects:
+  \[
+    \begin{tikzcd}
+      s_0 \ar[r]
+      & s \ar[l,bend left=30,"\alpha"] \ar[l,bend right=30,swap,"\beta"]
+      & s' \ar[l,swap,"\kappa"]
+    \end{tikzcd}
+  \]
+  Indeed, since $\CC^\bullet$ is a category and $p$ is faithful, the identity and associativity axioms are satisfied.
+  Conversely, let
+  \[
+    \begin{tikzcd}
+      S_0 \ar[r]
+      & S \ar[l,bend left=30,"a"] \ar[l,bend right=30,swap,"b"]
+      & S_2 \ar[l,swap,"k"]
+    \end{tikzcd}
+  \]
+  be an internal category in $\HH$;
+  then it "is" a $p$-structured category if and only if its image under $p$ is a usual category, i.e. if and only if $p(k)$ is the composition of a category on $p(S)$ with $p(a)$ and $p(b)$ as its source and target;
+  such an internal category is called a \emph{concrete internal category}.
+
+  Hence the category of $p$-structured categories may be identified with the category of concrete internal categories in $\HH$;
+  if $p$ creates canonical pullbacks, it is equivalent (\cite{coll104}) to the category of all internal categories in $\HH$.
+
+  Charles was motivated to introduce structured categories by the numerous examples (cf. Sections~5 to 6) he had already met: topological and differentiable categories or groupoids in \cite{coll28,coll50} in relation with differential geometry, ordered and local categories at the base of local structures theory \cite{coll47,coll53,coll55};
+  double categories such as the double category of quartets \cite{coll55} and the 2-category of natural transformations \cite{coll52}.
+  General theorems on structured categories are given here and in \cite{coll66,coll100};
+  they are strengthened in \cite{coll109} where the 2-category of structured categories is studied, as well as its enrichments.
+  Completion theorems for structured categories may be found in \cite{coll102}.
+
+  In 1966 (cf. \cite{coll104,coll93}), Charles considered non-concrete internal categories, which he named \emph{generalised structured categories}.
+  He defines them as models of the \emph{sketch of categories $\sigma_{\mathrm{Cat}}$}, which is the full subcategory of the opposite of its simplicial category $\Delta$ with objects $0$, $1$, $2$, $3$:
+  \[
+    \begin{tikzcd}[sep=huge]
+      0
+        \ar[r]
+      & 1
+        \ar[l,bend left=30,"\alpha"]
+        \ar[l,bend right=30,swap,"\beta"]
+        \ar[r,bend left=40,swap,"\gamma_\beta"]
+        \ar[r,bend right=40,"\gamma_\alpha"]
+      & 2
+        \ar[l,near start,swap,"k"description]
+        \ar[l,bend left=60,"\nu"]
+        \ar[l,bend right=60,swap,"\nu'"]
+      & 3
+        \ar[l,bend left=30,swap,"\mu'"]
+        \ar[l,bend right=30,"\mu"]
+        \ar[l,bend left=50,"\kappa'"]
+        \ar[l,bend right=50,swap,"\kappa"]
+    \end{tikzcd}
+  \]
+  equipped with the cones
+  \[
+    \begin{tikzcd}
+      {} \ar[d,swap,"\alpha"]
+      & {} \ar[l,swap,"\nu'"] \ar[d,"\nu"]
+    \\{}
+      & {} \ar[l,"\beta"]
+    \end{tikzcd}
+    \textand
+    \begin{tikzcd}
+      {} \ar[d,swap,"\nu'"]
+      & {} \ar[l,swap,"\mu"] \ar[d,"\mu'"]
+    \\{}
+      & {} \ar[l,"\nu"]
+    \end{tikzcd}
+  \]
+  to be transformed into pullbacks.
+  In \cite{coll113,coll115}, the results of \cite{109} on concrete internal categories are adapted to the general case.
+  In fact, this theory led Charles to the notion of sketched structures developed from \cite{coll106} onwards.
+
+  Bénabou used internal categories in the late sixties (unpublished) and certainly helped to propagate them.
+  Several theses and papers written near us are wholly or partially devoted to structured or internal categories, e.g. Bourn~\cite{comm13}, Conduché~\cite{comm22}, Kempf~\cite{comm60}, Langbaum~\cite{comm63}, Lellahi~\cite{comm69}, and Vaugelade~\cite{comm97} (without mentioning those on examples).
+
+  However, internal categories, so universally used today, seem to be really of interest to other schools only in the seventies (Gray~\cite{comm39}, Diaconescu~\cite{comm26}, \ldots).
+  Though Grothendieck mentions the simplicial object associated to a category in \cite{comm42}, he prefers to work with the associated fibration (called a \emph{category object}) for avoiding pullbacks.
+\end{longcomm}
+
+\begin{proposition}{5}
+\label{proposition:ii-5}
+  For $(\CC^\bullet,s)$ to be an $\HH(\HH,\HH'')$ structured category, it is necessary and sufficient that $(\CC^\bullet,s)$ be an $\HH((\HH,\HH),\HH'')$-structured category.
+\end{proposition}
+
+\begin{proof}
+  \todo{start again here}
+\end{proof}
 
 
 
