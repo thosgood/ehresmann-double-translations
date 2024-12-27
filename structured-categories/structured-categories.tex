@@ -3702,8 +3702,61 @@ We denote by $\HH'$ and $\HH''$ two subcategories of $\HH$ that contain $\Gamma$
 \end{proposition}
 
 \begin{proof}
-  \todo{start again here}
+  If $(\CC^\bullet,s)$ is $\HH((\HH,\HH),\HH'')$-structured, then
+  \[
+    (s_0\times s_0,[\beta,\alpha],s)
+    \in\HH
+  \]
+  by definition of the product in $\HH$.
+  Conversely, the relation
+  \[
+    (s_0\times s_0,[\beta,\alpha],s)
+    \in\HH
+  \]
+  implies that
+  \[
+    (s_0,p_1[\beta,\alpha],s)
+    = (s_0,\alpha,s)\in\HH
+    \textand
+    (s_0,\beta,s)
+    \in\HH.
+  \]
 \end{proof}
+
+An $\HH(\HH',\HH'')$-structured category (resp. $\HH((\HH',\HH'),\HH'')$-structured category) is also an $\HH$-structured category.
+
+\begin{proposition}{6}
+\label{proposition:ii-6}
+  Let $(\CC^\bullet,s)$ be an $\HH(\HH',\HH'')$-structured category (resp. $\HH((\HH',\HH'),\HH'')$-structured category).
+  Then the element $s_0$ defined by condition~(1) of \cref{definition:ii-3} is a substructure of $s$; thus $s_0$ is also unique.
+\end{proposition}
+
+\begin{proof}
+  Let $s_0$ be an element satisfying condition~(1) of \cref{definition:ii-3}, and let $(s,g,S)\in\HH$ be such that $g(p(s))\subset\CC_0^\bullet$.
+  Then
+  \[
+    (s_0,\alpha,s)\bullet(s,g,S)
+    = (s_0,\alpha g,S)\in\HH
+  \]
+  and also
+  \[
+    \alpha g(x)
+    = g(x)
+  \]
+  for all $x\in p(S)$.
+  Thus
+  \[
+    (s_0,g,S)\in\HH
+    \textand
+    s_0\subs_p s.
+  \]
+  It follows from the corollary of \cref{theorem:i-1} (\hyperref[section:i]{§I}) that $s_0$ is unique.
+\end{proof}
+
+\begin{definition}{4}
+\label{definition:ii-4}
+  We
+\end{definition}
 
 
 
