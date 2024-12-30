@@ -133,6 +133,7 @@
 \newcommand{\Hom}{\mathrm{Hom}}
 \newcommand{\VV}{\mathcal{V}}
 \newcommand{\JJ}{\mathcal{J}}
+\newcommand{\GG}{\mathcal{G}}
 
 % Unary operators
 \DeclareMathOperator{\sq}{\square}
@@ -3755,8 +3756,36 @@ An $\HH(\HH',\HH'')$-structured category (resp. $\HH((\HH',\HH'),\HH'')$-structu
 
 \begin{definition}{4}
 \label{definition:ii-4}
-  We
+  We define an \emph{$\HH(\HH',\HH'')$-structured groupoid} (resp. \emph{$\HH((\HH',\HH'),\HH'')$-structured groupoid}) to be a pair $(G^\bullet,s)$ that satisfies the following conditions:
+  \begin{enumerate}
+    \item[\normalfont(1)]
+      $G^\bullet$ is a groupoid.
+
+    \item[\normalfont(2)]
+      $(G^\bullet,s)$ is an $\HH(\HH',\HH'')$-structured category (resp. an $\HH((\HH',\HH'),\HH'')$-structured category).
+
+    \item[\normalfont(3)]
+      $(s,j,s)\in\HH$, where $j(g)=g^{-1}$ for all $g\in\G$.
+  \end{enumerate}
 \end{definition}
+
+From condition~(3) above it follows that $(s,j,s)\in\Gamma$.
+
+\begin{definition}{5}
+\label{definition:ii-5}
+  We define an \emph{$\HH(\HH',\HH'')$-structured functor} (resp. $\HH((\HH',\HH'),\HH'')$-structured functor) to be a triple $((\CC_1^\bullet,s_1),F,(\CC^\bullet,s))$ that satisfies the following conditions:
+  \begin{enumerate}
+    \item[\normalfont(1)]
+      $(C^\bullet,s)$ and $(\CC_1^\bullet,s_1)$ are $\HH(\HH',\HH'')$-structured categories (resp. $\HH((\HH',\HH'),\HH'')$-structured categories).
+
+    \item[\normalfont(2)]
+      $(C_1^\bullet,F,\CC^\bullet)\in\FF$ and $(s_1,F,s)\in\HH$.
+  \end{enumerate}
+\end{definition}
+
+Let $\bHH(\HH',\HH'')_0$ be the class of all $\HH(\HH',\HH'')$-structured categories, and $\bar{\GG}(\HH',\HH'')_0$ the class of all $\HH(\HH',\HH'')$-structured groupoids.
+Let $\bHH(\HH',\HH'')$ be the category of all $\HH(\HH',\HH'')$-structured functors, whose class of units is identified with $\bHH(\HH',\HH'')_0$.
+We denote by:
 
 
 
