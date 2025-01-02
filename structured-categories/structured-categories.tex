@@ -1,5 +1,7 @@
 \documentclass[a4paper,fleqn]{article}
 
+\usepackage[margin=1.6in]{geometry}
+
 \title{\sc{Structured categories}}
 \author{Charles Ehresmann}
 \date{1963}
@@ -12,7 +14,7 @@
 }
 
 
-%% Standards %%
+%% Standard packages %%
 
 \usepackage{amssymb}
 \usepackage{amsmath}
@@ -30,8 +32,9 @@
 
 %% Typography and such %%
 
-\usepackage{fouriernc}
-\usepackage[cal=esstix]{mathalfa}
+% \usepackage{fouriernc}
+\usepackage{Baskervaldx}
+\usepackage[cal=boondoxo]{mathalfa}
 
 \renewcommand{\thesection}{\Roman{section}}
 \setcounter{secnumdepth}{2}
@@ -121,7 +124,7 @@
 \usepackage{upgreek}
 \newcommand{\comp}{\upchi}
 \newcommand{\KK}{\mathfrak{K}}
-\newcommand{\FF}{\mathfrak{F}}
+\newcommand{\FF}{\mathcal{F}}
 \renewcommand{\AA}{\mathcal{A}}
 \newcommand{\TT}{\mathcal{T}}
 \newcommand{\UU}{\mathcal{U}}
@@ -190,6 +193,8 @@
     With this in mind, a category is often denoted by $\CC^\bullet$, where $\CC$ is its class of morphism and $\bullet$ is its composition operator; the class of its objects is written $\CC_0^\bullet$ and objects are often identified with their identity morphisms, and called \emph{units}.
     The domain and codomain of a morphism are denoted by $\alpha$ and $\beta$ (respectively).
     Functors $F$ from a category $\CC$ to a category $\CC'$ are written as $(\CC',F,\CC)$ (i.e. in the ``diagrammatic'' direction), and similarly for morphisms; the Hom functor is accordingly written $\CC(e',e)$.
+
+    We have, however, made the decision to replace $\to$ with $\mapsto$ when denoting the action of a morphism on objects, in line with what a modern reader would tend to expect.
 
     \medskip
 
@@ -268,7 +273,6 @@ If a class of objects is naturally associated to the category (for example, the 
 Let $\CC^\perp$ be a category.
 The source and target maps that send an element $f\in\CC^\perp$ to its right and left units will be denoted $\alpha^\perp$ and $\beta^\perp$ (respectively).
 The class of pairs $(g,f)$ such that the composite $g\perp f$ is defined (that is, such that $\alpha^\perp(g)=\beta^\perp(f)$) will be denoted by the symbol $\CC^\perp\star\CC^\perp$;
-the map
 \[
   (g,f) \longmapsto g\perp f
   \qquad\text{where $(g,f\in\CC^\perp\star\CC^\perp)$}
@@ -3765,7 +3769,7 @@ An $\HH(\HH',\HH'')$-structured category (resp. $\HH((\HH',\HH'),\HH'')$-structu
       $(G^\bullet,s)$ is an $\HH(\HH',\HH'')$-structured category (resp. an $\HH((\HH',\HH'),\HH'')$-structured category).
 
     \item[\normalfont(3)]
-      $(s,j,s)\in\HH$, where $j(g)=g^{-1}$ for all $g\in\G$.
+      $(s,j,s)\in\HH$, where $j(g)=g^{-1}$ for all $g\in G$.
   \end{enumerate}
 \end{definition}
 
@@ -3786,6 +3790,50 @@ From condition~(3) above it follows that $(s,j,s)\in\Gamma$.
 Let $\bHH(\HH',\HH'')_0$ be the class of all $\HH(\HH',\HH'')$-structured categories, and $\bar{\GG}(\HH',\HH'')_0$ the class of all $\HH(\HH',\HH'')$-structured groupoids.
 Let $\bHH(\HH',\HH'')$ be the category of all $\HH(\HH',\HH'')$-structured functors, whose class of units is identified with $\bHH(\HH',\HH'')_0$.
 We denote by:
+\begin{itemize}
+  \item[]
+    $\bar{p}$ the map $((\CC_1^\bullet,s_1),F,(\CC^\bullet,s))\mapsto(\CC_1^\bullet,F,\CC^\bullet)$ from $\bHH(\HH',\HH'')$ to $\FF$;
+
+  \item[]
+    $\bar{p}_\HH$ the map $((\CC_1^\bullet,s_1),F,(\CC^\bullet,s))\mapsto(s_1,F,s)$ from $\bHH(\HH',\HH'')$ to $\HH$.
+\end{itemize}
+
+Let $\bar{\Gamma}$ be the groupoid of invertible elements of $\bHH(\HH',\HH'')$.
+We define $\bar{\GG}(\HH',\HH'')$ (resp. $\bar{\Gamma}_\GG$) to be the full subcategory of $\bHH(\HH',\HH'')$ (resp. of $\bar{\Gamma}$) that has $\bar{\GG}(\HH',\HH'')_0$ as its class of units.
+
+We define in an analogous way $\bHH((\HH',\HH'),\HH'')$ (resp. $\bar{\GG}((\HH',\HH'),\HH'')$) whose groupoid of invertible elements is denoted by $\bar{\Gamma}'$ (resp. $\bar{\Gamma}'_\GG$).
+
+In particular, we write
+\[
+  \bHH(\HH,\HH)
+  = \bHH
+  = \bHH((\HH,\HH),\HH).
+\]
+
+\oldpage{385}
+\begin{remark}
+  The two functors $p$ and $p_\FF$ determine the induced category $p^*(\FF,p_\FF)$, equivalent to $p_\FF^*(\HH,p)$, whose elements (see \cite{3a}) are the pairs $(\bar{F},\bar{h})\in\FF\times\HH$ such that $p_\FF(\bar{F})=p(\bar{h})$.
+  We can identify $\bHH(\HH',\HH'')$ with the full subcategory of $p^*(\FF,p_\FF)$ that has the $\bHH(\HH',\HH'')$-structured categories as its unite.
+  We will show that $ $ is a subcategory of homomorphisms of the category of homomorphisms $p^*(\FF,p_\FF)$ over $\FF$.
+  An arbitrary element of $p^*(\FF,p_\FF)$ might be referred to as a structured functor to $\HH$, in the vague sense.
+\end{remark}
+
+\begin{theorem}{1}
+  \label{theorem:ii-1}
+  $(\FF,\bar{p},\bHH(\HH',\HH''),\bar{\Gamma})$ is a category of homomorphisms, of which $(\FF,\bar{p}_\iota,\bar{\GG}(\HH',\HH''),\bar{\Gamma}_\GG)$ is a subcategory of homomorphisms.
+\end{theorem}
+
+\begin{longcomm}{57.1}
+  For internal categories in a category admitting pullbacks, the corresponding result is:
+  \begin{quote}
+    \itshape
+    Any isomorphism from the object of morphisms of an internal category extends into an isomorphism of internal categories.
+  \end{quote}
+\end{longcomm}
+
+\begin{proof}
+  The only thing to prove is that the conditions
+\end{proof}
 
 
 
