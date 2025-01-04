@@ -140,6 +140,7 @@
 \newcommand{\VV}{\mathcal{V}}
 \newcommand{\JJ}{\mathcal{J}}
 \newcommand{\GG}{\mathcal{G}}
+\newcommand{\DD}{\mathcal{D}}
 
 % Unary operators
 \DeclareMathOperator{\sq}{\square}
@@ -4019,7 +4020,72 @@ This definition agrees with that of \cite{3b}.
 \subsubsection*{Example III}
 \label{section:ii.3.iii}
 
-Let
+Let $\DD_0$ be the class of semigroups $D^\perp$ (i.e. $D$ is a class that we suppose to belong to $\MM_0$, endowed with an associative composition $\perp$).
+Let $\DD$ be the class of homomorphisms $(D_1^\perp,f,D^\perp)$ between semigroups, i.e. where $f$ is a map from $D$ to $D_1$ such that
+\[
+  f(z'\perp z)
+  = f(z')\perp f(z)
+  \quad\text{for all $z,z'\in D$.}
+\]
+Then $\DD$ is a category of homomorphisms over $\MM$ with the projection $(D_1^\perp,f,D^\perp)\mapsto(D_1,f,D)$.
+
+Note that $(D_1^\perp,\iota,D^\perp)\in\DD$ if and only if $D^\perp$ is a sub-semigroup of $D_1^\perp$ endowed with the composition law induced by $\perp$.
+
+\begin{proposition}{7}
+\label{proposition:ii-7}
+  For $(\CC^\bullet,\perp)$ to be a $\DD$-structured category it is necessary and sufficient that $\perp$ be an everywhere-defined associated composition law on $\CC$, and that the map
+  \[
+    (g,f)
+    \longmapsto g\perp f
+  \]
+  (where $g,f\in\CC$) be a functor from $\CC^\bullet\times\CC^\bullet$ to $\CC^\bullet$.
+\end{proposition}
+
+\begin{proof}
+  Let $(\CC^\bullet,\perp)$ be a $\DD$-structured category;
+  by the previous remark, $\CC_0^\bullet$ is a sub-semigroup of $\CC^\perp$, and so
+  \[
+    e\perp e'
+    \in\CC_0^\bullet
+  \]
+  for $e,e'\in\CC_0^\bullet$.
+  By the same remark, the conditions $(g,f),(g',f')\in\CC^\bullet\star\CC^\bullet$ imply that
+  \[
+    (g'\perp g,f'\perp f)
+    = \big(
+      (g',f')\perp(g,f)
+    \big)
+    \in\CC^\bullet\star\CC^\bullet;
+  \]
+  furthermore, since $\chi^\bullet$ is a homomorphism from the semigroup $(\CC^\bullet\star\CC^\bullet)^\perp$ to $\CC^\perp$, we have that
+  \[
+    (g'\perp g)\bullet(f'\perp f)
+    = (g'\bullet f')\perp(g\bullet f)
+  \]
+  and the conditions of the proposition are satisfied.
+  Conversely, suppose that the conditions are satisfied;
+  since $(g,f)\mapsto g\perp f$ is a functor, we have that
+  \[
+    \alpha(g\perp f)
+    =\alpha(g)\perp\alpha(f)
+    \textand
+    \beta(g\perp f)
+    =\beta(g)\perp\beta(f);
+  \]
+  the conditions $(g,f),(g',f')\in\CC^\bullet\star\CC^\bullet$ imply that
+  \[
+    (g'\bullet f')\perp(g\bullet f)
+    = (g'\perp g)\bullet(f'\perp f).
+  \]
+  Thus $(\CC^\bullet,\perp)$ is $\DD$-structured.
+\end{proof}
+
+
+\subsubsection*{Example IV}
+\label{section:ii-3-iv}
+
+\oldpage{388}
+In \hyperref[section:ii-3-iii]{Example~III}, we can replace $\DD$ by the subcategory $\DD'$ (resp. $\DD''$) consisting of triples $(D_1^\perp,f,D^\perp)$ such that $D^\perp$ and $D_1^\perp$ are semigroups that admit a unit $1$ (resp. that admit an element $0$ such that $z\perp0=0\perp z=0$ for all $z\in D$), and such that we have $f(1)=1$ (resp. $f(0)=0$).
 
 
 
