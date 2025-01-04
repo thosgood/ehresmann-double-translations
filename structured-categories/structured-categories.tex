@@ -37,6 +37,7 @@
 \usepackage[cal=boondoxo]{mathalfa}
 
 \renewcommand{\thesection}{\Roman{section}}
+\renewcommand{\thesubsubsection}{\Roman{subsubsection}}
 \setcounter{secnumdepth}{2}
 
 
@@ -93,12 +94,12 @@
 \makeatletter
 \def\blfootnote{\xdef\@thefnmark{}\@footnotetext}
 \makeatother
-\newcommand{\comm}[2]{{\normalfont\textsuperscript{[#1]}}\blfootnote{\label{footnote:#1}[#1] #2}}
+\newcommand{\comm}[2]{{\normalfont\textsuperscript{[#1]}}\blfootnote{\label{footnote:#1}\textbf{[#1]} #2}}
 
 \usepackage{mdframed}
 
 \newenvironment{longcomm}[1]
-  {\noindent[#1]\rmfamily}
+  {\noindent\textbf{[#1]}\rmfamily}
   {}
 \surroundwithmdframed[innertopmargin=10pt,innerbottommargin=10pt]{longcomm}
 
@@ -115,6 +116,7 @@
 \newcommand{\textand}{\quad\text{and}\quad}
 
 \newcommand{\CC}{\mathcal{C}}
+\newcommand{\tCC}{\widetilde{\CC}}
 \newcommand{\HH}{\mathcal{H}}
 \newcommand{\rHH}{\mathrm{H}}
 \newcommand{\bHH}{\bar{\HH}}
@@ -127,6 +129,7 @@
 \newcommand{\FF}{\mathcal{F}}
 \renewcommand{\AA}{\mathcal{A}}
 \newcommand{\TT}{\mathcal{T}}
+\newcommand{\tTT}{\widetilde{\TT}}
 \newcommand{\UU}{\mathcal{U}}
 \newcommand{\relrho}{\mathrel{\rho}}
 \newcommand{\relrhobar}{\mathrel{\bar{\rho}}}
@@ -1042,14 +1045,14 @@ and if $p(h)$ is the canonical injection from $p(\alpha(h))$ to $p(\beta(h))$, t
       then $(\MM,p_\FF,\FF,\FF_\gamma)$ is a category of homomorphisms.
     \item[\normalfont(2)]
       Let $\TT_0$ be the class of topologies (or ``metatopologies'', in the terminology of \cite{3b}) on the classes $M\in\MM_0$;
-      let $\widetilde{\TT}$ be the category of continuous maps $(S',f,S)$ from $S$ to $S'$, where $S$ is a topology on the class $M$, and $S'$ a topology on $M'$.
+      let $\tTT$ be the category of continuous maps $(S',f,S)$ from $S$ to $S'$, where $S$ is a topology on the class $M$, and $S'$ a topology on $M'$.
       Let $\theta$ be the functor
       \[
         (S',f,S)
         \longmapsto(M',f,M).
       \]
-      Let $\TT$ be the groupoid of invertible elements of $\widetilde{\TT}$ (homeomorphisms);
-      then $(\MM,\theta,\widetilde{\TT},\TT)$ is a category of homomorphisms.
+      Let $\TT$ be the groupoid of invertible elements of $\tTT$ (homeomorphisms);
+      then $(\MM,\theta,\tTT,\TT)$ is a category of homomorphisms.
     \item[\normalfont(3)]
       Let $(\MM,\omega,\widetilde{\Omega})$ be the functor defined in \hyperref[section:i.2]{§I.2};
       let $\Omega$ be the groupoid of invertible elements of $\widetilde{\Omega}$ (isomorphisms between ordered classes);
@@ -1363,11 +1366,11 @@ If there is no risk of confusion, then we simply say that $s$ is a substructure 
   ---
   \begin{enumerate}
     \item[\normalfont(1)]
-      The sub-structures of $S$ in $(\MM,\theta,\widetilde{\TT},\TT)$ are the topologies induced by $S$ on the subclasses of $\theta(S)$.
-      Let $\widetilde{\TT_u}$ be the subcategory of $\widetilde{\TT}$ consisting of open continuous maps from one topological space to another;
-      let $\theta_u$ be the restriction of $\theta$ to $\widetilde{\TT}_u$;
-      then $(\MM,\theta_u,\widetilde{\TT}_u,\TT)$ is a category of homomorphisms.
-      The sub-structures of $S$ in $(\MM,\theta_u,\widetilde{\TT}_u,\TT)$ are the topologies induced by $S$ on an open of $S$, i.e. the elements that are smaller than $S$ in the order relation considered in \cite{3c} on $\widetilde{\TT}$.
+      The sub-structures of $S$ in $(\MM,\theta,\tTT,\TT)$ are the topologies induced by $S$ on the subclasses of $\theta(S)$.
+      Let $\widetilde{\TT_u}$ be the subcategory of $\tTT$ consisting of open continuous maps from one topological space to another;
+      let $\theta_u$ be the restriction of $\theta$ to $\tTT_u$;
+      then $(\MM,\theta_u,\tTT_u,\TT)$ is a category of homomorphisms.
+      The sub-structures of $S$ in $(\MM,\theta_u,\tTT_u,\TT)$ are the topologies induced by $S$ on an open of $S$, i.e. the elements that are smaller than $S$ in the order relation considered in \cite{3c} on $\tTT$.
     \item[\normalfont(2)]
       The sub-structures of $\CC^\perp$ in $(\MM,p_\FF,\FF,\FF_\gamma)$ are the subcategories of $\CC^\perp$ (see \hyperref[proposition:i-9]{Proposition~9} in \hyperref[section:ii]{§II}).
     \item[\normalfont(3)]
@@ -2180,11 +2183,11 @@ We similarly define the notion of a \emph{left-solving} category of homomorphism
 
     \item[\normalfont(3)]
       If, for all $S\in\HH_0$ and all $e<p(S)$, there exists $s\subs_p S$ such that $p(s)=e$, then $(\CC,p,\HH,\SS)$ is right and left solving.
-      This is also the case in particular for $(\MM,\omega,\widetilde{\Omega},\Omega)$ and $(\MM,\theta,\widetilde{\TT},\TT)$.
+      This is also the case in particular for $(\MM,\omega,\widetilde{\Omega},\Omega)$ and $(\MM,\theta,\tTT,\TT)$.
 
     \item[\normalfont(4)]
       \oldpage{370}
-      $(\MM,\theta,\widetilde{\TT}_u,\TT)$ is not right solving.
+      $(\MM,\theta,\tTT_u,\TT)$ is not right solving.
   \end{enumerate}
 \end{examples}
 
@@ -2487,13 +2490,13 @@ In what follows, we further suppose that $\HH$ is endowed with an order relation
     hence $h$ has a sub-morphism $h'\colon s\to s'$, and $h'=\bigcup h_i$.
   \end{longcomm}
 
-  It is also the case for the categories of homomorphisms $(\MM,p_\FF,\FF,\FF_\gamma)$ and $(\MM,\theta_u,\widetilde{\TT}_u,\TT)$ when $\FF$ and $\widetilde{\TT}_u$ are endowed with their usual order relations.
+  It is also the case for the categories of homomorphisms $(\MM,p_\FF,\FF,\FF_\gamma)$ and $(\MM,\theta_u,\tTT_u,\TT)$ when $\FF$ and $\tTT_u$ are endowed with their usual order relations.
 
   \begin{longcomm}{44.3}
-    This assertion is not correct: $\FF$ satisfies condition~(c), but $(\FF_0,\subs)$ is not an inductive class; $\widetilde{\TT}_u$ is not right solving.
+    This assertion is not correct: $\FF$ satisfies condition~(c), but $(\FF_0,\subs)$ is not an inductive class; $\tTT_u$ is not right solving.
   \end{longcomm}
 
-  However, $(\MM,\theta,\widetilde{\TT},\TT)$ does not satisfy condition~(c).
+  However, $(\MM,\theta,\tTT,\TT)$ does not satisfy condition~(c).
 \end{example}
 
 Let $(\HH,\bar{p},\bHH,\bSS)$ be a category of homomorphisms such that $\bSS$ contains the groupoid $\bar{\Gamma}$ of invertible elements of $\bHH$, and such that $(\HH,\bar{p},\bSS)$ is a species of superstructures \cite{3a} over $(\CC,p,\SS)$.
@@ -3236,7 +3239,7 @@ imply that $p(sh)=p(s)p(h)$.
 \begin{examples}
   \begin{enumerate}
     \item
-      In the category of homomorphisms $(\MM,\theta,\widetilde{\TT},\TT)$, a $\theta$-open homomorphism is an open continuous map.
+      In the category of homomorphisms $(\MM,\theta,\tTT,\TT)$, a $\theta$-open homomorphism is an open continuous map.
 
     \item
       In $(\MM,p_\FF,\FF,\FF_\gamma)$, a functor $F$ is $p_\FF$-open if and only if $F(\CC)$ is a subcategory of $\beta(F)$ for every subcategory $\CC$ of $\alpha(F)$.
@@ -3579,7 +3582,7 @@ Note that, even if $\Gamma$ is contained in $\HH'$, this definition does not imp
 \subsection{Definition of structured categories and groupoids}
 \label{section:ii.2}
 
-We again denote by $(\MM,p_\FF,\FF,\FF_\gamma)$ the category of homomorphisms (\hyperref[section:i-3]{§I.3}) in which $\FF$ is the category of functors $(\bar{\CC}^\perp,F,\CC^\perp)$ such that $(\bar{C},F,\CC)\in\MM$, and $p_\FF$ is the functor
+We again denote by $(\MM,p_\FF,\FF,\FF_\gamma)$ the category of homomorphisms (\hyperref[section:i.3]{§I.3}) in which $\FF$ is the category of functors $(\bar{\CC}^\perp,F,\CC^\perp)$ such that $(\bar{C},F,\CC)\in\MM$, and $p_\FF$ is the functor
 \[
   (\bar{\CC}^\perp,F,\CC^\perp)
   \longmapsto (\bar{\CC},F,\CC).
@@ -3934,8 +3937,73 @@ In particular, we write
 
 \begin{definition}{6}
 \label{definition:ii-6}
-  We
+  We define an \emph{$\HH(\HH',\HH'')$-structured subcategory} (resp. \emph{$\HH(\HH',\HH'')$-structured subgroupoid}) of $(\CC^\bullet,s)\in\bHH(\HH',\HH'')_0$ to be a substructure of $(\CC^\bullet,s)$ in $(\FF,\bar{p},\bHH(\HH',\HH''),\bar{\Gamma})$ (resp. in $(\FF,\bar{p},\bar{\GG}(\HH',\HH''),\bar{\Gamma}_\GG)$).
+  We similarly define an \emph{$\HH((\HH',\HH'),\HH'')$-structured subcategory} (resp. \emph{$\HH((\HH',\HH'),\HH'')$-structured subgroupoid}).
 \end{definition}
+
+Before studying the properties of structured categories and structured groupoids, we first give some examples.
+
+
+\subsection{First examples}
+\label{section:ii.3}
+
+\subsubsection*{Example I}
+\label{section:ii.3.i}
+
+Let $(\MM,\theta,\tTT,\TT)$ be the category of homomorphisms defined in \hyperref[section:i.3]{§I.3}.
+
+\begin{definition}{7}
+\label{definition:ii-7}
+  A $\tTT$-structured category (resp. $\tTT$-structured groupoid) is called a \emph{topological category} (resp. \emph{topological groupoid}).
+\end{definition}
+
+This definition agrees with that of \cite{3b}.
+Indeed, if $(\CC^\bullet,s)$ is a topological category in the sense of \cite{3b}, then condition~(1) of the definition of a $\tTT$-structured category is satisfied by taking $s_0$ to be the topology on $\CC_0^\bullet$ induced by the given topology on $\CC$.
+Furthermore, condition~(2) is satisfied, with $s'$ the topology on $\CC^\bullet\star\CC^\bullet$ induced by $s\times s$.
+Thus the definition of a topological category can also be expressed as:
+
+\begin{enumerate}
+  \item[\normalfont(1)]
+    The maps $\alpha$ and $\beta$ are continuous maps from $s$ to $s$.
+  \item[\normalfont(2)]
+    The map $\chi^\bullet$ is a continuous map from $s'$ to $s$, where $s'$ is the topology on $\CC^\bullet\star\CC^\bullet$ induced by $s\times s$.
+\end{enumerate}
+
+\begin{longcomm}{58.1}
+  \emph{Topological categories} are formally introduced in \cite{coll50}, along with the more refined locally trivial categories (cf. Comment~25.1);
+  in particular, conditions are given there which ensure that the groupoid of all morphisms be open.
+  Their general theory is developed in \cite{coll92};
+  \emph{microtransitive categories} (those where the map $f\mapsto(\beta(f),\alpha(f))$ is open) are characterised and equipped with a quasi-uniform structure (generalising the uniformities of a topological group);
+  prolongations of topological and quasi-topological categories are also considered.
+
+  Germs of topological categories and species of structures are studied in \cite{comm29} and in Bednarz~\cite{comm3}, with a view to applications in control theory.
+\end{longcomm}
+
+We will later see that the definition of an $\HH$-structured category can always be thus simplified in the case where $(\MM,p,\HH,\Gamma)$ is right solving.
+
+
+\subsubsection*{Example II}
+\label{section:ii.3.ii}
+
+Let $\tCC^r$ (resp. $\CC_1^r$) be the category of $r$-differentiable maps (resp. of $r$-differentiable maps of locally constant rank) between $r$-differentiable manifolds;
+$\tCC^r$ will be thought of as a category of homomorphisms over $\MM$.
+
+\oldpage{387}
+
+\begin{definition}{8}
+\label{definition:ii-8}
+  A $\tCC^r((\CC_1^1,\CC_1^r),\tCC^r)$-structured category (resp. $\tCC^r((\CC_1^1,\CC_1^r),\tCC^r)$-structured groupoid) is called an \emph{$r$-differentiable category} (resp. \emph{$r$-differentiable groupoid}).
+\end{definition}
+
+This definition agrees with that of \cite{3b}.
+
+\begin{longcomm}{59.2}
+  \emph{Differentiable categories} are formally defined in \cite{coll50}, where the groupoid of all isomorphisms is proved to be open.
+
+  In
+\end{longcomm}
+
+
 
 
 %% Bibliography %%
