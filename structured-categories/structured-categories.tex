@@ -4087,6 +4087,133 @@ Note that $(D_1^\perp,\iota,D^\perp)\in\DD$ if and only if $D^\perp$ is a sub-se
 \oldpage{388}
 In \hyperref[section:ii-3-iii]{Example~III}, we can replace $\DD$ by the subcategory $\DD'$ (resp. $\DD''$) consisting of triples $(D_1^\perp,f,D^\perp)$ such that $D^\perp$ and $D_1^\perp$ are semigroups that admit a unit $1$ (resp. that admit an element $0$ such that $z\perp0=0\perp z=0$ for all $z\in D$), and such that we have $f(1)=1$ (resp. $f(0)=0$).
 
+For $(\CC^\bullet,\perp)$ to be $\DD'$-structured (resp. $\DD''$-structured), it is necessary and sufficient that $(\CC^\bullet,\perp)$ be a $\DD$-structured category and that $1\in\CC_0^\bullet$ (resp. $0\in\CC_0^\bullet$).
+
+A $\DD'$-structured category is a category with strictly associative multiplication, in the sense of Bénabou~\cite{comm1}
+
+\begin{longcomm}{60.1}
+  A $\DD'$-structured category is also called a \emph{strictly monoidal category}: the main example is the simplicial category, equipped with the ordinal sum.
+  \emph{Monoidal categories} (MacLane~\cite{comm71}, Eilenberg–MacLane~\cite{comm32}) or \emph{multiplicative categories} (Bénabou~\cite{comm4}) are obtained by a "laxification" process: more precisely, they correspond to lax functors from the sketch of monoids
+  \[
+    \begin{tikzcd}[sep=huge]
+      0
+        \ar[r,"i"]
+      & 1
+        \ar[r,bend left=30,"i\times1"]
+        \ar[r,bend right=30,swap,"1\times i"]
+      & 2
+        \ar[l,"k"description]
+      & 3
+        \ar[l,bend left=30,"1\times k"]
+        \ar[l,bend right=30,swap,"k\times1"]
+    \end{tikzcd}
+  \]
+  considered as a discrete 2-category to the 2-category of categories (cf. \cite{coll117}).
+  Similar "laxifications" lead from 2-categories to bicategories, and from double categories to non-associative double categories (Bénabou~\cite{comm6}, Chamaillard~\cite{comm20}, Moreau~\cite{comm78}).
+\end{longcomm}
+
+
+\subsubsection*{Example V}
+\label{section:ii-3-v}
+
+Let $G$ be a semigroup.
+Let $[G]$ be the category defined in the following way.\comm{60.2}{This $[G]$ is the \emph{category of $G$-spaces}.}
+
+A unit of $[G]$ is a pair $(Z,\chi)$, where $Z\in\MM_0$ and $\chi$ is a map from $G\times Z$ to $Z$, i.e. an external composition law on $Z$, with the composite $\chi(\gamma,z)$, where $\gamma\in G$ and $z\in Z$, being denoted $\gamma\chi z$.
+We suppose that the following axiom is satisfied:
+
+\begin{enumerate}
+  \item[\normalfont(1)]
+    $(\gamma'\gamma)\chi z=\gamma'\chi(\gamma\chi z)$, where $\gamma,\gamma'\in G$ and $z\in Z$.
+\end{enumerate}
+
+A morphism of $[G]$ is a triple $((Z',\chi'),T,(Z,\chi))$, where $(Z,\chi),(Z',\chi')\in[G]_0$ and $(Z',T,Z)\in\MM$, and
+\[
+  \gamma\chi T(z)
+  = T(\gamma\chi z)
+\]
+for all $z\in Z$ and $g\in G$.
+
+Then $[G]$ is a category of homomorphisms over $\MM$ with the projection
+\[
+  \big(
+    (Z',\chi'), T, (Z,\chi)
+  \big)
+  \longmapsto (Z',T,Z).
+\]
+
+Let $[G,0]$ be the full subcategory of $[G]$ whose units are the pairs $(Z,\chi)$ that further satisfy the following axiom:
+
+\begin{enumerate}
+  \item[\normalfont(2)]
+    There exists $0\in Z$ such that $\gamma\chi0=0$ for all $\gamma\in G$.
+\end{enumerate}
+
+If $G$ admits a unit $1$, let $[G,1]$ be the full subcategory of $[G]$ whose units are the pairs $(Z,\chi)$ that satisfy the following axiom:
+
+\begin{enumerate}
+  \item[\normalfont(2')]
+    $1\chi z=z$ for all $z\in Z$.
+\end{enumerate}
+
+\begin{proposition}{3}
+\label{proposition:ii-3}
+  Let $\CC^\bullet$ be a category.
+  For $(\CC^\bullet,\chi)$ to be a $[G]$-structured category (resp. a $[G,0]$-structured category, resp. a $[G,1]$-structured category), it is necessary and sufficient that the following conditions be satisfied:
+
+  \begin{enumerate}
+    \item[\normalfont(1)]
+      $(C^\bullet,\chi)\in[G]_0$ (resp. $(C^\bullet,\chi)\in[G,0]_0$, resp. $(C^\bullet,\chi)\in[G,1]_0$).
+    \item[\normalfont(2)]
+      $(\gamma\chi\CC_0^\bullet)\subset\CC_0^\bullet$ for all $\gamma\in G$.
+    \item[\normalfont(3)]
+      If $(g,f)\in\CC^\bullet\star\CC^\bullet$, then
+      \[
+        (\gamma\chi g,\gamma\chi f)
+        \in\CC^\bullet\star\CC^\bullet
+      \]
+      for all $\gamma\in G$, and
+      \[
+        (\gamma\chi g)\bullet(\gamma\chi f)
+        = \gamma\chi(g\bullet f).
+      \]
+  \end{enumerate}
+\end{proposition}
+
+\oldpage{389}
+
+\begin{definition}{9}
+\label{definition:ii-9}
+  A $[G]$-structured category is called a \emph{category with operator semigroup $G$}.
+  If $G$ is a group, a $[G,1]$-structured category is called a \emph{category with operator group $G$}.
+\end{definition}
+
+\begin{examples}
+  \begin{enumerate}
+    \item[\normalfont(1)]
+      Let $(\CC^+,\chi)$ be a category with operator semigroup $G$.
+      If $\CC^+$ is an abelian group and $\CC^\bullet=G$ is commutative, then $(\CC^+,\chi)$ is a commutative ring.
+    \item[\normalfont(2)]
+      Let $E$ be a topological space and $G$ a group of operators on $E$ such that, for all $\gamma\in G$, the map
+      \[
+        \widetilde{\gamma}\colon x
+        \longmapsto \gamma x
+      \]
+      (where $x\in E$) is a homeomorphism of $E$.
+      The category of local jets of continuous maps from $E$ to $E$ is then a category with operator group $G$, with the composition $\gamma j_x^\lambda f$ being $(j_{x'}^\lambda\widetilde{\gamma})(j_x^\lambda f)(j_{x'}^\lambda\widetilde{\gamma})^{-1}$, where $x'=f(x)$.
+  \end{enumerate}
+\end{examples}
+
+
+\section{Double categories}
+\label{section:ii-4}
+
+Let $(\MM,p_\FF,\FF,\FF_\gamma)$ be the category of homomorphisms defined in \hyperref[section:i]{§I}.
+
+\begin{definition}{10}
+\label{definition:ii-10}
+  An $\FF$-structured category is called a \emph{double category}.
+\end{definition}
 
 
 
