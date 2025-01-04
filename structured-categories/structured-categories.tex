@@ -3725,6 +3725,7 @@ We denote by $\HH'$ and $\HH''$ two subcategories of $\HH$ that contain $\Gamma$
     \textand
     (s_0,\beta,s)
     \in\HH.
+    \qedhere
   \]
 \end{proof}
 
@@ -3833,8 +3834,108 @@ In particular, we write
 
 \begin{proof}
   The only thing to prove is that the conditions
+  \[
+    \bar{F}
+    = \big((\CC_1^\bullet,s_1),F,(\CC^\bullet,s)\big)
+    \in\bar{\Gamma}
+    \textand
+    (\CC^\bullet,\bar{s})
+    \in\bHH(\HH',\HH'')_0
+  \]
+  imply the existence of $(\CC_1^\bullet,\bar{s}_1)\in\bHH(\HH',\HH'')_0$ such that $(\bar{s}_1,F,\bar{s})\in\HH$.
+  Since $(\MM,p,\Gamma)$ is a species of structures, there exists $(\bar{s}_1,F,\bar{s})\in\Gamma$.
+  We now show that $(\CC_1^\bullet,\bar{s}_1)\in\bHH(\HH',\HH'')_0$.
+  Let $s_0\subs s$ and $s_0^1\subs s_1$ be such that $p(s_0)=\CC_0^\bullet$ and $p(s_0^1)=(\CC_1^\bullet)_0$.
+  By \cref{proposition:i-6} in \hyperref[section:i]{§I}, we have that
+  \[
+    (s_0^1,F\iota,s_0)
+    \in\Gamma
+    \textand
+    (s_0^1\times s_0^1,(F\times F)\iota,s_0\times s_0)
+    \in\Gamma.
+  \]
+  It thus follows that there exists $\bar{s}_0^1\in\HH_0$ such that
+  \[
+    p(\bar{s}_0^1)
+    = (\CC_1^\bullet)_0
+    \textand
+    (\bar{s}_0^1,F\iota,\bar{s}_0)
+    \in\Gamma
+  \]
+  where $\bar{s}_0\subs\bar{s}$ and $p(\bar{s}_0)=\CC_0^\bullet$.
+  Then $(\bar{s}_0^1\times\bar{s}_0^1,(F\times F)\iota,\bar{s}_0\times\bar{s}_0)\in\Gamma$ and, by \cref{proposition:i-6} in \hyperref[section:i]{§I}, $\bar{s}_0^1\subs\bar{s}_1$.
+  Since $\HH'\supset\Gamma$, we thus deduce that
+  \[
+    (\bar{s}_0^1\times\bar{s}_0^1,[\beta,\alpha],\bar{s}_1)
+    = \big(
+      \bar{s}_0^1\times\bar{s}_0^1, (F\times F)\iota, \bar{s}_0\times\bar{s}_0
+    \big)
+    \bullet \big(
+      \bar{s}_0\times\bar{s}_0, [\beta,\alpha], \bar{s}
+    \big)
+    \bullet \big(
+      \bar{s}, F^{-1}, \bar{s}_1
+    \big)
+    \in \HH'.
+  \]
+  Let $s'\subs s\times s$ be such that $p(s')=\CC^\bullet\star\CC^\bullet$, and $s'_1\subs s_1\times s_1$ be such that $p(s'_1)=\CC_1^\bullet\star\CC_1^\bullet$;
+  by \cref{proposition:i-7} in \hyperref[section:i]{§I}, we have that
+  \[
+    (s'_1,(F\times F)\iota,s')
+    \in\Gamma.
+  \]
+  Let $\bar{s}'\subs\bar{s}\times\bar{s}$ be such that $p(\bar{s}')=p(s')$;
+  there exists
+  \[
+    (\bar{s}'_1,(F\times F)\iota,\bar{s}')
+    \in\Gamma
+  \]
+  such that
+  \[
+    p(\bar{s}'_1)
+    = p(s'_1)
+  \]
+  and, by \cref{proposition:i-6} in \hyperref[section:i]{§I}, $\bar{s}'_1\subs\bar{s}_1\times\bar{s}_1$.
+  Since $\HH''$ contains $\Gamma$,
+  \[
+    (\bar{s}_1,\chi_1^\bullet,\bar{s}'_1)
+    = (\bar{s}_1,F,\bar{s})
+    \bullet (\bar{s},\chi^\bullet,\bar{s}')
+    \bullet(\bar{s}'_1,(F\times F)\iota,\bar{s}')^{-1}
+    \in\HH''.
+  \]
+  Thus
+  \[
+    (\CC_1^\bullet,\bar{s}_1)
+    \in\bHH(\HH',\HH'')_0
+    \textand
+    \big(
+      (C_1^\bullet,\bar{s}_1), F, (\CC^\bullet,\bar{s})
+    \big)
+    \in\bar{\Gamma}.
+  \]
 \end{proof}
 
+\oldpage{386}
+
+\begin{theorem}{2}
+\label{theorem:ii-2}
+  $(\FF,\bar{p},\bHH((\HH',\HH'),\HH''),\Gamma')$ is a category of homomorphisms.
+\end{theorem}
+
+\begin{proof}
+  The proof is analogous to that of \cref{theorem:ii-1}.
+\end{proof}
+
+\begin{theorem}{3}
+\label{theorem:ii-3}
+  If $\HH$ is saturated over $\MM$, then $(\FF,\bar{p},\bHH((\HH',\HH'),\HH''),\Gamma')$, $(\MM,p_\FF\bar{p},\bHH(\HH',\HH''),\bar{\Gamma})$, and $(\HH,\bar{p}_\HH,\bHH(\HH',\HH''),\bar{\Gamma})$ are categories of homomorphisms.
+\end{theorem}
+
+\begin{definition}{6}
+\label{definition:ii-6}
+  We
+\end{definition}
 
 
 %% Bibliography %%
