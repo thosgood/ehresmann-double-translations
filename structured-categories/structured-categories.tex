@@ -4215,6 +4215,75 @@ Let $(\MM,p_\FF,\FF,\FF_\gamma)$ be the category of homomorphisms defined in \hy
   An $\FF$-structured category is called a \emph{double category}.
 \end{definition}
 
+\begin{proposition}{9}
+\label{proposition:ii-9}
+  Let $\CC^\bullet$ be a category, and $\CC_1$ a subclass of $\CC$.
+  The relation $(\CC^\bullet,\iota,\CC_1^\perp)\in\FF$ implies that $\CC_1^\perp$ is a subcategory of $\CC^\bullet$, endowed with the composition law induced by that of $\CC^\bullet$.
+\end{proposition}
+
+\begin{proof}
+  Let $f,f'\in\CC_1$;
+  we have that $\alpha^\perp(f)=\alpha^\bullet(f)$ and, if $f'\perp f$ is defined, that $f'\perp f=f'\bullet f$ since $\iota$ is a functor.
+  Then, if $f'\bullet f$ is defined, we have that
+  \[
+    \alpha^\perp(f')
+    = \alpha^\bullet(f')
+    = \beta^\bullet(f')
+    = \beta^\perp(f)
+  \]
+  whence $f'\perp f$ is defined, and
+  \[
+    f'\perp f
+    = f'\bullet f
+    \in\CC_1.
+  \]
+\end{proof}
+
+\begin{corollary}
+  For $(\CC^\bullet,\CC^\perp)$ to be a double category. it is necessary and sufficient that the following conditions be satisfied:
+  \begin{enumerate}
+    \item[\normalfont(1)]
+      $\CC^\perp$ is a category of which $\CC_0^\bullet$ is a subcategory $(\CC_0^\bullet)^\perp$.
+    \item[\normalfont(2)]
+      $\alpha^\bullet$ and $\beta^\bullet$ are functors from $\CC^\perp$ to $(\CC_0^\bullet)^\perp$.
+    \item[\normalfont(3)]
+      $\CC^\bullet\star\CC^\bullet$ is a subcategory $(\CC^\bullet\star\CC^\bullet)^\perp$ of $\CC^\perp\times\CC^\perp$, and $\chi^\bullet$ is a functor from $(\CC^\bullet\star\CC^\bullet)^\perp$ to $\CC^\perp$.
+  \end{enumerate}
+\end{corollary}
+
+Recall that the composition law in the product category $\CC^\perp\times\CC^\perp$ is defined by
+\[
+  \big(
+    (g',g), (f',f)
+  \big)
+  \longmapsto (g'\perp f',g\perp f)
+\]
+if and only if $g\perp f$ and $g'\perp f'$ are defined in $\CC^\perp$.
+In $\CC^\perp\times\CC^\perp$, we have
+\[
+  \alpha^\perp(g',g)
+  =\big(
+    \alpha^\perp(g'), \alpha^\perp(g)
+  \big)
+  \textand
+  \beta^\perp(g',g)
+  =\big(
+    \beta^\perp(g'), \beta^\perp(g)
+  \big).
+\]
+
+\oldpage{390}
+
+\begin{theorem}{4}
+\label{theorem:ii-4}
+  Let $(\CC^\bullet,\CC^\perp)$ be a double category.
+  Then $(\CC^\perp,\CC^\bullet)$ is also a double category.
+\end{theorem}
+
+\begin{proof}
+  Let $z^\perp,z'^\perp\in\CC_0^\perp$ be such that $(z'^\perp,z^\perp)\in\CC^\bullet\star\CC^\bullet$.
+\end{proof}
+
 
 
 %% Bibliography %%
