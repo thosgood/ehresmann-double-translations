@@ -3762,7 +3762,7 @@ An $\HH(\HH',\HH'')$-structured category (resp. $\HH((\HH',\HH'),\HH'')$-structu
     \textand
     s_0\subs_p s.
   \]
-  It follows from the corollary of \cref{theorem:i-1} (\hyperref[section:i]{§I}) that $s_0$ is unique.
+  It follows from the Corollary of \cref{theorem:i-1} (\hyperref[section:i]{§I}) that $s_0$ is unique.
 \end{proof}
 
 \begin{definition}{4}
@@ -4282,8 +4282,138 @@ In $\CC^\perp\times\CC^\perp$, we have
 
 \begin{proof}
   Let $z^\perp,z'^\perp\in\CC_0^\perp$ be such that $(z'^\perp,z^\perp)\in\CC^\bullet\star\CC^\bullet$.
+  Since $(z'^\perp,z^\perp)$ is a unit of $(\CC^\bullet\star\CC^\bullet)^\perp$, and since $\chi^\bullet$ is a functor from $(\CC^\bullet\star\CC^\bullet)^\perp$ to $\CC^\perp$, we have that $z'^{\perp}\bullet z^\perp\in\CC_0^\perp$.
+  Since $\alpha^\bullet$ is a functor from $\CC^\perp$ to $(\CC_0^\bullet)^\perp$, we have that $\alpha^\bullet(z^\perp)\in\CC_0^\perp$;
+  similarly, $\beta^\bullet(z^\perp)\in\CC_0^\perp$.
+  Thus $\CC_0^\perp$ is a subcategory $(\CC_0^\perp)^\bullet$ of $\CC^\bullet$.
+  Let $(f',f)\in\CC^\bullet\star\CC^\bullet$;
+  then $(\alpha^\perp(f'),\alpha^\perp(f))\in\CC^\bullet\star\CC^\bullet$, since $\CC^\bullet\star\CC^\bullet$ is a subcategory of $\CC^\perp\times\CC^\perp$ and, since $\chi^\bullet$ is a functor, we have that
+  \[
+    \begin{aligned}
+      \alpha^\perp(f')\bullet\alpha^\perp(f)
+      &= \chi^\bullet\big(
+        \alpha^\perp(f'), \alpha^\perp(f)
+      \big)
+    \\&= \chi\big(
+        \alpha^\perp(f',f)
+      \big)
+    \\&= \alpha^\perp(\chi^\bullet(f',f))
+    \\&= \alpha^\perp(f'\bullet f).
+    \end{aligned}
+  \]
+  Suppose that $(g,f),(g',f')\in\CC^\perp\star\CC^\perp$ and $(g',g),(f',f)\in\CC^\bullet\star\CC^\bullet$.
+  By condition~(3) of the Corollary to \cref{proposition:ii-9}, we have that
+  \[
+    (g',g)\perp(f',f)
+    = (g'\perp f',g\perp f)
+    \in\CC^\bullet\star\CC^\bullet
+  \]
+  and
+  \[
+    (g'\perp f')\bullet(g\perp f)
+    = (g'\bullet g\perp f'\bullet f).
+  \]
+  We thus deduce that $\CC^\perp\star\CC^\perp$ is a subcategory of $\CC^\bullet\times\CC^\bullet$, and that the map $(g,f)\mapsto g\perp f$, where $(g,f)\in\CC^\perp\star\CC^\perp$, is a functor from $(\CC^\perp\star\CC^\perp)^\bullet$ to $\CC^\bullet$.
+  This proves that $(\CC^\perp,\CC^\bullet)$ is a double category.
 \end{proof}
 
+\begin{proposition}{10}
+\label{proposition:ii-10}
+  If $(\CC^\bullet,\CC^\perp)$ is a double category, then
+  \[
+    \CC_0^\bullet\cap\CC_0^\perp
+    = (\CC_0^\bullet)_0^\perp
+    = (\CC_0^\perp)_0^\bullet.
+  \]
+\end{proposition}
+
+\begin{proof}
+  Let $f\in\CC$;
+  since $\alpha^\bullet$ and $\beta^\bullet$ are functors from $\CC^\perp$ to $\CC^\perp$, we have the equations
+  \[
+    \begin{array}{cc}
+      \alpha^\bullet(\alpha^\perp(f))
+      = \alpha^\perp(\alpha^\bullet(f));
+      & \alpha^\bullet(\beta^\perp(f))
+      = \beta^\perp(\alpha^\bullet(f));
+    \\\beta^\bullet(\alpha^\perp(f))
+      = \alpha^\perp(\beta^\bullet(f));
+      & \beta^\bullet(\beta^\perp(f))
+      = \beta^\perp(\beta^\bullet(f)).
+    \end{array}
+  \]
+  Thus $(\CC_0^\bullet)_0^\perp=(\CC_0^\perp)_0^\bullet$.
+  If $z\in\CC_0^\perp\cap\CC_0^\bullet$, then we see that
+  \[
+    z
+    = \alpha^\bullet(z)
+    = \alpha^\perp(\alpha^\bullet(z))
+    \in (\CC_0^\bullet)_0^\perp.
+  \]
+\end{proof}
+
+\begin{definition}{11}
+\label{definition:ii-11}
+  The class $(\CC_0^\bullet)_0^\perp$ is called the \emph{class of \unsure{vertices}} of the double category $(\CC^\bullet,\CC^\perp)$, and denoted by $\CC_{00}$.
+\end{definition}
+
+\begin{longcomm}{62.3}
+  \emph{2-categories} are those double categories $(\CC^\bullet,\CC^\perp)$ for which the objects of $\CC^\perp$ are also the objects of $\CC^\bullet$, so that $\CC_{00}=\CC_0^\perp$.
+  They are alternatively defined as categories enriched in the cartesian category of categories (by the general result of \cite[Appendix]{coll120}).
+  The main example is the 2-category of natural transformations \cite{coll52}, from which all double categories may be constructed (cf. \cite[Comment~105.1]{coll64}).
+\end{longcomm}
+
+\oldpage{391}
+
+From the above, if $(\CC^\bullet,\CC^\perp)$ is a double category, then the following conditions are satisfied:
+\begin{enumerate}
+  \item[\normalfont(a)]
+    $\CC^\bullet$ is a category.
+  \item[\normalfont(b)]
+    $\CC^\perp$ is a category.
+  \item[\normalfont(c)]
+    $\alpha^\bullet$ and $\beta^\bullet$ (resp. $\alpha^\perp$ and $\beta^\perp$) are functors from $\CC^\perp$ to $\CC^\perp$ (resp. from $\CC^\bullet$ to $\CC^\bullet$).
+  \item[\normalfont(d)]
+    \emph{Axiom of permutability.}
+    If the composites $(g'\bullet g)\perp(f'\bullet f)$ and $(g'\perp f')\bullet(g\perp f)$ are defined, then
+    \[
+      (g'\bullet g)\perp(f'\bullet f)
+      = (g'\perp f')\bullet(g\perp f).
+    \]
+  \item[\normalfont(e)]
+    $\CC^\perp\star\CC^\perp$ is a subcategory $(\CC^\perp\star\CC^\perp)^\bullet$ of $\CC^\bullet\times\CC^\bullet$, and the map $\chi^\perp$ is a functor from $(\CC^\perp\star\CC^\perp)^\bullet$ to $\CC^\bullet$.
+  \item[\normalfont(f)]
+    $\CC^\bullet\star\CC^\bullet$ is a subcategory $(\CC^\bullet\star\CC^\bullet)^\perp$ of $\CC^\perp\times\CC^\perp$, and the map $\chi^\bullet$ is a functor from $(\CC^\bullet\star\CC^\bullet)^\perp$ to $\CC^\perp$.
+  \item[\normalfont(g)]
+    $\CC_0^\bullet$ (resp. $\CC_0^\perp$) is stable under $\perp$ (resp. under $\bullet$).
+  \item[\normalfont(h)]
+    If the composites $g'\bullet g$, $f'\bullet f$, $g'\perp f'$, and $g\perp f$ are defined, then
+    \[
+      (g'\bullet g)\perp(f'\bullet f)
+      \textand
+      (g'\perp f')\bullet(g\perp f)
+    \]
+    are defined and are equal to one another.
+  \item[\normalfont(i)]
+    For all $f\in\CC$, we have
+    \[
+      \begin{array}{cc}
+        \alpha^\bullet(\alpha^\perp(f))
+        = \alpha^\perp(\alpha^\bullet(f));
+        & \alpha^\bullet(\beta^\perp(f))
+        = \beta^\perp(\alpha^\bullet(f));
+      \\\beta^\bullet(\alpha^\perp(f))
+        = \alpha^\perp(\beta^\bullet(f));
+        & \beta^\bullet(\beta^\perp(f))
+        = \beta^\perp(\beta^\bullet(f)).
+      \end{array}
+    \]
+\end{enumerate}
+
+\begin{theorem}{5}
+\label{theorem:ii-5}
+  Let
+\end{theorem}
 
 
 %% Bibliography %%
