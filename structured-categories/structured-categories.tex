@@ -2171,7 +2171,7 @@ We similarly define the notion of a \emph{left-solving} category of homomorphism
 
   In usual cases (in particular, if $\CC$ is the category of sets), $p(s)$ is an equaliser of $(p(h),p(h'))$;
   then, since $p$ is faithful, $s$ is a $p$-kernel of $(h,h')$ if and only if it is an equaliser of $(h,h')$ in $\HH$ (cf. \cite[Proposition~3.1]{coll109});
-  so Axiom~(R) in \cref{definition:i-9} means that $p$ creates equalisers defined by meets (cf. Comment~221.2 on \cite{coll100}).
+  so axiom~(R) in \cref{definition:i-9} means that $p$ creates equalisers defined by meets (cf. Comment~221.2 on \cite{coll100}).
   This justifies the name ``$p$-kernel'' (an equaliser is also called a \emph{difference kernel}, or even just a \emph{kernel}).
 \end{longcomm}
 
@@ -2932,7 +2932,7 @@ imply that $p(sh)=p(s)p(h)$.
     \beta(\bar{h})=\beta(\bar{h}');
   \]
   let $\bar{s}$ be the $p\bar{p}$-kernel of $(\bar{h},\bar{h}')$.
-  By Axiom~(c), $s<S$ in $\HH$ implies that $s\subs S$ in $(\CC,p,\HH,\SS)$, and so $\beta(Ss=S)$;
+  By axiom~(c), $s<S$ in $\HH$ implies that $s\subs S$ in $(\CC,p,\HH,\SS)$, and so $\beta(Ss=S)$;
   by Corollary~4 of \hyperref[proposition:i-13]{Proposition~13}, it follows that $\bar{s}\subs_{\bar{p}}\alpha(\bar{h})$.
   Furthermore, the relations
   \[
@@ -3350,7 +3350,7 @@ for a substructure $s$ of $S$ to be the $p$-kernel of $(h,h')$, it is necessary 
 
 \begin{proof}
   Let $(S_1,g,S)=\bar{g}\in\Gamma$, and let $s$ be the $p$-kernel of $(h,h')$, where $\alpha(h)=S$.
-  By Axiom~(R) in \cref{definition:i-9}, the pair $(h\bullet g^{-1},h'\bullet g^{-1})$ admits a $p$-kernel $s_1\in S_1$;
+  By axiom~(R) in \cref{definition:i-9}, the pair $(h\bullet g^{-1},h'\bullet g^{-1})$ admits a $p$-kernel $s_1\in S_1$;
   since $p(s_1)=g(p(s))$, it follows from \cref{proposition:i-7} that we have
   \[
     \bar{g}' = (s_1,g\iota,s)
@@ -4412,8 +4412,59 @@ From the above, if $(\CC^\bullet,\CC^\perp)$ is a double category, then the foll
 
 \begin{theorem}{5}
 \label{theorem:ii-5}
-  Let
+  Let $\CC$ be a class endowed with two compositions laws, $\bullet$ and $\perp$;
+  for $(\CC^\bullet,\CC^\perp)$ to be a double category, it is necessary and sufficient that one of the three systems of above axioms be satisfied:
+  \begin{enumerate}
+    \item[\normalfont(1)]
+      (a), (b), (c), (d).
+    \item[\normalfont(2)]
+      (a), (b), (e), (f), (i).
+    \item[\normalfont(3)]
+      (a), (b), (g), (h), (i).
+  \end{enumerate}
 \end{theorem}
+
+\begin{proof}
+  We first show that system of axioms (1) implies that $(\CC^\bullet,\CC^perp)$ is a double category.
+  Let $z^\bullet,z'^\bullet\in\CC_0^\bullet$;
+  if $z'^\bullet\perp z^\bullet$ is defined, then, since $\alpha^\bullet$ is a functor,
+  \[
+    \begin{aligned}
+      \alpha^\bullet(z'^\bullet\perp z^\bullet)
+      &= \alpha^\bullet(z'^\bullet)\perp\alpha^\bullet(z^\bullet)
+    \\&= z'^\bullet\perp z^\bullet
+    \in \CC_0^\bullet;
+    \end{aligned}
+  \]
+  since $\alpha^\perp$ and $\beta^\perp$ are functors, we have that $\alpha^\perp(z^\bullet)\in\CC_0^\bullet$ and $\beta^\perp(z^\bullet)\in\CC_0^\bullet$;
+  consequently, $\CC_0^\bullet$ is a subcategory of $\CC^\perp$.
+  For all $f\in\CC$, we have that
+  \[
+    \alpha^\bullet(\alpha^\perp(f))=\alpha^\perp(\alpha^\bullet(f))
+  \]
+  since $\alpha^\bullet$ is a functor;
+  similarly, the other equations in axiom~(i) are also consequences of axiom~(c).
+  Let $(f',f)\in\CC^\bullet\star\CC^\bullet$;
+  from (i), it follows that
+  \[
+    \begin{aligned}
+      \alpha^\bullet(\alpha^\perp(f'))
+      &= \alpha^\perp(\alpha^\bullet(f'))
+    \\&= \alpha^\perp(\beta^\bullet(f))
+    \\&= \beta^\bullet(\alpha^\perp(f))
+    \end{aligned}
+  \]
+  \oldpage{392}
+  and so
+  \[
+    (\alpha^\perp(f'),\alpha^\perp(f))\in\CC^\bullet\star\CC^\bullet;
+  \]
+  in a similar way, we find that
+  \[
+    (\beta^\perp(f'),\beta^\perp(f))\in\CC^\bullet\star\CC^\bullet.
+  \]
+  Let
+\end{proof}
 
 
 %% Bibliography %%
