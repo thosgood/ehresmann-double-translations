@@ -144,7 +144,7 @@
 \newcommand{\NN}{\mathcal{N}}
 
 \setlength{\fboxsep}{1pt}
-\newcommand{\boxnum}[1]{{\fbox{\scriptsize$#1$\vphantom{$jk$}}}}
+\newcommand{\boxnum}[1]{{\fbox{\scriptsize${#1}$\vphantom{$jk$}}}}
 
 % Boxes
 \newcommand{\hsqbox}{{\boxminus}}
@@ -4969,7 +4969,34 @@ The 1-faces are called the \emph{edges} of $\CC$.
       by induction, we can show that, for all $i\leq(n-1)$, there exists a bijection $\varepsilon_n^i$ from $\CC^{[n]}$ to $\sq((\CC^{[n-1]})^{\perp_i},(\CC^{[n-1]})^{\perp_i})$.
 
       \begin{longcomm}{70.5}
-        To construct \todo
+        To construct $\varepsilon_n^{n-1}$ by induction, one has to use the isomorphism
+        \[
+          \begin{aligned}
+            \vsq\big(\vsq(A,A),\vsq(A,A)\big)
+            &\longrightarrow
+            \sq\big(\vsq(A,A),\vsq(A,A)\big)^\perp
+            \hookrightarrow \hsq(A,A)^4
+          \\Q=(\hat{q}',q',q,\hat{q})
+            &\longmapsto
+            \big(
+              \hat{q}',
+              \sq({}'\beta^\hsqbox)(Q),
+              \sq({}'\alpha^\hsqbox)(Q),
+              \hat{q}
+            \big)
+          \end{aligned}
+        \]
+        where ${}'\alpha^\hsqbox$ and ${}'\beta^\hsqbox$ are the source and target functors $\vsq(A,A)\to A$;
+        this isomorphism is well defined for any category $A$.
+
+        A simpler construction of the $n$-fold category $\CC^\boxnum{n}$ is done on p.~95.
+        Cf. also the definition in \cite{coll120} of the functor
+        \[
+          \operatorname{Square}_{n,m}
+          \colon \mathsf{Cat}_n
+          \to \mathsf{Cat}_m
+        \]
+        for $n<m$, where the $n$-fold category $\operatorname{Square}_{n-1,n}\CC^\boxnum{n-1}$ is the same as $\CC^\boxnum{n}$, except for the fact that the first and last compositions are interchanged.
       \end{longcomm}
 
       The composition law $\perp_i$ on on $\CC^{[n]}$ is the inverse image under $\varepsilon_n^i$ of the longitudinal multiplication on $\varepsilon_n^i(\CC^{[n]})$.
