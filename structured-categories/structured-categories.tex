@@ -4821,12 +4821,106 @@ From \cref{theorem:ii-13}, it also follows that, if $(\CC^{\perp_i})_{i\leq n}$ 
   Suppose that the theorem has been proven for $m$-fold categories, for all $m\leq n-1$; we will prove it for an $n$-fold category.
   Let $(\CC^{\perp_1},(\CC^{\perp_i})_{2\leq i\leq n})$ be an $n$-fold category.
   By hypothesis, $\alpha^1$ is a $(n-1)$-fold functor.
+\oldpage{69}
   Let $e^1\in\CC_0^{\perp_1}$;
   we have that $\alpha^i(e^1)\in\CC_0^{\perp_1}$, since $\CC_0^{\perp_1}$ is by definition an $(n-1)$-fold subcategory of the $(n-1)$-fold category $(\CC^{\perp_i})_{2\leq i\leq n}$.
-  Suppose that
-\oldpage{69}
+  Suppose that $g\perp_1 f$ is defined;
+  since the class $\CC^{\perp_i}\star\CC^{\perp_i}$ of $\perp_i$-composible pairs is an $(n-1)$-fold subcategory of the product category $(\CC^{\perp_i})_{2\leq i\leq n}\times(\CC^{\perp_i})_{2\leq i\leq n}$, the composite $(\alpha^i(g))\perp_i(\alpha^i(f))$ is defined;
+  from the fact that the map
+  \[
+    \chi^{\perp_1}
+    \colon (g,f)
+    \longmapsto g\perp_1f
+  \]
+  is an $(n-1)$-fold functor, we deduce that
+  \[
+    \chi^{\perp_1}(\alpha^i(g),\alpha^i(f))
+    = \chi^{\perp_1}(\alpha^i(g,f))
+    = \alpha^i(g\perp_1 f)
+  \]
+  whence
+  \[
+    \alpha^i(g)\perp_1\alpha^i(f)
+    = \alpha^i(g\perp_1 f).
+  \]
+  This proves that $\alpha^i$ is a functor from $\CC^{\perp_1}$ to $\CC^{\perp_1}$;
+  consequently, condition~(1) of the theorem is satisfied.
+  Condition~(2) follows from the fact that $\chi^{\perp_1}$ is an $(n-1)$-fold functor.
 
+  Conversely, suppose that conditions~(1) and (2) of the theorem are satisfied.
+  Since $\alpha^i$ is a functor from $\CC^{\perp_j}$ to $\CC^{\perp_j}$, if $j\neq i$, we have that
+  \[
+    \alpha^i(\alpha^1(f))
+    = \alpha^1(\alpha^i(f))
+  \]
+  where $f\in\CC$, and
+  \[
+    \alpha^1(e^1\perp_i e'^1)
+    = e^1\perp_i e'^1
+  \]
+  where $e^1,e'^1\in\CC_0^{\perp_1}$;
+  thus $\CC_0^{\perp_1}$ is an $(n-1)$-fold subcategory of $(\CC^{\perp_i})_{2\leq i\leq n}$.
+  We will prove that $(\CC^{\perp_1})\star(\CC^{\perp_1})$ is an $(n-1)$-fold subcategory of the product $(n-1)$-fold category $(\CC^{\perp_i})_{2\leq i\leq n}\times(\CC^{\perp_i})_{i\leq 2\leq n}$.
+  Suppose that $(g,f)\in(\CC^{\perp_1})\star(\CC^{\perp_1})$;
+  since $\alpha^i$ is a functor from $\CC^{\perp_1}$ to $\CC^{\perp_1}$, we have that
+  \[
+    \alpha^i(g\perp_1 f)
+    = \alpha^i(g)\perp_1\alpha^i(f)
+  \]
+  and so $(\alpha^i(g),\alpha^i(f))\in(\CC^{\perp_1})\star(\CC^{\perp_1})$;
+  similarly, $(\beta^i(g),\beta^i(f))\in(\CC^{\perp_1})\star(\CC^{\perp_1})$.
+  Suppose further that $(g',f')\in(\CC^{\perp_1})\star(\CC^{\perp_1})$ such that $g'\perp_i g$ and $f'\perp_i f$ are defined for all $2\leq i\leq n$.
+  We see that
+  \[
+    \begin{aligned}
+      \alpha^1(g'\perp_i g)
+      &= \alpha^1(g')\perp_i\alpha^1(g)
+    \\&= \beta^1(f')\perp_i\beta^1(f)
+    \\&= \beta^1(f'\perp_i f);
+    \end{aligned}
+  \]
+  consequently,
+  \[
+    \big(
+      (g'\perp_i g), (f'\perp_i f)
+    \big)
+    \in(\CC^{\perp_1})\star(\CC^{\perp_1})
+  \]
+  for $2\leq i\leq n$, and $(\CC^{\perp_1})\star(\CC^{\perp_1})$ is thus a subcategory.
+  It remains only to show that $\chi^{\perp_1}$ is an $(n-1)$-fold functor.
+  We have that
+  \[
+    \chi^{\perp_1}\big(
+      (g',f')\perp_i(g,f)
+    \big)
+    = (g'\perp_i g)\perp_1(f'\perp_i f);
+  \]
+  \oldpage{70}
+  since
+  \[
+    \begin{aligned}
+      \alpha^i(g'\perp_1 f')
+      &= \alpha^i(g')\perp_1\alpha^i(f')
+    \\&= \beta^i(g)\perp_1\beta^i(f)
+    \\&= \beta^i(g\perp_1 f),
+    \end{aligned}
+  \]
+  the composite $(g'\perp_1 f')\perp_i(g\perp_1 f)$ is defined;
+  condition~(2) implies that
+  \[
+    \begin{aligned}
+      \chi^{\perp_1}\big(
+        (g',f')\perp_i(g,f)
+      \big)
+      &= (g'\perp_i g)\perp_1(f'\perp_i f)
+    \\&= (g'\perp_1 f')\perp_i(g\perp_1 f)
+    \\&= \chi^{\perp_1}(g',f')\perp_i\chi^{\perp_1}(g,f).
+    \end{aligned}
+  \]
+  This proves the theorem.
 \end{proof}
+
+Let
 
 
 
