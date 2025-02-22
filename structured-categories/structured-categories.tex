@@ -5021,9 +5021,77 @@ The 1-faces are called the \emph{edges} of $\CC$.
       \]
 
     \item[\normalfont(3)]
-      \todo \todo \todo
+      Let $\CC_p=(\CC^{\perp_i})_{i\leq p}$ be a $p$-fold category, and $\overline{\CC}_n=(\overline{\CC}^{\perp_i})_{i\leq n}$ an $n$-fold category.
+      The class $\FF(\overline{\CC}_n,\CC_p)$ of $p$-fold functors from $\CC_p$ to $(\overline{\CC}^{\perp_i})_{i\leq p}$ is an $(n-p)$-fold category for the composition laws $\perp_j$ (for $p<j\leq n-1$) defined by
+      \[
+        (\Phi'\perp_j\Phi)(f)
+        = (\Phi'(f)\perp_j\Phi(f))
+      \]
+      if and only if $\Phi'(f)\perp_j\Phi(f)$ is defined for all $f\in\CC$.
+      In particular, if $p=1$, then the class of functors from $\CC^{\perp_1}$ to $\overline{\CC}^{\perp_1}$ is an $(n-1)$-fold category.
+      If $p=(n-1)$, then the class of $(n-1)$-fold functors from $\CC_{n-1}$ to $(\overline{\CC}^{\perp_i})_{i\leq n-1}$ is a category.
+      An element $\Phi$ of this latter category can be considered as a \emph{generalised natural transformation from the $(n-1)$-fold functor $\alpha^{\perp_n}\Phi$ to the $(n-1)$-fold functor $\beta^{\perp_n}\Phi$}.
+
+      \begin{longcomm}{71.1}
+        Cf. Comment~68.1.
+        We have proved:
+        \begin{itemize}
+          \item in \cite{coll119}, that $\FF(\overline{\CC}_n,\CC_p)$ defines the internal Hom on the category of all multiple categories;
+          \item in \cite{coll120}, that the closure functor of the cartesian category $\mathsf{Cat}_n$ sends $(\overline{C}_n,\CC_n)$ the $n$-fold category $\FF(\sq_n\overline{\CC}_n,\CC_n)$, where $\sq_n\overline{\CC}_n$ is the $2n$-fold category obtained from $\operatorname{Square}_{n,2n}\overline{\CC}_n$ (cf. Comment~70.5) by the interchange of compositions
+          \[
+            (1,2,\ldots,2n)
+            \longmapsto (1,3,\ldots,2n-1,2,4,\ldots,2n).
+          \]
+        \end{itemize}
+      \end{longcomm}
   \end{enumerate}
 \end{remarks}
+
+\begin{proposition}{15}
+\label{proposition:ii-15}
+  For an $n$-fold category $(\CC^{\perp_1},(\CC^{\perp_i})_{2\leq i\leq n})$ to be an $\FF^{[n-1]}$-structured groupoid, it is necessary and sufficient that $\CC^{\perp_1}$ be a groupoid.
+\end{proposition}
+
+\begin{proof}
+  The condition is evidently necessary; we will show that it is sufficient.
+  For all $f\in\CC$, we denote by $f^{-1}$ the inverse of $f$ in the groupoid $\CC^{\perp_1}$.
+  It suffices to prove that the map $f\mapsto f^{-1}$ is an $(n-1)$-fold functor from $(\CC^{\perp_i})_{2\leq i\leq n}$ to $(\CC^{\perp_i})_{2\leq i\leq n}$.
+  Since $\alpha^{\perp_i}$ is a functor from $\CC^{\perp_1}$ to $\CC^{\perp_1}$, we have that
+  \[
+    (z^i)^{-1}
+    = \big(\alpha^{\perp_i}(z^i)\big)^{-1}
+    = \alpha^{\perp_i}\big((z^i)^{-1}\big)
+    \in\CC_0^{\perp_i}
+  \]
+  for all $z^i\in\CC_0^{\perp_i}$ and $2\leq i\leq n$.
+  Since $\chi^{\perp_i}$ is a functor from $\CC^{\perp_1}\star\CC^{\perp_1}$ to $\CC^{\perp_1}$, we see that
+  \[
+    \begin{aligned}
+      (g^{-1}\perp_i f^{-1})
+      &= \chi^{\perp_i}(g^{-1},f^{-1})
+    \\&= \chi^{\perp_i}\big((g,f)^{-1}\big)
+    \\&= \big(\chi^{\perp_i}(g,f)\big)^{-1}
+    \\&= (g\perp_i f)^{-1};
+    \end{aligned}
+  \]
+  thus the map $f\mapsto f^{-1}$ is a functor from $\CC^{\perp_i}$ to $\CC^{\perp_i}$ for $2\leq i\leq n$, and $(\CC^{\perp_1},(\CC^{\perp_i})_{2\leq i\leq n})$ is an $\FF^{[n-1]}$-structured groupoid
+\end{proof}
+
+\begin{definition}{16}
+\label{definition:ii-16}
+  We defined an \emph{$n$-fold groupoid} to be an $n$-fold category $(\CC^{\perp_i})_{i\leq n}$ such that $\CC^{\perp_i}$ is a groupoid for all $i\leq n$.
+\end{definition}
+
+In particular, it follows from \cref{proposition:ii-15} that, if $(\CC^\bullet,\CC^\perp)$ is a double groupoid, then $(\CC^\bullet,\CC^\perp)$ and $(\CC^\perp,\CC^\bullet)$ are both $\FF$-structured groupoids.\comm{71.2}{They are also structured groupoids in the category of groupoids. Double groupoids are studied by Brown--Spencer~\cite{comm16} with a view to applications in homotopy theory; e.g. they prove that the category of crossed modules is equivalent to a subcategory of the category of double groupoids.}
+
+
+\subsection{Order structures on a category}
+\label{section:ii-6}
+
+\begin{definition}{17}
+\label{definition:ii-17}
+  We
+\end{definition}
 
 
 
