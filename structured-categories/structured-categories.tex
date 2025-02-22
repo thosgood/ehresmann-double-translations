@@ -142,13 +142,16 @@
 \newcommand{\GG}{\mathcal{G}}
 \newcommand{\DD}{\mathcal{D}}
 
+% Boxes
+\newcommand{\hsq}{{\boxminus}}
+\newcommand{\vsq}{{\rotatebox{90}{$\boxminus$}}}
 % Unary operators
 \DeclareMathOperator{\sq}{\square}
-\DeclareMathOperator{\vsq}{\raisebox{-.1em}{\rotatebox{90}{$\boxminus$}\,}}
-\DeclareMathOperator{\hsq}{\raisebox{-.05em}{$\boxminus$}}
+\DeclareMathOperator{\Hsq}{\raisebox{-.05em}{$\hsq$}}
+\DeclareMathOperator{\Vsq}{\raisebox{-.1em}{$\vsq$\,}}
 % Binary operators
-\newcommand{\vmult}{\mathbin{\raisebox{-.1em}{\rotatebox{90}{$\boxminus$}}}}
-\newcommand{\hmult}{\mathbin{\raisebox{-.05em}{$\boxminus$}}}
+\newcommand{\hmult}{\mathbin{\raisebox{-.05em}{$\hsq$}}}
+\newcommand{\vmult}{\mathbin{\raisebox{-.1em}{$\vsq$}}}
 \usepackage{scalerel}
 \newcommand{\sqsubs}{\mathrel{\mathrlap{\square}\raisebox{.17em}{\scaleobj{0.65}{\,\,\propto}}}}
 
@@ -207,7 +210,7 @@
 
 %% Content %%
 
-\todo fix spacing in e.g. $(\vsq\CC,\sq p,\vsq\HH,\overline{\Gamma}')$
+\todo fix spacing in e.g. $(\Vsq\CC,\sq p,\Vsq\HH,\overline{\Gamma}')$
 
 \todo decide between $\overline{\rHH}$ vs $\overline{\rHH}$
 
@@ -1722,7 +1725,7 @@ If there is no risk of confusion, then we simply say that $s$ is a substructure 
   If, further, $\overline{h}\in\Gamma$ and $h'$ is invertible, then also $(s',h'^{-1},s'_1)\in\HH$, whence $\overline{h}'\in\Gamma$.
 \end{proof}
 
-Let $\vsq\CC$ be the longitudinal category of quartets of $\CC$ (see \hyperref[section:ii.5]{§II.5}), i.e. the class of quadruples $(g_1,f_1,f,g)\in\CC^4$ such that $g_1\bullet f=f_1\bullet g$, endowed with the multiplication
+Let $\Vsq\CC$ be the longitudinal category of quartets of $\CC$ (see \hyperref[section:ii.5]{§II.5}), i.e. the class of quadruples $(g_1,f_1,f,g)\in\CC^4$ such that $g_1\bullet f=f_1\bullet g$, endowed with the multiplication
 \[
   (g'_1,f'_1,f',g')\vmult(g_1,f_1,f,g)
   = (g'_1,f'_1\bullet f_1,f'\bullet f,g)
@@ -1752,7 +1755,7 @@ Let $\vsq\CC$ be the longitudinal category of quartets of $\CC$ (see \hyperref[s
     \end{tikzcd}
   \]
 
-  The category $\vsq\CC$ is also called the \emph{category of arrows of $\CC$} (i.e. by the name of its objects), and denoted by $\mathsf{Fl}\CC$ or $\mathsf{Ar}\CC$.
+  The category $\Vsq\CC$ is also called the \emph{category of arrows of $\CC$} (i.e. by the name of its objects), and denoted by $\mathsf{Fl}\CC$ or $\mathsf{Ar}\CC$.
 \end{longcomm}
 
 \begin{proposition}{8}
@@ -1812,17 +1815,17 @@ If $h'\subs h$ in $(\CC,\Id_\CC,\CC,\CC)$, then we denote by $h\sqsubs h'$ the q
 \[
   (h,\beta(h)\beta(h'),\alpha(h)\alpha(h'),h').
 \]
-The class $\UU$ of quartets $h\sqsubs h'$ is a subcategory of $\vsq\CC$.
+The class $\UU$ of quartets $h\sqsubs h'$ is a subcategory of $\Vsq\CC$.
 Let $\UU'$ be the subcategory of $\UU$ given by the quartets $h\sqsubs h'$ such that $h'$ and $h$ are invertible.
 
-Let $\vsq\HH$ be the longitudinal category of quartets of $\HH$, and $\sq p$ the functor
+Let $\Vsq\HH$ be the longitudinal category of quartets of $\HH$, and $\sq p$ the functor
 \[
   (g_1,f_1,f,g)
   \longmapsto (p(g_1),p(f_1),p(f),p(g))
 \]
-from $\vsq\HH$ to $\vsq\CC$.
-Then $(\vsq\CC,\sq p,\vsq\HH,\overline{\Gamma}')$ is a category of homomorphisms, where $\overline{\Gamma}'$ is the groupoid of invertible elements of $\vsq\HH$.\comm{37.2}{This is easy to prove (cf. \cite[Chapter~II]{coll122}).}
-For a quadruple $\overline{G}=(\overline{g}_1,\overline{f}_1,\overline{f},\overline{g})$ to belong to $\vsq\HH$, it is necessary and sufficient that
+from $\Vsq\HH$ to $\Vsq\CC$.
+Then $(\Vsq\CC,\sq p,\Vsq\HH,\overline{\Gamma}')$ is a category of homomorphisms, where $\overline{\Gamma}'$ is the groupoid of invertible elements of $\Vsq\HH$.\comm{37.2}{This is easy to prove (cf. \cite[Chapter~II]{coll122}).}
+For a quadruple $\overline{G}=(\overline{g}_1,\overline{f}_1,\overline{f},\overline{g})$ to belong to $\Vsq\HH$, it is necessary and sufficient that
 \[
   \begin{array}{ll}
     \alpha(\overline{f})=\alpha(\overline{g}),
@@ -1835,7 +1838,7 @@ and that $\sq p(\overline{G})$ is a quartet;
 indeed, the elements $\overline{g}_1\cdot\overline{f}$ and $\overline{f}_1\cdot\overline{g}$ are then equal, since they have the same image under $p$, and have the same source and same target.
 
 \oldpage{366}
-Let $\overline{\UU}$ be the subcategory of $\vsq\HH$ consisting of the quartets
+Let $\overline{\UU}$ be the subcategory of $\Vsq\HH$ consisting of the quartets
 \[
   \overline{\rHH}
   = (\overline{h}, s_1\subs_p s'_1, s\subs_p s', \overline{h}')
@@ -1977,7 +1980,7 @@ Suppose that $(\CC,p',\HH',\HH'\cap\Gamma)$ is a category of homomorphisms.
   Thus $s\subs_{p'}S$ in $(\CC,p',\HH',\HH'\cap\Gamma)$.
 \end{proof}
 
-We will later see (\hyperref[§II]{section:ii}, \cref{theorem:ii-16}) that $\vsq\CC$ is an inductive category for the order relation
+We will later see (\hyperref[§II]{section:ii}, \cref{theorem:ii-16}) that $\Vsq\CC$ is an inductive category for the order relation
 \[
   (g'_1,f'_1,f',g')
   < (g_1,f_1,f,g)
@@ -1996,13 +1999,13 @@ In the following theorem, we set
 \[
   [\overline{h}]
   = (\overline{h},\beta(\overline{h}),\alpha(\overline{h}),\overline{h})
-  \in (\vsq\HH)_0
+  \in (\Vsq\HH)_0
 \]
 for all $\overline{h}\in\HH$, and
 \[
   [h]
   = (h,\beta(h),\alpha(h),h)
-  \in (\vsq\CC)_0
+  \in (\Vsq\CC)_0
 \]
 for all $h\in\CC$.
 
@@ -2010,7 +2013,7 @@ for all $h\in\CC$.
 \label{theorem:i-2}
   The following conditions are equivalent:
   \begin{enumerate}
-    \item[\normalfont(1)] $[\overline{h}']\subs_{\sq p}[\overline{h}]$ and $[\beta(\overline{h}')]\subs_{\sq p}[\beta(\overline{h})]$ in $(\vsq\CC,\sq p,\vsq\HH,\overline{\Gamma}')$;
+    \item[\normalfont(1)] $[\overline{h}']\subs_{\sq p}[\overline{h}]$ and $[\beta(\overline{h}')]\subs_{\sq p}[\beta(\overline{h})]$ in $(\Vsq\CC,\sq p,\Vsq\HH,\overline{\Gamma}')$;
     \item[\normalfont(2)] $\overline{h}'$ is a sub-homomorphism of $\overline{h}$ in $(\CC,p,\HH,\SS)$.
   \end{enumerate}
 \end{theorem}
@@ -2027,8 +2030,8 @@ for all $h\in\CC$.
   \[
     \big(h,\beta(h)\beta(h'),\alpha(h)\alpha(h'),h'\big)\in\UU;
   \]
-  furthermore, this quartet is the pseudo-product $[h][h']$ in $\vsq\CC$.
-  Since the quadruple $(\overline{h},s_1\subs_p s'_1,s\subs_p s',\overline{h}')$ is a quartet of $\HH$ and admits $[h][h']$ as its image under $\sq p$, we thus deduce that $[\overline{h}']\relrhobar[\overline{h}]$ in $(\vsq\CC,\sq p,\vsq\HH,\overline{\Gamma}')$.
+  furthermore, this quartet is the pseudo-product $[h][h']$ in $\Vsq\CC$.
+  Since the quadruple $(\overline{h},s_1\subs_p s'_1,s\subs_p s',\overline{h}')$ is a quartet of $\HH$ and admits $[h][h']$ as its image under $\sq p$, we thus deduce that $[\overline{h}']\relrhobar[\overline{h}]$ in $(\Vsq\CC,\sq p,\Vsq\HH,\overline{\Gamma}')$.
   Let $\overline{\mathrm{G}}=(\overline{h},\overline{f}_1,\overline{f},\overline{k})\in\sq\HH$ be such that
   \[
     \begin{aligned}
@@ -2084,7 +2087,7 @@ for all $h\in\CC$.
   Thus $[\overline{h}']\subs_{\sq p}[\overline{h}]$.
   Furthermore, $s'_1\subs_p s_1$ similarly implies that $[s'_1]\subs_{\sq p}[s_1]$, and so condition~(1) is satisfied.
 
-  Conversely, suppose that $[\overline{h}']\subs[\overline{h}]$ in $(\vsq\CC,\sq p,\vsq\HH,\overline{\Gamma}')$.
+  Conversely, suppose that $[\overline{h}']\subs[\overline{h}]$ in $(\Vsq\CC,\sq p,\Vsq\HH,\overline{\Gamma}')$.
   Then
   \[
     h'<h
@@ -2110,7 +2113,7 @@ for all $h\in\CC$.
   \[
     \overline{\mathrm{G}}
     = (\overline{h},\overline{h}\bullet\overline{g},\overline{g},S')
-    \in\vsq\HH
+    \in\Vsq\HH
   \]
   and
   \[
@@ -4584,6 +4587,40 @@ Let $\sq(\CC_2,\CC_1)$ be the class of quadruples $(f'_2,f'_1,f_1,f_2)$, with $f
 \]
 
 On $\sq(\CC_2,\CC_1)$, we define two composition laws:
+\[
+  \begin{cases}
+    (\overline{f}'_2,\overline{f}'_1,\overline{f}_1,\overline{f}_2)
+    \vmult (f'_2,f'_1,f_1,f_2)
+    = (\overline{f}'_2,\overline{f}'_1\bullet f'_1,\overline{f}_1\bullet f_1,f_2)
+    &\mbox{if and only if $\overline{f}_2=f'_2$}
+  \\(\overline{f}'_2,\overline{f}'_1,\overline{f}_1,\overline{f}_2)
+    \hmult (f'_2,f'_1,f_1,f_2)
+    = (\overline{f}'_2\bullet f'_2,\overline{f}'_1,f_1,\overline{f}_2\bullet f_2)
+    &\mbox{if and only if $\overline{f}_1=f'_1$.}
+  \end{cases}
+\]
+
+\begin{definition}{12}
+\label{definition:ii-12}
+  The composition law $\vmult$ on $\sq(\CC_2,\CC_1)$ defined above is called \emph{longitudinal multiplication}, and $\hmult$ is called \emph{lateral multiplication}.
+\end{definition}
+
+\begin{proposition}{11}
+\label{proposition:ii-11}
+  $\sq(\CC_2,\CC_1)$, endowed with longitudinal and lateral multiplication, is a double category.\comm{65.1}{This category is already considered in \cite[Appendix]{coll55}, but here again it is more intuitive to speak of the horizontal and vertical compositions.}
+\end{proposition}
+
+The longitudinal category is denoted $\Vsq(\CC_2,\CC_1)$, and the lateral category $\Hsq(\CC_2,\CC_1)$;
+the source and target maps for the longitudinal category are denoted $\alpha^\vsq$ and $\beta^\vsq$, and for the lateral category $\alpha^\hsq$ and $\beta^\hsq$, respectively.
+The class of \unsure{vertices} of the double category $\sq(\CC_2,\CC_1)$ can be identified with $\Delta$.
+
+\begin{definition}{13}
+\label{definition:ii-13}
+  \oldpage{66}
+  Given double categories $(\CC^\bullet,\CC^\perp)$ and $(\CC_1^\bullet,\CC_1^\perp)$, we say that $(\CC_1^\bullet,\CC_1^\perp)$ is a \emph{quotient double category of $(\CC^\bullet,\CC^\perp)$} if there exists an equivalence relation $\rho$ on $\CC$ such that $\CC_1^\bullet$ (resp. $\CC_1^\perp$) is identified with the quotient\comm{66.1}{In agreement with the theory of quotients \cite{coll66}, ``quotient category'' should be replaced by ``strict quotient category''. Quotient double categories are constructed in \cite[Corollary, Theorem~21-II]{coll66}, and more general quasi-quotient double categories are described in \cite[Section~8]{coll100}.} category \cite{3e} of $\CC^\bullet$ (resp. of $\CC^\perp$) by $\rho$.
+\end{definition}
+
+In particular
 
 
 
