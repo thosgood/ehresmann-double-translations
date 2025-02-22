@@ -141,17 +141,18 @@
 \newcommand{\JJ}{\mathcal{J}}
 \newcommand{\GG}{\mathcal{G}}
 \newcommand{\DD}{\mathcal{D}}
+\newcommand{\NN}{\mathcal{N}}
 
 % Boxes
-\newcommand{\hsq}{{\boxminus}}
-\newcommand{\vsq}{{\rotatebox{90}{$\boxminus$}}}
+\newcommand{\hsqbox}{{\boxminus}}
+\newcommand{\vsqbox}{{\rotatebox{90}{$\boxminus$}}}
 % Unary operators
 \DeclareMathOperator{\sq}{\square}
-\DeclareMathOperator{\Hsq}{\raisebox{-.05em}{$\hsq$}}
-\DeclareMathOperator{\Vsq}{\raisebox{-.1em}{$\vsq$\,}}
+\DeclareMathOperator{\hsq}{\raisebox{-.05em}{$\hsqbox$}}
+\DeclareMathOperator{\vsq}{\raisebox{-.1em}{$\vsqbox$\,}}
 % Binary operators
-\newcommand{\hmult}{\mathbin{\raisebox{-.05em}{$\hsq$}}}
-\newcommand{\vmult}{\mathbin{\raisebox{-.1em}{$\vsq$}}}
+\newcommand{\hmult}{\mathbin{\raisebox{-.05em}{$\hsqbox$}}}
+\newcommand{\vmult}{\mathbin{\raisebox{-.1em}{$\vsqbox$}}}
 \usepackage{scalerel}
 \newcommand{\sqsubs}{\mathrel{\mathrlap{\square}\raisebox{.17em}{\scaleobj{0.65}{\,\,\propto}}}}
 
@@ -210,9 +211,9 @@
 
 %% Content %%
 
-\todo fix spacing in e.g. $(\Vsq\CC,\sq p,\Vsq\HH,\overline{\Gamma}')$
+\todo fix spacing in e.g. $(\vsq\CC,\sq p,\vsq\HH,\overline{\Gamma}')$
 
-\todo decide between $\overline{\rHH}$ vs $\overline{\rHH}$
+\todo slightly smaller $\bullet$
 
 \todo add citations from collected works notes
 
@@ -431,7 +432,7 @@ We denote by $\MM_0$ a class of classes such that if it contains $X$ then it als
 \begin{longcomm}{24.1}
   The set-theoretical assumptions here are not explicit (cf. also Comment~155.1 on \cite{coll66} and Comment~211.2 on \cite{coll100}).
   Charles was very conscious of the problem.
-  For instance, he suggested such foundational questions as a thesis subject to Houdebine \cite{comm55}, pointing out Quine's theory of types \cite{comm87}.
+  For instance, he suggested such foundational questions as a thesis subject to Houdebine~\cite{comm55}, pointing out Quine's theory of types \cite{comm87}.
   Later on, he was much interested by Lawvere's category-based theory \cite{comm64}.
 
   In fact, Charles' conception on this subject evolved from 1957 to 1967: in \cite{coll47} he wanted to speak about ``the category $\widetilde{\mathcal{E}}$ of all sets'', whence the (not too formal) distinction between classes and sets, as in Bernays--Gödel theory \cite{comm10}.
@@ -587,7 +588,7 @@ We say that $(\CC,F)$ is a \emph{a pair defining a species of structures}, namel
   Topological, differentiable, and local species of structures are instances of structured (or ``concrete internal'') species of structures, which are defined in \cite{coll59,coll60} by ``lifting'' the action along the forgetful functor of a concrete category;
   enlargement theorems for them are given in \cite{coll89,coll90,coll95,coll96}.
   In fact, sketches in the sense of \cite{coll106} are easily drawn, the set models of which are species of structures and discrete opfibrations \cite{coll117};
-  the models in a category $\KK$ are \emph{internal species of structures} and \emph{internal discrete opfibrations} (also called \emph{internal diagrams} or \emph{internal presheaves}, cf. Johnstone \cite{comm56}).
+  the models in a category $\KK$ are \emph{internal species of structures} and \emph{internal discrete opfibrations} (also called \emph{internal diagrams} or \emph{internal presheaves}, cf. Johnstone~\cite{comm56}).
   Thanks to the equivalences indicated above, this provides an ``internalisation'' of the ``external'' notion of set-valued functor, by looking at it ``upside-down'';
   Charles already stressed this fact in his lectures in the early sixties.
   This probably did inspire Bénabou, who was one of the first categorists to apply it (in his definition of internal distributors \cite{comm7}).
@@ -645,7 +646,7 @@ this functor $\overline{F}$, which is identical to $(\MM,\overline{F}_a,\CC')$, 
   If $\CC$ is a category, and if the species of structures defined by the Hom functor is dominated by $(\gamma,\KK)$, then $\CC$ is called a \emph{$\gamma$-dominated} category \cite{coll77}.
   A refinement of this notion, namely that of a \emph{strongly $\gamma$-dominated} category from \cite{coll104,coll109}, is equivalent to the notion of a $\KK$-category (cf. \cite{comm31}) when $\KK$ is a concrete cartesian category.
 
-  A fine study of dominated categories is due to Foltz \cite{comm33}.
+  A fine study of dominated categories is due to Foltz~\cite{comm33}.
 
   More generally, let $\mathbf{V}$ be a monoidal category.
   Then a {$\mathbf{V}$-species of structures} may be defined by the following data:
@@ -682,7 +683,7 @@ this functor $\overline{F}$, which is identical to $(\MM,\overline{F}_a,\CC')$, 
     to commute, where $I$ is the unit of $\otimes$, and where $i_{(-)}$ and $k_{(-,-,-)}$ are the identity and associativity morphisms (respectively).
   \end{itemize}
 
-  Suppose that $\mathbf{V}$ is a cartesian category with commuting coproducts, and that $I$ is connected (in the sense of Penon \cite{comm83}).
+  Suppose that $\mathbf{V}$ is a cartesian category with commuting coproducts, and that $I$ is connected (in the sense of Penon~\cite{comm83}).
   In \cite[Appendix]{coll120}, we proved that the category of $\mathbf{V}$-categories (with small enough classes of objects) is equivalent to the category of internal category whose object of objects is a coproduct of copies of $I$.
   Similarly:
 
@@ -721,7 +722,7 @@ let $(\MM,p_\FF,\FF)$ be the functor defined by
   They are studied in \cite{coll70,coll77,coll122}, alongside the associated opfibrations with a cleavage (constructed by adapting the construction of the cross product of group $A$ and an $A$-module), with a view to applications in non-abelian cohomology.
 
   General fibrations were introduced by Grothendieck in \cite{comm43} and studied by Gray in \cite{comm38}.
-  Their present theory has been developed by looking at a fibration as a family of categories (by Lawvere \cite{comm65}, Bénabou--Celeyrette \cite{comm8,comm19}, and Paré--Schumacher \cite{comm82} who call them ``indexed categories'').
+  Their present theory has been developed by looking at a fibration as a family of categories (by Lawvere~\cite{comm65}, Bénabou--Celeyrette~\cite{comm8,comm19}, and Paré--Schumacher~\cite{comm82} who call them ``indexed categories'').
 \end{longcomm}
 
 Let $(\CC,p,\Sigma)$ be a species of structures.
@@ -848,8 +849,8 @@ then $(\MM,\omega,\widetilde{\Omega})$ is a functor.
 
 \begin{definition}{5}
 \label{definition:i-5}
-  If a species of structures $(\CC,F)$ is dominated by $(\omega,\widetilde{\Omega})$, then we call it an \emph{ordered species of structures} \unsure{or species of ordered structures?};
-  if $\CC$ further defines an order on $\CC_0$, then we say that $(\CC,F)$ is a \emph{bi-ordered species of structures} \unsure{again, which noun does bi-ordered modify?}.
+  If a species of structures $(\CC,F)$ is dominated by $(\omega,\widetilde{\Omega})$, then we call it an \emph{ordered species of structures};
+  if $\CC$ further defines an order on $\CC_0$, then we say that $(\CC,F)$ is a \emph{bi-ordered species of structures}.
 \end{definition}
 
 Let $((\overline{A},<),h,(A,<))\in\widetilde{\Omega}$;
@@ -1725,7 +1726,7 @@ If there is no risk of confusion, then we simply say that $s$ is a substructure 
   If, further, $\overline{h}\in\Gamma$ and $h'$ is invertible, then also $(s',h'^{-1},s'_1)\in\HH$, whence $\overline{h}'\in\Gamma$.
 \end{proof}
 
-Let $\Vsq\CC$ be the longitudinal category of quartets of $\CC$ (see \hyperref[section:ii.5]{§II.5}), i.e. the class of quadruples $(g_1,f_1,f,g)\in\CC^4$ such that $g_1\bullet f=f_1\bullet g$, endowed with the multiplication
+Let $\vsq\CC$ be the longitudinal category of quartets of $\CC$ (see \hyperref[section:ii.5]{§II.5}), i.e. the class of quadruples $(g_1,f_1,f,g)\in\CC^4$ such that $g_1\bullet f=f_1\bullet g$, endowed with the multiplication
 \[
   (g'_1,f'_1,f',g')\vmult(g_1,f_1,f,g)
   = (g'_1,f'_1\bullet f_1,f'\bullet f,g)
@@ -1755,7 +1756,7 @@ Let $\Vsq\CC$ be the longitudinal category of quartets of $\CC$ (see \hyperref[s
     \end{tikzcd}
   \]
 
-  The category $\Vsq\CC$ is also called the \emph{category of arrows of $\CC$} (i.e. by the name of its objects), and denoted by $\mathsf{Fl}\CC$ or $\mathsf{Ar}\CC$.
+  The category $\vsq\CC$ is also called the \emph{category of arrows of $\CC$} (i.e. by the name of its objects), and denoted by $\mathsf{Fl}\CC$ or $\mathsf{Ar}\CC$.
 \end{longcomm}
 
 \begin{proposition}{8}
@@ -1815,17 +1816,17 @@ If $h'\subs h$ in $(\CC,\Id_\CC,\CC,\CC)$, then we denote by $h\sqsubs h'$ the q
 \[
   (h,\beta(h)\beta(h'),\alpha(h)\alpha(h'),h').
 \]
-The class $\UU$ of quartets $h\sqsubs h'$ is a subcategory of $\Vsq\CC$.
+The class $\UU$ of quartets $h\sqsubs h'$ is a subcategory of $\vsq\CC$.
 Let $\UU'$ be the subcategory of $\UU$ given by the quartets $h\sqsubs h'$ such that $h'$ and $h$ are invertible.
 
-Let $\Vsq\HH$ be the longitudinal category of quartets of $\HH$, and $\sq p$ the functor
+Let $\vsq\HH$ be the longitudinal category of quartets of $\HH$, and $\sq p$ the functor
 \[
   (g_1,f_1,f,g)
   \longmapsto (p(g_1),p(f_1),p(f),p(g))
 \]
-from $\Vsq\HH$ to $\Vsq\CC$.
-Then $(\Vsq\CC,\sq p,\Vsq\HH,\overline{\Gamma}')$ is a category of homomorphisms, where $\overline{\Gamma}'$ is the groupoid of invertible elements of $\Vsq\HH$.\comm{37.2}{This is easy to prove (cf. \cite[Chapter~II]{coll122}).}
-For a quadruple $\overline{G}=(\overline{g}_1,\overline{f}_1,\overline{f},\overline{g})$ to belong to $\Vsq\HH$, it is necessary and sufficient that
+from $\vsq\HH$ to $\vsq\CC$.
+Then $(\vsq\CC,\sq p,\vsq\HH,\overline{\Gamma}')$ is a category of homomorphisms, where $\overline{\Gamma}'$ is the groupoid of invertible elements of $\vsq\HH$.\comm{37.2}{This is easy to prove (cf. \cite[Chapter~II]{coll122}).}
+For a quadruple $\overline{G}=(\overline{g}_1,\overline{f}_1,\overline{f},\overline{g})$ to belong to $\vsq\HH$, it is necessary and sufficient that
 \[
   \begin{array}{ll}
     \alpha(\overline{f})=\alpha(\overline{g}),
@@ -1838,7 +1839,7 @@ and that $\sq p(\overline{G})$ is a quartet;
 indeed, the elements $\overline{g}_1\cdot\overline{f}$ and $\overline{f}_1\cdot\overline{g}$ are then equal, since they have the same image under $p$, and have the same source and same target.
 
 \oldpage{366}
-Let $\overline{\UU}$ be the subcategory of $\Vsq\HH$ consisting of the quartets
+Let $\overline{\UU}$ be the subcategory of $\vsq\HH$ consisting of the quartets
 \[
   \overline{\rHH}
   = (\overline{h}, s_1\subs_p s'_1, s\subs_p s', \overline{h}')
@@ -1980,7 +1981,7 @@ Suppose that $(\CC,p',\HH',\HH'\cap\Gamma)$ is a category of homomorphisms.
   Thus $s\subs_{p'}S$ in $(\CC,p',\HH',\HH'\cap\Gamma)$.
 \end{proof}
 
-We will later see (\hyperref[§II]{section:ii}, \cref{theorem:ii-16}) that $\Vsq\CC$ is an inductive category for the order relation
+We will later see (\hyperref[§II]{section:ii}, \cref{theorem:ii-16}) that $\vsq\CC$ is an inductive category for the order relation
 \[
   (g'_1,f'_1,f',g')
   < (g_1,f_1,f,g)
@@ -1999,13 +2000,13 @@ In the following theorem, we set
 \[
   [\overline{h}]
   = (\overline{h},\beta(\overline{h}),\alpha(\overline{h}),\overline{h})
-  \in (\Vsq\HH)_0
+  \in (\vsq\HH)_0
 \]
 for all $\overline{h}\in\HH$, and
 \[
   [h]
   = (h,\beta(h),\alpha(h),h)
-  \in (\Vsq\CC)_0
+  \in (\vsq\CC)_0
 \]
 for all $h\in\CC$.
 
@@ -2013,7 +2014,7 @@ for all $h\in\CC$.
 \label{theorem:i-2}
   The following conditions are equivalent:
   \begin{enumerate}
-    \item[\normalfont(1)] $[\overline{h}']\subs_{\sq p}[\overline{h}]$ and $[\beta(\overline{h}')]\subs_{\sq p}[\beta(\overline{h})]$ in $(\Vsq\CC,\sq p,\Vsq\HH,\overline{\Gamma}')$;
+    \item[\normalfont(1)] $[\overline{h}']\subs_{\sq p}[\overline{h}]$ and $[\beta(\overline{h}')]\subs_{\sq p}[\beta(\overline{h})]$ in $(\vsq\CC,\sq p,\vsq\HH,\overline{\Gamma}')$;
     \item[\normalfont(2)] $\overline{h}'$ is a sub-homomorphism of $\overline{h}$ in $(\CC,p,\HH,\SS)$.
   \end{enumerate}
 \end{theorem}
@@ -2030,8 +2031,8 @@ for all $h\in\CC$.
   \[
     \big(h,\beta(h)\beta(h'),\alpha(h)\alpha(h'),h'\big)\in\UU;
   \]
-  furthermore, this quartet is the pseudo-product $[h][h']$ in $\Vsq\CC$.
-  Since the quadruple $(\overline{h},s_1\subs_p s'_1,s\subs_p s',\overline{h}')$ is a quartet of $\HH$ and admits $[h][h']$ as its image under $\sq p$, we thus deduce that $[\overline{h}']\relrhobar[\overline{h}]$ in $(\Vsq\CC,\sq p,\Vsq\HH,\overline{\Gamma}')$.
+  furthermore, this quartet is the pseudo-product $[h][h']$ in $\vsq\CC$.
+  Since the quadruple $(\overline{h},s_1\subs_p s'_1,s\subs_p s',\overline{h}')$ is a quartet of $\HH$ and admits $[h][h']$ as its image under $\sq p$, we thus deduce that $[\overline{h}']\relrhobar[\overline{h}]$ in $(\vsq\CC,\sq p,\vsq\HH,\overline{\Gamma}')$.
   Let $\overline{\mathrm{G}}=(\overline{h},\overline{f}_1,\overline{f},\overline{k})\in\sq\HH$ be such that
   \[
     \begin{aligned}
@@ -2087,7 +2088,7 @@ for all $h\in\CC$.
   Thus $[\overline{h}']\subs_{\sq p}[\overline{h}]$.
   Furthermore, $s'_1\subs_p s_1$ similarly implies that $[s'_1]\subs_{\sq p}[s_1]$, and so condition~(1) is satisfied.
 
-  Conversely, suppose that $[\overline{h}']\subs[\overline{h}]$ in $(\Vsq\CC,\sq p,\Vsq\HH,\overline{\Gamma}')$.
+  Conversely, suppose that $[\overline{h}']\subs[\overline{h}]$ in $(\vsq\CC,\sq p,\vsq\HH,\overline{\Gamma}')$.
   Then
   \[
     h'<h
@@ -2113,7 +2114,7 @@ for all $h\in\CC$.
   \[
     \overline{\mathrm{G}}
     = (\overline{h},\overline{h}\bullet\overline{g},\overline{g},S')
-    \in\Vsq\HH
+    \in\vsq\HH
   \]
   and
   \[
@@ -3420,7 +3421,7 @@ Let $\MM$ be the category of all maps from $M$ to $M'$ in $\MM_0$.
 \begin{definition}{1}
 \label{definition:ii-1}
   We say that $(\MM,p,\HH,\Gamma)$ is a category of homomorphisms \emph{with finite products} if $(\MM,p,\HH,\Gamma)$ is a category of homomorphisms such that $\Gamma$ is the groupoid of invertible elements of $\HH$ and if, for every pair $(s_1,s_2)\in\HH_0\times\HH_0$, there exists a unit $s_1\times s_2$ of $\HH$ that satisfies the following conditions:
-  
+
   \begin{enumerate}
     \item[\normalfont(1)]
       $p(s_1\times s_2)=p(s_1)\times p(s_2)$.
@@ -4610,8 +4611,8 @@ On $\sq(\CC_2,\CC_1)$, we define two composition laws:
   $\sq(\CC_2,\CC_1)$, endowed with longitudinal and lateral multiplication, is a double category.\comm{65.1}{This category is already considered in \cite[Appendix]{coll55}, but here again it is more intuitive to speak of the horizontal and vertical compositions.}
 \end{proposition}
 
-The longitudinal category is denoted $\Vsq(\CC_2,\CC_1)$, and the lateral category $\Hsq(\CC_2,\CC_1)$;
-the source and target maps for the longitudinal category are denoted $\alpha^\vsq$ and $\beta^\vsq$, and for the lateral category $\alpha^\hsq$ and $\beta^\hsq$, respectively.
+The longitudinal category is denoted $\vsq(\CC_2,\CC_1)$, and the lateral category $\hsq(\CC_2,\CC_1)$;
+the source and target maps for the longitudinal category are denoted $\alpha^\vsqbox$ and $\beta^\vsqbox$, and for the lateral category $\alpha^\hsqbox$ and $\beta^\hsqbox$, respectively.
 The class of \unsure{vertices} of the double category $\sq(\CC_2,\CC_1)$ can be identified with $\Delta$.
 
 \begin{definition}{13}
@@ -4620,8 +4621,170 @@ The class of \unsure{vertices} of the double category $\sq(\CC_2,\CC_1)$ can be 
   Given double categories $(\CC^\bullet,\CC^\perp)$ and $(\CC_1^\bullet,\CC_1^\perp)$, we say that $(\CC_1^\bullet,\CC_1^\perp)$ is a \emph{quotient double category of $(\CC^\bullet,\CC^\perp)$} if there exists an equivalence relation $\rho$ on $\CC$ such that $\CC_1^\bullet$ (resp. $\CC_1^\perp$) is identified with the quotient\comm{66.1}{In agreement with the theory of quotients \cite{coll66}, ``quotient category'' should be replaced by ``strict quotient category''. Quotient double categories are constructed in \cite[Corollary, Theorem~21-II]{coll66}, and more general quasi-quotient double categories are described in \cite[Section~8]{coll100}.} category \cite{3e} of $\CC^\bullet$ (resp. of $\CC^\perp$) by $\rho$.
 \end{definition}
 
-In particular
+In particular, a theorem in \cite{3a} implies the following.
+Let $\pi$ be a double functor from a double category $(\CC^\bullet,\CC^\perp)$ to a double category $(\CC_1^\bullet,\CC_1^\perp)$.
+Let $\rho_\pi$ be the equivalence relation on $\CC$ defined by
+\[
+  f\sim f'
+  \quad\text{if and only if}\quad
+  \pi(f)=\pi(f').
+\]
 
+For $(\CC_1^\bullet,\CC_1^\perp)$ to be identified with the quotient double category of $(\CC^\bullet,\CC^\perp)$ by $\rho_\pi$, it is necessary and sufficient that $\pi$ satisfy the following conditions:
+\begin{enumerate}
+  \item[\normalfont(1)]
+    If $g_1\bullet f_1$ is defined in $\CC_1^\bullet$, then there exist $g,f\in\CC$ such that $g\bullet f$ is defined, and $g_1=\pi(g)$ and $f_1=\pi(f)$.
+  \item[\normalfont(2)]
+    If $g_1\perp f_1$ is defined in $\CC_1^\perp$, then there exist $g,f\in\CC$ such that $g\perp f$ is defined, and $g_1=\pi(g)$ and $f_1=\pi(f)$.
+\end{enumerate}
+
+\begin{theorem}{6}
+\label{theorem:ii-6}
+  A double category $(\CC^\bullet,\CC^\perp)$ admits a subcategory of the double category $\sq(\CC_0^\bullet,\CC_0^\perp)$ as a quotient, where $\CC_0^\bullet$ (resp. $\CC_0^\perp$) is endowed with its structure as a subcategory of $\CC^\perp$ (resp. $\CC^\bullet$).
+\end{theorem}
+
+\begin{proof}
+  The map
+  \[
+    c\colon f
+    \longmapsto \big(
+      \beta^\bullet(f), \beta^\perp(f), \alpha^\perp(f), \alpha^\bullet(f)
+    \big)
+  \]
+  is a double functor from $\CC$ to $\sq(\CC_0^\bullet,\CC_0^\perp)$ that satisfies the conditions above.
+\end{proof}
+
+\begin{definition}{14}
+\label{definition:ii-14}
+  With the above notation, the element $c(f)$ is called the \emph{square of $f$ in $\CC$}.
+\end{definition}
+
+Let $\CC$ be a category.
+Recall \cite{3a} that a \emph{quartet} of $\CC$ is a quadruple $(f'_2,f'_1,f_1,f_2)\in\sq(\CC,\CC)$ such that
+\[
+  f'_2\bullet f_1
+  = f'_1\bullet f_2.
+\]
+
+Let $\sq\CC$ be the subclass of $\sq(\CC,\CC)$ consisting of quartets of $\CC$.
+
+\begin{proposition}{12}
+\label{proposition:ii-12}
+  $\sq\CC$ is a double subcategory of $\sq(\CC,\CC)$.
+\end{proposition}
+
+Let $\overline{F}=(\CC_1,F,\CC)\in\FF$;
+this functor extends to a double functor
+\[
+  \sq\overline{F}
+  = \big(
+    (\vsq\CC_1,\hsq\CC_1), \sq F, (\vsq\CC,\hsq\CC)
+  \big)
+\]
+where $\sq F$ is the map defined by
+\[
+  \sq F(f'_2,f'_1,f_1,f_2)
+  = \big(
+    F(f'_2), F(f'_1), F(f_1), F(f_2)
+  \big).
+\]
+
+\oldpage{67}
+The map $\sq\colon\overline{F}\mapsto\sq\overline{F}$ is a functor from $\FF$ to $\overline{\FF}$.
+We denote by $\hsq$ (resp. $\vsq$) the functor from $\FF$ to $\FF$ given by
+\[
+  \begin{aligned}
+    \overline{p_\FF}\bullet\sq
+    &\colon \overline{F}
+    \longmapsto (\vsq\CC_1,\sq F,\vsq\CC)
+    = \vsq\overline{F}
+  \\(\text{resp.}\quad \overline{p_\FF}'\bullet\sq
+    &\colon \overline{F}
+    \longmapsto (\hsq\CC_1,\sq F,\hsq\CC)
+    = \hsq\overline{F})
+  \end{aligned}
+\]
+where $(\CC_1,F,\CC)\in\FF$.
+For all $\CC\in\FF_0$, let $\varepsilon(\CC)$ be the isomorphism from $\vsq\CC$ to $\hsq\CC$ defined by
+\[
+  (f'_2,f'_1,f_1,f_2)
+  \longmapsto (f'_1,f'_2,f_2,f_1).
+\]
+
+We denote by $\varepsilon$ the map $\CC\mapsto\varepsilon(\CC)$.
+
+\begin{proposition}{13}
+\label{proposition:ii-13}
+  With the above notation, $(\hsq,\varepsilon,\vsq)$ is an equivalence, natural in $\FF$.
+\end{proposition}
+
+In the above construction, we can replace $\sq\CC$ by the double category $\sq(\CC,\CC)$ and \cref{proposition:ii-13} still holds true.
+
+Let $\CC_1^\bullet$ be a category and $(\CC^\bullet,\CC^\perp)$ a double category;
+let $\FF(\CC^\bullet,\CC_1^\bullet)$ be the class of functors from $\CC_1^\bullet$ to $\CC^\bullet$.
+
+\begin{proposition}{14}
+\label{proposition:ii-14}
+  $\FF(\CC^\bullet,\CC_1^\bullet)$ is a category for the composition law $(\Phi',\Phi)\mapsto\Phi'\perp\Phi$, where $(\Phi'\perp\Phi)(f)=\Phi'(f)\perp\Phi(f)$, if and only if $\Phi'(f)\perp\Phi(f)$ is defined for all $f\in\CC_1$.
+\end{proposition}
+
+This proposition follows from the Axiom of permutability;
+the right unit of $\Phi$ is the functor $\alpha^\perp\Phi$, and its left unit is the functor $\beta^\perp\Phi$.
+
+\begin{remark}
+  If $\Phi$ is a double functor from $(\CC_1^\bullet,\CC_1^\perp)$ to $(\CC^\bullet,\CC^\perp)$, then $\alpha^\perp\Phi$ is no longer a functor from $\CC_1^\perp$ to $\CC^\perp$, and so the class of double functors from $(\CC_1^\bullet,\CC_1^\perp)$ to $(\CC^\bullet,\CC^\perp)$ is not identified with a subcategory of $\FF(\CC^\bullet,\CC_1^\bullet)$, contrary to what was stated in a corollary in \cite{3e}.
+\end{remark}
+
+The definition of a natural transformation $(\varphi',\tau,\varphi)$ from a functor $\varphi$ to a functor $\varphi'$ immediately leads to the following theorem (for the notation, see \cite{3d}).
+
+\begin{theorem}{7}
+\label{theorem:ii-7}
+  Let $\CC$ and $\CC'$ be categories;
+  the longitudinal category $\NN(\CC',\CC)$ of natural transformations between functors from $\CC$ to $\CC'$ can be identified with the category $\FF(\hsq\CC',\CC)$, by identifying the natural transformation $(\varphi',\tau,\varphi)$ with the functor $\Phi\in\FF(\hsq\CC',\CC)$, where
+  \[
+    \Phi(f)
+    = \big(
+      \varphi'(f), \tau(\beta(f)), \tau(\alpha(f)), \varphi(f)
+    \big)
+  \]
+  for all $f\in\CC$;
+  \oldpage{68}
+  conversely, $\Phi\in\FF(\hsq\CC',\CC)$ is identified with the natural transformation $(\varphi',\tau,\varphi)$, where
+  \[
+    \varphi=\alpha^\vsqbox\Phi
+    \textand
+    \varphi'=\beta^\vsqbox\Phi
+  \]
+  and
+  \[
+    \big(
+      \varphi'(e), \tau(e), \tau(e), \varphi(e)
+    \big)
+    = \Phi(e)
+  \]
+  for all $e\in\CC_0$.
+\end{theorem}
+
+This theorem shows that if $(\CC^\bullet,\CC^\perp)$ is a double category, then a functor $\Phi$ from a category $\Gamma$ to $\CC^\bullet$ can be considered as a generalised natural transformation from $\alpha^\perp\Phi$ to $\beta^\perp\Phi$.
+We will later see (\hyperref[section:iii]{Section~III}) another generalisation of the notion of natural transformation, namely the notion of a \emph{quintet} \cite{3e}.
+
+\begin{longcomm}{68.1}
+  \emph{Lax transformations.}
+
+  This remark is very important.
+  Indeed, it leads to a comprehensive study of lax transformations (in the sense of Kelly--Street~\cite{comm59}, called \emph{pseudo-transformations} by Gray~\cite{comm40} and \emph{catadeses} by Bourn~\cite{comm14}), which are found in this way when $(\CC^\bullet,\CC^\perp)$ is the double category of squares of a 2-category (cf. \cite[Comment~105.1]{coll64}).
+
+  Thanks to this approach (generalised to multiple categories, as stated in \cite[Remark~3, p.~399]{coll117}), we obtained existence theorems for general lax limits in \cite{coll119,coll121}.
+  These theorems are proved by a short structural proof, which encompasses Bourn's, Gray's, and Street's results on 2-functors \cite{comm14,comm40,comm92}.
+
+  Note that Charles has already suggested this idea to S.~Legrand, who began to develop it in \cite{comm67}, but she lacked this meaningful example to motivate her.
+\end{longcomm}
+
+
+\subsection{$n$-fold categories}
+\label{section:ii-5}
+
+By \cite{theorem:ii-2},
 
 
 
