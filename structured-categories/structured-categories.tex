@@ -3919,6 +3919,7 @@ In particular, we write
       (C_1^\bullet,\bar{s}_1), F, (\CC^\bullet,\bar{s})
     \big)
     \in\bar{\Gamma}.
+    \qedhere
   \]
 \end{proof}
 
@@ -4425,7 +4426,7 @@ From the above, if $(\CC^\bullet,\CC^\perp)$ is a double category, then the foll
 \end{theorem}
 
 \begin{proof}
-  We first show that system of axioms (1) implies that $(\CC^\bullet,\CC^perp)$ is a double category.
+  We first show that the system of axioms (1) implies that $(\CC^\bullet,\CC^perp)$ is a double category.
   Let $z^\bullet,z'^\bullet\in\CC_0^\bullet$;
   if $z'^\bullet\perp z^\bullet$ is defined, then, since $\alpha^\bullet$ is a functor,
   \[
@@ -4463,8 +4464,77 @@ From the above, if $(\CC^\bullet,\CC^\perp)$ is a double category, then the foll
   \[
     (\beta^\perp(f'),\beta^\perp(f))\in\CC^\bullet\star\CC^\bullet.
   \]
-  Let
+  Let $(g',g)\in\CC^\bullet\star\CC^\bullet$ be such that $(g',f'),(g,f)\in\CC^\perp\star\CC^\perp$;
+  by (c),
+  \[
+    \begin{aligned}
+      \alpha^\bullet(g'\perp f')
+      &= \alpha^\bullet(g')\perp\alpha^\bullet(f')
+    \\&= \beta^\bullet(g)\perp\beta^\bullet(f)
+    \\&= \beta^\bullet(g\perp f)
+    \end{aligned}
+  \]
+  and so $(g'\perp f',g\perp f)\in\CC^\bullet\star\CC^\bullet$.
+  We thus deduce that $\CC^\bullet\star\CC^\bullet$ is a subcategory of $\CC^\perp\times\CC^\perp$.
+  Also
+  \[
+    \begin{aligned}
+      \alpha^\perp(g'\bullet g)
+      &= \alpha^\perp(g')\bullet\alpha^\perp(g)
+    \\&= \beta^\perp(f')\bullet\beta^\perp(f)
+    \\&= \beta^\perp(f'\bullet f)
+    \end{aligned}
+  \]
+  implies that $(g'\bullet g,f'\bullet f)\in\CC^\perp\star\CC^\perp$ and, by (d), that $\chi^\bullet$ is a functor from $(\CC^\bullet\star\CC^\bullet)^\perp$ to $\CC^\perp$.
+  Thus $(\CC^\bullet,\CC^\perp)$ is a double category.
+
+  Now suppose that the system of axioms (2) is satisfied;
+  if $z^\bullet\in\CC_0^\bullet$ then
+  \[
+    \alpha^\perp(z^\bullet)
+    =\alpha^\bullet(\alpha^\perp(z^\bullet))
+    \in\CC_0^\bullet;
+  \]
+  if $z'^\bullet\in\CC_0^\bullet$ and $(z'^\bullet,z^\bullet)\in\CC^\perp\star\CC^\perp$, then the functor $\chi^\perp$ sends the unit $(z'^\bullet,z^\bullet)$ of $(\CC^\perp\star\CC^\perp)^\bullet$ to $(z'^\bullet\perp z^\bullet)\in\CC^\perp\star\CC^\perp$;
+  thus $\CC_0^\bullet$ is a subcategory of $\CC^\perp$.
+  If $z^\perp\in\CC_0^\perp$, then
+  \[
+    \alpha^\bullet(z^\perp)
+    = \alpha^\perp(\alpha^\bullet(z^\perp))
+    \in \CC_0^\perp.
+  \]
+  Let $(g,f)\in\CC^\perp\star\CC^\perp$;
+  by (e), we have that $(\alpha^\bullet(g),\alpha^\bullet(f))\in\CC^\perp\star\CC^\perp$, and
+  \[
+    \begin{aligned}
+      \alpha^\bullet(g\perp f)
+      &= \alpha^\bullet(\chi^\perp(g,f))
+    \\&= \chi^\perp(\alpha^\bullet(g),\alpha^\bullet(f))
+    \\&= \alpha^\bullet(g)\perp\alpha^\bullet(f),
+    \end{aligned}
+  \]
+  i.e. $\alpha^\bullet$ (and, for the same reason, $\beta^\bullet$) is a functor from $\CC^\perp$ to $(\CC_0^\bullet)^\perp$.
+  Taking (f) into account, this shows that $(\CC^\bullet,\CC^\perp)$ is a double category.
+
+  Finally, suppose that the system of axioms (3) is satisfied.
+  Let $(g,f)\in\CC^\perp\star\CC^\perp$;
+  as above, we can prove that (i) implies that $(\alpha^\bullet(g),\alpha^\bullet(f))\in\CC^\perp\star\CC^\perp$;
+  by (h), the composite $(g\perp f)\bullet(\alpha^\bullet(g)\perp\alpha^\bullet(f))$ is defined, and, since $\CC_0^\bullet$ is stable under $\perp$, we see that
+  \[
+    \alpha^\bullet(g)\perp\alpha^\bullet(f)
+    = \alpha^\bullet(g\perp f).
+  \]
+  We thus deduce that (c) is satisfied;
+  furthermore, (h) implies (d);
+  thus the system of axioms (1) is satisfied, and $(\CC^\bullet,\CC^\perp)$ is a double category, by the first part of this proof.
 \end{proof}
+
+\begin{remarks}
+  ---
+  \begin{enumerate}
+    \item[\normalfont(1)] If
+  \end{enumerate}
+\end{remarks}
 
 
 %% Bibliography %%
