@@ -143,6 +143,9 @@
 \newcommand{\DD}{\mathcal{D}}
 \newcommand{\NN}{\mathcal{N}}
 
+\setlength{\fboxsep}{1pt}
+\newcommand{\boxnum}[1]{{\fbox{\scriptsize$#1$\vphantom{$jk$}}}}
+
 % Boxes
 \newcommand{\hsqbox}{{\boxminus}}
 \newcommand{\vsqbox}{{\rotatebox{90}{$\boxminus$}}}
@@ -4359,7 +4362,7 @@ In $\CC^\perp\times\CC^\perp$, we have
 
 \begin{definition}{11}
 \label{definition:ii-11}
-  The class $(\CC_0^\bullet)_0^\perp$ is called the \emph{class of \unsure{vertices}} of the double category $(\CC^\bullet,\CC^\perp)$, and denoted by $\CC_{00}$.
+  The class $(\CC_0^\bullet)_0^\perp$ is called the \emph{class of vertices} of the double category $(\CC^\bullet,\CC^\perp)$, and denoted by $\CC_{00}$.
 \end{definition}
 
 \begin{longcomm}{62.3}
@@ -4613,7 +4616,7 @@ On $\sq(\CC_2,\CC_1)$, we define two composition laws:
 
 The longitudinal category is denoted $\vsq(\CC_2,\CC_1)$, and the lateral category $\hsq(\CC_2,\CC_1)$;
 the source and target maps for the longitudinal category are denoted $\alpha^\vsqbox$ and $\beta^\vsqbox$, and for the lateral category $\alpha^\hsqbox$ and $\beta^\hsqbox$, respectively.
-The class of \unsure{vertices} of the double category $\sq(\CC_2,\CC_1)$ can be identified with $\Delta$.
+The class of vertices of the double category $\sq(\CC_2,\CC_1)$ can be identified with $\Delta$.
 
 \begin{definition}{13}
 \label{definition:ii-13}
@@ -4728,7 +4731,7 @@ let $\FF(\CC^\bullet,\CC_1^\bullet)$ be the class of functors from $\CC_1^\bulle
   $\FF(\CC^\bullet,\CC_1^\bullet)$ is a category for the composition law $(\Phi',\Phi)\mapsto\Phi'\perp\Phi$, where $(\Phi'\perp\Phi)(f)=\Phi'(f)\perp\Phi(f)$, if and only if $\Phi'(f)\perp\Phi(f)$ is defined for all $f\in\CC_1$.
 \end{proposition}
 
-This proposition follows from the Axiom of permutability;
+This proposition follows from the Axiom of permutability (condition~(2) of \cref{theorem:ii-8});
 the right unit of $\Phi$ is the functor $\alpha^\perp\Phi$, and its left unit is the functor $\beta^\perp\Phi$.
 
 \begin{remark}
@@ -4920,7 +4923,80 @@ From \cref{theorem:ii-13}, it also follows that, if $(\CC^{\perp_i})_{i\leq n}$ 
   This proves the theorem.
 \end{proof}
 
-Let
+Let $(\CC^{\perp_i})_{i\leq n}$ be an $n$-fold category.
+Denote by $\lambda^{i_1}\ldots\lambda^{i_p}$ the $(n-p)$-fold endofunctor of $(\CC^{\perp_j})_{i_1,\ldots,i_p\neq j<n}$ such that, for all $j\leq p$, we have
+\[
+  \begin{gathered}
+    1\leq i_j\leq n,
+    \quad i_j\neq i_j'\text{ if }j\neq j',
+  \\\text{and}\quad\lambda^{i_j}\in\{\alpha^{i_j},\beta^{i_j}\}.
+  \end{gathered}
+\]
+
+Such a functor is invariant under any permutation of the set $(i_1,\ldots,i_p)$ by the Axiom of permutability (condition~(2) of \cref{theorem:ii-8}).
+The image of $f\in\CC$ by such a functor is called the \emph{$(n-p)$-face of $f$}.
+The 0-faces are called the \emph{vertices} of $f$;
+the class of vertices of $\CC$ is the class $\bigcap_{i\leq n}\CC_0^{\perp_i}$.
+The 1-faces are called the \emph{edges} of $\CC$.
+
+\begin{remarks}
+  ---
+  \begin{enumerate}
+    \item[\normalfont(1)]
+      Let $(\gamma_1,\ldots,\gamma_n)$ be a sequence of functors such that $\lambda_i\in\{\alpha^i,\beta^i,\Id\}$, and $\lambda_i\neq\Id$ for exactly $p$-many indices $i$.
+      For all $f\in\CC$, the family $((\gamma_1\ldots\gamma_n)(f))_{(\gamma_1\ldots\gamma_n)}$ is called the \emph{$(n-p)$-frame of $f$}, and denoted $c_{n-p}(f)$.
+      In particular, the $(n-1)$-frames form an $n$-fold category, with the composition law $\perp_i$ for all $i\leq n$ being defined by
+      \[
+        c_{n-1}(f')\perp_i c_{n-1}(f)
+        = c_{n-1}(f'\perp_i f)
+        \qquad\text{if and only if $f'\perp_i f$ is defined.}
+      \]
+      This $n$-fold category is a quotient $n$-fold category of $(\CC^{\perp_i})_{i\leq n}$.
+
+    \item[\normalfont(2)]
+      Let $\CC^\perp$ be a category.
+      By induction, we can define an $n$-fold category $(\CC^{[n]})_{i\leq n}^{\perp_i}$ in which every element is identified with its $1$-frame:
+      \[
+        \begin{gathered}
+          (\CC^{[1]})^{\perp_1}
+          = \CC^\perp
+        \\\CC^{[n]}
+          = \sq\big(
+            (\CC^{[n-1]})^{\perp_1}, (\CC^{[n-1]})^{\perp_1}
+          \big);
+        \end{gathered}
+      \]
+      by induction, we can show that, for all $i\leq(n-1)$, there exists a bijection $\varepsilon_n^i$ from $\CC^{[n]}$ to $\sq((\CC^{[n-1]})^{\perp_i},(\CC^{[n-1]})^{\perp_i})$.
+
+      \begin{longcomm}{70.5}
+        To construct \todo
+      \end{longcomm}
+
+      The composition law $\perp_i$ on on $\CC^{[n]}$ is the inverse image under $\varepsilon_n^i$ of the longitudinal multiplication on $\varepsilon_n^i(\CC^{[n]})$.
+      The composition law $\perp_n$ is defined by
+      \[
+        (\overline{h}',\overline{k}',\overline{k},\overline{h})
+        \perp (h',k',k',h)
+        = (\overline{h}'\hmult h', \overline{k}'\hmult k', \overline{k}\hmult k, \overline{h}\hmult h)
+      \]
+      if and only if $\overline{h}'\hmult h'$, $\overline{k}'\hmult k'$, $\overline{k}\hmult k$, and $\overline{h}\hmult h$ are all defined in $\hsq((\CC^{[n-1]})^{\perp_1},(\CC^{[n-1]})^{\perp_1})$.
+      The $n$-fold category $(\CC^{[n]})_{i\leq n}^{\perp_i}$ admits as an $n$-fold subcategory the class $\CC^\boxnum{n}$, defined inductively by
+      \[
+        \CC^\boxnum{1} = \CC
+        \textand
+        \CC^\boxnum{n} = \sq\big((\CC^\boxnum{n-1}){^\perp_1}\big).
+      \]
+      \oldpage{71}
+      In particular,
+      \[
+        \CC^\boxnum{2}
+        = \sq\CC.
+      \]
+
+    \item[\normalfont(3)]
+      \todo \todo \todo
+  \end{enumerate}
+\end{remarks}
 
 
 
@@ -4931,9 +5007,7 @@ Let
 \begingroup
 \let\clearpage\relax
   \printbibliography[keyword={orig},heading=bibintoc,title=Bibliography]
-
   \printbibliography[keyword={oc},title={Citations to the collected works}]
-
   \printbibliography[keyword={comm},title={Citations from comments in the collected works}]
 \endgroup
 
