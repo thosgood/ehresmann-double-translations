@@ -119,9 +119,9 @@
 \newcommand{\tCC}{\widetilde{\CC}}
 \newcommand{\HH}{\mathcal{H}}
 \newcommand{\rHH}{\mathrm{H}}
-\newcommand{\bHH}{\bar{\HH}}
+\newcommand{\bHH}{\overline{\HH}}
 \renewcommand{\SS}{\mathcal{S}}
-\newcommand{\bSS}{\bar{\SS}}
+\newcommand{\bSS}{\overline{\SS}}
 \newcommand{\MM}{\mathfrak{M}}
 \usepackage{upgreek}
 \newcommand{\comp}{\upchi}
@@ -132,7 +132,7 @@
 \newcommand{\tTT}{\widetilde{\TT}}
 \newcommand{\UU}{\mathcal{U}}
 \newcommand{\relrho}{\mathrel{\rho}}
-\newcommand{\relrhobar}{\mathrel{\bar{\rho}}}
+\newcommand{\relrhobar}{\mathrel{\overline{\rho}}}
 \newcommand{\subs}{\mathrel{\propto}}
 \newcommand{\sups}{\mathrel{\reflectbox{$\propto$}}}
 \newcommand{\Id}{\mathrm{Id}}
@@ -207,9 +207,9 @@
 
 %% Content %%
 
-\todo fix spacing in e.g. $(\vsq\CC,\sq p,\vsq\HH,\bar{\Gamma}')$
+\todo fix spacing in e.g. $(\vsq\CC,\sq p,\vsq\HH,\overline{\Gamma}')$
 
-\todo decide between $\bar{\rHH}$ vs $\overline{\rHH}$
+\todo decide between $\overline{\rHH}$ vs $\overline{\rHH}$
 
 \todo add citations from collected works notes
 
@@ -251,7 +251,7 @@ The end of \hyperref[section:ii]{Section~II} contains a series of general theore
   \item $\HH$-structured functors form a category of homomorphisms over a category of functors, and over $\MM$;
     it has finite products and is right solving.
   \item Let $(\CC^\bullet,s)$ be an $\HH$-structured category;
-    if $\bar{\CC}^\bullet$ is a subcategory of $\CC^\bullet$, and $\bar{s}$ a substructure of $s$ such that $p(\bar{s})=\bar{C}$, then $(\bar{C}^\bullet,\bar{s})$ is an $\HH$-structured category.
+    if $\overline{\CC}^\bullet$ is a subcategory of $\CC^\bullet$, and $\overline{s}$ a substructure of $s$ such that $p(\overline{s})=\overline{C}$, then $(\overline{C}^\bullet,\overline{s})$ is an $\HH$-structured category.
   \item If $(\CC^\bullet,s)$ is an $\HH$-structured category, then the categories of \todo of $\CC^\bullet$ are $\HH$-structured categories.
 \end{itemize}
 
@@ -271,9 +271,9 @@ We will then give some applications of all these concepts to more specific probl
 \label{section:i.1}
 
 A category will be in general represented by the symbol denoted the underlying class (or \emph{support}) of the category along with the symbol for the composition law that makes this class a category as a superscript.
-For example: $\CC^\perp$, $\CC_1^\perp$, $\bar{\CC}^\perp$ (resp. $\CC^\bullet$, $\CC_1^\bullet$, $\bar{\CC}^\bullet$), \ldots denote the categories obtained by endowing the class $\CC$, $\CC_1$, $\bar{\CC}$, \ldots with the composition law $\perp$ (resp. $\bullet$).
+For example: $\CC^\perp$, $\CC_1^\perp$, $\overline{\CC}^\perp$ (resp. $\CC^\bullet$, $\CC_1^\bullet$, $\overline{\CC}^\bullet$), \ldots denote the categories obtained by endowing the class $\CC$, $\CC_1$, $\overline{\CC}$, \ldots with the composition law $\perp$ (resp. $\bullet$).
 The class of units of a category will be denoted by the symbol representing the category along with a $0$ as a subscript.
-For example: $\CC_0^\perp$, $(\CC_1^\perp)_0$, $\bar{\CC}_0^\perp$, \ldots.
+For example: $\CC_0^\perp$, $(\CC_1^\perp)_0$, $\overline{\CC}_0^\perp$, \ldots.
 If a class of objects is naturally associated to the category (for example, the classes in a category of maps from one class to another), then we will tacitly identify the units with the corresponding objects.\comm{22.4}{This identification must be considered as an abbreviation, not as a formal operation (cf. Comment~211.1 on \cite{coll100}).}
 
 Let $\CC^\perp$ be a category.
@@ -291,10 +291,10 @@ in this case, it is to be understood that the composition law is denoted by $\bu
 we thus write $\CC$ instead of $\CC^\bullet$.
 Similarly, we will also write $\CC_0$, $\alpha$, and $\beta$ instead of $\CC_0^\bullet$, $\alpha^\bullet$, and $\beta^\bullet$ (respectively).
 
-Let $\bar{C}^\perp$ and $\CC^\perp$ be two categories;
+Let $\overline{C}^\perp$ and $\CC^\perp$ be two categories;
 the word ``functor'' will always mean a contravariant functor.
-A functor from $\CC^\perp$ to $\bar{\CC}^\perp$ will be denoted either by a triple $(\bar{\CC}^\perp,F,\CC^\perp)$, where $F$ is the corresponding map, or by just the letter $F$.
-The restriction of $F$ to the class $\CC_0^\perp$, considered as a map from $\CC_0^\perp$ to $\bar{\CC}_0^\perp$, will be denoted $F_0$.
+A functor from $\CC^\perp$ to $\overline{\CC}^\perp$ will be denoted either by a triple $(\overline{\CC}^\perp,F,\CC^\perp)$, where $F$ is the corresponding map, or by just the letter $F$.
+The restriction of $F$ to the class $\CC_0^\perp$, considered as a map from $\CC_0^\perp$ to $\overline{\CC}_0^\perp$, will be denoted $F_0$.
 
 
 
@@ -453,7 +453,7 @@ where $f'f$ denotes the surjection
 \[
   x\longmapsto f'(f(x)).
 \]
-If $\bar{f}=(M',f,M)$, then we also write $\bar{f}(x)$ to mean $f(x)$.
+If $\overline{f}=(M',f,M)$, then we also write $\overline{f}(x)$ to mean $f(x)$.
 
 Let $(\CC,p,\Sigma)$ be a species of structures such that $p^{-1}(e)$ belongs to $\MM_0$ for all $e\in p_0(\Sigma_0)$.
 Let $f\in p(\Sigma)$ and set
@@ -507,13 +507,13 @@ We say that $(\CC,F)$ is a \emph{a pair defining a species of structures}, namel
     \item[\normalfont(1)]
     \label{remark:i-1}
       Let $\CC$ be a category, $\alpha(F)$ a subcategory, and $(\MM,F,\alpha(F))$ a functor.
-      Let $\bar{F}$ be the functor that sends $f\in\alpha(F)$ to the map
+      Let $\overline{F}$ be the functor that sends $f\in\alpha(F)$ to the map
       \[
         (\alpha(f),z)
         \longmapsto\big(\beta(f),F(f)(z)\big)
         \qquad\text{where $z\in F(\alpha(f))$.}
       \]
-      The pair $(\CC,\bar{F})$ defines the species of structures $(\CC,p_0,\Sigma_0)$, where $\Sigma_0$ is the class of pairs $(e,z)$ such that $e\in\alpha(F)_0$, $z\in F(e)$, and
+      The pair $(\CC,\overline{F})$ defines the species of structures $(\CC,p_0,\Sigma_0)$, where $\Sigma_0$ is the class of pairs $(e,z)$ such that $e\in\alpha(F)_0$, $z\in F(e)$, and
       \[
         p_0(e,z)=e.
       \]
@@ -521,14 +521,14 @@ We say that $(\CC,F)$ is a \emph{a pair defining a species of structures}, namel
     \label{remark:i-2}
       Let $(\CC,F)$ be a pair defining a species of structures $(\CC,p,\Sigma)$ such that $\alpha(F)$ contains $f\in\CC$ whenever $\alpha(f)\in\alpha(F)$;
       this is equivalent to saying that we are given a composition law between the category $\CC$ and the class $\Sigma_0$ that satisfies axioms~(1), (2), (3), and (4a) of Definition 1.
-      We can extend $F$ to a functor $(\MM,\bar{F},\CC)$ given by
+      We can extend $F$ to a functor $(\MM,\overline{F},\CC)$ given by
       \[
         \begin{aligned}
-          \bar{F}(f)&=F(f)
+          \overline{F}(f)&=F(f)
           \qquad&&\text{for all $f\in\alpha(F)$;}
-        \\\bar{F}(e)&=\varnothing
+        \\\overline{F}(e)&=\varnothing
           \qquad&&\text{for all $e\in\CC_0$ and $e\not\in\alpha(F)_0$;}
-        \\\bar{F}(f')&=\big(\bar{F}(\beta(f')),\varnothing,\varnothing)
+        \\\overline{F}(f')&=\big(\overline{F}(\beta(f')),\varnothing,\varnothing)
           \qquad&&\text{for all $f'\not\in\alpha(F)$.}
         \end{aligned}
       \]
@@ -592,9 +592,9 @@ We say that $(\CC,F)$ is a \emph{a pair defining a species of structures}, namel
 \end{longcomm}
 
 \oldpage{354}
-Let $(\CC^\bullet,F_e)$ be the pair defining the species of structures $(\CC^\bullet,\beta,\alpha^{-1}(e))$, and $\bar{F}_e$ the functor associated to $F_e$ by \hyperref[remark:i-2]{Remark~2} above.
-A functor $(\MM,G,\CC^\bullet)$ is said to be representable \cite{2} if there exists some $e\in\CC_0^\bullet$ such that $G$ and $\bar{F}_e$ are induced from one another by a natural equivalence.
-To every pair $(\CC,F)$ that defines a species of structures $(\CC,p,\Sigma)$, we can associated a representable functor $\bar{F}$ in the following way:
+Let $(\CC^\bullet,F_e)$ be the pair defining the species of structures $(\CC^\bullet,\beta,\alpha^{-1}(e))$, and $\overline{F}_e$ the functor associated to $F_e$ by \hyperref[remark:i-2]{Remark~2} above.
+A functor $(\MM,G,\CC^\bullet)$ is said to be representable \cite{2} if there exists some $e\in\CC_0^\bullet$ such that $G$ and $\overline{F}_e$ are induced from one another by a natural equivalence.
+To every pair $(\CC,F)$ that defines a species of structures $(\CC,p,\Sigma)$, we can associated a representable functor $\overline{F}$ in the following way:
 
 Let $a$ be an arbitrary element that does not belong to $\CC$.
 Let $\CC'_1$ be the class of pairs $(z,a)$, where $z\in\Sigma_0$.
@@ -624,8 +624,8 @@ if and only if one of the following conditions is satisfied:
       =(z,a).
     \]
 \end{enumerate}
-\hyperref[remark:i-2]{Remark~2} then allows us to extend $F$ to a functor $(\MM,\bar{F},\CC')$;
-this functor $\bar{F}$, which is identical to $(\MM,\bar{F}_a,\CC')$, is representable.\comm{26.1}{Regarding $\CC'$, Bénabou gives the following criterion: $F\colon\CC\to\SS$ is representable if and only if $\CC\hookrightarrow\CC'$ has a left adjoint \cite{comm5}.}
+\hyperref[remark:i-2]{Remark~2} then allows us to extend $F$ to a functor $(\MM,\overline{F},\CC')$;
+this functor $\overline{F}$, which is identical to $(\MM,\overline{F}_a,\CC')$, is representable.\comm{26.1}{Regarding $\CC'$, Bénabou gives the following criterion: $F\colon\CC\to\SS$ is representable if and only if $\CC\hookrightarrow\CC'$ has a left adjoint \cite{comm5}.}
 
 \begin{definition}{3}
 \label{definition:i-3}
@@ -849,18 +849,18 @@ then $(\MM,\omega,\widetilde{\Omega})$ is a functor.
   if $\CC$ further defines an order on $\CC_0$, then we say that $(\CC,F)$ is a \emph{bi-ordered species of structures} \unsure{again, which noun does bi-ordered modify?}.
 \end{definition}
 
-Let $((\bar{A},<),h,(A,<))\in\widetilde{\Omega}$;
-let $\AA$ (resp. $\bar{\AA}$) be the category of pairs defining the order of $A$ (resp. of $\bar{A}$);
-let $\bar{h}$ be the map
+Let $((\overline{A},<),h,(A,<))\in\widetilde{\Omega}$;
+let $\AA$ (resp. $\overline{\AA}$) be the category of pairs defining the order of $A$ (resp. of $\overline{A}$);
+let $\overline{h}$ be the map
 \[
   (z',z)
   \longmapsto(h(z'),h(z))
   \qquad\text{where $(z',z)\in\AA$;}
 \]
-then $(\bar{\AA},\bar{h},\AA)$ is a functor, and the map
+then $(\overline{\AA},\overline{h},\AA)$ is a functor, and the map
 \[
-  \eta\colon\big((\bar{A},<),h,(A,<)\big)
-  \longmapsto(\bar{\AA},\bar{h},\AA)
+  \eta\colon\big((\overline{A},<),h,(A,<)\big)
+  \longmapsto(\overline{\AA},\overline{h},\AA)
 \]
 is an equivalence from $\widetilde{\Omega}$ to a full subcategory $\widehat{\Omega}$ of $\FF$ whose units are the categories $\SS$ that define an order on $\SS_0$.
 The map \unsure{is this right?}
@@ -933,15 +933,15 @@ Since an element of $\SS$ is entirely determined by the data of $\alpha(h)$ and 
 If $\SS$ is the groupoid of invertible elements of $\HH$, then $\HH$ is a species of structures over $\SS\times\SS$ with the composition law
 \[
   \begin{gathered}
-    \big((\bar{f}',\bar{f}),h\big)
-    \longmapsto\bar{f}'\bullet h\bullet\bar{f}^{-1}
+    \big((\overline{f}',\overline{f}),h\big)
+    \longmapsto\overline{f}'\bullet h\bullet\overline{f}^{-1}
     \qquad\text{if and only if}
-  \\\alpha(\bar{f})=\alpha(h)
+  \\\alpha(\overline{f})=\alpha(h)
     \textand
-    \alpha(\bar{f}')=\beta(h)
+    \alpha(\overline{f}')=\beta(h)
   \end{gathered}
 \]
-where $h\in\HH$ and $\bar{f},\bar{f}'\in\SS$.
+where $h\in\HH$ and $\overline{f},\overline{f}'\in\SS$.
 
 Let $(\CC,p,\HH,\SS)$ be a category of homomorphisms;
 let $\SS_\gamma$ and $\CC_\gamma$ be the groupoids of invertible elements of $\SS$ and $\CC$ (respectively).
@@ -1130,18 +1130,18 @@ This relation evidently implies that $p(s)=p(s')$.
   \[
     \alpha(f)=p(s)
   \]
-  guarantees the existence of $(\bar{s},f,s),(\bar{s}',f,s')\in\Gamma$;
+  guarantees the existence of $(\overline{s},f,s),(\overline{s}',f,s')\in\Gamma$;
   then
   \[
-    (\bar{s}',f,s')\bullet(s',p(s),s)\bullet(s,f^{-1},\bar{s})
-    = (\bar{s}',f\bullet p(s)\bullet f^{-1},\bar{s})
-    = (\bar{s}',p(\bar{s}),\bar{s})
+    (\overline{s}',f,s')\bullet(s',p(s),s)\bullet(s,f^{-1},\overline{s})
+    = (\overline{s}',f\bullet p(s)\bullet f^{-1},\overline{s})
+    = (\overline{s}',p(\overline{s}),\overline{s})
     \in\HH.
   \]
   Consequently, $p(\Gamma)$ acts on $\HH_{\relrho}$, with the composition law
   \[
     (f,(s',p(s),s))
-    \longmapsto (\bar{s}',p(\bar{s}),\bar{s})
+    \longmapsto (\overline{s}',p(\overline{s}),\overline{s})
     \quad\text{if and only if}\quad
     \alpha(f)=p(s).
   \]
@@ -1210,10 +1210,10 @@ if, further, $(S,p(S)p(s),s)\in\HH$, then we also have that
   \]
   thus $s'\relrhobar S$.
   \oldpage{360}
-  Let $\bar{g}=(s,g,S')$ and $\bar{g}'=(s,g',S')$ be such that
+  Let $\overline{g}=(s,g,S')$ and $\overline{g}'=(s,g',S')$ be such that
   \[
-    (S,p(S)p(s),s)\bullet\bar{g}
-    = (S,p(S),p(s),s)\bullet\bar{g}'.
+    (S,p(S)p(s),s)\bullet\overline{g}
+    = (S,p(S),p(s),s)\bullet\overline{g}'.
   \]
   From the relations
   \[
@@ -1228,7 +1228,7 @@ if, further, $(S,p(S)p(s),s)\in\HH$, then we also have that
     \end{gathered}
   \]
   we deduce that $g=g'$.
-  Thus $\bar{g}=\bar{g}'$, which implies that $s$ is a sub-object of $S$ in $\HH$.
+  Thus $\overline{g}=\overline{g}'$, which implies that $s$ is a sub-object of $S$ in $\HH$.
 \end{proof}
 
 The notion of \emph{substructure} that we will now define makes precise the notion of sub-object of a category.
@@ -1424,20 +1424,20 @@ If there is no risk of confusion, then we simply say that $s$ is a substructure 
   We will show that the pair $(S,s_1)$ satisfies condition (2\textquotesingle) of \hyperref[proposition:i-4]{Proposition~4}.
   Let
   \[
-    \bar{g}
+    \overline{g}
     = (S,p(S)p(s_1)\bullet g',S')
     \in\HH.
   \]
   The elements $p(S)p(s_1)$ and $(p(S)p(s))\bullet(p(s)p(s_1))$ are equal, since they are both bounded above by $p(S)$ and have the same source and same target ($p(s_1)$ and $p(S)$, respectively);
   thus
   \[
-    \bar{g}
+    \overline{g}
     = \big(S,(p(S)p(s))\bullet(p(s)p(s_1)\bullet g'),S'\big)
     \in\HH
   \]
   and, since $s\subs S$,
   \[
-    \bar{g}'
+    \overline{g}'
     = (s,(p(s)p(s_1))\bullet g', S')
     \in\HH;
   \]
@@ -1475,15 +1475,15 @@ If there is no risk of confusion, then we simply say that $s$ is a substructure 
   Suppose further that $s'\subs S$;
   let
   \[
-    \bar{g}'
+    \overline{g}'
     = (s,p(s)p(s')\bullet g',S')
     \in\HH.
   \]
   We see that
   \[
     \begin{aligned}
-      \bar{g}
-      &= (S,p(S)p(s),s)\bullet\bar{g}'
+      \overline{g}
+      &= (S,p(S)p(s),s)\bullet\overline{g}'
     \\&= \big(S,(p(S)p(s))\bullet(p(s)p(s'))\bullet g',S'\big)
     \\&= (S,(p(S)p(s'))\bullet g',S')
     \in\HH.
@@ -1525,33 +1525,33 @@ If there is no risk of confusion, then we simply say that $s$ is a substructure 
 
 \begin{definition}{8}
 \label{definition:i-8}
-  Let $\bar{h},\bar{h}'\in\HH$;
-  we say that $\bar{h}'$ is a \emph{sub-homomorphism of $\bar{h}$ in $(\CC,p,\HH,\SS)$}, and we write $\bar{h}'\subs_p\bar{h}$ or $\bar{h}'\subs\bar{h}$, if the following conditions are satisfied:
+  Let $\overline{h},\overline{h}'\in\HH$;
+  we say that $\overline{h}'$ is a \emph{sub-homomorphism of $\overline{h}$ in $(\CC,p,\HH,\SS)$}, and we write $\overline{h}'\subs_p\overline{h}$ or $\overline{h}'\subs\overline{h}$, if the following conditions are satisfied:
   \[
     \begin{aligned}
-      \alpha(\bar{h}')
-      &\subs \alpha(\bar{h}),
-    \\\beta(\bar{h}')
-      &\subs \beta(\bar{h}),
-    \\p(\bar{h}')
-      &< p(\bar{h}).
+      \alpha(\overline{h}')
+      &\subs \alpha(\overline{h}),
+    \\\beta(\overline{h}')
+      &\subs \beta(\overline{h}),
+    \\p(\overline{h}')
+      &< p(\overline{h}).
     \end{aligned}
   \]
 \end{definition}
 
 \begin{proposition}{5}
 \label{proposition:i-5}
-  In $\HH$, the relation $\bar{h}'\subs\bar{h}$ is an order relation that satisfies the following conditions:
+  In $\HH$, the relation $\overline{h}'\subs\overline{h}$ is an order relation that satisfies the following conditions:
   \begin{enumerate}
     \item[\normalfont(1)]
-      If $\bar{h}'\subs\bar{h}$, and $\alpha(\bar{h}')=\alpha(\bar{h})$ and $\beta(\bar{h}')=\beta(\bar{h})$, then $\bar{h}=\bar{h}'$;
+      If $\overline{h}'\subs\overline{h}$, and $\alpha(\overline{h}')=\alpha(\overline{h})$ and $\beta(\overline{h}')=\beta(\overline{h})$, then $\overline{h}=\overline{h}'$;
     \item[\normalfont(2)]
-      If $\bar{h}'\subs\bar{h}$ then $p(\bar{h}')\subs p(\bar{h})$ in $(\CC,\Id_\CC,\CC,\CC)$;
-      if, further, $p(\bar{h})=p(\bar{h}')$, then $\bar{h}=\bar{h}'$;
+      If $\overline{h}'\subs\overline{h}$ then $p(\overline{h}')\subs p(\overline{h})$ in $(\CC,\Id_\CC,\CC,\CC)$;
+      if, further, $p(\overline{h})=p(\overline{h}')$, then $\overline{h}=\overline{h}'$;
     \item[\normalfont(3)]
-      If $(\bar{h}_1,\bar{h}),(\bar{h}'_1,\bar{h}')\in\HH\star\HH$ and $\bar{h}'\subs\bar{h}$ and $\bar{h}'_1\subs\bar{h}_1$, then $\bar{h}'_1\bullet\bar{h}'\subs\bar{h}_1\bullet\bar{h}$;
+      If $(\overline{h}_1,\overline{h}),(\overline{h}'_1,\overline{h}')\in\HH\star\HH$ and $\overline{h}'\subs\overline{h}$ and $\overline{h}'_1\subs\overline{h}_1$, then $\overline{h}'_1\bullet\overline{h}'\subs\overline{h}_1\bullet\overline{h}$;
     \item[\normalfont(4)]
-      If $\bar{h}'\subs_p\bar{h}$, $\bar{h}''\subs_p\bar{h}$, and $p(\bar{h}'')\subs p(\bar{h}')$ in $(\CC,\Id_\CC,\CC,\CC)$, then $\bar{h}''\subs_p\bar{h}'$.
+      If $\overline{h}'\subs_p\overline{h}$, $\overline{h}''\subs_p\overline{h}$, and $p(\overline{h}'')\subs p(\overline{h}')$ in $(\CC,\Id_\CC,\CC,\CC)$, then $\overline{h}''\subs_p\overline{h}'$.
   \end{enumerate}
 \end{proposition}
 
@@ -1571,8 +1571,8 @@ If there is no risk of confusion, then we simply say that $s$ is a substructure 
 
 \begin{proposition}{6}
 \label{proposition:i-6}
-  Suppose that $\bar{h},\bar{h}'\in\Gamma$, $\alpha(\bar{h}')\subs_p\alpha(\bar{h})$, and $(p(\bar{h}')<p(\bar{h})$;
-  then also $\beta(\bar{h}')\subs_p\beta(\bar{h})$, and, consequently, $\bar{h}'\subs_p\bar{h}$.
+  Suppose that $\overline{h},\overline{h}'\in\Gamma$, $\alpha(\overline{h}')\subs_p\alpha(\overline{h})$, and $(p(\overline{h}')<p(\overline{h})$;
+  then also $\beta(\overline{h}')\subs_p\beta(\overline{h})$, and, consequently, $\overline{h}'\subs_p\overline{h}$.
 \end{proposition}
 
 \begin{proof}
@@ -1580,9 +1580,9 @@ If there is no risk of confusion, then we simply say that $s$ is a substructure 
   Let
   \[
     \begin{aligned}
-      \bar{h}
+      \overline{h}
       &= (S_1,h,S)\in\Gamma
-    \\\bar{h}'
+    \\\overline{h}'
       &= (s_1,h',s)\in\Gamma
     \end{aligned}
   \]
@@ -1590,13 +1590,13 @@ If there is no risk of confusion, then we simply say that $s$ is a substructure 
   then
   \[
     \begin{gathered}
-      p\big(\bar{h}\bullet j\bullet \bar{h}'^{-1}\big)
+      p\big(\overline{h}\bullet j\bullet \overline{h}'^{-1}\big)
       = h\bullet(p(S)p(s))\bullet h'^{-1}
       < p(S_1)p(s_1),
-    \\\alpha\big(p\big(\bar{h}\bullet j\bullet\bar{h}'^{-1}\big)\big)
+    \\\alpha\big(p\big(\overline{h}\bullet j\bullet\overline{h}'^{-1}\big)\big)
       = p(s_1)
       \textand
-      \beta\big(p\big(\bar{h}\bullet j\bullet\bar{h}'^{-1}\big)\big)
+      \beta\big(p\big(\overline{h}\bullet j\bullet\overline{h}'^{-1}\big)\big)
       = p(S_1)
     \end{gathered}
   \]
@@ -1632,7 +1632,7 @@ If there is no risk of confusion, then we simply say that $s$ is a substructure 
   \end{longcomm}
   whence
   \[
-    p\big(\bar{h}\bullet j\bullet\bar{h}'^{-1}\big)
+    p\big(\overline{h}\bullet j\bullet\overline{h}'^{-1}\big)
     = p(S_1)p(s_1)
     \textand
     (S_1,p(S_1)p(s_1),s_1)
@@ -1641,26 +1641,26 @@ If there is no risk of confusion, then we simply say that $s$ is a substructure 
   Suppose, further, that $s\subs S$;
   let
   \[
-    \bar{g}
+    \overline{g}
     = (S_1,(p(S_1)p(s_1))\bullet g',S')
     \in\HH.
   \]
   The elements $h^{-1}\bullet(p(S_1)p(s_1))$ and $(p(S)p(s))\bullet h'^{-1}$ are equal, since they are both bounded above by $h^{-1}$ and have the same source and same target ($p(s_1)$ and $p(S)$, respectively).
   Thus
   \[
-    \bar{h}^{-1}\bullet\bar{g}
+    \overline{h}^{-1}\bullet\overline{g}
     = \big(S,(p(S)p(s))\bullet\big( h'^{-1}\bullet g'\big),S'\big)
     \in\HH
   \]
   and it follows from Proposition~4 that
   \[
-    \bar{g}'
+    \overline{g}'
     = (s,h'^{-1}\bullet g',S')
     \in\HH;
   \]
   consequently,
   \[
-    \bar{h}'\bullet\bar{g}'
+    \overline{h}'\bullet\overline{g}'
     = (s_1,g',S')
     \in\HH
     \textand
@@ -1673,7 +1673,7 @@ If there is no risk of confusion, then we simply say that $s$ is a substructure 
 \label{proposition:i-7}
   Let
   \[
-    \bar{h}
+    \overline{h}
     = (s_1,h,s)
     \in\HH
   \]
@@ -1689,37 +1689,37 @@ If there is no risk of confusion, then we simply say that $s$ is a substructure 
   \]
   then
   \[
-    \bar{h}'
+    \overline{h}'
     =(s'_1,h',s')
     \in\HH
     \textand
-    \bar{h}'\subs_p\bar{h}.
+    \overline{h}'\subs_p\overline{h}.
   \]
-  If, further, $\bar{h}$ and $h'$ are invertible, then $\bar{h}'\in\Gamma$.
+  If, further, $\overline{h}$ and $h'$ are invertible, then $\overline{h}'\in\Gamma$.
 \end{proposition}
 
 \begin{proof}
   We have that
   \[
-    \bar{h}\bullet(s\subs_p s')
+    \overline{h}\bullet(s\subs_p s')
     = (s_1,h\bullet(p(s)p(s')),s')
     \in\HH;
   \]
   the elements $h\bullet(p(s)p(s'))$ and $p(s_1)p(s'_1)\bullet h'$ are equal, since they are bounded above by $h$ and have the same source and same target ($p(s')$ and $p(s_1)$, respectively);
   thus
   \[
-    \bar{h}\bullet(s\subs_p s')
+    \overline{h}\bullet(s\subs_p s')
     = (s_1,(p(s_1)p(s'_1))\bullet h',s')
     \in\HH
   \]
   and, by \hyperref[proposition:i-4]{Proposition~4}, we see that
   \[
-    \bar{h}'
+    \overline{h}'
     = (s'_1,h',s')
     \in\HH.
   \]
   \oldpage{365}
-  If, further, $\bar{h}\in\Gamma$ and $h'$ is invertible, then also $(s',h'^{-1},s'_1)\in\HH$, whence $\bar{h}'\in\Gamma$.
+  If, further, $\overline{h}\in\Gamma$ and $h'$ is invertible, then also $(s',h'^{-1},s'_1)\in\HH$, whence $\overline{h}'\in\Gamma$.
 \end{proof}
 
 Let $\vsq\CC$ be the longitudinal category of quartets of $\CC$ (see \hyperref[section:ii.5]{§II.5}), i.e. the class of quadruples $(g_1,f_1,f,g)\in\CC^4$ such that $g_1\bullet f=f_1\bullet g$, endowed with the multiplication
@@ -1821,59 +1821,59 @@ Let $\vsq\HH$ be the longitudinal category of quartets of $\HH$, and $\sq p$ the
   \longmapsto (p(g_1),p(f_1),p(f),p(g))
 \]
 from $\vsq\HH$ to $\vsq\CC$.
-Then $(\vsq\CC,\sq p,\vsq\HH,\bar{\Gamma}')$ is a category of homomorphisms, where $\bar{\Gamma}'$ is the groupoid of invertible elements of $\vsq\HH$.\comm{37.2}{This is easy to prove (cf. \cite[Chapter~II]{coll122}).}
-For a quadruple $\bar{G}=(\bar{g}_1,\bar{f}_1,\bar{f},\bar{g})$ to belong to $\vsq\HH$, it is necessary and sufficient that
+Then $(\vsq\CC,\sq p,\vsq\HH,\overline{\Gamma}')$ is a category of homomorphisms, where $\overline{\Gamma}'$ is the groupoid of invertible elements of $\vsq\HH$.\comm{37.2}{This is easy to prove (cf. \cite[Chapter~II]{coll122}).}
+For a quadruple $\overline{G}=(\overline{g}_1,\overline{f}_1,\overline{f},\overline{g})$ to belong to $\vsq\HH$, it is necessary and sufficient that
 \[
   \begin{array}{ll}
-    \alpha(\bar{f})=\alpha(\bar{g}),
-    & \beta(\bar{f})=\alpha(\bar{g}_1),
-  \\\alpha(\bar{f}_1)=\alpha(\bar{g}),
-    & \beta(\bar{f}_1)=\alpha(\bar{g}_1)
+    \alpha(\overline{f})=\alpha(\overline{g}),
+    & \beta(\overline{f})=\alpha(\overline{g}_1),
+  \\\alpha(\overline{f}_1)=\alpha(\overline{g}),
+    & \beta(\overline{f}_1)=\alpha(\overline{g}_1)
   \end{array}
 \]
-and that $\sq p(\bar{G})$ is a quartet;
-indeed, the elements $\bar{g}_1\cdot\bar{f}$ and $\bar{f}_1\cdot\bar{g}$ are then equal, since they have the same image under $p$, and have the same source and same target.
+and that $\sq p(\overline{G})$ is a quartet;
+indeed, the elements $\overline{g}_1\cdot\overline{f}$ and $\overline{f}_1\cdot\overline{g}$ are then equal, since they have the same image under $p$, and have the same source and same target.
 
 \oldpage{366}
-Let $\bar{\UU}$ be the subcategory of $\vsq\HH$ consisting of the quartets
+Let $\overline{\UU}$ be the subcategory of $\vsq\HH$ consisting of the quartets
 \[
-  \bar{\rHH}
-  = (\bar{h}, s_1\subs_p s'_1, s\subs_p s', \bar{h}')
+  \overline{\rHH}
+  = (\overline{h}, s_1\subs_p s'_1, s\subs_p s', \overline{h}')
 \]
 such that $s'\subs_p s$ and $s'_1\subs_p s_1$.
-Let $\bar{\UU}'$ be the subcategory of $\UU$ consisting of the quartets in $\UU$ such that $\bar{h},\bar{h}'\in\Gamma$.
+Let $\overline{\UU}'$ be the subcategory of $\UU$ consisting of the quartets in $\UU$ such that $\overline{h},\overline{h}'\in\Gamma$.
 
 \begin{proposition}{9}
 \label{proposition:i-9}
-  We have $\bar{h}'\subs\bar{h}$ in $(\CC,p,\HH,\SS)$ if and only if there exists
+  We have $\overline{h}'\subs\overline{h}$ in $(\CC,p,\HH,\SS)$ if and only if there exists
   \[
-    \bar{\rHH}
+    \overline{\rHH}
     = \left(
-      \bar{h},
-      \beta(\bar{h})\subs_p\beta(\bar{h}'),
-      \alpha(\bar{h})\subs_p\alpha(\bar{h}'),
-      \bar{h}'
+      \overline{h},
+      \beta(\overline{h})\subs_p\beta(\overline{h}'),
+      \alpha(\overline{h})\subs_p\alpha(\overline{h}'),
+      \overline{h}'
     \right) \in \UU;
   \]
-  in this case, $\sq p(\bar{\rHH})\in\UU$.
+  in this case, $\sq p(\overline{\rHH})\in\UU$.
 \end{proposition}
 
 \begin{proof}
-  If $\bar{h}'\subs_p\bar{h}$, then
+  If $\overline{h}'\subs_p\overline{h}$, then
   \[
     \begin{gathered}
-      p(\bar{h}')<p(\bar{h}),
-    \\\alpha(\bar{h}')\subs_p\alpha(\bar{h})
+      p(\overline{h}')<p(\overline{h}),
+    \\\alpha(\overline{h}')\subs_p\alpha(\overline{h})
       \textand
-      \beta(\bar{h}')\subs_p\beta(\bar{h})
+      \beta(\overline{h}')\subs_p\beta(\overline{h})
     \end{gathered}
   \]
-  and thus $\sq p(\bar{\rHH}$ is a quartet and $\bar{\rHH}\in\bar{\UU}$.
-  Conversely, if $\bar{\rHH}\in\bar{\UU}$, then we find that $\sq p(\bar{\rHH})\in\UU$ by condition~(3) of \hyperref[proposition:i-8]{Proposition~8};
-  it thus follows that $p(\bar{h}')<p(\bar{h})$, and so $\bar{h}'\subs\bar{h}$ in $(\CC,p,\HH,\SS)$.
+  and thus $\sq p(\overline{\rHH}$ is a quartet and $\overline{\rHH}\in\overline{\UU}$.
+  Conversely, if $\overline{\rHH}\in\overline{\UU}$, then we find that $\sq p(\overline{\rHH})\in\UU$ by condition~(3) of \hyperref[proposition:i-8]{Proposition~8};
+  it thus follows that $p(\overline{h}')<p(\overline{h})$, and so $\overline{h}'\subs\overline{h}$ in $(\CC,p,\HH,\SS)$.
 \end{proof}
 
-If $\bar{h}'\subs\bar{h}$ in $(\CC,p,\HH,\SS)$, then the corresponding quartet $\bar{\rHH}$ will be denoted $\bar{h}\sqsubs\bar{h}'$.
+If $\overline{h}'\subs\overline{h}$ in $(\CC,p,\HH,\SS)$, then the corresponding quartet $\overline{\rHH}$ will be denoted $\overline{h}\sqsubs\overline{h}'$.
 In $\HH$ (resp. in $\CC$), we say that a triple $(g_1,f_1,f)$  is \emph{included in a quartet} if there exists a quartet $(g_1,f_1,f,g)$.
 \hyperref[proposition:i-7]{Proposition~7} is equivalent to:
 
@@ -1882,62 +1882,62 @@ In $\HH$ (resp. in $\CC$), we say that a triple $(g_1,f_1,f)$  is \emph{included
   For a triplet
   \[
     \mathrm{T}
-    = (\bar{h},s_1\subs_p s'_1, s\subs_p s'),
+    = (\overline{h},s_1\subs_p s'_1, s\subs_p s'),
   \]
-  where $\bar{h}\in\HH$, to be included in a quartet $\bar{\rHH}$, it is necessary and sufficient that
+  where $\overline{h}\in\HH$, to be included in a quartet $\overline{\rHH}$, it is necessary and sufficient that
   \[
-    s=\alpha(\bar{h})
+    s=\alpha(\overline{h})
     \quad\text{and}
-    s_1=\beta(\bar{h})
+    s_1=\beta(\overline{h})
   \]
   and that
   \[
     p^3(T)
     = \big(
-      p(\bar{h}), p(s_1)p(s'_1), p(s)p(s')
+      p(\overline{h}), p(s_1)p(s'_1), p(s)p(s')
     \big)
   \]
   be included in a quartet $\rHH$;
-  in this case, we have that $\bar{\rHH}\in\bar{\UU}$ and $\rHH\in\UU$.
-  If, further, $H\in\UU'$ and $\bar{h}\in\Gamma$, then $\bar{\rHH}\in\bar{\UU}'$.
+  in this case, we have that $\overline{\rHH}\in\overline{\UU}$ and $\rHH\in\UU$.
+  If, further, $H\in\UU'$ and $\overline{h}\in\Gamma$, then $\overline{\rHH}\in\overline{\UU}'$.
 \end{proposition}
 
-If $\mathrm{T}=(\bar{h},s_1\subs_p s'_1,s\subs_p s')$ is included in a quartet, then the quartets $\bar{\rHH}$ and $\rHH$ in which $\mathrm{T}$ and $p^3(\mathrm{T})$ are included are unique;
+If $\mathrm{T}=(\overline{h},s_1\subs_p s'_1,s\subs_p s')$ is included in a quartet, then the quartets $\overline{\rHH}$ and $\rHH$ in which $\mathrm{T}$ and $p^3(\mathrm{T})$ are included are unique;
 consequently, we have that
 \[
-  \rHH = p(\bar{h})\sqsubs h'
+  \rHH = p(\overline{h})\sqsubs h'
   \textand
-  \bar{\rHH} = \bar{h}\sqsubs_p \bar{h}',
+  \overline{\rHH} = \overline{h}\sqsubs_p \overline{h}',
 \]
 \oldpage{367}
-where $h'$ and $\bar{h}'$ are determined by $\mathrm{T}$.
-The element $\bar{h}'$ can be thought of as the composite of $\bar{h}$ with $(s'_1,s')$;
-this composite will be denoted $\bar{h}\vdash_p(s'_1,s')$ and called the \emph{$p$-restriction} of $\bar{h}$ to $(s'_1,s')$.
+where $h'$ and $\overline{h}'$ are determined by $\mathrm{T}$.
+The element $\overline{h}'$ can be thought of as the composite of $\overline{h}$ with $(s'_1,s')$;
+this composite will be denoted $\overline{h}\vdash_p(s'_1,s')$ and called the \emph{$p$-restriction} of $\overline{h}$ to $(s'_1,s')$.
 
-Note that the composite $\bar{h}'$ is also determined by the data of the triple $(\bar{h},(p(s'_1),p(s')))$.
+Note that the composite $\overline{h}'$ is also determined by the data of the triple $(\overline{h},(p(s'_1),p(s')))$.
 
 In particular,
 
 \begin{itemize}
-  \item if $s'_1=\beta(\bar{h})$ and $s'\subs\alpha(\bar{h})$, then there exists a $p$-restriction $\bar{h}\vdash_p(s'_1,s')$ and
+  \item if $s'_1=\beta(\overline{h})$ and $s'\subs\alpha(\overline{h})$, then there exists a $p$-restriction $\overline{h}\vdash_p(s'_1,s')$ and
     \[
-      \bar{h}\vdash_p(s'_1,s')
-      = \bar{h}\bullet(s\subs_p s')
+      \overline{h}\vdash_p(s'_1,s')
+      = \overline{h}\bullet(s\subs_p s')
     \]
-  \item if $s'_1=\beta(\bar{h})$ and $s'=\alpha(\bar{h})$, then there exists a $p$-restriction $\bar{h}\vdash_p(s'_1,s')$ if and only if
+  \item if $s'_1=\beta(\overline{h})$ and $s'=\alpha(\overline{h})$, then there exists a $p$-restriction $\overline{h}\vdash_p(s'_1,s')$ if and only if
     \[
       \begin{aligned}
-        \alpha(p(s'_1)p(\bar{h}))
+        \alpha(p(s'_1)p(\overline{h}))
         &= p(s')
-      \\\beta(p(s'_1)p(\bar{h}))
+      \\\beta(p(s'_1)p(\overline{h}))
         &= p(s'_1).
       \end{aligned}
     \]
     In this case,
     \[
-      \bar{h}\vdash_p(s'_1,s')
+      \overline{h}\vdash_p(s'_1,s')
       = \big(
-        s'_1, p(s'_1)p(\bar{h}), s'
+        s'_1, p(s'_1)p(\overline{h}), s'
       \big).
     \]
 \end{itemize}
@@ -1953,7 +1953,7 @@ Suppose that $(\CC,p',\HH',\HH'\cap\Gamma)$ is a category of homomorphisms.
   \begin{enumerate}
     \item[\normalfont($\sigma$)] $s\subs_p S$ in $(\CC,p,\HH,\SS)$ implies that $s\subs_{p'}S$ in $(\CC,p',\HH',\HH'\cap\Gamma)$;
 
-    \item[\normalfont($\sigma_1$)] $\HH'\vdash_p(\HH_0\times\HH_0)\in\HH'$, i.e. if $\bar{h}'\in\HH'$, then every $p$-restriction of $\bar{h}'$ belongs to $\HH'$.
+    \item[\normalfont($\sigma_1$)] $\HH'\vdash_p(\HH_0\times\HH_0)\in\HH'$, i.e. if $\overline{h}'\in\HH'$, then every $p$-restriction of $\overline{h}'$ belongs to $\HH'$.
   \end{enumerate}
 \end{proposition}
 
@@ -1994,11 +1994,11 @@ if and only if
 \]
 In the following theorem, we set
 \[
-  [\bar{h}]
-  = (\bar{h},\beta(\bar{h}),\alpha(\bar{h}),\bar{h})
+  [\overline{h}]
+  = (\overline{h},\beta(\overline{h}),\alpha(\overline{h}),\overline{h})
   \in (\vsq\HH)_0
 \]
-for all $\bar{h}\in\HH$, and
+for all $\overline{h}\in\HH$, and
 \[
   [h]
   = (h,\beta(h),\alpha(h),h)
@@ -2010,81 +2010,81 @@ for all $h\in\CC$.
 \label{theorem:i-2}
   The following conditions are equivalent:
   \begin{enumerate}
-    \item[\normalfont(1)] $[\bar{h}']\subs_{\sq p}[\bar{h}]$ and $[\beta(\bar{h}')]\subs_{\sq p}[\beta(\bar{h})]$ in $(\vsq\CC,\sq p,\vsq\HH,\bar{\Gamma}')$;
-    \item[\normalfont(2)] $\bar{h}'$ is a sub-homomorphism of $\bar{h}$ in $(\CC,p,\HH,\SS)$.
+    \item[\normalfont(1)] $[\overline{h}']\subs_{\sq p}[\overline{h}]$ and $[\beta(\overline{h}')]\subs_{\sq p}[\beta(\overline{h})]$ in $(\vsq\CC,\sq p,\vsq\HH,\overline{\Gamma}')$;
+    \item[\normalfont(2)] $\overline{h}'$ is a sub-homomorphism of $\overline{h}$ in $(\CC,p,\HH,\SS)$.
   \end{enumerate}
 \end{theorem}
 
 \begin{proof}
   Let
   \[
-    \bar{h}=(s_1,h,s)\in\HH
+    \overline{h}=(s_1,h,s)\in\HH
     \textand
-    \bar{h}'=(s'_1,h',s')\in\HH.
+    \overline{h}'=(s'_1,h',s')\in\HH.
   \]
-  Suppose that $\bar{h}'\subs_p\bar{h}$;
+  Suppose that $\overline{h}'\subs_p\overline{h}$;
   by \hyperref[proposition:i-5]{Proposition~5}, it follows that $h'\subs h$ in $(\CC,\Id_\CC,\CC,\CC)$, whence
   \[
     \big(h,\beta(h)\beta(h'),\alpha(h)\alpha(h'),h'\big)\in\UU;
   \]
   furthermore, this quartet is the pseudo-product $[h][h']$ in $\vsq\CC$.
-  Since the quadruple $(\bar{h},s_1\subs_p s'_1,s\subs_p s',\bar{h}')$ is a quartet of $\HH$ and admits $[h][h']$ as its image under $\sq p$, we thus deduce that $[\bar{h}']\relrhobar[\bar{h}]$ in $(\vsq\CC,\sq p,\vsq\HH,\bar{\Gamma}')$.
-  Let $\bar{\mathrm{G}}=(\bar{h},\bar{f}_1,\bar{f},\bar{k})\in\sq\HH$ be such that
+  Since the quadruple $(\overline{h},s_1\subs_p s'_1,s\subs_p s',\overline{h}')$ is a quartet of $\HH$ and admits $[h][h']$ as its image under $\sq p$, we thus deduce that $[\overline{h}']\relrhobar[\overline{h}]$ in $(\vsq\CC,\sq p,\vsq\HH,\overline{\Gamma}')$.
+  Let $\overline{\mathrm{G}}=(\overline{h},\overline{f}_1,\overline{f},\overline{k})\in\sq\HH$ be such that
   \[
     \begin{aligned}
       \alpha\big(
-        [p(\bar{h}')]\sq p(\bar{\mathrm{G}})
+        [p(\overline{h}')]\sq p(\overline{\mathrm{G}})
         \big)
-        &= [p(\bar{k})]
+        &= [p(\overline{k})]
     \\\beta\big(
-        [p(\bar{h}')]\sq p(\bar{\mathrm{G}})
+        [p(\overline{h}')]\sq p(\overline{\mathrm{G}})
         \big)
-        &= [p(\bar{h}')]
+        &= [p(\overline{h}')]
         = [h'];
     \end{aligned}
   \]
   then
   \[
     \begin{aligned}
-      \sq p([\bar{h}'])
-      &= [p(\bar{h}')]
-    \\{}[p(\bar{h}')]\sq p(\bar{\mathrm{G}})
+      \sq p([\overline{h}'])
+      &= [p(\overline{h}')]
+    \\{}[p(\overline{h}')]\sq p(\overline{\mathrm{G}})
       &= \big(
-        h', p(s'_1)p(\bar{f}_1), p(s')p(\bar{f}), p(\bar{k})
+        h', p(s'_1)p(\overline{f}_1), p(s')p(\overline{f}), p(\overline{k})
       \big),
     \end{aligned}
   \]
   whence
   \[
     \begin{aligned}
-      \alpha\big(p(s')p(\bar{f})\big)
-      &= \alpha(p(\bar{f}))
-    \\\beta\big(p(s')p(\bar{f})\big)
+      \alpha\big(p(s')p(\overline{f})\big)
+      &= \alpha(p(\overline{f}))
+    \\\beta\big(p(s')p(\overline{f})\big)
       &= p(s').
     \end{aligned}
   \]
   It thus follows that
   \[
-    \bar{f}'
+    \overline{f}'
     = \big(
-      s', p(s')p(\bar{f}), \alpha(\bar{f})
+      s', p(s')p(\overline{f}), \alpha(\overline{f})
     \big)
     \in\HH
   \]
   and, similarly,
   \[
-    \bar{f}'_1
+    \overline{f}'_1
     = \big(
-      s'_1, p(s'_1)p(\bar{f}_1), \alpha(\bar{f}_1)
+      s'_1, p(s'_1)p(\overline{f}_1), \alpha(\overline{f}_1)
     \big)
     \in\HH.
   \]
-  Let $\bar{\mathrm{G}}'=(\bar{h}',\bar{f}'_1,\bar{f}',k)$;
-  since the projection under $\sq p$ of $\bar{\mathrm{G}}'$ is the quartet $[p(\bar{h}')]\sq p(\bar{\mathrm{G}})$, we have that $\bar{\mathrm{G}}'\in\sq\HH$.
-  Thus $[\bar{h}']\subs_{\sq p}[\bar{h}]$.
+  Let $\overline{\mathrm{G}}'=(\overline{h}',\overline{f}'_1,\overline{f}',k)$;
+  since the projection under $\sq p$ of $\overline{\mathrm{G}}'$ is the quartet $[p(\overline{h}')]\sq p(\overline{\mathrm{G}})$, we have that $\overline{\mathrm{G}}'\in\sq\HH$.
+  Thus $[\overline{h}']\subs_{\sq p}[\overline{h}]$.
   Furthermore, $s'_1\subs_p s_1$ similarly implies that $[s'_1]\subs_{\sq p}[s_1]$, and so condition~(1) is satisfied.
 
-  Conversely, suppose that $[\bar{h}']\subs[\bar{h}]$ in $(\vsq\CC,\sq p,\vsq\HH,\bar{\Gamma}')$.
+  Conversely, suppose that $[\overline{h}']\subs[\overline{h}]$ in $(\vsq\CC,\sq p,\vsq\HH,\overline{\Gamma}')$.
   Then
   \[
     h'<h
@@ -2102,44 +2102,44 @@ for all $h\in\CC$.
   \]
   Let
   \[
-    \bar{g}
+    \overline{g}
     = (s,g,S')\in\HH
   \]
   where $g=(p(s)p(s'))\bullet g'$.
   Then
   \[
-    \bar{\mathrm{G}}
-    = (\bar{h},\bar{h}\bullet\bar{g},\bar{g},S')
+    \overline{\mathrm{G}}
+    = (\overline{h},\overline{h}\bullet\overline{g},\overline{g},S')
     \in\vsq\HH
   \]
   and
   \[
     \begin{aligned}
-      \sq p(\bar{\mathrm{G}})
+      \sq p(\overline{\mathrm{G}})
       &= (h,h\bullet g,g,p(S'))
     \\&= [h][h']\bullet(h',h'\bullet g',g',p(S'));
     \end{aligned}
   \]
   it thus follows that
   \[
-    (\bar{h}',\bar{h}'\bullet\bar{g}',\bar{g}',S')\in\bar{\UU}
+    (\overline{h}',\overline{h}'\bullet\overline{g}',\overline{g}',S')\in\overline{\UU}
   \]
-  i.e. that $\bar{g}'=(s',g',S')\in\HH$.
+  i.e. that $\overline{g}'=(s',g',S')\in\HH$.
   This proves that $s'$ is a substructure of $s$ in $(\CC,p,\HH,\SS)$.
-  If, further, $[s'_1]\subs_{\sq p}[s_1]$, then we similarly have that $s'_1\subs_p s_1$, and so $\bar{h}'\subs\bar{h}$ in $(\CC,p,\HH,\SS)$.
+  If, further, $[s'_1]\subs_{\sq p}[s_1]$, then we similarly have that $s'_1\subs_p s_1$, and so $\overline{h}'\subs\overline{h}$ in $(\CC,p,\HH,\SS)$.
 \end{proof}
 
 \begin{corollary}{1}
-  Let $\bar{h},\bar{h}'\in\Gamma$.
-  Then $\bar{h}'\subs_p\bar{h}$ if and only if $[\bar{h}']\subs_{\sq p}[\bar{h}]$.
+  Let $\overline{h},\overline{h}'\in\Gamma$.
+  Then $\overline{h}'\subs_p\overline{h}$ if and only if $[\overline{h}']\subs_{\sq p}[\overline{h}]$.
 \end{corollary}
 
 \begin{proof}
-  Indeed, if $[\bar{h}']\subs_{\sq p}[\bar{h}]$ then the proof of \hyperref{theorem:i-2} shows that we have $\alpha(\bar{h}')\subs_p\alpha(\bar{h})$, and it follows from \cref{proposition:i-6} that $\bar{h}'\subs_p\bar{h}$.
+  Indeed, if $[\overline{h}']\subs_{\sq p}[\overline{h}]$ then the proof of \hyperref{theorem:i-2} shows that we have $\alpha(\overline{h}')\subs_p\alpha(\overline{h})$, and it follows from \cref{proposition:i-6} that $\overline{h}'\subs_p\overline{h}$.
 \end{proof}
 
 \begin{corollary}{2}
-  $\bar{\UU}$ is a subcategory of the category of $\sq p$-injections.
+  $\overline{\UU}$ is a subcategory of the category of $\sq p$-injections.
 \end{corollary}
 
 \begin{definition}{9}
@@ -2502,18 +2502,18 @@ In what follows, we further suppose that $\HH$ is endowed with an order relation
   However, $(\MM,\theta,\tTT,\TT)$ does not satisfy condition~(c).
 \end{example}
 
-Let $(\HH,\bar{p},\bHH,\bSS)$ be a category of homomorphisms such that $\bSS$ contains the groupoid $\bar{\Gamma}$ of invertible elements of $\bHH$, and such that $(\HH,\bar{p},\bSS)$ is a species of superstructures \cite{3a} over $(\CC,p,\SS)$.
+Let $(\HH,\overline{p},\bHH,\bSS)$ be a category of homomorphisms such that $\bSS$ contains the groupoid $\overline{\Gamma}$ of invertible elements of $\bHH$, and such that $(\HH,\overline{p},\bSS)$ is a species of superstructures \cite{3a} over $(\CC,p,\SS)$.
 \oldpage{373}
-These conditions imply that $(\CC,p\bar{p},\bHH,\bSS)$ is a category of homomorphisms.
-An element $\bar{h}$ of $\bHH$ will be denoted either by the triple $(\beta(\bar{h}),\bar{p}(\bar{h}),\alpha(\bar{h}))$ or by the triple $(\beta(\bar{h}),p\bar{p}(\bar{h}),\alpha(\bar{h}))$.
+These conditions imply that $(\CC,p\overline{p},\bHH,\bSS)$ is a category of homomorphisms.
+An element $\overline{h}$ of $\bHH$ will be denoted either by the triple $(\beta(\overline{h}),\overline{p}(\overline{h}),\alpha(\overline{h}))$ or by the triple $(\beta(\overline{h}),p\overline{p}(\overline{h}),\alpha(\overline{h}))$.
 
 Note that the conditions
 \[
   s,S,\in\bHH_0
   \textand
-  s\subs_{p\bar{p}} S
+  s\subs_{p\overline{p}} S
 \]
-imply that $\bar{p}(s)\relrhobar\bar{p}(S)$ in $(\CC,p,\HH,\SS)$, but, in general, they do not imply that $\bar{p}(s)\subs_p\bar{p}(S)$.
+imply that $\overline{p}(s)\relrhobar\overline{p}(S)$ in $(\CC,p,\HH,\SS)$, but, in general, they do not imply that $\overline{p}(s)\subs_p\overline{p}(S)$.
 
 \begin{proposition}{12}
 \label{proposition:i-12}
@@ -2521,105 +2521,105 @@ imply that $\bar{p}(s)\relrhobar\bar{p}(S)$ in $(\CC,p,\HH,\SS)$, but, in genera
   The conditions
   \[
     \begin{gathered}
-      s\subs_{p\bar{p}}S,
-    \\\bar{p}(s)<\bar{p}(S)
+      s\subs_{p\overline{p}}S,
+    \\\overline{p}(s)<\overline{p}(S)
       \textand
-      \beta\big(\bar{p}(S)\bar{p}(s)\big) = \bar{p}(S)
+      \beta\big(\overline{p}(S)\overline{p}(s)\big) = \overline{p}(S)
     \end{gathered}
   \]
-  imply that $s\subs_{\bar{p}}S$.
+  imply that $s\subs_{\overline{p}}S$.
 \end{proposition}
 
 \begin{proof}
   Let
   \[
-    \bar{j}
+    \overline{j}
     = \big(
-      S, p\bar{p}(S)p\bar{p}(s), s
+      S, p\overline{p}(S)p\overline{p}(s), s
     \big) \in \bHH;
   \]
   then
   \[
-    p\bar{p}(\bar{j})
+    p\overline{p}(\overline{j})
     = p\big(
-      \bar{p}(S)\bar{p}(s)
+      \overline{p}(S)\overline{p}(s)
     \big)
-    = p\bar{p}(S)p\bar{p}(s),
+    = p\overline{p}(S)p\overline{p}(s),
   \]
   since
   \[
     \begin{gathered}
       p\big(
-        \bar{p}(S)\bar{p}(s)
-      \big) < p\bar{p}(S)p\bar{p}(s),
+        \overline{p}(S)\overline{p}(s)
+      \big) < p\overline{p}(S)p\overline{p}(s),
     \\\alpha\big(
-        \bar{p}(S)\bar{p}(s)
-      \big) = \bar{p}(s)
+        \overline{p}(S)\overline{p}(s)
+      \big) = \overline{p}(s)
       \textand
       \beta\big(
-        \bar{p}(S)\bar{p}(s)
-      \big) = \bar{p}(S).
+        \overline{p}(S)\overline{p}(s)
+      \big) = \overline{p}(S).
     \end{gathered}
   \]
   Thus
   \[
-    \bar{p}(\bar{j})
+    \overline{p}(\overline{j})
     = \big(
-      \bar{p}(S), p\bar{p}(S)p\bar{p}(s), \bar{p}(s)
+      \overline{p}(S), p\overline{p}(S)p\overline{p}(s), \overline{p}(s)
     \big)
-    = \bar{p}(S)\bar{p}(s)
+    = \overline{p}(S)\overline{p}(s)
   \]
   and
   \[
-    \bar{j}
+    \overline{j}
     =\big(
-      S, \bar{p}(S)\bar{p}(s), s
+      S, \overline{p}(S)\overline{p}(s), s
     \big).
   \]
   Let
   \[
-    \bar{g}
+    \overline{g}
     = \big(
-      S, \bar{p}(S)\bar{p}(s)\bullet g', S'
+      S, \overline{p}(S)\overline{p}(s)\bullet g', S'
     \big) \in\bHH
   \]
   where $g'\in\HH$.
   We have that
   \[
     \begin{aligned}
-      \bar{p}(\bar{g})
+      \overline{p}(\overline{g})
       &= \big(
-        \bar{p}(S),
-        p\big(\bar{p}(S)\bar{p}(s)\big)\bullet p(g'),
-        \bar{p}(S')
+        \overline{p}(S),
+        p\big(\overline{p}(S)\overline{p}(s)\big)\bullet p(g'),
+        \overline{p}(S')
       \big)
     \\&= \big(
-        \bar{p}(S),
-        \big(p\bar{p}(S)p\bar{p}(s)\big)\bullet p(g'),
-        \bar{p}(S')
+        \overline{p}(S),
+        \big(p\overline{p}(S)p\overline{p}(s)\big)\bullet p(g'),
+        \overline{p}(S')
       \big)
     \end{aligned}
   \]
   whence
   \[
-    \bar{g}
+    \overline{g}
     = \big(
-      S, p\bar{p}(S)p\bar{p}(s)\bullet p(g'), S'
+      S, p\overline{p}(S)p\overline{p}(s)\bullet p(g'), S'
     \big).
   \]
-  From the condition that $s\subs_{\bar{p}}S$, and by \hyperref[proposition:i-4]{Proposition~4}, it follows that
+  From the condition that $s\subs_{\overline{p}}S$, and by \hyperref[proposition:i-4]{Proposition~4}, it follows that
   \[
-    \bar{g}'
+    \overline{g}'
     = (s, p(g'), S')
     \in\bHH.
   \]
-  Since $g'=(\bar{p}(s),p(g'),\bar{p}(S'))$, we thus deduce that
+  Since $g'=(\overline{p}(s),p(g'),\overline{p}(S'))$, we thus deduce that
   \[
-    \bar{p}(\bar{g}') = g'
+    \overline{p}(\overline{g}') = g'
     \textand
-    \bar{g}' = (s,g',S') \in \bHH.
+    \overline{g}' = (s,g',S') \in \bHH.
   \]
-  Thus $s\subs_{\bar{p}}S$, by \hyperref[proposition:i-4]{Proposition~4}.
+  Thus $s\subs_{\overline{p}}S$, by \hyperref[proposition:i-4]{Proposition~4}.
 \end{proof}
 
 \oldpage{374}
@@ -2629,18 +2629,18 @@ imply that $\bar{p}(s)\relrhobar\bar{p}(S)$ in $(\CC,p,\HH,\SS)$, but, in genera
   \[
     \begin{gathered}
       h,h'\in\bHH,
-    \\h'\subs_{p\bar{p}}h,
-      \quad \bar{p}(h') < \bar{p}(h),
+    \\h'\subs_{p\overline{p}}h,
+      \quad \overline{p}(h') < \overline{p}(h),
     \\\beta\big(
-        \bar{p}\big(\alpha(h)\alpha(h')\big)
-      \big) = \bar{p}(\alpha(h))
+        \overline{p}\big(\alpha(h)\alpha(h')\big)
+      \big) = \overline{p}(\alpha(h))
       \textand
       \beta\big(
-        \bar{p}\big(\beta(h)\beta(h')\big)
-      \big) = \bar{p}(\beta(h))
+        \overline{p}\big(\beta(h)\beta(h')\big)
+      \big) = \overline{p}(\beta(h))
     \end{gathered}
   \]
-  imply that $h'\subs_{\bar{p}}h$.
+  imply that $h'\subs_{\overline{p}}h$.
 \end{corollary}
 
 \begin{corollary}{2}
@@ -2652,11 +2652,11 @@ imply that $\bar{p}(s)\relrhobar\bar{p}(S)$ in $(\CC,p,\HH,\SS)$, but, in genera
   whenever $s<\alpha(h)$.
   Then the conditions
   \[
-    s\subs_{p\bar{p}}S
+    s\subs_{p\overline{p}}S
     \textand
-    \bar{p}(s) < \bar{p}(S)
+    \overline{p}(s) < \overline{p}(S)
   \]
-  imply that $s\subs_{\bar{p}}S$.
+  imply that $s\subs_{\overline{p}}S$.
 \end{corollary}
 
 \begin{proof}
@@ -2664,37 +2664,37 @@ imply that $\bar{p}(s)\relrhobar\bar{p}(S)$ in $(\CC,p,\HH,\SS)$, but, in genera
   \[
     \begin{aligned}
       p\big(
-        \bar(p)(S)\bar{p}(s)
+        \overline{p}(S)\overline{p}(s)
       \big)
-      &= p\bar{p}(S)p\bar{p}(s),
+      &= p\overline{p}(S)p\overline{p}(s),
     \\\alpha\big(
-        p\bar{p}(S)p\bar{p}(s)
+        p\overline{p}(S)p\overline{p}(s)
       \big)
-      &= p\bar{p}(s),
+      &= p\overline{p}(s),
     \\\beta\big(
-        p\bar{p}(S)p\bar{p}(s)
+        p\overline{p}(S)p\overline{p}(s)
       \big)
-      &= p\bar{p}(S),
+      &= p\overline{p}(S),
     \end{aligned}
   \]
   whence
   \[
-    \bar{p}(S)
+    \overline{p}(S)
     = \beta\big(
-      \bar{p}(S)\bar{p}(s)
+      \overline{p}(S)\overline{p}(s)
     \big)
   \]
   since
   \[
     \beta\big(
-      \bar{p}(S)\bar{p}(s)
-    \big) < \bar{p}(S)
+      \overline{p}(S)\overline{p}(s)
+    \big) < \overline{p}(S)
     \textand
     p\big(
       \beta\big(
-        \bar{p}(S)\bar{p}(s)
+        \overline{p}(S)\overline{p}(s)
       \big)
-    \big) = p\bar{p}(S).
+    \big) = p\overline{p}(S).
   \]
   We are thus reduced to the hypotheses of \hyperref[proposition:i-12]{Proposition~12}.
 \end{proof}
@@ -2712,126 +2712,126 @@ imply that $p(sh)=p(s)p(h)$.
 \begin{proposition}{13}
 \label{proposition:i-13}
   Let $s,S\in\bHH_0$.
-  Then the relation $s\subs_{\bar{p}}S$ in $(\HH,\bar{p},\bHH,\bSS)$ imply that $s\subs_{p\bar{p}}(S)$ in $(\CC,p\bar{p},\bHH,\bSS)$.
+  Then the relation $s\subs_{\overline{p}}S$ in $(\HH,\overline{p},\bHH,\bSS)$ imply that $s\subs_{p\overline{p}}(S)$ in $(\CC,p\overline{p},\bHH,\bSS)$.
 \end{proposition}
 
 \begin{proof}
-  Set $\bar{j}=(S,\bar{p}(S)\bar{p}(s),s)\in\bHH$;
+  Set $\overline{j}=(S,\overline{p}(S)\overline{p}(s),s)\in\bHH$;
   we have that
   \[
-    \bar{j}
+    \overline{j}
     = \big(
-      S, p\bar{p}(S)p\bar{p}(s), s
+      S, p\overline{p}(S)p\overline{p}(s), s
     \big)
   \]
-  since we obtain the equality $p\bar{p}(\bar{j})=p\bar{p}(S)p\bar{p}(s)$ by using the relations
+  since we obtain the equality $p\overline{p}(\overline{j})=p\overline{p}(S)p\overline{p}(s)$ by using the relations
   \[
     \begin{gathered}
-      p\bar{p}(\bar{j})
+      p\overline{p}(\overline{j})
       = p\big(
-        \bar{p}(S)\bar{p}(s)
+        \overline{p}(S)\overline{p}(s)
       \big)
-      < p\bar{p}(S)p\bar{p}(s),
-    \\p\bar{p}(s)
+      < p\overline{p}(S)p\overline{p}(s),
+    \\p\overline{p}(s)
       = \alpha\big(
-        p\bar{p}(\bar{j})
+        p\overline{p}(\overline{j})
       \big)
       < \alpha\big(
-        p\bar{p}(S)p\bar{p}(s)
+        p\overline{p}(S)p\overline{p}(s)
       \big)
-      < p\bar{p}(s),
-    \\p\bar{p}(S)
+      < p\overline{p}(s),
+    \\p\overline{p}(S)
       = \beta\big(
-        p\bar{p}(\bar{j})
+        p\overline{p}(\overline{j})
       \big)
       < \beta\big(
-        p\bar{p}(S)p\bar{p}(s)
+        p\overline{p}(S)p\overline{p}(s)
       \big)
-      < p\bar{p}(S).
+      < p\overline{p}(S).
     \end{gathered}
   \]
-  Let $\bar{g}=(S,g,S')\in\bar{H}$, where $g\in\CC$, be such that
+  Let $\overline{g}=(S,g,S')\in\overline{H}$, where $g\in\CC$, be such that
   \[
     \alpha\big(
-      p\bar{p}(s)g
+      p\overline{p}(s)g
     \big) = \alpha(g)
     \textand
     \beta\big(
-      p\bar{p}(s)g
+      p\overline{p}(s)g
     \big) = \beta(g).
   \]
   We will show that
   \[
     \big(
-      s, p\bar{p}(s)g, S'
+      s, p\overline{p}(s)g, S'
     \big)
-    \in\bar{H}.
+    \in\overline{H}.
   \]
   \oldpage{375}
-  Indeed, since $\bar{p}(s)<\bar{p}(\beta(\bar{g}))$, we have that
+  Indeed, since $\overline{p}(s)<\overline{p}(\beta(\overline{g}))$, we have that
   \[
     p\big(
-      \bar{p}(s)\bar{p}(\bar{g})
+      \overline{p}(s)\overline{p}(\overline{g})
     \big)
-    = p\bar{p}(s)p\bar{p}(\bar{g})
-    = p\bar{p}(s)g;
+    = p\overline{p}(s)p\overline{p}(\overline{g})
+    = p\overline{p}(s)g;
   \]
   from the relations
   \[
     \begin{aligned}
       \alpha\big(
-        \bar{p}(s)\bar{p}(\bar{g})
+        \overline{p}(s)\overline{p}(\overline{g})
       \big)
-      &< \bar{p}(S'),
+      &< \overline{p}(S'),
     \\\beta\big(
-        \bar{p}(s)\bar{p}(\bar{g})
+        \overline{p}(s)\overline{p}(\overline{g})
       \big)
-      &< \bar{p}(s),
+      &< \overline{p}(s),
     \\p\big(
         \alpha\big(
-          \bar{p}(s)\bar{p}(\bar{g})
+          \overline{p}(s)\overline{p}(\overline{g})
         \big)
       \big)
       &= p\big(
-        \bar{p}(S')
+        \overline{p}(S')
       \big),
     \\p\big(
         \beta\big(
-          \bar{p}(s)\bar{p}(\bar{g})
+          \overline{p}(s)\overline{p}(\overline{g})
         \big)
       \big)
       &= p\big(
-        \bar{p}(s)
+        \overline{p}(s)
       \big),
     \end{aligned}
   \]
   it follows that
   \[
     \alpha\big(
-      \bar{p}(s)\bar{p}(\bar{g})
+      \overline{p}(s)\overline{p}(\overline{g})
     \big)
-    = \bar{p}(S')
+    = \overline{p}(S')
     \textand
     \beta\big(
-      \bar{p}(s)\bar{p}(\bar{g})
+      \overline{p}(s)\overline{p}(\overline{g})
     \big)
-    = \bar{p}(s).
+    = \overline{p}(s).
   \]
-  Since $s\subs S$ in $(\HH,\bar{p},\bHH,\bSS)$, we thus deduce that
+  Since $s\subs S$ in $(\HH,\overline{p},\bHH,\bSS)$, we thus deduce that
   \[
     \big(
-      s, \bar{p}(s)\bar{p}(\bar{g}), S'
+      s, \overline{p}(s)\overline{p}(\overline{g}), S'
     \big)
     = \big(
-      s, p\bar{p}(s)g, S'
+      s, p\overline{p}(s)g, S'
     \big)
     \in\HH.
   \]
-  This proves that we have $s\subs_{p\bar{p}}S$ in $(\CC,p\bar{p},\bHH,\bSS)$.
+  This proves that we have $s\subs_{p\overline{p}}S$ in $(\CC,p\overline{p},\bHH,\bSS)$.
 \end{proof}
 
 \begin{corollary}{1}
-  The conditions $h,h'\in\bHH$ and $h'\subs_{\bar{p}}h$ imply that $h'\subs_{p\bar{p}}h$.
+  The conditions $h,h'\in\bHH$ and $h'\subs_{\overline{p}}h$ imply that $h'\subs_{p\overline{p}}h$.
 \end{corollary}
 
 \begin{corollary}{2}
@@ -2843,7 +2843,7 @@ imply that $p(sh)=p(s)p(h)$.
 \end{proof}
 
 \begin{corollary}{3}
-  If $(\HH,\bar{p},\bHH,\bSS)$ is right solving, and if the following condition is satisfied:
+  If $(\HH,\overline{p},\bHH,\bSS)$ is right solving, and if the following condition is satisfied:
   \begin{quote}
     For $h,h'\in\HH$ such that
     \[
@@ -2857,107 +2857,107 @@ imply that $p(sh)=p(s)p(h)$.
       = p(h)\cap p(h')
     \]
   \end{quote}
-  then $(\CC,p\bar{p},\bHH,\bSS)$ is right solving.
+  then $(\CC,p\overline{p},\bHH,\bSS)$ is right solving.
 \end{corollary}
 
 \begin{proof}
-  Let $\bar{h},\bar{h}'\in\bHH$ be such that $\alpha(\bar{h})=\alpha(\bar{h}')$ and $\beta(\bar{h})=\beta(\bar{h}')$;
-  let $s$ be the $\bar{p}$-kernel of $(\bar{h},\bar{h}')$;
-  by the Proposition, we have that $s\subs S$ in $(\CC,p\bar{p},\bHH,\bSS)$.
+  Let $\overline{h},\overline{h}'\in\bHH$ be such that $\alpha(\overline{h})=\alpha(\overline{h}')$ and $\beta(\overline{h})=\beta(\overline{h}')$;
+  let $s$ be the $\overline{p}$-kernel of $(\overline{h},\overline{h}')$;
+  by the Proposition, we have that $s\subs S$ in $(\CC,p\overline{p},\bHH,\bSS)$.
   The relations
   \[
     \begin{aligned}
-      \bar{p}(s)
-      &= \alpha\big(\bar{p}(\bar{h})\cap\bar{p}(\bar{h}')\big)
-    \\p\big(\bar{p}(\bar{h})\cap\bar{p}(\bar{h}')\big)
-      &= p\bar{p}(\bar{h})\cap p\bar{p}(\bar{h}')
+      \overline{p}(s)
+      &= \alpha\big(\overline{p}(\overline{h})\cap\overline{p}(\overline{h}')\big)
+    \\p\big(\overline{p}(\overline{h})\cap\overline{p}(\overline{h}')\big)
+      &= p\overline{p}(\overline{h})\cap p\overline{p}(\overline{h}')
     \end{aligned}
   \]
-  imply that $p\bar{p}(s)=\alpha(p\bar{p}(\bar{h})\cap p\bar{p}(\bar{h}'))$, and so $(\bar{h},\bar{h}')$ admits $s$ as a $p\bar{p}$-kernel, and $(\CC,p\bar{p},\bHH,\bSS)$ is right solving.
+  imply that $p\overline{p}(s)=\alpha(p\overline{p}(\overline{h})\cap p\overline{p}(\overline{h}'))$, and so $(\overline{h},\overline{h}')$ admits $s$ as a $p\overline{p}$-kernel, and $(\CC,p\overline{p},\bHH,\bSS)$ is right solving.
 \end{proof}
 
 \begin{corollary}{4}
   Suppose that $s\relrhobar S$ in $(\CC,p,\HH,\SS)$ implies both that $s<S$ in $\HH_0$ and that $\beta(Ss)=S$;
-  then the statement that $\bar{s}\subs_{p\bar{p}}\bar{S}$ in $(\CC,p\bar{p},\bHH,\bSS)$ is equivalent to $\bar{s}\subs_{\bar{p}}\bar{S}$ in $(\HH,\bar{p},\bHH,\bSS)$.
+  then the statement that $\overline{s}\subs_{p\overline{p}}\overline{S}$ in $(\CC,p\overline{p},\bHH,\bSS)$ is equivalent to $\overline{s}\subs_{\overline{p}}\overline{S}$ in $(\HH,\overline{p},\bHH,\bSS)$.
 \end{corollary}
 
 \oldpage{376}
 \begin{proof}
-  Indeed, $\bar{s}\subs_{\bar{p}}\bar{S}$ implies that $\bar{s}\subs_{p\bar{p}}\bar{S}$ by \hyperref[proposition:i-13]{Proposition~13}.
-  Suppose that $\bar{s}\subs_{p\bar{p}}\bar{S}$;
+  Indeed, $\overline{s}\subs_{\overline{p}}\overline{S}$ implies that $\overline{s}\subs_{p\overline{p}}\overline{S}$ by \hyperref[proposition:i-13]{Proposition~13}.
+  Suppose that $\overline{s}\subs_{p\overline{p}}\overline{S}$;
   since
   \[
-    \bar{j}
+    \overline{j}
     = \big(
-      \bar{S}, p\bar{p}(\bar{S})p\bar{p}(\bar{s}), \bar{s}
+      \overline{S}, p\overline{p}(\overline{S})p\overline{p}(\overline{s}), \overline{s}
     \big)
     \in \bHH
   \]
   we have that
   \[
     \begin{aligned}
-      \bar{p}(\bar{j})
+      \overline{p}(\overline{j})
       &= \big(
-        \bar{p}(\bar{S}), p\bar{p}(\bar{S})p\bar{p}(\bar{s}), \bar{p}(\bar{s})
+        \overline{p}(\overline{S}), p\overline{p}(\overline{S})p\overline{p}(\overline{s}), \overline{p}(\overline{s})
       \big)
       \in\HH
-    \\p\bar{p}(\bar{s})
-      &< p\bar{p}(\bar{S}),
+    \\p\overline{p}(\overline{s})
+      &< p\overline{p}(\overline{S}),
     \end{aligned}
   \]
-  whence $\bar{p}(\bar{s})\relrhobar\bar{p}(\bar{S})$.
-  Then $\bar{p}(\bar{s})<\bar{p}(\bar{S})$ in $\HH$, and
+  whence $\overline{p}(\overline{s})\relrhobar\overline{p}(\overline{S})$.
+  Then $\overline{p}(\overline{s})<\overline{p}(\overline{S})$ in $\HH$, and
   \[
     \beta\big(
-      \bar{p}(\bar{S})\bar{p}(\bar{s})
+      \overline{p}(\overline{S})\overline{p}(\overline{s})
     \big)
-    = \bar{p}(\bar{S}).
+    = \overline{p}(\overline{S}).
   \]
-  \hyperref[proposition:i-12]{Proposition~12} then implies that $\bar{s}\subs_{\bar{p}}\bar{S}$.
+  \hyperref[proposition:i-12]{Proposition~12} then implies that $\overline{s}\subs_{\overline{p}}\overline{S}$.
 \end{proof}
 
 \begin{proposition}{14}
 \label{proposition:i-14}
   Suppose that $(\CC,p,\HH,\SS)$ satisfies Condition~(c) of \cref{theorem:i-3}, and that $s\relrhobar S$ in $(\CC,p,\HH,\SS)$ implies that $s<S$ in $\HH$;
-  then $(\HH,\bar{p},\bHH,\bSS)$ is right solving if and only if $(\CC,p\bar{p},\bHH,\bSS)$ is right solving.
+  then $(\HH,\overline{p},\bHH,\bSS)$ is right solving if and only if $(\CC,p\overline{p},\bHH,\bSS)$ is right solving.
 \end{proposition}
 
 \begin{proof}
-  If $(\HH,\bar{p},\bHH,\bSS)$ is right solving, then $(\CC,p\bar{p},\bHH,\bSS)$ is right solving, by Corollary~3 of \hyperref[proposition:i-13]{Proposition~13}.
-  Conversely, suppose that $(\CC,p\bar{p},\bHH,\bSS)$ is right solving;
-  let $\bar{h},\bar{h}'\in\bHH$ be such that
+  If $(\HH,\overline{p},\bHH,\bSS)$ is right solving, then $(\CC,p\overline{p},\bHH,\bSS)$ is right solving, by Corollary~3 of \hyperref[proposition:i-13]{Proposition~13}.
+  Conversely, suppose that $(\CC,p\overline{p},\bHH,\bSS)$ is right solving;
+  let $\overline{h},\overline{h}'\in\bHH$ be such that
   \[
-    \alpha(\bar{h})=\alpha(\bar{h}')
+    \alpha(\overline{h})=\alpha(\overline{h}')
     \textand
-    \beta(\bar{h})=\beta(\bar{h}');
+    \beta(\overline{h})=\beta(\overline{h}');
   \]
-  let $\bar{s}$ be the $p\bar{p}$-kernel of $(\bar{h},\bar{h}')$.
+  let $\overline{s}$ be the $p\overline{p}$-kernel of $(\overline{h},\overline{h}')$.
   By axiom~(c), $s<S$ in $\HH$ implies that $s\subs S$ in $(\CC,p,\HH,\SS)$, and so $\beta(Ss=S)$;
-  by Corollary~4 of \hyperref[proposition:i-13]{Proposition~13}, it follows that $\bar{s}\subs_{\bar{p}}\alpha(\bar{h})$.
+  by Corollary~4 of \hyperref[proposition:i-13]{Proposition~13}, it follows that $\overline{s}\subs_{\overline{p}}\alpha(\overline{h})$.
   Furthermore, the relations
   \[
     \begin{gathered}
-      \bar{p}(\bar{s})
+      \overline{p}(\overline{s})
       < \alpha\big(
-        \bar{p}(\bar{h})\cap\bar{p}(\bar{h}')
+        \overline{p}(\overline{h})\cap\overline{p}(\overline{h}')
       \big)
     \\p\big(
-        \bar{p}(\bar{h})\cap\bar{p}(\bar{h}')
+        \overline{p}(\overline{h})\cap\overline{p}(\overline{h}')
       \big)
-      = p\bar{p}(\bar{h})\cap p\bar{p}(\bar{h}')
-    \\p\bar{p}(\bar{s})
+      = p\overline{p}(\overline{h})\cap p\overline{p}(\overline{h}')
+    \\p\overline{p}(\overline{s})
       = \alpha\big(
-        p\bar{p}(\bar{h})\cap p\bar{p}(\bar{h}')
+        p\overline{p}(\overline{h})\cap p\overline{p}(\overline{h}')
       \big)
       = p\big(
         \alpha\big(
-          \bar{p}(\bar{h})\cap\bar{p}(\bar{h}')
+          \overline{p}(\overline{h})\cap\overline{p}(\overline{h}')
         \big)
       \big)
     \end{gathered}
   \]
-  imply that $\bar{p}(\bar{s})=\alpha(\bar{p}(\bar{h})\cap\bar{p}(\bar{h}'))$.
-  Thus $\bar{s}$ is the $\bar{p}$-kernel of $(\bar{h},\bar{h}')$, and $(\HH,\bar{p},\bHH,\bSS)$ is right solving.
+  imply that $\overline{p}(\overline{s})=\alpha(\overline{p}(\overline{h})\cap\overline{p}(\overline{h}'))$.
+  Thus $\overline{s}$ is the $\overline{p}$-kernel of $(\overline{h},\overline{h}')$, and $(\HH,\overline{p},\bHH,\bSS)$ is right solving.
 \end{proof}
 
 \begin{theorem}{4}
@@ -3337,9 +3337,9 @@ imply that $p(sh)=p(s)p(h)$.
 
 Let
 \[
-  \bar{h} = (S_1,h,S)\in\HH
+  \overline{h} = (S_1,h,S)\in\HH
   \textand
-  \bar{h}' = (S_1,h',S)\in\HH;
+  \overline{h}' = (S_1,h',S)\in\HH;
 \]
 for a substructure $s$ of $S$ to be the $p$-kernel of $(h,h')$, it is necessary and sufficient that $p(s)$ be the class consisting of the $x$ such that $h(x)=h'(x)$.
 
@@ -3349,28 +3349,28 @@ for a substructure $s$ of $S$ to be the $p$-kernel of $(h,h')$, it is necessary 
 \end{proposition}
 
 \begin{proof}
-  Let $(S_1,g,S)=\bar{g}\in\Gamma$, and let $s$ be the $p$-kernel of $(h,h')$, where $\alpha(h)=S$.
+  Let $(S_1,g,S)=\overline{g}\in\Gamma$, and let $s$ be the $p$-kernel of $(h,h')$, where $\alpha(h)=S$.
   By axiom~(R) in \cref{definition:i-9}, the pair $(h\bullet g^{-1},h'\bullet g^{-1})$ admits a $p$-kernel $s_1\in S_1$;
   since $p(s_1)=g(p(s))$, it follows from \cref{proposition:i-7} that we have
   \[
-    \bar{g}' = (s_1,g\iota,s)
+    \overline{g}' = (s_1,g\iota,s)
     \in\Gamma.
   \]
   Thus $\Gamma$ acts on $\HH_n$ with the composition law
   \[
-    (\bar{g},S\sups s)
+    (\overline{g},S\sups s)
     \longmapsto S_1\sups s_1
     \qquad\text{if and only if}\quad
-    S=\alpha(\bar{g}).
+    S=\alpha(\overline{g}).
     \qedhere
   \]
 \end{proof}
 
 We endow $\FF$ with the order relation:
 \begin{quote}
-  $(G_1^\perp,F,G^\perp)<(\bar{G}_1^\perp,\bar{F},\bar{G}^\perp)$
+  $(G_1^\perp,F,G^\perp)<(\overline{G}_1^\perp,\overline{F},\overline{G}^\perp)$
   \qquad if and only if\quad
-  $G^\perp$ (resp. $G_1^\perp$) is a subcategory of $\bar{G}^\perp$ (resp. of $\bar{G}_1^\perp$) and $F$ is a restriction of $\bar{F}$.
+  $G^\perp$ (resp. $G_1^\perp$) is a subcategory of $\overline{G}^\perp$ (resp. of $\overline{G}_1^\perp$) and $F$ is a restriction of $\overline{F}$.
 \end{quote}
 
 Then $\FF$ is an inductive category \unsure{supraregular} over $\MM$ with respect to $p_\FF$, in the sense of \cite{3c}.
@@ -3380,17 +3380,17 @@ Then $\FF$ is an inductive category \unsure{supraregular} over $\MM$ with respec
 Furthermore, $(\MM,p_\FF,\FF,\FF)$ satisfies condition~(c) of \cref{theorem:i-3}.
 The three conditions
 \[
-  G^\perp\relrhobar\bar{G}^\perp,
-  \quad G^\perp\subs\bar{G}^\perp,
-  \textand G^\perp<\bar{G}^\perp
+  G^\perp\relrhobar\overline{G}^\perp,
+  \quad G^\perp\subs\overline{G}^\perp,
+  \textand G^\perp<\overline{G}^\perp
 \]
 are equivalent (see \hyperref[section:ii]{§I.2}, \cref{proposition:i-9}).
-Let $(\FF,\bar{p},\bHH,\bar{\Gamma})$ be a category of homomorphisms such that $\bar{\Gamma}$ is the groupoid of invertible elements of $\bHH$.
+Let $(\FF,\overline{p},\bHH,\overline{\Gamma})$ be a category of homomorphisms such that $\overline{\Gamma}$ is the groupoid of invertible elements of $\bHH$.
 From Corollary~2 of \cref{proposition:i-12} and from \cref{proposition:i-14}, it follows that:
 
 \begin{proposition}{17}
-  The conditions $s\subs S$ in $(\FF,\bar{p},\bHH,\bar{\Gamma})$ and $s\subs S$ in $(\MM,p_\FF\bar{p},\bHH,\bar{\Gamma})$ are equivalent;
-  $(\FF,\bar{p},\bHH,\bar{\Gamma})$ is right solving if and only if $(\MM,p_\FF\bar{p},\bHH,\bar{\Gamma})$ is right solving.
+  The conditions $s\subs S$ in $(\FF,\overline{p},\bHH,\overline{\Gamma})$ and $s\subs S$ in $(\MM,p_\FF\overline{p},\bHH,\overline{\Gamma})$ are equivalent;
+  $(\FF,\overline{p},\bHH,\overline{\Gamma})$ is right solving if and only if $(\MM,p_\FF\overline{p},\bHH,\overline{\Gamma})$ is right solving.
 \end{proposition}
 
 \begin{remark}
@@ -3430,7 +3430,7 @@ Let $\MM$ be the category of all maps from $M$ to $M'$ in $\MM_0$.
       for all $(x_1,x_2)\in p(s_1)\times p(s_2)$.
       Then
       \[
-        \bar{p}_i
+        \overline{p}_i
         = (s_i,p_i,s_1\times s_2)
         \in\HH.
       \]
@@ -3445,7 +3445,7 @@ Let $\MM$ be the category of all maps from $M$ to $M'$ in $\MM_0$.
   \end{enumerate}
 \end{definition}
 
-These conditions imply that the pair $(s_1,s_2)$ admits $(s_1\times s_2,\bar{p}_1,\bar{p}_2)$ as a product \cite{4} in $\HH$.
+These conditions imply that the pair $(s_1,s_2)$ admits $(s_1\times s_2,\overline{p}_1,\overline{p}_2)$ as a product \cite{4} in $\HH$.
 
 \begin{proposition}{1}
 \label{proposition:ii-1}
@@ -3465,7 +3465,7 @@ From now on, we take $(\MM,p,\HH,\Gamma)$ to be a category of homomorphisms with
 
 \begin{proposition}{2}
 \label{proposition:ii-2}
-  Let $\bar{f}_i=(s'_i,f_i,s_i)\in\HH$, with $i=1,2$.
+  Let $\overline{f}_i=(s'_i,f_i,s_i)\in\HH$, with $i=1,2$.
   Then
   \[
     (s'_1\times s'_2, f_1\times f_2, s_1\times s_2)
@@ -3482,7 +3482,7 @@ From now on, we take $(\MM,p,\HH,\Gamma)$ to be a category of homomorphisms with
 
 With the notation of \cref{proposition:ii-2}, we set
 \[
-  \bar{f}_1\times\bar{f}_2
+  \overline{f}_1\times\overline{f}_2
   = (s'_1\times s'_2, f_1\times f_2, s_1\times s_2).
 \]
 
@@ -3527,20 +3527,20 @@ With the notation of \cref{proposition:ii-2}, we set
   The maps
   \[
     \begin{aligned}
-      (\bar{f}_1,\bar{f}_2)
-      &\longmapsto \bar{f}_1\times\bar{f}_2
-    \\(\bar{f}_1,\bar{f}_2)
-      &\longmapsto \bar{f}_2\times\bar{f}_1
+      (\overline{f}_1,\overline{f}_2)
+      &\longmapsto \overline{f}_1\times\overline{f}_2
+    \\(\overline{f}_1,\overline{f}_2)
+      &\longmapsto \overline{f}_2\times\overline{f}_1
     \end{aligned}
   \]
   are equivalent as functors from $\HH\times\HH$ to $\HH$.
   The maps
   \[
     \begin{aligned}
-      (\bar{f}_1,\bar{f}_2,\bar{f}_3)
-      &\longmapsto (\bar{f}_1\times\bar{f}_2)\times\bar{f}_3
-    \\(\bar{f}_1,\bar{f}_2,\bar{f}_3)
-      &\longmapsto \bar{f}_1\times(\bar{f}_2\times\bar{f}_3)
+      (\overline{f}_1,\overline{f}_2,\overline{f}_3)
+      &\longmapsto (\overline{f}_1\times\overline{f}_2)\times\overline{f}_3
+    \\(\overline{f}_1,\overline{f}_2,\overline{f}_3)
+      &\longmapsto \overline{f}_1\times(\overline{f}_2\times\overline{f}_3)
     \end{aligned}
   \]
   are equivalent as functors from $\HH\times\HH\times\HH$ to $\HH$.
@@ -3566,9 +3566,9 @@ With the notation of \cref{proposition:ii-2}, we set
 
 \begin{definition}{2}
 \label{definition:ii-2}
-  We say that a subcategory $\HH'$ of $\HH$ is \emph{stable under products} if, for all $\bar{f}_i\in\HH'$, for $i=1,2$, we have that
+  We say that a subcategory $\HH'$ of $\HH$ is \emph{stable under products} if, for all $\overline{f}_i\in\HH'$, for $i=1,2$, we have that
   \[
-    \bar{f}_1\times\bar{f}_2
+    \overline{f}_1\times\overline{f}_2
     \in\HH'.
   \]
 \end{definition}
@@ -3585,10 +3585,10 @@ Note that, even if $\Gamma$ is contained in $\HH'$, this definition does not imp
 \subsection{Definition of structured categories and groupoids}
 \label{section:ii.2}
 
-We again denote by $(\MM,p_\FF,\FF,\FF_\gamma)$ the category of homomorphisms (\hyperref[section:i.3]{§I.3}) in which $\FF$ is the category of functors $(\bar{\CC}^\perp,F,\CC^\perp)$ such that $(\bar{C},F,\CC)\in\MM$, and $p_\FF$ is the functor
+We again denote by $(\MM,p_\FF,\FF,\FF_\gamma)$ the category of homomorphisms (\hyperref[section:i.3]{§I.3}) in which $\FF$ is the category of functors $(\overline{\CC}^\perp,F,\CC^\perp)$ such that $(\overline{C},F,\CC)\in\MM$, and $p_\FF$ is the functor
 \[
-  (\bar{\CC}^\perp,F,\CC^\perp)
-  \longmapsto (\bar{\CC},F,\CC).
+  (\overline{\CC}^\perp,F,\CC^\perp)
+  \longmapsto (\overline{\CC},F,\CC).
 \]
 
 We denote by $\HH'$ and $\HH''$ two subcategories of $\HH$ that contain $\Gamma$.
@@ -3794,21 +3794,21 @@ From condition~(3) above it follows that $(s,j,s)\in\Gamma$.
   \end{enumerate}
 \end{definition}
 
-Let $\bHH(\HH',\HH'')_0$ be the class of all $\HH(\HH',\HH'')$-structured categories, and $\bar{\GG}(\HH',\HH'')_0$ the class of all $\HH(\HH',\HH'')$-structured groupoids.
+Let $\bHH(\HH',\HH'')_0$ be the class of all $\HH(\HH',\HH'')$-structured categories, and $\overline{\GG}(\HH',\HH'')_0$ the class of all $\HH(\HH',\HH'')$-structured groupoids.
 Let $\bHH(\HH',\HH'')$ be the category of all $\HH(\HH',\HH'')$-structured functors, whose class of units is identified with $\bHH(\HH',\HH'')_0$.
 We denote by:
 \begin{itemize}
   \item[]
-    $\bar{p}$ the map $((\CC_1^\bullet,s_1),F,(\CC^\bullet,s))\mapsto(\CC_1^\bullet,F,\CC^\bullet)$ from $\bHH(\HH',\HH'')$ to $\FF$;
+    $\overline{p}$ the map $((\CC_1^\bullet,s_1),F,(\CC^\bullet,s))\mapsto(\CC_1^\bullet,F,\CC^\bullet)$ from $\bHH(\HH',\HH'')$ to $\FF$;
 
   \item[]
-    $\bar{p}_\HH$ the map $((\CC_1^\bullet,s_1),F,(\CC^\bullet,s))\mapsto(s_1,F,s)$ from $\bHH(\HH',\HH'')$ to $\HH$.
+    $\overline{p}_\HH$ the map $((\CC_1^\bullet,s_1),F,(\CC^\bullet,s))\mapsto(s_1,F,s)$ from $\bHH(\HH',\HH'')$ to $\HH$.
 \end{itemize}
 
-Let $\bar{\Gamma}$ be the groupoid of invertible elements of $\bHH(\HH',\HH'')$.
-We define $\bar{\GG}(\HH',\HH'')$ (resp. $\bar{\Gamma}_\GG$) to be the full subcategory of $\bHH(\HH',\HH'')$ (resp. of $\bar{\Gamma}$) that has $\bar{\GG}(\HH',\HH'')_0$ as its class of units.
+Let $\overline{\Gamma}$ be the groupoid of invertible elements of $\bHH(\HH',\HH'')$.
+We define $\overline{\GG}(\HH',\HH'')$ (resp. $\overline{\Gamma}_\GG$) to be the full subcategory of $\bHH(\HH',\HH'')$ (resp. of $\overline{\Gamma}$) that has $\overline{\GG}(\HH',\HH'')_0$ as its class of units.
 
-We define in an analogous way $\bHH((\HH',\HH'),\HH'')$ (resp. $\bar{\GG}((\HH',\HH'),\HH'')$) whose groupoid of invertible elements is denoted by $\bar{\Gamma}'$ (resp. $\bar{\Gamma}'_\GG$).
+We define in an analogous way $\bHH((\HH',\HH'),\HH'')$ (resp. $\overline{\GG}((\HH',\HH'),\HH'')$) whose groupoid of invertible elements is denoted by $\overline{\Gamma}'$ (resp. $\overline{\Gamma}'_\GG$).
 
 In particular, we write
 \[
@@ -3819,7 +3819,7 @@ In particular, we write
 
 \oldpage{385}
 \begin{remark}
-  The two functors $p$ and $p_\FF$ determine the induced category $p^*(\FF,p_\FF)$, equivalent to $p_\FF^*(\HH,p)$, whose elements (see \cite{3a}) are the pairs $(\bar{F},\bar{h})\in\FF\times\HH$ such that $p_\FF(\bar{F})=p(\bar{h})$.
+  The two functors $p$ and $p_\FF$ determine the induced category $p^*(\FF,p_\FF)$, equivalent to $p_\FF^*(\HH,p)$, whose elements (see \cite{3a}) are the pairs $(\overline{F},\overline{h})\in\FF\times\HH$ such that $p_\FF(\overline{F})=p(\overline{h})$.
   We can identify $\bHH(\HH',\HH'')$ with the full subcategory of $p^*(\FF,p_\FF)$ that has the $\bHH(\HH',\HH'')$-structured categories as its unite.
   We will show that $ $ is a subcategory of homomorphisms of the category of homomorphisms $p^*(\FF,p_\FF)$ over $\FF$.
   An arbitrary element of $p^*(\FF,p_\FF)$ might be referred to as a structured functor to $\HH$, in the vague sense.
@@ -3827,7 +3827,7 @@ In particular, we write
 
 \begin{theorem}{1}
   \label{theorem:ii-1}
-  $(\FF,\bar{p},\bHH(\HH',\HH''),\bar{\Gamma})$ is a category of homomorphisms, of which $(\FF,\bar{p}_\iota,\bar{\GG}(\HH',\HH''),\bar{\Gamma}_\GG)$ is a subcategory of homomorphisms.
+  $(\FF,\overline{p},\bHH(\HH',\HH''),\overline{\Gamma})$ is a category of homomorphisms, of which $(\FF,\overline{p}_\iota,\overline{\GG}(\HH',\HH''),\overline{\Gamma}_\GG)$ is a subcategory of homomorphisms.
 \end{theorem}
 
 \begin{longcomm}{57.1}
@@ -3841,16 +3841,16 @@ In particular, we write
 \begin{proof}
   The only thing to prove is that the conditions
   \[
-    \bar{F}
+    \overline{F}
     = \big((\CC_1^\bullet,s_1),F,(\CC^\bullet,s)\big)
-    \in\bar{\Gamma}
+    \in\overline{\Gamma}
     \textand
-    (\CC^\bullet,\bar{s})
+    (\CC^\bullet,\overline{s})
     \in\bHH(\HH',\HH'')_0
   \]
-  imply the existence of $(\CC_1^\bullet,\bar{s}_1)\in\bHH(\HH',\HH'')_0$ such that $(\bar{s}_1,F,\bar{s})\in\HH$.
-  Since $(\MM,p,\Gamma)$ is a species of structures, there exists $(\bar{s}_1,F,\bar{s})\in\Gamma$.
-  We now show that $(\CC_1^\bullet,\bar{s}_1)\in\bHH(\HH',\HH'')_0$.
+  imply the existence of $(\CC_1^\bullet,\overline{s}_1)\in\bHH(\HH',\HH'')_0$ such that $(\overline{s}_1,F,\overline{s})\in\HH$.
+  Since $(\MM,p,\Gamma)$ is a species of structures, there exists $(\overline{s}_1,F,\overline{s})\in\Gamma$.
+  We now show that $(\CC_1^\bullet,\overline{s}_1)\in\bHH(\HH',\HH'')_0$.
   Let $s_0\subs s$ and $s_0^1\subs s_1$ be such that $p(s_0)=\CC_0^\bullet$ and $p(s_0^1)=(\CC_1^\bullet)_0$.
   By \cref{proposition:i-6} in \hyperref[section:i]{§I}, we have that
   \[
@@ -3860,27 +3860,27 @@ In particular, we write
     (s_0^1\times s_0^1,(F\times F)\iota,s_0\times s_0)
     \in\Gamma.
   \]
-  It thus follows that there exists $\bar{s}_0^1\in\HH_0$ such that
+  It thus follows that there exists $\overline{s}_0^1\in\HH_0$ such that
   \[
-    p(\bar{s}_0^1)
+    p(\overline{s}_0^1)
     = (\CC_1^\bullet)_0
     \textand
-    (\bar{s}_0^1,F\iota,\bar{s}_0)
+    (\overline{s}_0^1,F\iota,\overline{s}_0)
     \in\Gamma
   \]
-  where $\bar{s}_0\subs\bar{s}$ and $p(\bar{s}_0)=\CC_0^\bullet$.
-  Then $(\bar{s}_0^1\times\bar{s}_0^1,(F\times F)\iota,\bar{s}_0\times\bar{s}_0)\in\Gamma$ and, by \cref{proposition:i-6} in \hyperref[section:i]{§I}, $\bar{s}_0^1\subs\bar{s}_1$.
+  where $\overline{s}_0\subs\overline{s}$ and $p(\overline{s}_0)=\CC_0^\bullet$.
+  Then $(\overline{s}_0^1\times\overline{s}_0^1,(F\times F)\iota,\overline{s}_0\times\overline{s}_0)\in\Gamma$ and, by \cref{proposition:i-6} in \hyperref[section:i]{§I}, $\overline{s}_0^1\subs\overline{s}_1$.
   Since $\HH'\supset\Gamma$, we thus deduce that
   \[
-    (\bar{s}_0^1\times\bar{s}_0^1,[\beta,\alpha],\bar{s}_1)
+    (\overline{s}_0^1\times\overline{s}_0^1,[\beta,\alpha],\overline{s}_1)
     = \big(
-      \bar{s}_0^1\times\bar{s}_0^1, (F\times F)\iota, \bar{s}_0\times\bar{s}_0
+      \overline{s}_0^1\times\overline{s}_0^1, (F\times F)\iota, \overline{s}_0\times\overline{s}_0
     \big)
     \bullet \big(
-      \bar{s}_0\times\bar{s}_0, [\beta,\alpha], \bar{s}
+      \overline{s}_0\times\overline{s}_0, [\beta,\alpha], \overline{s}
     \big)
     \bullet \big(
-      \bar{s}, F^{-1}, \bar{s}_1
+      \overline{s}, F^{-1}, \overline{s}_1
     \big)
     \in \HH'.
   \]
@@ -3890,35 +3890,35 @@ In particular, we write
     (s'_1,(F\times F)\iota,s')
     \in\Gamma.
   \]
-  Let $\bar{s}'\subs\bar{s}\times\bar{s}$ be such that $p(\bar{s}')=p(s')$;
+  Let $\overline{s}'\subs\overline{s}\times\overline{s}$ be such that $p(\overline{s}')=p(s')$;
   there exists
   \[
-    (\bar{s}'_1,(F\times F)\iota,\bar{s}')
+    (\overline{s}'_1,(F\times F)\iota,\overline{s}')
     \in\Gamma
   \]
   such that
   \[
-    p(\bar{s}'_1)
+    p(\overline{s}'_1)
     = p(s'_1)
   \]
-  and, by \cref{proposition:i-6} in \hyperref[section:i]{§I}, $\bar{s}'_1\subs\bar{s}_1\times\bar{s}_1$.
+  and, by \cref{proposition:i-6} in \hyperref[section:i]{§I}, $\overline{s}'_1\subs\overline{s}_1\times\overline{s}_1$.
   Since $\HH''$ contains $\Gamma$,
   \[
-    (\bar{s}_1,\chi_1^\bullet,\bar{s}'_1)
-    = (\bar{s}_1,F,\bar{s})
-    \bullet (\bar{s},\chi^\bullet,\bar{s}')
-    \bullet(\bar{s}'_1,(F\times F)\iota,\bar{s}')^{-1}
+    (\overline{s}_1,\chi_1^\bullet,\overline{s}'_1)
+    = (\overline{s}_1,F,\overline{s})
+    \bullet (\overline{s},\chi^\bullet,\overline{s}')
+    \bullet(\overline{s}'_1,(F\times F)\iota,\overline{s}')^{-1}
     \in\HH''.
   \]
   Thus
   \[
-    (\CC_1^\bullet,\bar{s}_1)
+    (\CC_1^\bullet,\overline{s}_1)
     \in\bHH(\HH',\HH'')_0
     \textand
     \big(
-      (C_1^\bullet,\bar{s}_1), F, (\CC^\bullet,\bar{s})
+      (C_1^\bullet,\overline{s}_1), F, (\CC^\bullet,\overline{s})
     \big)
-    \in\bar{\Gamma}.
+    \in\overline{\Gamma}.
     \qedhere
   \]
 \end{proof}
@@ -3927,7 +3927,7 @@ In particular, we write
 
 \begin{theorem}{2}
 \label{theorem:ii-2}
-  $(\FF,\bar{p},\bHH((\HH',\HH'),\HH''),\Gamma')$ is a category of homomorphisms.
+  $(\FF,\overline{p},\bHH((\HH',\HH'),\HH''),\Gamma')$ is a category of homomorphisms.
 \end{theorem}
 
 \begin{proof}
@@ -3936,12 +3936,12 @@ In particular, we write
 
 \begin{theorem}{3}
 \label{theorem:ii-3}
-  If $\HH$ is saturated over $\MM$, then $(\FF,\bar{p},\bHH((\HH',\HH'),\HH''),\Gamma')$, $(\MM,p_\FF\bar{p},\bHH(\HH',\HH''),\bar{\Gamma})$, and $(\HH,\bar{p}_\HH,\bHH(\HH',\HH''),\bar{\Gamma})$ are categories of homomorphisms.
+  If $\HH$ is saturated over $\MM$, then $(\FF,\overline{p},\bHH((\HH',\HH'),\HH''),\Gamma')$, $(\MM,p_\FF\overline{p},\bHH(\HH',\HH''),\overline{\Gamma})$, and $(\HH,\overline{p}_\HH,\bHH(\HH',\HH''),\overline{\Gamma})$ are categories of homomorphisms.
 \end{theorem}
 
 \begin{definition}{6}
 \label{definition:ii-6}
-  We define an \emph{$\HH(\HH',\HH'')$-structured subcategory} (resp. \emph{$\HH(\HH',\HH'')$-structured subgroupoid}) of $(\CC^\bullet,s)\in\bHH(\HH',\HH'')_0$ to be a substructure of $(\CC^\bullet,s)$ in $(\FF,\bar{p},\bHH(\HH',\HH''),\bar{\Gamma})$ (resp. in $(\FF,\bar{p},\bar{\GG}(\HH',\HH''),\bar{\Gamma}_\GG)$).
+  We define an \emph{$\HH(\HH',\HH'')$-structured subcategory} (resp. \emph{$\HH(\HH',\HH'')$-structured subgroupoid}) of $(\CC^\bullet,s)\in\bHH(\HH',\HH'')_0$ to be a substructure of $(\CC^\bullet,s)$ in $(\FF,\overline{p},\bHH(\HH',\HH''),\overline{\Gamma})$ (resp. in $(\FF,\overline{p},\overline{\GG}(\HH',\HH''),\overline{\Gamma}_\GG)$).
   We similarly define an \emph{$\HH((\HH',\HH'),\HH'')$-structured subcategory} (resp. \emph{$\HH((\HH',\HH'),\HH'')$-structured subgroupoid}).
 \end{definition}
 
@@ -4206,7 +4206,7 @@ If $G$ admits a unit $1$, let $[G,1]$ be the full subcategory of $[G]$ whose uni
 \end{examples}
 
 
-\section{Double categories}
+\subsection{Double categories}
 \label{section:ii-4}
 
 Let $(\MM,p_\FF,\FF,\FF_\gamma)$ be the category of homomorphisms defined in \hyperref[section:i]{§I}.
@@ -4532,9 +4532,60 @@ From the above, if $(\CC^\bullet,\CC^\perp)$ is a double category, then the foll
 \begin{remarks}
   ---
   \begin{enumerate}
-    \item[\normalfont(1)] If
+    \item[\normalfont(1)]
+      If all the elements of the form $z_2^\bullet\perp z_1^\bullet$ with $z_i^\bullet\in\CC_0^\bullet$ (resp. of the form $z_2^\perp\bullet z_1^\perp$ with $z_i^\perp\in\CC_0^\perp$) are regular \cite{3a} in $\CC^\bullet$ (resp. in $\CC^\perp$), then the axioms (a), (b), (h), and (i) suffice to imply that $(\CC^\bullet,\CC^\perp)$ is a double category.
+      Indeed, from (h) and (i) it follows that
+      \[
+        (z_2^\bullet\perp z_1^\bullet)\bullet(z_2^\bullet\perp z_1^\bullet)
+        = z_2^\bullet\perp z_1^\bullet
+      \]
+      whence
+      \[
+        \alpha^\bullet(z_2^\bullet\perp z_1^\bullet)
+        = z_2^\bullet\perp z_1^\bullet
+        \in\CC_0^\bullet
+      \]
+      which proves that (g) is satisfied.
+
+    \item[\normalfont(2)]
+      \oldpage{65}
+      Even though the composition laws $\bullet$ and $\perp$ have properties of symmetry, it is simpler to suppose that the data of the double category $(\CC^\bullet,\CC^\perp)$ also includes the order in which we consider the composition laws;
+      thus $(\CC^\bullet,\CC^\perp)$ means that $\CC^\bullet$ is the category that is structured in $\FF$ by $\CC^\perp$.
   \end{enumerate}
 \end{remarks}
+
+A \emph{double subcategory} of the double category $(\CC^\bullet,\CC^\perp)$ is a subclass $\CC_1$ of $\CC$ that is a subcategory of both $\CC^\bullet$ and $\CC^\perp$;
+then $(\CC_1^\bullet,\CC_1^\perp)$ is a double category.
+
+An $\FF$-structured functor is called a \emph{double functor}.
+By definition, a double functor $\overline{F}=((\CC_1^\bullet,\CC_1^\perp),F,(\CC^\bullet,\CC^\perp))$ is defined by a map $F$ from $\CC$ to $\CC_1$ such that $(\CC_1^\bullet,F,\CC^\bullet)$ and $(\CC_1^\perp,F,\CC^\perp)$ are functors.
+By \cref{theorem:ii-1}, double functors form a category of homomorphisms $(\FF,\overline{p_\FF},\overline{\FF},\overline{\FF}_\gamma)$, where
+\[
+  \overline{p_\FF}(\overline{F})
+  = (\CC_1^\bullet,F,\CC^\bullet);
+\]
+by \cref{theorem:ii-2}, they also form a category of homomorphisms $(\FF,\overline{p_\FF}',\overline{\FF},\overline{\FF}_\gamma)$, where
+\[
+  \overline{p_\FF}'(F)
+  = (\overline{p_\FF})_\FF(\overline{F})
+  = (\CC_1^\perp,F,\CC^\perp).
+\]
+
+\emph{Double categories of quadruples. ---}
+Let $\CC_1$ and $\CC_2$ be categories with the same class $\Delta$ of units.
+Let $\sq(\CC_2,\CC_1)$ be the class of quadruples $(f'_2,f'_1,f_1,f_2)$, with $f'_i,f_i\in\CC_i$, such that
+\[
+  \begin{array}{ll}
+    \alpha(f_1)=\alpha(f_2),
+    & \alpha(f'_1)=\beta(f_2),
+  \\\beta(f_1)=\alpha(f'_2),
+    & \beta(f'_1)=\beta(f'_2).
+  \end{array}
+\]
+
+On $\sq(\CC_2,\CC_1)$, we define two composition laws:
+
+
 
 
 %% Bibliography %%
