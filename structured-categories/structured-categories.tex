@@ -4784,7 +4784,30 @@ We will later see (\hyperref[section:iii]{Section~III}) another generalisation o
 \subsection{$n$-fold categories}
 \label{section:ii-5}
 
-By \cite{theorem:ii-2},
+By \cite{theorem:ii-2}, the category $\overline{\FF}$ of double functors is a category of homomorphisms $(\MM,p_\FF\overline{p_\FF},\overline{\FF},\overline{\FF}_\gamma)$ over $\MM$.
+We will see in \hyperref[section:ii-7]{Section~II.7} that this category of homomorphisms is right solving and has finite products.
+Consequently, we can define $\overline{\FF}$-structured functors, and, more general, give the following definition:
+
+\begin{definition}{15}
+\label{definition:ii-15}
+  Let $\FF^{[n-1]}$ be the category of $(n-1)$-fold functors considered as a category of homomorphisms over $\MM$.
+  Then an $\FF^{[n-1]}$-structured category is called an \emph{$n$-fold category}, and an $\FF^{[n-1]}$-structured functor an \emph{$n$-fold functor}.
+  In particular, a 2-fold category is a double category.
+\end{definition}
+
+By \cref{theorem:ii-13} and Corollary~2 of \cref{theorem:ii-14}, if $\FF^{[n-1]}$ is a category of homomorphisms with finite products, right solving over $\MM$, then so too is the category $\FF^{[n]}=\overline{\FF^{[n-1]}}$ of $\FF^{[n-1]}$-structured functors, which justifies the inductive definition.
+From \cref{theorem:ii-13}, it also follows that, if $(\CC^{\perp_i})_{i\leq n}$ and $(\overline{\CC}^{\top_i})_{i\leq n}$ are $n$-fold categories, then the class $\CC\times\overline{\CC}$, endowed with the compositions laws $(\perp_i)\times(\top_i)$ for $i\leq n$, is an $n$-fold category.
+
+\begin{theorem}{8}
+\label{theorem:ii-8}
+  Let $\CC$ be a class, and let $\perp_i$ (for $i\leq n$) be composition laws on $\CC$ such that $\CC^{\perp_i}$ is a category.
+  For $(\CC^{\perp_i})_{i\leq n}$ to be an $n$-fold category, it is necessary and sufficient that the following conditions be satisfied:
+  \begin{enumerate}
+    \item[\normalfont(1)]
+      Let $\alpha^i$ and $\beta^i$ be the source and target maps in $\CC^{\perp_i}$;
+      then
+  \end{enumerate}
+\end{theorem}
 
 
 
