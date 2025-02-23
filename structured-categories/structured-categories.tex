@@ -5088,6 +5088,8 @@ In particular, it follows from \cref{proposition:ii-15} that, if $(\CC^\bullet,\
 \subsection{Order structures on a category}
 \label{section:ii-6}
 
+\oldpage{72}
+
 \begin{definition}{17}
 \label{definition:ii-17}
   We say that an $n$-fold category $(\CC^{\perp_i})_{i\leq n}$ defines an \emph{$n$-fold order}\footnote{The notion of an $n$-fold order is meant to evoke that of an $n$-fold ordered class of Cantor~\cite{6}.} if each of the categories $\CC^{\perp_i}$ defines an order $<_i$ on the class of its units.
@@ -5102,8 +5104,49 @@ This result can be generalised to the case where we give $n$ orders on the class
 
 \begin{proposition}{16}
 \label{proposition:ii-16}
-  Let
+  Let $(\CC^{\perp_i})_{i\leq n}$ be an $n$-fold category satisfying the following condition: any two elements of $\CC$ that have the same set of vertices are identical.
+  Then $(\CC^{\perp_i})_{i\leq n}$ defines an $n$-fold order.
 \end{proposition}
+
+\begin{proof}
+  The class of vertices of $f\in\CC$ is identical to the union of the classes of vertices of $\alpha^{\perp_i}f$ and $\beta^{\perp_i}f$;
+  thus, if $f$ and $g$ have the same set of units in $\CC^{\perp_i}$, then they also have the same set of vertices, and so $f=g$.
+\end{proof}
+
+Let $\widetilde{\Omega}$ be the category of homomorphisms between ordered classes\comm{72.1}{A homomorphism between posets is just a monotone map.}, and $(\MM,\omega,\widetilde{\Omega},\Omega)$ the category of homomorphisms described in \hyperref[section:i]{Section~I}.
+Then $(\MM,\omega,\widetilde{\Omega},\Omega)$ is a category of homomorphisms with finite products that is also right solving.
+The product of $(A,<)$ with $(A',<)$ is the ordered class $(A\times A',<)$, whose order is the product order of the orders of $A$ and of $A'$.
+
+For $(\CC^\bullet,<)$ to be an $\widetilde{\Omega}$-structured category, it is necessary and sufficient that the following conditions be satisfied:
+\begin{enumerate}
+  \item[\normalfont(1)]
+    $\CC^\bullet$ is a category, and $(\CC,<)$ is an ordered class.
+  \item[\normalfont(2)]
+    If $f'<f$ then $\alpha(f')<\alpha(f)$ and $\beta(f')<\beta(f)$.
+  \item[\normalfont(3)]
+    If $f'<f$ and $g'<g$, and if $g\bullet f$ and $g'\bullet f'$ are defined, then $g'\bullet f'<g\bullet f$.
+\end{enumerate}
+For $(\CC^\bullet,<)$ to be an $\widetilde{\Omega}$-structured groupoid, it is further required that:
+\begin{enumerate}
+  \item[\normalfont(4)]
+    If $f'<f$ then $f'^{-1}<f^{-1}$.
+\end{enumerate}
+
+\begin{proposition}{17}
+\label{proposition:ii-17}
+  For $(\CC^\bullet,<)$ to be an $\widetilde{\Omega}$-structured category, it is necessary and sufficient that there exist a double category $(\SS^\bullet,\SS^\perp)$ that satisfies the following conditions:
+  \oldpage{73}
+  \begin{enumerate}
+    \item[\normalfont(1)]
+      $\CC^\bullet$ can be identified with $(\SS_0^\perp)^\bullet$;
+    \item[\normalfont(2)]
+      $\SS^\perp$ defines the order $<$ on $\CC^\bullet$.
+  \end{enumerate}
+\end{proposition}
+
+\begin{proof}
+  If
+\end{proof}
 
 
 
