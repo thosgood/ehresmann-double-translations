@@ -5145,7 +5145,59 @@ For $(\CC^\bullet,<)$ to be an $\widetilde{\Omega}$-structured groupoid, it is f
 \end{proposition}
 
 \begin{proof}
-  If
+  If there exists a double category $(\SS^\bullet,\SS^\perp)$ that satisfies conditions~(1) and (2), then set $\CC^\bullet=(\SS_0^\perp)^\bullet$ and endow $\CC^\bullet$ with the relation
+  \[
+    [f' < f]
+    \quad\text{if and only if}\quad
+    [\text{there exists $k\in\SS$ such that $f=\beta^\perp(k)$ and $f'=\alpha^\perp(k)$}].
+  \]
+  If $f'<f$ then
+  \[
+    \alpha^\bullet(f) = \beta^\perp(\alpha^\bullet(k))
+    \textand
+    \alpha^\bullet(f') = \alpha^\perp(\alpha^\bullet(k))
+  \]
+  whence $\alpha^\bullet(f')<\alpha^\bullet(f)$;
+  similarly, $\beta^\bullet(f')<\beta^\bullet(f)$.
+  Let $g\in\CC$ be such that $g\bullet f$ is defined;
+  let $g'\in\CC$ be such that $g'\bullet f'$ is defined and such that there exists $k_1\in\SS$ with
+  \[
+    g=\beta^\perp(k_1)
+    \textand
+    g'=\alpha^\perp(k_1);
+  \]
+  since $\SS^\perp$ defines an order on $(\SS_0^\perp)$, the equalities
+  \[
+    \begin{gathered}
+      \alpha^\perp(\alpha^\bullet(k_1))
+      = \alpha^\perp(\beta^\bullet(k))
+      = \alpha^\bullet(g')
+    \\\beta^\perp(\alpha^\bullet(k_1))
+      = \beta^\perp(\beta^\bullet(k))
+      = \alpha^\bullet(g)
+    \end{gathered}
+  \]
+  imply that $\alpha^\bullet(k_1)=\beta^\bullet(k)$;
+  thus $k_1\bullet k$ is defined, and we see that
+  \[
+    g\bullet f = \beta^\perp(k_1\bullet k)
+    \textand
+    g'\bullet f' = \alpha^\perp(k_1\bullet k)
+  \]
+  and so $g'\bullet f'<g\bullet f$.
+  This shows that $(\CC^\bullet,<)$ is an $\widetilde{\Omega}$-structured category.
+
+  Conversely, if $(\CC^\bullet,<)$ is $\widetilde{\Omega}$-structured, let $\mathcal{O}$ be the category of pairs $(E,e)$, with $e,E\in\CC_0^\bullet$, such that $e<E$.
+  Then the class $\SS$ of quadruples $((E_1,e_1),f,f',(E,e))$, with $f'<f$ and
+  \[
+    \begin{array}{cc}
+      \alpha(f')=e,
+      & \beta(f')=e_1,
+    \\\alpha(f)=E,
+      &\beta(f)=E_1,
+    \end{array}
+  \]
+  forms a double subcategory of $\sq(\mathcal{O},\CC^\bullet)$ that satisfies (1) and (2).
 \end{proof}
 
 
