@@ -5104,7 +5104,10 @@ This result can be generalised to the case where we give $n$ orders on the class
 
 \begin{proposition}{16}
 \label{proposition:ii-16}
-  Let $(\CC^{\perp_i})_{i\leq n}$ be an $n$-fold category satisfying the following condition: any two elements of $\CC$ that have the same set of vertices are identical.
+  Let $(\CC^{\perp_i})_{i\leq n}$ be an $n$-fold category satisfying the following condition:
+  \begin{quote}
+    Any two elements of $\CC$ that have the same set of vertices are identical.
+  \end{quote}
   Then $(\CC^{\perp_i})_{i\leq n}$ defines an $n$-fold order.
 \end{proposition}
 
@@ -5199,6 +5202,145 @@ For $(\CC^\bullet,<)$ to be an $\widetilde{\Omega}$-structured groupoid, it is f
   \]
   forms a double subcategory of $\sq(\mathcal{O},\CC^\bullet)$ that satisfies (1) and (2).
 \end{proof}
+
+Let $\widetilde{\Omega}'$ be the subcategory of $\widetilde{\Omega}$ consisting of strict homomorphisms, i.e. triples $((A',<),h,(A,<))$ such that the relations $z'<z$ and $h(z')=h(z)$ imply that $z=z'$.
+
+\begin{definition}{18}
+\label{definition:ii-18}
+  An $\widetilde{\Omega}(\widetilde{\Omega}',\widetilde{\Omega})$-structured category is called an \emph{ordered category};
+  an $\widetilde{\Omega}((\widetilde{\Omega}',\widetilde{\Omega}'),\widetilde{\Omega})$-structured groupoid is called a \emph{strictly ordered groupoid}.
+\end{definition}
+
+For an $\widetilde{\Omega}$-structured category $(\CC^\bullet,<)$ to be an ordered category, it is necessary and sufficient that the conditions
+\[
+  \begin{gathered}
+    f'<f,
+  \\\alpha(f')=\alpha(f)
+    \textand
+    \beta(f')=\beta(f)
+  \end{gathered}
+\]
+imply that $f'=f$.
+
+\begin{longcomm}{73.1}
+  This condition is essential in most applications;
+  however, it implies that there do not exist ordered categories that are also monoids;
+  in particular, ordered groups (in the usual sense) are not ordered categories (in this sense).
+
+  Ordered categories and, more specifically, inductive and local groupoids are studied in a long series of papers, summarised in the "Guide" \cite{coll86}.
+  More special problems are considered in the theses of Joubert~\cite{comm57}, S.~Legrand~\cite{comm68}, and Leblond~\cite{comm66} (cf. \cite[Part~II]{coll}).
+\end{longcomm}
+
+\begin{proposition}{18}
+\label{proposition:ii-18}
+  \oldpage{74}
+  An $\widetilde{\Omega}$-structured groupoid $(\CC^\bullet,<)$ is an ordered category.
+\end{proposition}
+
+\begin{proof}
+  Let $g,g'\in\CC$ be such that
+  \[
+    \begin{gathered}
+      g'<g,
+    \\\alpha(g')=\alpha(g)
+      \textand
+      \beta(g')=\beta(g).
+    \end{gathered}
+  \]
+  We have that
+  \[
+    \begin{aligned}
+      \beta(g)
+      &= \beta(g')
+      = g'\bullet g'^{-1}
+      < g\bullet g'^{-1}
+      < g\bullet g^{-1}
+      = \beta(g)
+    \\\alpha(g)
+      &= \alpha(g')
+      = g'^{-1}\bullet g'
+      < g'^{-1}\bullet g
+      < g^{-1}\bullet g
+      = \alpha(g).
+    \end{aligned}
+  \]
+  We thus deduce that
+  \[
+    g\bullet g'^{-1} = \beta(g)
+    \textand
+    g'^{-1}\bullet g = \alpha(g)
+  \]
+  and thus that
+  \[
+    g'^{-1}=g^{-1}
+    \textand
+    g=g'.
+    \qedhere
+  \]
+\end{proof}
+
+\begin{proposition}{19}
+\label{proposition:ii-19}
+  For an $\widetilde{\Omega}$-structured groupoid $(\CC^\bullet,<)$ to be a strictly ordered groupoid, it is necessary and sufficient that the following condition be satisfied:
+  \begin{quote}
+    For all $f\in\CC$ and all $e<\alpha(f)$, there exists at most one $f'\in\CC$ such that both $f'<f$ and $\alpha(f')=e$.
+  \end{quote}
+\end{proposition}
+
+\begin{proof}
+  For $(\CC^\bullet,<)$ to be a strictly ordered groupoid, it is necessary and sufficient that there exist a double category $(\SS^\bullet,\SS^\perp)$ satisfying conditions~(1) and (2) of \cref{proposition:ii-17}, that $\CC^\bullet$ be a groupoid, and that we have the following:
+  \begin{enumerate}
+    \item[\normalfont(3)]
+      For $k,k'\in\SS$, the relations $\beta^\perp(k)=\beta^\perp(k')$ and $\alpha^\bullet(k)=\alpha^\bullet(k')$ imply that $k=k'$.
+      \qedhere
+  \end{enumerate}
+\end{proof}
+
+\begin{definition}{19}
+\label{definition:ii-19}
+  We define a \emph{functorially ordered category} (resp. $\emph{functorially ordered groupoid}$), to be a category (resp. groupoid) $\CC^\bullet$ endowed with an order relation that satisfies the following condition:
+  \begin{enumerate}
+    \item[\normalfont(1)]
+      The map that sends $f\in\CC$ to the class of elements $f'<f$ is a generalised functor\comm{74.1}{This means that a morphism lesser than an identity is an identity, and that a morphism lesser than a composite $g\bullet f$ is of the form $g'\bullet f'$ with $g'<g$ and $f'<f$.} \cite{3a} from $\CC$ to $\CC$.
+  \end{enumerate}
+\end{definition}
+
+By a proposition of \cite{3a}, a functorially ordered groupoid is also a strictly ordered groupoid.
+
+\begin{longcomm}{74.2}
+  More precisely, if $(\CC^\bullet,<)$ is a functorially ordered groupoid, and if $e<\alpha(f)$, then there exists exactly one $g<f$ with $\alpha(g)=e$.
+  Indeed, since $\alpha(f)=f^{-1}\bullet f$, there exist $g<f$ and $g'<f^{-1}$ such that $e=g'\bullet g$, whence $\alpha(g)=e$.
+  Now, that $g$ is unique: if $f'<f$ and $\alpha(f')=e$, then
+  \[
+    g\bullet f'^{-1}
+    < f\bullet f^{-1}
+    =  \beta(f)
+  \]
+  and so $g\bullet f'^{-1}$ is also an identity, and $g=f'$.
+\end{longcomm}
+
+\begin{proposition}{20}
+\label{proposition:ii-20}
+  For $(\CC^\bullet,<)$ to be a functorially ordered groupoid, it is necessary and sufficient that $\CC^\bullet$ be a groupoid that there exist a double category $(\SS^\bullet,\SS^\perp)$ satisfying conditions~(1) and (2) of \cref{proposition:ii-17}, as well as the following condition:
+  \begin{enumerate}
+    \item[\normalfont(3')]
+      Let $f\in\SS_0^\perp$ and $z\in\SS_0^\bullet$ be such that $\alpha^\bullet(f^\perp)=\beta^\perp(z)$.
+      Then there exists exactly one $k\in\SS$ such that
+      \[
+        \beta^\perp(k)=f
+        \textand
+        \alpha^\bullet(k)=z.
+      \]
+  \end{enumerate}
+\end{proposition}
+
+\begin{proof}
+  \oldpage{75}
+  The conditions are necessary by virtue of the proposition of \cite{3a} mentioned above.
+  Conversely, suppose that
+\end{proof}
+
+
 
 
 
