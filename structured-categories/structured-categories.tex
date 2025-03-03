@@ -986,7 +986,7 @@ then we say that $\HH$ is \emph{saturated over $\CC$}.
     \begin{gathered}
       (k',f'',\hat{f},h')(k,f',f,h)
       = (k'\bullet k, f'', f, h'\bullet h)
-    \\\text{if and only if}\quad
+    \\\text{if and only if}\qquad
       \big[f'=\hat{f}
       \textand
       \alpha(h')=\beta(h)\big].
@@ -1168,7 +1168,7 @@ Consider on $\HH_0$ the relation
 \[
   \begin{gathered}
     s\relrhobar S
-    \quad\text{if and only if}\quad
+    \qquad\text{if and only if}
   \\\big[p(s)<p(S)
     \textand
     (S,p(S)p(s),s)\in\HH\big];
@@ -1390,12 +1390,12 @@ If there is no risk of confusion, then we simply say that $s$ is a substructure 
       In $(\CC,\Id_\CC,\CC,\CC)$, we have
       \[
         s\subs S
-        \quad\text{if and only if}\quad
-        [
+        \qquad\text{if and only if}\qquad
+        \big[
           \text{$s<S$ in $\CC$}
           \textand
           \beta(Ss)=S.
-        ]
+        \big]
       \]
       If the relations $s<S$ and $s\subs S$ are equivalent, then $\CC$ is a \emph{\unsure{completely right regular} category}.
       In this case, the condition $s<\alpha(f)$ implies that $\beta(fs)=\beta(f)$.
@@ -3337,7 +3337,7 @@ imply that $p(sh)=p(s)p(h)$.
     \big(
       \beta(g,S) \sups_p \beta(g',s)
     \big)w
-    \qquad\text{if and only if}\quad
+    \quad\text{if and only if}\quad
     \alpha(g)=p(S).
     \qedhere
   \]
@@ -3368,7 +3368,7 @@ for a substructure $s$ of $S$ to be the $p$-kernel of $(h,h')$, it is necessary 
   \[
     (\overline{g},S\sups s)
     \longmapsto S_1\sups s_1
-    \qquad\text{if and only if}\quad
+    \quad\text{if and only if}\quad
     S=\alpha(\overline{g}).
     \qedhere
   \]
@@ -5154,7 +5154,7 @@ For $(\CC^\bullet,<)$ to be an $\widetilde{\Omega}$-structured groupoid, it is f
   \[
     [f' < f]
     \quad\text{if and only if}\quad
-    [\text{there exists $k\in\SS$ such that $f=\beta^\perp(k)$ and $f'=\alpha^\perp(k)$}].
+    \big[\text{there exists $k\in\SS$ such that $f=\beta^\perp(k)$ and $f'=\alpha^\perp(k)$}\big].
   \]
   If $f'<f$ then
   \[
@@ -5465,8 +5465,8 @@ For $(\CC^\bullet,<)$ to be an $\II$-structured category, it is necessary and su
 
 Note that the composition law $(g,f)\mapsto gf$, which is everywhere defined, is not necessarily associative.
 
-\begin{proposition}{28}
-\label{proposition:ii-28}
+\begin{proposition}{23}
+\label{proposition:ii-23}
   Let $(\CC^\bullet,<)$ be an $\II$-structured category;
   the pseudo-product $(g,f)\mapsto gf$ satisfies the following conditions:
   \begin{enumerate}
@@ -5604,7 +5604,130 @@ The subcategories $\II'$ and $\II''$ of $\II$ are stable under products (but the
 
 \begin{proposition}{24}
 \label{proposition:ii-24}
-  Let
+  Let $(\CC^\bullet)$ be an inductive category;
+  let $f,f'\in\CC$ be such that $f'<f$;
+  then we have that
+  \[
+    f'
+    = \beta(f')\big(f\alpha(f')\big)
+    = \big(\beta(f')f)\alpha(f').
+  \]
+\end{proposition}
+
+\begin{proof}
+  Using \cref{proposition:ii-23}, we find that
+  \[
+    \begin{gathered}
+      f'
+      = f'\bullet\alpha(f')
+      < f\alpha(f'),
+    \\f'
+      = \beta(f')\bullet f'
+      < \beta(f')\big(f\alpha(f'\big),
+    \\\alpha\left(\beta(f')\big(f\alpha(f')\big)\right)
+      < \alpha\big(f\alpha(f')\big)
+      < \alpha(f')
+    \\\beta\left(\beta(f')\big(f\alpha(f')\big)\right)
+      < \beta(f').
+    \end{gathered}
+  \]
+  Let $f''=\beta(f')(f\alpha(f'))$;
+  since $f'<f''$, we have that
+  \[
+    \alpha(f')<\alpha(f'')
+    \textand
+    \beta(f')<\beta(f'').
+  \]
+  It thus follows that
+  \[
+    \alpha(f')=\alpha(f'')
+    \textand
+    \beta(f')=\beta(f'').
+  \]
+  Since $[\beta,\alpha]$ is a strict inductive map, the relations
+  \[
+    \begin{gathered}
+      f'<f''
+    \\\alpha(f')=\alpha(f'')
+      \textand
+      \beta(f')=\beta(f'')
+    \end{gathered}
+  \]
+  \oldpage{407}
+  imply that $f'=f''$.
+  We can similarly show the equality
+  \[
+    f'
+    = \big(\beta(f')f\big)\alpha(f').
+    \qedhere
+  \]
+\end{proof}
+
+\begin{corollary*}
+  Let $(\CC^\bullet,<)$ be an inductive category;
+  the conditions
+  \[
+    s,S\in\CC_0^\bullet
+    \textand
+    s<S
+  \]
+  imply that
+  \[
+    s
+    = s(Ss)
+    = (sS)s.
+  \]
+\end{corollary*}
+
+\begin{proposition}{25}
+\label{proposition:ii-25}
+  Let $(\CC^\bullet,<)$ be an inductive category.
+  For $(\CC^\bullet,<)$ to be an $\II(\II',\II'')$-structured category, it is necessary and sufficient that the pseudo-product $(g,f)\mapsto gf$ be associative.
+\end{proposition}
+
+\begin{proof}
+  The condition is necessary by \cref{theorem:ii-9} and its corollary.
+  If it is satisfied, let $k<g\bullet f$;
+  by \cref{proposition:ii-24}, we have that
+  \[
+    k
+    = \beta(k)(g\bullet f)\alpha(k)
+    = \big(\beta(k)g\big)\big(f\alpha(k)\big),
+  \]
+  using the associativity of the pseudo-product.
+  From the definition of the pseudo-product, it follows that
+  \[
+    k
+    = (\cup G)\bullet(\cup F)
+  \]
+  where $G$ is a class bounded above by $(\beta(k)g)$, and $f$ is a class bounded above by $(f\alpha(k))$, and so $\cup G<g$ and $\cup F<f$.
+  This proves that axiom (I\textquotesingle\!\textsubscript{3}) is satisfied.
+\end{proof}
+
+Let $(\CC^\bullet,<)$ be an $\II$-structured category.
+Let $\CC^l$ be the class of triples $(S',f,S)$, with $f\in\CC$ and $S,S'\in\CC_0^\bullet$, such that
+\[
+  \alpha(f)<S
+  \textand
+  \beta(f)<S'.
+\]
+
+Endowed with the composition law
+\[
+  \begin{gathered}
+    (S'',f',S'_1)\bullet(S',f,S)
+    = (S'',f'\bullet f,S)
+  \\\text{if and only if}\qquad
+    \big[\alpha(f')=\beta(f)\textand S'_1=S'\big],
+  \end{gathered}
+\]
+$\CC^l$ is a category;
+the units of $\CC^l$ are the triples $(S,e,S)$ where $e\in\CC_0^\bullet$ and $e<S$.
+The map $f\mapsto(\beta(f),f,\alpha(f))$ identifies $\CC$ with a subcategory of $\CC^l$.
+
+\begin{proposition}{26}
+\label{proposition:ii-26}
+  With the above notation,
 \end{proposition}
 
 
