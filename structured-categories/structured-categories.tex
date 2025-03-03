@@ -1570,7 +1570,7 @@ If there is no risk of confusion, then we simply say that $s$ is a substructure 
 
 \begin{longcomm}{35.2}
   The following corollary is not correct: $(\HH,\subs)$ is a sub-inductive category, but not an inductive category.
-  Indeed, a family of objects bounded by $s$ and $s'$ may have two different joins in the set of elements lesser than both $s$ and $s'$.
+  Indeed, a family of objects bounded by $s$ and $s'$ may have two different joins in the set of elements less than both $s$ and $s'$.
 \end{longcomm}
 
 \begin{corollary*}
@@ -3045,7 +3045,7 @@ imply that $p(sh)=p(s)p(h)$.
 
   \begin{longcomm}{49.2}
     The proof is not complete;
-    it remains to show that $g$ is lesser than any $f$ in $p(h)^>\bullet p(s)$.
+    it remains to show that $g$ is less than any $f$ in $p(h)^>\bullet p(s)$.
     Indeed, the relations
     \[
       \begin{gathered}
@@ -5303,7 +5303,7 @@ imply that $f'=f$.
   We define a \emph{functorially ordered category} (resp. $\emph{functorially ordered groupoid}$), to be a category (resp. groupoid) $\CC^\bullet$ endowed with an order relation that satisfies the following condition:
   \begin{enumerate}
     \item[\normalfont(1)]
-      The map that sends $f\in\CC$ to the class of elements $f'<f$ is a generalised functor\comm{74.1}{This means that a morphism lesser than an identity is an identity, and that a morphism lesser than a composite $g\bullet f$ is of the form $g'\bullet f'$ with $g'<g$ and $f'<f$.} \cite{3a} from $\CC$ to $\CC$.
+      The map that sends $f\in\CC$ to the class of elements $f'<f$ is a generalised functor\comm{74.1}{This means that a morphism less than an identity is an identity, and that a morphism less than a composite $g\bullet f$ is of the form $g'\bullet f'$ with $g'<g$ and $f'<f$.} \cite{3a} from $\CC$ to $\CC$.
   \end{enumerate}
 \end{definition}
 
@@ -5863,6 +5863,163 @@ The map $f\mapsto(\beta(f),f,\alpha(f))$ identifies $\CC$ with a subcategory of 
 \label{definition:ii-22}
   With the above notation, the $\II$-structured category (resp. the $\II$-structured groupoid) $(\CC^l,<)$ is called the \emph{category of local homomorphisms} (resp. the \emph{groupoid of local homomorphisms}) associated to the $\II$-structured category (resp. to the $\II$-structured groupoid) $(\CC^\bullet,<)$.
 \end{definition}
+
+\begin{remark}
+  The class $\CC^l$ can also be endowed with the composition law
+  \[
+    (S''_1,f',S'_1)\perp(S',f,S)
+    = (S'',f'f,S)
+    \quad\text{if and only if}\quad
+    S'=S'_1
+  \]
+  where $f'f$ denotes the pseudo-product of $f'$ and $f$ in $(\CC^\bullet,<)$.
+  Let $<_\perp$ be the order relation on $\CC^l$ defined by
+  \[
+    (S'_1,f_1,S_1)
+    <_\perp (S',f,S)
+    \quad\text{if and only if}\quad
+    \big[
+      S'=S'_1,
+      S=S_1,
+      f'<f
+    \big].
+  \]
+\end{remark}
+
+\begin{longcomm}{81.1}
+  The original contains the following false proposition:
+
+  \begin{proposition}{26~bis}
+    If $(\CC^\bullet,<)$ is an $\II$-structured category, then $((\CC^l)^\perp,<_\perp)$ is an $\II$-structured category.
+  \end{proposition}
+
+  Indeed, note that (even if $\CC=\MM$)
+  \[
+    \left(\bigcup_{i\in I}g_i\right)\left(\bigcup_{i\in I}f_i\right)
+    = \bigcup_{(i,j)\in I\times I}g_jf_i
+    \neq \bigcup_{i\in I}g_if_i.
+  \]
+\end{longcomm}
+
+Note that, even if $(\CC^\bullet,<)$ is an inductive category, then $((C^l)^\perp,<_\perp)$ is not an $\II(\II',\II)$-structured category.
+
+Let $\CC^\bullet$ be a groupoid.
+Recall (see \cite{3a}) that $(\CC^\bullet,<)$ is an inductive groupoid if $(\CC,<)$ is an inductive class and $(\CC^\bullet,<)$ is a functorially ordered groupoid.
+
+\begin{theorem}{10}
+\label{theorem:ii-10}
+  The following conditions are equivalent:
+  \begin{enumerate}
+    \item[\normalfont(1)]
+      $(\CC^\bullet,<)$ is an inductive groupoid.
+    \item[\normalfont(2)]
+      $(\CC^\bullet,<)$ is an $\II((\II'\cap\II'',\II'\cap\II''),\II)$-structured groupoid.
+    \item[\normalfont(3)]
+      $(\CC^\bullet,<)$ is an $\II(\II,\II'\cap\II'')$-structured groupoid.
+  \end{enumerate}
+\end{theorem}
+
+\begin{proof}
+  Conditions~(1) and (2) are equivalent by \cref{proposition:ii-21}.
+  \begin{longcomm}{81.2}
+    This proof is too short: if $(\CC^\bullet,<)$ is an inductive groupoid, it is still necessary to prove that (I\textsubscript{1}) and (I\textsubscript{2}) are satisfied.
+    Indeed, with the notation of (I\textsubscript{1}), there exists a morphism $g<f$ with source $\alpha(f')\cap\alpha(f'')$;
+    since $\alpha(g)<\alpha(f')$ and $f'=f\alpha(f')$, it follows that $g<f'$;
+    also $g<f''$, whence $g<f'\cap f''$.
+    But the relation
+    \[
+      \alpha(f'\cap f'')
+      < \alpha(f')\cap\alpha(f'')
+      = \alpha(g)
+    \]
+    implies that $f'\cap f''<g$.
+    So $g=f'\cap f''$, and (I\textsubscript{1}) is satisfied.
+    For (I\textsubscript{2}), we can similarly prove that $\cup f_i$ is the unique morphism less than $f$ with source $\cup\alpha(f_i)$.
+  \end{longcomm}
+  We will show the equivalence between conditions~(1) and (3).
+  An inductive groupoid is an inductive category in the sense of \cite{3c};
+  from Corollary~1 of \cref{theorem:ii-9}, it follows that $(\CC^\bullet,<)$ is an $\II(\II,\II'')$-structured category;
+  since $f'<f$ implies that $f'^{-1}<f^{-1}$, we see that $(\CC^\bullet,<)$ is also an $\II(\II,\II'')$-structured groupoid.
+  Furthermore, the relations
+  \[
+    \begin{gathered}
+      g'\bullet f'=g\bullet f
+    \\g'<g
+      \textand
+      f'<f
+    \end{gathered}
+  \]
+  imply that
+  \[
+    \alpha(f)=\alpha(f')
+    \textand
+    \beta(g')=\beta(g),
+  \]
+  and, by \cref{proposition:ii-20}, we have that $g'=g$ and $f'=f$.
+  This proves that $(\CC^\bullet,<)$ is an $\II(\II,\II'\cap\II'')$-structured groupoid.
+  Conversely, let $(\CC^\bullet,<)$ be an $\II(\II,\II'\cap\II'')$-structured groupoid.
+  By \cref{proposition:ii-18} and Corollary~1 of \cref{theorem:ii-9}, $(\CC^\bullet,<)$ is an inductive category in the sense of \cite{3c}.
+  \oldpage{410}
+  It remains only to prove that the conditions $g<e$ and $e\in\CC_0^\bullet$ imply that $g\in\CC_0^\bullet$.
+  Indeed, we have that
+  \[
+    \alpha(g)<e
+    \textand
+    \beta(g)<e
+  \]
+  i.e., using condition~(I\textsubscript{2}),
+  \[
+    \begin{aligned}
+      \big(\beta(g)\cap g\big)\bullet\big(g\cap\alpha(g)\big)
+      &= \big(\beta(g)\bullet g\big)\cap\big(g\bullet\alpha(g)\big)
+    \\&= \beta(g)\bullet g;
+    \end{aligned}
+  \]
+  since the map $\chi^\bullet$ belongs to $\II'$, it thus follows that $g\cap\alpha(g)=g$, whence
+  \[
+    g<\alpha(g).
+  \]
+  From the relations
+  \[
+    g^{-1}\bullet g=\alpha(g)\bullet\alpha(g)
+    \textand
+    g^{-1}<\alpha(g)
+  \]
+  we also deduce, for the same reason, that
+  \[
+    g
+    = \alpha(g)
+    \in \CC_0^\bullet.
+    \qedhere
+  \]
+\end{proof}
+
+\begin{remarks}
+---
+  \begin{enumerate}
+    \item[\normalfont(1)]
+      Even if $(\CC^\bullet,<)$ is an inductive groupoid, the associated groupoid $(\CC^l,<)$ of local isomorphisms is not an inductive groupoid;
+      indeed, the conditions $e,S\in\CC_0^\bullet$ and $e<S$ imply that $(e,e,S)<(S,S,S)$, even though $(e,e,S)$ is not a unit of $\CC^l$.
+
+    \item[\normalfont(2)]
+      For an inductive category $(\CC^\bullet,<)$ to be functorially ordered (\cref{definition:ii-19}), it is necessary and sufficient that $(\CC^\bullet,<)$ be an $\II(\II',\II'')$-structured category, that $(\CC_\gamma,<)$ be an inductive groupoid (where $\CC_\gamma$ is the groupoid of invertible elements of $\CC^\bullet$), and that $\CC_\gamma$ be closed under induction in $\CC$.
+      \emph{Example:} the category of surjection.
+
+      \begin{longcomm}{82.2}
+        Let us prove that, if $(\CC^\bullet,<)$ is functorially ordered, then $\CC_\gamma$ is closed under induction.
+        Indeed, let $g$ be an isomorphism and let $g'<g$;
+        since $\alpha(g')<\alpha(g)$, there exists (Comment~74.2) an isomorphism $f$ such that $f<g$ and $\alpha(f)=\alpha(g')$.
+        Then $g'\bullet f^{-1}$ is an identity, because it is less than the identity $g\bullet g^{-1}$;
+        hence $g'=f$.
+      \end{longcomm}
+  \end{enumerate}
+\end{remarks}
+
+
+\subsection{General theorems on structured categories}
+\label{section:ii-7}
+
+In
 
 
 
