@@ -6019,7 +6019,81 @@ Recall (see \cite{3a}) that $(\CC^\bullet,<)$ is an inductive groupoid if $(\CC,
 \subsection{General theorems on structured categories}
 \label{section:ii-7}
 
-In
+All throughout this section, we suppose that the category of homomorphisms $(\MM,p,\HH,\Gamma)$ with finite products is right solving.\comm{82.3}{So $p\colon\HH\to\MM$ is a concrete functor creating canonical finite products and equalisers.}
+$\HH'$ and $\HH''$ denote subcategories of $\HH$ that contain $\Gamma$.
+
+\begin{proposition}{27}
+\label{proposition:ii-27}
+  For $(\CC^\bullet,s)$ to be an $\HH$-structured category, it is necessary and sufficient that the following conditions be satisfied:
+  \begin{enumerate}
+    \item[\normalfont(1)]
+      $\CC^\bullet$ is a category, $s\in\HH_0$, and $p(s)=\CC$.
+    \item[\normalfont(2)]
+      $(s,\alpha,s),(s,\beta,s)\in\HH$.
+    \item[\normalfont(3)]
+      The conditions $(s\times s,\iota,s')\in\HH$ and $p(s')=\CC^\bullet\star\CC^\bullet$ imply that $(s,\chi^\bullet,s')\in\HH$.
+  \end{enumerate}
+\end{proposition}
+
+\begin{proof}
+  These conditions are necessary;
+  indeed, if $s'\subs s\times s$ and $p(s')=\CC^\bullet\star\CC^\bullet$, let $s''\in\HH_0$ be such that $p(s'')=\CC^\bullet\star\CC^\bullet$ and $(s\times s,\iota,s'')\in\HH$.
+  By the definition of a substructure, we also have that $(s',\iota,s'')\in\HH$, and so $(s,\chi^\bullet,s'')\in\HH$.
+  We will now show that the conditions are sufficient.
+  \oldpage{411}
+  By axiom~(R) in \cref{definition:i-9}, the pair $((s,\alpha,s),(s,\iota,s))$ admits a $p$-kernel $s_0\subs s$ such that $p(s_0)$ is the class of $f\in\CC$ for which $f=\alpha(f)$, i.e. $p(s_0)=\CC_0^\bullet$.
+  Since
+  \[
+    \alpha(p(s))=\CC_0^\bullet
+    \textand
+    \beta(p(s))=\CC_0^\bullet
+  \]
+  we also have that
+  \[
+    (s_0,\alpha,s)\in\HH
+    \textand
+    (s_0,\beta,s)\in\HH
+  \]
+  which proves that axiom~(1) of $\HH$-structured categories is satisfied.
+  Let $p_1$ and $p_2$ be the canonical projections from $p(s)\times p(s)$ to $p(s)$;
+  we have that
+  \[
+    (s,\alpha p_1,s\times s)
+    = (s\alpha,s)\bullet(s,p_1,s\times s)
+    \in\HH
+    \textand
+    (s,\beta p_2,s\times s)
+    \in\HH.
+  \]
+  Axiom~(R) in \cref{definition:i-9} ensures that the pair $((s,\alpha p_1,s\times s),(s,\beta p_2,s\times s))$ admits a $p$-kernel $s'\subs s\times s$ such that $p(s')=\CC^\bullet\star\CC^\bullet$.
+  Thus $(\CC^\bullet,s)$ is an $\HH$-structured category.
+\end{proof}
+
+\begin{proposition}{28}
+\label{proposition:ii-28}
+  Suppose that $\HH'$ satisfies condition~($\sigma$) of \cref{proposition:i-10}~(\hyperref[section:i]{§I}).
+  For $(\CC^\bullet,s)$ to be an $\HH(\HH',\HH'')$-structured category (resp. an $\HH((\HH',\HH'),\HH'')$-structured category), it is necessary and sufficient that the following conditions be satisfied:
+  \begin{enumerate}
+    \item[\normalfont(1)]
+      $\CC^\bullet$ is a category, $s\in\HH_0$, and $p(s)=\CC$.
+    \item[\normalfont(2)]
+      $(s\times s,[\beta,\alpha],s)\in\HH'$ (resp. $(s,\alpha,s),(s,\beta,s)\in\HH'$).
+    \item[\normalfont(3)]
+      If $s'\subs s\times s$ and $p(s')=\CC^\bullet\star\CC^\bullet$, then $(s,\chi,s')\in\HH''$.
+  \end{enumerate}
+\end{proposition}
+
+\begin{proof}
+  Suppose that $(\CC^\bullet,s)$ is an $\HH(\HH',\HH'')$-structured category.
+  By \cref{proposition:i-5} and \cref{proposition:ii-27}, there exists $s_0\subs s$ such that
+  \[
+    p(s_0)=\CC_0^\bullet
+    \textand
+    (s_0\times s_0,[\beta,\alpha],s)
+    \in\HH'.
+  \]
+  By \todo
+\end{proof}
 
 
 
