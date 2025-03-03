@@ -5727,8 +5727,142 @@ The map $f\mapsto(\beta(f),f,\alpha(f))$ identifies $\CC$ with a subcategory of 
 
 \begin{proposition}{26}
 \label{proposition:ii-26}
-  With the above notation,
+  With the above notation, $(\CC^l,<)$ is an $\II$-structured category, with the order relation defined by
+  \[
+    (S'_1,f_1,S_1)<(S',f,S)
+    \qquad\text{if and only if}\qquad
+    \big[
+      S'_1<S', S_1<S, f_1<f
+    \big].
+  \]
+  If $(\CC^\bullet,<)$ is an inductive category (resp. an $\II(\II',\II'')$-structured category), then $(\CC^l,<)$ is an inductive category (resp. an $\II(\II',\II'')$-structured category).
 \end{proposition}
+
+\begin{proof}
+  \oldpage{408}
+  Suppose that
+  \[
+    \overline{f}_i
+    = (S'_i,f_i,S_i)
+    < \overline{f}
+    = (S',f,S)
+  \]
+  for all $i\in I$;
+  we have that
+  \[
+    \bigcup_{i\in I}\overline{f}_i
+    = \left(\bigcup_{i\in I}S'_i, \bigcup_{i\in I}f_i, \bigcup_{i\in I}S_i\right)
+    \textand
+    \bar{f}_i\cap\bar{f}_j
+    = (S'_i\cap S'_j, f_i\cap f_j, S_i\cap S_j),
+  \]
+  whence
+  \[
+    \begin{aligned}
+      \alpha\left(\bigcup_{i\in I}\overline{f}_i\right)
+      = \bigcup_{i\in I}\alpha(\overline{f}_i)
+      &\textand
+      \alpha(\overline{f}_i\cap\overline{f}_j)
+      = \alpha(\overline{f}_i)\cap\alpha(\overline{f}_j),
+    \\\beta\left(\bigcup_{i\in I}\overline{f}_i\right)
+      = \bigcup_{i\in I}\beta(\overline{f}_i)
+      &\textand
+      \beta(\overline{f}_i\cap\overline{f}_j)
+      = \beta(\overline{f}_i)\cap\beta(\overline{f}_j).
+    \end{aligned}
+  \]
+  So conditions~(I\textsubscript{1}) and (I\textsubscript{2}) are satisfied.
+  Let
+  \[
+    \overline{g}_i
+    = (S''_i,g_i,S'_i)
+    < \overline{g}
+    = (S'',g,S')
+  \]
+  be such that $\overline{g}_i\bullet\overline{f}_i$ and $\overline{g}\bullet\overline{f}$ are defined;
+  since $g_i\bullet f_i<g\bullet f$, we also have that $\overline{g}_i\bullet\overline{f}_i<\overline{g}\bullet\overline{f}$.
+  From the relations
+  \[
+    \overline{g}_i\bullet\overline{f}_i
+    = (S''_i,g_i\bullet f_i,S_i),
+  \]
+  we deduce that
+  \[
+    \begin{aligned}
+      (\overline{g}_i\bullet\overline{f}_i)\cap(\overline{g}_j\bullet\overline{f}_j)
+      &= \big(
+        S''_i\cap S''_j,
+        (g_i\cap g_j)\bullet(f_i\cap f_j),
+        S_i\cap S_j
+      \big)
+    \end{aligned}
+  \]
+  and
+  \[
+    \begin{aligned}
+      \bigcup_{i\in I}(\overline{g}_i\bullet\overline{f}_i)
+      &= \left(
+        \bigcup_{i\in I}S''_i,
+        \bigcup_{i\in I}(g_i\bullet f_i),
+        \bigcup_{i\in I}S_i
+      \right)
+    \\&= \left(\bigcup_{i\in I}\overline{g}_i\right)\bullet\left(\bigcup_{i\in I}\overline{f}_i\right).
+    \end{aligned}
+  \]
+  Thus $(\CC^l,<)$ is an $\II$-structured category.
+
+  If $(\CC^\bullet,<)$ is an inductive category, then the conditions
+  \[
+    \begin{gathered}
+      \overline{f}_i<\overline{f}
+    \\\alpha(\overline{f}_i)=\alpha(\overline{f})
+      \textand
+      \beta(\overline{f}_i)=\beta(\overline{f})
+    \end{gathered}
+  \]
+  imply that $S_i=S$, $S'_i=S'$, and $f_i=f$, whence
+  \[
+    \overline{f}_i
+    = \overline{f}.
+  \]
+  And so axiom~(I\textquotesingle\!\textsubscript{4}) is also satisfied in $(\CC^l,<)$.
+
+  Finally, if $(\CC^\bullet,<)$ is an $\II(\II',\II'')$-structured category, let
+  \[
+    \overline{h}
+    = (S''_1,h,S_1)
+    < (S'',g,S')\bullet(S',f,S);
+  \]
+  since
+  \[
+    h = g'\bullet f'
+  \]
+  where $g'<g$ and $f'<f$, we find that
+  \[
+    \overline{h}
+    = \big(S''_1,g',\alpha(g')\big)\bullet\big(\alpha(g'),f',S_1\big);
+  \]
+  thus $(\CC^l,<)$ is an $\II(\II',\II'')$-structured category.
+\end{proof}
+
+\begin{corollary*}
+  If $(\CC^\bullet,<)$ is an $\II$-structured groupoid, then $(\CC^l,<)$ is an $\II$-structured groupoid.
+\end{corollary*}
+
+\begin{proof}
+  \oldpage{409}
+  Indeed, the condition $(S'_1<f_1,S_1)<(S',f,S)$ implies that $f_1^{-1}<f^{-1}$, whence
+  \[
+    (S_1,f_1^{-1},S'_1)
+    < (S,f^{-1},S').
+    \qedhere
+  \]
+\end{proof}
+
+\begin{definition}{22}
+\label{definition:ii-22}
+  With the above notation, the $\II$-structured category (resp. the $\II$-structured groupoid) $(\CC^l,<)$ is called the \emph{category of local homomorphisms} (resp. the \emph{groupoid of local homomorphisms}) associated to the $\II$-structured category (resp. to the $\II$-structured groupoid) $(\CC^\bullet,<)$.
+\end{definition}
 
 
 
