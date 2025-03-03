@@ -196,6 +196,7 @@
 
     The page numbers of the original article are included at the relevant locations in the margins of this version.
     The bibliography numbering from the original has been retained, and additional citations from the comments and errata are listed in separate bibliographies, numbered as in \cite{coll}, but with a slight modification: those referring to the works within \cite{coll} are preceded by an ``Œ''; those referring to external works are preceded by a ``C''.
+    \todo{change theorem numbers to include roman section number?}\todo
 
     \medskip
 
@@ -1281,7 +1282,7 @@ If there is no risk of confusion, then we simply say that $s$ is a substructure 
     \CC'
     = \{Ee \mid e<E\text{ in }\CC_0\}.
   \]
-  Almost all of the results of this part (\hyperref[section:i]{Part I}) generalise to this setting; cf. \cite{coll66} and \cite{coll69}, where both notions are compared.
+  Almost all of the results of this part (\hyperref[section:i]{§I}) generalise to this setting; cf. \cite{coll66} and \cite{coll69}, where both notions are compared.
 
   \todo
 \end{longcomm}
@@ -2283,7 +2284,7 @@ In what follows, we further suppose that $\HH$ is endowed with an order relation
     \item[\normalfont(c)]
       $(\CC,p,\HH,\SS)$ is right solved, and $h'\subs_p h$ in $(\CC,p,\HH,\SS)$ if and only if $h'<h$ in $\HH$.
 
-    \item[\normalfont(c')]
+    \item[\normalfont(c\textquotesingle)]
       Let $s,s'\in\HH_0$;
       then $s'\subs_p s$ in $(\CC,p,\HH,\SS)$ if and only if $s'<s$ in $\HH$;
       in this case, $\beta(ss')=s$.
@@ -3770,7 +3771,7 @@ An $\HH(\HH',\HH'')$-structured category (resp. $\HH((\HH',\HH'),\HH'')$-structu
     \textand
     s_0\subs_p s.
   \]
-  It follows from the Corollary of \cref{theorem:i-1} (\hyperref[section:i]{§I}) that $s_0$ is unique.
+  It follows from the Corollary of \cref{theorem:i-1}~(\hyperref[section:i]{§I}) that $s_0$ is unique.
 \end{proof}
 
 \begin{definition}{4}
@@ -4161,7 +4162,7 @@ Let $[G,0]$ be the full subcategory of $[G]$ whose units are the pairs $(Z,\chi)
 If $G$ admits a unit $1$, let $[G,1]$ be the full subcategory of $[G]$ whose units are the pairs $(Z,\chi)$ that satisfy the following axiom:
 
 \begin{enumerate}
-  \item[\normalfont(2')]
+  \item[\normalfont(2\textquotesingle)]
     $1\chi z=z$ for all $z\in Z$.
 \end{enumerate}
 
@@ -4770,7 +4771,7 @@ The definition of a natural transformation $(\varphi',\tau,\varphi)$ from a func
 \end{theorem}
 
 This theorem shows that if $(\CC^\bullet,\CC^\perp)$ is a double category, then a functor $\Phi$ from a category $\Gamma$ to $\CC^\bullet$ can be considered as a generalised natural transformation from $\alpha^\perp\Phi$ to $\beta^\perp\Phi$.
-We will later see (\hyperref[section:iii]{Section~III}) another generalisation of the notion of natural transformation, namely the notion of a \emph{quintet} \cite{3e}.
+We will later see (\hyperref[section:iii]{§III}) another generalisation of the notion of natural transformation, namely the notion of a \emph{quintet} \cite{3e}.
 
 \begin{longcomm}{68.1}
   \emph{Lax transformations.}
@@ -5324,7 +5325,7 @@ By a proposition of \cite{3a}, a functorially ordered groupoid is also a strictl
 \label{proposition:ii-20}
   For $(\CC^\bullet,<)$ to be a functorially ordered groupoid, it is necessary and sufficient that $\CC^\bullet$ be a groupoid that there exist a double category $(\SS^\bullet,\SS^\perp)$ satisfying conditions~(1) and (2) of \cref{proposition:ii-17}, as well as the following condition:
   \begin{enumerate}
-    \item[\normalfont(3')]
+    \item[\normalfont(3\textquotesingle)]
       Let $f\in\SS_0^\perp$ and $z\in\SS_0^\bullet$ be such that $\alpha^\bullet(f^\perp)=\beta^\perp(z)$.
       Then there exists exactly one $k\in\SS$ such that
       \[
@@ -5432,6 +5433,177 @@ For $(\CC^\bullet,<)$ to be an $\II$-structured category, it is necessary and su
 
 \begin{proposition}{22}
 \label{proposition:ii-22}
+  Let $(\CC^\bullet,<)$ be an $\II$-structured category;
+  let $g,f\in\CC$;
+  let $H$ be the class of elements $g'\bullet f'$ such that $g'<g$ and $f'<f$.
+  Then the class $H$ admits a largest element.
+\end{proposition}
+
+\begin{proof}
+  Let $\langle{g,f}\rangle$ be the class of pairs $(g',f')$, with $g',f'\in\CC$, such that
+  \[
+    \begin{gathered}
+      \alpha(g')=\beta(f')
+    \\g'<g
+      \textand
+      f'<f.
+    \end{gathered}
+  \]
+  Let $G$ be the class of the $g'$ such that there exists $(g',f')\in\langle{g,f}\rangle$;
+  let $F$ be the class of the $f'$ such that there exists $(g',f')\in\langle{g,f}\rangle$.
+  The class $\alpha(G)$ is then equal to the class $\beta(F)$.
+  By condition~(2), the class $G$, bounded above by $g$, admits an aggregate $\cup G<g$ such that $\alpha(\cup G)=\cup\alpha(G)$;
+  similarly, $F$ admits an aggregate $\cup F<f$ such that $\beta(\cup F)=\cup\beta(F)$.
+  Then $\alpha(\cup G)=\beta(\cup F)$, and $(\cup G)\bullet(\cup F)$ is defined;
+  since $(\cup G)\bullet(\cup F)$ belongs to $H$, we see that $\cup H=(\cup G)\bullet(\cup F)$.
+\end{proof}
+
+\begin{definition}{20}
+\label{definition:ii-20}
+  With the conditions of \cref{proposition:ii-22}, the largest element $\cup H$ of $H$ is denoted $gf$, and called the \emph{pseudo-product of $g$ and $f$}.
+\end{definition}
+
+Note that the composition law $(g,f)\mapsto gf$, which is everywhere defined, is not necessarily associative.
+
+\begin{proposition}{28}
+\label{proposition:ii-28}
+  Let $(\CC^\bullet,<)$ be an $\II$-structured category;
+  the pseudo-product $(g,f)\mapsto gf$ satisfies the following conditions:
+  \begin{enumerate}
+    \item[\normalfont(1)]
+      Let $g,g',f,f'\in\CC$ be such that $g'<g$ and $f'<f$.
+      Then $g'f'<gf$.
+    \item[\normalfont(2)]
+      Let $g,f\in\CC$.
+      Then
+      \[
+        \beta(gf)<\beta(g)
+        \textand
+        \alpha(gf)<\alpha(f).
+      \]
+    \item[\normalfont(3)]
+      \oldpage{405}
+      Let $s\in\CC_0$ and $S\in\CC_0^\bullet$ be such that $s<S$.
+      Then
+      \[
+        \alpha(Ss)
+        = s
+        = \beta(sS).
+      \]
+  \end{enumerate}
+\end{proposition}
+
+\begin{proof}
+  Conditions~(1) and (2) follow from the definition of the pseudo-product.
+  Suppose that $s<S$ in $\CC_0^\bullet$.
+  Then $\alpha(Ss)<s$.
+  Furthermore, $s\bullet s<Ss$, so
+  \[
+    s < \alpha(Ss) < s
+    \textand
+    s = \alpha(Ss).
+  \]
+  Similarly
+  \[
+    \beta(sS)
+    = s.
+  \]
+\end{proof}
+
+Using the subcategories $\widetilde{\Omega}'$ and $\widetilde{\Omega}''$ defined above, we set
+\[
+  \II' = \II\cap\widetilde{\Omega}'
+  \textand
+  \II'' = \II\cap\widetilde{\Omega}''.
+\]
+
+The elements of $\II'$ are the strict inductive maps \cite{3a}.
+The subcategory $\II'$ of $\II$ contains the groupoid of invertible elements of $\II$ and satisfies condition~($\sigma$) of \cref{proposition:i-10}~(\hyperref[section:i]{§I}), since every restriction of a strict inductive map is a strict inductive map.
+The subcategory $\II''$ of $\II$ also contains $\II\cap\Omega$, but $\II''$ does not satisfy condition~($\sigma$).
+The subcategories $\II'$ and $\II''$ of $\II$ are stable under products (but they are not categories of homomorphisms with finite products over $\MM$).
+
+\begin{definition}{21}
+\label{definition:ii-21}
+  An $\II(\II',\II)$-structured category is called an \emph{inductive category};
+  if $(\CC^\bullet,<)$ is an inductive category, then an element $f'$ such that $f'<f$ is said to be \emph{induced by $f$}.
+\end{definition}
+
+\begin{theorem}{9}
+\label{theorem:ii-9}
+  Let $\CC^\bullet)$ be a category and $(\CC,<)$ an inductive class.
+  For $(\CC^\bullet,<)$ to be an inductive category, it is necessary and sufficient that it satisfy axioms~(I\textsubscript(1)) and (I\textsubscript{2}), as well as the following axioms:
+  \begin{enumerate}
+    \item[\normalfont(I\textquotesingle\!\textsubscript{3})]
+      The conditions $g'<g$, $f'<f$, $(g,f),(g',f')\in\CC^\bullet\star\CC^\bullet$ imply that $g'\bullet f'<g\bullet f$.
+    \item[\normalfont(I\textquotesingle\!\textsubscript{4})]
+      The conditions $g'<g$, $\alpha(g')=\alpha(g)$, and $\beta(g')=\beta(g)$ imply that $g'=g$.
+  \end{enumerate}
+\end{theorem}
+
+\begin{proof}
+  The conditions are clearly necessary; we will show that they are sufficient, i.e. that they imply axiom~(I\textsubscript{3}), from which we take our notation.
+  Since we have
+  \[
+    \alpha(g_i\cap g_j)
+    = \alpha(g_i)\cap\alpha(g_j)
+    = \beta(f_i)\cap\beta(f_j),
+  \]
+  the composite $h=(g_i\cap g_j)\bullet(f_i\cap f_j)$ is defined and, by (I\textquotesingle\!\textsubscript{3}), we have that
+  \[
+    h < (g_i\bullet f_i)\cap(g_j\bullet f_j).
+  \]
+  Since $g_i\bullet f_i<g\bullet f$ and $g_j\bullet f_j<g\bullet f$, by using (I\textsubscript{1}) we find that
+  \[
+    \begin{aligned}
+      \alpha(g_i\bullet f_i\cap g_j\bullet f_j)
+      &= \alpha(f_i)\cap\alpha(f_j)
+    \\&= \alpha(f_i\cap f_j)
+    \\&= \alpha(h)
+    \end{aligned}
+  \]
+  and
+  \[
+    \begin{aligned}
+      \beta(g_i\bullet f_i\cap g_j\bullet f_j)
+      &= \beta(g_i)\cap\beta(g_j)
+    \\&= \beta(g_i\cap g_j)
+    \\&= \beta(h).
+    \end{aligned}
+  \]
+  \oldpage{406}
+  From axiom~(I\textquotesingle\!\textsubscript{4}) we then deduce that
+  \[
+    h
+    = (g_i\bullet f_i)\cap(g_j\bullet f_j).
+  \]
+  We can show, in an analogous manner, the second relation of axiom~(I\textquotesingle\!\textsubscript{3}).
+\end{proof}
+
+\begin{corollary}{1}
+  For $(\CC^\bullet,<)$ to be an inductive category in the sense of \cite{3c}, it is necessary and sufficient that $(\CC^\bullet,<)$ be an $\II(\II',\II'')$-structured category.
+\end{corollary}
+
+\begin{proof}
+  Indeed, conditions~(I\textsubscript{1}), (I\textsubscript{2}), (I\textquotesingle\!\textsubscript{3}), and (I\textquotesingle\!\textsubscript{4}) imply that $(\CC^\bullet,<)$ satisfies all the axioms of an inductive category in the sense of \cite{3c}, with the exception of the following axiom:
+  \begin{enumerate}
+    \item[\normalfont(I\textquotesingle\!\textsubscript{5})]
+      If $k<g\bullet f$, then there exist $g'<g$ and $f'<f$ such that $k=g'\bullet f'$;
+      axiom~(I\textquotesingle\!\textsubscript{3}) is equivalent to the condition $((\CC,<),\chi^\bullet,(\CC^\bullet\star\CC^\bullet,<))\in\II''$.
+      \qedhere
+  \end{enumerate}
+\end{proof}
+
+\begin{corollary}{2}
+  In an inductive category (in the sense of \cite{3c}), any two elements have a pseudo-product, and the composition law $(g,f)\mapsto gf$ is associative.
+\end{corollary}
+
+\begin{remark}
+  In what follows in this article, we will see that the $\HH(\HH',\HH'')$-structured categories such that $\HH'$ and $\HH''$ satisfy condition~($\sigma$) of \cref{proposition:i-10}~(\hyperref[section:i]{§I}) enjoy numerous properties.
+  It is this reason that motivated the new terminology used here, since the class of inductive categories in the sense of \cref{definition:ii-21} is more stable under certain operations than the class of inductive categories in the sense of \cite{3c}.
+\end{remark}
+
+\begin{proposition}{24}
+\label{proposition:ii-24}
   Let
 \end{proposition}
 
