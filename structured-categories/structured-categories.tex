@@ -6303,7 +6303,52 @@ In the following, we use the notation of \cref{section:ii.2}
     \quad\text{if and only if}\quad
     f'=f.
   \]
-  We
+  We have that $(s,\alpha,s)\in\Gamma$, since $\alpha(f)=f$ for all $f\in\CC$.
+  By axiom~(R) of \cref{definition:i-9}, there exists $s'\subs s\times s$ such that $p(s')=\CC^\bullet\star\CC^\bullet$ is equal to the diagonal $\Delta$ of $\CC\times\CC$.
+  The relations
+  \[
+    (s\times s,[\iota,\iota],s)\in\HH
+    \textand
+    [\iota,\iota](\CC)=\Delta
+  \]
+  imply that $(s',[\iota,\iota],s)\in\HH$.
+  Also, $(s,p_1\iota,s')\in\HH$, where $p_1$ is the projection from $p(s)\times p(s)$ to $p(s)$.
+  From the equalities
+  \[
+    (s',[\iota,\iota],s)\bullet(s,p_1\iota,s')=s'
+    \textand
+    (s,p_1\iota,s')\bullet(s',[\iota,\iota],s)=s
+  \]
+  it follows that
+  \[
+    (s,\chi^\bullet,s')
+    = (s,p_1\iota,s')
+    \in\Gamma.
+  \]
+  Thus $(\CC^\bullet,s)$ is an $\overline{\HH}((\Gamma,\Gamma),\Gamma)$-structured category.
+  Finally, the map
+  \[
+    (\overline{s},g,s)
+    \mapsto \big((p(\overline{s}),\overline{s}),g,(p(s),s)\big)
+  \]
+  is an isomorphism from $\HH$ to a full subcategory of $\overline{\HH}((\HH',\HH'),\HH'')$.\comm{86.3}{Let $|\cdot|\colon\overline{\HH}((\HH',\HH'),\HH'')\to\HH$ be the non-faithful functor mapping $F(\CC'^\bullet,s')\to(\CC''^\bullet,s'')$ to its restriction $F_0\colon s'_0\to s_0''$ to the objects; this functor admits a left adjoint, which maps $s$ onto the \emph{discrete structured category $(\CC^\bullet,s)$}.}
+\end{proof}
+
+\begin{theorem}{13}
+\label{theorem:ii-13}
+  If $\HH'$ and $\HH''$ are subcategories of $\HH$ that are stable under products, then the categories of homomorphisms
+  \[
+    (\MM,p_\FF\overline{p},\overline{\HH}(\HH',\HH''),\overline{\Gamma})
+    \textand
+    (\MM,p_\FF\overline{p},\overline{\GG}(\HH',\HH''),\overline{\Gamma}_\GG)
+    \textand
+    (\MM,p_\FF\overline{p},\overline{\HH}((\HH',\HH'),\HH''),\overline{\Gamma}')
+  \]
+  are categories of homomorphisms with finite products.
+\end{theorem}
+
+\begin{proof}
+  Since
 \end{proof}
 
 
