@@ -3773,7 +3773,7 @@ An $\HH(\HH',\HH'')$-structured category (resp. $\HH((\HH',\HH'),\HH'')$-structu
     \textand
     s_0\subs_p s.
   \]
-  It follows from the Corollary of \cref{theorem:i-1}~(\hyperref[section:i]{§I}) that $s_0$ is unique.
+  It follows from the Corollary of \cref{theorem:i-1}~(\cref{section:i}) that $s_0$ is unique.
 \end{proof}
 
 \begin{definition}{4}
@@ -5520,7 +5520,7 @@ Using the subcategories $\widetilde{\Omega}'$ and $\widetilde{\Omega}''$ defined
 \]
 
 The elements of $\II'$ are the strict inductive maps \cite{3a}.
-The subcategory $\II'$ of $\II$ contains the groupoid of invertible elements of $\II$ and satisfies condition~($\sigma$) of \cref{proposition:i-10}~(\hyperref[section:i]{§I}), since every restriction of a strict inductive map is a strict inductive map.
+The subcategory $\II'$ of $\II$ contains the groupoid of invertible elements of $\II$ and satisfies condition~($\sigma$) of \cref{proposition:i-10}~(\cref{section:i}), since every restriction of a strict inductive map is a strict inductive map.
 The subcategory $\II''$ of $\II$ also contains $\II\cap\Omega$, but $\II''$ does not satisfy condition~($\sigma$).
 The subcategories $\II'$ and $\II''$ of $\II$ are stable under products (but they are not categories of homomorphisms with finite products over $\MM$).
 
@@ -5600,7 +5600,7 @@ The subcategories $\II'$ and $\II''$ of $\II$ are stable under products (but the
 \end{corollary}
 
 \begin{remark}
-  In what follows in this article, we will see that the $\HH(\HH',\HH'')$-structured categories such that $\HH'$ and $\HH''$ satisfy condition~($\sigma$) of \cref{proposition:i-10}~(\hyperref[section:i]{§I}) enjoy numerous properties.
+  In what follows in this article, we will see that the $\HH(\HH',\HH'')$-structured categories such that $\HH'$ and $\HH''$ satisfy condition~($\sigma$) of \cref{proposition:i-10}~(\cref{section:i}) enjoy numerous properties.
   It is this reason that motivated the new terminology used here, since the class of inductive categories in the sense of \cref{definition:ii-21} is more stable under certain operations than the class of inductive categories in the sense of \cite{3c}.
 \end{remark}
 
@@ -6073,7 +6073,7 @@ $\HH'$ and $\HH''$ denote subcategories of $\HH$ that contain $\Gamma$.
 
 \begin{proposition}{28}
 \label{proposition:ii-28}
-  Suppose that $\HH'$ satisfies condition~($\sigma$) of \cref{proposition:i-10}~(\hyperref[section:i]{§I}).
+  Suppose that $\HH'$ satisfies condition~($\sigma$) of \cref{proposition:i-10}~(\cref{section:i}).
   For $(\CC^\bullet,s)$ to be an $\HH(\HH',\HH'')$-structured category (resp. an $\HH((\HH',\HH'),\HH'')$-structured category), it is necessary and sufficient that the following conditions be satisfied:
   \begin{enumerate}
     \item[\normalfont(1)]
@@ -6172,6 +6172,92 @@ $\HH'$ and $\HH''$ denote subcategories of $\HH$ that contain $\Gamma$.
 \end{proof}
 
 In the following, we use the notation of \cref{section:ii.2}
+
+\begin{theorem}{11}
+\label{theorem:ii-11}
+  $(\HH,\overline{p}_\HH,\overline{\HH}(\HH',\HH''),\overline{\Gamma})$ and $(\HH,\overline{p}_\HH,\overline{\GG}(\HH',\HH''),\overline{\Gamma}_\GG)$ are categories of homomorphisms that are saturated over $\HH$.
+\end{theorem}
+
+\begin{proof}
+  The only point to prove is that the conditions
+  \[
+    (\CC^\bullet,s)\in\overline{\HH}(\HH',\HH'')
+    \textand
+    (\overline{s},F,s)\in\Gamma
+  \]
+  imply the existence of $(\overline{\CC}^\bullet,\overline{s})$ such that
+  \[
+    \big((\overline{\CC}^\bullet,\overline{s}),F,(\CC^\bullet,s)\big)
+    \in\overline{\Gamma}.
+  \]
+  Since $\FF$ is saturated over $\MM$, there exists $\overline{\CC}^\bullet$ such that
+  \[
+    (\overline{\CC}^\bullet,F,\CC^\bullet)
+    \in\overline{\FF}_\gamma.
+  \]
+  \oldpage{413}
+  Let $s_0\subs s$ be such that $p(s_0)=\CC_0^\bullet$.
+  Since $s_0$ is a $p$-kernel (see the proof of \cref{proposition:ii-28}), by \cref{proposition:i-16}~(\cref{section:i}), there exists
+  \[
+    \overline{s}_0\subs\overline{s}
+    \quad\text{such that}\quad
+    (\overline{s}_0,F\iota,s_0)
+    \in\Gamma;
+  \]
+  we then have that $p(\overline{s}_0)=\overline{\CC}_0^\bullet$.
+  Since $\HH'$ contains $\Gamma$, we find that
+  \[
+    (\overline{s}_0\times\overline{s}_0,[\overline{\beta},\overline{\alpha}],\overline{s})
+    = (\overline{s}_0\times\overline{s}_0,F\iota\times F\iota,s_0\times s_0)\bullet(s_0\times s_0,[\beta,\alpha],s)\bullet(s,F^{-1},\overline{s})
+    \in\HH'
+  \]
+  where $\overline{\alpha}$ and $\overline{\beta}$ denote the source and target maps in $\overline{\CC}_0^\bullet$ (respectively).
+  Let $s'\subs s\times s$ be such that $p(s')=\CC^\bullet\star\CC^\bullet$.
+  Using the relation
+  \[
+    (\overline{s}\times\overline{s},F\times F,s\times s)
+    \in\Gamma,
+  \]
+  \cref{proposition:i-16}~(\cref{section:i}) ensures the existence of $\overline{s}'\subs\overline{s}\times\overline{s}$ such that
+  \[
+    (\overline{s}',(F\times F)\iota,s')\in\Gamma
+    \textand
+    p(\overline{s}')=\overline{\CC}^\bullet\star\overline{\CC}^\bullet.
+  \]
+  Consequently,
+  \[
+    (\overline{s},\overline{\chi}^\bullet,\overline{s}')
+    = (\overline{s},F,s)\bullet(s,\chi^\bullet,s')\bullet(\overline{s}',(F\times F)\iota,s')^{-1}
+    \in\HH''.
+  \]
+  It thus follows that
+  \[
+    (\overline{\CC}^\bullet,\overline{s})\in\overline{\HH}(\HH',\HH'')
+    \textand
+    \big((\overline{\CC}^\bullet,\overline{s}),F,(\CC^\bullet,s)\big)\in\overline{\HH}(\HH',\HH'').
+  \]
+  If, further, $(\CC^\bullet,s)\in\overline{\GG}(\HH',\HH'')_0$, then
+  \[
+    (\overline{s},\overline{j},\overline{s})
+    = (\overline{s},F,s)\bullet(s,j,s)\bullet(s,F^{-1},\overline{s})
+    \in\Gamma
+  \]
+  where $j$ and $\overline{j}$ denote the map $f\mapsto f^{-1}$ in $\CC^\bullet$ and $\overline{\CC}^\bullet$ (respectively).
+  Thus
+  \[
+    \big((\overline{\CC}^\bullet,\overline{s}),F,(\CC^\bullet,s)\big)
+    \in\overline{\GG}(\HH',\HH'').
+    \qedhere
+  \]
+\end{proof}
+
+\begin{corollary*}
+  $(\MM,p_\FF\overline{p},\overline{\HH}(\HH',\HH''),\overline{\Gamma})$ and $(\MM,p_\FF\overline{p},\overline{\GG}(\HH',\HH''),\overline{\Gamma}_\GG)$ are categories of homomorphisms.
+\end{corollary*}
+
+\begin{proof}
+  Suppose
+\end{proof}
 
 
 
