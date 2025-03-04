@@ -227,6 +227,8 @@
 
 \todo switch from hyperref to cref
 
+\todo make cref use § for (sub)sections
+
 \todo check for todo
 
 \tableofcontents
@@ -362,7 +364,7 @@ Let $\Sigma$ be the class of pairs $(f,z)\in\CC\times\Sigma_0$ such that $fz$ is
   Hence the notion of a \emph{strong species of structures}: a species of structures in which the acting subcategory contains each $f$ whose source is in it;
   equivalently, the composite $fz$ exists if and only if $\alpha(f)=p_0(z)$.
 
-  Strong species of structures are characterised by axioms~(1), (2), (3), and (4a) --- but not (4b) --- of \cref{definition:i-1} for an acting category (cf. \hyperref[remark:i-2]{Remark~2} in \hyperref[section:i.3]{§I.3}).
+  Strong species of structures are characterised by axioms~(1), (2), (3), and (4a) --- but not (4b) --- of \cref{definition:i-1} for an acting category (cf. \hyperref[remark:i-2]{Remark~2} in \cref{section:i.3}).
   The corresponding functor $p\colon\Sigma\to\CC$ from the hypermorphisms category satisfies the condition that the diagram
   \[
     \begin{tikzcd}
@@ -441,7 +443,7 @@ We denote by $\MM_0$ a class of classes such that if it contains $X$ then it als
 
   In fact, Charles' conception on this subject evolved from 1957 to 1967: in \cite{coll47} he wanted to speak about ``the category $\widetilde{\mathcal{E}}$ of all sets'', whence the (not too formal) distinction between classes and sets, as in Bernays--Gödel theory \cite{comm10}.
   In \cite{coll55}, as well as this 1963 paper, logical problems are avoided thanks to the use of a ``class $\MM_0$ of classes'';
-  Charles thought of $\MM_0$ as a ``large enough'' variable set (and the word ``class'' is used to indicate that no particular set theory is adopted), on which conditions are added when necessary (for instance, $\MM_0$ is closed under products and subsets in \hyperref[section:ii]{§II});
+  Charles thought of $\MM_0$ as a ``large enough'' variable set (and the word ``class'' is used to indicate that no particular set theory is adopted), on which conditions are added when necessary (for instance, $\MM_0$ is closed under products and subsets in \cref{section:ii});
   in \cite{coll66,coll100}, $\MM_0$ must be closed under quotients and countable coproducts.
   From \cite{coll109} onwards, $\MM_0$ becomes a universe.
 
@@ -1035,7 +1037,7 @@ then we say that $\HH$ is \emph{saturated over $\CC$}.
   It is ``internalised'' in \cite{coll89,coll90,coll95,coll96}, giving an ``internal version'' of the Kan extension Theorem (see Comment 25.1).
 \end{longcomm}
 
-In particular, let $(\MM,p,\HH,\SS)$ be a category of homomorphisms such that $\MM$ is the category defined in \hyperref[section:i.2]{§I.2}.\comm{29.3}{If $(\MM,p,\HH,\SS)$ is a category of homomorphisms with $\SS$ the groupoid of all isomorphisms of $\HH$, then $\HH$ is also called a \emph{concrete category}, and $p\colon\HH\to\MM$ a \emph{concrete functor} (and we'll often use these terms). In fact, some authors define a concrete functor as any set-valued amnestic faithful functor (without any ``transport of structures'' property); most of the following results remain valid in this case.}
+In particular, let $(\MM,p,\HH,\SS)$ be a category of homomorphisms such that $\MM$ is the category defined in \cref{section:i.2}.\comm{29.3}{If $(\MM,p,\HH,\SS)$ is a category of homomorphisms with $\SS$ the groupoid of all isomorphisms of $\HH$, then $\HH$ is also called a \emph{concrete category}, and $p\colon\HH\to\MM$ a \emph{concrete functor} (and we'll often use these terms). In fact, some authors define a concrete functor as any set-valued amnestic faithful functor (without any ``transport of structures'' property); most of the following results remain valid in this case.}
 Let $h\in\HH$;
 the element $p(h)$ is, by definition, a map $(p(\beta(h)),g,p(\alpha(h)))$, where $g$ is a surjection.
 Since the data of $\alpha(h)$, $\beta(h)$, and $g$ all together entirely determine $p(h)$, we simply represent $h$ by the triple $(\beta(h),g,\alpha(h))$ instead of by $(\beta(h),p(h),\alpha(h))$.
@@ -1051,7 +1053,7 @@ and if $p(h)$ is the canonical injection from $p(\alpha(h))$ to $p(\beta(h))$, t
   \begin{enumerate}
     \item[\normalfont(1)]
       \oldpage{358}
-      Let $(\MM,p_\FF,\FF)$ be the functor defined in \hyperref[section:i.2]{§I.2};
+      Let $(\MM,p_\FF,\FF)$ be the functor defined in \cref{section:i.2};
       let $\FF_\gamma$ be the groupoid of invertible elements of $\FF$ (equivalences of functors);
       then $(\MM,p_\FF,\FF,\FF_\gamma)$ is a category of homomorphisms.
     \item[\normalfont(2)]
@@ -1065,7 +1067,7 @@ and if $p(h)$ is the canonical injection from $p(\alpha(h))$ to $p(\beta(h))$, t
       Let $\TT$ be the groupoid of invertible elements of $\tTT$ (homeomorphisms);
       then $(\MM,\theta,\tTT,\TT)$ is a category of homomorphisms.
     \item[\normalfont(3)]
-      Let $(\MM,\omega,\widetilde{\Omega})$ be the functor defined in \hyperref[section:i.2]{§I.2};
+      Let $(\MM,\omega,\widetilde{\Omega})$ be the functor defined in \cref{section:i.2};
       let $\Omega$ be the groupoid of invertible elements of $\widetilde{\Omega}$ (isomorphisms between ordered classes);
       then $(\MM,\omega,\widetilde{\Omega},\Omega)$ is a category of homomorphisms.
     \item[\normalfont(4)]
@@ -1153,11 +1155,11 @@ This relation evidently implies that $p(s)=p(s')$.
     \quad\text{if and only if}\quad
     \alpha(f)=p(s).
   \]
-  Then $(p(\Gamma),p,\HH_{\relrho})$ is the species of structures under a species of morphisms, and the proposition follows from the end of \hyperref[section:i.2]{§I.2}.
+  Then $(p(\Gamma),p,\HH_{\relrho})$ is the species of structures under a species of morphisms, and the proposition follows from the end of \cref{section:i.2}.
 \end{proof}
 
-From now on, suppose that $\CC$ is an inductive category (in the sense of \hyperref[section:ii.6]{§II.6}, which is slightly more general than that of \cite{3c}).
-If $g,f\in\CC$, then their pseudo-product in $\CC$, which is always defined (cf. \hyperref[section:ii]{§II}, \hyperref[proposition:i-22][Proposition~22]), is denoted by $gf$.
+From now on, suppose that $\CC$ is an inductive category (in the sense of \cref{section:ii.6}, which is slightly more general than that of \cite{3c}).
+If $g,f\in\CC$, then their pseudo-product in $\CC$, which is always defined (cf. \cref{section:ii}, \cref{proposition:i-22}), is denoted by $gf$.
 
 \begin{longcomm}{31.1}
   Up to (but not including) \cref{definition:i-9}, the text remains valid without any modification \emph{if the hypothesis that $\CC$ is inductive is replaced by the hypothesis that $\CC$ is a sub-inductive category} (cf. \cite{coll69}), since all the pseudo-products used here still exist.
@@ -1565,7 +1567,7 @@ If there is no risk of confusion, then we simply say that $s$ is a substructure 
 
 \begin{proof}
   Conditions~(1) and (3) imply that $(\HH,\subs)$ is an ordered category (see \hyperref[section:ii]{§II}, \cref{definition:i-18}).
-  Condition~(2) implies that $p$ belongs to $\widetilde{\Omega}'$ (see \hyperref[section:ii.6]{§II.6}), i.e. (§IV) that $(\HH,\subs)$ is an ordered category over $(\CC,<)$.\comm{35.1}{Charles never published §IV, but the results that he intended to put in it are scattered across several papers, e.g. ordered categories over an ordered category are considered in \cite{coll75}.}
+  Condition~(2) implies that $p$ belongs to $\widetilde{\Omega}'$ (see \cref{section:ii.6}), i.e. (§IV) that $(\HH,\subs)$ is an ordered category over $(\CC,<)$.\comm{35.1}{Charles never published §IV, but the results that he intended to put in it are scattered across several papers, e.g. ordered categories over an ordered category are considered in \cite{coll75}.}
 \end{proof}
 
 \begin{longcomm}{35.2}
@@ -2179,7 +2181,7 @@ We similarly define the notion of a \emph{left-solving} category of homomorphism
 
   In usual cases (in particular, if $\CC$ is the category of sets), $p(s)$ is an equaliser of $(p(h),p(h'))$;
   then, since $p$ is faithful, $s$ is a $p$-kernel of $(h,h')$ if and only if it is an equaliser of $(h,h')$ in $\HH$ (cf. \cite[Proposition~3.1]{coll109});
-  so axiom~(R) in \cref{definition:i-9} means that $p$ creates equalisers defined by meets (cf. Comment~221.2 on \cite{coll100}).
+  so axiom~(R) of \cref{definition:i-9} means that $p$ creates equalisers defined by meets (cf. Comment~221.2 on \cite{coll100}).
   This justifies the name ``$p$-kernel'' (an equaliser is also called a \emph{difference kernel}, or even just a \emph{kernel}).
 \end{longcomm}
 
@@ -2473,7 +2475,7 @@ In what follows, we further suppose that $\HH$ is endowed with an order relation
 \end{proof}
 
 \begin{remark}
-  \cref{theorem:i-3} still holds true (without any modifications to the proof) if we replace the hypothesis ``$(\HH,<)$ is an inductive category'' by the hypothesis ``$(\HH,<)$ is an ordered category in which any two elements have an intersection'' (\hyperref[section:ii.6]{§II.6}).\comm{44.1}{It suffices that \emph{any two parallel morphisms admit a meet} (this remark allows us to apply the result when $\CC$ is the category $\FF$).}
+  \cref{theorem:i-3} still holds true (without any modifications to the proof) if we replace the hypothesis ``$(\HH,<)$ is an inductive category'' by the hypothesis ``$(\HH,<)$ is an ordered category in which any two elements have an intersection'' (\cref{section:ii.6}).\comm{44.1}{It suffices that \emph{any two parallel morphisms admit a meet} (this remark allows us to apply the result when $\CC$ is the category $\FF$).}
 \end{remark}
 
 \begin{example}
@@ -2972,7 +2974,7 @@ imply that $p(sh)=p(s)p(h)$.
   Suppose that the following conditions are satisfied:
   \begin{enumerate}
     \item[\normalfont(1)]
-      $(\CC,<)$ is a completely right regular $(\II,\II',\II'')$-structured category (see \hyperref[section:ii.6]{§II.6}), and that the groupoid $\CC_\gamma$ of invertible elements of $\CC$ is an inductive groupoid (\hyperref[section:ii.6]{§II.6}).
+      $(\CC,<)$ is a completely right regular $(\II,\II',\II'')$-structured category (see \cref{section:ii.6}), and that the groupoid $\CC_\gamma$ of invertible elements of $\CC$ is an inductive groupoid (\cref{section:ii.6}).
 
     \item[\normalfont(2)]
       $(\HH,<)$ is completely right regular.
@@ -3358,7 +3360,7 @@ for a substructure $s$ of $S$ to be the $p$-kernel of $(h,h')$, it is necessary 
 
 \begin{proof}
   Let $(S_1,g,S)=\overline{g}\in\Gamma$, and let $s$ be the $p$-kernel of $(h,h')$, where $\alpha(h)=S$.
-  By axiom~(R) in \cref{definition:i-9}, the pair $(h\bullet g^{-1},h'\bullet g^{-1})$ admits a $p$-kernel $s_1\in S_1$;
+  By axiom~(R) of \cref{definition:i-9}, the pair $(h\bullet g^{-1},h'\bullet g^{-1})$ admits a $p$-kernel $s_1\in S_1$;
   since $p(s_1)=g(p(s))$, it follows from \cref{proposition:i-7} that we have
   \[
     \overline{g}' = (s_1,g\iota,s)
@@ -4092,10 +4094,10 @@ Note that $(D_1^\perp,\iota,D^\perp)\in\DD$ if and only if $D^\perp$ is a sub-se
 
 
 \subsubsection*{Example IV}
-\label{section:ii-3-iv}
+\label{section:ii.3.iv}
 
 \oldpage{388}
-In \hyperref[section:ii-3-iii]{Example~III}, we can replace $\DD$ by the subcategory $\DD'$ (resp. $\DD''$) consisting of triples $(D_1^\perp,f,D^\perp)$ such that $D^\perp$ and $D_1^\perp$ are semigroups that admit a unit $1$ (resp. that admit an element $0$ such that $z\perp0=0\perp z=0$ for all $z\in D$), and such that we have $f(1)=1$ (resp. $f(0)=0$).
+In \hyperref[section:ii.3.iii]{Example~III}, we can replace $\DD$ by the subcategory $\DD'$ (resp. $\DD''$) consisting of triples $(D_1^\perp,f,D^\perp)$ such that $D^\perp$ and $D_1^\perp$ are semigroups that admit a unit $1$ (resp. that admit an element $0$ such that $z\perp0=0\perp z=0$ for all $z\in D$), and such that we have $f(1)=1$ (resp. $f(0)=0$).
 
 For $(\CC^\bullet,\perp)$ to be $\DD'$-structured (resp. $\DD''$-structured), it is necessary and sufficient that $(\CC^\bullet,\perp)$ be a $\DD$-structured category and that $1\in\CC_0^\bullet$ (resp. $0\in\CC_0^\bullet$).
 
@@ -4124,7 +4126,7 @@ A $\DD'$-structured category is a category with strictly associative multiplicat
 
 
 \subsubsection*{Example V}
-\label{section:ii-3-v}
+\label{section:ii.3.v}
 
 Let $G$ be a semigroup.
 Let $[G]$ be the category defined in the following way.\comm{60.2}{This $[G]$ is the \emph{category of $G$-spaces}.}
@@ -4216,7 +4218,7 @@ If $G$ admits a unit $1$, let $[G,1]$ be the full subcategory of $[G]$ whose uni
 
 
 \subsection{Double categories}
-\label{section:ii-4}
+\label{section:ii.4}
 
 Let $(\MM,p_\FF,\FF,\FF_\gamma)$ be the category of homomorphisms defined in \hyperref[section:i]{§I}.
 
@@ -4787,10 +4789,10 @@ We will later see (\hyperref[section:iii]{§III}) another generalisation of the 
 
 
 \subsection{$n$-fold categories}
-\label{section:ii-5}
+\label{section:ii.5}
 
 By \cref{theorem:ii-2}, the category $\overline{\FF}$ of double functors is a category of homomorphisms $(\MM,p_\FF\overline{p_\FF},\overline{\FF},\overline{\FF}_\gamma)$ over $\MM$.
-We will see in \hyperref[section:ii-7]{Section~II.7} that this category of homomorphisms is right solving and has finite products.
+We will see in \hyperref[section:ii.7]{Section~II.7} that this category of homomorphisms is right solving and has finite products.
 Consequently, we can define $\overline{\FF}$-structured functors, and, more general, give the following definition:
 
 \begin{definition}{15}
@@ -5088,7 +5090,7 @@ In particular, it follows from \cref{proposition:ii-15} that, if $(\CC^\bullet,\
 
 
 \subsection{Order structures on a category}
-\label{section:ii-6}
+\label{section:ii.6}
 
 \oldpage{400}
 
@@ -5118,7 +5120,7 @@ This result can be generalised to the case where we give $n$ orders on the class
   thus, if $f$ and $g$ have the same set of units in $\CC^{\perp_i}$, then they also have the same set of vertices, and so $f=g$.
 \end{proof}
 
-Let $\widetilde{\Omega}$ be the category of homomorphisms between ordered classes\comm{72.1}{A homomorphism between posets is just a monotone map.}, and $(\MM,\omega,\widetilde{\Omega},\Omega)$ the category of homomorphisms described in \hyperref[section:i]{Section~I}.
+Let $\widetilde{\Omega}$ be the category of homomorphisms between ordered classes\comm{72.1}{A homomorphism between posets is just a monotone map.}, and $(\MM,\omega,\widetilde{\Omega},\Omega)$ the category of homomorphisms described in \cref{section:i}.
 Then $(\MM,\omega,\widetilde{\Omega},\Omega)$ is a category of homomorphisms with finite products that is also right solving.
 The product of $(A,<)$ with $(A',<)$ is the ordered class $(A\times A',<)$, whose order is the product order of the orders of $A$ and of $A'$.
 
@@ -6017,7 +6019,7 @@ Recall (see \cite{3a}) that $(\CC^\bullet,<)$ is an inductive groupoid if $(\CC,
 
 
 \subsection{General theorems on structured categories}
-\label{section:ii-7}
+\label{section:ii.7}
 
 All throughout this section, we suppose that the category of homomorphisms $(\MM,p,\HH,\Gamma)$ with finite products is right solving.\comm{82.3}{So $p\colon\HH\to\MM$ is a concrete functor creating canonical finite products and equalisers.}
 $\HH'$ and $\HH''$ denote subcategories of $\HH$ that contain $\Gamma$.
@@ -6041,7 +6043,7 @@ $\HH'$ and $\HH''$ denote subcategories of $\HH$ that contain $\Gamma$.
   By the definition of a substructure, we also have that $(s',\iota,s'')\in\HH$, and so $(s,\chi^\bullet,s'')\in\HH$.
   We will now show that the conditions are sufficient.
   \oldpage{411}
-  By axiom~(R) in \cref{definition:i-9}, the pair $((s,\alpha,s),(s,\iota,s))$ admits a $p$-kernel $s_0\subs s$ such that $p(s_0)$ is the class of $f\in\CC$ for which $f=\alpha(f)$, i.e. $p(s_0)=\CC_0^\bullet$.
+  By axiom~(R) of \cref{definition:i-9}, the pair $((s,\alpha,s),(s,\iota,s))$ admits a $p$-kernel $s_0\subs s$ such that $p(s_0)$ is the class of $f\in\CC$ for which $f=\alpha(f)$, i.e. $p(s_0)=\CC_0^\bullet$.
   Since
   \[
     \alpha(p(s))=\CC_0^\bullet
@@ -6092,8 +6094,84 @@ $\HH'$ and $\HH''$ denote subcategories of $\HH$ that contain $\Gamma$.
     (s_0\times s_0,[\beta,\alpha],s)
     \in\HH'.
   \]
-  By \todo
+  By \cref{proposition:ii-3}, we have that $s_0\times s_0\subs s\times s$, and so, with the help of condition~($\sigma$), we find that $s_0\times s_0\subs s\times s$ in $\HH'$, and
+  \[
+    (s\times s, [\beta,\alpha], s)
+    \in\HH'.
+  \]
+  Thus conditions~(1), (2), and (3) are necessary.
+
+  We now show that these conditions are sufficient.
+  An analogous argument to that in the proof of \cref{proposition:ii-27} shows that, in $\HH$, there exist
+  \[
+    \begin{aligned}
+      s_0\subs s
+      &\quad\text{such that}\quad
+      p(s_0)=\CC_0^\bullet
+    \\s'\subs s\times s
+      &\quad\text{such that}\quad
+      p(s')=\CC^\bullet\star\CC^\bullet.
+    \end{aligned}
+  \]
+  Then axiom~(2) of \cref{definition:ii-3} is satisfied.
+  Furthermore, since $s_0\times s_0\subs s\times s$ in $\HH'$, we see, using condition~(2), that
+  \[
+    (s_0\times s_0,[\beta,\alpha],s)
+    \in\HH'.
+  \]
+  The $\HH((\HH',\HH'),\HH'')$-structured case is dealt with in an analogous way.
 \end{proof}
+
+\begin{corollary*}
+  \oldpage{412}
+  If $\HH'$ and $\HH''$ satisfy condition~($\sigma$) of \cref{proposition:i-10}, then, for $(\CC^\bullet,s)$ to be an $\HH((\HH',\HH'),\HH'')$-structured groupoid, it is necessary and sufficient that it satisfy conditions~(1) and (3) of \cref{proposition:ii-28} as well as the following conditions:
+  \begin{enumerate}
+    \item[\normalfont(2\textquotesingle)]
+      $(s,\alpha,s)\in\HH'$.
+    \item[\normalfont(4)]
+      $\CC^\bullet$ is a groupoid, and $(s,j,s)\in\HH$, where $j$ denotes the map $f\mapsto f^{-1}$ for $f\in\CC$.
+  \end{enumerate}
+\end{corollary*}
+
+\begin{proof}
+  The conditions are evidently necessary.
+  Conversely, if they are satisfied, then\comm{84.1}{This is true since (4) implies that $(s,j,s)\in\Gamma$, and $\HH'$ contains $\Gamma$.}
+  \[
+    (s,\beta,s)
+    = (s,\alpha,s)\bullet(s,j,s)
+    \in\HH'
+  \]
+  and so condition~(2) of \cref{proposition:ii-28} is also satisfied.
+\end{proof}
+
+\begin{proposition}{29}
+\label{proposition:ii-29}
+  If $\HH'$ is stable under products and satisfies condition~($\sigma$) of \cref{proposition:i-10}, then $\overline{\HH}((\HH',\HH'),\HH'')$ is a full subcategory of $\overline{\HH}(\HH',\HH'')$.
+\end{proposition}
+
+\begin{proof}
+  Let $s\in\HH_0$.
+  By axiom~(R) of \cref{definition:i-9}, the pair $((s,p_1,s\times s),(s,p_2,s\times s))$, where $p_1$ and $p_2$ are the canonical projections from $p(s)\times p(s)$ to $p(s)$, admits a $p$-kernel $s^1\subs s\times s$ such that $p(s^1)$ is the diagonal $\Delta$ of $p(s)\times p(s)$.
+  Suppose that $(\CC^\bullet,s)\in\overline{\HH}((\HH',\HH'),\HH'')_0$.
+  The relations $(s,\alpha,s),(s,\beta,s)\in\HH'$ imply that
+  \[
+    (s\times s, \beta\times\alpha, s\times s)
+    \in\HH'.
+  \]
+  Since $\HH'$ satisfies condition~($\sigma$) of \cref{proposition:i-10}, we have that
+  \[
+    (s\times s,\iota,s^1)\in\HH'
+  \]
+  whence
+  \[
+    (s\times s,[\beta,\alpha],s^1)
+    = (s\times s,\beta\times\alpha,s\times s)
+    \in\HH'.
+  \]
+  Thus $(\CC^\bullet,s)$ is an $\HH(\HH',\HH'')$-structured category, which proves the proposition, since $(s^1,[\iota,\iota],s)\in\Gamma$ (see \cref{theorem:ii-12}).
+\end{proof}
+
+In the following, we use the notation of \cref{section:ii.2}
 
 
 
