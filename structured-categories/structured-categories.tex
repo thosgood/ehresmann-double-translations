@@ -6175,7 +6175,7 @@ In the following, we use the notation of \cref{section:ii.2}
 
 \begin{theorem}{11}
 \label{theorem:ii-11}
-  $(\HH,\overline{p}_\HH,\overline{\HH}(\HH',\HH''),\overline{\Gamma})$ and $(\HH,\overline{p}_\HH,\overline{\GG}(\HH',\HH''),\overline{\Gamma}_\GG)$ are categories of homomorphisms that are saturated over $\HH$.
+  $(\HH,\overline{p}_\HH,\overline{\HH}(\HH',\HH''),\overline{\Gamma})$ and $(\HH,\overline{p}_\HH,\overline{\GG}(\HH',\HH''),\overline{\Gamma}_\GG)$ are categories of homomorphisms, saturated over $\HH$.
 \end{theorem}
 
 \begin{proof}
@@ -6256,7 +6256,54 @@ In the following, we use the notation of \cref{section:ii.2}
 \end{corollary*}
 
 \begin{proof}
-  Suppose
+  Suppose that we have
+  \[
+    \big((\overline{\CC}^\bullet,\overline{s}),F,(\CC^\bullet,s)\big)
+    \in\overline{\Gamma}
+    \textand
+    (\CC^\perp,s_1)
+    \in\overline{\HH}(\HH',\HH'')_0.
+  \]
+  Since $(\MM,p,\Gamma)$ is a species of structures, there exists $\overline{s}_1\in\HH_0$ such that
+  \[
+    (\overline{s}_1,F,s_1)
+    \in\Gamma,
+  \]
+  and it follows from \cref{theorem:ii-11} that we then have that
+  \[
+    \big((\overline{\CC}^\perp,\overline{s}_1),F,(\CC^\perp,s_1)\big)
+    \in\overline{\Gamma}.
+    \qedhere
+  \]
+\end{proof}
+
+\begin{theorem}{12}
+\label{theorem:ii-12}
+  \[
+    (\HH,\overline{p}_\HH,\overline{\HH}((\HH',\HH'),\HH''),\overline{\Gamma}')
+    \textand
+    (\HH,\overline{p}_\HH,\overline{\GG}((\HH',\HH'),\HH''),\overline{\Gamma}'_\GG)
+  \]
+  are categories of homomorphisms, saturated over $\HH$;
+  \oldpage{414}
+  \[
+    (\MM,p_\FF\overline{p},\overline{\HH}((\HH',\HH'),\HH''),\overline{\Gamma}')
+    \textand
+    (\MM,p_\FF\overline{p},\overline{\GG}((\HH',\HH'),\HH''),\overline{\Gamma}'_\GG)
+  \]
+  are categories of homomorphisms, and $\HH$ can be identified with a full subcategory of $\overline{\HH}((\HH',\HH'),\HH'')$.
+\end{theorem}
+
+\begin{proof}
+  The first part of this theorem is proven in an analogous manner to \cref{theorem:ii-11}.
+  Let $s\in\HH_0$ and set $\CC=p(s)$.
+  We endow $\CC$ with the (trivial) composition law
+  \[
+    (f',f)\mapsto f'\bullet f=f
+    \quad\text{if and only if}\quad
+    f'=f.
+  \]
+  We
 \end{proof}
 
 
