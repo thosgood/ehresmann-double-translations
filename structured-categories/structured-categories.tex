@@ -199,7 +199,6 @@
 
     The page numbers of the original article are included at the relevant locations in the margins of this version.
     The bibliography numbering from the original has been retained, and additional citations from the comments and errata are listed in separate bibliographies, numbered as in \cite{coll}, but with a slight modification: those referring to the works within \cite{coll} are preceded by an ``Œ''; those referring to external works are preceded by a ``C''.
-    \todo{change theorem numbers to include roman section number?}\todo
 
     \medskip
 
@@ -220,9 +219,11 @@
 
 \todo slightly smaller $\bullet$
 
-\todo add citations from collected works notes
+\todo add citations to collected works (\texttt{coll})
 
-\todo figure out mathfrak vs mathcal for e.g. $\TT$
+\todo add citations from collected works notes (\texttt{comm})
+
+\todo expand journal abbreviations in citations from collected works notes (\texttt{comm})
 
 \todo sort out spacing before lrcorner when a rmenv ends with an enum
 
@@ -339,8 +340,6 @@ Since the notion of species of structures \cite{3a} is essential in this article
       \end{enumerate}
   \end{enumerate}
 \end{definition}
-
-\todo{fix the spacing before the corner symbol in the above rmenv}
 
 These axioms imply that, for all $z\in\Sigma_0$, there exists exactly one $e\in\CC_0$ such that $ez$ is defined;
 we thus obtain a map $p_0\colon z\mapsto e$ from $\Sigma_0$ to $\CC_0$;
@@ -918,8 +917,6 @@ where $(\CC,F)$ is an ordered species of structures, is a bijection from the cla
       imply that $h=h'$.
   \end{enumerate}
 \end{definition}
-
-\todo{spacing at the end of the enum inside the rmenv above as well}
 
 Let $(\CC,p,\HH,\SS)$ be a category of homomorphisms.
 An element $h\in\HH$ can be identified, by condition~(4) of \cref{definition:i-6}, with a triple $(S',f,S)$, where
@@ -7499,8 +7496,9 @@ endowed with the composition law $\sqsupset$ given by
 \begin{remark}
   \emph{(Added during the correction of proofs).}
 
-  Let $(\CC^\bullet,s)$
-  \todo
+  Let $(\CC^\bullet,s)$ be an $\HH$-structured category and $\rho$ an equivalence relation on $\CC$ such that there exists a quotient category $\CC^\bullet/\rho$ of $\CC^\bullet$.
+  If there exists a quotient structure \cite{3e} $s/\rho$ of $s$ by $\rho$ in $(\MM,p,\HH,\Gamma)$, then, in general, $(\CC^\bullet/\rho,s/\rho)$ is not an $\HH$-structured category.
+  This is why more recently we have avoided defining the notion of a weakly $\HH$-structured category, stable under passing to the quotient (see \cite{coll66}).
 \end{remark}
 
 
