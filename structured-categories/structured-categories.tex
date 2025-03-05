@@ -152,9 +152,10 @@
 % Unary operators
 \DeclareMathOperator{\sq}{\square}
 \DeclareMathOperator{\hsq}{\raisebox{-.05em}{$\hsqbox$}}
-\DeclareMathOperator{\vsq}{\raisebox{-.1em}{$\vsqbox$\,}}
+\DeclareMathOperator{\vsq}{\raisebox{-.1em}{$\vsqbox$}}
 \DeclareMathOperator{\ohsq}{\overline{\hsq}}
 \DeclareMathOperator{\ovsq}{\overline{\raisebox{-.1em}{$\vsqbox$}}}
+\DeclareMathOperator{\trio}{\sqsupset}
 % Binary operators
 \newcommand{\hmult}{\mathbin{\raisebox{-.05em}{$\hsqbox$}}}
 \newcommand{\vmult}{\mathbin{\raisebox{-.1em}{$\vsqbox$}}}
@@ -216,8 +217,6 @@
   \end{translator}
 
 %% Content %%
-
-\todo fix spacing in e.g. $(\vsq\CC,\sq p,\vsq\HH,\overline{\Gamma}')$
 
 \todo slightly smaller $\bullet$
 
@@ -7192,7 +7191,127 @@ Using axiom~(R) of \cref{definition:i-9}~(\cref{section:i}) along with \cref{pro
   \end{enumerate}
 \end{examples}
 
-Recall that, if $\CC^\bullet$ is a category, then
+Recall that, if $\CC^\bullet$ is a category, then we define the \emph{category of trios} of $\CC$, denoted $\trio\CC^\bullet$, to be the class of triples $((f',f),h)\in(\CC\times\CC)\times\CC$ such that
+\[
+  \alpha(f)=\alpha(h)
+  \textand
+  \alpha(f')=\beta(h),
+\]
+endowed with the composition law $\sqsupset$ given by
+\[
+  ((\overline{f}',\overline{f}),\overline{h}) \sqsupset ((f',f),h)
+  = ((\overline{f}',f),\overline{h}\bullet h)
+  \quad\text{if and only if}\quad
+  \overline{f}=f'.
+\]
+
+\begin{theorem}{17}
+\label{theorem:ii-17}
+  Let $(\CC^\bullet,s)$ be an $\HH(\HH',\HH)$-structured category (resp. an $\HH((\HH',\HH'),\HH)$-structured category).
+  Then there exists $\trio s\in\HH_0$ such that $(\trio\CC^\bullet,\trio s)$ is an $\HH(\HH',\HH')$-structured category (resp. an $\HH((\HH',\HH'),\HH)$-structured category);
+  if $(\CC^\bullet,s)\in\overline{\GG}(\HH',\HH)_0$, then we also have that $(\trio\CC^\bullet,\trio s)\in\overline{\GG}(\HH',\HH)_0$.
+\end{theorem}
+
+\begin{proof}
+  Using \cref{proposition:ii-4}, we see that
+  \[
+    \begin{aligned}
+      \overline{g}
+      &= (s\times s,\alpha p_2\times\beta, (s\times s)\times s)
+      \in\HH
+    \\\overline{g}'
+      &= (s\times s,\pi(\alpha p_1\times\alpha), (s\times s)\times s)
+      \in\HH
+    \end{aligned}
+  \]
+  where $\pi(f_1,f_2)=(f_2,f_1)$.
+  Since $\trio\CC^\bullet$ is the class of elements $((f',f),h)$ such that
+  \[
+    p(\overline{g})\big((f',f),h\big)
+    = (\alpha(f),\beta(h))
+    = p(\overline{g}')\big((f',f),h\big),
+  \]
+  \oldpage{424}
+  axiom~(R) of \cref{definition:i-9}~(\cref{section:i}) ensures the existence of $\trio s\subs(s\times s)\times s$ with $p(\trio s)=\trio\CC^\bullet$.
+  Since $\trio\CC^\bullet$ is a subcategory of $(\CC\times\CC)^\perp\times\CC^\bullet$, it follows from \cref{theorem:ii-14} and \cref{proposition:ii-30} that $(\trio\CC^\bullet,\trio s)$ is an $\HH(\HH',\HH)$-structured category.
+  If furthermore $(\CC^\bullet,s)\in\overline{\GG}(\HH',\HH)_0$, then, for the same reason, we also have that $(\trio\CC^\bullet,\trio s)\in\overline{\GG}(\HH',\HH)_0$.
+  If $(\CC^\bullet,s)$ is an $\HH((\HH',\HH'),\HH)$-structured category, then there exists $\trio s_0\subs\trio s$ such that
+  \[
+    p(\trio s_0)
+    = (\trio\CC^\bullet)_0.
+  \]
+  We will show that $(\trio s_0,\alpha^{\trio},\trio s)\in\HH'$.
+  Using \cref{proposition:i-4}~\cref{section:i} and \cref{proposition:i-7}~(\cref{section:i}), we find that
+  \[
+    \begin{aligned}
+      \overline{a}_1
+      = &\big(
+        s\times(s_0\times s),
+        \gamma,
+        (s\times s_0)\times s
+      \big)
+    \\\bullet
+      &\big(
+        (s\times s_0)\times s,
+        \pi\times\iota,
+        (s_0\times s)\times s
+      \big)
+    \\\bullet
+      &\big(
+        (s_0\times s)\times s,
+        (\alpha\times\iota)\times\iota,
+        (s\times s)\times s
+      \big)
+    \end{aligned}
+  \]
+  where\comm{96.1}{``Pointwise'', we get \[((f',f),h)\xmapsto{\overline{a}_1}(f,(\beta h, h))\xmapsto{\overline{a}_2}(f,\alpha h)\xmapsto{\overline{a}_3}((f,f),\alpha f).\]}
+  \[
+    \begin{aligned}
+      \gamma((f',e),h)
+      &= (f',(e,h))
+    \\\overline{a}_2
+      &= (s\times s_0,\iota\times\alpha,s\times s)\bullet(s\times s,\iota\times\gamma_\beta,s\times s_\beta)
+      \in\HH'
+    \\\overline{a}_3
+      &= \big(
+        (s\times s)\times s_0,
+        ([\iota,\iota]\times\iota)\iota,
+        s'_\alpha
+      \big)
+      \vdash_p (\trio s_0,s'_\alpha)
+      \in\Gamma.
+    \end{aligned}
+  \]
+  Axiom~(R) allows us to construct $s_1\subs s\times s_\beta$ such that $p(s_1)$ is the class of triples $(f,(\beta(h),h))$ for which $\alpha(f)=\alpha(h)$.
+  From the relations
+  \[
+    p(\overline{a}_1)(\trio\CC^\bullet)\subs p(s_1)
+    \textand
+    p(\overline{a}_2)(p(s_1))\subs p(s'_\alpha)
+  \]
+  we deduce, with the help of \cref{proposition:i-10}~(\cref{section:i}), that
+  \[
+    \overline{a}'_1 = \overline{a}_1 \vdash_p (s_1,\trio s)
+    \in\HH'
+    \textand
+    \overline{a}'_2 = \overline{a}_2 \vdash_p (s'_\alpha,s_1)
+    \in\HH'.
+  \]
+  It thus follows that
+  \[
+    (\trio s_0,\alpha^{\trio},\trio s)
+    = \overline{a}_3\bullet\overline{a}'_2\bullet\overline{a}'_1
+    \in\HH'
+    \textand
+    (\trio\CC^\bullet,\trio s)
+    \in\overline{\HH}((\HH',\HH'),\HH)_0.
+    \qedhere
+  \]
+\end{proof}
+
+\begin{corollary*}
+  Let
+\end{corollary*}
 
 
 
