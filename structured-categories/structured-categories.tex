@@ -6348,8 +6348,101 @@ In the following, we use the notation of \cref{section:ii.2}
 \end{theorem}
 
 \begin{proof}
+  Since $\FF$ and $\HH$ are categories of homomorphisms with finite limits over $\MM$, to show that $(\MM,p_\FF\overline{p},\overline{\HH}(\HH',\HH''),\overline{\Gamma})$ is a category of homomorphisms with finite products, the only point to prove is that the relations
+  \[
+    (\CC^\bullet,s),(\overline{\CC}^\bullet,\overline{s})
+    \in\overline{\HH}(\HH',\HH'')_0
+  \]
+  imply that
+  \[
+    (\CC^\bullet\times\overline{\CC}^\bullet,s\times\overline{s})
+    \in\overline{\HH}(\HH',\HH'')_0.
+  \]
+  By \cref{proposition:ii-3}, we have that
+  \[
+    s_0\times\overline{s}_0\subs s\times\overline{s}
+    \textand
+    p(s_0\times\overline{s}_0)=(\CC^\bullet\times\overline{\CC}^\bullet)_0.
+  \]
+  \oldpage{415}
   Since
+  \[
+    (s_0\times s_0,[\beta,\alpha],s),(\overline{s}_0\times \overline{s}_0,[\overline{\beta},\overline{\alpha}],\overline{s})
+    \in\HH'
+  \]
+  we also have that
+  \[
+    \big(
+      (s_0\times s_0)\times(\overline{s}_0\times\overline{s}_0),
+      [\beta,\alpha]\times[\overline{\beta}\times\overline{\alpha}],
+      s\times\overline{s}
+    \big)\in\HH'.
+  \]
+  By \cref{proposition:ii-4}, there exists
+  \[
+    \big(
+      (s_0\times\overline{s}_0)\times(s_0\times\overline{s}_0),
+      \gamma,
+      (s_0\times s_0)\times(\overline{s}_0\times\overline{s}_0)
+    \big)\in\Gamma
+  \]
+  such that
+  \[
+    \gamma\big((f',f),(\overline{f}',\overline{f})\big)
+    = \big((f',\overline{f}'),(f,\overline{f})\big);
+  \]
+  whence
+  \[
+    \begin{aligned}
+      &\big(
+        (s_0\times\overline{s}_0)\times(s_0\times\overline{s}_0),
+        \gamma([\beta,\alpha]\times[\overline{\beta},\overline{\alpha}]),
+        s\times\overline{s})
+      \big)
+    \\= &\big(
+        (s_0\times\overline{s}_0)\times(s_0\times\overline{s}_0),
+        [\beta\times\overline{\beta},\alpha\times\overline{\alpha}],
+        s\times\overline{s})
+      \big)
+      \in\HH'.
+    \end{aligned}
+  \]
+  There also exists $s''\subs(s\times\overline{s})\times(s\times\overline{s})$ such that\comm{87.1}{Indeed, $s''$ is the $p$-kernel of $(\alpha\times\overline{\alpha}),(\beta\times\overline{\beta})\colon s\times\overline{s}\to s\times\overline{s}$.}
+  \[
+    p(s'')
+    = (\CC^\bullet\times\overline{\CC}^\bullet)\star(\CC^\bullet\times\overline{\CC}^\bullet).
+  \]
+  From \cref{proposition:ii-4} and \cref{proposition:ii-7} it follows that
+  \[
+    \big(
+      (s\times\overline{s})\times(s\times\overline{s}),
+      \gamma,
+      (s\times s)\times(\overline{s}\times\overline{s})
+    \big)\in\Gamma
+    \textand
+    (s'',\gamma\iota,s'\times\overline{s}')\in\Gamma;
+  \]
+  since $\HH''$ is stable under products, from the relations
+  \[
+    (s,\chi^\bullet,s'),
+    (\overline{s},\overline{\chi}^\bullet,\overline{s}')
+    \in\HH''
+  \]
+  we deduce that
+  \[
+    \big(
+      s\times\overline{s},
+      (\chi^\bullet\times\overline{\chi}^\bullet)(\gamma\iota)^{-1},
+      s''
+    \big)
+    \in\HH''.
+  \]
+  Thus $(\CC^\bullet\times\overline{\CC}^\bullet,s\times\overline{s})$ is an $\HH(\HH',\HH'')$-structured category.
 \end{proof}
+
+\begin{remark}
+  The
+\end{remark}
 
 
 
