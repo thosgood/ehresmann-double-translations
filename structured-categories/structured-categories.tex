@@ -229,7 +229,7 @@
 
 \todo make cref use § for (sub)sections
 
-\todo check for todo
+\todo check for \todo
 
 \tableofcontents
 
@@ -3270,7 +3270,7 @@ imply that $p(sh)=p(s)p(h)$.
         \]
         is a pullback.
       \end{longcomm}
-      Note that the subcategory $\FF_u$ of $\FF$ satisfies condition~($\sigma$) of \hyperref[proposition:i-10]{Proposition~10}.
+      Note that the subcategory $\FF_u$ of $\FF$ satisfies condition~($\sigma$) of \cref{proposition:i-10}.
   \end{enumerate}
 \end{examples}
 
@@ -3314,6 +3314,7 @@ imply that $p(sh)=p(s)p(h)$.
 \end{particular}
 
 \begin{proposition}{15}
+\label{proposition:i-15}
   If $\HH$ is saturated over $\MM$, then $(p(\Gamma),p\beta,\HH_\alpha)$ is a species of structures, where $\HH_\alpha$ denotes the class of $p$-injections.
 \end{proposition}
 
@@ -6043,7 +6044,7 @@ $\HH'$ and $\HH''$ denote subcategories of $\HH$ that contain $\Gamma$.
   By the definition of a substructure, we also have that $(s',\iota,s'')\in\HH$, and so $(s,\chi^\bullet,s'')\in\HH$.
   We will now show that the conditions are sufficient.
   \oldpage{411}
-  By axiom~(R) of \cref{definition:i-9}, the pair $((s,\alpha,s),(s,\iota,s))$ admits a $p$-kernel $s_0\subs s$ such that $p(s_0)$ is the class of $f\in\CC$ for which $f=\alpha(f)$, i.e. $p(s_0)=\CC_0^\bullet$.
+  By axiom~(R) of \cref{definition:i-9}~(\cref{section:i}), the pair $((s,\alpha,s),(s,\iota,s))$ admits a $p$-kernel $s_0\subs s$ such that $p(s_0)$ is the class of $f\in\CC$ for which $f=\alpha(f)$, i.e. $p(s_0)=\CC_0^\bullet$.
   Since
   \[
     \alpha(p(s))=\CC_0^\bullet
@@ -6124,7 +6125,7 @@ $\HH'$ and $\HH''$ denote subcategories of $\HH$ that contain $\Gamma$.
 
 \begin{corollary*}
   \oldpage{412}
-  If $\HH'$ and $\HH''$ satisfy condition~($\sigma$) of \cref{proposition:i-10}, then, for $(\CC^\bullet,s)$ to be an $\HH((\HH',\HH'),\HH'')$-structured groupoid, it is necessary and sufficient that it satisfy conditions~(1) and (3) of \cref{proposition:ii-28} as well as the following conditions:
+  If $\HH'$ and $\HH''$ satisfy condition~($\sigma$) then, for $(\CC^\bullet,s)$ to be an $\HH((\HH',\HH'),\HH'')$-structured groupoid it is necessary and sufficient that it satisfy conditions~(1) and (3) of \cref{proposition:ii-28} as well as the following conditions:
   \begin{enumerate}
     \item[\normalfont(2\textquotesingle)]
       $(s,\alpha,s)\in\HH'$.
@@ -6146,19 +6147,19 @@ $\HH'$ and $\HH''$ denote subcategories of $\HH$ that contain $\Gamma$.
 
 \begin{proposition}{29}
 \label{proposition:ii-29}
-  If $\HH'$ is stable under products and satisfies condition~($\sigma$) of \cref{proposition:i-10}, then $\overline{\HH}((\HH',\HH'),\HH'')$ is a full subcategory of $\overline{\HH}(\HH',\HH'')$.
+  If $\HH'$ is stable under products and satisfies condition~($\sigma$) of \cref{proposition:i-10}~(\cref{section:i}), then $\overline{\HH}((\HH',\HH'),\HH'')$ is a full subcategory of $\overline{\HH}(\HH',\HH'')$.
 \end{proposition}
 
 \begin{proof}
   Let $s\in\HH_0$.
-  By axiom~(R) of \cref{definition:i-9}, the pair $((s,p_1,s\times s),(s,p_2,s\times s))$, where $p_1$ and $p_2$ are the canonical projections from $p(s)\times p(s)$ to $p(s)$, admits a $p$-kernel $s^1\subs s\times s$ such that $p(s^1)$ is the diagonal $\Delta$ of $p(s)\times p(s)$.
+  By axiom~(R) of \cref{definition:i-9}~(\cref{section:i}), the pair $((s,p_1,s\times s),(s,p_2,s\times s))$, where $p_1$ and $p_2$ are the canonical projections from $p(s)\times p(s)$ to $p(s)$, admits a $p$-kernel $s^1\subs s\times s$ such that $p(s^1)$ is the diagonal $\Delta$ of $p(s)\times p(s)$.
   Suppose that $(\CC^\bullet,s)\in\overline{\HH}((\HH',\HH'),\HH'')_0$.
   The relations $(s,\alpha,s),(s,\beta,s)\in\HH'$ imply that
   \[
     (s\times s, \beta\times\alpha, s\times s)
     \in\HH'.
   \]
-  Since $\HH'$ satisfies condition~($\sigma$) of \cref{proposition:i-10}, we have that
+  Since $\HH'$ satisfies condition~($\sigma$), we have that
   \[
     (s\times s,\iota,s^1)\in\HH'
   \]
@@ -6304,7 +6305,7 @@ In the following, we use the notation of \cref{section:ii.2}
     f'=f.
   \]
   We have that $(s,\alpha,s)\in\Gamma$, since $\alpha(f)=f$ for all $f\in\CC$.
-  By axiom~(R) of \cref{definition:i-9}, there exists $s'\subs s\times s$ such that $p(s')=\CC^\bullet\star\CC^\bullet$ is equal to the diagonal $\Delta$ of $\CC\times\CC$.
+  By axiom~(R) of \cref{definition:i-9}~(\cref{section:i}), there exists $s'\subs s\times s$ such that $p(s')=\CC^\bullet\star\CC^\bullet$ is equal to the diagonal $\Delta$ of $\CC\times\CC$.
   The relations
   \[
     (s\times s,[\iota,\iota],s)\in\HH
@@ -6441,8 +6442,271 @@ In the following, we use the notation of \cref{section:ii.2}
 \end{proof}
 
 \begin{remark}
-  The
+  The proof of this theorem can easily be modified if we suppose $\HH$ to be saturated over $\MM$ instead of supposing $(\MM,p,\HH,\Gamma)$ to be right solving.
+  Indeed, in this case, \cref{proposition:i-15}~(\cref{section:i}) ensures the existence of $s''\subs(s\times\overline{s})\times(s\times\overline{s})$ such that
+  \[
+    p(s'')=(\CC^\bullet\times\overline{\CC}^\bullet)\star(\CC^\bullet\times\overline{\CC}^\bullet)
+    \textand
+    (s'',\gamma\iota,s'\times\overline{s}')\in\Gamma.
+  \]
 \end{remark}
+
+The above remark allows us to state, using \cref{theorem:ii-3}:
+
+\begin{theorem}{13~bis}
+\label{theorem:ii-13bis}
+  If $\HH$ is saturated over $\MM$, and if $\HH'$ and $\HH''$ are stable under products, then
+  \[
+    (\MM,p_\FF\overline{p},\overline{\HH}(\HH',\HH''),\overline{\Gamma})
+    \textand
+    (\MM,p_\FF\overline{p},\overline{\HH}((\HH',\HH'),\HH''),\overline{\Gamma}')
+  \]
+  are categories of homomorphisms with finite products, even if $(\MM,p,\HH,\Gamma)$ is not right solving.
+\end{theorem}
+
+\begin{theorem}{14}
+\label{theorem:ii-14}
+  Suppose that $\HH'$ and $\HH''$ satisfy condition~($\sigma$) of \cref{proposition:i-10}~(\cref{section:i}).
+  Let $(\CC^\bullet,s)$ be an $\HH(\HH',\HH'')$-structured category (resp. an $\HH(\HH',\HH'')$-structured groupoid).
+  Let $\overline{s}\subs s$ be such that $p(\overline{s})$ is a subcategory (resp. a subgroupoid) $\overline{C}$ of $\CC^\bullet$.
+  \oldpage{416}
+  Then $(\overline{\CC}^\bullet,\overline{s})$ is an $\HH(\HH',\HH'')$-structured subcategory (resp. an $\HH(\HH',\HH'')$-structured subgroupoid) of $(\CC^\bullet,s)$.
+
+  Furthermore, we can replace $\HH(\HH',\HH'')$ by $\HH((\HH',\HH'),\HH'')$ in this statement.
+\end{theorem}
+
+\begin{proof}
+  Using condition~($\sigma$) and \cref{proposition:ii-3}, the relations $\overline{s}\subs s$ and
+  \[
+    (s\times s,[\beta,\alpha]\iota,\overline{s})\in\HH'
+    \textand
+    [\beta,\alpha](\overline{\CC})\subset\overline{\CC}\times\overline{\CC}
+  \]
+  imply that $\overline{s}\times\overline{s}\subs s\times s$ and
+  \[
+    (\overline{s}\times\overline{s},[\beta,\alpha]\iota,\overline{s})
+    = (\overline{s}\times\overline{s},[\overline{\beta},\overline{\alpha}],\overline{s})
+    \in\HH'
+  \]
+  where $\overline{\alpha}$ and $\overline{\beta}$ denote the source and target maps in $\overline{\CC}^\bullet$ (respectively).
+  Now, suppose also that
+  \[
+    \begin{gathered}
+      s'\subs s\times s,
+      \quad
+      \overline{s}'\subs\overline{s}\times\overline{s},
+    \\p(s')=\CC^\bullet\star\CC^\bullet,
+      \quad
+      p(\overline{s}')=\overline{\CC}^\bullet\star\overline{\CC}^\bullet.
+    \end{gathered}
+  \]
+  By \cref{proposition:ii-3} and \cref{theorem:i-1}~(\cref{section:i}), we have that
+  \[
+    \overline{s}\times\overline{s}\subs s\times s
+    \textand
+    \overline{s}'\subs s';
+  \]
+  since
+  \[
+    (s,\overline{\chi}^\bullet,s')
+    = (s,\chi^\bullet,s')\bullet(s',\iota,\overline{s}')
+    \in\HH
+    \textand
+    \chi^\bullet(p(\overline{s}'))
+    \subset\overline{\CC}
+  \]
+  we find that $(\overline{s},\overline{\chi}^\bullet,\overline{s}')\in\HH$, where $\overline{\chi}^\bullet$ is the restriction of $\chi^\bullet$ to $\overline{\CC^\bullet}\star\overline{\CC^\bullet}$.
+  Thus $(\overline{\CC}^\bullet,\overline{s})$ is an $\HH(\HH',\HH'')$-structured category, and
+  \[
+    \big(
+      (\CC^\bullet,s),
+      \iota,
+      (\overline{\CC}^\bullet,\overline{s})
+    \big)
+    \in\overline{\HH}(\HH',\HH'').
+  \]
+  From the relations
+  \[
+    \big(
+      (\CC^\bullet,s),
+      g,
+      (\SS^\bullet,\sigma)
+    \big)
+    \in\overline{\HH}(\HH',\HH'')
+    \textand
+    g(p(\sigma))
+    \subset\overline{\CC},
+  \]
+  we deduce that
+  \[
+    (\overline{\CC}^\bullet,g,\SS^\bullet)\in\FF
+    \textand
+    (\overline{s},g,\sigma)\in\HH,
+  \]
+  whence
+  \[
+    \big(
+      (\CC^\bullet,s),
+      g,
+      (\SS^\bullet,\sigma)
+    \big)
+    \in\overline{\HH}(\HH',\HH'')
+    \textand
+    (\overline{\CC}^\bullet,\overline{s})
+    \subs_{\overline{p}} (\CC^\bullet,s).
+  \]
+
+  The same proof applies for $\HH((\HH',\HH',\HH''))$-structured categories.
+\end{proof}
+
+\begin{corollary}{1}
+  If $\HH'$ and $\HH''$ satisfy condition~($\sigma$), then the following conditions are equivalent:
+  \begin{enumerate}
+    \item[\normalfont(1)]
+      $(\overline{\CC}^\bullet,\overline{s})\subs_{\overline{p}}(\CC^\bullet,s)$ in $\overline{\HH}(\HH',\HH'')$ (resp. in $\overline{\GG}(\HH',\HH'')$) and there exists $\overline{s}^1\subs_p s$ such that $p(\overline{s}^1)=\overline{\CC}$.
+
+    \item[\normalfont(2)]
+      $(\CC^\bullet,s)\in\overline{\HH}(\HH',\HH'')_0$, $\overline{\CC}$ is a subcategory (resp. a subgroupoid) of $\CC^\bullet$, and $\overline{s}\subs_p s$ in $\HH$ with $p(\overline{s})=\overline{\CC}$.
+  \end{enumerate}
+\end{corollary}
+
+\begin{proof}
+  \oldpage{417}
+  If condition~(1) is satisfied, then
+  \[
+    (\overline{\CC}^\bullet,\overline{s})\subs_{\overline{p}}(\CC^\bullet,s)
+    \textand
+    (\overline{\CC}^\bullet,\overline{s}^1)\subs_{\overline{p}}(\CC,s)
+  \]
+  so
+  \[
+    (\overline{\CC}^\bullet,\overline{s})=(\overline{\CC}^\bullet,\overline{s}^1)
+    \textand
+    \overline{s}=\overline{s}^1.
+    \qedhere
+  \]
+\end{proof}
+
+\begin{corollary}{2}
+  If $\HH'$ and $\HH''$ satisfy condition~($\sigma$), then the categories of homomorphisms
+  \[
+    \begin{gathered}
+      \big(\FF,\overline{p},\overline{\HH}(\HH',\HH''),\overline{\Gamma}\big),
+      \quad
+      \big(\FF,\overline{p},\overline{\HH}((\HH',\HH'),\HH''),\overline{\Gamma}'\big),
+      \quad
+      (\FF,\overline{p},\overline{\GG},\overline{\Gamma}_\GG),
+    \\\big(\MM,p_\FF\overline{p},\overline{\HH}(\HH',\HH''),\overline{\Gamma}\big)
+      \textand
+      \big(\MM,p_\FF\overline{p},\overline{\HH}((\HH',\HH'),\HH''),\overline{\Gamma}'\big)
+    \end{gathered}
+  \]
+  are right solving.
+\end{corollary}
+
+\begin{proof}
+  This corollary follows from \cref{theorem:ii-14}, \cref{proposition:i-14}~(\cref{section:i}), and the fact that $(\MM,p_\FF,\FF,\FF_\gamma)$ and $(\MM,p,\HH,\Gamma)$ are right solving.
+\end{proof}
+
+\begin{remarks}
+  ---
+  \begin{enumerate}
+    \item[\normalfont(1)]
+      In general, $(\overline{\CC}^\bullet,\overline{s})\subs_{\overline{p}}(\CC^\bullet,s)$ does not imply that $\overline{s}\subs_p s$.
+      This is the case, however, if $(\MM,p,\HH,\Gamma)$ satisfies the following condition:
+      \begin{quote}
+        If $(S,\iota,s')\in\HH$ then there exists $s\subs S$ such that $p(s)=p(s')$.
+      \end{quote}
+      In particular, $\FF$, $\widetilde{\TT}$, and $\II$ satisfy this condition.
+
+    \item[\normalfont(2)]
+      In \cref{theorem:ii-14}, the hypothesis that $\HH'$ and $\HH''$ satisfy condition~($\sigma$) is necessary.
+      For example, let $(\CC^\bullet,<)$ be an inductive groupoid;
+      a subgroupoid of $\CC^\bullet$ that is a weakly inductive subclass of $(\CC,<)$ cannot be an inductive subgroupoid of $(\CC^\bullet,<)$.
+      A substructure of $(\CC^\bullet,<)$ in $\overline{\II}(\II,\II'')$ or in $\overline{\II}((\II'\cap\II'',\II'\cap\II''),\II)$ is a subgroupoid of $\overline{\CC}^\bullet$ that satisfies the following conditions:
+      \begin{enumerate}
+        \item[\normalfont(a)]
+          $\overline{\CC}$ is a weakly sub-inductive subset of $(\CC,<)$;
+        \item[\normalfont(b)]
+          If $f\in\overline{\CC}$ and $e\in\overline{\CC}_0$ with $e<\alpha(f)$, then $fe\in\overline{\CC}$.
+      \end{enumerate}
+
+    \item[\normalfont(3)]
+      By \cref{proposition:i-14}~(\cref{section:i}), for $(\CC_1^\bullet,s_1)$ to be an $\HH(\HH',\HH'')$-structured subcategory of $(\CC^\bullet,s)$, it is necessary and sufficient that $(\CC_1^\bullet,s_1)\subs(\CC^\bullet,s)$ in $(\MM,p_\FF\overline{p},\overline{\HH}(\HH',\HH''),\overline{\Gamma})$.
+  \end{enumerate}
+\end{remarks}
+
+For the rest of this section, we will suppose that $\HH'$ is a subcategory of $\HH$ that is stable under products and that satisfies condition~($\sigma$) of \cref{proposition:i-10}~(\cref{section:i}).
+The canonical projection from a product class $e_1\times e_2$ to $e_i$ will be denoted (or eventually $p'_i$, to avoid confusion) for $i=1,2$.
+
+Let $(\CC^\bullet,s)$ be an $\HH$-structured category.
+Using axiom~(R) of \cref{definition:i-9}~(\cref{section:i}) along with \cref{proposition:ii-4}, we can construct the following elements:
+\begin{enumerate}
+  \item[\normalfont(a)]
+    $s_\alpha\subs s_0\times s$ such that $p(s_\alpha)$ is the class of pairs $(\alpha(f),f)$;
+    we have that
+    \[
+      \begin{aligned}
+        \gamma_\alpha
+        &= (s,p_2\iota,s_\alpha)
+        = (s,p_2,s_0\times s)\bullet(s_0\times s,\iota,s_\alpha)
+        \in\HH
+      \\\overline{\gamma}_\alpha
+        &= (s_\alpha,\alpha\times\iota,s\times s)\bullet(s\times s,[\iota,\iota],s)
+        \in\HH
+      \end{aligned}
+    \]
+    \oldpage{418}
+    whence
+    \[
+      \overline{\gamma}_\alpha\bullet\gamma_\alpha = s_\alpha
+      \textand
+      \gamma_\alpha\bullet\overline{\gamma}_\alpha = s
+    \]
+    i.e. $\gamma_\alpha\in\Gamma$.
+
+  \item[\normalfont(b)]
+    $s'_\alpha\subs s\times s_0$ such that $p(s'_\alpha)$ is the class of pairs $(f,\alpha(f))$;
+    we have that
+    \[
+      \gamma'_\alpha
+      = (s,p_1\iota,s'_\alpha)
+      \in\Gamma.
+    \]
+
+  \item[\normalfont(c)]
+    $s_\beta\subs s_0\times s$ (resp. $s'_\beta\subs s\times s_0$) such that $p(s_\beta)$ (resp. $p(s'_\beta)$) is the class of pairs $(\beta(f),f)$ (resp. $(f,\beta(f))$);
+    we have that
+    \[
+      \gamma_\beta = (s,p_2\iota,s_\beta) \in \Gamma
+      \textand
+      \gamma'_\beta = (s,p_1\iota,s'_\beta) \in \Gamma.
+    \]
+
+  \item[\normalfont(d)]
+    $s_{\beta\alpha}\subs s_0\times(s_0\times s)$ such that $p(s_{\beta\alpha})$ is the class of pairs $(\beta(f),(\alpha(f),f))$;
+    we have that
+    \[
+      \gamma_{\beta\alpha}
+      = (s,p_2p'_2\iota,s_{\beta\alpha})
+      \in\Gamma.
+    \]
+\end{enumerate}
+
+\begin{proposition}{30}
+\label{proposition:ii-30}
+  Let $s\in\HH_0$, and let $\perp$ be the composition law on $p(s)\times p(s)$ defined by
+  \[
+    (x'',x'_1)\perp(x',x) = (x'',x)
+    \quad\text{if and only if}\quad
+    x'_1 = x'.
+  \]
+  Then $((p(s)\times p(s))^\perp, s\times s)$ is an $\HH(\Gamma,\HH)$-structured groupoid.\comm{90.1}{This \emph{``indiscrete'' structured groupoid} is a cofree object generated by $s$ with respect to the functor $|\cdot|\colon\overline{\HH}(\HH',\HH)\to\HH$ (cf. Comment~86.3).}
+\end{proposition}
+
+\begin{proof}
+  Set
+\end{proof}
 
 
 
