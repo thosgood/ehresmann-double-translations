@@ -7310,8 +7310,198 @@ endowed with the composition law $\sqsupset$ given by
 \end{proof}
 
 \begin{corollary*}
-  Let
+  Let $(\CC^\bullet,s)$ be an $\HH$-structured category;
+  we have that
+  \[
+    \overline{\tau}
+    = \big(
+      (\trio\CC^\bullet,\trio s),
+      \tau,
+      (\hsq\CC^\bullet,\sq s)
+    \big)
+    \in\overline{\HH}
+  \]
+  where
+  \[
+    \tau\big((h',f'),(f,h)\big)
+    = ((f',f),h).
+  \]
+  If $(\CC^\bullet,s)$ is an $\HH$-structured groupoid, then $\overline{\tau}\in\overline{\Gamma}$.
 \end{corollary*}
+
+\begin{proof}
+  By \cref{proposition:i-4}~(\cref{section:i}) and \cref{proposition:i-7}~(\cref{section:i}), we have that
+  \[
+    (\trio s,\tau,\sq s)
+    = \big(
+      (s\times s)\times s,
+      \gamma'(p_2\times\iota),
+      (s\times s)\times(s\times s)
+    \big)
+    \vdash_p (\trio s,\sq s)
+    \in\HH
+  \]
+  where
+  \[
+    \gamma'(f',(f,h))
+    = ((f',f),h).
+  \]
+  \oldpage{425}
+  We will show that, if further $(\CC^\bullet,s)\in\overline{\GG}_0$, then we also have that $(\sq s,\tau^{-1},\trio s)\in\HH$.
+  Indeed, by \cref{proposition:ii-4}, we have that
+  \[
+    (s\times s,\pi,s\times s)
+    \in\Gamma
+  \]
+  where $\pi(f,h)=(h,f)$.
+  Let
+  \[
+    \overline{b}_1
+    = \big(
+      s\times(s\times s),
+      \iota\times(\iota\times j),
+      s\times(s\times s)
+    \big)
+    \bullet
+    \big(
+      s\times(s\times s),
+      (\iota\times\pi)\gamma'^{-1},
+      (s\times s)\times s  
+    \big)
+    \in\Gamma;
+  \]
+  \cref{proposition:i-16}~(\cref{section:i}) ensures the existence of $s_1\subs s\times(s\times s)$ such that
+  \[
+    \overline{b}'_1
+    = \overline{b}_1 \vdash_p (s_1,\trio s)
+    \in\Gamma.
+  \]
+  By \cref{theorem:i-1}~(\cref{section:i}), we have that
+  \[
+    s_1\subs s\times s'
+  \]
+  where $p(s')=\CC^\bullet\star\CC^\bullet$, whence
+  \[
+    (s\times s,(\iota\times\chi^\bullet)\iota,s_1)
+    \in\HH;
+  \]
+  since $(\iota\times\chi^\bullet)(p(s_1))\subset p(s')$, we find that
+  \[
+    \overline{b}_2
+    = (s\chi^\bullet,s') \bullet (s',(\iota\times\chi^\bullet)\iota,s_1)
+    \in\HH.
+  \]
+  By \cref{proposition:ii-4}, we have that
+  \[
+    \overline{\gamma}_1
+    = \big(
+      (s\times s)\times(s\times s),
+      \gamma_1,
+      s\times((s\times s)\times s)
+    \big)
+    \in\Gamma
+  \]
+  where
+  \[
+    \gamma_1\big(h',((f',f),h)\big)
+    = \big((h',f'),(f,h)\big).
+  \]
+  It thus follows that\comm{97.1}{``Pointwise'', these maps are \[((f',f),h)\xmapsto{\overline{b}_1}(f',(h,f^{-1}))\xmapsto{\overline{b}_2}f'\bullet h\bullet f^{-1}\] and \[((f',f),h)\xmapsto{\overline{b}_3}((f'\bullet h\bullet f^{-1},f'),(f,h)).\]}
+  \[
+    \overline{b}_3
+    = \overline{\gamma}_1\bullet(\overline{b}_2\bullet\overline{b}'_1\times\trio s)\bullet(\trio s\times\trio s,[\iota,\iota],\trio s)
+    \in\HH
+  \]
+  and
+  \[
+    p(\overline{b}_3)(\trio\CC^\bullet)
+    = \tau^{-1}(\trio\CC^\bullet)
+    \subset \sq\CC^\bullet.
+  \]
+  Thus
+  \[
+    \overline{b}_3
+    \vdash_p (\sq s,\trio s)
+    = (\sq s,\tau^{-1},\trio s)
+    \in\HH
+    \textand
+    (\trio s,\tau,\sq s)
+    \in\Gamma.
+    \qedhere
+  \]
+\end{proof}
+
+\begin{remark}
+  In general, if $(\CC^\bullet,s)$ belongs to $\overline{\HH}(\HH',\HH'')_0$, then the same is not true of $(\vsq\CC^\bullet,\sq s)$ or $(\trio\CC^\bullet,\trio s)$.
+  However, if $\HH''$ is a subcategory of $\HH$ that is stable under products, that satisfies condition~($\sigma$) of \cref{proposition:i-10}~(\cref{section:i}), and that contains $\HH'$, then we have the following:
+\end{remark}
+
+\begin{theorem}{18}
+\label{theorem:ii-18}
+  If $(\CC^\bullet,s)$ belongs to $\overline{\HH}(\HH',\HH'')_0$, then so too do $(\vsq\CC^\bullet,\sq s)$, $(\hsq\CC^\bullet,\sq s)$, and $(\trio\CC^\bullet,\trio s)$.
+\end{theorem}
+
+\begin{longcomm}{97.2}
+  \cref{theorem:ii-18} should read as follows:
+  \begin{quote}
+    \itshape
+    If $(\CC^\bullet,s)$ belongs to $\overline{\HH}(\HH',\HH'')_0$ (resp. to $\overline{\HH}((\HH',\HH'),\HH'')_0$), then so too do $(\vsq\CC^\bullet,\sq s)$ and $(\hsq\CC^\bullet,\sq s)$ (resp. and also for $(\trio\CC^\bullet,\trio s)$).
+  \end{quote}
+  That is, $(\trio\CC^\bullet,\trio s)$ may not be $\HH(\HH',\HH'')$-structured even when $(\CC^\bullet,s)$ is (counterexamples exist).
+
+  The proof is not evident.
+  Suppose that $(\CC^\bullet,s)$ is $\HH(\HH',\HH'')$-structured.
+  To prove the claim for $(\vsq\CC^\bullet,\sq s)$, the idea is to lift the following composite in $\HH''$ by a process similar to the one used in the preceding proof:
+  \[
+    \begin{aligned}
+      \big(
+        (h'',g',g,h'),
+        (h',f',f,h)
+      \big)
+      &\xmapsto{\iota\times[\beta,\alpha]^2\times\iota}
+      \big(
+        h'', g', g, \beta h', \alpha h', \beta h', \alpha h', f', f, h
+      \big)
+    \\&\xmapsto{\cong}
+      \big(
+        h'',
+        (g',\alpha g'),
+        (g,\alpha g),
+        (\beta f',f'),
+        (\beta f, f),
+        h
+      \big)
+    \\&\xmapsto{\iota\times(\gamma'_\alpha)^2\times(\gamma'_\beta)^2\times\iota}
+      \big(
+        h'', g', g, f', f, h
+      \big)
+    \\&\xmapsto[\cong]{\iota\times\chi^2\times\iota}
+      \big(
+        h'', g'\bullet f', g\bullet f, h
+      \big)
+    \end{aligned}
+  \]
+  \[
+    \begin{tikzcd}
+      {}
+      & {} \ar[l,swap,"g'"]
+      & {} \ar[l,swap,"f'"]
+    \\{} \ar[u,"h''"]
+      & {} \ar[l,"g"] \ar[u,swap,"h'"]
+      & {} \ar[l,"f"] \ar[u,swap,"h"]
+    \end{tikzcd}
+  \]
+  (we have omitted the canonical isomorphisms between products).
+
+  If $(\CC^\bullet,s)$ is $\HH((\HH',\HH'),\HH'')$-structured, then a similar proof only lifting the sources in $\HH'\subset\HH''$ shows that $(\hsq\CC^\bullet,\sq s)$ and $(\trio\CC^\bullet,\trio s)$ are $\HH((\HH',\HH'),\HH'')$-structured.
+\end{longcomm}
+
+\begin{remark}
+  \emph{(Added during the correction of proofs).}
+
+  Let $(\CC^\bullet,s)$
+  \todo
+\end{remark}
 
 
 
