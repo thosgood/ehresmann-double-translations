@@ -6705,8 +6705,159 @@ Using axiom~(R) of \cref{definition:i-9}~(\cref{section:i}) along with \cref{pro
 \end{proposition}
 
 \begin{proof}
-  Set
+  Set $p(s)=\CC$.
+  The class of units of $(\CC\times\CC)^\perp$ can be identified with the diagonal $\Delta$ of $\CC\times\CC$.
+  Let $s_0\subs s\times s$ be such that $p(s_0)=\Delta$;
+  we have that (see the proof of \cref{theorem:ii-12})
+  \[
+    (s_0,[\iota,\iota],s)
+    \in \Gamma
+  \]
+  whence
+  \[
+    (s_0\times s_0,[\beta^\perp,\alpha^\perp],s\times s)
+    = (s_0\times s_0,[\iota,\iota]\times[\iota,\iota],s\times s)
+    \in\Gamma.
+  \]
+  Let $s'^\perp\subs(s\times s)\times(s\times s)$ be such that
+  \[
+    p(s'^\perp)
+    = (\CC\times\CC)^\perp\star(\CC\times\CC)^\perp;
+  \]
+  then
+  \[
+    (s\times s,\chi^\perp,s'^\perp)
+    = (s\times s,[p_1p'_1,p_2p'_2]\iota,s'^\perp)
+    \in\HH
+  \]
+  where $p'_i$ are the canonical projections from $(s\times s)\times(s\times s)$ to $s\times s$, and $p_i$ the canonical projections from $s\times s$ to $s$, for $i=1,2$.
+  So
+  \[
+    \big((\CC\times\CC)^\perp,s\times s\big)
+    \in\overline{\HH}(\Gamma,\HH).
+  \]
+  Finally, it follows from \cref{proposition:ii-4} that
+  \[
+    (s\times s,j,s\times s)\in\Gamma
+  \]
+  where $j(x',x)=(x,x')$.
+  Thus $((\CC\times\CC)^\perp,s\times s)$ is an $\HH(\Gamma,\HH)$-structured groupoid.
 \end{proof}
+
+\begin{theorem}{15}
+\label{theorem:ii-15}
+  Let $(\CC^\bullet,s)$ and $(\overline{\CC}^\bullet,\overline{s})$ be $\HH(\HH',\HH)$-structured categories such that $\CC_0^\bullet=\overline{\CC}_0^\bullet$ and such that the conditions $s_0\subs s$ and $p(s_0)=\overline{\CC}_0^\bullet$ imply that $s_0\subs\overline{s}$.
+  \oldpage{419}
+  Then there exists $\sq(s,\overline{s})\in\HH_0$ such that
+  \[
+    \big(\vsq(\CC^\bullet,\overline{\CC}^\bullet),\sq(s,\overline{s})\big)
+    \textand
+    \big(\hsq(\CC^\bullet,\overline{\CC}^\bullet),\sq(s,\overline{s})\big)
+  \]
+  are $\HH(\HH',\HH)$-structured categories.
+\end{theorem}
+
+\begin{proof}
+  A quadruple belonging to $\sq(\CC^\bullet,\overline{\CC}^\bullet)$ can be identified with an element $((f',\overline{f}'),(\overline{f},f))\in(\CC\times\overline{\CC})\times(\overline{\CC}\times\CC)$ such that
+  \[
+    \left(
+      \big(\beta(f'),\overline{\alpha}(\overline{f}')\big),
+      \big(\overline{\beta}(\overline{f}),\alpha(f)\big)
+    \right)
+    =
+    \left(
+      \big(\overline{\beta}(\overline{f}'),\beta(f)\big),
+      \big(\alpha(f'),\overline{\alpha}(\overline{f})\big)
+    \right)
+  \]
+  where $\alpha$ and $\beta$ (resp. $\overline{\alpha}$ and $\overline{\beta}$) denote the source and target maps in $\CC^\bullet$ (resp. in $\overline{\CC}^\bullet$).
+  By \cref{proposition:ii-4}, we have that
+  \[
+    \begin{aligned}
+      \overline{\gamma}
+      &= \big(
+        (\overline{s}\times s)\times(s\times\overline{s}),
+        \gamma,
+        (s\times\overline{s})\times(\overline{s}\times s)
+      \big)
+      \in\Gamma
+    \\\overline{\gamma}_0
+      &= \big(
+        (s_0\times s_0)\times(s_0\times s_0),
+        \gamma_0,
+        (s_0\times s_0)\times(s_0\times s_0)
+      \big)
+      \in\Gamma
+    \end{aligned}
+  \]
+  where
+  \[
+    \gamma\big((f',\overline{f}'),(\overline{f},f)\big)
+    = \big((\overline{f}',f),(f',\overline{f})\big);
+  \]
+  axiom~(R) of \cref{definition:i-9}~(\cref{section:i}) ensures that the pair $(\overline{h}',\overline{h})$, where
+  \[
+    \begin{aligned}
+      \overline{h}
+      &= \big(
+        (s_0\times s_0)\times(s_0\times s_0),
+        (\beta\times\overline{\alpha})\times(\overline{\beta}\times\alpha),
+        (s\times\overline{s})\times(\overline{s}\times s)
+      \big)
+    \\\overline{h}'
+      &= \big(
+        (s_0\times s_0)\times(s_0\times s_0),
+        (\overline{\beta}\times\beta)\times(\alpha\times\overline{\alpha}),
+        (\overline{s}\times s)\times(s\times\overline{s})
+      \big)\bullet\overline{\gamma},
+    \end{aligned}
+  \]
+  admits a $p$-kernel $\sq(s,\overline{s})$ such that $p(\sq(s,\overline{s}))=\sq(\CC^\bullet,\overline{\CC}^\bullet)$.
+  It follows from \cref{theorem:ii-13} that
+  \[
+    \Sigma
+    = \big(
+      (\CC\times\CC)^\perp\times(\overline{\CC}^\bullet\times\overline{\CC}^\bullet),
+      (s\times s)\times(s\times s)
+    \big)
+  \]
+  is an $\HH(\HH',\HH)$-structured category, where $(\CC\times\CC)^\perp$ is the category considered in \cref{proposition:ii-30}.
+  By \cref{proposition:ii-4}, we have that
+  \[
+    \overline{\gamma}'
+    = \big(
+      (s\times s)\times(\overline{s}\times\overline{s}),
+      \gamma',
+      (s\times\overline{s})\times(\overline{s}\times s)
+    \big)
+    \in\Gamma
+  \]
+  where
+  \[
+    \gamma'\big((f',\overline{f}'),(\overline{f},f)\big)
+    = \big((f',f),(\overline{f}',\overline{f})\big).
+  \]
+  By \cref{proposition:i-16}~(\cref{section:i}), there exists $S\subs(s\times s)\times(\overline{s}\times\overline{s})$ such that
+  \[
+    (S,\gamma'\iota,\sq(s,\overline{s}))
+    \in\Gamma.
+  \]
+  We see that $\gamma'\iota$ is an isomorphism from $\vsq(\CC^\bullet,\overline{\CC}^\bullet)$ to a subcategory of $(\CC\times\CC)^\perp\times(\overline{\CC}^\bullet\times\overline{\CC}^\bullet)$.
+  By \cref{theorem:ii-14}, $(\gamma'(\vsq(\CC^\bullet,\overline{\CC}^\bullet)),S)$ is an $\HH(\HH',\HH)$-structured subcategory of $\Sigma$.
+  Thus, by \cref{theorem:ii-12}, $(\vsq(\CC^\bullet,\overline{\CC}^\bullet),\sq(s,\overline{s}))$ is an $\HH(\HH',\HH)$-structured category.
+  An analogous proof shows that we also have that
+  \[
+    \big(\hsq(\CC^\bullet,\overline{\CC}^\bullet,\sq(s,\overline{s})\big)
+    \in\overline{\HH}(\HH',\HH)_0.
+    \qedhere
+  \]
+\end{proof}
+
+\begin{theorem}{16}
+\label{theorem:ii-16}
+  \oldpage{420}
+  Let
+\end{theorem}
 
 
 
