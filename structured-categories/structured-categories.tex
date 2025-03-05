@@ -153,6 +153,8 @@
 \DeclareMathOperator{\sq}{\square}
 \DeclareMathOperator{\hsq}{\raisebox{-.05em}{$\hsqbox$}}
 \DeclareMathOperator{\vsq}{\raisebox{-.1em}{$\vsqbox$\,}}
+\DeclareMathOperator{\ohsq}{\overline{\hsq}}
+\DeclareMathOperator{\ovsq}{\overline{\raisebox{-.1em}{$\vsqbox$}}}
 % Binary operators
 \newcommand{\hmult}{\mathbin{\raisebox{-.05em}{$\hsqbox$}}}
 \newcommand{\vmult}{\mathbin{\raisebox{-.1em}{$\vsqbox$}}}
@@ -7002,7 +7004,7 @@ Using axiom~(R) of \cref{definition:i-9}~(\cref{section:i}) along with \cref{pro
     \in\HH'.
   \]
   We can similarly prove that $(\vsq s_0,\beta^\vsqbox,\sq s)\in\HH'$.
-  Thus
+  Thus\comm{93.3}{In the case $\HH((\HH',\HH'),\HH)$, the proof is more complex because the indiscrete structured groupoid on $s$ (used in the proof of \cref{theorem:ii-15}) is not $\HH((\HH',\HH'),\HH)$-structured. This remark also applies to \cref{theorem:ii-17}.}
   \[
     (\vsq\CC^\bullet,\sq s)
     \in\overline{\HH}((\HH',\HH'),\HH)_0
@@ -7014,6 +7016,183 @@ Using axiom~(R) of \cref{definition:i-9}~(\cref{section:i}) along with \cref{pro
     \qedhere
   \]
 \end{proof}
+
+\begin{corollary*}
+  There exist functors $\ovsq$ and $\ohsq$ from the category $\overline{H}(\HH',\HH')$ (resp. $\overline{\HH}((\HH',\HH'),\HH)$, resp. $\overline{\GG}(\HH',\HH)$, resp. $\overline{\GG}((\HH',\HH'),\HH)$) to itself, and a natural equivalence $(\ohsq,\overline{\varepsilon},\ovsq)$ that project under $\overline{p}$ to the natural equivalence $(\hsq,\varepsilon,\vsq)$.
+\end{corollary*}
+
+\begin{proof}
+  Let $((\overline{\CC}^\bullet,\overline{s}),g,(\CC^\bullet,s))\in\overline{\HH}$;
+  by \cref{theorem:ii-13}, we have that
+  \[
+    \big(
+      (\overline{\CC}^\bullet,\overline{s})^4,
+      (g\times g)\times(g\times g),
+      (\CC^\bullet,s)^4
+    \big)
+    \in\overline{\HH}
+  \]
+  whence
+  \[
+    \big(
+      (\overline{s}\times\overline{s})\times(\overline{s}\times\overline{s}),
+      ((g\times g)\times(g\times g))\iota,
+      \sq s
+    \big)
+    \in\HH.
+  \]
+  \oldpage{422}
+  Since $g^4(\sq\CC^\bullet)=(\sq g)(\sq\CC^\bullet)\subset\sq\overline{\CC}^\bullet$, it follows from the definition of $\sq\overline{s}$ that
+  \[
+    (\sq\overline{s},\sq g,\sq s)\in\HH
+  \]
+  i.e. that
+  \[
+    \big(
+      (\vsq\overline{\CC}^\bullet,\sq\overline{s}),
+      \sq g,
+      (\vsq\CC^\bullet,\sq s)
+    \big)
+    \in\overline{\HH}.
+  \]
+  Since $\vsq$ is a functor from $\FF$ to $\FF$, the map
+  \[
+    \ovsq\colon
+    \big(
+      (\overline{\CC}^\bullet,\overline{s}),
+      g,
+      (\CC^\bullet,s)
+    \big)
+    \longmapsto
+    \big(
+      (\vsq\overline{\CC}^\bullet,\sq\overline{s}),
+      \sq g,
+      (\vsq\CC^\bullet,\sq s)
+    \big)
+  \]
+  is a functor from $\overline{\HH}$ to $\overline{\HH}$.
+  Similarly, the map
+  \[
+    \ohsq\colon
+    \big(
+      (\overline{\CC}^\bullet,\overline{s}),
+      g,
+      (\CC^\bullet,s)
+    \big)
+    \longmapsto
+    \big(
+      (\hsq\overline{\CC}^\bullet,\sq\overline{s}),
+      \sq g,
+      (\hsq\CC^\bullet,\sq s)
+    \big)
+  \]
+  is a functor from $\overline{\HH}$ to $\overline{\HH}$.
+
+  Finally, by \cref{proposition:i-4}~(\cref{section:i}) and \cref{proposition:ii-7}~(\cref{section:i}), we find that
+  \[
+    \big(
+      (s\times s)\times(s\times s),
+      \gamma,
+      (s\times s)\times(s\times s)
+    \big)
+    \in\Gamma,
+  \]
+  where
+  \[
+    \begin{aligned}
+      \gamma\big((h',f'),(f,h)\big)
+      &= \big((f',h'),(h,f)\big)
+    \\\varepsilon(s)
+      &= (\sq s,\gamma\iota,\sq s)
+      \in\Gamma.
+    \end{aligned}
+  \]
+  Then
+  \[
+    \overline{\varepsilon}(\CC^\bullet,s)
+    = \big(
+      (\hsq\CC^\bullet,\sq s),
+      \gamma\iota,
+      (\vsq\CC^\bullet,\sq s)
+    \big)
+    \in\overline{\Gamma}
+  \]
+  and $(\ohsq,\overline{\varepsilon},\ovsq)$ is a natural equivalence.
+  Furthermore, we have that
+  \[
+    \overline{p}(\overline{\varepsilon}(\CC^\bullet,s))
+    = \varepsilon(\CC^\bullet).
+    \qedhere
+  \]
+\end{proof}
+
+\begin{remark}
+  With the hypotheses of \cref{theorem:ii-15}, a proof analogous to that of the end of the proof of \cref{theorem:ii-16} allows us to prove the following:
+\end{remark}
+
+\begin{theorem}{15~bis}
+\label{theorem:ii-15bis}
+  If $(\CC^\bullet,s)$ and $(\overline{\CC}^\bullet,\overline{s})$ are $\overline{\HH}((\HH',\HH'),\HH)$-structured categories, then so too is $(\vsq(\CC^\bullet,\overline{\CC}^\bullet),\sq(s,\overline{s}))$.
+\end{theorem}
+
+\begin{examples}
+  ---
+  \begin{enumerate}
+    \item[\normalfont(1)]
+      If $(\CC^\bullet,s)$ is a topological category, then $(\vsq\CC^\bullet,\sq s)$ is a topological category.
+
+    \item[\normalfont(2)]
+      If $(\CC^\bullet,s)$ is an ordered category (resp. ordered groupoid), then $(\vsq\CC^\bullet,\sq s)$ is an ordered category (resp. ordered groupoid).
+      If $(\CC^\bullet,s)$ is an inductive category, then $(\vsq\CC^\bullet,\sq s)$ is an inductive category.
+
+    \item[\normalfont(3)]
+      If $(\CC^\bullet,\CC^\perp)$ is a double category, then $(\vsq\CC^\bullet,\CC^{\sq\perp},\hsq\CC^\bullet)$ is a triple category, where $\CC^{\sq\perp}$ denotes the class $\sq\CC^\bullet$ endowed with its structure as a subcategory of the product category $(\CC^\perp)^4$.
+      \oldpage{423}
+      More generally, if $(\CC^{\perp_i})_{i\leq n}$ is an $n$-fold category, then $(\vsq\CC^{\perp_1},(\CC^{\sq\perp_i})_{2\leq i\leq n})$ is an $n$-fold category, and
+      \[
+        \big(
+          \vsq\CC^{\perp_1},
+          (\CC^{\sq\perp_i})_{2\leq i\leq n},
+          \hsq\CC^{\perp_1}
+        \big)
+      \]
+      is an $(n+1)$-fold category.
+      In particular, let $\CC$ be a category.
+      By induction on  $n$, we construct the $n$-fold category
+      \[
+        \CC^\boxnum{n}
+        = \big(\CC^{\boxnum{n}\perp_i}\big)_{i\leq n}
+      \]
+      defined by
+      \[
+        \CC^\boxnum{2} = (\vsq\CC,\hsq\CC)
+        \textand
+        \CC^\boxnum{n+1} = \left(
+          \vsq\big(\CC^\boxnum{n}\big),
+          \big(\big(\CC^\boxnum{n}\big)^{\sq\perp_i}\big)_{i\leq n},
+          \hsq\big(\CC^\boxnum{n}\big)
+        \right).
+      \]
+      We obtain the formulas
+      \[
+        \CC^\boxnum{n+1}
+        = \left(
+          \vsq^n\CC,
+          \big((\sq(\hsq^{p-1}\CC))^{\sq^{n-p}\hsq}\big)_{1\leq p\leq n}
+        \right)
+      \]
+      where
+      \[
+        \vsq^0\CC = \CC
+        \textand
+        \vsq^n\CC = \vsq(\vsq^{n-1}\CC);
+      \]
+      the symbol $(\sq(\hsq^{p-1}\CC))^{\sq^{n-p}\hsq}$ denotes, in agreement with the conventions above, the class $\sq(\vsq^{p-1}\CC)$ endowed with its structure as a subcategory of the product category $(\hsq(\vsq^{p-1}\CC))^{4^{n-p}}$.
+      The $n$-fold category $\CC^\boxnum{n}$ is identical to the $n$-fold category $\CC^\boxnum{n}$ constructed in the final remark of \cref{section:ii.5}.
+  \end{enumerate}
+\end{examples}
+
+Recall that, if $\CC^\bullet$ is a category, then
 
 
 
