@@ -6927,7 +6927,92 @@ Using axiom~(R) of \cref{definition:i-9}~(\cref{section:i}) along with \cref{pro
   we similarly have that $(\hsq\CC^\bullet,\sq s)\in\overline{\GG}_0$.
 
   Now suppose that $(\CC^\bullet,s)\in\overline{\HH}((\HH',\HH'),\HH)_0$;
-  by the above,
+  by the above, we have that $(\vsq\CC^\bullet,\sq s)\in\overline{\HH}_0$.
+  Let $\vsq s_0\subs\sq s$ be such that $p(\vsq s_0)=(\vsq\CC^\bullet)_0$.
+  Let $\mu$ be the map $h\mapsto((h,\beta(h)),(\alpha(h),h))$ from $\CC$ to $(\vsq\CC^\bullet)_0$;
+  the relations
+  \[
+    \begin{aligned}
+      \overline{\mu}
+      &= (\vsq s_0,\mu,s)
+      = (\vsq s_0,[[\iota,\beta],[\alpha,\iota]],s)
+      \in\HH
+    \\\overline{\mu}'
+      &= (s,\mu^{-1},\vsq s_0)
+      = (s,p'_1p_1\iota,\vsq s_0)
+      \in\HH
+    \end{aligned}
+  \]
+  \oldpage{421}
+  imply that
+  \[
+    \overline{\mu}\bullet\overline{\mu}' = \vsq s_0
+    \textand
+    \overline{\mu}'\bullet\overline{\mu} = s
+  \]
+  whence $\overline{\mu}\in\Gamma$.
+  We will show that $(\vsq s_0,\alpha^\vsqbox,\sq s)\in\HH'$.
+  Let
+  \[
+    \overline{a}_1
+    = \big(
+      (s\times s)\times(s\times s),
+      (\beta\times\iota)\times(\alpha\times\iota),
+      (s\times s)\times(s\times s)
+    \big)
+    \in\HH'.
+  \]
+  Let $s_1$ be the $p$-kernel of the pair\comm{93.1}{We have that $p(s_1)=\{(\beta(f'),f',\alpha(h),h)\mid\alpha(f')=\beta(h)\}$.}
+  \[
+    \big(
+      (s_0,\alpha p_2p'_1\iota,s_\beta\times s_\alpha),
+      (s_0,\beta p_2p'_2\iota,s_\beta\times s_\alpha)
+    \big).
+  \]
+  Since $p(\overline{a}_1)(\sq\CC^\bullet)\subset p(s_1)$, we have, by \cref{proposition:i-10}~(\cref{section:i}), that
+  \[
+    \overline{a}'_1
+    = \overline{a}_1
+    \vdash_p (s_1,\sq s)
+    \in\HH'.
+  \]
+  We also have that\comm{93.2}{Pointwise, we have \[(h',f',f,h)\xmapsto{\overline{a}_1}(h',\beta f',\alpha f,h)\xmapsto{\overline{a}_2}(h',\alpha f,h)\xmapsto{\overline{a}_3}(\alpha h',\alpha f,h)\xmapsto{\gamma_{\beta\alpha}}h.\]}
+  \[
+    \begin{aligned}
+      \overline{a}_2
+      &= (s\times s_\alpha,\gamma_\beta\times\iota,s_\beta\times s_\alpha)
+      \in\Gamma
+    \\\overline{a}_3
+      &= (s_0\times s,\alpha\times\iota,s\times s_\alpha)
+      \in\HH'
+    \end{aligned}
+  \]
+  whence $\overline{a}_3\bullet\overline{a}_2\in\HH'$.
+  Since $p(\overline{a}_3\bullet\overline{a}_2)(p(s_1))\subset p(s_{\beta\alpha})$, we find that
+  \[
+    \overline{a}'_2
+    = (\overline{a}_3\bullet\overline{a}_2)
+    \vdash_p (s_{\beta\alpha},s_1)
+    \in\HH'.
+  \]
+  Finally, we obtain that
+  \[
+    \big(\vsq s_0,\alpha^\vsqbox,\sq s\big)
+    = \overline{\mu}^{-1}\bullet\overline{\gamma}_{\beta\alpha}\bullet\overline{a}'_2\bullet\overline{a}'_1
+    \in\HH'.
+  \]
+  We can similarly prove that $(\vsq s_0,\beta^\vsqbox,\sq s)\in\HH'$.
+  Thus
+  \[
+    (\vsq\CC^\bullet,\sq s)
+    \in\overline{\HH}((\HH',\HH'),\HH)_0
+  \]
+  and, for the same reason,
+  \[
+    (\hsq\CC^\bullet,\sq s)
+    \in\overline{\HH}((\HH',\HH'),\HH)_0
+    \qedhere
+  \]
 \end{proof}
 
 
