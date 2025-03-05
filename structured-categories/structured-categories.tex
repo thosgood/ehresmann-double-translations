@@ -190,7 +190,7 @@
 
     This version has also incorporated comments and errata from \cite[Comments on Part III-1, p.~342--363]{coll} (henceforth ``the comments and errata'').
     Some of these correct minor typos, and have been inserted silently.
-    Some of these are supplementary (and sometimes longer) comments by Andrée Ehresmann, and have been included essentially verbatim (modulo minor typos) --- either as footnotes or directly within the text itself, depending on length --- along with their comment number;
+    Some of these are supplementary (and sometimes longer) comments by Andrée Ehresmann, and have been included essentially verbatim (modulo minor typos) --- either as footnotes or directly within the text itself, depending on length and pertinence --- along with their comment number;
     sometimes they make reference to the comments and errata concerning other papers;
     since they are written by Andrée, they often refer to simply ``Charles'', or ``we''.
 
@@ -1024,7 +1024,7 @@ then we say that $\HH$ is \emph{saturated over $\CC$}.
   Then $q$ sends $(k,f',f,h)$ to $k$, and the embedding
   \[
     (h\colon s\to s')
-    \mapsto \big(
+    \longmapsto \big(
       p(h), p(s'), p(s), h
     \big)
   \]
@@ -1732,7 +1732,7 @@ If there is no risk of confusion, then we simply say that $s$ is a substructure 
   If, further, $\overline{h}\in\Gamma$ and $h'$ is invertible, then also $(s',h'^{-1},s'_1)\in\HH$, whence $\overline{h}'\in\Gamma$.
 \end{proof}
 
-Let $\vsq\CC$ be the longitudinal category of quartets of $\CC$ (see \hyperref[section:ii.5]{§II.5}), i.e. the class of quadruples $(g_1,f_1,f,g)\in\CC^4$ such that $g_1\bullet f=f_1\bullet g$, endowed with the multiplication
+Let $\vsq\CC$ be the longitudinal category of quartets of $\CC$ (see \cref{section:ii.5}), i.e. the class of quadruples $(g_1,f_1,f,g)\in\CC^4$ such that $g_1\bullet f=f_1\bullet g$, endowed with the multiplication
 \[
   (g'_1,f'_1,f',g')\vmult(g_1,f_1,f,g)
   = (g'_1,f'_1\bullet f_1,f'\bullet f,g)
@@ -6300,7 +6300,7 @@ In the following, we use the notation of \cref{section:ii.2}
   Let $s\in\HH_0$ and set $\CC=p(s)$.
   We endow $\CC$ with the (trivial) composition law
   \[
-    (f',f)\mapsto f'\bullet f=f
+    (f',f)\longmapsto f'\bullet f=f
     \quad\text{if and only if}\quad
     f'=f.
   \]
@@ -6330,7 +6330,7 @@ In the following, we use the notation of \cref{section:ii.2}
   Finally, the map
   \[
     (\overline{s},g,s)
-    \mapsto \big((p(\overline{s}),\overline{s}),g,(p(s),s)\big)
+    \longmapsto \big((p(\overline{s}),\overline{s}),g,(p(s),s)\big)
   \]
   is an isomorphism from $\HH$ to a full subcategory of $\overline{\HH}((\HH',\HH'),\HH'')$.\comm{86.3}{Let $|\cdot|\colon\overline{\HH}((\HH',\HH'),\HH'')\to\HH$ be the non-faithful functor mapping $F(\CC'^\bullet,s')\to(\CC''^\bullet,s'')$ to its restriction $F_0\colon s'_0\to s_0''$ to the objects; this functor admits a left adjoint, which maps $s$ onto the \emph{discrete structured category $(\CC^\bullet,s)$}.}
 \end{proof}
@@ -6856,8 +6856,79 @@ Using axiom~(R) of \cref{definition:i-9}~(\cref{section:i}) along with \cref{pro
 \begin{theorem}{16}
 \label{theorem:ii-16}
   \oldpage{420}
-  Let
+  Let $(\CC^\bullet,s)$ be an $\HH(\HH',\HH)$-structured category (resp. an $\HH((\HH',\HH'),\HH)$-structured category).
+  Then there exists $\sq s\in\HH_0$ such that $(\vsq\CC^\bullet,\sq s)$ and $(\hsq\CC^\bullet,\sq s)$ are $\HH(\HH',\HH)$-structured categories (resp. $\HH((\HH',\HH'),\HH)$-structured categories).
+  If $(\CC^\bullet,s)$ belongs to $\overline{\GG}(\HH',\HH)_0$ (resp. to $\overline{\GG}((\HH',\HH'),\HH)_0$), then so too do $(\vsq\CC^\bullet,\sq s)$ and $(\hsq\CC^\bullet,\sq s)$.
 \end{theorem}
+
+\begin{longcomm}{92.1}
+  This theorem is also valid if $p$ only creates pullbacks (cf. \cite{coll109}).
+  It implies that \emph{the 2-category of structured categories is representable} (in the sense of Gray~\cite{comm39}), and this result still holds for internal categories in a category admitting pullbacks (\cite{coll115,comm39}).
+\end{longcomm}
+
+\begin{proof}
+  Suppose that $(\CC^\bullet,s)\in\overline{\HH}(\HH',\HH)_0$.
+  A quartet $(h',f',f,h)$ belonging to $\sq\CC^\bullet$ can be identified with an element $((h',f'),(f,h))$ of $\sq(\CC^\bullet,\CC^\bullet)$ such that $h'\bullet f=f'\bullet h$.
+  By \cref{proposition:ii-4}, we have that
+  \[
+    \big(
+      (s\times s)\times(s\times s),
+      \gamma,
+      (s\times s)\times(s\times s)
+    \big)
+  \]
+  where
+  \[
+    \gamma\big((h',f'),(f,h)\big)
+    = \big((h',f),(f',h)\big).
+  \]
+  Let $s'\subs s\times s$ be such that $p(s')=\CC^\bullet\star\CC^\bullet$;
+  by \cref{proposition:ii-3}, we have that
+  \[
+    s'\times s'
+    \subs (s\times s)\times(s\times s);
+  \]
+  furthermore, $s'\times s'$ is a $p$-kernel, and \cref{proposition:i-16}~(\cref{section:i}) ensures the existence of
+  \[
+    (s'\times s',\gamma_1,S)
+    \in\Gamma
+  \]
+  where $\gamma_1<\gamma$.
+  By axiom~(R) of \cref{definition:i-9}~(\cref{section:i}), the pair $((s,\chi^\bullet p_1\gamma_1,S),(s,\chi^\bullet p_2\gamma_1,S))$ admits a $p$-kernel $\sq s\subs\sq(s,s)$ (see \cref{theorem:ii-15}) such that
+  \[
+    p(\sq s) = \sq\CC^\bullet.
+  \]
+  Consequently, it follows from \cref{theorem:ii-14} that
+  \[
+    (\vsq\CC^\bullet,s)
+    \textand
+    (\hsq\CC^\bullet,s)
+  \]
+  are $\HH(\HH',\HH)$-structured categories.
+  If furthermore $(\CC^\bullet,s)\in\overline{\GG}_0$\comm{92.2}{$\overline{\GG}=\overline{\GG}(\HH,\HH)$ by definition.}, then, again denoting by $j$ the map $f\mapsto f^{-1}$ in $\CC$, the relations
+  \[
+    \big(
+      (s\times s)\times(s\times s),
+      \gamma_2(\iota\times j)\times(j\times\iota)\iota,
+      \sq s
+    \big)
+    \in\HH
+    \textand
+    \gamma_2(\iota\times j)\times(j\times\iota)(\sq\CC^\bullet)
+    \subset\sq\CC^\bullet,
+  \]
+  where
+  \[
+    \gamma_2\big((h',f'),(f,h)\big)
+    = \big((h,f'),(f,h')\big),
+  \]
+  imply that $(\sq s,\vsq j,\sq s)\in\Gamma$, where $\vsq j$ denotes the map $\overline{k}\mapsto\overline{k}^{-1}$ in $\vsq\CC^\bullet$.
+  This proves that $(\vsq\CC^\bullet,\sq s)\in\overline{\GG}_0$;
+  we similarly have that $(\hsq\CC^\bullet,\sq s)\in\overline{\GG}_0$.
+
+  Now suppose that $(\CC^\bullet,s)\in\overline{\HH}((\HH',\HH'),\HH)_0$;
+  by the above,
+\end{proof}
 
 
 
