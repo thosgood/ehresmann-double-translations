@@ -1,6 +1,6 @@
 \documentclass[a4paper,fleqn]{article}
 
-\usepackage[margin=1.6in]{geometry}
+\usepackage[left=1.6in,right=1.6in,top=1.3in,bottom=1.3in]{geometry}
 
 \title{\sc{Structured categories}}
 \author{Charles Ehresmann}
@@ -89,7 +89,7 @@
 \newtheorem*{particular}{Particular case}
 
 \usepackage{etoolbox}
-\AtEndEnvironment{definition}{\ignorespacesafterend\hfill$\lrcorner$}
+% \AtEndEnvironment{definition}{\par\ignorespacesafterend\hfill$\lrcorner$}
 
 \makeatletter
 \def\blfootnote{\xdef\@thefnmark{}\@footnotetext}
@@ -122,10 +122,10 @@
 \newcommand{\bHH}{\overline{\HH}}
 \renewcommand{\SS}{\mathcal{S}}
 \newcommand{\bSS}{\overline{\SS}}
-\newcommand{\MM}{\mathfrak{M}}
+\newcommand{\MM}{\mathcal{M}}
 \usepackage{upgreek}
 \newcommand{\comp}{\upchi}
-\newcommand{\KK}{\mathfrak{K}}
+\newcommand{\KK}{\mathcal{K}}
 \newcommand{\FF}{\mathcal{F}}
 \renewcommand{\AA}{\mathcal{A}}
 \newcommand{\TT}{\mathcal{T}}
@@ -221,11 +221,7 @@
 
 \todo add citations to collected works (\texttt{coll})
 
-\todo sort out spacing before lrcorner when a rmenv ends with an enum
-
 \todo make cref use § for (sub)sections
-
-\todo check for \todo
 
 \tableofcontents
 
@@ -247,7 +243,7 @@ it leads to endowing $\HH$ with the structure of an ordered category, which is t
 
 Let $(\MM,p,\HH,\Gamma)$ be a category of homomorphisms with finite products, over a category $\MM$ of maps;
 we define, at the start of \hyperref[section:ii]{Section~II}, $\HH$-structured categories (or, more precisely, $\HH(\HH',\HH'')$-structured categories).
-\comm{21.2}{Structured categories are, in a more modern language, categories internal to a concrete category $\KK$ such that the ``internal'' source, target, and composition can be \todo}
+\comm{21.2}{Structured categories are, in a more modern language, categories internal to a concrete category $\HH$ such that the ``internal'' source, target, and composition can be applied on those of a usual category by the concrete functor $p\colon\HH\to\mathsf{Set}$ (cf. Comment~55.2).}
 We then give a certain number of examples: topological categories and differential categories \cite{3b}; double categories that arise, in particular, in the theory of natural transformations between functors \cite{3d}; order-structured categories, in particular inductive categories and inductive groupoids \cite{3c}, etc.
 \oldpage{350}
 These examples, which I was led to consider in the study of fibred spaces, foliated spaces, extensions of differential varieties, and local structures in general, are the origin of this work.
@@ -258,7 +254,7 @@ The end of \hyperref[section:ii]{Section~II} contains a series of general theore
     it has finite products and is right solving.
   \item Let $(\CC^\bullet,s)$ be an $\HH$-structured category;
     if $\overline{\CC}^\bullet$ is a subcategory of $\CC^\bullet$, and $\overline{s}$ a substructure of $s$ such that $p(\overline{s})=\overline{C}$, then $(\overline{C}^\bullet,\overline{s})$ is an $\HH$-structured category.
-  \item If $(\CC^\bullet,s)$ is an $\HH$-structured category, then the categories of \todo of $\CC^\bullet$ are $\HH$-structured categories.
+  \item If $(\CC^\bullet,s)$ is an $\HH$-structured category, then the categories of trios and of quartets of $\CC^\bullet$ are $\HH$-structured categories.
 \end{itemize}
 
 All of these theorems use the additional hypothesis that $(\MM,p,\HH,\Gamma)$ is a right-solving category of homomorphisms (that is, $\HH$ contains ``enough'' substructures).
@@ -588,7 +584,7 @@ We say that $(\CC,F)$ is a \emph{a pair defining a species of structures}, namel
   Topological, differentiable, and local species of structures are instances of structured (or ``concrete internal'') species of structures, which are defined in \cite{coll59,coll60} by ``lifting'' the action along the forgetful functor of a concrete category;
   enlargement theorems for them are given in \cite{coll89,coll90,coll95,coll96}.
   In fact, sketches in the sense of \cite{coll106} are easily drawn, the set models of which are species of structures and discrete opfibrations \cite{coll117};
-  the models in a category $\KK$ are \emph{internal species of structures} and \emph{internal discrete opfibrations} (also called \emph{internal diagrams} or \emph{internal presheaves}, cf. Johnstone~\cite{comm56}).
+  the models in a category $\HH$ are \emph{internal species of structures} and \emph{internal discrete opfibrations} (also called \emph{internal diagrams} or \emph{internal presheaves}, cf. Johnstone~\cite{comm56}).
   Thanks to the equivalences indicated above, this provides an ``internalisation'' of the ``external'' notion of set-valued functor, by looking at it ``upside-down'';
   Charles already stressed this fact in his lectures in the early sixties.
   This probably did inspire Bénabou, who was one of the first categorists to apply it (in his definition of internal distributors \cite{comm7}).
@@ -667,7 +663,7 @@ this functor $\overline{F}$, which is identical to $(\MM,\overline{F}_a,\CC')$, 
       \end{tikzcd}
     \]
     \[
-      \begin{tikzcd}
+      \begin{tikzcd}[column sep=tiny]
         & F(e'')
         & \mathbf{C}(e'',e)\otimes F(e)
           \ar[l,swap,"k'_{e'',e}"]
@@ -1277,8 +1273,6 @@ If there is no risk of confusion, then we simply say that $s$ is a substructure 
     = \{Ee \mid e<E\text{ in }\CC_0\}.
   \]
   Almost all of the results of this part (\cref{section:i}) generalise to this setting; cf. \cite{coll66} and \cite{coll69}, where both notions are compared.
-
-  \todo
 \end{longcomm}
 
 \begin{proposition}{4}
@@ -6899,7 +6893,7 @@ Using axiom~(R) of \cref{definition:i-9}~(\cref{section:i}) along with \cref{pro
     (\hsq\CC^\bullet,s)
   \]
   are $\HH(\HH',\HH)$-structured categories.
-  If furthermore $(\CC^\bullet,s)\in\overline{\GG}_0$\comm{92.2}{$\overline{\GG}=\overline{\GG}(\HH,\HH)$ by definition.}, then, again denoting by $j$ the map $f\mapsto f^{-1}$ in $\CC$, the relations
+  If, further, $(\CC^\bullet,s)\in\overline{\GG}_0$\comm{92.2}{$\overline{\GG}=\overline{\GG}(\HH,\HH)$ by definition.}, then, again denoting by $j$ the map $f\mapsto f^{-1}$ in $\CC$, the relations
   \[
     \big(
       (s\times s)\times(s\times s),
@@ -7227,7 +7221,7 @@ endowed with the composition law $\sqsupset$ given by
   \oldpage{424}
   axiom~(R) of \cref{definition:i-9}~(\cref{section:i}) ensures the existence of $\trio s\subs(s\times s)\times s$ with $p(\trio s)=\trio\CC^\bullet$.
   Since $\trio\CC^\bullet$ is a subcategory of $(\CC\times\CC)^\perp\times\CC^\bullet$, it follows from \cref{theorem:ii-14} and \cref{proposition:ii-30} that $(\trio\CC^\bullet,\trio s)$ is an $\HH(\HH',\HH)$-structured category.
-  If furthermore $(\CC^\bullet,s)\in\overline{\GG}(\HH',\HH)_0$, then, for the same reason, we also have that $(\trio\CC^\bullet,\trio s)\in\overline{\GG}(\HH',\HH)_0$.
+  If, further, $(\CC^\bullet,s)\in\overline{\GG}(\HH',\HH)_0$, then, for the same reason, we also have that $(\trio\CC^\bullet,\trio s)\in\overline{\GG}(\HH',\HH)_0$.
   If $(\CC^\bullet,s)$ is an $\HH((\HH',\HH'),\HH)$-structured category, then there exists $\trio s_0\subs\trio s$ such that
   \[
     p(\trio s_0)
