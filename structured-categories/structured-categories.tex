@@ -223,8 +223,6 @@
 
 \todo sort out spacing before lrcorner when a rmenv ends with an enum
 
-\todo switch from hyperref to cref
-
 \todo make cref use § for (sub)sections
 
 \todo check for \todo
@@ -1194,7 +1192,7 @@ if, further, $(S,p(S)p(s),s)\in\HH$, then we also have that
   \[
     p(S)=p(s)
   \]
-  whence $s\relrho S$ and $S\relrho s$, i.e. $s=S$, by \hyperref[Proposition~2]{Proposition~2}.
+  whence $s\relrho S$ and $S\relrho s$, i.e. $s=S$, by \cref{proposition:i-2}.
   Suppose that $s'\relrhobar s$;
   from the relations
   \[
@@ -1269,16 +1267,16 @@ If there is no risk of confusion, then we simply say that $s$ is a substructure 
 
 \begin{longcomm}{32.1}
   Substructures (in the definition of which $\SS$ is not used) were introduced for obtaining a good definition of structured categories.
-  Most of the following propositions were devised for use in \hyperref[section:ii]{Part~II}.
+  Most of the following propositions were devised for use in \cref{section:ii}.
 
   This definition seems to depend on the order of $\CC$.
-  In fact, \hyperref[proposition:i-4]{Proposition~4} suggested a more general notion of a $(\CC',p)$-injection (\cite{coll69,coll66}), free from any use of an order on $\CC$.
+  In fact, \cref{proposition:i-4} suggested a more general notion of a $(\CC',p)$-injection (\cite{coll69,coll66}), free from any use of an order on $\CC$.
   The $p$-injections defined here are exactly the $(\CC',p)$-injections in the case where
   \[
     \CC'
     = \{Ee \mid e<E\text{ in }\CC_0\}.
   \]
-  Almost all of the results of this part (\hyperref[section:i]{§I}) generalise to this setting; cf. \cite{coll66} and \cite{coll69}, where both notions are compared.
+  Almost all of the results of this part (\cref{section:i}) generalise to this setting; cf. \cite{coll66} and \cite{coll69}, where both notions are compared.
 
   \todo
 \end{longcomm}
@@ -1379,7 +1377,7 @@ If there is no risk of confusion, then we simply say that $s$ is a substructure 
       then $(\MM,\theta_u,\tTT_u,\TT)$ is a category of homomorphisms.
       The sub-structures of $S$ in $(\MM,\theta_u,\tTT_u,\TT)$ are the topologies induced by $S$ on an open of $S$, i.e. the elements that are smaller than $S$ in the order relation considered in \cite{3c} on $\tTT$.
     \item[\normalfont(2)]
-      The sub-structures of $\CC^\perp$ in $(\MM,p_\FF,\FF,\FF_\gamma)$ are the subcategories of $\CC^\perp$ (see \hyperref[proposition:i-9]{Proposition~9} in \hyperref[section:ii]{§II}).
+      The sub-structures of $\CC^\perp$ in $(\MM,p_\FF,\FF,\FF_\gamma)$ are the subcategories of $\CC^\perp$ (see \cref{proposition:ii-9} in \cref{section:ii}).
     \item[\normalfont(3)]
       The sub-structures of $(A,<)$ in $(\MM,\omega,\widetilde{\Omega},\Omega)$ are the subclasses of $A$ endowed with the order induced by $<$.
     \item[\normalfont(4)]
@@ -1425,7 +1423,7 @@ If there is no risk of confusion, then we simply say that $s$ is a substructure 
   Since $\relrhobar$ is an order relation, if $s\subs S$ and $S\subs s$, then $s=S$.
   Suppose that $s_1\subs s$ and $s\subs S$;
   then $s_1\relrhobar S$.
-  We will show that the pair $(S,s_1)$ satisfies condition (2\textquotesingle) of \hyperref[proposition:i-4]{Proposition~4}.
+  We will show that the pair $(S,s_1)$ satisfies condition (2\textquotesingle) of \cref{proposition:i-4}.
   Let
   \[
     \overline{g}
@@ -1494,7 +1492,7 @@ If there is no risk of confusion, then we simply say that $s$ is a substructure 
     \end{aligned}
   \]
   \oldpage{363}
-  \hyperref[proposition:i-4]{Proposition~4} then implies that
+  \cref{proposition:i-4} then implies that
   \[
     (s',g',S')\in\HH
     \textand
@@ -1560,7 +1558,7 @@ If there is no risk of confusion, then we simply say that $s$ is a substructure 
 \end{proposition}
 
 \begin{proof}
-  Conditions~(1) and (3) imply that $(\HH,\subs)$ is an ordered category (see \hyperref[section:ii]{§II}, \cref{definition:ii-18}).
+  Conditions~(1) and (3) imply that $(\HH,\subs)$ is an ordered category (see \cref{section:ii}, \cref{definition:ii-18}).
   Condition~(2) implies that $p$ belongs to $\widetilde{\Omega}'$ (see \cref{section:ii.6}), i.e. (§IV) that $(\HH,\subs)$ is an ordered category over $(\CC,<)$.\comm{35.1}{Charles never published §IV, but the results that he intended to put in it are scattered across several papers, e.g. ordered categories over an ordered category are considered in \cite{coll75}.}
 \end{proof}
 
@@ -1716,7 +1714,7 @@ If there is no risk of confusion, then we simply say that $s$ is a substructure 
     = (s_1,(p(s_1)p(s'_1))\bullet h',s')
     \in\HH
   \]
-  and, by \hyperref[proposition:i-4]{Proposition~4}, we see that
+  and, by \cref{proposition:i-4}, we see that
   \[
     \overline{h}'
     = (s'_1,h',s')
@@ -1873,13 +1871,13 @@ Let $\overline{\UU}'$ be the subcategory of $\UU$ consisting of the quartets in 
     \end{gathered}
   \]
   and thus $\sq p(\overline{\rHH}$ is a quartet and $\overline{\rHH}\in\overline{\UU}$.
-  Conversely, if $\overline{\rHH}\in\overline{\UU}$, then we find that $\sq p(\overline{\rHH})\in\UU$ by condition~(3) of \hyperref[proposition:i-8]{Proposition~8};
+  Conversely, if $\overline{\rHH}\in\overline{\UU}$, then we find that $\sq p(\overline{\rHH})\in\UU$ by condition~(3) of \cref{proposition:i-8};
   it thus follows that $p(\overline{h}')<p(\overline{h})$, and so $\overline{h}'\subs\overline{h}$ in $(\CC,p,\HH,\SS)$.
 \end{proof}
 
 If $\overline{h}'\subs\overline{h}$ in $(\CC,p,\HH,\SS)$, then the corresponding quartet $\overline{\rHH}$ will be denoted $\overline{h}\sqsubs\overline{h}'$.
 In $\HH$ (resp. in $\CC$), we say that a triple $(g_1,f_1,f)$  is \emph{included in a quartet} if there exists a quartet $(g_1,f_1,f,g)$.
-\hyperref[proposition:i-7]{Proposition~7} is equivalent to:
+\cref{proposition:i-7} is equivalent to:
 
 \begin{proposition}{7~\emph{bis}}
 \label{proposition:i-7bis}
@@ -1981,7 +1979,7 @@ Suppose that $(\CC,p',\HH',\HH'\cap\Gamma)$ is a category of homomorphisms.
   Thus $s\subs_{p'}S$ in $(\CC,p',\HH',\HH'\cap\Gamma)$.
 \end{proof}
 
-We will later see (\hyperref[§II]{section:ii}, \cref{theorem:ii-16}) that $\vsq\CC$ is an inductive category for the order relation
+We will later see (\cref{section:ii}, \cref{theorem:ii-16}) that $\vsq\CC$ is an inductive category for the order relation
 \[
   (g'_1,f'_1,f',g')
   < (g_1,f_1,f,g)
@@ -2027,7 +2025,7 @@ for all $h\in\CC$.
     \overline{h}'=(s'_1,h',s')\in\HH.
   \]
   Suppose that $\overline{h}'\subs_p\overline{h}$;
-  by \hyperref[proposition:i-5]{Proposition~5}, it follows that $h'\subs h$ in $(\CC,\Id_\CC,\CC,\CC)$, whence
+  by \cref{proposition:i-5}, it follows that $h'\subs h$ in $(\CC,\Id_\CC,\CC,\CC)$, whence
   \[
     \big(h,\beta(h)\beta(h'),\alpha(h)\alpha(h'),h'\big)\in\UU;
   \]
@@ -2139,7 +2137,7 @@ for all $h\in\CC$.
 \end{corollary}
 
 \begin{proof}
-  Indeed, if $[\overline{h}']\subs_{\sq p}[\overline{h}]$ then the proof of \hyperref{theorem:i-2} shows that we have $\alpha(\overline{h}')\subs_p\alpha(\overline{h})$, and it follows from \cref{proposition:i-6} that $\overline{h}'\subs_p\overline{h}$.
+  Indeed, if $[\overline{h}']\subs_{\sq p}[\overline{h}]$ then the proof of \cref{theorem:i-2} shows that we have $\alpha(\overline{h}')\subs_p\alpha(\overline{h})$, and it follows from \cref{proposition:i-6} that $\overline{h}'\subs_p\overline{h}$.
 \end{proof}
 
 \begin{corollary}{2}
@@ -2271,7 +2269,7 @@ We similarly define the notion of a \emph{left-solving} category of homomorphism
   \]
 \end{proof}
 
-In what follows, we further suppose that $\HH$ is endowed with an order relation $<$ such that $(\HH,<)$ is an inductive category, and such that $p$ is a strict inductive map from $(\HH,<)$ to $(\CC,<)$, i.e. such that $(\HH,<)$ is an inductive category over $(\CC,<)$ with respect to $p$ (see \hyperref[section:iv]{§IV}).\comm{42.1}{This notion (of an inductive category over $(\CC,<)$ with respect to $p$) is considered in \cite{coll53}. The definition of a \emph{strict inductive map} is given in Part~II, Section~6.}
+In what follows, we further suppose that $\HH$ is endowed with an order relation $<$ such that $(\HH,<)$ is an inductive category, and such that $p$ is a strict inductive map from $(\HH,<)$ to $(\CC,<)$, i.e. such that $(\HH,<)$ is an inductive category over $(\CC,<)$ with respect to $p$ (see \cref{section:ii.3.iv}).\comm{42.1}{This notion (of an inductive category over $(\CC,<)$ with respect to $p$) is considered in \cite{coll53}. The definition of a \emph{strict inductive map} is given in \cref{section:ii.6}.}
 
 \begin{theorem}{3}
 \label{theorem:i-3}
@@ -2340,7 +2338,7 @@ In what follows, we further suppose that $\HH$ is endowed with an order relation
     \beta(h\cap h')
     = \beta(h)
   \]
-  by \hyperref[proposition:i-11]{Proposition~11};
+  by \cref{proposition:i-11};
   consequently, we also have that
   \[
     \beta(p(h)\cap p(h'))
@@ -2611,7 +2609,7 @@ imply that $\overline{p}(s)\relrhobar\overline{p}(S)$ in $(\CC,p,\HH,\SS)$, but,
       S, p\overline{p}(S)p\overline{p}(s)\bullet p(g'), S'
     \big).
   \]
-  From the condition that $s\subs_{\overline{p}}S$, and by \hyperref[proposition:i-4]{Proposition~4}, it follows that
+  From the condition that $s\subs_{\overline{p}}S$, and by \cref{proposition:i-4}, it follows that
   \[
     \overline{g}'
     = (s, p(g'), S')
@@ -2623,7 +2621,7 @@ imply that $\overline{p}(s)\relrhobar\overline{p}(S)$ in $(\CC,p,\HH,\SS)$, but,
     \textand
     \overline{g}' = (s,g',S') \in \bHH.
   \]
-  Thus $s\subs_{\overline{p}}S$, by \hyperref[proposition:i-4]{Proposition~4}.
+  Thus $s\subs_{\overline{p}}S$, by \cref{proposition:i-4}.
 \end{proof}
 
 \begin{corollary}{1}
@@ -2699,7 +2697,7 @@ imply that $\overline{p}(s)\relrhobar\overline{p}(S)$ in $(\CC,p,\HH,\SS)$, but,
       \big)
     \big) = p\overline{p}(S).
   \]
-  We are thus reduced to the hypotheses of \hyperref[proposition:i-12]{Proposition~12}.
+  We are thus reduced to the hypotheses of \cref{proposition:i-12}.
 \end{proof}
 
 From now on, we will further suppose that the conditions
@@ -2886,7 +2884,7 @@ imply that $p(sh)=p(s)p(h)$.
 
 \oldpage{376}
 \begin{proof}
-  Indeed, $\overline{s}\subs_{\overline{p}}\overline{S}$ implies that $\overline{s}\subs_{p\overline{p}}\overline{S}$ by \hyperref[proposition:i-13]{Proposition~13}.
+  Indeed, $\overline{s}\subs_{\overline{p}}\overline{S}$ implies that $\overline{s}\subs_{p\overline{p}}\overline{S}$ by \cref{proposition:i-13}.
   Suppose that $\overline{s}\subs_{p\overline{p}}\overline{S}$;
   since
   \[
@@ -2916,7 +2914,7 @@ imply that $p(sh)=p(s)p(h)$.
     \big)
     = \overline{p}(\overline{S}).
   \]
-  \hyperref[proposition:i-12]{Proposition~12} then implies that $\overline{s}\subs_{\overline{p}}\overline{S}$.
+  \cref{proposition:i-12} then implies that $\overline{s}\subs_{\overline{p}}\overline{S}$.
 \end{proof}
 
 \begin{proposition}{14}
@@ -2926,7 +2924,7 @@ imply that $p(sh)=p(s)p(h)$.
 \end{proposition}
 
 \begin{proof}
-  If $(\HH,\overline{p},\bHH,\bSS)$ is right solving, then $(\CC,p\overline{p},\bHH,\bSS)$ is right solving, by Corollary~3 of \hyperref[proposition:i-13]{Proposition~13}.
+  If $(\HH,\overline{p},\bHH,\bSS)$ is right solving, then $(\CC,p\overline{p},\bHH,\bSS)$ is right solving, by Corollary~3 of \cref{proposition:i-13}.
   Conversely, suppose that $(\CC,p\overline{p},\bHH,\bSS)$ is right solving;
   let $\overline{h},\overline{h}'\in\bHH$ be such that
   \[
@@ -2936,7 +2934,7 @@ imply that $p(sh)=p(s)p(h)$.
   \]
   let $\overline{s}$ be the $p\overline{p}$-kernel of $(\overline{h},\overline{h}')$.
   By axiom~(c), $s<S$ in $\HH$ implies that $s\subs S$ in $(\CC,p,\HH,\SS)$, and so $\beta(Ss=S)$;
-  by Corollary~4 of \hyperref[proposition:i-13]{Proposition~13}, it follows that $\overline{s}\subs_{\overline{p}}\alpha(\overline{h})$.
+  by Corollary~4 of \cref{proposition:i-13}, it follows that $\overline{s}\subs_{\overline{p}}\alpha(\overline{h})$.
   Furthermore, the relations
   \[
     \begin{gathered}
@@ -3163,7 +3161,7 @@ imply that $p(sh)=p(s)p(h)$.
     = p(s'_1h)
     = p_u(s'_1)p_u(h).
   \]
-  Then we can apply Corollary~2 of \hyperref[proposition:i-13]{Proposition~13}, and we have that $s'<s$ in $\HH_u$ implies that $s'\subs_{p_u}s$ in $(\CC,p_u,\HH_u,\Gamma)$.
+  Then we can apply Corollary~2 of \cref{proposition:i-13}, and we have that $s'<s$ in $\HH_u$ implies that $s'\subs_{p_u}s$ in $(\CC,p_u,\HH_u,\Gamma)$.
 
   Conversely, let us show that if $s'\subs_{p_u}s$ then $s'<s$ in $\HH_0$.
   Set
@@ -3220,17 +3218,17 @@ imply that $p(sh)=p(s)p(h)$.
 \begin{longcomm}{50.3}
   The results of this Part~I may be strengthened by replacing the hypotheses ``$\CC$ is inductive'' or ``$\HH$ is inductive'' as follows:
   \begin{itemize}
-    \item In \hyperref[proposition:i-11]{Proposition~11}:
+    \item In \cref{proposition:i-11}:
       $\CC$ is sub-inductive and
       \begin{quote}
         (*)\textsubscript{$\CC$}
         Any two parallel morphisms admit a meet in $\CC$;
       \end{quote}
 
-    \item In \cref{theorem:i-3}, Corollary~3 (of \hyperref[proposition:i-13]{Proposition~13}), and Propositions~\hyperref[proposition:i-13]{13} and \hyperref[proposition:i-14]{14}:
+    \item In \cref{theorem:i-3}, Corollary~3 (of \cref{proposition:i-13}), and \cref{proposition:i-13} and \cref{proposition:i-14}:
       Conditions (*)\textsubscript{$\CC$} and (*)\textsubscript{$\HH$};
 
-    \item In Propositions~\hyperref[proposition:i-13]{13} and \hyperref[proposition:i-12]{12} and their Corollaries:
+    \item In \cref{proposition:i-13} and \cref{proposition:i-12} and their Corollaries:
       $\CC$ and $\HH$ are sub-inductive.
   \end{itemize}
 
@@ -3269,7 +3267,7 @@ imply that $p(sh)=p(s)p(h)$.
 \end{examples}
 
 \begin{particular}
-  In what follows, more often than not, we concern ourselves with the case of a category of homomorphisms $(\MM,p,\HH,\Gamma)$, where $\MM$ is the category of maps constructed in \hyperref[section:i.5]{§I.5} and where $\Gamma$ is the groupoid of invertible elements of $\HH$.
+  In what follows, more often than not, we concern ourselves with the case of a category of homomorphisms $(\MM,p,\HH,\Gamma)$, where $\MM$ is the category of maps constructed in \cref{section:i.5} and where $\Gamma$ is the groupoid of invertible elements of $\HH$.
   We suppose $\MM$ to be endowed with the order relation
   \[
     \begin{gathered}
@@ -3389,11 +3387,12 @@ The three conditions
   \quad G^\perp\subs\overline{G}^\perp,
   \textand G^\perp<\overline{G}^\perp
 \]
-are equivalent (see \hyperref[section:ii]{§I.2}, \cref{proposition:i-9}).
+are equivalent (see \cref{section:ii}, \cref{proposition:ii-9}).
 Let $(\FF,\overline{p},\bHH,\overline{\Gamma})$ be a category of homomorphisms such that $\overline{\Gamma}$ is the groupoid of invertible elements of $\bHH$.
 From Corollary~2 of \cref{proposition:i-12} and from \cref{proposition:i-14}, it follows that:
 
 \begin{proposition}{17}
+\label{proposition:i-17}
   The conditions $s\subs S$ in $(\FF,\overline{p},\bHH,\overline{\Gamma})$ and $s\subs S$ in $(\MM,p_\FF\overline{p},\bHH,\overline{\Gamma})$ are equivalent;
   $(\FF,\overline{p},\bHH,\overline{\Gamma})$ is right solving if and only if $(\MM,p_\FF\overline{p},\bHH,\overline{\Gamma})$ is right solving.
 \end{proposition}
@@ -3590,7 +3589,7 @@ Note that, even if $\Gamma$ is contained in $\HH'$, this definition does not imp
 \subsection{Definition of structured categories and groupoids}
 \label{section:ii.2}
 
-We again denote by $(\MM,p_\FF,\FF,\FF_\gamma)$ the category of homomorphisms (\hyperref[section:i.3]{§I.3}) in which $\FF$ is the category of functors $(\overline{\CC}^\perp,F,\CC^\perp)$ such that $(\overline{C},F,\CC)\in\MM$, and $p_\FF$ is the functor
+We again denote by $(\MM,p_\FF,\FF,\FF_\gamma)$ the category of homomorphisms (\cref{section:i.3}) in which $\FF$ is the category of functors $(\overline{\CC}^\perp,F,\CC^\perp)$ such that $(\overline{C},F,\CC)\in\MM$, and $p_\FF$ is the functor
 \[
   (\overline{\CC}^\perp,F,\CC^\perp)
   \longmapsto (\overline{\CC},F,\CC).
@@ -3858,7 +3857,7 @@ In particular, we write
   Since $(\MM,p,\Gamma)$ is a species of structures, there exists $(\overline{s}_1,F,\overline{s})\in\Gamma$.
   We now show that $(\CC_1^\bullet,\overline{s}_1)\in\bHH(\HH',\HH'')_0$.
   Let $s_0\subs s$ and $s_0^1\subs s_1$ be such that $p(s_0)=\CC_0^\bullet$ and $p(s_0^1)=(\CC_1^\bullet)_0$.
-  By \cref{proposition:i-6} in \hyperref[section:i]{§I}, we have that
+  By \cref{proposition:i-6} in \cref{section:i}, we have that
   \[
     (s_0^1,F\iota,s_0)
     \in\Gamma
@@ -3875,7 +3874,7 @@ In particular, we write
     \in\Gamma
   \]
   where $\overline{s}_0\subs\overline{s}$ and $p(\overline{s}_0)=\CC_0^\bullet$.
-  Then $(\overline{s}_0^1\times\overline{s}_0^1,(F\times F)\iota,\overline{s}_0\times\overline{s}_0)\in\Gamma$ and, by \cref{proposition:i-6} in \hyperref[section:i]{§I}, $\overline{s}_0^1\subs\overline{s}_1$.
+  Then $(\overline{s}_0^1\times\overline{s}_0^1,(F\times F)\iota,\overline{s}_0\times\overline{s}_0)\in\Gamma$ and, by \cref{proposition:i-6} in \cref{section:i}, $\overline{s}_0^1\subs\overline{s}_1$.
   Since $\HH'\supset\Gamma$, we thus deduce that
   \[
     (\overline{s}_0^1\times\overline{s}_0^1,[\beta,\alpha],\overline{s}_1)
@@ -3891,7 +3890,7 @@ In particular, we write
     \in \HH'.
   \]
   Let $s'\subs s\times s$ be such that $p(s')=\CC^\bullet\star\CC^\bullet$, and $s'_1\subs s_1\times s_1$ be such that $p(s'_1)=\CC_1^\bullet\star\CC_1^\bullet$;
-  by \cref{proposition:i-7} in \hyperref[section:i]{§I}, we have that
+  by \cref{proposition:i-7} in \cref{section:i}, we have that
   \[
     (s'_1,(F\times F)\iota,s')
     \in\Gamma.
@@ -3907,7 +3906,7 @@ In particular, we write
     p(\overline{s}'_1)
     = p(s'_1)
   \]
-  and, by \cref{proposition:i-6} in \hyperref[section:i]{§I}, $\overline{s}'_1\subs\overline{s}_1\times\overline{s}_1$.
+  and, by \cref{proposition:i-6} in \cref{section:i}, $\overline{s}'_1\subs\overline{s}_1\times\overline{s}_1$.
   Since $\HH''$ contains $\Gamma$,
   \[
     (\overline{s}_1,\chi_1^\bullet,\overline{s}'_1)
@@ -3960,7 +3959,7 @@ Before studying the properties of structured categories and structured groupoids
 \subsubsection*{Example I}
 \label{section:ii.3.i}
 
-Let $(\MM,\theta,\tTT,\TT)$ be the category of homomorphisms defined in \hyperref[section:i.3]{§I.3}.
+Let $(\MM,\theta,\tTT,\TT)$ be the category of homomorphisms defined in \cref{section:i.3}.
 
 \begin{definition}{7}
 \label{definition:ii-7}
@@ -4216,7 +4215,7 @@ If $G$ admits a unit $1$, let $[G,1]$ be the full subcategory of $[G]$ whose uni
 \subsection{Double categories}
 \label{section:ii.4}
 
-Let $(\MM,p_\FF,\FF,\FF_\gamma)$ be the category of homomorphisms defined in \hyperref[section:i]{§I}.
+Let $(\MM,p_\FF,\FF,\FF_\gamma)$ be the category of homomorphisms defined in \cref{section:i}.
 
 \begin{definition}{10}
 \label{definition:ii-10}
@@ -4769,7 +4768,7 @@ The definition of a natural transformation $(\varphi',\tau,\varphi)$ from a func
 \end{theorem}
 
 This theorem shows that if $(\CC^\bullet,\CC^\perp)$ is a double category, then a functor $\Phi$ from a category $\Gamma$ to $\CC^\bullet$ can be considered as a generalised natural transformation from $\alpha^\perp\Phi$ to $\beta^\perp\Phi$.
-We will later see (\hyperref[section:iii]{§III}) another generalisation of the notion of natural transformation, namely the notion of a \emph{quintet} \cite{3e}.
+We will later see ({§III}) another generalisation of the notion of natural transformation, namely the notion of a \emph{quintet} \cite{3e}.
 
 \begin{longcomm}{68.1}
   \emph{Lax transformations.}
@@ -4788,7 +4787,7 @@ We will later see (\hyperref[section:iii]{§III}) another generalisation of the 
 \label{section:ii.5}
 
 By \cref{theorem:ii-2}, the category $\overline{\FF}$ of double functors is a category of homomorphisms $(\MM,p_\FF\overline{p_\FF},\overline{\FF},\overline{\FF}_\gamma)$ over $\MM$.
-We will see in \hyperref[section:ii.7]{Section~II.7} that this category of homomorphisms is right solving and has finite products.
+We will see in \cref{section:ii.7} that this category of homomorphisms is right solving and has finite products.
 Consequently, we can define $\overline{\FF}$-structured functors, and, more general, give the following definition:
 
 \begin{definition}{15}
